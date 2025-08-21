@@ -33,6 +33,9 @@ Implementing custom icons for OneUI 7 is more complex than in previous versions.
   - Icons are now split into **foreground** and **background** layers, stored in the `mipmap` folder.
   - The `ic_launcher.xml` file manages the new `<adaptive-icon>` structure.
 
+### Bypass OneUI checks
+SamsungCamera checks the OneUI version at launch. For example, if you try to run the app on OneUI 7, it will fail to open. To resolve this, we replace the OneUI 6.1 hex values with the corresponding OneUI 7 hex values.
+
 ---
 
 ## How to Build?
