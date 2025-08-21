@@ -1,29 +1,60 @@
-From 22cfadf18ac70789a247aa3a4b50f01a4442e5e9 Mon Sep 17 00:00:00 2001
+From c70ca5b448350065733cac6bbea6a62b1ce0d101 Mon Sep 17 00:00:00 2001
 From: ExtremeXT <75576145+ExtremeXT@users.noreply.github.com>
-Date: Thu, 21 Aug 2025 14:15:11 +0200
+Date: Thu, 21 Aug 2025 20:33:49 +0200
 Subject: [PATCH] Hardcode getInterfaceVersion()
 
 ---
- .../camera/wrapper/CameraServiceWorkerWrapperImpl_V1.smali  | 6 +-----
- 1 file changed, 1 insertion(+), 5 deletions(-)
+ .../CameraServiceWorkerWrapperImpl_V1.smali   | 36 ++-----------------
+ 1 file changed, 2 insertions(+), 34 deletions(-)
 
 diff --git a/smali_classes2/com/samsung/android/camera/wrapper/CameraServiceWorkerWrapperImpl_V1.smali b/smali_classes2/com/samsung/android/camera/wrapper/CameraServiceWorkerWrapperImpl_V1.smali
-index 206b373b..ffa55ec5 100644
+index 6455b1ae..a7a8fac3 100644
 --- a/smali_classes2/com/samsung/android/camera/wrapper/CameraServiceWorkerWrapperImpl_V1.smali
 +++ b/smali_classes2/com/samsung/android/camera/wrapper/CameraServiceWorkerWrapperImpl_V1.smali
-@@ -130,11 +130,7 @@
+@@ -104,41 +104,9 @@
+ .end method
  
-     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
- 
+ .method public getInterfaceVersion()I
+-    .locals 2
+-
+-    :try_start_0
 -    iget-object p0, p0, Lcom/samsung/android/camera/wrapper/CameraServiceWorkerWrapperImpl_V1;->worker:Lcom/samsung/android/camera/ICameraServiceWorker;
 -
 -    invoke-interface {p0}, Lcom/samsung/android/camera/ICameraServiceWorker;->getInterfaceVersion()I
 -
 -    move-result p0
+-    :try_end_0
+-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+-
+-    return p0
+-
+-    :catch_0
+-    move-exception p0
+-
+-    new-instance v0, Ljava/lang/StringBuilder;
++    .locals 0
+ 
+-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+-
+-    const-string v1, "getInterfaceVersion - "
+-
+-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-
+-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+-
+-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+-
+-    move-result-object p0
+-
+-    const-string v0, "CameraServiceWorkerWrapper"
+-
+-    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+-
+-    const/4 p0, 0x0
 +    const/4 p0, 0x4
  
-     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
- 
+     return p0
+ .end method
 -- 
 2.39.5 (Apple Git-154)
 
