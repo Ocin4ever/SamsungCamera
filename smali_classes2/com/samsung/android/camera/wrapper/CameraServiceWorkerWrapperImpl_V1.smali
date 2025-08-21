@@ -130,11 +130,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/samsung/android/camera/wrapper/CameraServiceWorkerWrapperImpl_V1;->worker:Lcom/samsung/android/camera/ICameraServiceWorker;
-
-    invoke-interface {p0}, Lcom/samsung/android/camera/ICameraServiceWorker;->getInterfaceVersion()I
-
-    move-result p0
+    const/4 p0, 0x4
 
     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
