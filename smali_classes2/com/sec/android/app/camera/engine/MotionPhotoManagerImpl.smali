@@ -762,54 +762,9 @@
 .end method
 
 .method public isMotionPhotoAvailable()Z
-    .locals 3
+    .locals 0
 
-    iget-object v0, p0, Lcom/sec/android/app/camera/engine/MotionPhotoManagerImpl;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
-
-    invoke-virtual {v0}, Lcom/sec/android/app/camera/engine/CommonEngine;->getCameraContext()Lcom/sec/android/app/camera/interfaces/CameraContext;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getShootingModeFeature()Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;->isMotionPhotoSupported()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    iget-object v0, p0, Lcom/sec/android/app/camera/engine/MotionPhotoManagerImpl;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
-
-    sget-object v2, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOTION_PHOTO:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
-
-    invoke-interface {v0, v2}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->get(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    return v1
-
-    :cond_1
-    iget-object p0, p0, Lcom/sec/android/app/camera/engine/MotionPhotoManagerImpl;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
-
-    invoke-interface {p0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->isAttachMode()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    return v1
-
-    :cond_2
-    const/4 p0, 0x1
+    const/4 p0, 0x0
 
     return p0
 .end method
