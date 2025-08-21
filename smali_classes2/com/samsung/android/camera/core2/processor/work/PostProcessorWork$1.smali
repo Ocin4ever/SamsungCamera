@@ -30,6 +30,7 @@
 
     move-object v4, p4
 
+    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/camera/core2/processor/work/PostProcessorWork;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/Class;Lcom/samsung/android/camera/core2/processor/work/e;)V
 
     return-void
@@ -38,6 +39,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/Class;Lcom/samsung/android/camera/core2/processor/work/a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/camera/core2/processor/work/PostProcessorWork$1;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/Class;)V
 
     return-void

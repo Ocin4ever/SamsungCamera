@@ -78,6 +78,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/cache/LocalCache;->access$200(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     move-result-object p0
@@ -99,6 +100,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/cache/LocalCache;->access$200(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     move-result-object p0

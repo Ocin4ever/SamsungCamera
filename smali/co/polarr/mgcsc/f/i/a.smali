@@ -16,7 +16,7 @@
 
 .field public static b:I = 0x1e
 
-.field private static c:Z
+.field private static c:Z = false
 
 .field private static d:I
 
@@ -31,6 +31,7 @@
 .method public static a()Ljava/lang/String;
     .locals 14
 
+    .line 1
     new-instance v0, Landroid/os/Debug$MemoryInfo;
 
     invoke-direct {v0}, Landroid/os/Debug$MemoryInfo;-><init>()V
@@ -197,6 +198,7 @@
 .method public static a(Ljava/lang/String;Z)V
     .locals 0
 
+    .line 2
     return-void
 .end method
 

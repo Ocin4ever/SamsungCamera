@@ -26,6 +26,7 @@
 .method public constructor <init>([B)V
     .locals 2
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -38,12 +39,16 @@
 .method public constructor <init>([BII)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/io/ByteSource;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->bytes:[B
 
+    .line 4
     iput p2, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->offset:I
 
+    .line 5
     iput p3, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->length:I
 
     return-void
@@ -144,6 +149,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->bytes:[B
 
     iget v1, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->offset:I
@@ -152,6 +158,7 @@
 
     invoke-interface {p1, v0, v1, p0}, Lcom/google/common/io/ByteProcessor;->processBytes([BII)Z
 
+    .line 3
     invoke-interface {p1}, Lcom/google/common/io/ByteProcessor;->getResult()Ljava/lang/Object;
 
     move-result-object p0
@@ -162,6 +169,7 @@
 .method public read()[B
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->bytes:[B
 
     iget v1, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->offset:I

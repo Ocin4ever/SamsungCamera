@@ -50,6 +50,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/translate/ImageTranslator$trimSkippingCases$4;->this$0:Lcom/samsung/android/app/sdk/deepsky/textextraction/translate/ImageTranslator;
 
     invoke-virtual {p0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/translate/ImageTranslator;->getSupportedSourceLangList()Ljava/util/List;
@@ -76,6 +77,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/samsung/android/app/sdk/deepsky/textextraction/translate/ImageTranslateResult;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/translate/ImageTranslator$trimSkippingCases$4;->invoke(Lcom/samsung/android/app/sdk/deepsky/textextraction/translate/ImageTranslateResult;)Ljava/lang/Boolean;

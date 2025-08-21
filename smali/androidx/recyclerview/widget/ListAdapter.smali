@@ -48,14 +48,17 @@
         }
     .end annotation
 
+    .line 6
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
+    .line 7
     new-instance v0, Landroidx/recyclerview/widget/ListAdapter$1;
 
     invoke-direct {v0, p0}, Landroidx/recyclerview/widget/ListAdapter$1;-><init>(Landroidx/recyclerview/widget/ListAdapter;)V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mListener:Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;
 
+    .line 8
     new-instance v1, Landroidx/recyclerview/widget/AsyncListDiffer;
 
     new-instance v2, Landroidx/recyclerview/widget/AdapterListUpdateCallback;
@@ -66,6 +69,7 @@
 
     iput-object v1, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
+    .line 9
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/AsyncListDiffer;->addListListener(Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;)V
 
     return-void
@@ -81,14 +85,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
+    .line 2
     new-instance v0, Landroidx/recyclerview/widget/ListAdapter$1;
 
     invoke-direct {v0, p0}, Landroidx/recyclerview/widget/ListAdapter$1;-><init>(Landroidx/recyclerview/widget/ListAdapter;)V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/ListAdapter;->mListener:Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;
 
+    .line 3
     new-instance v1, Landroidx/recyclerview/widget/AsyncListDiffer;
 
     new-instance v2, Landroidx/recyclerview/widget/AdapterListUpdateCallback;
@@ -99,6 +106,7 @@
 
     invoke-direct {v3, p1}, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;-><init>(Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
 
+    .line 4
     invoke-virtual {v3}, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->build()Landroidx/recyclerview/widget/AsyncDifferConfig;
 
     move-result-object p1
@@ -107,6 +115,7 @@
 
     iput-object v1, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
+    .line 5
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/AsyncListDiffer;->addListListener(Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;)V
 
     return-void
@@ -195,6 +204,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/AsyncListDiffer;->submitList(Ljava/util/List;)V
@@ -214,6 +224,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/AsyncListDiffer;->submitList(Ljava/util/List;Ljava/lang/Runnable;)V

@@ -42,6 +42,7 @@
 
     const-string v0, "jobscheduler"
 
+    .line 1
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -52,6 +53,7 @@
 
     new-instance v6, Landroidx/work/impl/background/systemjob/SystemJobInfoConverter;
 
+    .line 2
     invoke-virtual {p3}, Landroidx/work/Configuration;->getClock()Landroidx/work/Clock;
 
     move-result-object v0
@@ -66,6 +68,7 @@
 
     move-object v4, p3
 
+    .line 3
     invoke-direct/range {v1 .. v6}, Landroidx/work/impl/background/systemjob/SystemJobScheduler;-><init>(Landroid/content/Context;Landroidx/work/impl/WorkDatabase;Landroidx/work/Configuration;Landroid/app/job/JobScheduler;Landroidx/work/impl/background/systemjob/SystemJobInfoConverter;)V
 
     return-void
@@ -74,16 +77,22 @@
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/impl/WorkDatabase;Landroidx/work/Configuration;Landroid/app/job/JobScheduler;Landroidx/work/impl/background/systemjob/SystemJobInfoConverter;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     iput-object p1, p0, Landroidx/work/impl/background/systemjob/SystemJobScheduler;->mContext:Landroid/content/Context;
 
+    .line 6
     iput-object p4, p0, Landroidx/work/impl/background/systemjob/SystemJobScheduler;->mJobScheduler:Landroid/app/job/JobScheduler;
 
+    .line 7
     iput-object p5, p0, Landroidx/work/impl/background/systemjob/SystemJobScheduler;->mSystemJobInfoConverter:Landroidx/work/impl/background/systemjob/SystemJobInfoConverter;
 
+    .line 8
     iput-object p2, p0, Landroidx/work/impl/background/systemjob/SystemJobScheduler;->mWorkDatabase:Landroidx/work/impl/WorkDatabase;
 
+    .line 9
     iput-object p3, p0, Landroidx/work/impl/background/systemjob/SystemJobScheduler;->mConfiguration:Landroidx/work/Configuration;
 
     return-void

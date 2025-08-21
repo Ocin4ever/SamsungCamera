@@ -34,8 +34,10 @@
 .method private constructor <init>()V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
@@ -50,6 +52,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/sdk/scs/base/tasks/a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/sdk/scs/base/tasks/Tasks$TaskCountDown;-><init>()V
 
     return-void
@@ -60,6 +63,7 @@
 .method public final await()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/base/tasks/Tasks$TaskCountDown;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
@@ -70,6 +74,7 @@
 .method public final await(JLjava/util/concurrent/TimeUnit;)Z
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/base/tasks/Tasks$TaskCountDown;->mLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z

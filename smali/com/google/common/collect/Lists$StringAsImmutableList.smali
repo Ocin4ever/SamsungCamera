@@ -42,12 +42,14 @@
 .method public get(I)Ljava/lang/Character;
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$StringAsImmutableList;->size()I
 
     move-result v0
 
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/Lists$StringAsImmutableList;->string:Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->charAt(I)C
@@ -64,6 +66,7 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Lists$StringAsImmutableList;->get(I)Ljava/lang/Character;
 
     move-result-object p0
@@ -158,12 +161,14 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$StringAsImmutableList;->size()I
 
     move-result v0
 
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/Lists$StringAsImmutableList;->string:Ljava/lang/String;
 
     invoke-virtual {p0, p1, p2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -180,6 +185,7 @@
 .method public bridge synthetic subList(II)Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/Lists$StringAsImmutableList;->subList(II)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0

@@ -73,6 +73,7 @@
 .method public bridge synthetic doBackward(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Enum;
 
     invoke-virtual {p0, p1}, Lcom/google/common/base/Enums$StringConverter;->doBackward(Ljava/lang/Enum;)Ljava/lang/String;
@@ -91,6 +92,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object p0
@@ -108,6 +110,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/base/Enums$StringConverter;->enumClass:Ljava/lang/Class;
 
     invoke-static {p0, p1}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -120,6 +123,7 @@
 .method public bridge synthetic doForward(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/google/common/base/Enums$StringConverter;->doForward(Ljava/lang/String;)Ljava/lang/Enum;

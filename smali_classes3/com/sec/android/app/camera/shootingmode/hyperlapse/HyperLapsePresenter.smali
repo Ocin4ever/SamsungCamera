@@ -111,14 +111,17 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapseContract$View;I)V
     .locals 2
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
+    .line 2
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mHyperLapseSpeedMap:Ljava/util/HashMap;
 
+    .line 3
     new-instance p2, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -131,24 +134,31 @@
 
     const/4 p2, 0x0
 
+    .line 4
     iput-boolean p2, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mIsShownNightGuideByCallback:Z
 
     const/16 p3, 0xa
 
+    .line 5
     iput p3, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mSuggestedMotionSpeedMode:I
 
+    .line 6
     iput-boolean p2, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mIsLowLightCondition:Z
 
+    .line 7
     iput-boolean p2, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mIsFacingSwitchable:Z
 
+    .line 8
     iput p2, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mNightGuideState:I
 
+    .line 9
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->initializeSettingChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mSettingChangeConsumerMap:Ljava/util/EnumMap;
 
+    .line 10
     new-instance v0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/a;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/shootingmode/hyperlapse/a;-><init>(Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;)V
@@ -157,6 +167,7 @@
 
     const/4 p0, 0x1
 
+    .line 11
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -167,6 +178,7 @@
 
     const/4 p0, 0x2
 
+    .line 12
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -177,6 +189,7 @@
 
     const/4 p0, 0x3
 
+    .line 13
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -187,6 +200,7 @@
 
     const/4 p0, 0x4
 
+    .line 14
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -197,6 +211,7 @@
 
     const/4 p0, 0x5
 
+    .line 15
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -207,6 +222,7 @@
 
     const/16 p0, 0xb
 
+    .line 16
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -217,6 +233,7 @@
 
     const/16 p0, 0xc
 
+    .line 17
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -227,6 +244,7 @@
 
     const/16 p0, 0xd
 
+    .line 18
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -237,6 +255,7 @@
 
     const/16 p0, 0xe
 
+    .line 19
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -247,6 +266,7 @@
 
     const/16 p0, 0xf
 
+    .line 20
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -257,6 +277,7 @@
 
     const/16 p0, 0x63
 
+    .line 21
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -265,6 +286,7 @@
 
     const/16 p0, 0x64
 
+    .line 22
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -275,6 +297,7 @@
 
     const/16 p0, 0x65
 
+    .line 23
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -283,6 +306,7 @@
 
     invoke-virtual {p1, p0, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 24
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -291,6 +315,7 @@
 
     invoke-virtual {p1, p0, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 25
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -299,6 +324,7 @@
 
     const/16 p0, 0x62
 
+    .line 26
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -311,14 +337,17 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapseContract$View;I)V
     .locals 1
 
+    .line 27
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
+    .line 28
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mHyperLapseSpeedMap:Ljava/util/HashMap;
 
+    .line 29
     new-instance p2, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -331,24 +360,31 @@
 
     const/4 p2, 0x0
 
+    .line 30
     iput-boolean p2, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mIsShownNightGuideByCallback:Z
 
     const/16 p3, 0xa
 
+    .line 31
     iput p3, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mSuggestedMotionSpeedMode:I
 
+    .line 32
     iput-boolean p2, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mIsLowLightCondition:Z
 
+    .line 33
     iput-boolean p2, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mIsFacingSwitchable:Z
 
+    .line 34
     iput p2, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mNightGuideState:I
 
+    .line 35
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->initializeSettingChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p4
 
     iput-object p4, p0, Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;->mSettingChangeConsumerMap:Ljava/util/EnumMap;
 
+    .line 36
     new-instance p4, Lcom/sec/android/app/camera/shootingmode/hyperlapse/a;
 
     invoke-direct {p4, p0}, Lcom/sec/android/app/camera/shootingmode/hyperlapse/a;-><init>(Lcom/sec/android/app/camera/shootingmode/hyperlapse/HyperLapsePresenter;)V
@@ -357,6 +393,7 @@
 
     const/4 p0, 0x1
 
+    .line 37
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -367,6 +404,7 @@
 
     const/4 p0, 0x2
 
+    .line 38
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -377,6 +415,7 @@
 
     const/4 p0, 0x3
 
+    .line 39
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -387,6 +426,7 @@
 
     const/4 p0, 0x4
 
+    .line 40
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -397,6 +437,7 @@
 
     const/4 p0, 0x5
 
+    .line 41
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -407,6 +448,7 @@
 
     const/16 p0, 0xb
 
+    .line 42
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -417,6 +459,7 @@
 
     const/16 p0, 0xc
 
+    .line 43
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -427,6 +470,7 @@
 
     const/16 p0, 0xd
 
+    .line 44
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -437,6 +481,7 @@
 
     const/16 p0, 0xe
 
+    .line 45
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -447,6 +492,7 @@
 
     const/16 p0, 0xf
 
+    .line 46
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -457,6 +503,7 @@
 
     const/16 p0, 0x63
 
+    .line 47
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -465,6 +512,7 @@
 
     const/16 p0, 0x64
 
+    .line 48
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -475,6 +523,7 @@
 
     const/16 p0, 0x65
 
+    .line 49
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -483,6 +532,7 @@
 
     invoke-virtual {p1, p0, p4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 50
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -491,6 +541,7 @@
 
     invoke-virtual {p1, p0, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 51
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -499,6 +550,7 @@
 
     const/16 p0, 0x62
 
+    .line 52
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0

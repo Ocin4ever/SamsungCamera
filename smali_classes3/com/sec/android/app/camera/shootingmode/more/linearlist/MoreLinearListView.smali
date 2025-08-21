@@ -28,8 +28,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListView;->initView()V
 
     return-void
@@ -38,8 +40,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 4
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListView;->initView()V
 
     return-void
@@ -64,6 +68,7 @@
 
     return-void
 
+    .line 21
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -93,6 +98,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 22
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListView;->getAdapter()Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListAdapter;
 
     move-result-object p0
@@ -1314,12 +1320,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListView;->getAdapter()Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListAdapter;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1332,6 +1340,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListAdapter;->containData(Lcom/sec/android/app/camera/interfaces/CommandId;)Z
 
@@ -1339,8 +1348,10 @@
 
     if-eqz v2, :cond_1
 
+    .line 4
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListAdapter;->removeItem(Lcom/sec/android/app/camera/interfaces/CommandId;)V
 
+    .line 5
     :cond_1
     new-instance v2, Landroid/util/Range;
 
@@ -1370,6 +1381,7 @@
 
     invoke-direct {v2, v3, v4}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
 
+    .line 6
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
@@ -1394,6 +1406,7 @@
 
     goto/16 :goto_2
 
+    .line 7
     :cond_2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -1415,6 +1428,7 @@
 
     if-gez p3, :cond_3
 
+    .line 8
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p2
@@ -1443,6 +1457,7 @@
 
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListView;->addItem(Lcom/sec/android/app/camera/interfaces/CommandId;I)V
 
+    .line 9
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p1
@@ -1473,6 +1488,7 @@
 
     add-int v1, p1, p2
 
+    .line 10
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p1
@@ -1489,6 +1505,7 @@
 
     goto/16 :goto_3
 
+    .line 11
     :cond_3
     :goto_0
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -1497,6 +1514,7 @@
 
     if-ge v2, p3, :cond_6
 
+    .line 12
     invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object p3
@@ -1560,10 +1578,12 @@
 
     goto :goto_0
 
+    .line 13
     :cond_5
     :goto_1
     invoke-direct {p0, p1, v2}, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListView;->addItem(Lcom/sec/android/app/camera/interfaces/CommandId;I)V
 
+    .line 14
     invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object p1
@@ -1574,6 +1594,7 @@
 
     float-to-int v1, p1
 
+    .line 15
     invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object p0
@@ -1589,6 +1610,7 @@
 
     goto :goto_3
 
+    .line 16
     :cond_7
     :goto_2
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
@@ -1609,12 +1631,14 @@
 
     move-result p2
 
+    .line 17
     invoke-static {p2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result p2
 
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListView;->addItem(Lcom/sec/android/app/camera/interfaces/CommandId;I)V
 
+    .line 18
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object p1
@@ -1639,6 +1663,7 @@
 
     sub-int/2addr p1, p3
 
+    .line 19
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object p0
@@ -1651,6 +1676,7 @@
 
     move v1, p1
 
+    .line 20
     :goto_3
     new-instance p1, Landroid/util/Pair;
 
@@ -1725,6 +1751,7 @@
 .method public bridge synthetic getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListView;->getAdapter()Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListAdapter;
 
     move-result-object p0
@@ -1735,6 +1762,7 @@
 .method public getAdapter()Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListAdapter;
     .locals 0
 
+    .line 2
     invoke-super {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object p0
@@ -2065,6 +2093,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListView;->setPresenter(Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListContract$Presenter;)V
@@ -2075,6 +2104,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListView;->mPresenter:Lcom/sec/android/app/camera/shootingmode/more/linearlist/MoreLinearListContract$Presenter;
 
     return-void

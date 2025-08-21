@@ -46,8 +46,10 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -62,6 +64,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/graph/SuccessorsFunction;Lcom/google/common/graph/Traverser$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/graph/Traverser;-><init>(Lcom/google/common/graph/SuccessorsFunction;)V
 
     return-void
@@ -198,10 +201,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/graph/Traverser;->validate(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p1
 
+    .line 3
     new-instance v0, Lcom/google/common/graph/Traverser$3;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/graph/Traverser$3;-><init>(Lcom/google/common/graph/Traverser;Lcom/google/common/collect/ImmutableSet;)V
@@ -219,6 +224,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/ImmutableSet;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p1
@@ -242,10 +248,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/graph/Traverser;->validate(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p1
 
+    .line 3
     new-instance v0, Lcom/google/common/graph/Traverser$5;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/graph/Traverser$5;-><init>(Lcom/google/common/graph/Traverser;Lcom/google/common/collect/ImmutableSet;)V
@@ -263,6 +271,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/ImmutableSet;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p1
@@ -286,10 +295,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/graph/Traverser;->validate(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p1
 
+    .line 3
     new-instance v0, Lcom/google/common/graph/Traverser$4;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/graph/Traverser$4;-><init>(Lcom/google/common/graph/Traverser;Lcom/google/common/collect/ImmutableSet;)V
@@ -307,6 +318,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/ImmutableSet;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p1

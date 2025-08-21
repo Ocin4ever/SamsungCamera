@@ -194,6 +194,7 @@
 
     return-void
 
+    .line 19
     :cond_0
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->startActivity(Landroid/content/Intent;)V
 
@@ -203,12 +204,14 @@
 .method private final openPreferenceHeader(Landroidx/preference/Preference;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p1}, Landroidx/preference/Preference;->getFragment()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Landroidx/preference/Preference;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
@@ -217,6 +220,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Landroidx/preference/Preference;->getFragment()Ljava/lang/String;
 
@@ -224,6 +228,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v1
@@ -232,6 +237,7 @@
 
     move-result-object v1
 
+    .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
     move-result-object v2
@@ -240,6 +246,7 @@
 
     move-result-object v2
 
+    .line 6
     invoke-virtual {v1, v2, v0}, Landroidx/fragment/app/FragmentFactory;->instantiate(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object v0
@@ -252,12 +259,14 @@
     :goto_0
     if-eqz v0, :cond_2
 
+    .line 7
     invoke-virtual {p1}, Landroidx/preference/Preference;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
+    .line 8
     :cond_2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
@@ -271,6 +280,7 @@
 
     if-lez p1, :cond_3
 
+    .line 9
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
@@ -285,6 +295,7 @@
 
     invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 10
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v2
@@ -295,6 +306,7 @@
 
     invoke-virtual {v2, p1, v1}, Landroidx/fragment/app/FragmentManager;->popBackStack(II)V
 
+    .line 11
     :cond_3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
@@ -304,6 +316,7 @@
 
     invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 12
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
@@ -312,14 +325,17 @@
 
     invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 13
     invoke-virtual {p1, v1}, Landroidx/fragment/app/FragmentTransaction;->setReorderingAllowed(Z)Landroidx/fragment/app/FragmentTransaction;
 
+    .line 14
     sget v1, Landroidx/preference/R$id;->preferences_detail:I
 
     invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/Object;)V
 
     invoke-virtual {p1, v1, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
+    .line 15
     invoke-virtual {p0}, Landroidx/preference/PreferenceHeaderFragmentCompat;->getSlidingPaneLayout()Landroidx/slidingpanelayout/widget/SlidingPaneLayout;
 
     move-result-object v0
@@ -332,8 +348,10 @@
 
     const/16 v0, 0x1003
 
+    .line 16
     invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentTransaction;->setTransition(I)Landroidx/fragment/app/FragmentTransaction;
 
+    .line 17
     :cond_4
     invoke-virtual {p0}, Landroidx/preference/PreferenceHeaderFragmentCompat;->getSlidingPaneLayout()Landroidx/slidingpanelayout/widget/SlidingPaneLayout;
 
@@ -341,6 +359,7 @@
 
     invoke-virtual {p0}, Landroidx/slidingpanelayout/widget/SlidingPaneLayout;->openPane()Z
 
+    .line 18
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     return-void

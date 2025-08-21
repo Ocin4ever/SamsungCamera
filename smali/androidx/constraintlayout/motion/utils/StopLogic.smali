@@ -81,6 +81,7 @@
 .method public getVelocity()F
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/constraintlayout/motion/utils/StopLogic;->mEngine:Landroidx/constraintlayout/core/motion/utils/StopEngine;
 
     invoke-interface {p0}, Landroidx/constraintlayout/core/motion/utils/StopEngine;->getVelocity()F
@@ -93,6 +94,7 @@
 .method public getVelocity(F)F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/utils/StopLogic;->mEngine:Landroidx/constraintlayout/core/motion/utils/StopEngine;
 
     invoke-interface {p0, p1}, Landroidx/constraintlayout/core/motion/utils/StopEngine;->getVelocity(F)F

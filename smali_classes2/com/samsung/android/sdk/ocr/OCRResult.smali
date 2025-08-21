@@ -63,14 +63,18 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult;->mBlockDataList:Ljava/util/ArrayList;
 
+    .line 3
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult;->mProcessInfo:Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;
 
+    .line 4
     invoke-direct {p0}, Lcom/samsung/android/sdk/ocr/OCRResult;->init()V
 
     return-void
@@ -79,30 +83,37 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult;->mBlockDataList:Ljava/util/ArrayList;
 
+    .line 7
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult;->mProcessInfo:Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;
 
+    .line 8
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult;->mBlockDataList:Ljava/util/ArrayList;
 
+    .line 9
     sget-object v1, Lcom/samsung/android/sdk/ocr/OCRResult$BlockData;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
 
+    .line 10
     new-instance v0, Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;
 
     invoke-direct {v0}, Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult;->mProcessInfo:Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;
 
+    .line 11
     sget-object v0, Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;

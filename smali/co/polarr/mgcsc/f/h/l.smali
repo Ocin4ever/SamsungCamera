@@ -55,6 +55,7 @@
 .method private static a(Lco/polarr/mgcsc/entities/CropWindow;F)F
     .locals 2
 
+    .line 1
     iget v0, p0, Lco/polarr/mgcsc/entities/CropWindow;->right:I
 
     iget v1, p0, Lco/polarr/mgcsc/entities/CropWindow;->left:I
@@ -108,6 +109,7 @@
         }
     .end annotation
 
+    .line 2
     int-to-float p1, p1
 
     int-to-float p2, p2
@@ -166,6 +168,7 @@
 .method public static a(Z)V
     .locals 0
 
+    .line 6
     invoke-static {p0}, Lco/polarr/mgcsc/PolarrSmartCrop;->useGPU(Z)V
 
     return-void
@@ -184,6 +187,7 @@
         }
     .end annotation
 
+    .line 3
     move-object/from16 v0, p0
 
     move/from16 v1, p6
@@ -375,6 +379,7 @@
 .method public a()V
     .locals 2
 
+    .line 4
     iget-object v0, p0, Lco/polarr/mgcsc/f/h/l;->d:Lco/polarr/mgcsc/PolarrSmartCrop;
 
     if-eqz v0, :cond_1
@@ -417,6 +422,7 @@
 .method public a(Landroid/content/Context;Ljava/lang/String;)V
     .locals 5
 
+    .line 5
     sget-boolean p1, Lco/polarr/mgcsc/f/h/l;->b:Z
 
     if-eqz p1, :cond_0

@@ -147,10 +147,12 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/RegularImmutableMultiset;->elementSet:Lcom/google/common/collect/ImmutableSet;
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance v0, Lcom/google/common/collect/RegularImmutableMultiset$ElementSet;
 
     const/4 v1, 0x0
@@ -166,6 +168,7 @@
 .method public bridge synthetic elementSet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/RegularImmutableMultiset;->elementSet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0

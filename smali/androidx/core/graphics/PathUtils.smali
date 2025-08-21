@@ -35,6 +35,7 @@
 
     const/high16 v0, 0x3f000000    # 0.5f
 
+    .line 1
     invoke-static {p0, v0}, Landroidx/core/graphics/PathUtils;->flatten(Landroid/graphics/Path;F)Ljava/util/Collection;
 
     move-result-object p0
@@ -55,14 +56,17 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/graphics/PathUtils$Api26Impl;->approximate(Landroid/graphics/Path;F)[F
 
     move-result-object p0
 
+    .line 3
     array-length p1, p0
 
     div-int/lit8 p1, p1, 0x3
 
+    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(I)V
@@ -78,24 +82,30 @@
 
     mul-int/lit8 v3, v3, 0x3
 
+    .line 5
     aget v4, p0, v2
 
     add-int/lit8 v5, v2, 0x1
 
+    .line 6
     aget v5, p0, v5
 
     add-int/lit8 v2, v2, 0x2
 
+    .line 7
     aget v2, p0, v2
 
+    .line 8
     aget v6, p0, v3
 
     add-int/lit8 v7, v3, 0x1
 
+    .line 9
     aget v7, p0, v7
 
     add-int/lit8 v3, v3, 0x2
 
+    .line 10
     aget v3, p0, v3
 
     cmpl-float v8, v4, v6
@@ -110,6 +120,7 @@
 
     if-eqz v8, :cond_1
 
+    .line 11
     :cond_0
     new-instance v8, Landroidx/core/graphics/PathSegment;
 

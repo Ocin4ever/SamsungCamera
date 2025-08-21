@@ -95,6 +95,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/Futures$2;->val$input:Ljava/util/concurrent/Future;
 
     invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
@@ -118,6 +119,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/util/concurrent/Futures$2;->val$input:Ljava/util/concurrent/Future;
 
     invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;

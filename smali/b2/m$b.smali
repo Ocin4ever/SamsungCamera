@@ -50,6 +50,7 @@
 .method public append(Ljava/lang/CharSequence;)Ljava/io/Writer;
     .locals 1
 
+    .line 3
     iget-object v0, p0, Lb2/m$b;->a:Ljava/lang/Appendable;
 
     invoke-interface {v0, p1}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
@@ -60,6 +61,7 @@
 .method public append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
     .locals 1
 
+    .line 4
     iget-object v0, p0, Lb2/m$b;->a:Ljava/lang/Appendable;
 
     invoke-interface {v0, p1, p2, p3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
@@ -70,6 +72,7 @@
 .method public bridge synthetic append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lb2/m$b;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
 
     move-result-object p0
@@ -80,6 +83,7 @@
 .method public bridge synthetic append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1, p2, p3}, Lb2/m$b;->append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
 
     move-result-object p0
@@ -102,6 +106,7 @@
 .method public write(I)V
     .locals 0
 
+    .line 3
     iget-object p0, p0, Lb2/m$b;->a:Ljava/lang/Appendable;
 
     int-to-char p1, p1
@@ -114,8 +119,10 @@
 .method public write(Ljava/lang/String;II)V
     .locals 0
 
+    .line 4
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     iget-object p0, p0, Lb2/m$b;->a:Ljava/lang/Appendable;
 
     add-int/2addr p3, p2
@@ -128,10 +135,12 @@
 .method public write([CII)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lb2/m$b;->b:Lb2/m$b$a;
 
     invoke-virtual {v0, p1}, Lb2/m$b$a;->a([C)V
 
+    .line 2
     iget-object p1, p0, Lb2/m$b;->a:Ljava/lang/Appendable;
 
     iget-object p0, p0, Lb2/m$b;->b:Lb2/m$b$a;

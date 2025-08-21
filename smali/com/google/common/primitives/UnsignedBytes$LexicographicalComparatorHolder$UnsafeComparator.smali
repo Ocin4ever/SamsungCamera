@@ -227,6 +227,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, [B
 
     check-cast p2, [B
@@ -241,6 +242,7 @@
 .method public compare([B[B)I
     .locals 10
 
+    .line 2
     array-length p0, p1
 
     array-length v0, p2
@@ -256,6 +258,7 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
+    .line 3
     sget-object v2, Lcom/google/common/primitives/UnsignedBytes$LexicographicalComparatorHolder$UnsafeComparator;->theUnsafe:Lsun/misc/Unsafe;
 
     sget v3, Lcom/google/common/primitives/UnsignedBytes$LexicographicalComparatorHolder$UnsafeComparator;->BYTE_ARRAY_BASE_OFFSET:I
@@ -274,6 +277,7 @@
 
     add-long/2addr v8, v6
 
+    .line 4
     invoke-virtual {v2, p2, v8, v9}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
 
     move-result-wide v2
@@ -282,10 +286,12 @@
 
     if-eqz v6, :cond_1
 
+    .line 5
     sget-boolean p0, Lcom/google/common/primitives/UnsignedBytes$LexicographicalComparatorHolder$UnsafeComparator;->BIG_ENDIAN:Z
 
     if-eqz p0, :cond_0
 
+    .line 6
     invoke-static {v4, v5, v2, v3}, Lcom/google/common/primitives/UnsignedLongs;->compare(JJ)I
 
     move-result p0
@@ -295,6 +301,7 @@
     :cond_0
     xor-long p0, v4, v2
 
+    .line 7
     invoke-static {p0, p1}, Ljava/lang/Long;->numberOfTrailingZeros(J)I
 
     move-result p0
@@ -328,6 +335,7 @@
     :goto_1
     if-ge v1, p0, :cond_4
 
+    .line 8
     aget-byte v0, p1, v1
 
     aget-byte v2, p2, v1
@@ -345,6 +353,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_4
     array-length p0, p1
 

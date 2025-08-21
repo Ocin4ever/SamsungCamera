@@ -83,6 +83,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/AtomicLongMap;
 
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
@@ -110,10 +111,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {}, Lcom/google/common/util/concurrent/AtomicLongMap;->create()Lcom/google/common/util/concurrent/AtomicLongMap;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0, p0}, Lcom/google/common/util/concurrent/AtomicLongMap;->putAll(Ljava/util/Map;)V
 
     return-object v0
@@ -650,6 +653,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AtomicLongMap;->map:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -664,6 +668,7 @@
 
     return-wide v1
 
+    .line 2
     :cond_0
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
@@ -673,12 +678,14 @@
 
     if-eqz v5, :cond_1
 
+    .line 3
     invoke-virtual {v0, v3, v4, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
+    .line 4
     :cond_1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AtomicLongMap;->map:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -695,6 +702,7 @@
         }
     .end annotation
 
+    .line 5
     iget-object v0, p0, Lcom/google/common/util/concurrent/AtomicLongMap;->map:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -709,6 +717,7 @@
 
     return v1
 
+    .line 6
     :cond_0
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
@@ -727,6 +736,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 7
     invoke-virtual {v0, v2, v3, p2, p3}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
 
     move-result p2
@@ -738,6 +748,7 @@
     :cond_2
     return v1
 
+    .line 8
     :cond_3
     :goto_0
     iget-object p0, p0, Lcom/google/common/util/concurrent/AtomicLongMap;->map:Ljava/util/concurrent/ConcurrentHashMap;

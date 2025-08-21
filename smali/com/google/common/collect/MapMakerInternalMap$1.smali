@@ -63,12 +63,14 @@
         }
     .end annotation
 
+    .line 1
     return-object p0
 .end method
 
 .method public bridge synthetic copyFor(Ljava/lang/ref/ReferenceQueue;Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;)Lcom/google/common/collect/MapMakerInternalMap$WeakValueReference;
     .locals 0
 
+    .line 2
     check-cast p2, Lcom/google/common/collect/MapMakerInternalMap$DummyInternalEntry;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/MapMakerInternalMap$1;->copyFor(Ljava/lang/ref/ReferenceQueue;Lcom/google/common/collect/MapMakerInternalMap$DummyInternalEntry;)Lcom/google/common/collect/MapMakerInternalMap$WeakValueReference;
@@ -89,6 +91,7 @@
 .method public getEntry()Lcom/google/common/collect/MapMakerInternalMap$DummyInternalEntry;
     .locals 0
 
+    .line 1
     const/4 p0, 0x0
 
     return-object p0
@@ -97,6 +100,7 @@
 .method public bridge synthetic getEntry()Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap$1;->getEntry()Lcom/google/common/collect/MapMakerInternalMap$DummyInternalEntry;
 
     move-result-object p0

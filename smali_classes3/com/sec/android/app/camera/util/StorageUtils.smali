@@ -514,6 +514,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -535,6 +536,7 @@
 
     throw v0
 
+    .line 3
     :cond_1
     :goto_0
     invoke-static {p0}, Lcom/sec/android/app/camera/util/StorageUtils;->getStoragePath(I)Ljava/lang/String;
@@ -545,6 +547,7 @@
 
     move-result-wide v0
 
+    .line 4
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/util/StorageUtils;->getStorageStatusForSingleTake(J)I
 
     move-result p0
@@ -555,6 +558,7 @@
 .method private static getStorageStatusForSingleTake(J)I
     .locals 2
 
+    .line 1
     const-wide/32 v0, 0x1f400000
 
     cmp-long v0, p0, v0

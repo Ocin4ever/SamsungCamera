@@ -75,6 +75,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/ComparisonChain;->start()Lcom/google/common/collect/ComparisonChain;
 
     move-result-object p0
@@ -83,6 +84,7 @@
 
     iget-object v1, p2, Lcom/google/common/collect/Range;->lowerBound:Lcom/google/common/collect/Cut;
 
+    .line 3
     invoke-virtual {p0, v0, v1}, Lcom/google/common/collect/ComparisonChain;->compare(Ljava/lang/Comparable;Ljava/lang/Comparable;)Lcom/google/common/collect/ComparisonChain;
 
     move-result-object p0
@@ -91,10 +93,12 @@
 
     iget-object p2, p2, Lcom/google/common/collect/Range;->upperBound:Lcom/google/common/collect/Cut;
 
+    .line 4
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ComparisonChain;->compare(Ljava/lang/Comparable;Ljava/lang/Comparable;)Lcom/google/common/collect/ComparisonChain;
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/collect/ComparisonChain;->result()I
 
     move-result p0
@@ -105,6 +109,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/collect/Range;
 
     check-cast p2, Lcom/google/common/collect/Range;

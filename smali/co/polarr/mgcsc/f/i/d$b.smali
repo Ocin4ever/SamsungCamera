@@ -36,6 +36,7 @@
 .method private constructor <init>(Landroid/graphics/PointF;D)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p2, p0, Lco/polarr/mgcsc/f/i/d$b;->a:D
@@ -48,6 +49,7 @@
 .method public synthetic constructor <init>(Landroid/graphics/PointF;DLco/polarr/mgcsc/f/i/d$a;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Lco/polarr/mgcsc/f/i/d$b;-><init>(Landroid/graphics/PointF;D)V
 
     return-void

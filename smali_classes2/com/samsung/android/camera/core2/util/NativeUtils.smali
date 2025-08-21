@@ -658,8 +658,10 @@
 .method public static produceFrameWithNV21(Landroid/view/Surface;JII)V
     .locals 1
 
+    .line 1
     invoke-static {p0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -668,12 +670,15 @@
 
     const-string v0, "width"
 
+    .line 3
     invoke-static {p3, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->n(ILjava/lang/String;)I
 
     const-string v0, "height"
 
+    .line 4
     invoke-static {p4, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->n(ILjava/lang/String;)I
 
+    .line 5
     invoke-static {p0, p1, p2, p3, p4}, Lcom/samsung/android/camera/core2/util/NativeUtils;->nativeProduceFrameWithNV21(Landroid/view/Surface;JII)I
 
     move-result p0
@@ -686,26 +691,33 @@
 .method public static produceFrameWithNV21(Landroid/view/Surface;Lcom/samsung/android/camera/core2/util/DirectBuffer;IIII)V
     .locals 1
 
+    .line 6
     invoke-static {p0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 7
     invoke-static {p1}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "width"
 
+    .line 8
     invoke-static {p2, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->n(ILjava/lang/String;)I
 
     const-string v0, "height"
 
+    .line 9
     invoke-static {p3, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->n(ILjava/lang/String;)I
 
     const-string v0, "row_stride"
 
+    .line 10
     invoke-static {p4, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->n(ILjava/lang/String;)I
 
     const-string v0, "height_slice"
 
+    .line 11
     invoke-static {p5, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->n(ILjava/lang/String;)I
 
+    .line 12
     invoke-static/range {p0 .. p5}, Lcom/samsung/android/camera/core2/util/NativeUtils;->nativeProduceFrameWithNV21FromBuffer(Landroid/view/Surface;Lcom/samsung/android/camera/core2/util/DirectBuffer;IIII)I
 
     move-result p0
@@ -905,10 +917,12 @@
 .method public static setSurfaceFormat(Landroid/view/Surface;I)V
     .locals 1
 
+    .line 1
     invoke-static {p0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-static {p0, p1, v0}, Lcom/samsung/android/camera/core2/util/NativeUtils;->nativeSetSurfaceFormat(Landroid/view/Surface;IZ)I
 
     move-result p0
@@ -921,8 +935,10 @@
 .method public static setSurfaceFormat(Landroid/view/Surface;IZ)V
     .locals 0
 
+    .line 3
     invoke-static {p0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-static {p0, p1, p2}, Lcom/samsung/android/camera/core2/util/NativeUtils;->nativeSetSurfaceFormat(Landroid/view/Surface;IZ)I
 
     move-result p0

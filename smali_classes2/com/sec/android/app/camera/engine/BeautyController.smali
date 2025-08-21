@@ -1266,6 +1266,7 @@
 
     if-nez p3, :cond_0
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1276,6 +1277,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
@@ -1300,6 +1302,7 @@
         }
     .end annotation
 
+    .line 3
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1410,6 +1413,7 @@
 .method private updateBeautySetting()V
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->getCameraFacing()I
@@ -1432,6 +1436,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     sget-object v4, Lcom/samsung/android/camera/core2/MakerPrivateKey;->y:Lcom/samsung/android/camera/core2/MakerPrivateKey;
@@ -1440,10 +1445,12 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/sec/android/app/camera/engine/CommonEngine;->setPrivateSetting(Lcom/samsung/android/camera/core2/MakerPrivateKey;Ljava/lang/Object;)V
 
+    .line 3
     invoke-direct {p0}, Lcom/sec/android/app/camera/engine/BeautyController;->updateSelfieToneMode()V
 
     goto :goto_2
 
+    .line 4
     :cond_1
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
@@ -1476,6 +1483,7 @@
     :goto_2
     if-eqz v0, :cond_3
 
+    .line 5
     sget-object v3, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->FRONT_PHOTO_BEAUTY_TYPE:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
     goto :goto_3
@@ -1486,6 +1494,7 @@
     :goto_3
     if-eqz v0, :cond_4
 
+    .line 6
     sget-object v4, Lcom/sec/android/app/camera/interfaces/CommandId;->FRONT_PHOTO_BEAUTY_TAB:Lcom/sec/android/app/camera/interfaces/CommandId;
 
     goto :goto_4
@@ -1496,6 +1505,7 @@
     :goto_4
     if-eqz v0, :cond_5
 
+    .line 7
     sget-object v0, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->FRONT_SMART_BEAUTY_LEVEL:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
     goto :goto_5
@@ -1503,6 +1513,7 @@
     :cond_5
     sget-object v0, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->BACK_SMART_BEAUTY_LEVEL:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
+    .line 8
     :goto_5
     iget-object v5, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -1522,6 +1533,7 @@
     :goto_6
     invoke-direct {p0, v5}, Lcom/sec/android/app/camera/engine/BeautyController;->setBeautyEffectIgnore(Z)V
 
+    .line 9
     iget-object v5, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {v5, v3}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->get(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
@@ -1535,6 +1547,7 @@
     :cond_7
     invoke-direct {p0, v1}, Lcom/sec/android/app/camera/engine/BeautyController;->enableSmartBeauty(Z)V
 
+    .line 10
     invoke-static {v4}, Lcom/sec/android/app/camera/util/BeautyUtil;->getManualBeautyLevelSettingKeyList(Lcom/sec/android/app/camera/interfaces/CommandId;)Ljava/util/ArrayList;
 
     move-result-object v1
@@ -1545,6 +1558,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
+    .line 11
     invoke-static {v0}, Lcom/sec/android/app/camera/util/BeautyUtil;->getPhotoBeautyMakerPrivateKey(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)Lcom/samsung/android/camera/core2/MakerPrivateKey;
 
     move-result-object v1
@@ -1563,6 +1577,7 @@
 .method private updateBeautySetting(Lcom/sec/android/app/camera/interfaces/Engine$MakerSettings;)V
     .locals 3
 
+    .line 12
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->getCameraFacing()I
@@ -1581,6 +1596,7 @@
     :goto_0
     if-eqz v1, :cond_1
 
+    .line 13
     sget-object v0, Lcom/sec/android/app/camera/interfaces/CommandId;->FRONT_PHOTO_BEAUTY_TAB:Lcom/sec/android/app/camera/interfaces/CommandId;
 
     goto :goto_1
@@ -1591,6 +1607,7 @@
     :goto_1
     if-eqz v1, :cond_2
 
+    .line 14
     sget-object v1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->FRONT_SMART_BEAUTY_LEVEL:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
     goto :goto_2
@@ -1598,9 +1615,11 @@
     :cond_2
     sget-object v1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->BACK_SMART_BEAUTY_LEVEL:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
+    .line 15
     :goto_2
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/engine/BeautyController;->updateBeautyType(Lcom/sec/android/app/camera/interfaces/Engine$MakerSettings;)V
 
+    .line 16
     invoke-static {v0}, Lcom/sec/android/app/camera/util/BeautyUtil;->getManualBeautyLevelSettingKeyList(Lcom/sec/android/app/camera/interfaces/CommandId;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -1611,6 +1630,7 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
+    .line 17
     invoke-static {v1}, Lcom/sec/android/app/camera/util/BeautyUtil;->getPhotoBeautyMakerPublicKey(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)Landroid/hardware/camera2/CaptureRequest$Key;
 
     move-result-object v0
@@ -1629,6 +1649,7 @@
 .method private updateBeautyType()V
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->getCameraFacing()I
@@ -1648,6 +1669,7 @@
     :cond_0
     move v0, v1
 
+    .line 2
     :goto_0
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
@@ -1663,10 +1685,12 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/engine/BeautyController;->updateBeautyType(Lcom/sec/android/app/camera/interfaces/Engine$MakerSettings;)V
 
     goto :goto_4
 
+    .line 4
     :cond_1
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -1686,6 +1710,7 @@
 
     if-nez v0, :cond_4
 
+    .line 5
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     sget-object v4, Lcom/samsung/android/camera/core2/MakerPrivateKey;->y:Lcom/samsung/android/camera/core2/MakerPrivateKey;
@@ -1716,6 +1741,7 @@
     :cond_5
     move v0, v1
 
+    .line 6
     :goto_3
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/engine/BeautyController;->setBeautyEffectIgnore(Z)V
 
@@ -1723,6 +1749,7 @@
 
     move v1, v2
 
+    .line 7
     :cond_6
     invoke-direct {p0, v1}, Lcom/sec/android/app/camera/engine/BeautyController;->enableSmartBeauty(Z)V
 
@@ -1733,6 +1760,7 @@
 .method private updateBeautyType(Lcom/sec/android/app/camera/interfaces/Engine$MakerSettings;)V
     .locals 3
 
+    .line 8
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     sget-object v1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->BEAUTY_FILTER_EFFECT_ENABLED:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
@@ -1743,6 +1771,7 @@
 
     const/4 v1, 0x1
 
+    .line 9
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1751,6 +1780,7 @@
 
     if-nez p1, :cond_0
 
+    .line 10
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     sget-object p1, Lcom/samsung/android/camera/core2/MakerPublicKey;->P0:Landroid/hardware/camera2/CaptureRequest$Key;
@@ -1759,6 +1789,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_0
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
@@ -1769,6 +1800,7 @@
     :goto_0
     return-void
 
+    .line 12
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -1788,6 +1820,7 @@
     :goto_1
     if-nez p1, :cond_3
 
+    .line 13
     iget-object p1, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     sget-object v1, Lcom/samsung/android/camera/core2/MakerPublicKey;->P0:Landroid/hardware/camera2/CaptureRequest$Key;
@@ -1810,6 +1843,7 @@
 
     goto :goto_2
 
+    .line 14
     :cond_3
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/BeautyController;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 

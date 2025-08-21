@@ -915,6 +915,7 @@
 .method public getVelocity()F
     .locals 1
 
+    .line 10
     iget-boolean v0, p0, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine;->mBackwards:Z
 
     if-eqz v0, :cond_0
@@ -943,12 +944,14 @@
 .method public getVelocity(F)F
     .locals 3
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine;->mStage1Duration:F
 
     cmpg-float v1, p1, v0
 
     if-gtz v1, :cond_0
 
+    .line 2
     iget v1, p0, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine;->mStage1Velocity:F
 
     iget p0, p0, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine;->mStage2Velocity:F
@@ -964,6 +967,7 @@
 
     return v1
 
+    .line 3
     :cond_0
     iget v1, p0, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine;->mNumberOfStages:I
 
@@ -978,12 +982,14 @@
     :cond_1
     sub-float/2addr p1, v0
 
+    .line 4
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine;->mStage2Duration:F
 
     cmpg-float v2, p1, v0
 
     if-gez v2, :cond_2
 
+    .line 5
     iget v1, p0, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine;->mStage2Velocity:F
 
     iget p0, p0, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine;->mStage3Velocity:F
@@ -995,6 +1001,7 @@
 
     if-ne v1, v2, :cond_3
 
+    .line 6
     iget p0, p0, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine;->mStage2EndPosition:F
 
     return p0
@@ -1002,12 +1009,14 @@
     :cond_3
     sub-float/2addr p1, v0
 
+    .line 7
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine;->mStage3Duration:F
 
     cmpg-float v1, p1, v0
 
     if-gez v1, :cond_4
 
+    .line 8
     iget p0, p0, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine;->mStage3Velocity:F
 
     mul-float/2addr p1, p0
@@ -1018,6 +1027,7 @@
 
     return p0
 
+    .line 9
     :cond_4
     iget p0, p0, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine;->mStage3EndPosition:F
 

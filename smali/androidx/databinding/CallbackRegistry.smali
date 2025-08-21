@@ -180,6 +180,7 @@
 
     if-nez v2, :cond_0
 
+    .line 13
     iget-object v2, p0, Landroidx/databinding/CallbackRegistry;->mNotifier:Landroidx/databinding/CallbackRegistry$NotifierCallback;
 
     iget-object v3, p0, Landroidx/databinding/CallbackRegistry;->mCallbacks:Ljava/util/List;
@@ -600,6 +601,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -612,21 +614,26 @@
 
     const-wide/16 v2, 0x0
 
+    .line 3
     :try_start_1
     iput-wide v2, v1, Landroidx/databinding/CallbackRegistry;->mFirst64Removed:J
 
+    .line 4
     iput-object v0, v1, Landroidx/databinding/CallbackRegistry;->mRemainderRemoved:[J
 
     const/4 v0, 0x0
 
+    .line 5
     iput v0, v1, Landroidx/databinding/CallbackRegistry;->mNotificationLevel:I
 
+    .line 6
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, v1, Landroidx/databinding/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
+    .line 7
     iget-object v2, p0, Landroidx/databinding/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -636,12 +643,14 @@
     :goto_0
     if-ge v0, v2, :cond_1
 
+    .line 8
     invoke-direct {p0, v0}, Landroidx/databinding/CallbackRegistry;->isRemoved(I)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
+    .line 9
     iget-object v3, v1, Landroidx/databinding/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     iget-object v4, p0, Landroidx/databinding/CallbackRegistry;->mCallbacks:Ljava/util/List;
@@ -679,12 +688,14 @@
 
     move-object v0, v5
 
+    .line 10
     :goto_1
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 11
     :cond_1
     monitor-exit p0
 
@@ -699,6 +710,7 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/databinding/CallbackRegistry;->clone()Landroidx/databinding/CallbackRegistry;
 
     move-result-object p0
@@ -718,6 +730,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -729,6 +742,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 2
     iget-object v1, p0, Landroidx/databinding/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -740,12 +754,14 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
+    .line 3
     invoke-direct {p0, v2}, Landroidx/databinding/CallbackRegistry;->isRemoved(I)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
+    .line 4
     iget-object v3, p0, Landroidx/databinding/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -761,6 +777,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     monitor-exit p0
 
@@ -786,9 +803,11 @@
 
     monitor-enter p0
 
+    .line 6
     :try_start_0
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
+    .line 7
     iget-object v0, p0, Landroidx/databinding/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -800,12 +819,14 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 8
     invoke-direct {p0, v1}, Landroidx/databinding/CallbackRegistry;->isRemoved(I)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
+    .line 9
     iget-object v2, p0, Landroidx/databinding/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -821,6 +842,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     monitor-exit p0
 
@@ -923,6 +945,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget v0, p0, Landroidx/databinding/CallbackRegistry;->mNotificationLevel:I
 
@@ -930,8 +953,10 @@
 
     iput v0, p0, Landroidx/databinding/CallbackRegistry;->mNotificationLevel:I
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Landroidx/databinding/CallbackRegistry;->notifyRecurse(Ljava/lang/Object;ILjava/lang/Object;)V
 
+    .line 3
     iget p1, p0, Landroidx/databinding/CallbackRegistry;->mNotificationLevel:I
 
     add-int/lit8 p1, p1, -0x1
@@ -940,12 +965,14 @@
 
     if-nez p1, :cond_2
 
+    .line 4
     iget-object p1, p0, Landroidx/databinding/CallbackRegistry;->mRemainderRemoved:[J
 
     const-wide/16 p2, 0x0
 
     if-eqz p1, :cond_1
 
+    .line 5
     array-length p1, p1
 
     add-int/lit8 p1, p1, -0x1
@@ -953,6 +980,7 @@
     :goto_0
     if-ltz p1, :cond_1
 
+    .line 6
     iget-object v0, p0, Landroidx/databinding/CallbackRegistry;->mRemainderRemoved:[J
 
     aget-wide v0, v0, p1
@@ -965,8 +993,10 @@
 
     mul-int/lit8 v2, v2, 0x40
 
+    .line 7
     invoke-direct {p0, v2, v0, v1}, Landroidx/databinding/CallbackRegistry;->removeRemovedCallbacks(IJ)V
 
+    .line 8
     iget-object v0, p0, Landroidx/databinding/CallbackRegistry;->mRemainderRemoved:[J
 
     aput-wide p2, v0, p1
@@ -976,6 +1006,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     iget-wide v0, p0, Landroidx/databinding/CallbackRegistry;->mFirst64Removed:J
 
@@ -985,12 +1016,15 @@
 
     const/4 p1, 0x0
 
+    .line 10
     invoke-direct {p0, p1, v0, v1}, Landroidx/databinding/CallbackRegistry;->removeRemovedCallbacks(IJ)V
 
+    .line 11
     iput-wide p2, p0, Landroidx/databinding/CallbackRegistry;->mFirst64Removed:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 12
     :cond_2
     monitor-exit p0
 

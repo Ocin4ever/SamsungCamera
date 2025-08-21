@@ -46,6 +46,7 @@
 .method public final invoke()Landroidx/lifecycle/viewmodel/CreationExtras;
     .locals 1
 
+    .line 2
     iget-object p0, p0, Landroidx/fragment/app/FragmentViewModelLazyKt$activityViewModels$2;->$this_activityViewModels:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
@@ -66,6 +67,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$activityViewModels$2;->invoke()Landroidx/lifecycle/viewmodel/CreationExtras;
 
     move-result-object p0

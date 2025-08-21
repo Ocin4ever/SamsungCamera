@@ -74,6 +74,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Number;
 
     invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
@@ -110,14 +111,17 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Landroidx/room/AmbiguousColumnResolver$resolve$1$1;->$mapping:[Ljava/lang/String;
 
+    .line 3
     new-instance v1, Ljava/util/ArrayList;
 
     array-length v2, v0
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 4
     array-length v2, v0
 
     const/4 v3, 0x0
@@ -127,10 +131,12 @@
 
     aget-object v4, v0, v3
 
+    .line 5
     move-object v5, p3
 
     check-cast v5, Ljava/lang/Iterable;
 
+    .line 6
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -150,10 +156,12 @@
 
     check-cast v7, Landroidx/room/AmbiguousColumnResolver$ResultColumn;
 
+    .line 7
     invoke-virtual {v7}, Landroidx/room/AmbiguousColumnResolver$ResultColumn;->component1()Ljava/lang/String;
 
     move-result-object v7
 
+    .line 8
     invoke-static {v4, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v7
@@ -165,11 +173,13 @@
     :cond_1
     const/4 v6, 0x0
 
+    .line 9
     :goto_1
     check-cast v6, Landroidx/room/AmbiguousColumnResolver$ResultColumn;
 
     if-eqz v6, :cond_2
 
+    .line 10
     invoke-virtual {v6}, Landroidx/room/AmbiguousColumnResolver$ResultColumn;->getIndex()I
 
     move-result v4
@@ -178,6 +188,7 @@
 
     move-result-object v4
 
+    .line 11
     invoke-interface {v1, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v3, v3, 0x1
@@ -187,6 +198,7 @@
     :cond_2
     return-void
 
+    .line 12
     :cond_3
     iget-object p3, p0, Landroidx/room/AmbiguousColumnResolver$resolve$1$1;->$mappingMatches:Ljava/util/List;
 
@@ -198,16 +210,20 @@
 
     check-cast p0, Ljava/util/List;
 
+    .line 13
     new-instance p3, Landroidx/room/AmbiguousColumnResolver$Match;
 
+    .line 14
     new-instance v0, Lt6/d;
 
     add-int/lit8 p2, p2, -0x1
 
     invoke-direct {v0, p1, p2}, Lt6/d;-><init>(II)V
 
+    .line 15
     invoke-direct {p3, v0, v1}, Landroidx/room/AmbiguousColumnResolver$Match;-><init>(Lt6/d;Ljava/util/List;)V
 
+    .line 16
     invoke-interface {p0, p3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void

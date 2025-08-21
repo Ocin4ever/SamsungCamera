@@ -52,8 +52,10 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys$2;->this$0:Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;->createMap()Ljava/util/Map;
 
     move-result-object p0
@@ -62,6 +64,7 @@
 
     move-result-object v0
 
+    .line 4
     invoke-static {p0, v0}, Lcom/google/common/collect/Multimaps;->newListMultimap(Ljava/util/Map;Lcom/google/common/base/Supplier;)Lcom/google/common/collect/ListMultimap;
 
     move-result-object p0
@@ -72,6 +75,7 @@
 .method public bridge synthetic build()Lcom/google/common/collect/Multimap;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys$2;->build()Lcom/google/common/collect/ListMultimap;
 
     move-result-object p0

@@ -163,11 +163,13 @@
 
     return-object p0
 
+    .line 6
     :cond_0
     sget-object v0, Landroidx/fragment/app/FragmentTransition;->PLATFORM_IMPL:Landroidx/fragment/app/FragmentTransitionImpl;
 
     if-eqz v0, :cond_1
 
+    .line 7
     invoke-virtual {v0, p1}, Landroidx/fragment/app/FragmentTransitionImpl;->canHandle(Ljava/lang/Object;)Z
 
     move-result v1
@@ -176,11 +178,13 @@
 
     return-object v0
 
+    .line 8
     :cond_1
     sget-object v0, Landroidx/fragment/app/FragmentTransition;->SUPPORT_IMPL:Landroidx/fragment/app/FragmentTransitionImpl;
 
     if-eqz v0, :cond_2
 
+    .line 9
     invoke-virtual {v0, p1}, Landroidx/fragment/app/FragmentTransitionImpl;->canHandle(Ljava/lang/Object;)Z
 
     move-result v1
@@ -189,6 +193,7 @@
 
     return-object v0
 
+    .line 10
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -206,6 +211,7 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 11
     invoke-virtual {p0}, Landroidx/fragment/app/DefaultSpecialEffectsController$SpecialEffectsInfo;->getOperation()Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     move-result-object p0
@@ -234,14 +240,17 @@
 .method public getHandlingImpl()Landroidx/fragment/app/FragmentTransitionImpl;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->mTransition:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getHandlingImpl(Ljava/lang/Object;)Landroidx/fragment/app/FragmentTransitionImpl;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->mSharedElementTransition:Ljava/lang/Object;
 
+    .line 3
     invoke-direct {p0, v1}, Landroidx/fragment/app/DefaultSpecialEffectsController$TransitionInfo;->getHandlingImpl(Ljava/lang/Object;)Landroidx/fragment/app/FragmentTransitionImpl;
 
     move-result-object v1
@@ -254,6 +263,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -265,6 +275,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/DefaultSpecialEffectsController$SpecialEffectsInfo;->getOperation()Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     move-result-object v2

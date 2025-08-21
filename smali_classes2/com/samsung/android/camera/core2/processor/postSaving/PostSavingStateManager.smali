@@ -49,8 +49,10 @@
 .method public constructor <init>(Landroid/content/Context;ILjava/io/File;Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateCallback;Lcom/samsung/android/camera/core2/processor/DraftNodeChainAccessor;Lcom/samsung/android/camera/core2/processor/gppm/GppmProcessingManager;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/EnumMap;
 
     const-class v1, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState$StateType;
@@ -59,6 +61,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mPostSavingStateMap:Ljava/util/EnumMap;
 
+    .line 3
     new-instance v1, Ljava/util/concurrent/locks/ReentrantLock;
 
     const/4 v2, 0x0
@@ -67,16 +70,20 @@
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mPostSavingStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 4
     new-instance v1, Lcom/samsung/android/camera/core2/processor/postSaving/SavingInfoContainer;
 
     invoke-direct {v1, p1, p2, p3}, Lcom/samsung/android/camera/core2/processor/postSaving/SavingInfoContainer;-><init>(Landroid/content/Context;ILjava/io/File;)V
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mSavingInfoContainer:Lcom/samsung/android/camera/core2/processor/postSaving/SavingInfoContainer;
 
+    .line 5
     iput-object p4, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mPostSavingStateCallback:Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateCallback;
 
+    .line 6
     invoke-direct {p0, v1, p5, p6}, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->initPostSavingStateMap(Lcom/samsung/android/camera/core2/processor/postSaving/SavingInfoContainer;Lcom/samsung/android/camera/core2/processor/DraftNodeChainAccessor;Lcom/samsung/android/camera/core2/processor/gppm/GppmProcessingManager;)V
 
+    .line 7
     sget-object p1, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState$StateType;->IDLE:Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState$StateType;
 
     invoke-virtual {v0, p1}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -93,8 +100,10 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateCallback;Lcom/samsung/android/camera/core2/processor/postSaving/SavingInfoContainer;Lcom/samsung/android/camera/core2/processor/DraftNodeChainAccessor;Lcom/samsung/android/camera/core2/processor/gppm/GppmProcessingManager;)V
     .locals 3
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 9
     new-instance v0, Ljava/util/EnumMap;
 
     const-class v1, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState$StateType;
@@ -103,6 +112,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mPostSavingStateMap:Ljava/util/EnumMap;
 
+    .line 10
     new-instance v1, Ljava/util/concurrent/locks/ReentrantLock;
 
     const/4 v2, 0x0
@@ -111,12 +121,16 @@
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mPostSavingStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 11
     iput-object p2, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mSavingInfoContainer:Lcom/samsung/android/camera/core2/processor/postSaving/SavingInfoContainer;
 
+    .line 12
     iput-object p1, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mPostSavingStateCallback:Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateCallback;
 
+    .line 13
     invoke-direct {p0, p2, p3, p4}, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->initPostSavingStateMap(Lcom/samsung/android/camera/core2/processor/postSaving/SavingInfoContainer;Lcom/samsung/android/camera/core2/processor/DraftNodeChainAccessor;Lcom/samsung/android/camera/core2/processor/gppm/GppmProcessingManager;)V
 
+    .line 14
     sget-object p1, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState$StateType;->DRAFT:Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState$StateType;
 
     invoke-virtual {v0, p1}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -529,10 +543,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mPostSavingStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mCurrentPostSavingModuleState:Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState;
 
@@ -542,6 +558,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     iget-object p0, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mPostSavingStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -555,6 +572,7 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 4
     throw p1
 .end method
 
@@ -576,6 +594,7 @@
 
     monitor-enter p0
 
+    .line 5
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mPostSavingStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -583,6 +602,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 6
     :try_start_1
     iget-object v0, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mCurrentPostSavingModuleState:Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState;
 
@@ -592,6 +612,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 7
     :try_start_2
     iget-object p2, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mPostSavingStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -599,6 +620,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 8
     monitor-exit p0
 
     return p1
@@ -606,11 +628,13 @@
     :catchall_0
     move-exception p1
 
+    .line 9
     :try_start_3
     iget-object p2, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->mPostSavingStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 10
     throw p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1

@@ -52,8 +52,10 @@
 .method public escape(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -63,6 +65,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 3
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -73,6 +76,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     invoke-virtual {p0, p1, v1}, Lcom/google/common/escape/CharEscaper;->escapeSlow(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0

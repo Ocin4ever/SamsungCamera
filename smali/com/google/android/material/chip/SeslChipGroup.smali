@@ -33,6 +33,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 1
     sget v0, Ly0/a;->e:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/chip/SeslChipGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -43,12 +44,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/chip/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x1
 
+    .line 3
     iput-boolean p1, p0, Lcom/google/android/material/chip/SeslChipGroup;->l:Z
 
+    .line 4
     new-instance p2, Landroid/animation/LayoutTransition;
 
     invoke-direct {p2}, Landroid/animation/LayoutTransition;-><init>()V
@@ -57,8 +61,10 @@
 
     const/4 p2, 0x0
 
+    .line 5
     iput p2, p0, Lcom/google/android/material/chip/SeslChipGroup;->p:I
 
+    .line 6
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -73,6 +79,7 @@
 
     sput p2, Lcom/google/android/material/chip/SeslChipGroup;->q:I
 
+    .line 7
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object p2
@@ -83,8 +90,10 @@
 
     invoke-virtual {p0, p2}, Landroid/view/View;->setLayoutDirection(I)V
 
+    .line 8
     invoke-virtual {p0}, Lcom/google/android/material/chip/SeslChipGroup;->w()V
 
+    .line 9
     invoke-virtual {p0, p1}, Lcom/google/android/material/chip/SeslChipGroup;->p(Z)V
 
     return-void

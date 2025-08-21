@@ -15,18 +15,22 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Li/b;->c:Ljava/lang/String;
 
+    .line 3
     new-array p1, p1, [B
 
     iput-object p1, p0, Li/b;->a:[B
 
     const/4 p1, 0x0
 
+    .line 4
     iput p1, p0, Li/b;->b:I
 
     return-void
@@ -35,22 +39,27 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 3
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 10
     iput-object v0, p0, Li/b;->c:Ljava/lang/String;
 
     const/4 v0, 0x0
 
+    .line 11
     iput v0, p0, Li/b;->b:I
 
     const/16 v0, 0x4000
 
     new-array v1, v0, [B
 
+    .line 12
     iput-object v1, p0, Li/b;->a:[B
 
+    .line 13
     :goto_0
     iget-object v1, p0, Li/b;->a:[B
 
@@ -62,6 +71,7 @@
 
     if-lez v1, :cond_0
 
+    .line 14
     iget v2, p0, Li/b;->b:I
 
     add-int/2addr v2, v1
@@ -72,6 +82,7 @@
 
     add-int/lit16 v2, v2, 0x4000
 
+    .line 15
     invoke-virtual {p0, v2}, Li/b;->e(I)V
 
     goto :goto_0
@@ -83,14 +94,18 @@
 .method public constructor <init>([B)V
     .locals 1
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Li/b;->c:Ljava/lang/String;
 
+    .line 7
     iput-object p1, p0, Li/b;->a:[B
 
+    .line 8
     array-length p1, p1
 
     iput p1, p0, Li/b;->b:I

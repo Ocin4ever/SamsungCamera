@@ -36,6 +36,7 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/engine/request/RequestQueue;)V
     .locals 7
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue$RequestThreadPool;->this$0:Lcom/sec/android/app/camera/engine/request/RequestQueue;
 
     const/4 v1, 0x1
@@ -44,6 +45,7 @@
 
     const-wide/16 v3, 0xa
 
+    .line 3
     sget-object v5, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
     new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
@@ -54,18 +56,21 @@
 
     invoke-direct/range {v0 .. v6}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
 
+    .line 4
     new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue$RequestThreadPool;->mBlockingRequestLock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 5
     invoke-virtual {p1}, Ljava/util/concurrent/locks/ReentrantLock;->newCondition()Ljava/util/concurrent/locks/Condition;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue$RequestThreadPool;->mBlockCondition:Ljava/util/concurrent/locks/Condition;
 
+    .line 6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -74,18 +79,23 @@
 
     const/4 p1, 0x1
 
+    .line 7
     iput-boolean p1, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue$RequestThreadPool;->mIsSignaled:Z
 
     const/4 v0, 0x0
 
+    .line 8
     iput-boolean v0, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue$RequestThreadPool;->mIsInterrupted:Z
 
+    .line 9
     iput-boolean p1, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue$RequestThreadPool;->mIsInterruptible:Z
 
     const/4 p1, -0x1
 
+    .line 10
     iput p1, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue$RequestThreadPool;->mCurrentRequestId:I
 
+    .line 11
     new-instance p1, Ljava/util/concurrent/ThreadPoolExecutor$DiscardPolicy;
 
     invoke-direct {p1}, Ljava/util/concurrent/ThreadPoolExecutor$DiscardPolicy;-><init>()V
@@ -98,6 +108,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/engine/request/RequestQueue;Lcom/sec/android/app/camera/engine/request/h4;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/engine/request/RequestQueue$RequestThreadPool;-><init>(Lcom/sec/android/app/camera/engine/request/RequestQueue;)V
 
     return-void

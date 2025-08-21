@@ -36,8 +36,10 @@
 .method private constructor <init>(Lcom/google/common/primitives/ImmutableIntArray;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/primitives/ImmutableIntArray$AsList;->parent:Lcom/google/common/primitives/ImmutableIntArray;
 
     return-void
@@ -46,6 +48,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/primitives/ImmutableIntArray;Lcom/google/common/primitives/ImmutableIntArray$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/primitives/ImmutableIntArray$AsList;-><init>(Lcom/google/common/primitives/ImmutableIntArray;)V
 
     return-void
@@ -180,6 +183,7 @@
 .method public get(I)Ljava/lang/Integer;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/primitives/ImmutableIntArray$AsList;->parent:Lcom/google/common/primitives/ImmutableIntArray;
 
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/ImmutableIntArray;->get(I)I
@@ -196,6 +200,7 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/ImmutableIntArray$AsList;->get(I)Ljava/lang/Integer;
 
     move-result-object p0

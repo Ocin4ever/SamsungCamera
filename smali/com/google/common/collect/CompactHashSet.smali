@@ -44,10 +44,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
     const/4 v0, 0x3
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/common/collect/CompactHashSet;->init(I)V
 
     return-void
@@ -56,8 +58,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/common/collect/CompactHashSet;->init(I)V
 
     return-void
@@ -93,6 +97,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/CompactHashSet;
 
     invoke-direct {v0}, Lcom/google/common/collect/CompactHashSet;-><init>()V
@@ -114,6 +119,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
     move-result v0
@@ -122,6 +128,7 @@
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
 
     return-object v0
@@ -142,12 +149,14 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
+    .line 4
     array-length v0, p0
 
     invoke-static {v0}, Lcom/google/common/collect/CompactHashSet;->createWithExpectedSize(I)Lcom/google/common/collect/CompactHashSet;
 
     move-result-object v0
 
+    .line 5
     invoke-static {v0, p0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
     return-object v0
@@ -1416,6 +1425,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashSet;->needsAllocArrays()Z
 
     move-result v0
@@ -1428,6 +1438,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashSet;->delegateOrNull()Ljava/util/Set;
 
@@ -1435,6 +1446,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
 
     move-result-object p0
@@ -1466,6 +1478,7 @@
         }
     .end annotation
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashSet;->needsAllocArrays()Z
 
     move-result v0
@@ -1474,17 +1487,20 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     array-length p0, p1
 
     if-lez p0, :cond_0
 
     const/4 p0, 0x0
 
+    .line 6
     aput-object p0, p1, v1
 
     :cond_0
     return-object p1
 
+    .line 7
     :cond_1
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashSet;->delegateOrNull()Ljava/util/Set;
 
@@ -1492,12 +1508,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 8
     invoke-interface {v0, p1}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 9
     :cond_2
     invoke-direct {p0}, Lcom/google/common/collect/CompactHashSet;->requireElements()[Ljava/lang/Object;
 

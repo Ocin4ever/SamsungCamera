@@ -60,6 +60,7 @@
 .method public bridge synthetic entriesDiffering()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedMapDifferenceImpl;->entriesDiffering()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -79,6 +80,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/Maps$MapDifferenceImpl;->entriesDiffering()Ljava/util/Map;
 
     move-result-object p0
@@ -91,6 +93,7 @@
 .method public bridge synthetic entriesInCommon()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedMapDifferenceImpl;->entriesInCommon()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -108,6 +111,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/Maps$MapDifferenceImpl;->entriesInCommon()Ljava/util/Map;
 
     move-result-object p0
@@ -120,6 +124,7 @@
 .method public bridge synthetic entriesOnlyOnLeft()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedMapDifferenceImpl;->entriesOnlyOnLeft()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -137,6 +142,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/Maps$MapDifferenceImpl;->entriesOnlyOnLeft()Ljava/util/Map;
 
     move-result-object p0
@@ -149,6 +155,7 @@
 .method public bridge synthetic entriesOnlyOnRight()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedMapDifferenceImpl;->entriesOnlyOnRight()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -166,6 +173,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/Maps$MapDifferenceImpl;->entriesOnlyOnRight()Ljava/util/Map;
 
     move-result-object p0

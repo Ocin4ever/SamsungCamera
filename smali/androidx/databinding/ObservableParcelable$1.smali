@@ -40,6 +40,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroidx/databinding/ObservableParcelable;
     .locals 1
 
+    .line 2
     new-instance v0, Landroidx/databinding/ObservableParcelable;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -62,6 +63,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/databinding/ObservableParcelable$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/databinding/ObservableParcelable;
 
     move-result-object p0
@@ -72,6 +74,7 @@
 .method public newArray(I)[Landroidx/databinding/ObservableParcelable;
     .locals 0
 
+    .line 2
     new-array p0, p1, [Landroidx/databinding/ObservableParcelable;
 
     return-object p0
@@ -80,6 +83,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/databinding/ObservableParcelable$1;->newArray(I)[Landroidx/databinding/ObservableParcelable;
 
     move-result-object p0

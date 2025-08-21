@@ -38,8 +38,10 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     new-instance v0, Landroidx/versionedparcelable/VersionedParcelParcel;
 
     invoke-direct {v0, p1}, Landroidx/versionedparcelable/VersionedParcelParcel;-><init>(Landroid/os/Parcel;)V
@@ -56,8 +58,10 @@
 .method public constructor <init>(Landroidx/versionedparcelable/VersionedParcelable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Landroidx/versionedparcelable/VersionedParcelable;
 
     return-void

@@ -153,6 +153,7 @@
 .method public static getRootAsMetadataList(Ljava/nio/ByteBuffer;)Landroidx/emoji2/text/flatbuffer/MetadataList;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/emoji2/text/flatbuffer/MetadataList;
 
     invoke-direct {v0}, Landroidx/emoji2/text/flatbuffer/MetadataList;-><init>()V
@@ -167,6 +168,7 @@
 .method public static getRootAsMetadataList(Ljava/nio/ByteBuffer;Landroidx/emoji2/text/flatbuffer/MetadataList;)Landroidx/emoji2/text/flatbuffer/MetadataList;
     .locals 2
 
+    .line 2
     sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
@@ -233,6 +235,7 @@
 .method public list(I)Landroidx/emoji2/text/flatbuffer/MetadataItem;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/emoji2/text/flatbuffer/MetadataItem;
 
     invoke-direct {v0}, Landroidx/emoji2/text/flatbuffer/MetadataItem;-><init>()V
@@ -249,6 +252,7 @@
 
     const/4 v0, 0x6
 
+    .line 2
     invoke-virtual {p0, v0}, Landroidx/emoji2/text/flatbuffer/Table;->__offset(I)I
 
     move-result v0
@@ -309,6 +313,7 @@
 .method public listVector()Landroidx/emoji2/text/flatbuffer/MetadataItem$Vector;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/emoji2/text/flatbuffer/MetadataItem$Vector;
 
     invoke-direct {v0}, Landroidx/emoji2/text/flatbuffer/MetadataItem$Vector;-><init>()V
@@ -325,6 +330,7 @@
 
     const/4 v0, 0x6
 
+    .line 2
     invoke-virtual {p0, v0}, Landroidx/emoji2/text/flatbuffer/Table;->__offset(I)I
 
     move-result v0

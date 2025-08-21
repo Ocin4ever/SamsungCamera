@@ -60,6 +60,7 @@
 .method public setPoint(IFFIF)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "don\'t call for custom attribute call setPoint(pos, ConstraintAttribute,...)"
@@ -72,10 +73,12 @@
 .method public setPoint(ILandroidx/constraintlayout/core/motion/CustomAttribute;FIF)V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet$CustomSet;->mConstraintAttributeList:Landroidx/constraintlayout/core/motion/utils/KeyFrameArray$CustomArray;
 
     invoke-virtual {v0, p1, p2}, Landroidx/constraintlayout/core/motion/utils/KeyFrameArray$CustomArray;->append(ILandroidx/constraintlayout/core/motion/CustomAttribute;)V
 
+    .line 3
     iget-object p2, p0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet$CustomSet;->mWaveProperties:Landroidx/constraintlayout/core/motion/utils/KeyFrameArray$FloatArray;
 
     const/4 v0, 0x2
@@ -92,6 +95,7 @@
 
     invoke-virtual {p2, p1, v0}, Landroidx/constraintlayout/core/motion/utils/KeyFrameArray$FloatArray;->append(I[F)V
 
+    .line 4
     iget p1, p0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->mWaveShape:I
 
     invoke-static {p1, p4}, Ljava/lang/Math;->max(II)I

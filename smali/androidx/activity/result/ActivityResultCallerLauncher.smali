@@ -182,6 +182,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget-object p1, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->launcher:Landroidx/activity/result/ActivityResultLauncher;
 
     iget-object p0, p0, Landroidx/activity/result/ActivityResultCallerLauncher;->callerInput:Ljava/lang/Object;
@@ -194,6 +195,7 @@
 .method public bridge synthetic launch(Ljava/lang/Object;Landroidx/core/app/ActivityOptionsCompat;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lf6/p;
 
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/ActivityResultCallerLauncher;->launch(Lf6/p;Landroidx/core/app/ActivityOptionsCompat;)V

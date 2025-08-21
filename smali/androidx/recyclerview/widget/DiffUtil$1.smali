@@ -40,6 +40,7 @@
 .method public compare(Landroidx/recyclerview/widget/DiffUtil$Diagonal;Landroidx/recyclerview/widget/DiffUtil$Diagonal;)I
     .locals 0
 
+    .line 2
     iget p0, p1, Landroidx/recyclerview/widget/DiffUtil$Diagonal;->x:I
 
     iget p1, p2, Landroidx/recyclerview/widget/DiffUtil$Diagonal;->x:I
@@ -52,6 +53,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/recyclerview/widget/DiffUtil$Diagonal;
 
     check-cast p2, Landroidx/recyclerview/widget/DiffUtil$Diagonal;

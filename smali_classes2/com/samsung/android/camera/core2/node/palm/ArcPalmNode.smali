@@ -147,6 +147,7 @@
 
     const/16 v1, 0x78
 
+    .line 1
     sget-object v8, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->ARC_PALM_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const/4 v3, 0x1
@@ -165,14 +166,18 @@
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->mMode:I
 
     const/high16 v1, -0x80000000
 
+    .line 3
     iput v1, p0, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->mDeviceOrientation:I
 
+    .line 4
     iput-boolean v0, p0, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->mIsInitializationAsync:Z
 
+    .line 5
     iget-object v1, p0, Lcom/samsung/android/camera/core2/node/Node;->mNativeCallbacks:Ljava/util/Map;
 
     const/4 v2, 0x1
@@ -197,16 +202,20 @@
 
     const-string v0, "ArcPalmNode - previewSize: %s, callback: %s"
 
+    .line 6
     invoke-static {v8, v0, v1}, Lcom/samsung/android/camera/core2/util/CLog;->s(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const-string v0, "previewSize"
 
+    .line 7
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string p1, "callback"
 
+    .line 8
     invoke-static {p3, p1}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 9
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/CamCapability;->l()Ljava/lang/Integer;
 
     move-result-object p1
@@ -219,6 +228,7 @@
 
     iput p1, p0, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->mLensFacing:I
 
+    .line 10
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/CamCapability;->q2()Ljava/lang/Integer;
 
     move-result-object p1
@@ -231,6 +241,7 @@
 
     iput p1, p0, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->mSensorOrientation:I
 
+    .line 11
     iput-object p3, p0, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->mNodeCallback:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode$NodeCallback;
 
     return-void
@@ -239,8 +250,10 @@
 .method public constructor <init>(Landroid/util/Size;Lcom/samsung/android/camera/core2/CamCapability;Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode$NodeCallback;Z)V
     .locals 0
 
+    .line 12
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;-><init>(Landroid/util/Size;Lcom/samsung/android/camera/core2/CamCapability;Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode$NodeCallback;)V
 
+    .line 13
     iput-boolean p4, p0, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->mIsInitializationAsync:Z
 
     return-void
@@ -347,10 +360,12 @@
 .method public processBackgroundPreviewInternal(Lcom/samsung/android/camera/core2/util/DirectBuffer;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
     .locals 7
 
+    .line 2
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->r()Lcom/samsung/android/camera/core2/util/StrideInfo;
 
     move-result-object p3
 
+    .line 3
     :try_start_0
     sget-object v0, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->ARC_PALM_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
@@ -380,6 +395,7 @@
 
     invoke-static {v0, v1, v3}, Lcom/samsung/android/camera/core2/util/CLog;->s(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     sget-object v1, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->NATIVE_COMMAND_PROCESS_PALM:Lcom/samsung/android/camera/core2/node/NativeNode$Command;
 
     const/4 v3, 0x3
@@ -414,6 +430,7 @@
 
     const-string p0, "processBackgroundPreviewInternal fail - process palm fail"
 
+    .line 5
     invoke-static {v0, p0}, Lcom/samsung/android/camera/core2/util/CLog;->f(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
     :try_end_0
     .catch Lcom/samsung/android/camera/core2/exception/InvalidOperationException; {:try_start_0 .. :try_end_0} :catch_0
@@ -423,6 +440,7 @@
     :catch_0
     move-exception p0
 
+    .line 6
     sget-object p1, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->ARC_PALM_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -449,6 +467,7 @@
 .method public bridge synthetic processBackgroundPreviewInternal(Ljava/lang/Object;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/samsung/android/camera/core2/util/DirectBuffer;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->processBackgroundPreviewInternal(Lcom/samsung/android/camera/core2/util/DirectBuffer;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V

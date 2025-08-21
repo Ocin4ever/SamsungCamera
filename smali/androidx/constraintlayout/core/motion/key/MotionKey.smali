@@ -98,6 +98,7 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/core/motion/key/MotionKey;->clone()Landroidx/constraintlayout/core/motion/key/MotionKey;
 
     move-result-object p0
@@ -174,6 +175,7 @@
 .method public setCustomAttribute(Ljava/lang/String;IF)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mCustom:Ljava/util/HashMap;
 
     new-instance v0, Landroidx/constraintlayout/core/motion/CustomVariable;
@@ -188,6 +190,7 @@
 .method public setCustomAttribute(Ljava/lang/String;II)V
     .locals 1
 
+    .line 2
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mCustom:Ljava/util/HashMap;
 
     new-instance v0, Landroidx/constraintlayout/core/motion/CustomVariable;
@@ -202,6 +205,7 @@
 .method public setCustomAttribute(Ljava/lang/String;ILjava/lang/String;)V
     .locals 1
 
+    .line 4
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mCustom:Ljava/util/HashMap;
 
     new-instance v0, Landroidx/constraintlayout/core/motion/CustomVariable;
@@ -216,6 +220,7 @@
 .method public setCustomAttribute(Ljava/lang/String;IZ)V
     .locals 1
 
+    .line 3
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mCustom:Ljava/util/HashMap;
 
     new-instance v0, Landroidx/constraintlayout/core/motion/CustomVariable;
@@ -253,6 +258,7 @@
 .method public setValue(IF)Z
     .locals 0
 
+    .line 1
     const/4 p0, 0x0
 
     return p0
@@ -269,6 +275,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
@@ -288,6 +295,7 @@
 
     return p0
 
+    .line 4
     :cond_0
     iput-object p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mTargetString:Ljava/lang/String;
 
@@ -299,6 +307,7 @@
 .method public setValue(IZ)Z
     .locals 0
 
+    .line 2
     const/4 p0, 0x0
 
     return p0

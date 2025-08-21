@@ -123,6 +123,7 @@
 .method public setChecked(Z)V
     .locals 2
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,12 +150,15 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     iput-boolean p1, p0, Lcom/sec/android/app/camera/setting/CameraRadioButtonPreference;->mChecked:Z
 
+    .line 5
     iget-object p0, p0, Lcom/sec/android/app/camera/setting/CameraRadioButtonPreference;->mRadioButton:Landroid/widget/RadioButton;
 
     if-eqz p0, :cond_0
 
+    .line 6
     invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     :cond_0
@@ -164,8 +168,10 @@
 .method public setChecked(ZI)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/setting/CameraRadioButtonPreference;->setChecked(Z)V
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/setting/CameraRadioButtonPreference;->mEventId:Lcom/sec/android/app/camera/interfaces/SaLogEventId;
 
     int-to-long p1, p2

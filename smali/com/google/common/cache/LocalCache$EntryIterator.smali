@@ -37,6 +37,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache$EntryIterator;->next()Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -54,6 +55,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache$HashIterator;->nextEntry()Lcom/google/common/cache/LocalCache$WriteThroughEntry;
 
     move-result-object p0

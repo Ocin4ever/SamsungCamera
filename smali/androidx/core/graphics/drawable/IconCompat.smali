@@ -99,30 +99,39 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Landroidx/versionedparcelable/CustomVersionedParcelable;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mType:I
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mData:[B
 
+    .line 4
     iput-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mParcelable:Landroid/os/Parcelable;
 
     const/4 v1, 0x0
 
+    .line 5
     iput v1, p0, Landroidx/core/graphics/drawable/IconCompat;->mInt1:I
 
+    .line 6
     iput v1, p0, Landroidx/core/graphics/drawable/IconCompat;->mInt2:I
 
+    .line 7
     iput-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mTintList:Landroid/content/res/ColorStateList;
 
+    .line 8
     sget-object v1, Landroidx/core/graphics/drawable/IconCompat;->DEFAULT_TINT_MODE:Landroid/graphics/PorterDuff$Mode;
 
     iput-object v1, p0, Landroidx/core/graphics/drawable/IconCompat;->mTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 9
     iput-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mTintModeStr:Ljava/lang/String;
 
     return-void
@@ -131,28 +140,37 @@
 .method public constructor <init>(I)V
     .locals 2
 
+    .line 10
     invoke-direct {p0}, Landroidx/versionedparcelable/CustomVersionedParcelable;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 11
     iput-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mData:[B
 
+    .line 12
     iput-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mParcelable:Landroid/os/Parcelable;
 
     const/4 v1, 0x0
 
+    .line 13
     iput v1, p0, Landroidx/core/graphics/drawable/IconCompat;->mInt1:I
 
+    .line 14
     iput v1, p0, Landroidx/core/graphics/drawable/IconCompat;->mInt2:I
 
+    .line 15
     iput-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mTintList:Landroid/content/res/ColorStateList;
 
+    .line 16
     sget-object v1, Landroidx/core/graphics/drawable/IconCompat;->DEFAULT_TINT_MODE:Landroid/graphics/PorterDuff$Mode;
 
     iput-object v1, p0, Landroidx/core/graphics/drawable/IconCompat;->mTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 17
     iput-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->mTintModeStr:Ljava/lang/String;
 
+    .line 18
     iput p1, p0, Landroidx/core/graphics/drawable/IconCompat;->mType:I
 
     return-void
@@ -304,8 +322,10 @@
 .method public static createFromIcon(Landroid/content/Context;Landroid/graphics/drawable/Icon;)Landroidx/core/graphics/drawable/IconCompat;
     .locals 0
 
+    .line 1
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/graphics/drawable/IconCompat$Api23Impl;->createFromIcon(Landroid/content/Context;Landroid/graphics/drawable/Icon;)Landroidx/core/graphics/drawable/IconCompat;
 
     move-result-object p0
@@ -316,6 +336,7 @@
 .method public static createFromIcon(Landroid/graphics/drawable/Icon;)Landroidx/core/graphics/drawable/IconCompat;
     .locals 0
 
+    .line 3
     invoke-static {p0}, Landroidx/core/graphics/drawable/IconCompat$Api23Impl;->createFromIconInner(Ljava/lang/Object;)Landroidx/core/graphics/drawable/IconCompat;
 
     move-result-object p0
@@ -506,8 +527,10 @@
 .method public static createWithAdaptiveBitmapContentUri(Landroid/net/Uri;)Landroidx/core/graphics/drawable/IconCompat;
     .locals 0
 
+    .line 4
     invoke-static {p0}, Landroidx/core/util/ObjectsCompat;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -522,14 +545,17 @@
 .method public static createWithAdaptiveBitmapContentUri(Ljava/lang/String;)Landroidx/core/graphics/drawable/IconCompat;
     .locals 2
 
+    .line 1
     invoke-static {p0}, Landroidx/core/util/ObjectsCompat;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Landroidx/core/graphics/drawable/IconCompat;
 
     const/4 v1, 0x6
 
     invoke-direct {v0, v1}, Landroidx/core/graphics/drawable/IconCompat;-><init>(I)V
 
+    .line 3
     iput-object p0, v0, Landroidx/core/graphics/drawable/IconCompat;->mObj1:Ljava/lang/Object;
 
     return-object v0
@@ -554,8 +580,10 @@
 .method public static createWithContentUri(Landroid/net/Uri;)Landroidx/core/graphics/drawable/IconCompat;
     .locals 0
 
+    .line 4
     invoke-static {p0}, Landroidx/core/util/ObjectsCompat;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -570,14 +598,17 @@
 .method public static createWithContentUri(Ljava/lang/String;)Landroidx/core/graphics/drawable/IconCompat;
     .locals 2
 
+    .line 1
     invoke-static {p0}, Landroidx/core/util/ObjectsCompat;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Landroidx/core/graphics/drawable/IconCompat;
 
     const/4 v1, 0x4
 
     invoke-direct {v0, v1}, Landroidx/core/graphics/drawable/IconCompat;-><init>(I)V
 
+    .line 3
     iput-object p0, v0, Landroidx/core/graphics/drawable/IconCompat;->mObj1:Ljava/lang/Object;
 
     return-object v0
@@ -606,8 +637,10 @@
 .method public static createWithResource(Landroid/content/Context;I)Landroidx/core/graphics/drawable/IconCompat;
     .locals 1
 
+    .line 1
     invoke-static {p0}, Landroidx/core/util/ObjectsCompat;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -626,20 +659,24 @@
 .method public static createWithResource(Landroid/content/res/Resources;Ljava/lang/String;I)Landroidx/core/graphics/drawable/IconCompat;
     .locals 2
 
+    .line 3
     invoke-static {p1}, Landroidx/core/util/ObjectsCompat;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p2, :cond_1
 
+    .line 4
     new-instance v0, Landroidx/core/graphics/drawable/IconCompat;
 
     const/4 v1, 0x2
 
     invoke-direct {v0, v1}, Landroidx/core/graphics/drawable/IconCompat;-><init>(I)V
 
+    .line 5
     iput p2, v0, Landroidx/core/graphics/drawable/IconCompat;->mInt1:I
 
     if-eqz p0, :cond_0
 
+    .line 6
     :try_start_0
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
 
@@ -651,6 +688,7 @@
 
     goto :goto_0
 
+    .line 7
     :catch_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -660,14 +698,17 @@
 
     throw p0
 
+    .line 8
     :cond_0
     iput-object p1, v0, Landroidx/core/graphics/drawable/IconCompat;->mObj1:Ljava/lang/Object;
 
+    .line 9
     :goto_0
     iput-object p1, v0, Landroidx/core/graphics/drawable/IconCompat;->mString1:Ljava/lang/String;
 
     return-object v0
 
+    .line 10
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2162,6 +2203,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/core/graphics/drawable/IconCompat;->toIcon(Landroid/content/Context;)Landroid/graphics/drawable/Icon;
 
     move-result-object p0
@@ -2172,6 +2214,7 @@
 .method public toIcon(Landroid/content/Context;)Landroid/graphics/drawable/Icon;
     .locals 0
 
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/graphics/drawable/IconCompat$Api23Impl;->toIcon(Landroidx/core/graphics/drawable/IconCompat;Landroid/content/Context;)Landroid/graphics/drawable/Icon;
 
     move-result-object p0

@@ -51,6 +51,7 @@
 .method public bridge synthetic combine(Ljava/util/List;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/CollectionFuture$ListFuture;->combine(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
@@ -71,6 +72,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p0
@@ -79,6 +81,7 @@
 
     move-result-object p0
 
+    .line 3
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -98,6 +101,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget-object v0, v0, Lcom/google/common/util/concurrent/CollectionFuture$Present;->value:Ljava/lang/Object;
 
     goto :goto_1
@@ -110,6 +114,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 

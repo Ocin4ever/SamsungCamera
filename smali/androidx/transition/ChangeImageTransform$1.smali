@@ -40,6 +40,7 @@
 .method public evaluate(FLandroid/graphics/Matrix;Landroid/graphics/Matrix;)Landroid/graphics/Matrix;
     .locals 0
 
+    .line 1
     const/4 p0, 0x0
 
     return-object p0
@@ -48,6 +49,7 @@
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     check-cast p2, Landroid/graphics/Matrix;
 
     check-cast p3, Landroid/graphics/Matrix;

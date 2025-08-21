@@ -80,6 +80,7 @@
 .method public bridge synthetic castForTesting(Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;)Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/MapMakerInternalMap$StrongKeyWeakValueSegment;->castForTesting(Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;)Lcom/google/common/collect/MapMakerInternalMap$StrongKeyWeakValueEntry;
 
     move-result-object p0
@@ -99,6 +100,7 @@
         }
     .end annotation
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/MapMakerInternalMap$StrongKeyWeakValueEntry;
 
     return-object p1
@@ -194,6 +196,7 @@
 .method public bridge synthetic self()Lcom/google/common/collect/MapMakerInternalMap$Segment;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap$StrongKeyWeakValueSegment;->self()Lcom/google/common/collect/MapMakerInternalMap$StrongKeyWeakValueSegment;
 
     move-result-object p0
@@ -211,6 +214,7 @@
         }
     .end annotation
 
+    .line 1
     return-object p0
 .end method
 

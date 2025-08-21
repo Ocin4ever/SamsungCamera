@@ -28,6 +28,7 @@
 
     const-string v1, "F"
 
+    .line 1
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->i(ILjava/lang/String;)V
 
     const-class v0, Landroidx/fragment/app/Fragment;
@@ -70,6 +71,7 @@
 
     const-string v1, "F"
 
+    .line 2
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->i(ILjava/lang/String;)V
 
     const-class v0, Landroidx/fragment/app/Fragment;
@@ -108,10 +110,12 @@
     :cond_1
     const-string p4, "<this>"
 
+    .line 1
     invoke-static {p0, p4}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p4, "F"
 
+    .line 2
     invoke-static {p5, p4}, Lkotlin/jvm/internal/m;->i(ILjava/lang/String;)V
 
     const-class p4, Landroidx/fragment/app/Fragment;
@@ -139,6 +143,7 @@
     :cond_0
     const-string p3, "<this>"
 
+    .line 3
     invoke-static {p0, p3}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p3, "tag"
@@ -149,6 +154,7 @@
 
     const-string p4, "F"
 
+    .line 4
     invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->i(ILjava/lang/String;)V
 
     const-class p3, Landroidx/fragment/app/Fragment;

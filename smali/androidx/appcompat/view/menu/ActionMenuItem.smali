@@ -499,6 +499,7 @@
 .method public bridge synthetic setActionView(I)Landroid/view/MenuItem;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/ActionMenuItem;->setActionView(I)Landroidx/core/internal/view/SupportMenuItem;
 
     move-result-object p0
@@ -509,6 +510,7 @@
 .method public bridge synthetic setActionView(Landroid/view/View;)Landroid/view/MenuItem;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/ActionMenuItem;->setActionView(Landroid/view/View;)Landroidx/core/internal/view/SupportMenuItem;
 
     move-result-object p0
@@ -519,6 +521,7 @@
 .method public setActionView(I)Landroidx/core/internal/view/SupportMenuItem;
     .locals 0
 
+    .line 4
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -529,6 +532,7 @@
 .method public setActionView(Landroid/view/View;)Landroidx/core/internal/view/SupportMenuItem;
     .locals 0
 
+    .line 3
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -539,6 +543,7 @@
 .method public setAlphabeticShortcut(C)Landroid/view/MenuItem;
     .locals 0
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Character;->toLowerCase(C)C
 
     move-result p1
@@ -551,12 +556,14 @@
 .method public setAlphabeticShortcut(CI)Landroid/view/MenuItem;
     .locals 0
 
+    .line 2
     invoke-static {p1}, Ljava/lang/Character;->toLowerCase(C)C
 
     move-result p1
 
     iput-char p1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mShortcutAlphabeticChar:C
 
+    .line 3
     invoke-static {p2}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
 
     move-result p1
@@ -607,6 +614,7 @@
 .method public bridge synthetic setContentDescription(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/ActionMenuItem;->setContentDescription(Ljava/lang/CharSequence;)Landroidx/core/internal/view/SupportMenuItem;
 
     move-result-object p0
@@ -617,6 +625,7 @@
 .method public setContentDescription(Ljava/lang/CharSequence;)Landroidx/core/internal/view/SupportMenuItem;
     .locals 0
 
+    .line 2
     iput-object p1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mContentDescription:Ljava/lang/CharSequence;
 
     return-object p0
@@ -673,6 +682,7 @@
 .method public setIcon(I)Landroid/view/MenuItem;
     .locals 1
 
+    .line 3
     iget-object v0, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -681,6 +691,7 @@
 
     iput-object p1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mIconDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 4
     invoke-direct {p0}, Landroidx/appcompat/view/menu/ActionMenuItem;->applyIconTint()V
 
     return-object p0
@@ -689,8 +700,10 @@
 .method public setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/MenuItem;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mIconDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 2
     invoke-direct {p0}, Landroidx/appcompat/view/menu/ActionMenuItem;->applyIconTint()V
 
     return-object p0
@@ -735,6 +748,7 @@
 .method public setNumericShortcut(C)Landroid/view/MenuItem;
     .locals 0
 
+    .line 1
     iput-char p1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mShortcutNumericChar:C
 
     return-object p0
@@ -743,8 +757,10 @@
 .method public setNumericShortcut(CI)Landroid/view/MenuItem;
     .locals 0
 
+    .line 2
     iput-char p1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mShortcutNumericChar:C
 
+    .line 3
     invoke-static {p2}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
 
     move-result p1
@@ -775,8 +791,10 @@
 .method public setShortcut(CC)Landroid/view/MenuItem;
     .locals 0
 
+    .line 1
     iput-char p1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mShortcutNumericChar:C
 
+    .line 2
     invoke-static {p2}, Ljava/lang/Character;->toLowerCase(C)C
 
     move-result p1
@@ -789,20 +807,24 @@
 .method public setShortcut(CCII)Landroid/view/MenuItem;
     .locals 0
 
+    .line 3
     iput-char p1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mShortcutNumericChar:C
 
+    .line 4
     invoke-static {p3}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
 
     move-result p1
 
     iput p1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mShortcutNumericModifiers:I
 
+    .line 5
     invoke-static {p2}, Ljava/lang/Character;->toLowerCase(C)C
 
     move-result p1
 
     iput-char p1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mShortcutAlphabeticChar:C
 
+    .line 6
     invoke-static {p4}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
 
     move-result p1
@@ -821,6 +843,7 @@
 .method public bridge synthetic setShowAsActionFlags(I)Landroid/view/MenuItem;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/ActionMenuItem;->setShowAsActionFlags(I)Landroidx/core/internal/view/SupportMenuItem;
 
     move-result-object p0
@@ -831,6 +854,7 @@
 .method public setShowAsActionFlags(I)Landroidx/core/internal/view/SupportMenuItem;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/ActionMenuItem;->setShowAsAction(I)V
 
     return-object p0
@@ -849,6 +873,7 @@
 .method public setTitle(I)Landroid/view/MenuItem;
     .locals 1
 
+    .line 2
     iget-object v0, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -867,6 +892,7 @@
 .method public setTitle(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mTitle:Ljava/lang/CharSequence;
 
     return-object p0
@@ -883,6 +909,7 @@
 .method public bridge synthetic setTooltipText(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/ActionMenuItem;->setTooltipText(Ljava/lang/CharSequence;)Landroidx/core/internal/view/SupportMenuItem;
 
     move-result-object p0
@@ -893,6 +920,7 @@
 .method public setTooltipText(Ljava/lang/CharSequence;)Landroidx/core/internal/view/SupportMenuItem;
     .locals 0
 
+    .line 2
     iput-object p1, p0, Landroidx/appcompat/view/menu/ActionMenuItem;->mTooltipText:Ljava/lang/CharSequence;
 
     return-object p0

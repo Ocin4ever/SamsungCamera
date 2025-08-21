@@ -24,8 +24,10 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Lcom/google/common/collect/MapMaker;
 
     invoke-direct {v0}, Lcom/google/common/collect/MapMaker;-><init>()V
@@ -34,6 +36,7 @@
 
     const/4 v0, 0x1
 
+    .line 4
     iput-boolean v0, p0, Lcom/google/common/collect/Interners$InternerBuilder;->strong:Z
 
     return-void
@@ -42,6 +45,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/collect/Interners$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Interners$InternerBuilder;-><init>()V
 
     return-void

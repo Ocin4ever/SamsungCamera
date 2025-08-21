@@ -44,20 +44,25 @@
 .method public constructor <init>(Ljava/lang/Exception;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->success:Z
 
+    .line 3
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->data:Ljava/util/HashMap;
 
+    .line 4
     iput-boolean v0, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->success:Z
 
+    .line 5
     iput-object p1, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->error:Ljava/lang/Exception;
 
     return-void
@@ -66,20 +71,25 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 16
     iput-boolean v0, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->success:Z
 
+    .line 17
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->data:Ljava/util/HashMap;
 
+    .line 18
     iput-boolean v0, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->success:Z
 
+    .line 19
     iput-object p1, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->message:Ljava/lang/String;
 
     return-void
@@ -88,12 +98,15 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 7
     iput-boolean v0, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->success:Z
 
+    .line 8
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -102,8 +115,10 @@
 
     const/4 v0, 0x1
 
+    .line 9
     iput-boolean v0, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->success:Z
 
+    .line 10
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/apex/motionphoto/command/Reply;->setData(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
@@ -112,18 +127,22 @@
 .method public constructor <init>(Z)V
     .locals 1
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 12
     iput-boolean v0, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->success:Z
 
+    .line 13
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->data:Ljava/util/HashMap;
 
+    .line 14
     iput-boolean p1, p0, Lcom/samsung/android/apex/motionphoto/command/Reply;->success:Z
 
     return-void

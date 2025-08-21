@@ -7,6 +7,7 @@
 .method public constructor <init>(La7/e;Li6/g;ILz6/a;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Lb7/f;-><init>(La7/e;Li6/g;ILz6/a;)V
 
     return-void
@@ -19,6 +20,7 @@
 
     if-eqz p6, :cond_0
 
+    .line 1
     sget-object p2, Li6/h;->a:Li6/h;
 
     :cond_0
@@ -33,8 +35,10 @@
 
     if-eqz p5, :cond_2
 
+    .line 2
     sget-object p4, Lz6/a;->a:Lz6/a;
 
+    .line 3
     :cond_2
     invoke-direct {p0, p1, p2, p3, p4}, Lb7/g;-><init>(La7/e;Li6/g;ILz6/a;)V
 

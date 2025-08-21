@@ -46,6 +46,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/util/Map$Entry;
 
     check-cast p2, Ljava/util/Map$Entry;
@@ -69,10 +70,13 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/collect/ImmutableSortedMap$1;->val$comparator:Ljava/util/Comparator;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;

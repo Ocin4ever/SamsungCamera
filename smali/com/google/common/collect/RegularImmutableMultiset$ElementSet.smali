@@ -29,6 +29,7 @@
 .method private constructor <init>(Lcom/google/common/collect/RegularImmutableMultiset;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/RegularImmutableMultiset$ElementSet;->this$0:Lcom/google/common/collect/RegularImmutableMultiset;
 
     invoke-direct {p0}, Lcom/google/common/collect/IndexedImmutableSet;-><init>()V
@@ -39,6 +40,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/collect/RegularImmutableMultiset;Lcom/google/common/collect/RegularImmutableMultiset$1;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/RegularImmutableMultiset$ElementSet;-><init>(Lcom/google/common/collect/RegularImmutableMultiset;)V
 
     return-void

@@ -219,10 +219,12 @@
 .method public unregisterListener(Landroid/hardware/SensorEventListener;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/provider/CameraSensorManager;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
     :cond_0
@@ -232,10 +234,12 @@
 .method public unregisterListener(Landroid/hardware/SensorEventListener;I)V
     .locals 1
 
+    .line 3
     iget-object v0, p0, Lcom/sec/android/app/camera/provider/CameraSensorManager;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p0, p2}, Lcom/sec/android/app/camera/provider/CameraSensorManager;->getSensor(I)Landroid/hardware/Sensor;
 
     move-result-object p0

@@ -9,6 +9,7 @@
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-static {v0}, Landroidx/core/os/PersistableBundleApi21ImplKt;->createPersistableBundle(I)Landroid/os/PersistableBundle;
 
     move-result-object v0
@@ -31,12 +32,14 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     array-length v0, p0
 
     invoke-static {v0}, Landroidx/core/os/PersistableBundleApi21ImplKt;->createPersistableBundle(I)Landroid/os/PersistableBundle;
 
     move-result-object v0
 
+    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -46,6 +49,7 @@
 
     aget-object v3, p0, v2
 
+    .line 3
     invoke-virtual {v3}, Lf6/h;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -56,6 +60,7 @@
 
     move-result-object v3
 
+    .line 4
     invoke-static {v0, v4, v3}, Landroidx/core/os/PersistableBundleApi21ImplKt;->putValue(Landroid/os/PersistableBundle;Ljava/lang/String;Ljava/lang/Object;)V
 
     add-int/lit8 v2, v2, 0x1

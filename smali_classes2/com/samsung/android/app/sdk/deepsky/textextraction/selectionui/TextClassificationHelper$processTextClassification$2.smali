@@ -69,16 +69,19 @@
 .method public final invoke(Landroid/view/textclassifier/TextClassification;)Lf6/p;
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextClassificationHelper$processTextClassification$2;->this$0:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextClassificationHelper;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextClassificationHelper;->setText(Ljava/lang/String;)V
 
+    .line 3
     iget-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextClassificationHelper$processTextClassification$2;->$textActionModeCallback:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback;->setTextClassification(Landroid/view/textclassifier/TextClassification;)V
 
+    .line 4
     iget-object p1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextClassificationHelper$processTextClassification$2;->$onCompleteCallback:Lq6/l;
 
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextClassificationHelper$processTextClassification$2;->$textActionModeCallback:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback;
@@ -95,6 +98,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/textclassifier/TextClassification;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextClassificationHelper$processTextClassification$2;->invoke(Landroid/view/textclassifier/TextClassification;)Lf6/p;

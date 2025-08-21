@@ -24,8 +24,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p2, v0}, Lcom/samsung/android/camera/core2/container/SessionConfig$DefaultStreamConfig;-><init>(Ljava/lang/Integer;Ljava/lang/String;)V
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/camera/core2/container/SessionConfig$SurfaceConfig;->c:Landroid/view/Surface;
 
     return-void
@@ -34,8 +36,10 @@
 .method public constructor <init>(Landroid/view/Surface;Ljava/lang/Integer;Ljava/lang/String;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p2, p3}, Lcom/samsung/android/camera/core2/container/SessionConfig$DefaultStreamConfig;-><init>(Ljava/lang/Integer;Ljava/lang/String;)V
 
+    .line 4
     iput-object p1, p0, Lcom/samsung/android/camera/core2/container/SessionConfig$SurfaceConfig;->c:Landroid/view/Surface;
 
     return-void

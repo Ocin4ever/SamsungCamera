@@ -46,6 +46,7 @@
 .method public compare(Lcom/samsung/android/livetranslation/text/SceneText;Lcom/samsung/android/livetranslation/text/SceneText;)I
     .locals 0
 
+    .line 1
     const/4 p0, 0x1
 
     return p0
@@ -54,6 +55,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 2
     check-cast p1, Lcom/samsung/android/livetranslation/text/SceneText;
 
     check-cast p2, Lcom/samsung/android/livetranslation/text/SceneText;

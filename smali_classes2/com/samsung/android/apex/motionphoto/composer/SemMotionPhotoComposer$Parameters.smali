@@ -34,6 +34,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;-><init>()V
 
     return-void
@@ -42,6 +43,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer$Parameters;-><init>()V
 
     return-void
@@ -50,8 +52,10 @@
 .method private constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;-><init>()V
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->unflatten(Ljava/lang/String;)V
 
     return-void

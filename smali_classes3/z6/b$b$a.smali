@@ -43,6 +43,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lz6/b$b$a;->invoke(Ljava/lang/Throwable;)V
@@ -55,6 +56,7 @@
 .method public final invoke(Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 2
     iget-object p1, p0, Lz6/b$b$a;->a:Ljava/lang/Object;
 
     invoke-static {}, Lz6/c;->z()Lc7/h0;

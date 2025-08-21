@@ -38,6 +38,7 @@
 .method public getPos(DI)D
     .locals 0
 
+    .line 4
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/CurveFit$Constant;->mValue:[D
 
     aget-wide p0, p0, p3
@@ -48,6 +49,7 @@
 .method public getPos(D[D)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/CurveFit$Constant;->mValue:[D
 
     const/4 p1, 0x0
@@ -64,6 +66,7 @@
 
     const/4 p1, 0x0
 
+    .line 2
     :goto_0
     iget-object p2, p0, Landroidx/constraintlayout/core/motion/utils/CurveFit$Constant;->mValue:[D
 
@@ -71,6 +74,7 @@
 
     if-ge p1, v0, :cond_0
 
+    .line 3
     aget-wide v0, p2, p1
 
     double-to-float p2, v0
@@ -88,6 +92,7 @@
 .method public getSlope(DI)D
     .locals 0
 
+    .line 1
     const-wide/16 p0, 0x0
 
     return-wide p0
@@ -98,6 +103,7 @@
 
     const/4 p1, 0x0
 
+    .line 2
     :goto_0
     iget-object p2, p0, Landroidx/constraintlayout/core/motion/utils/CurveFit$Constant;->mValue:[D
 
@@ -107,6 +113,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 3
     aput-wide v0, p3, p1
 
     add-int/lit8 p1, p1, 0x1

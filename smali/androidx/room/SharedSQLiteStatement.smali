@@ -73,6 +73,7 @@
 .method private final getStmt()Landroidx/sqlite/db/SupportSQLiteStatement;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/room/SharedSQLiteStatement;->stmt$delegate:Lf6/d;
 
     invoke-interface {p0}, Lf6/d;->getValue()Ljava/lang/Object;
@@ -89,12 +90,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-direct {p0}, Landroidx/room/SharedSQLiteStatement;->getStmt()Landroidx/sqlite/db/SupportSQLiteStatement;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-direct {p0}, Landroidx/room/SharedSQLiteStatement;->createNewStatement()Landroidx/sqlite/db/SupportSQLiteStatement;
 

@@ -15,6 +15,7 @@
 .method public static create()Landroid/graphics/Rect;
     .locals 1
 
+    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -25,6 +26,7 @@
 .method public static create(IIII)Landroid/graphics/Rect;
     .locals 1
 
+    .line 1
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p0, p1, p2, p3}, Landroid/graphics/Rect;-><init>(IIII)V
@@ -35,6 +37,7 @@
 .method public static create(Landroid/graphics/Rect;)Landroid/graphics/Rect;
     .locals 1
 
+    .line 3
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p0}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V

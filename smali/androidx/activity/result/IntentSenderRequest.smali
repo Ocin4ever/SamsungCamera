@@ -67,14 +67,19 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/activity/result/IntentSenderRequest;->intentSender:Landroid/content/IntentSender;
 
+    .line 3
     iput-object p2, p0, Landroidx/activity/result/IntentSenderRequest;->fillInIntent:Landroid/content/Intent;
 
+    .line 4
     iput p3, p0, Landroidx/activity/result/IntentSenderRequest;->flagsMask:I
 
+    .line 5
     iput p4, p0, Landroidx/activity/result/IntentSenderRequest;->flagsValues:I
 
     return-void
@@ -105,6 +110,7 @@
 
     move p4, v0
 
+    .line 6
     :cond_2
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/activity/result/IntentSenderRequest;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
 
@@ -118,6 +124,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 7
     const-class v0, Landroid/content/IntentSender;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -132,6 +139,7 @@
 
     check-cast v0, Landroid/content/IntentSender;
 
+    .line 8
     const-class v1, Landroid/content/Intent;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -144,14 +152,17 @@
 
     check-cast v1, Landroid/content/Intent;
 
+    .line 9
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
+    .line 10
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 11
     invoke-direct {p0, v0, v1, v2, p1}, Landroidx/activity/result/IntentSenderRequest;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
 
     return-void

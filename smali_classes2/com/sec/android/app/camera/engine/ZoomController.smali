@@ -888,6 +888,7 @@
 .method public getMinZoomLevel(I)I
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/engine/ZoomController;->getZoomType()I
 
     move-result v0
@@ -902,6 +903,7 @@
 .method public getMinZoomLevel(II)I
     .locals 1
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/ZoomController;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/engine/CommonEngine;->getCapability(I)Lcom/sec/android/app/camera/interfaces/Capability;
@@ -918,6 +920,7 @@
 
     float-to-int p2, p2
 
+    .line 3
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/engine/ZoomController;->isZoomToWideLensAvailable(II)Z
 
     move-result p0
@@ -928,6 +931,7 @@
 
     const-string p1, "getMinZoomLevel : minimum zoom level set as default because wide lens zoom does not available."
 
+    .line 4
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/16 p2, 0x3e8

@@ -35,6 +35,7 @@
 .method public bridge synthetic initialValue()Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/escape/Platform$1;->initialValue()[C
 
     move-result-object p0
@@ -45,6 +46,7 @@
 .method public initialValue()[C
     .locals 0
 
+    .line 1
     const/16 p0, 0x400
 
     new-array p0, p0, [C

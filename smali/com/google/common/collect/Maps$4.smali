@@ -77,6 +77,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$4;->delegate()Ljava/util/Set;
 
     move-result-object p0
@@ -87,6 +88,7 @@
 .method public bridge synthetic delegate()Ljava/util/Collection;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$4;->delegate()Ljava/util/Set;
 
     move-result-object p0
@@ -104,6 +106,7 @@
         }
     .end annotation
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/Maps$4;->val$set:Ljava/util/Set;
 
     return-object p0

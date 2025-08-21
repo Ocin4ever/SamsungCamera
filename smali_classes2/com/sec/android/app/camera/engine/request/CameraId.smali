@@ -199,6 +199,7 @@
 
     packed-switch p0, :pswitch_data_2
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -223,6 +224,7 @@
 
     return v0
 
+    .line 3
     :pswitch_0
     invoke-static {p0}, Lcom/sec/android/app/camera/engine/request/CameraId;->getMainCameraId(I)I
 
@@ -234,6 +236,7 @@
 
     return p0
 
+    .line 4
     :pswitch_1
     sget-object p0, Ly2/h;->a:Ly2/h;
 
@@ -255,6 +258,7 @@
 
     return p0
 
+    .line 5
     :pswitch_2
     sget-object p0, Ly2/h;->e:Ly2/h;
 
@@ -264,6 +268,7 @@
 
     return p0
 
+    .line 6
     :pswitch_3
     sget-object p0, Ly2/h;->d:Ly2/h;
 
@@ -273,6 +278,7 @@
 
     return p0
 
+    .line 7
     :cond_1
     sget-object p0, Ly2/h;->c:Ly2/h;
 
@@ -284,6 +290,7 @@
     :pswitch_4
     return p0
 
+    .line 8
     :cond_3
     sget-object p0, Ly2/h;->b:Ly2/h;
 
@@ -323,6 +330,7 @@
 .method public static getDeviceId(Lcom/samsung/android/camera/core2/CamDevice;)I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/CamDevice;->r()Ljava/lang/String;

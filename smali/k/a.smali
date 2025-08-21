@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lk/b;-><init>()V
 
     return-void
@@ -15,6 +16,7 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lk/b;-><init>(I)V
 
     return-void

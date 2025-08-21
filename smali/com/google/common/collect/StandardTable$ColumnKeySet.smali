@@ -29,6 +29,7 @@
 .method private constructor <init>(Lcom/google/common/collect/StandardTable;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/StandardTable$ColumnKeySet;->this$0:Lcom/google/common/collect/StandardTable;
 
     const/4 v0, 0x0
@@ -41,6 +42,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/collect/StandardTable;Lcom/google/common/collect/StandardTable$1;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/StandardTable$ColumnKeySet;-><init>(Lcom/google/common/collect/StandardTable;)V
 
     return-void

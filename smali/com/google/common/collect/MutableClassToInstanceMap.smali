@@ -137,6 +137,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/MutableClassToInstanceMap;
 
     new-instance v1, Ljava/util/HashMap;
@@ -163,6 +164,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/MutableClassToInstanceMap;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/MutableClassToInstanceMap;-><init>(Ljava/util/Map;)V
@@ -189,6 +191,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/MutableClassToInstanceMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -207,6 +210,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/MutableClassToInstanceMap;->delegate:Ljava/util/Map;
 
     return-object p0
@@ -262,6 +266,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1, p2}, Lcom/google/common/collect/MutableClassToInstanceMap;->cast(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -276,6 +281,7 @@
 .method public bridge synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Class;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/MutableClassToInstanceMap;->put(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;

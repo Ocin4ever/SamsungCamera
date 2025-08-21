@@ -87,6 +87,7 @@
 .method public static getResultFromBundle(Landroid/os/Bundle;Lcom/samsung/android/sdk/ocr/OCRResult;)Z
     .locals 4
 
+    .line 1
     const-class v0, Lcom/samsung/android/sdk/ocr/OCRResult;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -97,6 +98,7 @@
 
     const-string v0, "resultCode"
 
+    .line 2
     invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
@@ -109,6 +111,7 @@
 
     const-string v0, "ocrresult"
 
+    .line 3
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p0
@@ -117,8 +120,10 @@
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-virtual {p1}, Lcom/samsung/android/sdk/ocr/OCRResult;->clear()V
 
+    .line 5
     invoke-virtual {p1}, Lcom/samsung/android/sdk/ocr/OCRResult;->getProcessInfo()Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;
 
     move-result-object v0
@@ -133,6 +138,7 @@
 
     invoke-virtual {v0, v3}, Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;->setHasText(Z)V
 
+    .line 6
     invoke-virtual {p1}, Lcom/samsung/android/sdk/ocr/OCRResult;->getProcessInfo()Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;
 
     move-result-object v0
@@ -147,6 +153,7 @@
 
     invoke-virtual {v0, v3, v2}, Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;->setEngineVersion(Ljava/lang/String;Z)V
 
+    .line 7
     invoke-virtual {p1}, Lcom/samsung/android/sdk/ocr/OCRResult;->getProcessInfo()Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;
 
     move-result-object v0
@@ -161,6 +168,7 @@
 
     invoke-virtual {v0, v3, v1}, Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;->setEngineVersion(Ljava/lang/String;Z)V
 
+    .line 8
     invoke-virtual {p0}, Lcom/samsung/android/sdk/ocr/OCRResult;->getBlockDataList()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -182,6 +190,7 @@
 
     check-cast v0, Lcom/samsung/android/sdk/ocr/OCRResult$BlockData;
 
+    .line 9
     invoke-virtual {p1, v0}, Lcom/samsung/android/sdk/ocr/OCRResult;->add(Lcom/samsung/android/sdk/ocr/OCRResult$BlockData;)V
 
     goto :goto_0
@@ -196,6 +205,7 @@
 .method public static getResultFromBundle(Landroid/os/Bundle;[Landroid/graphics/Point;)Z
     .locals 5
 
+    .line 10
     const-class v0, Lcom/samsung/android/sdk/ocr/OCRResult;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -206,6 +216,7 @@
 
     const-string v0, "resultCode"
 
+    .line 11
     invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
@@ -218,20 +229,24 @@
 
     const-string v0, "cornerpoint"
 
+    .line 12
     invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object p0
 
+    .line 13
     aget-object v0, p1, v1
 
     aget v1, p0, v1
 
     iput v1, v0, Landroid/graphics/Point;->x:I
 
+    .line 14
     aget v1, p0, v2
 
     iput v1, v0, Landroid/graphics/Point;->y:I
 
+    .line 15
     aget-object v0, p1, v2
 
     const/4 v1, 0x2
@@ -242,10 +257,12 @@
 
     const/4 v3, 0x3
 
+    .line 16
     aget v4, p0, v3
 
     iput v4, v0, Landroid/graphics/Point;->y:I
 
+    .line 17
     aget-object v0, p1, v1
 
     const/4 v1, 0x4
@@ -256,10 +273,12 @@
 
     const/4 v1, 0x5
 
+    .line 18
     aget v1, p0, v1
 
     iput v1, v0, Landroid/graphics/Point;->y:I
 
+    .line 19
     aget-object p1, p1, v3
 
     const/4 v0, 0x6
@@ -270,6 +289,7 @@
 
     const/4 v0, 0x7
 
+    .line 20
     aget p0, p0, v0
 
     iput p0, p1, Landroid/graphics/Point;->y:I

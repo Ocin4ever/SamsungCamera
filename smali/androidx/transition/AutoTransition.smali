@@ -7,8 +7,10 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/transition/TransitionSet;-><init>()V
 
+    .line 2
     invoke-direct {p0}, Landroidx/transition/AutoTransition;->init()V
 
     return-void
@@ -17,8 +19,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2}, Landroidx/transition/TransitionSet;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 4
     invoke-direct {p0}, Landroidx/transition/AutoTransition;->init()V
 
     return-void

@@ -185,6 +185,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 1
     sget v0, Landroidx/appcompat/R$attr;->checkboxStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lf1/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -195,6 +196,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 8
 
+    .line 2
     sget v4, Lf1/a;->u:I
 
     invoke-static {p1, p2, p3, v4}, Lx1/a;->c(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
@@ -203,46 +205,54 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatCheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 3
     new-instance p1, Ljava/util/LinkedHashSet;
 
     invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
 
     iput-object p1, p0, Lf1/a;->a:Ljava/util/LinkedHashSet;
 
+    .line 4
     new-instance p1, Ljava/util/LinkedHashSet;
 
     invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
 
     iput-object p1, p0, Lf1/a;->b:Ljava/util/LinkedHashSet;
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     sget v0, Ly0/d;->e:I
 
+    .line 6
     invoke-static {p1, v0}, Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;->create(Landroid/content/Context;I)Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
 
     move-result-object p1
 
     iput-object p1, p0, Lf1/a;->s:Landroidx/vectordrawable/graphics/drawable/AnimatedVectorDrawableCompat;
 
+    .line 7
     new-instance p1, Lf1/a$a;
 
     invoke-direct {p1, p0}, Lf1/a$a;-><init>(Lf1/a;)V
 
     iput-object p1, p0, Lf1/a;->t:Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;
 
+    .line 8
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
+    .line 9
     invoke-static {p0}, Landroidx/core/widget/CompoundButtonCompat;->getButtonDrawable(Landroid/widget/CompoundButton;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iput-object v0, p0, Lf1/a;->h:Landroid/graphics/drawable/Drawable;
 
+    .line 10
     invoke-direct {p0}, Lf1/a;->getSuperButtonTintList()Landroid/content/res/ColorStateList;
 
     move-result-object v0
@@ -251,8 +261,10 @@
 
     const/4 v6, 0x0
 
+    .line 11
     invoke-interface {p0, v6}, Landroidx/core/widget/TintableCompoundButton;->setSupportButtonTintList(Landroid/content/res/ColorStateList;)V
 
+    .line 12
     sget-object v2, Ly0/l;->j3:[I
 
     const/4 v7, 0x0
@@ -265,10 +277,12 @@
 
     move v3, p3
 
+    .line 13
     invoke-static/range {v0 .. v5}, Lm1/q;->j(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/TintTypedArray;
 
     move-result-object p2
 
+    .line 14
     sget p3, Ly0/l;->m3:I
 
     invoke-virtual {p2, p3}, Landroidx/appcompat/widget/TintTypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -277,26 +291,31 @@
 
     iput-object p3, p0, Lf1/a;->i:Landroid/graphics/drawable/Drawable;
 
+    .line 15
     iget-object p3, p0, Lf1/a;->h:Landroid/graphics/drawable/Drawable;
 
     const/4 v0, 0x1
 
     if-eqz p3, :cond_0
 
+    .line 16
     invoke-static {p1}, Lm1/q;->g(Landroid/content/Context;)Z
 
     move-result p3
 
     if-eqz p3, :cond_0
 
+    .line 17
     invoke-virtual {p0, p2}, Lf1/a;->c(Landroidx/appcompat/widget/TintTypedArray;)Z
 
     move-result p3
 
     if-eqz p3, :cond_0
 
+    .line 18
     invoke-super {p0, v6}, Landroidx/appcompat/widget/AppCompatCheckBox;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 19
     sget p3, Ly0/d;->d:I
 
     invoke-static {p1, p3}, Landroidx/appcompat/content/res/AppCompatResources;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -305,61 +324,75 @@
 
     iput-object p3, p0, Lf1/a;->h:Landroid/graphics/drawable/Drawable;
 
+    .line 20
     iput-boolean v0, p0, Lf1/a;->j:Z
 
+    .line 21
     iget-object p3, p0, Lf1/a;->i:Landroid/graphics/drawable/Drawable;
 
     if-nez p3, :cond_0
 
+    .line 22
     sget p3, Ly0/d;->f:I
 
+    .line 23
     invoke-static {p1, p3}, Landroidx/appcompat/content/res/AppCompatResources;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p3
 
     iput-object p3, p0, Lf1/a;->i:Landroid/graphics/drawable/Drawable;
 
+    .line 24
     :cond_0
     sget p3, Ly0/l;->n3:I
 
+    .line 25
     invoke-static {p1, p2, p3}, Lq1/c;->b(Landroid/content/Context;Landroidx/appcompat/widget/TintTypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
     iput-object p1, p0, Lf1/a;->l:Landroid/content/res/ColorStateList;
 
+    .line 26
     sget p1, Ly0/l;->o3:I
 
     const/4 p3, -0x1
 
+    .line 27
     invoke-virtual {p2, p1, p3}, Landroidx/appcompat/widget/TintTypedArray;->getInt(II)I
 
     move-result p1
 
     sget-object p3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
+    .line 28
     invoke-static {p1, p3}, Lm1/r;->f(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object p1
 
     iput-object p1, p0, Lf1/a;->m:Landroid/graphics/PorterDuff$Mode;
 
+    .line 29
     sget p1, Ly0/l;->t3:I
 
+    .line 30
     invoke-virtual {p2, p1, v7}, Landroidx/appcompat/widget/TintTypedArray;->getBoolean(IZ)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lf1/a;->d:Z
 
+    .line 31
     sget p1, Ly0/l;->p3:I
 
+    .line 32
     invoke-virtual {p2, p1, v0}, Landroidx/appcompat/widget/TintTypedArray;->getBoolean(IZ)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lf1/a;->e:Z
 
+    .line 33
     sget p1, Ly0/l;->s3:I
 
     invoke-virtual {p2, p1, v7}, Landroidx/appcompat/widget/TintTypedArray;->getBoolean(IZ)Z
@@ -368,14 +401,17 @@
 
     iput-boolean p1, p0, Lf1/a;->f:Z
 
+    .line 34
     sget p1, Ly0/l;->r3:I
 
+    .line 35
     invoke-virtual {p2, p1}, Landroidx/appcompat/widget/TintTypedArray;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     iput-object p1, p0, Lf1/a;->g:Ljava/lang/CharSequence;
 
+    .line 36
     sget p1, Ly0/l;->q3:I
 
     invoke-virtual {p2, p1}, Landroidx/appcompat/widget/TintTypedArray;->hasValue(I)Z
@@ -384,15 +420,19 @@
 
     if-eqz p3, :cond_1
 
+    .line 37
     invoke-virtual {p2, p1, v7}, Landroidx/appcompat/widget/TintTypedArray;->getInt(II)I
 
     move-result p1
 
+    .line 38
     invoke-virtual {p0, p1}, Lf1/a;->setCheckedState(I)V
 
+    .line 39
     :cond_1
     invoke-virtual {p2}, Landroidx/appcompat/widget/TintTypedArray;->recycle()V
 
+    .line 40
     invoke-virtual {p0}, Lf1/a;->e()V
 
     return-void
@@ -1117,6 +1157,7 @@
 .method public setButtonDrawable(I)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1133,12 +1174,15 @@
 .method public setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lf1/a;->h:Landroid/graphics/drawable/Drawable;
 
     const/4 p1, 0x0
 
+    .line 3
     iput-boolean p1, p0, Lf1/a;->j:Z
 
+    .line 4
     invoke-virtual {p0}, Lf1/a;->e()V
 
     return-void

@@ -405,6 +405,7 @@
 .method public static writeProfile(Landroid/content/Context;)V
     .locals 2
 
+    .line 1
     new-instance v0, Landroidx/profileinstaller/b;
 
     invoke-direct {v0}, Landroidx/profileinstaller/b;-><init>()V
@@ -421,6 +422,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-static {p0, p1, p2, v0}, Landroidx/profileinstaller/ProfileInstaller;->writeProfile(Landroid/content/Context;Ljava/util/concurrent/Executor;Landroidx/profileinstaller/ProfileInstaller$DiagnosticsCallback;Z)V
 
     return-void
@@ -429,22 +431,27 @@
 .method public static writeProfile(Landroid/content/Context;Ljava/util/concurrent/Executor;Landroidx/profileinstaller/ProfileInstaller$DiagnosticsCallback;Z)V
     .locals 9
 
+    .line 3
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v0
 
+    .line 7
     new-instance v3, Ljava/io/File;
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
@@ -455,12 +462,14 @@
 
     move-result-object v5
 
+    .line 8
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     const/4 v8, 0x0
 
+    .line 9
     :try_start_0
     invoke-virtual {v1, v2, v8}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
@@ -468,6 +477,7 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 10
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
 
     move-result-object v4
@@ -476,6 +486,7 @@
 
     if-nez p3, :cond_1
 
+    .line 11
     invoke-static {v3, v4, p2}, Landroidx/profileinstaller/ProfileInstaller;->hasAlreadyWrittenProfileForThisInstall(Landroid/content/pm/PackageInfo;Ljava/io/File;Landroidx/profileinstaller/ProfileInstaller$DiagnosticsCallback;)Z
 
     move-result v6
@@ -484,6 +495,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -505,10 +517,12 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 13
     invoke-static {p0, v8}, Landroidx/profileinstaller/ProfileVerifier;->writeProfileVerification(Landroid/content/Context;Z)Landroidx/profileinstaller/ProfileVerifier$CompilationStatus;
 
     goto :goto_1
 
+    .line 14
     :cond_1
     :goto_0
     new-instance v6, Ljava/lang/StringBuilder;
@@ -537,6 +551,7 @@
 
     move-object v7, p2
 
+    .line 15
     invoke-static/range {v1 .. v7}, Landroidx/profileinstaller/ProfileInstaller;->transcodeAndWrite(Landroid/content/res/AssetManager;Ljava/lang/String;Landroid/content/pm/PackageInfo;Ljava/io/File;Ljava/lang/String;Ljava/util/concurrent/Executor;Landroidx/profileinstaller/ProfileInstaller$DiagnosticsCallback;)Z
 
     move-result p1
@@ -547,6 +562,7 @@
 
     const/4 v8, 0x1
 
+    .line 16
     :cond_2
     invoke-static {p0, v8}, Landroidx/profileinstaller/ProfileVerifier;->writeProfileVerification(Landroid/content/Context;Z)Landroidx/profileinstaller/ProfileVerifier$CompilationStatus;
 
@@ -558,8 +574,10 @@
 
     const/4 p3, 0x7
 
+    .line 17
     invoke-interface {p2, p3, p1}, Landroidx/profileinstaller/ProfileInstaller$DiagnosticsCallback;->onResultReceived(ILjava/lang/Object;)V
 
+    .line 18
     invoke-static {p0, v8}, Landroidx/profileinstaller/ProfileVerifier;->writeProfileVerification(Landroid/content/Context;Z)Landroidx/profileinstaller/ProfileVerifier$CompilationStatus;
 
     return-void

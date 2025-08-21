@@ -66,6 +66,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/lifecycle/Transformations$distinctUntilChanged$1;->invoke(Ljava/lang/Object;)V
 
     sget-object p0, Lf6/p;->a:Lf6/p;
@@ -81,12 +82,14 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Landroidx/lifecycle/Transformations$distinctUntilChanged$1;->$outputLiveData:Landroidx/lifecycle/MediatorLiveData;
 
     invoke-virtual {v0}, Landroidx/lifecycle/LiveData;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Landroidx/lifecycle/Transformations$distinctUntilChanged$1;->$firstTime:Lkotlin/jvm/internal/x;
 
     iget-boolean v1, v1, Lkotlin/jvm/internal/x;->a:Z
@@ -100,12 +103,14 @@
     :cond_0
     if-eqz v0, :cond_2
 
+    .line 4
     invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
+    .line 5
     :cond_1
     iget-object v0, p0, Landroidx/lifecycle/Transformations$distinctUntilChanged$1;->$firstTime:Lkotlin/jvm/internal/x;
 
@@ -113,6 +118,7 @@
 
     iput-boolean v1, v0, Lkotlin/jvm/internal/x;->a:Z
 
+    .line 6
     iget-object p0, p0, Landroidx/lifecycle/Transformations$distinctUntilChanged$1;->$outputLiveData:Landroidx/lifecycle/MediatorLiveData;
 
     invoke-virtual {p0, p1}, Landroidx/lifecycle/MutableLiveData;->setValue(Ljava/lang/Object;)V

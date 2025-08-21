@@ -19,24 +19,30 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lk/b;-><init>()V
 
     const/16 v0, 0x800
 
+    .line 2
     iput v0, p0, Lk/e;->c:I
 
     const-string v0, "\n"
 
+    .line 3
     iput-object v0, p0, Lk/e;->d:Ljava/lang/String;
 
     const-string v0, "  "
 
+    .line 4
     iput-object v0, p0, Lk/e;->e:Ljava/lang/String;
 
     const/4 v0, 0x0
 
+    .line 5
     iput v0, p0, Lk/e;->f:I
 
+    .line 6
     iput-boolean v0, p0, Lk/e;->g:Z
 
     return-void
@@ -45,24 +51,30 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 7
     invoke-direct {p0, p1}, Lk/b;-><init>(I)V
 
     const/16 p1, 0x800
 
+    .line 8
     iput p1, p0, Lk/e;->c:I
 
     const-string p1, "\n"
 
+    .line 9
     iput-object p1, p0, Lk/e;->d:Ljava/lang/String;
 
     const-string p1, "  "
 
+    .line 10
     iput-object p1, p0, Lk/e;->e:Ljava/lang/String;
 
     const/4 p1, 0x0
 
+    .line 11
     iput p1, p0, Lk/e;->f:I
 
+    .line 12
     iput-boolean p1, p0, Lk/e;->g:Z
 
     return-void

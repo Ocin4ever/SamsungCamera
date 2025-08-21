@@ -91,6 +91,7 @@
 .method public getValue()Lcom/google/common/collect/MapMaker$Dummy;
     .locals 0
 
+    .line 2
     sget-object p0, Lcom/google/common/collect/MapMaker$Dummy;->VALUE:Lcom/google/common/collect/MapMaker$Dummy;
 
     return-object p0
@@ -99,6 +100,7 @@
 .method public bridge synthetic getValue()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyDummyValueEntry;->getValue()Lcom/google/common/collect/MapMaker$Dummy;
 
     move-result-object p0

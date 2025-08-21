@@ -40,18 +40,21 @@
 .method public compare(Landroid/view/View;Landroid/view/View;)I
     .locals 1
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p0
 
     check-cast p0, Landroidx/viewpager/widget/ViewPager$LayoutParams;
 
+    .line 3
     invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroidx/viewpager/widget/ViewPager$LayoutParams;
 
+    .line 4
     iget-boolean p2, p0, Landroidx/viewpager/widget/ViewPager$LayoutParams;->isDecor:Z
 
     iget-boolean v0, p1, Landroidx/viewpager/widget/ViewPager$LayoutParams;->isDecor:Z
@@ -70,6 +73,7 @@
     :goto_0
     return p0
 
+    .line 5
     :cond_1
     iget p0, p0, Landroidx/viewpager/widget/ViewPager$LayoutParams;->position:I
 
@@ -83,6 +87,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     check-cast p2, Landroid/view/View;

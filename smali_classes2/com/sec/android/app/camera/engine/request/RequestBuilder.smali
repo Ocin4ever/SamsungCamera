@@ -1079,6 +1079,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, p1, p2, p3, v0}, Lcom/sec/android/app/camera/engine/request/RequestBuilder;->buildRequest(Lcom/sec/android/app/camera/interfaces/InternalEngine;Lcom/sec/android/app/camera/engine/request/CameraHolder;Lcom/sec/android/app/camera/engine/request/MakerHolder;Lcom/sec/android/app/camera/engine/request/RequestId;Ljava/lang/Object;)Lcom/sec/android/app/camera/engine/request/Request;
 
     move-result-object p0
@@ -1089,6 +1090,7 @@
 .method public static buildRequest(Lcom/sec/android/app/camera/interfaces/InternalEngine;Lcom/sec/android/app/camera/engine/request/CameraHolder;Lcom/sec/android/app/camera/engine/request/MakerHolder;Lcom/sec/android/app/camera/engine/request/RequestId;Ljava/lang/Object;)Lcom/sec/android/app/camera/engine/request/Request;
     .locals 7
 
+    .line 2
     sget-object v0, Lcom/sec/android/app/camera/engine/request/RequestBuilder;->mRequestMap:Ljava/util/EnumMap;
 
     invoke-virtual {v0, p3}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;

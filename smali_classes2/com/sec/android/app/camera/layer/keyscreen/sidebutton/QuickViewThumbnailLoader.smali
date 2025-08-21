@@ -297,8 +297,10 @@
 .method public loadQuickViewThumbnail()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/QuickViewThumbnailLoader;->cancelThumbnailLoaderTask()V
 
+    .line 2
     new-instance v0, Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/QuickViewThumbnailLoader$ThumbnailLoaderTask;
 
     const/4 v1, 0x0
@@ -307,6 +309,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/QuickViewThumbnailLoader;->mThumbnailLoaderTask:Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/QuickViewThumbnailLoader$ThumbnailLoaderTask;
 
+    .line 3
     sget-object p0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     const/4 v1, 0x0
@@ -321,8 +324,10 @@
 .method public loadQuickViewThumbnail(Landroid/graphics/Bitmap;I)V
     .locals 3
 
+    .line 4
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/QuickViewThumbnailLoader;->cancelThumbnailLoaderTask()V
 
+    .line 5
     new-instance v0, Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/QuickViewThumbnailLoader$ThumbnailLoaderTask;
 
     const/4 v1, 0x0
@@ -331,6 +336,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/QuickViewThumbnailLoader;->mThumbnailLoaderTask:Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/QuickViewThumbnailLoader$ThumbnailLoaderTask;
 
+    .line 6
     sget-object p0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     const/4 v1, 0x1

@@ -45,8 +45,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/sec/android/app/camera/layer/popup/w;
 
     invoke-direct {v0}, Lcom/sec/android/app/camera/layer/popup/w;-><init>()V
@@ -55,12 +57,15 @@
 
     const/4 v0, 0x1
 
+    .line 3
     iput-boolean v0, p0, Lcom/sec/android/app/camera/layer/popup/PopupConditionManager$PropertySet;->mIsAllowToShowAgain:Z
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Lcom/sec/android/app/camera/layer/popup/PopupConditionManager$PropertySet;->mPreferenceKey:Ljava/lang/String;
 
+    .line 5
     iput-object v0, p0, Lcom/sec/android/app/camera/layer/popup/PopupConditionManager$PropertySet;->mPreferenceDefaultValue:Ljava/lang/Object;
 
     return-void
@@ -76,8 +81,10 @@
         }
     .end annotation
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 7
     new-instance v0, Lcom/sec/android/app/camera/layer/popup/w;
 
     invoke-direct {v0}, Lcom/sec/android/app/camera/layer/popup/w;-><init>()V
@@ -86,10 +93,13 @@
 
     const/4 v0, 0x1
 
+    .line 8
     iput-boolean v0, p0, Lcom/sec/android/app/camera/layer/popup/PopupConditionManager$PropertySet;->mIsAllowToShowAgain:Z
 
+    .line 9
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/popup/PopupConditionManager$PropertySet;->mPreferenceKey:Ljava/lang/String;
 
+    .line 10
     iput-object p2, p0, Lcom/sec/android/app/camera/layer/popup/PopupConditionManager$PropertySet;->mPreferenceDefaultValue:Ljava/lang/Object;
 
     return-void

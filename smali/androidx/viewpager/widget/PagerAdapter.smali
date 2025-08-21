@@ -37,6 +37,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Required method destroyItem was not overridden"
@@ -49,6 +50,7 @@
 .method public destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Landroidx/viewpager/widget/PagerAdapter;->destroyItem(Landroid/view/View;ILjava/lang/Object;)V
 
     return-void
@@ -59,12 +61,14 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     return-void
 .end method
 
 .method public finishUpdate(Landroid/view/ViewGroup;)V
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/viewpager/widget/PagerAdapter;->finishUpdate(Landroid/view/View;)V
 
     return-void
@@ -102,6 +106,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Required method instantiateItem was not overridden"
@@ -114,6 +119,7 @@
 .method public instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/viewpager/widget/PagerAdapter;->instantiateItem(Landroid/view/View;I)Ljava/lang/Object;
 
     move-result-object p0
@@ -187,12 +193,14 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     return-void
 .end method
 
 .method public setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1, p2, p3}, Landroidx/viewpager/widget/PagerAdapter;->setPrimaryItem(Landroid/view/View;ILjava/lang/Object;)V
 
     return-void
@@ -225,12 +233,14 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     return-void
 .end method
 
 .method public startUpdate(Landroid/view/ViewGroup;)V
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/viewpager/widget/PagerAdapter;->startUpdate(Landroid/view/View;)V
 
     return-void

@@ -23,6 +23,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,20 +32,28 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[BIIZ)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFData;->mFileName:Ljava/lang/String;
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFData;->mKeyName:Ljava/lang/String;
 
+    .line 5
     iput-object p3, p0, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFData;->mDataFileName:Ljava/lang/String;
 
+    .line 6
     iput-object p4, p0, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFData;->mData:[B
 
+    .line 7
     iput p5, p0, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFData;->mDataType:I
 
+    .line 8
     iput p6, p0, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFData;->mOption:I
 
+    .line 9
     iput-boolean p7, p0, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFData;->isFileInsert:Z
 
     return-void

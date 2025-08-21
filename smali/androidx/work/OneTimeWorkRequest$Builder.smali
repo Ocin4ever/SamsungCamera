@@ -50,12 +50,14 @@
 .method public buildInternal$work_runtime_release()Landroidx/work/OneTimeWorkRequest;
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getBackoffCriteriaSet$work_runtime_release()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getWorkSpec$work_runtime_release()Landroidx/work/impl/model/WorkSpec;
 
     move-result-object v0
@@ -82,12 +84,14 @@
     :goto_1
     if-eqz v0, :cond_2
 
+    .line 4
     new-instance v0, Landroidx/work/OneTimeWorkRequest;
 
     invoke-direct {v0, p0}, Landroidx/work/OneTimeWorkRequest;-><init>(Landroidx/work/OneTimeWorkRequest$Builder;)V
 
     return-object v0
 
+    .line 5
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -105,6 +109,7 @@
 .method public bridge synthetic buildInternal$work_runtime_release()Landroidx/work/WorkRequest;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/work/OneTimeWorkRequest$Builder;->buildInternal$work_runtime_release()Landroidx/work/OneTimeWorkRequest;
 
     move-result-object p0
@@ -115,12 +120,14 @@
 .method public getThisObject$work_runtime_release()Landroidx/work/OneTimeWorkRequest$Builder;
     .locals 0
 
+    .line 1
     return-object p0
 .end method
 
 .method public bridge synthetic getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/work/OneTimeWorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/OneTimeWorkRequest$Builder;
 
     move-result-object p0

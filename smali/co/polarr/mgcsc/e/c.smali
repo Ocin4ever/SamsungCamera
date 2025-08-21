@@ -7,6 +7,7 @@
 .method public static synthetic a(Lco/polarr/mgcsc/entities/CropWindow;II)D
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2}, Lco/polarr/mgcsc/e/c;->b(Lco/polarr/mgcsc/entities/CropWindow;II)D
 
     move-result-wide p0
@@ -17,6 +18,7 @@
 .method private static a(Lco/polarr/mgcsc/entities/CropWindow;Lco/polarr/mgcsc/entities/CropWindow;)D
     .locals 3
 
+    .line 2
     iget v0, p0, Lco/polarr/mgcsc/entities/CropWindow;->left:I
 
     iget v1, p0, Lco/polarr/mgcsc/entities/CropWindow;->right:I
@@ -82,6 +84,7 @@
         }
     .end annotation
 
+    .line 3
     move-object/from16 v0, p0
 
     new-instance v1, Ljava/util/ArrayList;
@@ -306,6 +309,7 @@
         }
     .end annotation
 
+    .line 4
     move-object/from16 v0, p0
 
     move/from16 v6, p1
@@ -1019,6 +1023,7 @@
         }
     .end annotation
 
+    .line 5
     move/from16 v0, p1
 
     move/from16 v1, p2
@@ -1508,6 +1513,7 @@
 .method public static a(Lco/polarr/mgcsc/entities/CropWindow;FII)V
     .locals 7
 
+    .line 6
     iget v0, p0, Lco/polarr/mgcsc/entities/CropWindow;->right:I
 
     iget v1, p0, Lco/polarr/mgcsc/entities/CropWindow;->left:I

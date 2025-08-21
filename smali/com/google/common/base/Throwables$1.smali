@@ -42,6 +42,7 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/base/Throwables$1;->get(I)Ljava/lang/StackTraceElement;
 
     move-result-object p0
@@ -52,6 +53,7 @@
 .method public get(I)Ljava/lang/StackTraceElement;
     .locals 4
 
+    .line 2
     invoke-static {}, Lcom/google/common/base/Throwables;->access$000()Ljava/lang/reflect/Method;
 
     move-result-object v0
@@ -82,6 +84,7 @@
 
     aput-object p1, v2, p0
 
+    .line 3
     invoke-static {v0, v1, v2}, Lcom/google/common/base/Throwables;->access$200(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

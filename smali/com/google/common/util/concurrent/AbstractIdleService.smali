@@ -78,6 +78,7 @@
 .method public final awaitRunning()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractIdleService;->delegate:Lcom/google/common/util/concurrent/Service;
 
     invoke-interface {p0}, Lcom/google/common/util/concurrent/Service;->awaitRunning()V
@@ -88,6 +89,7 @@
 .method public final awaitRunning(JLjava/util/concurrent/TimeUnit;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractIdleService;->delegate:Lcom/google/common/util/concurrent/Service;
 
     invoke-interface {p0, p1, p2, p3}, Lcom/google/common/util/concurrent/Service;->awaitRunning(JLjava/util/concurrent/TimeUnit;)V
@@ -98,6 +100,7 @@
 .method public final awaitTerminated()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractIdleService;->delegate:Lcom/google/common/util/concurrent/Service;
 
     invoke-interface {p0}, Lcom/google/common/util/concurrent/Service;->awaitTerminated()V
@@ -108,6 +111,7 @@
 .method public final awaitTerminated(JLjava/util/concurrent/TimeUnit;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractIdleService;->delegate:Lcom/google/common/util/concurrent/Service;
 
     invoke-interface {p0, p1, p2, p3}, Lcom/google/common/util/concurrent/Service;->awaitTerminated(JLjava/util/concurrent/TimeUnit;)V

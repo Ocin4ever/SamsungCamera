@@ -36,16 +36,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Le5/a;-><init>(Landroid/content/Context;)V
 
     const/4 p1, -0x1
 
+    .line 2
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehEffectList;->mSelectedEffectPosition:I
 
     const/4 p1, 0x0
 
+    .line 3
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehEffectList;->mIsBokehEffectReady:Z
 
+    .line 4
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehEffectList;->mIsListScrolling:Z
 
     return-void
@@ -54,16 +58,20 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0, p1, p2}, Le5/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, -0x1
 
+    .line 6
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehEffectList;->mSelectedEffectPosition:I
 
     const/4 p1, 0x0
 
+    .line 7
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehEffectList;->mIsBokehEffectReady:Z
 
+    .line 8
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehEffectList;->mIsListScrolling:Z
 
     return-void
@@ -72,16 +80,20 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 9
     invoke-direct {p0, p1, p2, p3}, Le5/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, -0x1
 
+    .line 10
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehEffectList;->mSelectedEffectPosition:I
 
     const/4 p1, 0x0
 
+    .line 11
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehEffectList;->mIsBokehEffectReady:Z
 
+    .line 12
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehEffectList;->mIsListScrolling:Z
 
     return-void

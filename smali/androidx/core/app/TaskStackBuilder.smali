@@ -126,10 +126,12 @@
 .method public addParentStack(Landroid/app/Activity;)Landroidx/core/app/TaskStackBuilder;
     .locals 1
 
+    .line 1
     instance-of v0, p1, Landroidx/core/app/TaskStackBuilder$SupportParentable;
 
     if-eqz v0, :cond_0
 
+    .line 2
     move-object v0, p1
 
     check-cast v0, Landroidx/core/app/TaskStackBuilder$SupportParentable;
@@ -146,6 +148,7 @@
     :goto_0
     if-nez v0, :cond_1
 
+    .line 3
     invoke-static {p1}, Landroidx/core/app/NavUtils;->getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;
 
     move-result-object v0
@@ -153,12 +156,14 @@
     :cond_1
     if-eqz v0, :cond_3
 
+    .line 4
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p1
 
     if-nez p1, :cond_2
 
+    .line 5
     iget-object p1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -169,9 +174,11 @@
 
     move-result-object p1
 
+    .line 6
     :cond_2
     invoke-virtual {p0, p1}, Landroidx/core/app/TaskStackBuilder;->addParentStack(Landroid/content/ComponentName;)Landroidx/core/app/TaskStackBuilder;
 
+    .line 7
     invoke-virtual {p0, v0}, Landroidx/core/app/TaskStackBuilder;->addNextIntent(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;
 
     :cond_3
@@ -181,12 +188,14 @@
 .method public addParentStack(Landroid/content/ComponentName;)Landroidx/core/app/TaskStackBuilder;
     .locals 2
 
+    .line 9
     iget-object v0, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
+    .line 10
     :try_start_0
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
@@ -197,10 +206,12 @@
     :goto_0
     if-eqz p1, :cond_0
 
+    .line 11
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
+    .line 12
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
@@ -225,8 +236,10 @@
 
     const-string v0, "Bad ComponentName while traversing activity parent metadata"
 
+    .line 13
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 14
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
@@ -245,6 +258,7 @@
         }
     .end annotation
 
+    .line 8
     new-instance v0, Landroid/content/ComponentName;
 
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
@@ -366,6 +380,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, v0}, Landroidx/core/app/TaskStackBuilder;->getPendingIntent(IILandroid/os/Bundle;)Landroid/app/PendingIntent;
 
     move-result-object p0
@@ -376,6 +391,7 @@
 .method public getPendingIntent(IILandroid/os/Bundle;)Landroid/app/PendingIntent;
     .locals 4
 
+    .line 2
     iget-object v0, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -384,6 +400,7 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -396,6 +413,7 @@
 
     check-cast v0, [Landroid/content/Intent;
 
+    .line 4
     new-instance v2, Landroid/content/Intent;
 
     aget-object v3, v0, v1
@@ -410,6 +428,7 @@
 
     aput-object v2, v0, v1
 
+    .line 5
     iget-object p0, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
     invoke-static {p0, p1, v0, p2, p3}, Landroidx/core/app/TaskStackBuilder$Api16Impl;->getActivities(Landroid/content/Context;I[Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/PendingIntent;
@@ -418,6 +437,7 @@
 
     return-object p0
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -456,6 +476,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/core/app/TaskStackBuilder;->startActivities(Landroid/os/Bundle;)V
 
     return-void
@@ -464,6 +485,7 @@
 .method public startActivities(Landroid/os/Bundle;)V
     .locals 4
 
+    .line 2
     iget-object v0, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -472,6 +494,7 @@
 
     if-nez v0, :cond_1
 
+    .line 3
     iget-object v0, p0, Landroidx/core/app/TaskStackBuilder;->mIntents:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -484,6 +507,7 @@
 
     check-cast v0, [Landroid/content/Intent;
 
+    .line 4
     new-instance v2, Landroid/content/Intent;
 
     aget-object v3, v0, v1
@@ -498,6 +522,7 @@
 
     aput-object v2, v0, v1
 
+    .line 5
     iget-object v1, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
     invoke-static {v1, v0, p1}, Landroidx/core/content/ContextCompat;->startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z
@@ -506,6 +531,7 @@
 
     if-nez p1, :cond_0
 
+    .line 6
     new-instance p1, Landroid/content/Intent;
 
     array-length v1, v0
@@ -518,8 +544,10 @@
 
     const/high16 v0, 0x10000000
 
+    .line 7
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
+    .line 8
     iget-object p0, p0, Landroidx/core/app/TaskStackBuilder;->mSourceContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
@@ -527,6 +555,7 @@
     :cond_0
     return-void
 
+    .line 9
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 

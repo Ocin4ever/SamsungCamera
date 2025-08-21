@@ -55,20 +55,24 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 4
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/samsung/android/scs/ai/sdkcommon/asr/LocaleInfo;-><init>(Landroid/os/Parcel;)V
 
+    .line 6
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/BTCLocaleInfo;->ttsSpeaker:Ljava/util/List;
 
+    .line 7
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/BTCLocaleInfo;->ttsPackage:Ljava/util/List;
 
+    .line 8
     const-class v2, Lcom/samsung/android/scs/ai/sdkcommon/tts/TtsSpeakerInfo;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -83,12 +87,14 @@
 
     iput-object v3, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/BTCLocaleInfo;->defaultSpeaker:Lcom/samsung/android/scs/ai/sdkcommon/tts/TtsSpeakerInfo;
 
+    .line 9
     invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object p0
 
     invoke-virtual {p1, v0, p0}, Landroid/os/Parcel;->readList(Ljava/util/List;Ljava/lang/ClassLoader;)V
 
+    .line 10
     const-class p0, Lcom/samsung/android/scs/ai/sdkcommon/tts/TtsPackageInfo;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -103,20 +109,24 @@
 .method public constructor <init>(Ljava/util/Locale;Ljava/lang/String;ILcom/samsung/android/scs/ai/sdkcommon/tts/TtsSpeakerInfo;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/scs/ai/sdkcommon/asr/LocaleInfo;-><init>(Ljava/util/Locale;Ljava/lang/String;I)V
 
+    .line 2
     new-instance p1, Ljava/util/LinkedList;
 
     invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/BTCLocaleInfo;->ttsSpeaker:Ljava/util/List;
 
+    .line 3
     new-instance p1, Ljava/util/LinkedList;
 
     invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/BTCLocaleInfo;->ttsPackage:Ljava/util/List;
 
+    .line 4
     iput-object p4, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/BTCLocaleInfo;->defaultSpeaker:Lcom/samsung/android/scs/ai/sdkcommon/tts/TtsSpeakerInfo;
 
     return-void

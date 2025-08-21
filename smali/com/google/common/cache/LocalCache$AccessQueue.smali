@@ -169,6 +169,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1}, Lcom/google/common/cache/ReferenceEntry;->getPreviousInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object v0
@@ -179,6 +180,7 @@
 
     invoke-static {v0, v1}, Lcom/google/common/cache/LocalCache;->connectAccessOrder(Lcom/google/common/cache/ReferenceEntry;Lcom/google/common/cache/ReferenceEntry;)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
 
     invoke-interface {v0}, Lcom/google/common/cache/ReferenceEntry;->getPreviousInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
@@ -187,6 +189,7 @@
 
     invoke-static {v0, p1}, Lcom/google/common/cache/LocalCache;->connectAccessOrder(Lcom/google/common/cache/ReferenceEntry;Lcom/google/common/cache/ReferenceEntry;)V
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
 
     invoke-static {p1, p0}, Lcom/google/common/cache/LocalCache;->connectAccessOrder(Lcom/google/common/cache/ReferenceEntry;Lcom/google/common/cache/ReferenceEntry;)V
@@ -199,6 +202,7 @@
 .method public bridge synthetic offer(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/cache/ReferenceEntry;
 
     invoke-virtual {p0, p1}, Lcom/google/common/cache/LocalCache$AccessQueue;->offer(Lcom/google/common/cache/ReferenceEntry;)Z
@@ -218,12 +222,14 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
 
     invoke-interface {v0}, Lcom/google/common/cache/ReferenceEntry;->getNextInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object v0
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
 
     if-ne v0, p0, :cond_0
@@ -237,6 +243,7 @@
 .method public bridge synthetic peek()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache$AccessQueue;->peek()Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object p0
@@ -254,12 +261,14 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
 
     invoke-interface {v0}, Lcom/google/common/cache/ReferenceEntry;->getNextInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
 
     if-ne v0, v1, :cond_0
@@ -268,6 +277,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p0, v0}, Lcom/google/common/cache/LocalCache$AccessQueue;->remove(Ljava/lang/Object;)Z
 
@@ -277,6 +287,7 @@
 .method public bridge synthetic poll()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache$AccessQueue;->poll()Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object p0

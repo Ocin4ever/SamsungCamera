@@ -32,8 +32,10 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 2
 
+    .line 6
     invoke-direct {p0}, Lcom/google/common/hash/AbstractHashFunction;-><init>()V
 
+    .line 7
     invoke-static {p3}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p3
@@ -42,12 +44,14 @@
 
     iput-object p3, p0, Lcom/google/common/hash/MessageDigestHashFunction;->toString:Ljava/lang/String;
 
+    .line 8
     invoke-static {p1}, Lcom/google/common/hash/MessageDigestHashFunction;->getMessageDigest(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/common/hash/MessageDigestHashFunction;->prototype:Ljava/security/MessageDigest;
 
+    .line 9
     invoke-virtual {p1}, Ljava/security/MessageDigest;->getDigestLength()I
 
     move-result p3
@@ -68,10 +72,13 @@
     :goto_0
     const-string v1, "bytes (%s) must be >= 4 and < %s"
 
+    .line 10
     invoke-static {v0, v1, p2, p3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;II)V
 
+    .line 11
     iput p2, p0, Lcom/google/common/hash/MessageDigestHashFunction;->bytes:I
 
+    .line 12
     invoke-static {p1}, Lcom/google/common/hash/MessageDigestHashFunction;->supportsClone(Ljava/security/MessageDigest;)Z
 
     move-result p1
@@ -84,20 +91,24 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/AbstractHashFunction;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/hash/MessageDigestHashFunction;->getMessageDigest(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/common/hash/MessageDigestHashFunction;->prototype:Ljava/security/MessageDigest;
 
+    .line 3
     invoke-virtual {p1}, Ljava/security/MessageDigest;->getDigestLength()I
 
     move-result v0
 
     iput v0, p0, Lcom/google/common/hash/MessageDigestHashFunction;->bytes:I
 
+    .line 4
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -106,6 +117,7 @@
 
     iput-object p2, p0, Lcom/google/common/hash/MessageDigestHashFunction;->toString:Ljava/lang/String;
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/hash/MessageDigestHashFunction;->supportsClone(Ljava/security/MessageDigest;)Z
 
     move-result p1

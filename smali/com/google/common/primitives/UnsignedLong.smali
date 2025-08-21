@@ -106,8 +106,10 @@
     :goto_0
     const-string v1, "value (%s) is outside the range for an unsigned long value"
 
+    .line 1
     invoke-static {v0, v1, p0, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
 
+    .line 2
     invoke-static {p0, p1}, Lcom/google/common/primitives/UnsignedLong;->fromLongBits(J)Lcom/google/common/primitives/UnsignedLong;
 
     move-result-object p0
@@ -120,6 +122,7 @@
 
     const/16 v0, 0xa
 
+    .line 7
     invoke-static {p0, v0}, Lcom/google/common/primitives/UnsignedLong;->valueOf(Ljava/lang/String;I)Lcom/google/common/primitives/UnsignedLong;
 
     move-result-object p0
@@ -130,6 +133,7 @@
 .method public static valueOf(Ljava/lang/String;I)Lcom/google/common/primitives/UnsignedLong;
     .locals 0
 
+    .line 8
     invoke-static {p0, p1}, Lcom/google/common/primitives/UnsignedLongs;->parseUnsignedLong(Ljava/lang/String;I)J
 
     move-result-wide p0
@@ -144,8 +148,10 @@
 .method public static valueOf(Ljava/math/BigInteger;)Lcom/google/common/primitives/UnsignedLong;
     .locals 2
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-virtual {p0}, Ljava/math/BigInteger;->signum()I
 
     move-result v0
@@ -170,8 +176,10 @@
     :goto_0
     const-string v1, "value (%s) is outside the range for an unsigned long value"
 
+    .line 5
     invoke-static {v0, v1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 6
     invoke-virtual {p0}, Ljava/math/BigInteger;->longValue()J
 
     move-result-wide v0
@@ -219,8 +227,10 @@
 .method public compareTo(Lcom/google/common/primitives/UnsignedLong;)I
     .locals 2
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     iget-wide p0, p1, Lcom/google/common/primitives/UnsignedLong;->value:J
@@ -235,6 +245,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/primitives/UnsignedLong;
 
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/UnsignedLong;->compareTo(Lcom/google/common/primitives/UnsignedLong;)I
@@ -486,6 +497,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     invoke-static {v0, v1}, Lcom/google/common/primitives/UnsignedLongs;->toString(J)Ljava/lang/String;
@@ -498,6 +510,7 @@
 .method public toString(I)Ljava/lang/String;
     .locals 2
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     invoke-static {v0, v1, p1}, Lcom/google/common/primitives/UnsignedLongs;->toString(JI)Ljava/lang/String;

@@ -136,6 +136,7 @@
 .method public deinitializeNodeChain()V
     .locals 0
 
+    .line 1
     return-void
 .end method
 
@@ -151,6 +152,7 @@
         }
     .end annotation
 
+    .line 2
     return-void
 .end method
 

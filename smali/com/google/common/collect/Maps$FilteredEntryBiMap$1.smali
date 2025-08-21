@@ -46,6 +46,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/util/Map$Entry;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Maps$FilteredEntryBiMap$1;->apply(Ljava/util/Map$Entry;)Z
@@ -65,6 +66,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/Maps$FilteredEntryBiMap$1;->val$forwardPredicate:Lcom/google/common/base/Predicate;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;

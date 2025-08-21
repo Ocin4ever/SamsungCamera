@@ -36,6 +36,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/common/io/FileBackedOutputStream;-><init>(IZ)V
 
     return-void
@@ -46,6 +47,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/io/FileBackedOutputStream;-><init>(IZLjava/io/File;)V
 
     return-void
@@ -54,14 +56,19 @@
 .method private constructor <init>(IZLjava/io/File;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
+    .line 4
     iput p1, p0, Lcom/google/common/io/FileBackedOutputStream;->fileThreshold:I
 
+    .line 5
     iput-boolean p2, p0, Lcom/google/common/io/FileBackedOutputStream;->resetOnFinalize:Z
 
+    .line 6
     iput-object p3, p0, Lcom/google/common/io/FileBackedOutputStream;->parentDirectory:Ljava/io/File;
 
+    .line 7
     new-instance p1, Lcom/google/common/io/FileBackedOutputStream$MemoryOutput;
 
     const/4 p3, 0x0
@@ -70,10 +77,12 @@
 
     iput-object p1, p0, Lcom/google/common/io/FileBackedOutputStream;->memory:Lcom/google/common/io/FileBackedOutputStream$MemoryOutput;
 
+    .line 8
     iput-object p1, p0, Lcom/google/common/io/FileBackedOutputStream;->out:Ljava/io/OutputStream;
 
     if-eqz p2, :cond_0
 
+    .line 9
     new-instance p1, Lcom/google/common/io/FileBackedOutputStream$1;
 
     invoke-direct {p1, p0}, Lcom/google/common/io/FileBackedOutputStream$1;-><init>(Lcom/google/common/io/FileBackedOutputStream;)V
@@ -82,6 +91,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_0
     new-instance p1, Lcom/google/common/io/FileBackedOutputStream$2;
 
@@ -499,15 +509,18 @@
 
     const/4 v0, 0x1
 
+    .line 1
     :try_start_0
     invoke-direct {p0, v0}, Lcom/google/common/io/FileBackedOutputStream;->update(I)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/io/FileBackedOutputStream;->out:Ljava/io/OutputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-void
@@ -525,6 +538,7 @@
 
     monitor-enter p0
 
+    .line 4
     :try_start_0
     array-length v0, p1
 
@@ -534,6 +548,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     monitor-exit p0
 
     return-void
@@ -551,15 +566,18 @@
 
     monitor-enter p0
 
+    .line 6
     :try_start_0
     invoke-direct {p0, p3}, Lcom/google/common/io/FileBackedOutputStream;->update(I)V
 
+    .line 7
     iget-object v0, p0, Lcom/google/common/io/FileBackedOutputStream;->out:Ljava/io/OutputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     monitor-exit p0
 
     return-void

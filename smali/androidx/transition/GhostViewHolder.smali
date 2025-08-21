@@ -157,16 +157,19 @@
 .method private static isOnTop(Landroid/view/View;Landroid/view/View;)Z
     .locals 6
 
+    .line 8
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup;
 
+    .line 9
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
+    .line 10
     invoke-virtual {p0}, Landroid/view/View;->getZ()F
 
     move-result v2
@@ -183,6 +186,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 11
     invoke-virtual {p0}, Landroid/view/View;->getZ()F
 
     move-result p0
@@ -206,10 +210,12 @@
     :goto_0
     if-ge v2, v1, :cond_4
 
+    .line 12
     invoke-static {v0, v2}, Landroidx/transition/ViewGroupUtils;->getChildDrawingOrder(Landroid/view/ViewGroup;I)I
 
     move-result v5
 
+    .line 13
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
@@ -250,6 +256,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -266,6 +273,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -278,6 +286,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -296,12 +305,14 @@
     :goto_0
     if-ge v3, v2, :cond_2
 
+    .line 4
     invoke-virtual {p0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/view/View;
 
+    .line 5
     invoke-virtual {p1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -310,6 +321,7 @@
 
     if-eq v4, v5, :cond_1
 
+    .line 6
     invoke-static {v4, v5}, Landroidx/transition/GhostViewHolder;->isOnTop(Landroid/view/View;Landroid/view/View;)Z
 
     move-result p0
@@ -321,6 +333,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 

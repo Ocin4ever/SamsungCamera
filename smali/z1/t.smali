@@ -51,6 +51,7 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -59,6 +60,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;ILz1/t$a;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lz1/t;-><init>(Ljava/lang/String;I)V
 
     return-void

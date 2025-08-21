@@ -3499,6 +3499,7 @@
 .method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Integer;
     .locals 8
 
+    .line 2
     iget-object p1, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mPath:Ljava/lang/String;
 
     const/4 v0, 0x3
@@ -3507,6 +3508,7 @@
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -3515,17 +3517,21 @@
 
     const-string p1, "doInBackground - mPath is null!"
 
+    .line 4
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     iput v0, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mErrorCode:I
 
     return-object v3
 
+    .line 6
     :cond_0
     invoke-direct {p0}, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->getPathUris()Ljava/util/List;
 
     move-result-object p1
 
+    .line 7
     iget v4, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mOperation:I
 
     const/4 v5, 0x1
@@ -3538,6 +3544,7 @@
 
     if-lez v4, :cond_3
 
+    .line 8
     invoke-direct {p0}, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->backupCameraSettings()Ljava/lang/Integer;
 
     move-result-object v4
@@ -3580,18 +3587,22 @@
 
     move-result-object v4
 
+    .line 9
     iget-object v5, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mEncryptFile:Ljava/io/File;
 
     if-nez v5, :cond_1
 
     const-string p1, "doInBackground - mEncryptFile is null!"
 
+    .line 10
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 11
     iput v0, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mErrorCode:I
 
     return-object v3
 
+    .line 12
     :cond_1
     invoke-virtual {v5}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
@@ -3601,12 +3612,15 @@
 
     const-string p1, "doInBackground - parentFile is null!"
 
+    .line 13
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 14
     iput v0, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mErrorCode:I
 
     return-object v3
 
+    .line 15
     :cond_2
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3620,6 +3634,7 @@
 
     goto :goto_0
 
+    .line 16
     :cond_3
     iget v0, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mOperation:I
 
@@ -3633,6 +3648,7 @@
 
     if-le v0, v5, :cond_6
 
+    .line 17
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -3679,6 +3695,7 @@
 
     move-result v0
 
+    .line 18
     invoke-direct {p0}, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->restoreCameraSettings()Ljava/lang/Integer;
 
     move-result-object v4
@@ -3721,6 +3738,7 @@
 
     move-result-object v4
 
+    .line 19
     iget-object v3, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mContext:Landroid/content/Context;
 
     const-string v5, "restore_setting_preferences_name"
@@ -3733,6 +3751,7 @@
 
     invoke-static {v3, v5}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->removePreferences(Landroid/content/SharedPreferences;Ljava/lang/String;)V
 
+    .line 20
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -3774,16 +3793,20 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 21
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
     if-eqz p1, :cond_4
 
+    .line 22
     iput v2, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mResult:I
 
+    .line 23
     iput v2, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mErrorCode:I
 
+    .line 24
     :cond_4
     new-instance p1, Ljava/io/File;
 
@@ -3791,18 +3814,21 @@
 
     invoke-direct {p1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 25
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-eqz p0, :cond_5
 
+    .line 26
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p0
 
     if-eqz p0, :cond_5
 
+    .line 27
     array-length p1, p0
 
     :goto_1
@@ -3810,6 +3836,7 @@
 
     aget-object v0, p0, v2
 
+    .line 28
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     add-int/lit8 v2, v2, 0x1
@@ -3819,6 +3846,7 @@
     :cond_5
     return-object v4
 
+    .line 29
     :cond_6
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3848,6 +3876,7 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 30
     iput v5, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mErrorCode:I
 
     return-object v3
@@ -3856,6 +3885,7 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Integer;
@@ -3868,12 +3898,14 @@
 .method public onPostExecute(Ljava/lang/Integer;)V
     .locals 3
 
+    .line 2
     iget v0, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mOperation:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 3
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.intent.action.RESPONSE_BACKUP_CAMERA"
@@ -3882,12 +3914,14 @@
 
     const-string v1, "EXPORT_SESSION_TIME"
 
+    .line 4
     iget-object v2, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mSessionTime:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -3898,26 +3932,31 @@
     :goto_0
     const-string v1, "RESULT"
 
+    .line 6
     iget v2, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mResult:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v1, "ERR_CODE"
 
+    .line 7
     iget v2, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mErrorCode:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v1, "REQ_SIZE"
 
+    .line 8
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     const-string v1, "SOURCE"
 
+    .line 9
     iget-object v2, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mSource:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 10
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3952,6 +3991,7 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 11
     iget-object p0, p0, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->mContext:Landroid/content/Context;
 
     const-string p1, "com.wssnps.permission.COM_WSSNPS"
@@ -3964,6 +4004,7 @@
 .method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/receiver/SmartSwitchReceiver$CameraBackupRestoreTask;->onPostExecute(Ljava/lang/Integer;)V

@@ -42,16 +42,19 @@
 .method private constructor <init>(Lcom/google/common/collect/CompactHashMap;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/CompactHashMap$Itr;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/CompactHashMap;->access$000(Lcom/google/common/collect/CompactHashMap;)I
 
     move-result v0
 
     iput v0, p0, Lcom/google/common/collect/CompactHashMap$Itr;->expectedMetadata:I
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/common/collect/CompactHashMap;->firstEntryIndex()I
 
     move-result p1
@@ -60,6 +63,7 @@
 
     const/4 p1, -0x1
 
+    .line 4
     iput p1, p0, Lcom/google/common/collect/CompactHashMap$Itr;->indexToRemove:I
 
     return-void
@@ -68,6 +72,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/collect/CompactHashMap;Lcom/google/common/collect/CompactHashMap$1;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/google/common/collect/CompactHashMap$Itr;-><init>(Lcom/google/common/collect/CompactHashMap;)V
 
     return-void

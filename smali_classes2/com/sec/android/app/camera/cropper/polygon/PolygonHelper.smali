@@ -105,6 +105,7 @@
 .method private static adjustLimitRectangleDelta(Lcom/sec/android/app/camera/cropper/util/CropConstants$RectHandleKey;Landroid/graphics/RectF;Landroid/graphics/PointF;I)V
     .locals 2
 
+    .line 3
     sget-object v0, Lcom/sec/android/app/camera/cropper/polygon/PolygonHelper$1;->$SwitchMap$com$sec$android$app$camera$cropper$util$CropConstants$RectHandleKey:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
@@ -117,6 +118,7 @@
 
     goto/16 :goto_0
 
+    .line 4
     :pswitch_0
     iget p0, p2, Landroid/graphics/PointF;->x:F
 
@@ -136,6 +138,7 @@
 
     iput p0, p2, Landroid/graphics/PointF;->x:F
 
+    .line 5
     iget p0, p2, Landroid/graphics/PointF;->y:F
 
     iget v0, p1, Landroid/graphics/RectF;->top:F
@@ -154,6 +157,7 @@
 
     goto/16 :goto_0
 
+    .line 6
     :pswitch_1
     iget p0, p2, Landroid/graphics/PointF;->y:F
 
@@ -175,6 +179,7 @@
 
     goto/16 :goto_0
 
+    .line 7
     :pswitch_2
     iget p0, p2, Landroid/graphics/PointF;->x:F
 
@@ -196,6 +201,7 @@
 
     goto/16 :goto_0
 
+    .line 8
     :pswitch_3
     iget p0, p2, Landroid/graphics/PointF;->x:F
 
@@ -215,6 +221,7 @@
 
     iput p0, p2, Landroid/graphics/PointF;->x:F
 
+    .line 9
     iget p0, p2, Landroid/graphics/PointF;->y:F
 
     iget v0, p1, Landroid/graphics/RectF;->top:F
@@ -233,6 +240,7 @@
 
     goto :goto_0
 
+    .line 10
     :pswitch_4
     iget p0, p2, Landroid/graphics/PointF;->x:F
 
@@ -252,6 +260,7 @@
 
     iput p0, p2, Landroid/graphics/PointF;->x:F
 
+    .line 11
     iget p0, p2, Landroid/graphics/PointF;->y:F
 
     iget v0, p1, Landroid/graphics/RectF;->bottom:F
@@ -270,6 +279,7 @@
 
     goto :goto_0
 
+    .line 12
     :pswitch_5
     iget p0, p2, Landroid/graphics/PointF;->y:F
 
@@ -291,6 +301,7 @@
 
     goto :goto_0
 
+    .line 13
     :pswitch_6
     iget p0, p2, Landroid/graphics/PointF;->x:F
 
@@ -312,6 +323,7 @@
 
     goto :goto_0
 
+    .line 14
     :pswitch_7
     iget p0, p2, Landroid/graphics/PointF;->x:F
 
@@ -331,6 +343,7 @@
 
     iput p0, p2, Landroid/graphics/PointF;->x:F
 
+    .line 15
     iget p0, p2, Landroid/graphics/PointF;->y:F
 
     iget v0, p1, Landroid/graphics/RectF;->bottom:F
@@ -366,6 +379,7 @@
 .method public static adjustLimitRectangleDelta(Lcom/sec/android/app/camera/cropper/util/CropConstants$RectHandleKey;Lcom/sec/android/app/camera/cropper/polygon/Polygon;Landroid/graphics/PointF;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Lcom/sec/android/app/camera/cropper/polygon/Polygon;->getPointList()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -374,6 +388,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p1}, Lcom/sec/android/app/camera/cropper/polygon/Polygon;->getMinCropSize()I
 
     move-result p1

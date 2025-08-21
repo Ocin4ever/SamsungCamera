@@ -39,16 +39,19 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/util/VoiceAssistantManager;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/util/VoiceAssistantManager$SpeakTtsRunnable;->this$0:Lcom/sec/android/app/camera/util/VoiceAssistantManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance p1, Ljava/util/LinkedList;
 
     invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/util/VoiceAssistantManager$SpeakTtsRunnable;->mStringList:Ljava/util/LinkedList;
 
+    .line 4
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
@@ -61,6 +64,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/util/VoiceAssistantManager;Lcom/sec/android/app/camera/util/h2;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/util/VoiceAssistantManager$SpeakTtsRunnable;-><init>(Lcom/sec/android/app/camera/util/VoiceAssistantManager;)V
 
     return-void

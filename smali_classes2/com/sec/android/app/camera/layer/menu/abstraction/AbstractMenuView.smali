@@ -155,6 +155,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/menu/abstraction/AbstractMenuContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/menu/abstraction/AbstractMenuView;->setPresenter(Lcom/sec/android/app/camera/layer/menu/abstraction/AbstractMenuContract$Presenter;)V
@@ -170,6 +171,7 @@
         }
     .end annotation
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/menu/abstraction/AbstractMenuView;->mPresenter:Lcom/sec/android/app/camera/layer/menu/abstraction/AbstractMenuContract$Presenter;
 
     return-void

@@ -424,6 +424,7 @@
 .method public final getVisibleAreaRect()Landroid/graphics/Rect;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/Handle;->visibleAreaRect:Landroid/graphics/Rect;
 
     return-object p0
@@ -440,15 +441,18 @@
 
     new-array v0, v0, [I
 
+    .line 2
     iget-object v1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/Handle;->view:Landroid/view/View;
 
     if-eqz v1, :cond_0
 
     invoke-virtual {v1, v0}, Landroid/view/View;->getLocationInWindow([I)V
 
+    .line 3
     :cond_0
     new-instance v1, Landroid/graphics/Rect;
 
+    .line 4
     iget v2, p1, Landroid/graphics/Rect;->left:I
 
     int-to-float v2, v2
@@ -467,6 +471,7 @@
 
     float-to-int v2, v2
 
+    .line 5
     iget v4, p1, Landroid/graphics/Rect;->top:I
 
     int-to-float v4, v4
@@ -483,6 +488,7 @@
 
     float-to-int v4, v4
 
+    .line 6
     iget v5, p1, Landroid/graphics/Rect;->right:I
 
     int-to-float v5, v5
@@ -495,6 +501,7 @@
 
     float-to-int v3, v5
 
+    .line 7
     iget p1, p1, Landroid/graphics/Rect;->bottom:I
 
     int-to-float p1, p1
@@ -507,6 +514,7 @@
 
     float-to-int p0, p1
 
+    .line 8
     invoke-direct {v1, v2, v4, v3, p0}, Landroid/graphics/Rect;-><init>(IIII)V
 
     return-object v1

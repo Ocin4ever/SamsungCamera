@@ -19,16 +19,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/sec/android/app/camera/shootingmode/video/widget/RecordingProgressBar;->mProgressRequestedSizeInKb:J
 
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/video/widget/RecordingProgressBar;->mScaleRatio:F
 
+    .line 4
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/video/widget/RecordingProgressBar;->initView()V
 
     return-void
@@ -37,16 +41,20 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const-wide/16 p1, 0x0
 
+    .line 6
     iput-wide p1, p0, Lcom/sec/android/app/camera/shootingmode/video/widget/RecordingProgressBar;->mProgressRequestedSizeInKb:J
 
     const/4 p1, 0x0
 
+    .line 7
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/video/widget/RecordingProgressBar;->mScaleRatio:F
 
+    .line 8
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/video/widget/RecordingProgressBar;->initView()V
 
     return-void

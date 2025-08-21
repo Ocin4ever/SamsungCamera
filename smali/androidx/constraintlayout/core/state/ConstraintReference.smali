@@ -2041,10 +2041,12 @@
 .method public margin(I)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 2
 
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
     if-eqz v0, :cond_0
 
+    .line 3
     sget-object v1, Landroidx/constraintlayout/core/state/ConstraintReference$1;->$SwitchMap$androidx$constraintlayout$core$state$State$Constraint:[I
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
@@ -2060,56 +2062,70 @@
     :pswitch_0
     int-to-float p1, p1
 
+    .line 4
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCircularDistance:F
 
     goto :goto_0
 
+    .line 5
     :pswitch_1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBaseline:I
 
     goto :goto_0
 
+    .line 6
     :pswitch_2
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBottom:I
 
     goto :goto_0
 
+    .line 7
     :pswitch_3
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginTop:I
 
     goto :goto_0
 
+    .line 8
     :pswitch_4
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginEnd:I
 
     goto :goto_0
 
+    .line 9
     :pswitch_5
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginStart:I
 
     goto :goto_0
 
+    .line 10
     :pswitch_6
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginRight:I
 
     goto :goto_0
 
+    .line 11
     :pswitch_7
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginLeft:I
 
     goto :goto_0
 
+    .line 12
     :cond_0
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginLeft:I
 
+    .line 13
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginRight:I
 
+    .line 14
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginStart:I
 
+    .line 15
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginEnd:I
 
+    .line 16
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginTop:I
 
+    .line 17
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBottom:I
 
     :goto_0
@@ -2139,6 +2155,7 @@
 .method public margin(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mState:Landroidx/constraintlayout/core/state/State;
 
     invoke-virtual {v0, p1}, Landroidx/constraintlayout/core/state/State;->convertDimension(Ljava/lang/Object;)I
@@ -2155,10 +2172,12 @@
 .method public marginGone(I)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 2
 
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
     if-eqz v0, :cond_0
 
+    .line 3
     sget-object v1, Landroidx/constraintlayout/core/state/ConstraintReference$1;->$SwitchMap$androidx$constraintlayout$core$state$State$Constraint:[I
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
@@ -2171,52 +2190,65 @@
 
     goto :goto_0
 
+    .line 4
     :pswitch_0
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBaselineGone:I
 
     goto :goto_0
 
+    .line 5
     :pswitch_1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBottomGone:I
 
     goto :goto_0
 
+    .line 6
     :pswitch_2
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginTopGone:I
 
     goto :goto_0
 
+    .line 7
     :pswitch_3
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginEndGone:I
 
     goto :goto_0
 
+    .line 8
     :pswitch_4
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginStartGone:I
 
     goto :goto_0
 
+    .line 9
     :pswitch_5
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginRightGone:I
 
     goto :goto_0
 
+    .line 10
     :pswitch_6
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginLeftGone:I
 
     goto :goto_0
 
+    .line 11
     :cond_0
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginLeftGone:I
 
+    .line 12
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginRightGone:I
 
+    .line 13
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginStartGone:I
 
+    .line 14
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginEndGone:I
 
+    .line 15
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginTopGone:I
 
+    .line 16
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBottomGone:I
 
     :goto_0
@@ -2245,6 +2277,7 @@
 .method public marginGone(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mState:Landroidx/constraintlayout/core/state/State;
 
     invoke-virtual {v0, p1}, Landroidx/constraintlayout/core/state/State;->convertDimension(Ljava/lang/Object;)I

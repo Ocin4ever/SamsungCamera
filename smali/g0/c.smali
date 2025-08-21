@@ -39,6 +39,7 @@
 .method public constructor <init>(Ljava/lang/String;IJ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lk0/a;-><init>()V
 
     iput-object p1, p0, Lg0/c;->a:Ljava/lang/String;
@@ -53,6 +54,7 @@
 .method public constructor <init>(Ljava/lang/String;J)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lk0/a;-><init>()V
 
     iput-object p1, p0, Lg0/c;->a:Ljava/lang/String;

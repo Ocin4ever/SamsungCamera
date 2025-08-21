@@ -506,6 +506,7 @@
 .method private checkStableToReset(I)V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lco/polarr/mgcsc/v2/apis/PolarrMGC;->processingThread:Lco/polarr/mgcsc/f/f;
 
     if-eqz v0, :cond_0
@@ -7715,6 +7716,7 @@
 .method public checkStableToReset()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lco/polarr/mgcsc/v2/apis/PolarrMGC;->processingThread:Lco/polarr/mgcsc/f/f;
 
     if-eqz v0, :cond_0
@@ -11068,6 +11070,7 @@
 .method public processing([BIIIIIZLco/polarr/mgcsc/entities/ImageParam;)Lco/polarr/mgcsc/entities/MovementSuggestion;
     .locals 15
 
+    .line 1
     move-object v10, p0
 
     move-object/from16 v9, p8
@@ -11259,6 +11262,7 @@
 .method public processing([BIIIZLco/polarr/mgcsc/entities/ImageParam;)Lco/polarr/mgcsc/entities/MovementSuggestion;
     .locals 9
 
+    .line 2
     move-object v0, p0
 
     move-object v1, p1
@@ -11287,6 +11291,7 @@
 .method public processing([BIIIZ[Landroid/hardware/camera2/params/Face;Landroid/graphics/Rect;IIIII)Lco/polarr/mgcsc/entities/MovementSuggestion;
     .locals 0
 
+    .line 3
     invoke-virtual/range {p0 .. p12}, Lco/polarr/mgcsc/v2/apis/PolarrMGC;->processing([BIIIZ[Landroid/hardware/camera2/params/Face;Landroid/graphics/Rect;IIIII)Lco/polarr/mgcsc/entities/MovementSuggestion;
 
     move-result-object p0
@@ -11297,6 +11302,7 @@
 .method public processing([BIIIZ[Landroid/hardware/camera2/params/Face;Landroid/graphics/Rect;IIIIIZ)Lco/polarr/mgcsc/entities/MovementSuggestion;
     .locals 12
 
+    .line 4
     new-instance v11, Lco/polarr/mgcsc/entities/ImageParam;
 
     const/4 v8, 0x0
@@ -11770,6 +11776,7 @@
 .method public setPitchThreshold(I)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lco/polarr/mgcsc/v2/apis/PolarrMGC;->processingThread:Lco/polarr/mgcsc/f/f;
 
     if-eqz v0, :cond_0
@@ -11787,6 +11794,7 @@
 .method public setPitchThreshold(III)V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lco/polarr/mgcsc/v2/apis/PolarrMGC;->processingThread:Lco/polarr/mgcsc/f/f;
 
     if-eqz v0, :cond_0

@@ -61,6 +61,7 @@
 .method public onPictureTaken(ILjava/nio/ByteBuffer;I)V
     .locals 6
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,6 +90,7 @@
 
     if-ne p1, p3, :cond_1
 
+    .line 3
     iget-object p3, p0, Lcom/sec/android/app/camera/engine/EffectController$1;->this$0:Lcom/sec/android/app/camera/engine/EffectController;
 
     invoke-static {p3}, Lcom/sec/android/app/camera/engine/EffectController;->f(Lcom/sec/android/app/camera/engine/EffectController;)Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -107,14 +109,17 @@
 
     if-eqz p3, :cond_1
 
+    .line 4
     invoke-virtual {p2}, Ljava/nio/Buffer;->capacity()I
 
     move-result p1
 
     new-array p1, p1, [B
 
+    .line 5
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
+    .line 6
     iget-object p2, p0, Lcom/sec/android/app/camera/engine/EffectController$1;->this$0:Lcom/sec/android/app/camera/engine/EffectController;
 
     invoke-static {p2}, Lcom/sec/android/app/camera/engine/EffectController;->c(Lcom/sec/android/app/camera/engine/EffectController;)Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -139,6 +144,7 @@
 
     move-result-object p3
 
+    .line 7
     invoke-interface {p3}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getPreviewManager()Lcom/sec/android/app/camera/interfaces/PreviewManager;
 
     move-result-object p3
@@ -151,10 +157,12 @@
 
     move-result p3
 
+    .line 8
     invoke-static {p1, p2, p3}, Lcom/sec/android/app/camera/util/ImageUtils;->convertYuvToRGB([BII)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
+    .line 9
     iget-object p2, p0, Lcom/sec/android/app/camera/engine/EffectController$1;->this$0:Lcom/sec/android/app/camera/engine/EffectController;
 
     invoke-static {p2}, Lcom/sec/android/app/camera/engine/EffectController;->d(Lcom/sec/android/app/camera/engine/EffectController;)Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -181,8 +189,10 @@
 
     move-result-object p2
 
+    .line 10
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 11
     iget-object p1, p0, Lcom/sec/android/app/camera/engine/EffectController$1;->this$0:Lcom/sec/android/app/camera/engine/EffectController;
 
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/EffectController;->f(Lcom/sec/android/app/camera/engine/EffectController;)Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -203,6 +213,7 @@
 
     invoke-interface {p1, p2}, Lcom/sec/android/app/camera/interfaces/PreviewAnimationLayerManager;->onPreviewSnapShotTaken(Landroid/graphics/Bitmap;)V
 
+    .line 12
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/EffectController$1;->this$0:Lcom/sec/android/app/camera/engine/EffectController;
 
     invoke-static {p0}, Lcom/sec/android/app/camera/engine/EffectController;->f(Lcom/sec/android/app/camera/engine/EffectController;)Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -222,6 +233,7 @@
 
     if-ne p1, p3, :cond_2
 
+    .line 13
     iget-object p1, p0, Lcom/sec/android/app/camera/engine/EffectController$1;->this$0:Lcom/sec/android/app/camera/engine/EffectController;
 
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/EffectController;->f(Lcom/sec/android/app/camera/engine/EffectController;)Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -260,6 +272,7 @@
 
     move-result-object p1
 
+    .line 14
     iget-object p3, p0, Lcom/sec/android/app/camera/engine/EffectController$1;->this$0:Lcom/sec/android/app/camera/engine/EffectController;
 
     invoke-static {p3}, Lcom/sec/android/app/camera/engine/EffectController;->f(Lcom/sec/android/app/camera/engine/EffectController;)Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -290,10 +303,12 @@
 
     invoke-virtual {p3, p2, v1, p1}, Lcom/sec/android/app/camera/engine/ThumbnailProcessor;->process(Ljava/nio/ByteBuffer;Lcom/samsung/android/camera/core2/callback/ThumbnailCallback$DataInfo;I)V
 
+    .line 15
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
+    .line 16
     invoke-virtual {p2}, Ljava/nio/Buffer;->capacity()I
 
     move-result p1
@@ -302,14 +317,18 @@
 
     move-result-object p1
 
+    .line 17
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
+    .line 18
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
+    .line 19
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p2
 
+    .line 20
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -332,6 +351,7 @@
 
     invoke-static {v0, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 21
     iget-object p2, p0, Lcom/sec/android/app/camera/engine/EffectController$1;->this$0:Lcom/sec/android/app/camera/engine/EffectController;
 
     invoke-static {p2}, Lcom/sec/android/app/camera/engine/EffectController;->f(Lcom/sec/android/app/camera/engine/EffectController;)Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -363,6 +383,7 @@
 
     return-void
 
+    .line 22
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -388,6 +409,7 @@
 
     invoke-static {p4, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 23
     iget-object p1, p0, Lcom/sec/android/app/camera/engine/EffectController$1;->this$0:Lcom/sec/android/app/camera/engine/EffectController;
 
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/EffectController;->f(Lcom/sec/android/app/camera/engine/EffectController;)Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -426,6 +448,7 @@
 
     move-result-object p1
 
+    .line 24
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/EffectController$1;->this$0:Lcom/sec/android/app/camera/engine/EffectController;
 
     invoke-static {v0}, Lcom/sec/android/app/camera/engine/EffectController;->f(Lcom/sec/android/app/camera/engine/EffectController;)Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -456,10 +479,12 @@
 
     invoke-virtual {v0, p3, v1, p1}, Lcom/sec/android/app/camera/engine/ThumbnailProcessor;->process(Ljava/nio/ByteBuffer;Lcom/samsung/android/camera/core2/callback/ThumbnailCallback$DataInfo;I)V
 
+    .line 25
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
+    .line 26
     invoke-virtual {p2}, Ljava/nio/Buffer;->capacity()I
 
     move-result p1
@@ -468,10 +493,13 @@
 
     move-result-object p1
 
+    .line 27
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
+    .line 28
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
+    .line 29
     invoke-virtual {p3}, Ljava/nio/Buffer;->capacity()I
 
     move-result p2
@@ -480,14 +508,18 @@
 
     move-result-object p2
 
+    .line 30
     invoke-virtual {p3}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
+    .line 31
     invoke-virtual {p2, p3}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
+    .line 32
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
+    .line 33
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -510,6 +542,7 @@
 
     invoke-static {p4, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 34
     iget-object p3, p0, Lcom/sec/android/app/camera/engine/EffectController$1;->this$0:Lcom/sec/android/app/camera/engine/EffectController;
 
     invoke-static {p3}, Lcom/sec/android/app/camera/engine/EffectController;->f(Lcom/sec/android/app/camera/engine/EffectController;)Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -534,5 +567,6 @@
 .method public onPictureTaken(I[BI)V
     .locals 0
 
+    .line 1
     return-void
 .end method

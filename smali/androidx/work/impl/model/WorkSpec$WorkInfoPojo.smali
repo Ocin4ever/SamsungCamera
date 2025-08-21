@@ -133,60 +133,78 @@
 
     invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object v1, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->id:Ljava/lang/String;
 
+    .line 3
     iput-object v2, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->state:Landroidx/work/WorkInfo$State;
 
+    .line 4
     iput-object v3, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->output:Landroidx/work/Data;
 
     move-wide v1, p4
 
+    .line 5
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->initialDelay:J
 
     move-wide v1, p6
 
+    .line 6
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->intervalDuration:J
 
     move-wide/from16 v1, p8
 
+    .line 7
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->flexDuration:J
 
+    .line 8
     iput-object v4, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->constraints:Landroidx/work/Constraints;
 
     move/from16 v1, p11
 
+    .line 9
     iput v1, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->runAttemptCount:I
 
+    .line 10
     iput-object v5, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->backoffPolicy:Landroidx/work/BackoffPolicy;
 
     move-wide/from16 v1, p13
 
+    .line 11
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->backoffDelayDuration:J
 
     move-wide/from16 v1, p15
 
+    .line 12
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->lastEnqueueTime:J
 
     move/from16 v1, p17
 
+    .line 13
     iput v1, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->periodCount:I
 
     move/from16 v1, p18
 
+    .line 14
     iput v1, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->generation:I
 
     move-wide/from16 v1, p19
 
+    .line 15
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->nextScheduleTimeOverride:J
 
     move/from16 v1, p21
 
+    .line 16
     iput v1, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->stopReason:I
 
+    .line 17
     iput-object v6, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->tags:Ljava/util/List;
 
+    .line 18
     iput-object v7, v0, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;->progress:Ljava/util/List;
 
     return-void
@@ -239,6 +257,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 19
     sget-object v1, Landroidx/work/BackoffPolicy;->EXPONENTIAL:Landroidx/work/BackoffPolicy;
 
     move-object/from16 v16, v1
@@ -311,6 +330,7 @@
 
     move-object/from16 v27, p23
 
+    .line 20
     invoke-direct/range {v4 .. v27}, Landroidx/work/impl/model/WorkSpec$WorkInfoPojo;-><init>(Ljava/lang/String;Landroidx/work/WorkInfo$State;Landroidx/work/Data;JJJLandroidx/work/Constraints;ILandroidx/work/BackoffPolicy;JJIIJILjava/util/List;Ljava/util/List;)V
 
     return-void

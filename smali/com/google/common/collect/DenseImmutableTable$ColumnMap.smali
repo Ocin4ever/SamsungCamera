@@ -31,8 +31,10 @@
 .method private constructor <init>(Lcom/google/common/collect/DenseImmutableTable;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/DenseImmutableTable$ColumnMap;->this$0:Lcom/google/common/collect/DenseImmutableTable;
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/collect/DenseImmutableTable;->access$500(Lcom/google/common/collect/DenseImmutableTable;)[I
 
     move-result-object p1
@@ -47,6 +49,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/collect/DenseImmutableTable;Lcom/google/common/collect/DenseImmutableTable$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/DenseImmutableTable$ColumnMap;-><init>(Lcom/google/common/collect/DenseImmutableTable;)V
 
     return-void
@@ -64,6 +67,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/DenseImmutableTable$Column;
 
     iget-object p0, p0, Lcom/google/common/collect/DenseImmutableTable$ColumnMap;->this$0:Lcom/google/common/collect/DenseImmutableTable;
@@ -76,6 +80,7 @@
 .method public bridge synthetic getValue(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/DenseImmutableTable$ColumnMap;->getValue(I)Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0

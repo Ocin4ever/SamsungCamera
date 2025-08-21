@@ -54,6 +54,7 @@
 
     move-object v0, p0
 
+    .line 1
     invoke-direct/range {v0 .. v8}, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$CameraInfo;-><init>(IIIIIIII)V
 
     return-void
@@ -62,22 +63,31 @@
 .method public constructor <init>(IIIIIIII)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput p1, p0, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$CameraInfo;->a:I
 
+    .line 4
     iput p2, p0, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$CameraInfo;->b:I
 
+    .line 5
     iput p3, p0, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$CameraInfo;->c:I
 
+    .line 6
     iput p4, p0, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$CameraInfo;->d:I
 
+    .line 7
     iput p5, p0, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$CameraInfo;->e:I
 
+    .line 8
     iput p6, p0, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$CameraInfo;->f:I
 
+    .line 9
     iput p7, p0, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$CameraInfo;->g:I
 
+    .line 10
     iput p8, p0, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$CameraInfo;->h:I
 
     return-void

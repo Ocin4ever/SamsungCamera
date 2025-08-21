@@ -31,18 +31,23 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/core/widgets/HelperWidget;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Landroidx/constraintlayout/core/widgets/Barrier;->mBarrierType:I
 
     const/4 v1, 0x1
 
+    .line 3
     iput-boolean v1, p0, Landroidx/constraintlayout/core/widgets/Barrier;->mAllowsGoneWidget:Z
 
+    .line 4
     iput v0, p0, Landroidx/constraintlayout/core/widgets/Barrier;->mMargin:I
 
+    .line 5
     iput-boolean v0, p0, Landroidx/constraintlayout/core/widgets/Barrier;->resolved:Z
 
     return-void
@@ -51,20 +56,26 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
+    .line 6
     invoke-direct {p0}, Landroidx/constraintlayout/core/widgets/HelperWidget;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 7
     iput v0, p0, Landroidx/constraintlayout/core/widgets/Barrier;->mBarrierType:I
 
     const/4 v1, 0x1
 
+    .line 8
     iput-boolean v1, p0, Landroidx/constraintlayout/core/widgets/Barrier;->mAllowsGoneWidget:Z
 
+    .line 9
     iput v0, p0, Landroidx/constraintlayout/core/widgets/Barrier;->mMargin:I
 
+    .line 10
     iput-boolean v0, p0, Landroidx/constraintlayout/core/widgets/Barrier;->resolved:Z
 
+    .line 11
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setDebugName(Ljava/lang/String;)V
 
     return-void

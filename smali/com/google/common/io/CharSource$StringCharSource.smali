@@ -28,12 +28,15 @@
 .method public copyTo(Lcom/google/common/io/CharSink;)J
     .locals 2
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-static {}, Lcom/google/common/io/Closer;->create()Lcom/google/common/io/Closer;
 
     move-result-object v0
 
+    .line 5
     :try_start_0
     invoke-virtual {p1}, Lcom/google/common/io/CharSink;->openStream()Ljava/io/Writer;
 
@@ -45,12 +48,14 @@
 
     check-cast p1, Ljava/io/Writer;
 
+    .line 6
     iget-object v1, p0, Lcom/google/common/io/CharSource$CharSequenceCharSource;->seq:Ljava/lang/CharSequence;
 
     check-cast v1, Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 7
     iget-object p0, p0, Lcom/google/common/io/CharSource$CharSequenceCharSource;->seq:Ljava/lang/CharSequence;
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
@@ -61,6 +66,7 @@
 
     int-to-long p0, p0
 
+    .line 8
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
     return-wide p0
@@ -68,6 +74,7 @@
     :catchall_0
     move-exception p0
 
+    .line 9
     :try_start_1
     invoke-virtual {v0, p0}, Lcom/google/common/io/Closer;->rethrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
@@ -80,18 +87,22 @@
     :catchall_1
     move-exception p0
 
+    .line 10
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
+    .line 11
     throw p0
 .end method
 
 .method public copyTo(Ljava/lang/Appendable;)J
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/CharSource$CharSequenceCharSource;->seq:Ljava/lang/CharSequence;
 
     invoke-interface {p1, v0}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/io/CharSource$CharSequenceCharSource;->seq:Ljava/lang/CharSequence;
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I

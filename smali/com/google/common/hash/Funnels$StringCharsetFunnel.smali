@@ -85,6 +85,7 @@
 .method public funnel(Ljava/lang/CharSequence;Lcom/google/common/hash/PrimitiveSink;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/hash/Funnels$StringCharsetFunnel;->charset:Ljava/nio/charset/Charset;
 
     invoke-interface {p2, p1, p0}, Lcom/google/common/hash/PrimitiveSink;->putString(Ljava/lang/CharSequence;Ljava/nio/charset/Charset;)Lcom/google/common/hash/PrimitiveSink;
@@ -95,6 +96,7 @@
 .method public bridge synthetic funnel(Ljava/lang/Object;Lcom/google/common/hash/PrimitiveSink;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/CharSequence;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/hash/Funnels$StringCharsetFunnel;->funnel(Ljava/lang/CharSequence;Lcom/google/common/hash/PrimitiveSink;)V

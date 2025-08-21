@@ -47,6 +47,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Landroid/net/TrafficStats;->incrementOperationCount(I)V
 
     return-void
@@ -57,6 +58,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     invoke-static {p0, p1}, Landroid/net/TrafficStats;->incrementOperationCount(II)V
 
     return-void

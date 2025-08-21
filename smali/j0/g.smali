@@ -18,6 +18,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;ILj0/d;Lh0/e$a;Lh0/e$b;)V
     .locals 0
 
+    .line 1
     invoke-direct/range {p0 .. p6}, Lj0/g;-><init>(Landroid/content/Context;Landroid/os/Looper;ILj0/d;Li0/d;Li0/j;)V
 
     return-void
@@ -26,14 +27,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;ILj0/d;Li0/d;Li0/j;)V
     .locals 9
 
+    .line 2
     invoke-static {p1}, Lj0/h;->b(Landroid/content/Context;)Lj0/h;
 
     move-result-object v3
 
+    .line 3
     invoke-static {}, Lg0/d;->k()Lg0/d;
 
     move-result-object v4
 
+    .line 4
     invoke-static {p5}, Lj0/n;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p5
@@ -42,6 +46,7 @@
 
     check-cast v7, Li0/d;
 
+    .line 5
     invoke-static {p6}, Lj0/n;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p5
@@ -60,6 +65,7 @@
 
     move-object v6, p4
 
+    .line 6
     invoke-direct/range {v0 .. v8}, Lj0/g;-><init>(Landroid/content/Context;Landroid/os/Looper;Lj0/h;Lg0/d;ILj0/d;Li0/d;Li0/j;)V
 
     return-void
@@ -82,6 +88,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     new-instance v3, Lj0/b0;
 
@@ -96,6 +103,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_1
     new-instance v0, Lj0/c0;
 
@@ -103,6 +111,7 @@
 
     move-object v7, v0
 
+    .line 9
     :goto_1
     invoke-virtual/range {p6 .. p6}, Lj0/d;->h()Ljava/lang/String;
 
@@ -120,18 +129,21 @@
 
     move v5, p5
 
+    .line 10
     invoke-direct/range {v0 .. v8}, Lj0/c;-><init>(Landroid/content/Context;Landroid/os/Looper;Lj0/h;Lg0/e;ILj0/c$a;Lj0/c$b;Ljava/lang/String;)V
 
     move-object/from16 v0, p6
 
     iput-object v0, v9, Lj0/g;->F:Lj0/d;
 
+    .line 11
     invoke-virtual/range {p6 .. p6}, Lj0/d;->a()Landroid/accounts/Account;
 
     move-result-object v1
 
     iput-object v1, v9, Lj0/g;->H:Landroid/accounts/Account;
 
+    .line 12
     invoke-virtual/range {p6 .. p6}, Lj0/d;->c()Ljava/util/Set;
 
     move-result-object v0

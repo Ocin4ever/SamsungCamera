@@ -1108,6 +1108,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget p0, p1, Landroid/graphics/PointF;->x:F
 
     iget v0, p2, Landroid/graphics/Point;->x:I
@@ -1140,6 +1141,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget p0, p1, Landroid/graphics/Point;->x:I
 
     iget v0, p2, Landroid/graphics/Point;->x:I

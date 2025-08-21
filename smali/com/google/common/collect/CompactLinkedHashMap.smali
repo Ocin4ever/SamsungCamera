@@ -40,6 +40,7 @@
 
     const/4 v0, 0x3
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/collect/CompactLinkedHashMap;-><init>(I)V
 
     return-void
@@ -50,6 +51,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, v0}, Lcom/google/common/collect/CompactLinkedHashMap;-><init>(IZ)V
 
     return-void
@@ -58,8 +60,10 @@
 .method public constructor <init>(IZ)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/common/collect/CompactHashMap;-><init>(I)V
 
+    .line 4
     iput-boolean p2, p0, Lcom/google/common/collect/CompactLinkedHashMap;->accessOrder:Z
 
     return-void

@@ -37,6 +37,7 @@
 .method public get(Landroidx/appcompat/widget/SwitchCompat;)Ljava/lang/Float;
     .locals 0
 
+    .line 2
     iget p0, p1, Landroidx/appcompat/widget/SwitchCompat;->mThumbPosition:F
 
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -49,6 +50,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/appcompat/widget/SwitchCompat;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/SwitchCompat$1;->get(Landroidx/appcompat/widget/SwitchCompat;)Ljava/lang/Float;
@@ -61,6 +63,7 @@
 .method public set(Landroidx/appcompat/widget/SwitchCompat;Ljava/lang/Float;)V
     .locals 0
 
+    .line 2
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result p0
@@ -73,6 +76,7 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/appcompat/widget/SwitchCompat;
 
     check-cast p2, Ljava/lang/Float;

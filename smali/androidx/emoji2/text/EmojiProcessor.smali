@@ -441,6 +441,7 @@
 .method public getEmojiMatch(Ljava/lang/CharSequence;)I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/emoji2/text/EmojiProcessor;->mMetadataRepo:Landroidx/emoji2/text/MetadataRepo;
 
     invoke-virtual {v0}, Landroidx/emoji2/text/MetadataRepo;->getMetadataVersion()I
@@ -457,6 +458,7 @@
 .method public getEmojiMatch(Ljava/lang/CharSequence;I)I
     .locals 10
 
+    .line 2
     new-instance v0, Landroidx/emoji2/text/EmojiProcessor$ProcessorSm;
 
     iget-object v1, p0, Landroidx/emoji2/text/EmojiProcessor;->mMetadataRepo:Landroidx/emoji2/text/MetadataRepo;
@@ -471,6 +473,7 @@
 
     invoke-direct {v0, v1, v2, p0}, Landroidx/emoji2/text/EmojiProcessor$ProcessorSm;-><init>(Landroidx/emoji2/text/MetadataRepo$Node;Z[I)V
 
+    .line 3
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result p0
@@ -491,14 +494,17 @@
 
     if-ge v2, p0, :cond_5
 
+    .line 4
     invoke-static {p1, v2}, Ljava/lang/Character;->codePointAt(Ljava/lang/CharSequence;I)I
 
     move-result v7
 
+    .line 5
     invoke-virtual {v0, v7}, Landroidx/emoji2/text/EmojiProcessor$ProcessorSm;->check(I)I
 
     move-result v8
 
+    .line 6
     invoke-virtual {v0}, Landroidx/emoji2/text/EmojiProcessor$ProcessorSm;->getCurrentMetadata()Landroidx/emoji2/text/EmojiMetadata;
 
     move-result-object v9
@@ -513,11 +519,13 @@
 
     goto :goto_1
 
+    .line 7
     :cond_1
     invoke-virtual {v0}, Landroidx/emoji2/text/EmojiProcessor$ProcessorSm;->getFlushMetadata()Landroidx/emoji2/text/EmojiMetadata;
 
     move-result-object v9
 
+    .line 8
     invoke-virtual {v9}, Landroidx/emoji2/text/EmojiMetadata;->getCompatAdded()S
 
     move-result v5
@@ -528,6 +536,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_2
     invoke-static {v7}, Ljava/lang/Character;->charCount(I)I
 
@@ -537,6 +546,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_3
     invoke-static {v7}, Ljava/lang/Character;->charCount(I)I
 
@@ -550,6 +560,7 @@
     :goto_1
     if-eqz v9, :cond_0
 
+    .line 11
     invoke-virtual {v9}, Landroidx/emoji2/text/EmojiMetadata;->getCompatAdded()S
 
     move-result v5
@@ -565,6 +576,7 @@
 
     return v5
 
+    .line 12
     :cond_6
     invoke-virtual {v0}, Landroidx/emoji2/text/EmojiProcessor$ProcessorSm;->isInFlushableState()Z
 
@@ -572,10 +584,12 @@
 
     if-eqz p0, :cond_7
 
+    .line 13
     invoke-virtual {v0}, Landroidx/emoji2/text/EmojiProcessor$ProcessorSm;->getCurrentMetadata()Landroidx/emoji2/text/EmojiMetadata;
 
     move-result-object p0
 
+    .line 14
     invoke-virtual {p0}, Landroidx/emoji2/text/EmojiMetadata;->getCompatAdded()S
 
     move-result p0

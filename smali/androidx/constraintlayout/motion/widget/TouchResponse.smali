@@ -309,94 +309,126 @@
 .method public constructor <init>(Landroid/content/Context;Landroidx/constraintlayout/motion/widget/MotionLayout;Lorg/xmlpull/v1/XmlPullParser;)V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchAnchorSide:I
 
+    .line 3
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchSide:I
 
+    .line 4
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mOnTouchUp:I
 
     const/4 v1, -0x1
 
+    .line 5
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchAnchorId:I
 
+    .line 6
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchRegionId:I
 
+    .line 7
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mLimitBoundsTo:I
 
     const/high16 v2, 0x3f000000    # 0.5f
 
+    .line 8
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchAnchorY:F
 
+    .line 9
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchAnchorX:F
 
+    .line 10
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mRotateCenterX:F
 
+    .line 11
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mRotateCenterY:F
 
+    .line 12
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mRotationCenterId:I
 
+    .line 13
     iput-boolean v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mIsRotateMode:Z
 
     const/4 v1, 0x0
 
+    .line 14
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchDirectionX:F
 
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 15
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchDirectionY:F
 
+    .line 16
     iput-boolean v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mDragStarted:Z
 
     const/4 v2, 0x2
 
     new-array v3, v2, [F
 
+    .line 17
     iput-object v3, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mAnchorDpDt:[F
 
     new-array v2, v2, [I
 
+    .line 18
     iput-object v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTempLoc:[I
 
     const/high16 v2, 0x40800000    # 4.0f
 
+    .line 19
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mMaxVelocity:F
 
     const v2, 0x3f99999a    # 1.2f
 
+    .line 20
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mMaxAcceleration:F
 
     const/4 v2, 0x1
 
+    .line 21
     iput-boolean v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mMoveWhenScrollAtTop:Z
 
+    .line 22
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mDragScale:F
 
+    .line 23
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mFlags:I
 
     const/high16 v2, 0x41200000    # 10.0f
 
+    .line 24
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mDragThreshold:F
 
+    .line 25
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringDamping:F
 
+    .line 26
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringMass:F
 
     const/high16 v1, 0x7fc00000    # Float.NaN
 
+    .line 27
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringStiffness:F
 
+    .line 28
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringStopThreshold:F
 
+    .line 29
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringBoundary:I
 
+    .line 30
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mAutoCompleteMode:I
 
+    .line 31
     iput-object p2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
+    .line 32
     invoke-static {p3}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object p2
@@ -409,100 +441,133 @@
 .method public constructor <init>(Landroidx/constraintlayout/motion/widget/MotionLayout;Landroidx/constraintlayout/motion/widget/OnSwipe;)V
     .locals 5
 
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 34
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchAnchorSide:I
 
+    .line 35
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchSide:I
 
+    .line 36
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mOnTouchUp:I
 
     const/4 v1, -0x1
 
+    .line 37
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchAnchorId:I
 
+    .line 38
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchRegionId:I
 
+    .line 39
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mLimitBoundsTo:I
 
     const/high16 v2, 0x3f000000    # 0.5f
 
+    .line 40
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchAnchorY:F
 
+    .line 41
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchAnchorX:F
 
+    .line 42
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mRotateCenterX:F
 
+    .line 43
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mRotateCenterY:F
 
+    .line 44
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mRotationCenterId:I
 
+    .line 45
     iput-boolean v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mIsRotateMode:Z
 
     const/4 v2, 0x0
 
+    .line 46
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchDirectionX:F
 
     const/high16 v2, 0x3f800000    # 1.0f
 
+    .line 47
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchDirectionY:F
 
+    .line 48
     iput-boolean v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mDragStarted:Z
 
     const/4 v3, 0x2
 
     new-array v4, v3, [F
 
+    .line 49
     iput-object v4, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mAnchorDpDt:[F
 
     new-array v3, v3, [I
 
+    .line 50
     iput-object v3, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTempLoc:[I
 
     const/high16 v3, 0x40800000    # 4.0f
 
+    .line 51
     iput v3, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mMaxVelocity:F
 
     const v3, 0x3f99999a    # 1.2f
 
+    .line 52
     iput v3, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mMaxAcceleration:F
 
     const/4 v3, 0x1
 
+    .line 53
     iput-boolean v3, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mMoveWhenScrollAtTop:Z
 
+    .line 54
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mDragScale:F
 
+    .line 55
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mFlags:I
 
     const/high16 v4, 0x41200000    # 10.0f
 
+    .line 56
     iput v4, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mDragThreshold:F
 
+    .line 57
     iput v4, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringDamping:F
 
+    .line 58
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringMass:F
 
     const/high16 v2, 0x7fc00000    # Float.NaN
 
+    .line 59
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringStiffness:F
 
+    .line 60
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringStopThreshold:F
 
+    .line 61
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringBoundary:I
 
+    .line 62
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mAutoCompleteMode:I
 
+    .line 63
     iput-object p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
+    .line 64
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getTouchAnchorId()I
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchAnchorId:I
 
+    .line 65
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getTouchAnchorSide()I
 
     move-result p1
@@ -511,6 +576,7 @@
 
     if-eq p1, v1, :cond_0
 
+    .line 66
     sget-object v1, Landroidx/constraintlayout/motion/widget/TouchResponse;->TOUCH_SIDES:[[F
 
     aget-object p1, v1, p1
@@ -519,10 +585,12 @@
 
     iput v1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchAnchorX:F
 
+    .line 67
     aget p1, p1, v3
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchAnchorY:F
 
+    .line 68
     :cond_0
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getDragDirection()I
 
@@ -530,31 +598,37 @@
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchSide:I
 
+    .line 69
     sget-object v1, Landroidx/constraintlayout/motion/widget/TouchResponse;->TOUCH_DIRECTION:[[F
 
     array-length v4, v1
 
     if-ge p1, v4, :cond_1
 
+    .line 70
     aget-object p1, v1, p1
 
     aget v0, p1, v0
 
     iput v0, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchDirectionX:F
 
+    .line 71
     aget p1, p1, v3
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchDirectionY:F
 
     goto :goto_0
 
+    .line 72
     :cond_1
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchDirectionY:F
 
     iput v2, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchDirectionX:F
 
+    .line 73
     iput-boolean v3, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mIsRotateMode:Z
 
+    .line 74
     :goto_0
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getMaxVelocity()F
 
@@ -562,90 +636,105 @@
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mMaxVelocity:F
 
+    .line 75
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getMaxAcceleration()F
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mMaxAcceleration:F
 
+    .line 76
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getMoveWhenScrollAtTop()Z
 
     move-result p1
 
     iput-boolean p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mMoveWhenScrollAtTop:Z
 
+    .line 77
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getDragScale()F
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mDragScale:F
 
+    .line 78
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getDragThreshold()F
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mDragThreshold:F
 
+    .line 79
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getTouchRegionId()I
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mTouchRegionId:I
 
+    .line 80
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getOnTouchUp()I
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mOnTouchUp:I
 
+    .line 81
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getNestedScrollFlags()I
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mFlags:I
 
+    .line 82
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getLimitBoundsTo()I
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mLimitBoundsTo:I
 
+    .line 83
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getRotationCenterId()I
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mRotationCenterId:I
 
+    .line 84
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getSpringBoundary()I
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringBoundary:I
 
+    .line 85
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getSpringDamping()F
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringDamping:F
 
+    .line 86
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getSpringMass()F
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringMass:F
 
+    .line 87
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getSpringStiffness()F
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringStiffness:F
 
+    .line 88
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getSpringStopThreshold()F
 
     move-result p1
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/TouchResponse;->mSpringStopThreshold:F
 
+    .line 89
     invoke-virtual {p2}, Landroidx/constraintlayout/motion/widget/OnSwipe;->getAutoCompleteMode()I
 
     move-result p1

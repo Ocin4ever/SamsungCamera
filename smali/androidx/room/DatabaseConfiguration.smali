@@ -176,64 +176,84 @@
 
     invoke-static {v9, v10}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object v1, v0, Landroidx/room/DatabaseConfiguration;->context:Landroid/content/Context;
 
     move-object v1, p2
 
+    .line 3
     iput-object v1, v0, Landroidx/room/DatabaseConfiguration;->name:Ljava/lang/String;
 
+    .line 4
     iput-object v2, v0, Landroidx/room/DatabaseConfiguration;->sqliteOpenHelperFactory:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;
 
+    .line 5
     iput-object v3, v0, Landroidx/room/DatabaseConfiguration;->migrationContainer:Landroidx/room/RoomDatabase$MigrationContainer;
 
     move-object/from16 v1, p5
 
+    .line 6
     iput-object v1, v0, Landroidx/room/DatabaseConfiguration;->callbacks:Ljava/util/List;
 
     move/from16 v1, p6
 
+    .line 7
     iput-boolean v1, v0, Landroidx/room/DatabaseConfiguration;->allowMainThreadQueries:Z
 
+    .line 8
     iput-object v4, v0, Landroidx/room/DatabaseConfiguration;->journalMode:Landroidx/room/RoomDatabase$JournalMode;
 
+    .line 9
     iput-object v5, v0, Landroidx/room/DatabaseConfiguration;->queryExecutor:Ljava/util/concurrent/Executor;
 
+    .line 10
     iput-object v6, v0, Landroidx/room/DatabaseConfiguration;->transactionExecutor:Ljava/util/concurrent/Executor;
 
+    .line 11
     iput-object v7, v0, Landroidx/room/DatabaseConfiguration;->multiInstanceInvalidationServiceIntent:Landroid/content/Intent;
 
     move/from16 v1, p11
 
+    .line 12
     iput-boolean v1, v0, Landroidx/room/DatabaseConfiguration;->requireMigration:Z
 
     move/from16 v1, p12
 
+    .line 13
     iput-boolean v1, v0, Landroidx/room/DatabaseConfiguration;->allowDestructiveMigrationOnDowngrade:Z
 
     move-object/from16 v1, p13
 
+    .line 14
     iput-object v1, v0, Landroidx/room/DatabaseConfiguration;->migrationNotRequiredFrom:Ljava/util/Set;
 
     move-object/from16 v1, p14
 
+    .line 15
     iput-object v1, v0, Landroidx/room/DatabaseConfiguration;->copyFromAssetPath:Ljava/lang/String;
 
     move-object/from16 v1, p15
 
+    .line 16
     iput-object v1, v0, Landroidx/room/DatabaseConfiguration;->copyFromFile:Ljava/io/File;
 
     move-object/from16 v1, p16
 
+    .line 17
     iput-object v1, v0, Landroidx/room/DatabaseConfiguration;->copyFromInputStream:Ljava/util/concurrent/Callable;
 
     move-object/from16 v1, p17
 
+    .line 18
     iput-object v1, v0, Landroidx/room/DatabaseConfiguration;->prepackagedDatabaseCallback:Landroidx/room/RoomDatabase$PrepackagedDatabaseCallback;
 
+    .line 19
     iput-object v8, v0, Landroidx/room/DatabaseConfiguration;->typeConverters:Ljava/util/List;
 
+    .line 20
     iput-object v9, v0, Landroidx/room/DatabaseConfiguration;->autoMigrationSpecs:Ljava/util/List;
 
     if-eqz v7, :cond_0
@@ -245,6 +265,7 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 21
     :goto_0
     iput-boolean v1, v0, Landroidx/room/DatabaseConfiguration;->multiInstanceInvalidation:Z
 
@@ -312,10 +333,13 @@
 
     if-eqz p10, :cond_0
 
+    .line 25
     new-instance v0, Landroid/content/Intent;
 
+    .line 26
     const-class v2, Landroidx/room/MultiInstanceInvalidationService;
 
+    .line 27
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     goto :goto_0
@@ -326,10 +350,12 @@
     :goto_0
     move-object v10, v0
 
+    .line 28
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v18
 
+    .line 29
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v19
@@ -368,6 +394,7 @@
 
     move-object/from16 v13, p13
 
+    .line 30
     invoke-direct/range {v0 .. v19}, Landroidx/room/DatabaseConfiguration;-><init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;Landroidx/room/RoomDatabase$MigrationContainer;Ljava/util/List;ZLandroidx/room/RoomDatabase$JournalMode;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroid/content/Intent;ZZLjava/util/Set;Ljava/lang/String;Ljava/io/File;Ljava/util/concurrent/Callable;Landroidx/room/RoomDatabase$PrepackagedDatabaseCallback;Ljava/util/List;Ljava/util/List;)V
 
     return-void
@@ -437,10 +464,13 @@
 
     if-eqz p10, :cond_0
 
+    .line 31
     new-instance v0, Landroid/content/Intent;
 
+    .line 32
     const-class v2, Landroidx/room/MultiInstanceInvalidationService;
 
+    .line 33
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     goto :goto_0
@@ -451,10 +481,12 @@
     :goto_0
     move-object v10, v0
 
+    .line 34
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v18
 
+    .line 35
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v19
@@ -493,6 +525,7 @@
 
     move-object/from16 v15, p15
 
+    .line 36
     invoke-direct/range {v0 .. v19}, Landroidx/room/DatabaseConfiguration;-><init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;Landroidx/room/RoomDatabase$MigrationContainer;Ljava/util/List;ZLandroidx/room/RoomDatabase$JournalMode;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroid/content/Intent;ZZLjava/util/Set;Ljava/lang/String;Ljava/io/File;Ljava/util/concurrent/Callable;Landroidx/room/RoomDatabase$PrepackagedDatabaseCallback;Ljava/util/List;Ljava/util/List;)V
 
     return-void
@@ -564,10 +597,13 @@
 
     if-eqz p10, :cond_0
 
+    .line 37
     new-instance v0, Landroid/content/Intent;
 
+    .line 38
     const-class v2, Landroidx/room/MultiInstanceInvalidationService;
 
+    .line 39
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     goto :goto_0
@@ -578,10 +614,12 @@
     :goto_0
     move-object v10, v0
 
+    .line 40
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v18
 
+    .line 41
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v19
@@ -620,6 +658,7 @@
 
     move-object/from16 v16, p16
 
+    .line 42
     invoke-direct/range {v0 .. v19}, Landroidx/room/DatabaseConfiguration;-><init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;Landroidx/room/RoomDatabase$MigrationContainer;Ljava/util/List;ZLandroidx/room/RoomDatabase$JournalMode;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroid/content/Intent;ZZLjava/util/Set;Ljava/lang/String;Ljava/io/File;Ljava/util/concurrent/Callable;Landroidx/room/RoomDatabase$PrepackagedDatabaseCallback;Ljava/util/List;Ljava/util/List;)V
 
     return-void
@@ -693,10 +732,13 @@
 
     if-eqz p10, :cond_0
 
+    .line 43
     new-instance v0, Landroid/content/Intent;
 
+    .line 44
     const-class v2, Landroidx/room/MultiInstanceInvalidationService;
 
+    .line 45
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     goto :goto_0
@@ -707,10 +749,12 @@
     :goto_0
     move-object v10, v0
 
+    .line 46
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v18
 
+    .line 47
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v19
@@ -749,6 +793,7 @@
 
     move-object/from16 v17, p17
 
+    .line 48
     invoke-direct/range {v0 .. v19}, Landroidx/room/DatabaseConfiguration;-><init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;Landroidx/room/RoomDatabase$MigrationContainer;Ljava/util/List;ZLandroidx/room/RoomDatabase$JournalMode;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroid/content/Intent;ZZLjava/util/Set;Ljava/lang/String;Ljava/io/File;Ljava/util/concurrent/Callable;Landroidx/room/RoomDatabase$PrepackagedDatabaseCallback;Ljava/util/List;Ljava/util/List;)V
 
     return-void
@@ -831,10 +876,13 @@
 
     if-eqz p10, :cond_0
 
+    .line 49
     new-instance v0, Landroid/content/Intent;
 
+    .line 50
     const-class v2, Landroidx/room/MultiInstanceInvalidationService;
 
+    .line 51
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     goto :goto_0
@@ -845,6 +893,7 @@
     :goto_0
     move-object v10, v0
 
+    .line 52
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v19
@@ -885,6 +934,7 @@
 
     move-object/from16 v18, p18
 
+    .line 53
     invoke-direct/range {v0 .. v19}, Landroidx/room/DatabaseConfiguration;-><init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;Landroidx/room/RoomDatabase$MigrationContainer;Ljava/util/List;ZLandroidx/room/RoomDatabase$JournalMode;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroid/content/Intent;ZZLjava/util/Set;Ljava/lang/String;Ljava/io/File;Ljava/util/concurrent/Callable;Landroidx/room/RoomDatabase$PrepackagedDatabaseCallback;Ljava/util/List;Ljava/util/List;)V
 
     return-void
@@ -977,10 +1027,13 @@
 
     if-eqz p10, :cond_0
 
+    .line 54
     new-instance v0, Landroid/content/Intent;
 
+    .line 55
     const-class v2, Landroidx/room/MultiInstanceInvalidationService;
 
+    .line 56
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     goto :goto_0
@@ -1029,6 +1082,7 @@
 
     move-object/from16 v19, p19
 
+    .line 57
     invoke-direct/range {v0 .. v19}, Landroidx/room/DatabaseConfiguration;-><init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;Landroidx/room/RoomDatabase$MigrationContainer;Ljava/util/List;ZLandroidx/room/RoomDatabase$JournalMode;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroid/content/Intent;ZZLjava/util/Set;Ljava/lang/String;Ljava/io/File;Ljava/util/concurrent/Callable;Landroidx/room/RoomDatabase$PrepackagedDatabaseCallback;Ljava/util/List;Ljava/util/List;)V
 
     return-void
@@ -1110,10 +1164,12 @@
 
     invoke-static {v12, v10}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 22
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v18
 
+    .line 23
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v19
@@ -1130,6 +1186,7 @@
 
     const/16 v17, 0x0
 
+    .line 24
     invoke-direct/range {v0 .. v19}, Landroidx/room/DatabaseConfiguration;-><init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;Landroidx/room/RoomDatabase$MigrationContainer;Ljava/util/List;ZLandroidx/room/RoomDatabase$JournalMode;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroid/content/Intent;ZZLjava/util/Set;Ljava/lang/String;Ljava/io/File;Ljava/util/concurrent/Callable;Landroidx/room/RoomDatabase$PrepackagedDatabaseCallback;Ljava/util/List;Ljava/util/List;)V
 
     return-void

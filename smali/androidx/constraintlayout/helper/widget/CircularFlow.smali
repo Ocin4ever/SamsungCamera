@@ -43,6 +43,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/widget/VirtualLayout;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -51,6 +52,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/widget/VirtualLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -59,6 +61,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/widget/VirtualLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -494,6 +497,7 @@
 .method public static removeElementFromArray([FI)[F
     .locals 5
 
+    .line 4
     array-length v0, p0
 
     add-int/lit8 v0, v0, -0x1
@@ -504,6 +508,7 @@
 
     move v2, v1
 
+    .line 5
     :goto_0
     array-length v3, p0
 
@@ -516,6 +521,7 @@
     :cond_0
     add-int/lit8 v3, v2, 0x1
 
+    .line 6
     aget v4, p0, v1
 
     aput v4, v0, v2
@@ -534,6 +540,7 @@
 .method public static removeElementFromArray([II)[I
     .locals 5
 
+    .line 1
     array-length v0, p0
 
     add-int/lit8 v0, v0, -0x1
@@ -544,6 +551,7 @@
 
     move v2, v1
 
+    .line 2
     :goto_0
     array-length v3, p0
 
@@ -556,6 +564,7 @@
     :cond_0
     add-int/lit8 v3, v2, 0x1
 
+    .line 3
     aget v4, p0, v1
 
     aput v4, v0, v2

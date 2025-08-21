@@ -97,6 +97,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/base/Functions$FunctionForMapNoDefault;
 
     invoke-direct {v0, p0}, Lcom/google/common/base/Functions$FunctionForMapNoDefault;-><init>(Ljava/util/Map;)V
@@ -124,6 +125,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/base/Functions$ForMapWithDefault;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/base/Functions$ForMapWithDefault;-><init>(Ljava/util/Map;Ljava/lang/Object;)V

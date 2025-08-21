@@ -278,6 +278,7 @@
 .method public addRequest(Lcom/sec/android/app/camera/engine/request/RequestId;)V
     .locals 3
 
+    .line 10
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -300,16 +301,19 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 11
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue;->mExecutor:Lcom/sec/android/app/camera/engine/request/RequestQueue$RequestThreadPool;
 
     if-nez v0, :cond_0
 
     const-string p0, "addRequest : Queue is not running. Return."
 
+    .line 12
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 13
     :cond_0
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
 
@@ -317,6 +321,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 14
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue;->mEngine:Lcom/sec/android/app/camera/interfaces/InternalEngine;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/InternalEngine;->getCameraContext()Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -335,12 +340,14 @@
 
     move-result-object v0
 
+    .line 15
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v2
 
     if-ne v2, v0, :cond_1
 
+    .line 16
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue;->mEngine:Lcom/sec/android/app/camera/interfaces/InternalEngine;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue;->mCameraHolder:Lcom/sec/android/app/camera/engine/request/CameraHolder;
@@ -358,10 +365,12 @@
     :cond_1
     const-string p0, "addRequest : Can\'t handle this request because it is NOT added on UiThread."
 
+    .line 17
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
+    .line 18
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue;->mExecutor:Lcom/sec/android/app/camera/engine/request/RequestQueue$RequestThreadPool;
 
@@ -384,6 +393,7 @@
 .method public addRequest(Lcom/sec/android/app/camera/engine/request/RequestId;Ljava/lang/Object;)V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -416,16 +426,19 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue;->mExecutor:Lcom/sec/android/app/camera/engine/request/RequestQueue$RequestThreadPool;
 
     if-nez v0, :cond_0
 
     const-string p0, "addRequest : Queue is not running. Return."
 
+    .line 3
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 4
     :cond_0
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
 
@@ -433,6 +446,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 5
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue;->mEngine:Lcom/sec/android/app/camera/interfaces/InternalEngine;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/InternalEngine;->getCameraContext()Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -451,12 +465,14 @@
 
     move-result-object v0
 
+    .line 6
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v2
 
     if-ne v2, v0, :cond_1
 
+    .line 7
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue;->mEngine:Lcom/sec/android/app/camera/interfaces/InternalEngine;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue;->mCameraHolder:Lcom/sec/android/app/camera/engine/request/CameraHolder;
@@ -474,10 +490,12 @@
     :cond_1
     const-string p0, "addRequest : Can\'t handle this request because it is NOT added on UiThread."
 
+    .line 8
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
+    .line 9
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/request/RequestQueue;->mExecutor:Lcom/sec/android/app/camera/engine/request/RequestQueue$RequestThreadPool;
 

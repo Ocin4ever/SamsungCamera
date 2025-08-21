@@ -65,6 +65,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-direct {p0, v0}, Landroidx/core/app/FrameMetricsAggregator;-><init>(I)V
 
     return-void
@@ -73,8 +74,10 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;
 
     invoke-direct {v0, p1}, Landroidx/core/app/FrameMetricsAggregator$FrameMetricsApi24Impl;-><init>(I)V

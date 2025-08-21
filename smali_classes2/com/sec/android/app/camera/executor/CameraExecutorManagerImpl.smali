@@ -213,12 +213,16 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraSettings;Lcom/sec/android/app/camera/interfaces/ShootingActionProvider;)V
     .locals 0
 
+    .line 28
     invoke-direct {p0, p1, p4}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;-><init>(Landroid/content/Context;Lcom/sec/android/app/camera/interfaces/CameraSettings;)V
 
+    .line 29
     iput-object p2, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
+    .line 30
     iput-object p3, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
 
+    .line 31
     iput-object p5, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mShootingActionProvider:Lcom/sec/android/app/camera/interfaces/ShootingActionProvider;
 
     return-void
@@ -227,26 +231,31 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/sec/android/app/camera/interfaces/CameraSettings;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mRatioCommandId:Ljava/util/HashMap;
 
+    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCamcorderWideResolutionCommandId:Ljava/util/HashMap;
 
+    .line 4
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCamcorderCinemaResolutionCommandId:Ljava/util/HashMap;
 
+    .line 5
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -255,28 +264,37 @@
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mExecutorCommandListener:Lcom/sec/android/app/camera/executor/CameraExecutorManager$ExecutorCommandListener;
 
+    .line 7
     new-instance v1, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl$ExecutorHandler;
 
     invoke-direct {v1, p0}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl$ExecutorHandler;-><init>(Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;)V
 
     iput-object v1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mMainHandler:Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl$ExecutorHandler;
 
+    .line 8
     iput-object v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCurrentRequestState:Lcom/sec/android/app/camera/executor/ActionStateSet$ActionState;
 
     const/4 v1, 0x0
 
+    .line 9
     iput-boolean v1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mIsLaunchedFromBixby:Z
 
+    .line 10
     iput-boolean v1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mIsSwitchedCameraForced:Z
 
+    .line 11
     iput-boolean v1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mIsWaitEmptyRequest:Z
 
+    .line 12
     iput-boolean v1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mIsWaitResolutionCompleted:Z
 
+    .line 13
     iput-boolean v1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mIsResolutionSizeChanged:Z
 
+    .line 14
     invoke-static {}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->values()[Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
     move-result-object v2
@@ -289,40 +307,53 @@
 
     const/4 v2, -0x1
 
+    .line 15
     iput v2, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCurrentSettingActivity:I
 
+    .line 16
     iput v1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCurrentShootingMode:I
 
+    .line 17
     sget v2, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->PARAM_SHOOTING_PHOTO:I
 
     iput v2, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCurrentShootingSelect:I
 
+    .line 18
     iput v1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mLastNlgErrorType:I
 
+    .line 19
     iput-object v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mBixbyCallbackManager:Lcom/sec/android/app/camera/executor/BixbyCallbackManager;
 
+    .line 20
     new-instance v0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl$1;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl$1;-><init>(Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mLocalBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 21
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mBixbyCmdParamMakerMap:Ljava/util/HashMap;
 
+    .line 22
     iput-object p1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mContext:Landroid/content/Context;
 
+    .line 23
     iput-object p2, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
+    .line 24
     invoke-direct {p0}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->initializeBixbyCmdParamMakerMap()V
 
+    .line 25
     invoke-direct {p0}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->initializeActionStateExecutorMap()V
 
+    .line 26
     invoke-direct {p0}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->initializeRatioCommandIdMap()V
 
+    .line 27
     invoke-direct {p0}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->initializeCamcorderResolutionCommandIdMap()V
 
     return-void
@@ -9234,6 +9265,7 @@
     :try_start_0
     const-string v0, "CameraExecutorManager"
 
+    .line 10
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -9252,8 +9284,10 @@
 
     const/4 v0, 0x0
 
+    .line 11
     iput v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mLastNlgErrorType:I
 
+    .line 12
     iget-object v1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCurrentRequestState:Lcom/sec/android/app/camera/executor/ActionStateSet$ActionState;
 
     if-eqz v1, :cond_0
@@ -9266,6 +9300,7 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 13
     invoke-static {}, Lcom/sec/android/app/camera/executor/ActionStateSet;->getFirstActionState()Lcom/sec/android/app/camera/executor/ActionStateSet$ActionState;
 
     move-result-object p1
@@ -9288,6 +9323,7 @@
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 14
     iget-object p1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mMainHandler:Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl$ExecutorHandler;
 
     const/4 v0, 0x1
@@ -9296,10 +9332,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 15
     monitor-exit p0
 
     return-void
 
+    .line 16
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->isLastState()Z
@@ -9312,9 +9350,11 @@
 
     goto :goto_0
 
+    .line 17
     :cond_1
     invoke-static {}, Lcom/sec/android/app/camera/executor/ActionStateSet;->completeState()V
 
+    .line 18
     iget-object p1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCurrentRequestState:Lcom/sec/android/app/camera/executor/ActionStateSet$ActionState;
 
     invoke-static {p1}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
@@ -9337,26 +9377,32 @@
 
     goto :goto_1
 
+    .line 19
     :cond_2
     :goto_0
     iput-boolean v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mIsSwitchedCameraForced:Z
 
+    .line 20
     iput-boolean v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mIsResolutionSizeChanged:Z
 
+    .line 21
     invoke-static {}, Lcom/sec/android/app/camera/executor/ActionStateSet;->clear()V
 
     const/4 v0, 0x0
 
+    .line 22
     invoke-static {p1, v0, v0}, Lcom/sec/android/app/camera/executor/ActionStateSet;->sendResponse(ZLjava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "CameraExecutorManager"
 
     const-string v0, "Complete bixby action"
 
+    .line 23
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 24
     :goto_1
     monitor-exit p0
 
@@ -9375,6 +9421,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 25
     invoke-virtual {p0}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->isLastState()Z
 
     move-result v0
@@ -9383,10 +9430,12 @@
 
     const/4 p1, 0x1
 
+    .line 26
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->sendResult(Z)V
 
     return-void
 
+    .line 27
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCurrentRequestState:Lcom/sec/android/app/camera/executor/ActionStateSet$ActionState;
 
@@ -9398,10 +9447,13 @@
 
     invoke-static {v0, p2, v1}, Lcom/sec/android/app/camera/executor/ActionStateSet;->sendResponseWithNLG(III)V
 
+    .line 28
     iput p2, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mLastNlgErrorType:I
 
+    .line 29
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->sendResult(Z)V
 
+    .line 30
     iget-object p1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     if-nez p1, :cond_2
@@ -9418,6 +9470,7 @@
 
     if-nez p2, :cond_2
 
+    .line 31
     :cond_1
     new-instance p1, Lcom/sec/android/app/camera/executor/ActionStateSet$ActionState;
 
@@ -9805,16 +9858,19 @@
 .method public sendResult()V
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mIsLaunchedFromBixby:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iput-boolean v1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mIsLaunchedFromBixby:Z
 
     const/16 v0, 0x64
 
+    .line 3
     invoke-static {v0}, Lcom/sec/android/app/camera/executor/RulePathState;->getStateName(I)Ljava/lang/String;
 
     move-result-object v0
@@ -9824,6 +9880,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 4
     :goto_0
     iget v2, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mLastNlgErrorType:I
 
@@ -9831,12 +9888,14 @@
 
     if-ne v2, v3, :cond_1
 
+    .line 5
     iput v1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mLastNlgErrorType:I
 
     const/4 v0, 0x2
 
     const-wide/16 v1, 0x1f4
 
+    .line 6
     invoke-direct {p0, v0, v1, v2}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->sendHandlerMessageForBixby(IJ)V
 
     goto :goto_1
@@ -9846,6 +9905,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 7
     iget-object v1, p0, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->mCurrentRequestState:Lcom/sec/android/app/camera/executor/ActionStateSet$ActionState;
 
     if-eqz v1, :cond_3
@@ -9864,6 +9924,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 8
     invoke-direct {p0, v3}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->sendResult(Z)V
 
     goto :goto_1
@@ -9871,6 +9932,7 @@
     :cond_2
     if-nez v2, :cond_3
 
+    .line 9
     invoke-direct {p0, v3, v1}, Lcom/sec/android/app/camera/executor/CameraExecutorManagerImpl;->sendResult(ZI)V
 
     :cond_3

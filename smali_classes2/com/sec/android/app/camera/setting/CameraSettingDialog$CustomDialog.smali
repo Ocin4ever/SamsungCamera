@@ -346,8 +346,10 @@
 .method public setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/sec/android/app/camera/setting/CameraSettingDialog$CustomDialog;->mNegativeButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
+    .line 2
     new-instance p2, Lcom/sec/android/app/camera/setting/n1;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/setting/n1;-><init>(Lcom/sec/android/app/camera/setting/CameraSettingDialog$CustomDialog;)V
@@ -362,8 +364,10 @@
 .method public setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 0
 
+    .line 3
     iput-object p2, p0, Lcom/sec/android/app/camera/setting/CameraSettingDialog$CustomDialog;->mNegativeButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
+    .line 4
     new-instance p2, Lcom/sec/android/app/camera/setting/l1;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/setting/l1;-><init>(Lcom/sec/android/app/camera/setting/CameraSettingDialog$CustomDialog;)V
@@ -378,8 +382,10 @@
 .method public setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/sec/android/app/camera/setting/CameraSettingDialog$CustomDialog;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
+    .line 2
     new-instance p2, Lcom/sec/android/app/camera/setting/o1;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/setting/o1;-><init>(Lcom/sec/android/app/camera/setting/CameraSettingDialog$CustomDialog;)V
@@ -394,8 +400,10 @@
 .method public setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 0
 
+    .line 3
     iput-object p2, p0, Lcom/sec/android/app/camera/setting/CameraSettingDialog$CustomDialog;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
+    .line 4
     new-instance p2, Lcom/sec/android/app/camera/setting/m1;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/setting/m1;-><init>(Lcom/sec/android/app/camera/setting/CameraSettingDialog$CustomDialog;)V

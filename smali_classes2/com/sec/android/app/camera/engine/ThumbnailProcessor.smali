@@ -358,6 +358,7 @@
 .method public process(Landroid/graphics/Bitmap;I)V
     .locals 2
 
+    .line 7
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/ThumbnailProcessor;->mExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
 
     if-nez v0, :cond_0
@@ -366,10 +367,12 @@
 
     const-string p1, "bitmap thumbnail cannot execute."
 
+    .line 8
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 9
     :cond_0
     new-instance v1, Lcom/sec/android/app/camera/engine/e7;
 
@@ -383,6 +386,7 @@
 .method public process(Ljava/nio/ByteBuffer;Lcom/samsung/android/camera/core2/callback/ThumbnailCallback$DataInfo;)V
     .locals 1
 
+    .line 6
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/callback/ThumbnailCallback$DataInfo;->d()Ljava/lang/Integer;
 
     move-result-object v0
@@ -399,6 +403,7 @@
 .method public process(Ljava/nio/ByteBuffer;Lcom/samsung/android/camera/core2/callback/ThumbnailCallback$DataInfo;I)V
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/engine/ThumbnailProcessor$1;->$SwitchMap$com$samsung$android$camera$core2$util$SemImageFormat:[I
 
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/callback/ThumbnailCallback$DataInfo;->c()Lcom/samsung/android/camera/core2/util/SemImageFormat;
@@ -427,6 +432,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -455,16 +461,19 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/engine/ThumbnailProcessor;->processFlexRgbaThumbnail(Ljava/nio/ByteBuffer;Lcom/samsung/android/camera/core2/callback/ThumbnailCallback$DataInfo;I)V
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/engine/ThumbnailProcessor;->processJpegThumbnail(Ljava/nio/ByteBuffer;Lcom/samsung/android/camera/core2/callback/ThumbnailCallback$DataInfo;I)V
 
     goto :goto_0
 
+    .line 5
     :cond_2
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/engine/ThumbnailProcessor;->processYuvThumbnail(Ljava/nio/ByteBuffer;Lcom/samsung/android/camera/core2/callback/ThumbnailCallback$DataInfo;I)V
 

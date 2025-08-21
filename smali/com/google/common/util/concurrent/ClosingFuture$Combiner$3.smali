@@ -51,6 +51,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/util/concurrent/ClosingFuture;->access$000(Lcom/google/common/util/concurrent/ClosingFuture;)Lcom/google/common/util/concurrent/FluentFuture;
 
     move-result-object p0
@@ -61,6 +62,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/util/concurrent/ClosingFuture;
 
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/ClosingFuture$Combiner$3;->apply(Lcom/google/common/util/concurrent/ClosingFuture;)Lcom/google/common/util/concurrent/FluentFuture;

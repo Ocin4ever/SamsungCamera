@@ -370,6 +370,7 @@
 
     const/16 v0, 0xa
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/common/primitives/UnsignedLongs;->parseUnsignedLong(Ljava/lang/String;I)J
 
     move-result-wide v0
@@ -380,8 +381,10 @@
 .method public static parseUnsignedLong(Ljava/lang/String;I)J
     .locals 7
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -396,6 +399,7 @@
 
     if-gt p1, v0, :cond_4
 
+    .line 4
     sget-object v0, Lcom/google/common/primitives/UnsignedLongs$ParseOverflowDetection;->maxSafeDigits:[I
 
     aget v0, v0, p1
@@ -406,6 +410,7 @@
 
     const/4 v3, 0x0
 
+    .line 5
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -413,6 +418,7 @@
 
     if-ge v3, v4, :cond_3
 
+    .line 6
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
@@ -427,12 +433,14 @@
 
     if-le v3, v0, :cond_1
 
+    .line 7
     invoke-static {v1, v2, v4, p1}, Lcom/google/common/primitives/UnsignedLongs$ParseOverflowDetection;->overflowInParse(JII)Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
+    .line 8
     new-instance p1, Ljava/lang/NumberFormatException;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -472,6 +480,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_2
     new-instance p1, Ljava/lang/NumberFormatException;
 
@@ -482,6 +491,7 @@
     :cond_3
     return-wide v1
 
+    .line 10
     :cond_4
     new-instance p0, Ljava/lang/NumberFormatException;
 
@@ -505,6 +515,7 @@
 
     throw p0
 
+    .line 11
     :cond_5
     new-instance p0, Ljava/lang/NumberFormatException;
 
@@ -579,8 +590,10 @@
 .method public static sort([J)V
     .locals 2
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -593,8 +606,10 @@
 .method public static sort([JII)V
     .locals 3
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     array-length v0, p0
 
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
@@ -604,6 +619,7 @@
     :goto_0
     if-ge v0, p2, :cond_0
 
+    .line 5
     aget-wide v1, p0, v0
 
     invoke-static {v1, v2}, Lcom/google/common/primitives/UnsignedLongs;->flip(J)J
@@ -616,12 +632,14 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-static {p0, p1, p2}, Ljava/util/Arrays;->sort([JII)V
 
     :goto_1
     if-ge p1, p2, :cond_1
 
+    .line 7
     aget-wide v0, p0, p1
 
     invoke-static {v0, v1}, Lcom/google/common/primitives/UnsignedLongs;->flip(J)J
@@ -641,8 +659,10 @@
 .method public static sortDescending([J)V
     .locals 2
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -655,8 +675,10 @@
 .method public static sortDescending([JII)V
     .locals 5
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     array-length v0, p0
 
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
@@ -668,6 +690,7 @@
 
     if-ge v0, p2, :cond_0
 
+    .line 5
     aget-wide v3, p0, v0
 
     xor-long/2addr v1, v3
@@ -678,12 +701,14 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-static {p0, p1, p2}, Ljava/util/Arrays;->sort([JII)V
 
     :goto_1
     if-ge p1, p2, :cond_1
 
+    .line 7
     aget-wide v3, p0, p1
 
     xor-long/2addr v3, v1
@@ -703,6 +728,7 @@
 
     const/16 v0, 0xa
 
+    .line 1
     invoke-static {p0, p1, v0}, Lcom/google/common/primitives/UnsignedLongs;->toString(JI)Ljava/lang/String;
 
     move-result-object p0
@@ -733,6 +759,7 @@
     :goto_0
     const-string v2, "radix (%s) must be between Character.MIN_RADIX and Character.MAX_RADIX"
 
+    .line 2
     invoke-static {v0, v2, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
     const-wide/16 v2, 0x0
@@ -748,6 +775,7 @@
     :cond_1
     if-lez v0, :cond_2
 
+    .line 3
     invoke-static {p0, p1, p2}, Ljava/lang/Long;->toString(JI)Ljava/lang/String;
 
     move-result-object p0
@@ -765,6 +793,7 @@
 
     if-nez v6, :cond_4
 
+    .line 4
     invoke-static {p2}, Ljava/lang/Integer;->numberOfTrailingZeros(I)I
 
     move-result v6
@@ -776,6 +805,7 @@
 
     and-int/2addr v1, v5
 
+    .line 5
     invoke-static {v1, p2}, Ljava/lang/Character;->forDigit(II)C
 
     move-result v1
@@ -801,6 +831,7 @@
 
     int-to-long v5, v5
 
+    .line 6
     div-long/2addr v0, v5
 
     goto :goto_1
@@ -808,6 +839,7 @@
     :cond_5
     int-to-long v0, p2
 
+    .line 7
     invoke-static {p0, p1, v0, v1}, Lcom/google/common/primitives/UnsignedLongs;->divide(JJ)J
 
     move-result-wide v0
@@ -821,6 +853,7 @@
 
     long-to-int p0, p0
 
+    .line 8
     invoke-static {p0, p2}, Ljava/lang/Character;->forDigit(II)C
 
     move-result p0
@@ -836,6 +869,7 @@
 
     add-int/lit8 p1, p1, -0x1
 
+    .line 9
     rem-long v7, v0, v5
 
     long-to-int p0, v7
@@ -846,6 +880,7 @@
 
     aput-char p0, v4, p1
 
+    .line 10
     div-long/2addr v0, v5
 
     goto :goto_2
@@ -853,6 +888,7 @@
     :cond_6
     move v0, p1
 
+    .line 11
     :goto_3
     new-instance p0, Ljava/lang/String;
 

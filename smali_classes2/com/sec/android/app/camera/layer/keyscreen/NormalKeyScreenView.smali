@@ -1864,6 +1864,7 @@
 .method public bridge synthetic performShowView(I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->performShowView(I)V
 
     return-void
@@ -1872,6 +1873,7 @@
 .method public bridge synthetic performShowView(IZ)V
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->performShowView(IZ)V
 
     return-void
@@ -2249,8 +2251,10 @@
 .method public setCenterButtonEnabled(Z)V
     .locals 1
 
+    .line 2
     invoke-super {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->setCenterButtonEnabled(Z)V
 
+    .line 3
     iget-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/NormalKeyScreenView;->mBottomButtonGroupShrinkState:Lcom/sec/android/app/camera/layer/keyscreen/KeyScreenLayerContract$BottomButtonGroupShrinkState;
 
     sget-object v0, Lcom/sec/android/app/camera/layer/keyscreen/KeyScreenLayerContract$BottomButtonGroupShrinkState;->SHRINK:Lcom/sec/android/app/camera/layer/keyscreen/KeyScreenLayerContract$BottomButtonGroupShrinkState;
@@ -2259,6 +2263,7 @@
 
     return-void
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/NormalKeyScreenView;->getCenterButton()Lcom/sec/android/app/camera/layer/keyscreen/centerbutton/CenterButtonView;
 
@@ -2268,12 +2273,14 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
+    .line 5
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/NormalKeyScreenView;->getCenterButton()Lcom/sec/android/app/camera/layer/keyscreen/centerbutton/CenterButtonView;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
 
+    .line 6
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/NormalKeyScreenView;->getLeftButton()Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/LeftButtonView;
 
     move-result-object p1
@@ -2282,6 +2289,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
+    .line 7
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/NormalKeyScreenView;->getRightButton()Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/RightButtonView;
 
     move-result-object p0
@@ -2294,6 +2302,7 @@
 .method public bridge synthetic setCenterButtonEnabled(ZI)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->setCenterButtonEnabled(ZI)V
 
     return-void
@@ -2621,6 +2630,7 @@
 .method public bridge synthetic showView(I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->showView(I)V
 
     return-void
@@ -2629,6 +2639,7 @@
 .method public bridge synthetic showView(IZ)V
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->showView(IZ)V
 
     return-void
@@ -3243,6 +3254,7 @@
 .method public bridge synthetic updateQuickViewThumbnail()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->updateQuickViewThumbnail()V
 
     return-void
@@ -3251,6 +3263,7 @@
 .method public bridge synthetic updateQuickViewThumbnail(Landroid/graphics/Bitmap;I)V
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->updateQuickViewThumbnail(Landroid/graphics/Bitmap;I)V
 
     return-void
@@ -3267,6 +3280,7 @@
 .method public bridge synthetic updateRightButtonContentDescription(I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->updateRightButtonContentDescription(I)V
 
     return-void
@@ -3275,6 +3289,7 @@
 .method public bridge synthetic updateRightButtonContentDescription(Ljava/lang/String;)V
     .locals 0
 
+    .line 2
     invoke-super {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->updateRightButtonContentDescription(Ljava/lang/String;)V
 
     return-void

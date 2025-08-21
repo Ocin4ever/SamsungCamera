@@ -41,8 +41,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/dualrecording/DualRecordingContract$View;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
+    .line 2
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -53,6 +55,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/dualrecording/DualRecordingPresenter;->mHandler:Landroid/os/Handler;
 
+    .line 3
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/dualrecording/a;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/dualrecording/a;-><init>(Lcom/sec/android/app/camera/shootingmode/dualrecording/DualRecordingPresenter;)V
@@ -65,8 +68,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/dualrecording/DualRecordingContract$View;I)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
+    .line 5
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -77,6 +82,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/dualrecording/DualRecordingPresenter;->mHandler:Landroid/os/Handler;
 
+    .line 6
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/dualrecording/a;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/dualrecording/a;-><init>(Lcom/sec/android/app/camera/shootingmode/dualrecording/DualRecordingPresenter;)V

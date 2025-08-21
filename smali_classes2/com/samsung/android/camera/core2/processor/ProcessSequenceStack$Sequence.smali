@@ -38,10 +38,13 @@
 .method private constructor <init>(II)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/util/LinkedList;-><init>()V
 
+    .line 3
     iput p1, p0, Lcom/samsung/android/camera/core2/processor/ProcessSequenceStack$Sequence;->mPpSequenceId:I
 
+    .line 4
     iput p2, p0, Lcom/samsung/android/camera/core2/processor/ProcessSequenceStack$Sequence;->mTotalProcessCount:I
 
     return-void
@@ -50,6 +53,7 @@
 .method public synthetic constructor <init>(IILcom/samsung/android/camera/core2/processor/d0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/core2/processor/ProcessSequenceStack$Sequence;-><init>(II)V
 
     return-void
@@ -97,6 +101,7 @@
         }
     .end annotation
 
+    .line 2
     iget v0, p0, Lcom/samsung/android/camera/core2/processor/ProcessSequenceStack$Sequence;->mAddCount:I
 
     iget v1, p0, Lcom/samsung/android/camera/core2/processor/ProcessSequenceStack$Sequence;->mTotalProcessCount:I
@@ -107,14 +112,17 @@
 
     add-int/2addr v0, v2
 
+    .line 3
     iput v0, p0, Lcom/samsung/android/camera/core2/processor/ProcessSequenceStack$Sequence;->mAddCount:I
 
+    .line 4
     invoke-super {p0, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     move-result p0
 
     return p0
 
+    .line 5
     :cond_0
     new-instance v0, Lcom/samsung/android/camera/core2/exception/InvalidOperationException;
 
@@ -124,6 +132,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
+    .line 6
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/processor/ProcessRequestImpl;->getPpSequenceId()I
 
     move-result p1
@@ -146,6 +155,7 @@
 
     const-string p0, "element(sequenceId %d) can\'t be added over Sequence\'s totalProcessCount(%d)"
 
+    .line 7
     invoke-static {v1, p0, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -158,6 +168,7 @@
 .method public bridge synthetic add(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/samsung/android/camera/core2/processor/ProcessRequestImpl;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/camera/core2/processor/ProcessSequenceStack$Sequence;->add(Lcom/samsung/android/camera/core2/processor/ProcessRequestImpl;)Z
@@ -205,6 +216,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
 
     move-result-object v0
@@ -213,6 +225,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget v1, p0, Lcom/samsung/android/camera/core2/processor/ProcessSequenceStack$Sequence;->mPollCount:I
 
     add-int/lit8 v1, v1, 0x1
@@ -226,6 +239,7 @@
 .method public bridge synthetic poll()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/processor/ProcessSequenceStack$Sequence;->poll()Lcom/samsung/android/camera/core2/processor/ProcessRequestImpl;
 
     move-result-object p0

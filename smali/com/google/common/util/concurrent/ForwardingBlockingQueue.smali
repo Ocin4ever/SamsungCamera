@@ -37,6 +37,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingQueue;->delegate()Ljava/util/concurrent/BlockingQueue;
 
     move-result-object p0
@@ -47,6 +48,7 @@
 .method public bridge synthetic delegate()Ljava/util/Collection;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingQueue;->delegate()Ljava/util/concurrent/BlockingQueue;
 
     move-result-object p0
@@ -57,6 +59,7 @@
 .method public bridge synthetic delegate()Ljava/util/Queue;
     .locals 0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingQueue;->delegate()Ljava/util/concurrent/BlockingQueue;
 
     move-result-object p0
@@ -84,6 +87,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingQueue;->delegate()Ljava/util/concurrent/BlockingQueue;
 
     move-result-object p0
@@ -105,6 +109,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingQueue;->delegate()Ljava/util/concurrent/BlockingQueue;
 
     move-result-object p0

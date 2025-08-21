@@ -26,12 +26,16 @@
 .method private constructor <init>(ZZZ)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/centerbutton/CenterButtonView$OvalAnimationConditionKey;->mIsQuickTakeMode:Z
 
+    .line 4
     iput-boolean p2, p0, Lcom/sec/android/app/camera/layer/keyscreen/centerbutton/CenterButtonView$OvalAnimationConditionKey;->mIsLandScape:Z
 
+    .line 5
     iput-boolean p3, p0, Lcom/sec/android/app/camera/layer/keyscreen/centerbutton/CenterButtonView$OvalAnimationConditionKey;->mIsDarkMode:Z
 
     return-void
@@ -40,6 +44,7 @@
 .method public synthetic constructor <init>(ZZZLcom/sec/android/app/camera/layer/keyscreen/centerbutton/n;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/layer/keyscreen/centerbutton/CenterButtonView$OvalAnimationConditionKey;-><init>(ZZZ)V
 
     return-void

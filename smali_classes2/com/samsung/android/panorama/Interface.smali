@@ -66,12 +66,15 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/samsung/android/panorama/Interface;->mContext:Landroid/content/Context;
 
+    .line 3
     new-instance v0, Lcom/samsung/android/panorama/Interface$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/panorama/Interface$1;-><init>(Lcom/samsung/android/panorama/Interface;)V
@@ -84,22 +87,28 @@
 .method public constructor <init>(Lcom/samsung/android/panorama/PanoCallbackInterface;Landroid/content/Context;)V
     .locals 1
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Lcom/samsung/android/panorama/Interface;->mContext:Landroid/content/Context;
 
+    .line 6
     new-instance v0, Lcom/samsung/android/panorama/Interface$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/panorama/Interface$1;-><init>(Lcom/samsung/android/panorama/Interface;)V
 
     iput-object v0, p0, Lcom/samsung/android/panorama/Interface;->listener:Landroid/hardware/SensorEventListener;
 
+    .line 7
     iput-object p1, p0, Lcom/samsung/android/panorama/Interface;->mPanoCallbackInterface:Lcom/samsung/android/panorama/PanoCallbackInterface;
 
+    .line 8
     iput-object p2, p0, Lcom/samsung/android/panorama/Interface;->mContext:Landroid/content/Context;
 
+    .line 9
     new-instance p1, Lcom/samsung/android/panorama/InterfaceNative;
 
     invoke-direct {p1}, Lcom/samsung/android/panorama/InterfaceNative;-><init>()V

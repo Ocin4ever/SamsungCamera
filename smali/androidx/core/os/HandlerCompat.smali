@@ -28,6 +28,7 @@
 .method public static createAsync(Landroid/os/Looper;)Landroid/os/Handler;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Landroidx/core/os/HandlerCompat$Api28Impl;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
 
     move-result-object p0
@@ -38,6 +39,7 @@
 .method public static createAsync(Landroid/os/Looper;Landroid/os/Handler$Callback;)Landroid/os/Handler;
     .locals 0
 
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/os/HandlerCompat$Api28Impl;->createAsync(Landroid/os/Looper;Landroid/os/Handler$Callback;)Landroid/os/Handler;
 
     move-result-object p0

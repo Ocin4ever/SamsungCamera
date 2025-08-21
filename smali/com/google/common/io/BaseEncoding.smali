@@ -291,6 +291,7 @@
 .method public encode([B)Ljava/lang/String;
     .locals 2
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -307,10 +308,12 @@
 
     add-int v0, p2, p3
 
+    .line 2
     array-length v1, p1
 
     invoke-static {p2, v0, v1}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p3}, Lcom/google/common/io/BaseEncoding;->maxEncodedSize(I)I
@@ -319,11 +322,13 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 4
     :try_start_0
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/google/common/io/BaseEncoding;->encodeTo(Ljava/lang/Appendable;[BII)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 5
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -333,6 +338,7 @@
     :catch_0
     move-exception p0
 
+    .line 6
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V

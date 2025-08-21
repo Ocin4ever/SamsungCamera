@@ -57,10 +57,12 @@
 
     const/4 p1, 0x0
 
+    .line 3
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setLayoutAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance v0, Landroidx/databinding/adapters/ViewGroupBindingAdapter$2;
 
@@ -81,10 +83,12 @@
 
     const/4 p1, 0x0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Landroidx/databinding/adapters/ViewGroupBindingAdapter$1;
 

@@ -40,6 +40,7 @@
 .method public get()Lcom/google/common/cache/LongAddable;
     .locals 0
 
+    .line 2
     new-instance p0, Lcom/google/common/cache/LongAdder;
 
     invoke-direct {p0}, Lcom/google/common/cache/LongAdder;-><init>()V
@@ -50,6 +51,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/LongAddables$1;->get()Lcom/google/common/cache/LongAddable;
 
     move-result-object p0

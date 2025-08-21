@@ -30,22 +30,28 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lo4/z$a;->a:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
+    .line 4
     iput p2, p0, Lo4/z$a;->b:I
 
     const p1, 0x7f0806b8
 
+    .line 5
     iput p1, p0, Lo4/z$a;->c:I
 
     const p1, 0x7f120040
 
+    .line 6
     iput p1, p0, Lo4/z$a;->d:I
 
     const/4 p1, 0x1
 
+    .line 7
     iput-boolean p1, p0, Lo4/z$a;->e:Z
 
     return-void
@@ -54,6 +60,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;ILo4/y;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lo4/z$a;-><init>(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;I)V
 
     return-void

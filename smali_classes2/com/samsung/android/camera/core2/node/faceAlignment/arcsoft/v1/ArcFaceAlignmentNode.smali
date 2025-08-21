@@ -447,17 +447,20 @@
 .method public processBackgroundPreviewInternal(Lcom/samsung/android/camera/core2/util/DirectBuffer;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
     .locals 6
 
+    .line 2
     :try_start_0
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->r()Lcom/samsung/android/camera/core2/util/StrideInfo;
 
     move-result-object p3
 
+    .line 3
     new-instance v0, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;
 
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->s()J
 
     move-result-wide v1
 
+    .line 4
     invoke-virtual {p3}, Lcom/samsung/android/camera/core2/util/StrideInfo;->getRowStride()I
 
     move-result p2
@@ -468,18 +471,22 @@
 
     invoke-direct {v0, v1, v2, p2, p3}, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;-><init>(JII)V
 
+    .line 5
     iget-wide p2, v0, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;->timeStamp:J
 
     iput-wide p2, p0, Lcom/samsung/android/camera/core2/node/faceAlignment/arcsoft/v1/ArcFaceAlignmentNode;->mPreviewTimestamp:J
 
+    .line 6
     iget p2, v0, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;->rowStride:I
 
     iput p2, p0, Lcom/samsung/android/camera/core2/node/faceAlignment/arcsoft/v1/ArcFaceAlignmentNode;->mRowStride:I
 
+    .line 7
     iget p2, v0, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;->heightSlice:I
 
     iput p2, p0, Lcom/samsung/android/camera/core2/node/faceAlignment/arcsoft/v1/ArcFaceAlignmentNode;->mHeightSlice:I
 
+    .line 8
     sget-object p2, Lcom/samsung/android/camera/core2/node/faceAlignment/arcsoft/v1/ArcFaceAlignmentNode;->ARC_FACE_ALIGNMENT_V1_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const-string p3, "FaceAlignmentProcessTask: PreviewSize(%s), ExtraPreviewInfo(%s)"
@@ -508,6 +515,7 @@
 
     invoke-static {p2, p3, v2}, Lcom/samsung/android/camera/core2/util/CLog;->s(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     sget-object p3, Lcom/samsung/android/camera/core2/node/faceAlignment/arcsoft/v1/ArcFaceAlignmentNode;->NATIVE_COMMAND_PROCESS:Lcom/samsung/android/camera/core2/node/NativeNode$Command;
 
     const/4 v2, 0x3
@@ -536,6 +544,7 @@
 
     new-array p3, v5, [Ljava/lang/Object;
 
+    .line 10
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -551,6 +560,7 @@
     :catch_0
     move-exception p0
 
+    .line 11
     sget-object p1, Lcom/samsung/android/camera/core2/node/faceAlignment/arcsoft/v1/ArcFaceAlignmentNode;->ARC_FACE_ALIGNMENT_V1_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -577,6 +587,7 @@
 .method public bridge synthetic processBackgroundPreviewInternal(Ljava/lang/Object;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/samsung/android/camera/core2/util/DirectBuffer;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/faceAlignment/arcsoft/v1/ArcFaceAlignmentNode;->processBackgroundPreviewInternal(Lcom/samsung/android/camera/core2/util/DirectBuffer;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V

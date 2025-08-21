@@ -17,10 +17,13 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/work/impl/model/Preference;->key:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Landroidx/work/impl/model/Preference;->value:Ljava/lang/Long;
 
     return-void
@@ -42,6 +45,7 @@
     :cond_0
     const-wide/16 v0, 0x0
 
+    .line 4
     :goto_0
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 

@@ -180,6 +180,7 @@
 .method public static isWellFormed([B)Z
     .locals 2
 
+    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -196,6 +197,7 @@
 
     add-int/2addr p2, p1
 
+    .line 2
     array-length v0, p0
 
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
@@ -203,10 +205,12 @@
     :goto_0
     if-ge p1, p2, :cond_1
 
+    .line 3
     aget-byte v0, p0, p1
 
     if-gez v0, :cond_0
 
+    .line 4
     invoke-static {p0, p1, p2}, Lcom/google/common/base/Utf8;->isWellFormedSlowPath([BII)Z
 
     move-result p0

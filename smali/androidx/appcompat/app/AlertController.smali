@@ -2586,10 +2586,13 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Landroidx/appcompat/app/AlertController;->mIcon:Landroid/graphics/drawable/Drawable;
 
+    .line 2
     iput p1, p0, Landroidx/appcompat/app/AlertController;->mIconId:I
 
+    .line 3
     iget-object v0, p0, Landroidx/appcompat/app/AlertController;->mIconView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_1
@@ -2598,8 +2601,10 @@
 
     const/4 p1, 0x0
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 5
     iget-object p1, p0, Landroidx/appcompat/app/AlertController;->mIconView:Landroid/widget/ImageView;
 
     iget p0, p0, Landroidx/appcompat/app/AlertController;->mIconId:I
@@ -2611,6 +2616,7 @@
     :cond_0
     const/16 p0, 0x8
 
+    .line 6
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_1
@@ -2621,20 +2627,25 @@
 .method public setIcon(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 
+    .line 7
     iput-object p1, p0, Landroidx/appcompat/app/AlertController;->mIcon:Landroid/graphics/drawable/Drawable;
 
     const/4 v0, 0x0
 
+    .line 8
     iput v0, p0, Landroidx/appcompat/app/AlertController;->mIconId:I
 
+    .line 9
     iget-object v1, p0, Landroidx/appcompat/app/AlertController;->mIconView:Landroid/widget/ImageView;
 
     if-eqz v1, :cond_1
 
     if-eqz p1, :cond_0
 
+    .line 10
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 11
     iget-object p0, p0, Landroidx/appcompat/app/AlertController;->mIconView:Landroid/widget/ImageView;
 
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -2644,6 +2655,7 @@
     :cond_0
     const/16 p0, 0x8
 
+    .line 12
     invoke-virtual {v1, p0}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_1
@@ -2686,12 +2698,15 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Landroidx/appcompat/app/AlertController;->mView:Landroid/view/View;
 
+    .line 2
     iput p1, p0, Landroidx/appcompat/app/AlertController;->mViewLayoutResId:I
 
     const/4 p1, 0x0
 
+    .line 3
     iput-boolean p1, p0, Landroidx/appcompat/app/AlertController;->mViewSpacingSpecified:Z
 
     return-void
@@ -2700,12 +2715,15 @@
 .method public setView(Landroid/view/View;)V
     .locals 0
 
+    .line 4
     iput-object p1, p0, Landroidx/appcompat/app/AlertController;->mView:Landroid/view/View;
 
     const/4 p1, 0x0
 
+    .line 5
     iput p1, p0, Landroidx/appcompat/app/AlertController;->mViewLayoutResId:I
 
+    .line 6
     iput-boolean p1, p0, Landroidx/appcompat/app/AlertController;->mViewSpacingSpecified:Z
 
     return-void
@@ -2714,22 +2732,29 @@
 .method public setView(Landroid/view/View;IIII)V
     .locals 0
 
+    .line 7
     iput-object p1, p0, Landroidx/appcompat/app/AlertController;->mView:Landroid/view/View;
 
     const/4 p1, 0x0
 
+    .line 8
     iput p1, p0, Landroidx/appcompat/app/AlertController;->mViewLayoutResId:I
 
     const/4 p1, 0x1
 
+    .line 9
     iput-boolean p1, p0, Landroidx/appcompat/app/AlertController;->mViewSpacingSpecified:Z
 
+    .line 10
     iput p2, p0, Landroidx/appcompat/app/AlertController;->mViewSpacingLeft:I
 
+    .line 11
     iput p3, p0, Landroidx/appcompat/app/AlertController;->mViewSpacingTop:I
 
+    .line 12
     iput p4, p0, Landroidx/appcompat/app/AlertController;->mViewSpacingRight:I
 
+    .line 13
     iput p5, p0, Landroidx/appcompat/app/AlertController;->mViewSpacingBottom:I
 
     return-void

@@ -37,12 +37,15 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, La1/c;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, La1/a;->g:I
 
+    .line 3
     iput v0, p0, La1/a;->i:I
 
     return-void
@@ -51,12 +54,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1, p2}, La1/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, -0x1
 
+    .line 5
     iput p1, p0, La1/a;->g:I
 
+    .line 6
     iput p1, p0, La1/a;->i:I
 
     return-void

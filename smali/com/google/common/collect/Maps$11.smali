@@ -48,6 +48,7 @@
     .annotation runtime Lcom/google/common/collect/ParametricNullness;
     .end annotation
 
+    .line 1
     check-cast p1, Ljava/util/Map$Entry;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Maps$11;->apply(Ljava/util/Map$Entry;)Ljava/lang/Object;
@@ -70,6 +71,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/Maps$11;->val$transformer:Lcom/google/common/collect/Maps$EntryTransformer;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;

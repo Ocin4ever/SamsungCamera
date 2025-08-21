@@ -101,6 +101,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/graph/MultiEdgesConnecting;->outEdgeToNode:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -111,6 +112,7 @@
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Lcom/google/common/graph/MultiEdgesConnecting$1;
 
     invoke-direct {v1, p0, v0}, Lcom/google/common/graph/MultiEdgesConnecting$1;-><init>(Lcom/google/common/graph/MultiEdgesConnecting;Ljava/util/Iterator;)V
@@ -121,6 +123,7 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/MultiEdgesConnecting;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object p0

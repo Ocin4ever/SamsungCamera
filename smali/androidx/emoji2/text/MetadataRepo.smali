@@ -102,14 +102,18 @@
     :try_start_0
     const-string v0, "EmojiCompat.MetadataRepo.create"
 
+    .line 13
     invoke-static {v0}, Landroidx/core/os/TraceCompat;->beginSection(Ljava/lang/String;)V
 
+    .line 14
     invoke-static {p0, p1}, Landroid/graphics/Typeface;->createFromAsset(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/graphics/Typeface;
 
     move-result-object v0
 
+    .line 15
     new-instance v1, Landroidx/emoji2/text/MetadataRepo;
 
+    .line 16
     invoke-static {p0, p1}, Landroidx/emoji2/text/MetadataListReader;->read(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroidx/emoji2/text/flatbuffer/MetadataList;
 
     move-result-object p0
@@ -118,6 +122,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 17
     invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
 
     return-object v1
@@ -127,6 +132,7 @@
 
     invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
 
+    .line 18
     throw p0
 .end method
 
@@ -136,8 +142,10 @@
     :try_start_0
     const-string v0, "EmojiCompat.MetadataRepo.create"
 
+    .line 1
     invoke-static {v0}, Landroidx/core/os/TraceCompat;->beginSection(Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Landroidx/emoji2/text/MetadataRepo;
 
     new-instance v1, Landroidx/emoji2/text/flatbuffer/MetadataList;
@@ -148,6 +156,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
 
     return-object v0
@@ -157,6 +166,7 @@
 
     invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
 
+    .line 4
     throw p0
 .end method
 
@@ -166,8 +176,10 @@
     :try_start_0
     const-string v0, "EmojiCompat.MetadataRepo.create"
 
+    .line 5
     invoke-static {v0}, Landroidx/core/os/TraceCompat;->beginSection(Ljava/lang/String;)V
 
+    .line 6
     new-instance v0, Landroidx/emoji2/text/MetadataRepo;
 
     invoke-static {p1}, Landroidx/emoji2/text/MetadataListReader;->read(Ljava/io/InputStream;)Landroidx/emoji2/text/flatbuffer/MetadataList;
@@ -178,6 +190,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
 
     return-object v0
@@ -187,6 +200,7 @@
 
     invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
 
+    .line 8
     throw p0
 .end method
 
@@ -196,8 +210,10 @@
     :try_start_0
     const-string v0, "EmojiCompat.MetadataRepo.create"
 
+    .line 9
     invoke-static {v0}, Landroidx/core/os/TraceCompat;->beginSection(Ljava/lang/String;)V
 
+    .line 10
     new-instance v0, Landroidx/emoji2/text/MetadataRepo;
 
     invoke-static {p1}, Landroidx/emoji2/text/MetadataListReader;->read(Ljava/nio/ByteBuffer;)Landroidx/emoji2/text/flatbuffer/MetadataList;
@@ -208,6 +224,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 11
     invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
 
     return-object v0
@@ -217,6 +234,7 @@
 
     invoke-static {}, Landroidx/core/os/TraceCompat;->endSection()V
 
+    .line 12
     throw p0
 .end method
 

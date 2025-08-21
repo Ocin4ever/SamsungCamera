@@ -24,12 +24,15 @@
 .method private constructor <init>(Lo4/l;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/menu/effects/filter/FilterThumbnailController$FilterListItemWrapper;->mItem:Lo4/l;
 
     const/4 p1, 0x0
 
+    .line 4
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/menu/effects/filter/FilterThumbnailController$FilterListItemWrapper;->mIsAdded:Z
 
     return-void
@@ -38,6 +41,7 @@
 .method public synthetic constructor <init>(Lo4/l;Lcom/sec/android/app/camera/layer/menu/effects/filter/m;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/layer/menu/effects/filter/FilterThumbnailController$FilterListItemWrapper;-><init>(Lo4/l;)V
 
     return-void

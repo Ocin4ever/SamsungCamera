@@ -856,6 +856,7 @@
 .method private isBluetoothLeMicAvailable(Lcom/sec/android/app/camera/interfaces/AudioDevice;)Z
     .locals 2
 
+    .line 2
     sget-object v0, Ly2/b;->I1:Ly2/b;
 
     invoke-static {v0}, Ly2/d;->e(Ly2/b;)Z
@@ -868,6 +869,7 @@
 
     return v1
 
+    .line 3
     :cond_0
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/audio/AudioInputController;->isBluetoothLeDevice(Lcom/sec/android/app/camera/interfaces/AudioDevice;)Z
 
@@ -879,10 +881,12 @@
 
     const-string p1, "isBluetoothLeMicAvailable return : not BLE device"
 
+    .line 4
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
+    .line 5
     :cond_1
     iget-object p0, p0, Lcom/sec/android/app/camera/audio/AudioInputController;->mBluetoothServiceController:Lcom/sec/android/app/camera/audio/bluetooth/BluetoothServiceController;
 
@@ -1414,6 +1418,7 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/audio/AudioInputController;->getAudioDevice(I)Lcom/sec/android/app/camera/interfaces/AudioDevice;
 
     move-result-object v0

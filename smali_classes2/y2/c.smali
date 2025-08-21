@@ -2004,8 +2004,6 @@
 
     move-result v0
 
-    const v0, 0xeac5
-
     iput v0, p0, Ly2/c;->e:I
 
     :cond_0

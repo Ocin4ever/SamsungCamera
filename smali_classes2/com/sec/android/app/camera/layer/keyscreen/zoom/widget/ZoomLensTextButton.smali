@@ -29,8 +29,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensButton;-><init>(Landroid/content/Context;)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -43,6 +45,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_TRANSLATION_X_DISTANCE:F
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -55,6 +58,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_TRANSLATION_Y_DISTANCE:F
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -67,6 +71,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_ALPHA_DURATION:I
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -79,6 +84,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_SCALE_DURATION:I
 
+    .line 6
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -91,18 +97,21 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_TRANSLATION_DURATION:I
 
+    .line 7
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->mTextTranslationXAnimator:Landroid/animation/AnimatorSet;
 
+    .line 8
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->mTextTranslationYAnimator:Landroid/animation/AnimatorSet;
 
+    .line 9
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
@@ -115,8 +124,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 10
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 11
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -129,6 +140,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_TRANSLATION_X_DISTANCE:F
 
+    .line 12
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -141,6 +153,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_TRANSLATION_Y_DISTANCE:F
 
+    .line 13
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -153,6 +166,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_ALPHA_DURATION:I
 
+    .line 14
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -165,6 +179,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_SCALE_DURATION:I
 
+    .line 15
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -177,18 +192,21 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_TRANSLATION_DURATION:I
 
+    .line 16
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->mTextTranslationXAnimator:Landroid/animation/AnimatorSet;
 
+    .line 17
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->mTextTranslationYAnimator:Landroid/animation/AnimatorSet;
 
+    .line 18
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
@@ -201,8 +219,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 19
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 20
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -215,6 +235,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_TRANSLATION_X_DISTANCE:F
 
+    .line 21
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -227,6 +248,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_TRANSLATION_Y_DISTANCE:F
 
+    .line 22
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -239,6 +261,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_ALPHA_DURATION:I
 
+    .line 23
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -251,6 +274,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_SCALE_DURATION:I
 
+    .line 24
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -263,18 +287,21 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->TEXT_TRANSLATION_DURATION:I
 
+    .line 25
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->mTextTranslationXAnimator:Landroid/animation/AnimatorSet;
 
+    .line 26
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->mTextTranslationYAnimator:Landroid/animation/AnimatorSet;
 
+    .line 27
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
@@ -1361,6 +1388,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->setSelected(ZZ)V
 
     return-void
@@ -1369,6 +1397,7 @@
 .method public setSelected(ZZ)V
     .locals 2
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->isSelected()Z
 
     move-result v0
@@ -1379,6 +1408,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroid/view/View;->setSelected(Z)V
 
@@ -1386,6 +1416,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 4
     iget-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->mViewBinding:Lp4/x9;
 
     iget-object p1, p1, Lp4/x9;->b:Landroid/widget/ImageView;
@@ -1394,8 +1425,10 @@
 
     invoke-virtual {p0, p1, v1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensButton;->setViewScale(Landroid/view/View;F)V
 
+    .line 5
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->showBackground(Z)V
 
+    .line 6
     iget-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->mViewBinding:Lp4/x9;
 
     iget-object p1, p1, Lp4/x9;->e:Landroid/widget/LinearLayout;
@@ -1404,6 +1437,7 @@
 
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->showText(Landroid/view/View;Z)V
 
+    .line 7
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->mViewBinding:Lp4/x9;
 
     iget-object p0, p0, Lp4/x9;->g:Landroid/widget/TextView;
@@ -1412,6 +1446,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_1
     sget-object p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton$1;->$SwitchMap$com$sec$android$app$camera$interfaces$ZoomManager$ZoomCategory:[I
 
@@ -1425,6 +1460,7 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 9
     new-instance p1, Ljava/lang/RuntimeException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -1451,14 +1487,17 @@
 
     throw p1
 
+    .line 10
     :pswitch_0
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->showBackground(Z)V
 
     goto :goto_0
 
+    .line 11
     :pswitch_1
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->hideBackground(Z)V
 
+    .line 12
     :goto_0
     iget-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->mViewBinding:Lp4/x9;
 
@@ -1468,6 +1507,7 @@
 
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->showText(Landroid/view/View;Z)V
 
+    .line 13
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensTextButton;->mViewBinding:Lp4/x9;
 
     iget-object p0, p0, Lp4/x9;->e:Landroid/widget/LinearLayout;

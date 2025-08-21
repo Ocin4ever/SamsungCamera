@@ -236,10 +236,12 @@
 .method public addTouchDelegate(Landroid/graphics/Rect;Landroid/view/View;)Landroid/view/TouchDelegate;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/core/view/SeslTouchTargetDelegate$CapturedTouchDelegate;
 
     invoke-direct {v0, p1, p2}, Landroidx/core/view/SeslTouchTargetDelegate$CapturedTouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
 
+    .line 2
     iget-object p0, p0, Landroidx/core/view/SeslTouchTargetDelegate;->mTouchDelegateSet:Ljava/util/HashSet;
 
     invoke-virtual {p0, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -252,6 +254,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, v0}, Landroidx/core/view/SeslTouchTargetDelegate;->addTouchDelegate(Landroid/view/View;Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;)Landroid/view/TouchDelegate;
 
     move-result-object p0
@@ -262,6 +265,7 @@
 .method public addTouchDelegate(Landroid/view/View;Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;)Landroid/view/TouchDelegate;
     .locals 3
 
+    .line 4
     :try_start_0
     iget-object v0, p0, Landroidx/core/view/SeslTouchTargetDelegate;->mAnchorView:Landroid/view/View;
 
@@ -271,6 +275,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 5
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
     iget v2, p2, Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;->left:I
@@ -279,6 +284,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
+    .line 6
     iget v1, v0, Landroid/graphics/Rect;->top:I
 
     iget v2, p2, Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;->top:I
@@ -287,6 +293,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
+    .line 7
     iget v1, v0, Landroid/graphics/Rect;->right:I
 
     iget v2, p2, Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;->right:I
@@ -295,6 +302,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
+    .line 8
     iget v1, v0, Landroid/graphics/Rect;->bottom:I
 
     iget p2, p2, Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;->bottom:I
@@ -303,6 +311,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
+    .line 9
     :cond_0
     invoke-virtual {p0, v0, p1}, Landroidx/core/view/SeslTouchTargetDelegate;->addTouchDelegate(Landroid/graphics/Rect;Landroid/view/View;)Landroid/view/TouchDelegate;
 
@@ -319,8 +328,10 @@
 
     const-string p2, "delegateView must be child of anchorView"
 
+    .line 10
     invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 11
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     const/4 p0, 0x0

@@ -285,6 +285,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, v0}, Landroidx/reflect/view/SeslViewReflector;->isVisibleToUser(Landroid/view/View;Landroid/graphics/Rect;)Z
 
     move-result p0
@@ -295,6 +296,7 @@
 .method public static isVisibleToUser(Landroid/view/View;Landroid/graphics/Rect;)Z
     .locals 5
 
+    .line 2
     sget-object v0, Landroidx/reflect/view/SeslViewReflector;->mClass:Ljava/lang/Class;
 
     const/4 v1, 0x1
@@ -319,14 +321,17 @@
 
     aput-object p1, v1, v4
 
+    .line 3
     invoke-static {p0, v0, v1}, Landroidx/reflect/SeslBaseReflector;->invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 4
     instance-of p1, p0, Ljava/lang/Boolean;
 
     if-eqz p1, :cond_0
 
+    .line 5
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z

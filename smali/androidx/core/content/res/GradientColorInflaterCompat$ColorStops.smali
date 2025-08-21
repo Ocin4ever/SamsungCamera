@@ -24,6 +24,7 @@
 .method public constructor <init>(II)V
     .locals 3
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
@@ -38,10 +39,12 @@
 
     aput p2, v1, p1
 
+    .line 8
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
     new-array p1, v0, [F
 
+    .line 9
     fill-array-data p1, :array_0
 
     iput-object p1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
@@ -58,6 +61,7 @@
 .method public constructor <init>(III)V
     .locals 3
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
@@ -76,10 +80,12 @@
 
     aput p3, v1, p1
 
+    .line 11
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
     new-array p1, v0, [F
 
+    .line 12
     fill-array-data p1, :array_0
 
     iput-object p1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
@@ -110,16 +116,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
+    .line 3
     new-array v1, v0, [I
 
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
+    .line 4
     new-array v1, v0, [F
 
     iput-object v1, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
@@ -129,6 +139,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 5
     iget-object v2, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mColors:[I
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -143,6 +154,7 @@
 
     aput v3, v2, v1
 
+    .line 6
     iget-object v2, p0, Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;->mOffsets:[F
 
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;

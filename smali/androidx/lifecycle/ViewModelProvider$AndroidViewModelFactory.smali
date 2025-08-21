@@ -68,6 +68,7 @@
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-direct {p0, v0, v1}, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;-><init>(Landroid/app/Application;I)V
 
     return-void
@@ -82,6 +83,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-direct {p0, p1, v0}, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;-><init>(Landroid/app/Application;I)V
 
     return-void
@@ -90,8 +92,10 @@
 .method private constructor <init>(Landroid/app/Application;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->application:Landroid/app/Application;
 
     return-void
@@ -129,6 +133,7 @@
 
     const-string v0, "Cannot create an instance of "
 
+    .line 11
     const-class v1, Landroidx/lifecycle/AndroidViewModel;
 
     invoke-virtual {v1, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -142,6 +147,7 @@
     :try_start_0
     new-array v1, p0, [Ljava/lang/Class;
 
+    .line 12
     const-class v2, Landroid/app/Application;
 
     const/4 v3, 0x0
@@ -169,6 +175,7 @@
 
     const-string p1, "{\n                try {\n\u2026          }\n            }"
 
+    .line 13
     invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
@@ -176,6 +183,7 @@
     :catch_0
     move-exception p0
 
+    .line 14
     new-instance p2, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -197,6 +205,7 @@
     :catch_1
     move-exception p0
 
+    .line 15
     new-instance p2, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -218,6 +227,7 @@
     :catch_2
     move-exception p0
 
+    .line 16
     new-instance p2, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -239,6 +249,7 @@
     :catch_3
     move-exception p0
 
+    .line 17
     new-instance p2, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -257,6 +268,7 @@
 
     throw p2
 
+    .line 18
     :cond_0
     invoke-super {p0, p1}, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;->create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
 
@@ -296,16 +308,19 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 8
     iget-object v0, p0, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->application:Landroid/app/Application;
 
     if-eqz v0, :cond_0
 
+    .line 9
     invoke-direct {p0, p1, v0}, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->create(Ljava/lang/Class;Landroid/app/Application;)Landroidx/lifecycle/ViewModel;
 
     move-result-object p0
 
     return-object p0
 
+    .line 10
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -338,16 +353,19 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->application:Landroid/app/Application;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->APPLICATION_KEY:Landroidx/lifecycle/viewmodel/CreationExtras$Key;
 
@@ -359,12 +377,14 @@
 
     if-eqz p2, :cond_1
 
+    .line 4
     invoke-direct {p0, p1, p2}, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->create(Ljava/lang/Class;Landroid/app/Application;)Landroidx/lifecycle/ViewModel;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 5
     :cond_1
     const-class p2, Landroidx/lifecycle/AndroidViewModel;
 
@@ -374,6 +394,7 @@
 
     if-nez p2, :cond_2
 
+    .line 6
     invoke-super {p0, p1}, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;->create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
 
     move-result-object p0
@@ -381,6 +402,7 @@
     :goto_0
     return-object p0
 
+    .line 7
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

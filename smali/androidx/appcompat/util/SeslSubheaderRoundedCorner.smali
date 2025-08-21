@@ -121,10 +121,12 @@
 .method public drawRoundedCorner(IIIILandroid/graphics/Canvas;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mRoundedCornerBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;->set(IIII)V
 
+    .line 2
     invoke-direct {p0, p5}, Landroidx/appcompat/util/SeslSubheaderRoundedCorner;->drawRoundedCornerInternal(Landroid/graphics/Canvas;)V
 
     return-void
@@ -133,6 +135,7 @@
 .method public drawRoundedCorner(Landroid/view/View;Landroid/graphics/Canvas;)V
     .locals 4
 
+    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
     move-result v0
@@ -143,6 +146,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p1}, Landroid/view/View;->getX()F
 
     move-result v0
@@ -151,6 +155,7 @@
 
     move-result v0
 
+    .line 5
     invoke-virtual {p1}, Landroid/view/View;->getY()F
 
     move-result v1
@@ -161,15 +166,18 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v0
 
+    .line 7
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v1
 
+    .line 8
     :goto_0
     iget-object v2, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mRoundedCornerBounds:Landroid/graphics/Rect;
 
@@ -187,6 +195,7 @@
 
     invoke-virtual {v2, v0, v1, v3, p1}, Landroid/graphics/Rect;->set(IIII)V
 
+    .line 9
     invoke-direct {p0, p2}, Landroidx/appcompat/util/SeslSubheaderRoundedCorner;->drawRoundedCornerInternal(Landroid/graphics/Canvas;)V
 
     return-void

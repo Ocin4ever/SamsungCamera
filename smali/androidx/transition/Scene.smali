@@ -21,12 +21,15 @@
 .method public constructor <init>(Landroid/view/ViewGroup;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Landroidx/transition/Scene;->mLayoutId:I
 
+    .line 3
     iput-object p1, p0, Landroidx/transition/Scene;->mSceneRoot:Landroid/view/ViewGroup;
 
     return-void
@@ -35,12 +38,16 @@
 .method private constructor <init>(Landroid/view/ViewGroup;ILandroid/content/Context;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     iput-object p3, p0, Landroidx/transition/Scene;->mContext:Landroid/content/Context;
 
+    .line 6
     iput-object p1, p0, Landroidx/transition/Scene;->mSceneRoot:Landroid/view/ViewGroup;
 
+    .line 7
     iput p2, p0, Landroidx/transition/Scene;->mLayoutId:I
 
     return-void
@@ -49,14 +56,18 @@
 .method public constructor <init>(Landroid/view/ViewGroup;Landroid/view/View;)V
     .locals 1
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 9
     iput v0, p0, Landroidx/transition/Scene;->mLayoutId:I
 
+    .line 10
     iput-object p1, p0, Landroidx/transition/Scene;->mSceneRoot:Landroid/view/ViewGroup;
 
+    .line 11
     iput-object p2, p0, Landroidx/transition/Scene;->mLayout:Landroid/view/View;
 
     return-void

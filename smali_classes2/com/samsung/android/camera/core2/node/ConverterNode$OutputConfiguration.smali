@@ -33,8 +33,10 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/node/Node$PortType;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;->a:Lcom/samsung/android/camera/core2/node/Node$PortType;
 
     return-void
@@ -43,6 +45,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/node/Node$PortType;Lcom/samsung/android/camera/core2/node/b;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;-><init>(Lcom/samsung/android/camera/core2/node/Node$PortType;)V
 
     return-void

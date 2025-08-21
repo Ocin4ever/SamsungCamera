@@ -765,6 +765,7 @@
 .method public bridge synthetic collect()Lcom/samsung/android/camera/core2/processor/ProcessRequest$Sequence;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/processor/ProcessRequestImpl$Sequence;->collect()Lcom/samsung/android/camera/core2/processor/ProcessRequestImpl$Sequence;
 
     move-result-object p0
@@ -784,6 +785,7 @@
 
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iget v0, p0, Lcom/samsung/android/camera/core2/processor/ProcessRequestImpl$Sequence;->mCollectedCount:I
 
@@ -793,6 +795,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-object p0

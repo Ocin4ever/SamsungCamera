@@ -49,6 +49,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/common/reflect/TypeToken;->getGenericInterfaces()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -59,6 +60,7 @@
 .method public bridge synthetic getInterfaces(Ljava/lang/Object;)Ljava/lang/Iterable;
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/reflect/TypeToken;
 
     invoke-virtual {p0, p1}, Lcom/google/common/reflect/TypeToken$TypeCollector$1;->getInterfaces(Lcom/google/common/reflect/TypeToken;)Ljava/lang/Iterable;
@@ -80,6 +82,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/common/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object p0
@@ -90,6 +93,7 @@
 .method public bridge synthetic getRawType(Ljava/lang/Object;)Ljava/lang/Class;
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/reflect/TypeToken;
 
     invoke-virtual {p0, p1}, Lcom/google/common/reflect/TypeToken$TypeCollector$1;->getRawType(Lcom/google/common/reflect/TypeToken;)Ljava/lang/Class;
@@ -111,6 +115,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/common/reflect/TypeToken;->getGenericSuperclass()Lcom/google/common/reflect/TypeToken;
 
     move-result-object p0
@@ -121,6 +126,7 @@
 .method public bridge synthetic getSuperclass(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/reflect/TypeToken;
 
     invoke-virtual {p0, p1}, Lcom/google/common/reflect/TypeToken$TypeCollector$1;->getSuperclass(Lcom/google/common/reflect/TypeToken;)Lcom/google/common/reflect/TypeToken;

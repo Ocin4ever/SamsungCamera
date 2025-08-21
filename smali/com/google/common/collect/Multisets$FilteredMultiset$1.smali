@@ -53,6 +53,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/Multisets$FilteredMultiset$1;->this$0:Lcom/google/common/collect/Multisets$FilteredMultiset;
 
     iget-object p0, p0, Lcom/google/common/collect/Multisets$FilteredMultiset;->predicate:Lcom/google/common/base/Predicate;
@@ -71,6 +72,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/collect/Multiset$Entry;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Multisets$FilteredMultiset$1;->apply(Lcom/google/common/collect/Multiset$Entry;)Z

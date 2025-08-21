@@ -57,14 +57,17 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance v0, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/c;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/c;-><init>(Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/CompositionGuide;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/CompositionGuide;->mUpdateCompositionTextRunnable:Ljava/lang/Runnable;
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/CompositionGuide;->initialize(Landroid/content/Context;)V
 
     return-void
@@ -73,14 +76,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 5
     new-instance p2, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/c;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/c;-><init>(Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/CompositionGuide;)V
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/CompositionGuide;->mUpdateCompositionTextRunnable:Ljava/lang/Runnable;
 
+    .line 6
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/CompositionGuide;->initialize(Landroid/content/Context;)V
 
     return-void
@@ -89,14 +95,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 7
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 8
     new-instance p2, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/c;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/c;-><init>(Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/CompositionGuide;)V
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/CompositionGuide;->mUpdateCompositionTextRunnable:Ljava/lang/Runnable;
 
+    .line 9
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/CompositionGuide;->initialize(Landroid/content/Context;)V
 
     return-void

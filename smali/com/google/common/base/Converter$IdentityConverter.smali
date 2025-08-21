@@ -129,12 +129,14 @@
         }
     .end annotation
 
+    .line 1
     return-object p0
 .end method
 
 .method public bridge synthetic reverse()Lcom/google/common/base/Converter;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/base/Converter$IdentityConverter;->reverse()Lcom/google/common/base/Converter$IdentityConverter;
 
     move-result-object p0

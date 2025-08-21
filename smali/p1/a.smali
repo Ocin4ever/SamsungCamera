@@ -91,6 +91,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 1
     sget v0, Landroidx/appcompat/R$attr;->radioButtonStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lp1/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -101,6 +102,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 7
 
+    .line 2
     sget v4, Lp1/a;->c:I
 
     invoke-static {p1, p2, p3, v4}, Lx1/a;->c(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
@@ -109,10 +111,12 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatRadioButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
+    .line 4
     sget-object v2, Ly0/l;->w3:[I
 
     const/4 v6, 0x0
@@ -125,10 +129,12 @@
 
     move v3, p3
 
+    .line 5
     invoke-static/range {v0 .. v5}, Lm1/q;->i(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
+    .line 6
     sget p3, Ly0/l;->x3:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -137,21 +143,26 @@
 
     if-eqz v0, :cond_0
 
+    .line 7
     invoke-static {p1, p2, p3}, Lq1/c;->a(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
+    .line 8
     invoke-static {p0, p1}, Landroidx/core/widget/CompoundButtonCompat;->setButtonTintList(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
 
+    .line 9
     :cond_0
     sget p1, Ly0/l;->y3:I
 
+    .line 10
     invoke-virtual {p2, p1, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lp1/a;->b:Z
 
+    .line 11
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void

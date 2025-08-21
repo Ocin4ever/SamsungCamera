@@ -77,8 +77,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/multirecording/MultiRecordingContract$View;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
+    .line 2
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/multirecording/MultiRecordingPresenter$MainHandler;
 
     const/4 p2, 0x0
@@ -89,10 +91,12 @@
 
     const/high16 p1, -0x80000000
 
+    .line 3
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/MultiRecordingPresenter;->mPreviousZoomValue:I
 
     const/4 p1, 0x0
 
+    .line 4
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/MultiRecordingPresenter;->mGroupId:I
 
     return-void
@@ -101,8 +105,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/multirecording/MultiRecordingContract$View;I)V
     .locals 0
 
+    .line 5
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
+    .line 6
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/multirecording/MultiRecordingPresenter$MainHandler;
 
     const/4 p2, 0x0
@@ -113,10 +119,12 @@
 
     const/high16 p1, -0x80000000
 
+    .line 7
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/MultiRecordingPresenter;->mPreviousZoomValue:I
 
     const/4 p1, 0x0
 
+    .line 8
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/MultiRecordingPresenter;->mGroupId:I
 
     return-void

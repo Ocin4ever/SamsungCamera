@@ -58,8 +58,10 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureRequestInfo;JJ)V
     .locals 2
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 9
     new-instance v0, Ljava/util/PriorityQueue;
 
     invoke-direct {v0}, Ljava/util/PriorityQueue;-><init>()V
@@ -68,18 +70,23 @@
 
     const v0, 0x7fffffff
 
+    .line 10
     iput v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData;->e:I
 
     const/4 v0, 0x0
 
+    .line 11
     iput v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData;->f:I
 
     const-wide/16 v0, -0x1
 
+    .line 12
     iput-wide v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData;->g:J
 
+    .line 13
     invoke-virtual {p0, p1, p4, p5}, Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData;->p(Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureRequestInfo;J)Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData;
 
+    .line 14
     iput-wide p2, p0, Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData;->b:J
 
     return-void
@@ -88,8 +95,10 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/util/BlockingImageReader;Landroid/media/Image;Lcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData$ImageStream$Type;Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData$ImageStream$Priority;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/PriorityQueue;
 
     invoke-direct {v0}, Ljava/util/PriorityQueue;-><init>()V
@@ -98,18 +107,23 @@
 
     const v0, 0x7fffffff
 
+    .line 3
     iput v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData;->e:I
 
     const/4 v0, 0x0
 
+    .line 4
     iput v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData;->f:I
 
     const-wide/16 v0, -0x1
 
+    .line 5
     iput-wide v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData;->g:J
 
+    .line 6
     invoke-virtual/range {p0 .. p5}, Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData;->a(Lcom/samsung/android/camera/core2/util/BlockingImageReader;Landroid/media/Image;Lcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData$ImageStream$Type;Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData$ImageStream$Priority;)Lcom/samsung/android/camera/core2/device/CamDeviceUtils$PictureData;
 
+    .line 7
     invoke-virtual {p2}, Landroid/media/Image;->getTimestamp()J
 
     move-result-wide p1

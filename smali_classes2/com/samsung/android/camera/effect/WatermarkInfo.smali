@@ -31,18 +31,22 @@
 .method public constructor <init>(Landroid/graphics/Bitmap;I)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/samsung/android/camera/effect/WatermarkInfo;->mAlignPosition:I
 
+    .line 3
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1, v0, v0, v0, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
     iput-object v1, p0, Lcom/samsung/android/camera/effect/WatermarkInfo;->mMargin:Landroid/graphics/Rect;
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -61,8 +65,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     iput-object p1, p0, Lcom/samsung/android/camera/effect/WatermarkInfo;->mBitmap:Landroid/graphics/Bitmap;
 
+    .line 6
     iput p2, p0, Lcom/samsung/android/camera/effect/WatermarkInfo;->mAlignPosition:I
 
     return-void
@@ -71,18 +77,22 @@
 .method public constructor <init>(Landroid/graphics/Bitmap;III)V
     .locals 2
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 8
     iput v0, p0, Lcom/samsung/android/camera/effect/WatermarkInfo;->mAlignPosition:I
 
+    .line 9
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1, v0, v0, v0, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
     iput-object v1, p0, Lcom/samsung/android/camera/effect/WatermarkInfo;->mMargin:Landroid/graphics/Rect;
 
+    .line 10
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,10 +123,13 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 11
     iput-object p1, p0, Lcom/samsung/android/camera/effect/WatermarkInfo;->mBitmap:Landroid/graphics/Bitmap;
 
+    .line 12
     iput p2, p0, Lcom/samsung/android/camera/effect/WatermarkInfo;->mAlignPosition:I
 
+    .line 13
     iget-object p0, p0, Lcom/samsung/android/camera/effect/WatermarkInfo;->mMargin:Landroid/graphics/Rect;
 
     new-instance p1, Landroid/graphics/Rect;

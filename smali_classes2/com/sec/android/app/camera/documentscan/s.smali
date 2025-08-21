@@ -42,20 +42,24 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/documentscan/s$a;)V
     .locals 3
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Lu5/a;
 
     invoke-direct {v0}, Lu5/a;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/documentscan/s;->l:Lu5/a;
 
+    .line 4
     invoke-static {p1}, Lcom/sec/android/app/camera/documentscan/s$a;->a(Lcom/sec/android/app/camera/documentscan/s$a;)Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/documentscan/s;->a:Landroid/content/Context;
 
+    .line 5
     invoke-static {p1}, Lcom/sec/android/app/camera/documentscan/s$a;->c(Lcom/sec/android/app/camera/documentscan/s$a;)Landroid/content/Intent;
 
     move-result-object v0
@@ -68,6 +72,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/documentscan/s;->e:Ljava/lang/String;
 
+    .line 6
     invoke-static {p1}, Lcom/sec/android/app/camera/documentscan/s$a;->c(Lcom/sec/android/app/camera/documentscan/s$a;)Landroid/content/Intent;
 
     move-result-object v0
@@ -82,6 +87,7 @@
 
     if-nez v0, :cond_0
 
+    .line 7
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,6 +122,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/documentscan/s;->f:Ljava/lang/String;
 
+    .line 8
     :cond_0
     invoke-static {p1}, Lcom/sec/android/app/camera/documentscan/s$a;->c(Lcom/sec/android/app/camera/documentscan/s$a;)Landroid/content/Intent;
 
@@ -129,6 +136,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/documentscan/s;->g:Ljava/lang/String;
 
+    .line 9
     invoke-static {p1}, Lcom/sec/android/app/camera/documentscan/s$a;->c(Lcom/sec/android/app/camera/documentscan/s$a;)Landroid/content/Intent;
 
     move-result-object v0
@@ -143,6 +151,7 @@
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/documentscan/s;->h:Z
 
+    .line 10
     invoke-static {p1}, Lcom/sec/android/app/camera/documentscan/s$a;->c(Lcom/sec/android/app/camera/documentscan/s$a;)Landroid/content/Intent;
 
     move-result-object v0
@@ -157,30 +166,35 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/documentscan/s;->j:F
 
+    .line 11
     invoke-static {p1}, Lcom/sec/android/app/camera/documentscan/s$a;->b(Lcom/sec/android/app/camera/documentscan/s$a;)Landroid/util/Size;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/documentscan/s;->b:Landroid/util/Size;
 
+    .line 12
     invoke-static {p1}, Lcom/sec/android/app/camera/documentscan/s$a;->e(Lcom/sec/android/app/camera/documentscan/s$a;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/documentscan/s;->c:Ljava/util/ArrayList;
 
+    .line 13
     invoke-static {p1}, Lcom/sec/android/app/camera/documentscan/s$a;->f(Lcom/sec/android/app/camera/documentscan/s$a;)Lcom/sec/android/app/camera/documentscan/s$b;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/documentscan/s;->d:Lcom/sec/android/app/camera/documentscan/s$b;
 
+    .line 14
     invoke-static {p1}, Lcom/sec/android/app/camera/documentscan/s$a;->g(Lcom/sec/android/app/camera/documentscan/s$a;)I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/app/camera/documentscan/s;->i:I
 
+    .line 15
     invoke-static {p1}, Lcom/sec/android/app/camera/documentscan/s$a;->d(Lcom/sec/android/app/camera/documentscan/s$a;)I
 
     move-result p1
@@ -203,6 +217,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/documentscan/s$a;Lcom/sec/android/app/camera/documentscan/t;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/documentscan/s;-><init>(Lcom/sec/android/app/camera/documentscan/s$a;)V
 
     return-void

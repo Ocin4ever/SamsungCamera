@@ -386,6 +386,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     aget-object p1, p1, v0
 
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask;->decodeQrData(Landroid/graphics/Bitmap;)Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask$QrDecodeResult;
@@ -398,6 +399,7 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, [Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask;->doInBackground([Landroid/graphics/Bitmap;)Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask$QrDecodeResult;
@@ -410,10 +412,12 @@
 .method public onPostExecute(Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask$QrDecodeResult;)V
     .locals 2
 
+    .line 2
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask;->mListener:Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask$QrDecoderListener;
 
     iget-object v0, p1, Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask$QrDecodeResult;->mQrData:Ljava/lang/String;
@@ -426,6 +430,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask;->mListener:Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask$QrDecoderListener;
 
@@ -438,6 +443,7 @@
 .method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask$QrDecodeResult;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask;->onPostExecute(Lcom/sec/android/app/camera/shootingmode/qr/QrCodeDecoderTask$QrDecodeResult;)V

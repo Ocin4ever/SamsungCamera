@@ -334,10 +334,12 @@
 .method public setEntries(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)V
     .locals 2
 
+    .line 3
     sget-object v0, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->WATERMARK_FONT:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
     if-ne p1, v0, :cond_1
 
+    .line 4
     sget-object p1, Ly2/b;->K2:Ly2/b;
 
     invoke-static {p1}, Ly2/d;->e(Ly2/b;)Z
@@ -346,6 +348,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -360,6 +363,7 @@
 
     move-result-object p1
 
+    .line 6
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -376,6 +380,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -391,6 +396,7 @@
 
     move-result-object p1
 
+    .line 8
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -405,11 +411,14 @@
 
     move-result-object v0
 
+    .line 9
     :goto_0
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/setting/SpinnerPreference;->setEntries([Ljava/lang/CharSequence;)V
 
+    .line 10
     invoke-virtual {p0, v0}, Landroidx/preference/ListPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
+    .line 11
     invoke-direct {p0}, Lcom/sec/android/app/camera/setting/SpinnerPreference;->updateEntries()V
 
     :cond_1
@@ -419,8 +428,10 @@
 .method public setEntries([Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/preference/ListPreference;->setEntries([Ljava/lang/CharSequence;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/sec/android/app/camera/setting/SpinnerPreference;->updateEntries()V
 
     return-void

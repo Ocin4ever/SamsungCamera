@@ -92,6 +92,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Landroid/os/LocaleList;->isEmpty()Z
 
     move-result v0
@@ -100,21 +101,25 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-static {p0}, Landroidx/core/os/LocaleListCompat;->wrap(Landroid/os/LocaleList;)Landroidx/core/os/LocaleListCompat;
 
     move-result-object p0
 
+    .line 6
     invoke-static {p1}, Landroidx/core/os/LocaleListCompat;->wrap(Landroid/os/LocaleList;)Landroidx/core/os/LocaleListCompat;
 
     move-result-object p1
 
+    .line 7
     invoke-static {p0, p1}, Landroidx/appcompat/app/LocaleOverlayHelper;->combineLocales(Landroidx/core/os/LocaleListCompat;Landroidx/core/os/LocaleListCompat;)Landroidx/core/os/LocaleListCompat;
 
     move-result-object p0
 
     return-object p0
 
+    .line 8
     :cond_1
     :goto_0
     invoke-static {}, Landroidx/core/os/LocaleListCompat;->getEmptyLocaleList()Landroidx/core/os/LocaleListCompat;
@@ -129,6 +134,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/core/os/LocaleListCompat;->isEmpty()Z
 
     move-result v0
@@ -137,6 +143,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-static {p0, p1}, Landroidx/appcompat/app/LocaleOverlayHelper;->combineLocales(Landroidx/core/os/LocaleListCompat;Landroidx/core/os/LocaleListCompat;)Landroidx/core/os/LocaleListCompat;
 
@@ -144,6 +151,7 @@
 
     return-object p0
 
+    .line 3
     :cond_1
     :goto_0
     invoke-static {}, Landroidx/core/os/LocaleListCompat;->getEmptyLocaleList()Landroidx/core/os/LocaleListCompat;

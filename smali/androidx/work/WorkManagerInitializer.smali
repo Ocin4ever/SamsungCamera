@@ -49,6 +49,7 @@
 .method public create(Landroid/content/Context;)Landroidx/work/WorkManager;
     .locals 2
 
+    .line 2
     invoke-static {}, Landroidx/work/Logger;->get()Landroidx/work/Logger;
 
     move-result-object p0
@@ -59,6 +60,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroidx/work/Logger;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 3
     new-instance p0, Landroidx/work/Configuration$Builder;
 
     invoke-direct {p0}, Landroidx/work/Configuration$Builder;-><init>()V
@@ -69,6 +71,7 @@
 
     invoke-static {p1, p0}, Landroidx/work/WorkManager;->initialize(Landroid/content/Context;Landroidx/work/Configuration;)V
 
+    .line 4
     invoke-static {p1}, Landroidx/work/WorkManager;->getInstance(Landroid/content/Context;)Landroidx/work/WorkManager;
 
     move-result-object p0
@@ -79,6 +82,7 @@
 .method public bridge synthetic create(Landroid/content/Context;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/work/WorkManagerInitializer;->create(Landroid/content/Context;)Landroidx/work/WorkManager;
 
     move-result-object p0

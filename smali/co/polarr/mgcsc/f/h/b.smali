@@ -79,6 +79,7 @@
 .method private static a(Landroid/graphics/PointF;Landroid/graphics/PointF;)D
     .locals 4
 
+    .line 1
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
     iget v1, p1, Landroid/graphics/PointF;->x:F
@@ -117,6 +118,7 @@
 .method private static a(Landroid/graphics/RectF;)D
     .locals 2
 
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/RectF;->width()F
 
     move-result v0
@@ -135,6 +137,7 @@
 .method private static a(Lco/polarr/mgcsc/entities/FaceDetected;)F
     .locals 3
 
+    .line 3
     iget-object v0, p0, Lco/polarr/mgcsc/entities/FaceDetected;->rect:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lco/polarr/mgcsc/entities/FaceDetected;->nose:Landroid/graphics/PointF;
@@ -192,6 +195,7 @@
         }
     .end annotation
 
+    .line 4
     const/4 v0, 0x0
 
     if-eqz p0, :cond_7
@@ -481,6 +485,7 @@
         }
     .end annotation
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -539,6 +544,7 @@
 .method public static a(FDZ)Lco/polarr/mgcsc/entities/SuggestionItem;
     .locals 2
 
+    .line 6
     const-wide/high16 v0, 0x4034000000000000L    # 20.0
 
     mul-double/2addr p1, v0
@@ -596,6 +602,7 @@
 .method private static a(Landroid/graphics/PointF;)Lco/polarr/mgcsc/entities/SuggestionItem;
     .locals 10
 
+    .line 7
     const/4 v0, 0x5
 
     new-array v1, v0, [Landroid/graphics/PointF;
@@ -713,6 +720,7 @@
 .method private static a(Landroid/graphics/PointF;F)Lco/polarr/mgcsc/entities/SuggestionItem;
     .locals 9
 
+    .line 8
     const/4 v0, 0x3
 
     new-array v1, v0, [Landroid/graphics/PointF;
@@ -806,6 +814,7 @@
 .method public static a(Lco/polarr/mgcsc/entities/ObjectResult;Lco/polarr/mgcsc/entities/SuggestionItem;ZD)Lco/polarr/mgcsc/entities/SuggestionItem;
     .locals 27
 
+    .line 9
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -1488,6 +1497,7 @@
         }
     .end annotation
 
+    .line 10
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -1903,6 +1913,7 @@
 .method private static a(Lco/polarr/mgcsc/entities/SuggestionItem;Z)Lco/polarr/mgcsc/entities/SuggestionItem;
     .locals 8
 
+    .line 11
     if-nez p1, :cond_0
 
     return-object p0
@@ -2109,6 +2120,7 @@
         }
     .end annotation
 
+    .line 12
     move-object/from16 v0, p1
 
     move/from16 v7, p7
@@ -3498,6 +3510,7 @@
         }
     .end annotation
 
+    .line 13
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -4197,6 +4210,7 @@
         }
     .end annotation
 
+    .line 14
     move-object/from16 v7, p0
 
     new-instance v8, Lco/polarr/mgcsc/entities/SuggestionItem;
@@ -4716,6 +4730,7 @@
         }
     .end annotation
 
+    .line 15
     move-object v0, p0
 
     if-eqz v0, :cond_5
@@ -4854,6 +4869,7 @@
 .method private static a(Lco/polarr/mgcsc/entities/FaceDetected;FF)Z
     .locals 2
 
+    .line 16
     sget v0, Lco/polarr/mgcsc/f/h/b;->f:I
 
     int-to-float v0, v0
@@ -4905,6 +4921,7 @@
 .method private static b(Landroid/graphics/RectF;)D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/RectF;->height()F
 
     move-result v0
@@ -4923,6 +4940,7 @@
 .method private static b(Landroid/graphics/PointF;Landroid/graphics/PointF;)Lco/polarr/mgcsc/entities/Direction;
     .locals 4
 
+    .line 2
     invoke-static {p0, p1}, Lco/polarr/mgcsc/f/h/b;->a(Landroid/graphics/PointF;Landroid/graphics/PointF;)D
 
     move-result-wide v0
@@ -4995,6 +5013,7 @@
 .method private static b(Landroid/graphics/PointF;)Lco/polarr/mgcsc/entities/SuggestionItem;
     .locals 10
 
+    .line 3
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
     const/4 v1, 0x3
@@ -5090,6 +5109,7 @@
 .method private static b(Landroid/graphics/PointF;F)Lco/polarr/mgcsc/entities/SuggestionItem;
     .locals 5
 
+    .line 4
     new-instance v0, Landroid/graphics/PointF;
 
     const/high16 v1, 0x43160000    # 150.0f
@@ -5170,6 +5190,7 @@
         }
     .end annotation
 
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V

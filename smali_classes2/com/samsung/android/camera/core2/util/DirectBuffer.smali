@@ -158,22 +158,26 @@
 .method public static wrap(Ljava/nio/ByteBuffer;IIZ)Lcom/samsung/android/camera/core2/util/DirectBuffer;
     .locals 3
 
+    .line 2
     invoke-virtual {p0}, Ljava/nio/Buffer;->limit()I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
 
     move-result v1
 
     add-int/2addr p2, p1
 
+    .line 4
     invoke-virtual {p0, p2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
     move-result-object p2
 
     invoke-virtual {p2, p1}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
 
+    .line 5
     new-instance p1, Lcom/samsung/android/camera/core2/util/DirectBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -184,6 +188,7 @@
 
     invoke-direct {p1, p2, v2, p3}, Lcom/samsung/android/camera/core2/util/DirectBuffer;-><init>(Ljava/nio/ByteBuffer;Lcom/samsung/android/camera/core2/util/DirectBuffer;Z)V
 
+    .line 6
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
     move-result-object p0
@@ -196,6 +201,7 @@
 .method public static wrap(Ljava/nio/ByteBuffer;Z)Lcom/samsung/android/camera/core2/util/DirectBuffer;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/samsung/android/camera/core2/util/DirectBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;

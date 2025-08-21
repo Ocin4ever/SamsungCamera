@@ -108,6 +108,7 @@
 .method public static final isPhotoPickerAvailable()Z
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia;->Companion:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;
 
     invoke-virtual {v0}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;->isPhotoPickerAvailable()Z
@@ -120,6 +121,7 @@
 .method public static final isPhotoPickerAvailable(Landroid/content/Context;)Z
     .locals 1
 
+    .line 2
     sget-object v0, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia;->Companion:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;
 
     invoke-virtual {v0, p0}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;->isPhotoPickerAvailable(Landroid/content/Context;)Z
@@ -166,6 +168,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     sget-object p0, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia;->Companion:Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;
 
     invoke-virtual {p0}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;->isSystemPickerAvailable$activity_release()Z
@@ -174,12 +177,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "android.provider.action.PICK_IMAGES"
 
     invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {p2}, Landroidx/activity/result/PickVisualMediaRequest;->getMediaType()Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$VisualMediaType;
 
     move-result-object p2
@@ -192,6 +197,7 @@
 
     goto/16 :goto_1
 
+    .line 5
     :cond_0
     invoke-virtual {p0, p1}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;->isSystemFallbackPickerAvailable$activity_release(Landroid/content/Context;)Z
 
@@ -201,6 +207,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-virtual {p0, p1}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;->getSystemFallbackPicker$activity_release(Landroid/content/Context;)Landroid/content/pm/ResolveInfo;
 
     move-result-object p1
@@ -209,12 +216,14 @@
 
     iget-object p1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
+    .line 7
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "androidx.activity.result.contract.action.PICK_IMAGES"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 8
     iget-object v1, p1, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -223,6 +232,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 9
     invoke-virtual {p2}, Landroidx/activity/result/PickVisualMediaRequest;->getMediaType()Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$VisualMediaType;
 
     move-result-object p1
@@ -238,6 +248,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -249,6 +260,7 @@
 
     throw p0
 
+    .line 11
     :cond_2
     invoke-virtual {p0, p1}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;->isGmsPickerAvailable$activity_release(Landroid/content/Context;)Z
 
@@ -256,6 +268,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 12
     invoke-virtual {p0, p1}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;->getGmsPicker$activity_release(Landroid/content/Context;)Landroid/content/pm/ResolveInfo;
 
     move-result-object p1
@@ -264,12 +277,14 @@
 
     iget-object p1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
+    .line 13
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.google.android.gms.provider.action.PICK_IMAGES"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 14
     iget-object v1, p1, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -278,6 +293,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 15
     invoke-virtual {p2}, Landroidx/activity/result/PickVisualMediaRequest;->getMediaType()Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$VisualMediaType;
 
     move-result-object p1
@@ -290,6 +306,7 @@
 
     goto :goto_0
 
+    .line 16
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -301,6 +318,7 @@
 
     throw p0
 
+    .line 17
     :cond_4
     new-instance p1, Landroid/content/Intent;
 
@@ -308,6 +326,7 @@
 
     invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 18
     invoke-virtual {p2}, Landroidx/activity/result/PickVisualMediaRequest;->getMediaType()Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$VisualMediaType;
 
     move-result-object p2
@@ -318,6 +337,7 @@
 
     invoke-virtual {p1, p0}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 19
     invoke-virtual {p1}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
     move-result-object p0
@@ -326,12 +346,14 @@
 
     const-string p0, "*/*"
 
+    .line 20
     invoke-virtual {p1, p0}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p0, "image/*"
 
     const-string p2, "video/*"
 
+    .line 21
     filled-new-array {p0, p2}, [Ljava/lang/String;
 
     move-result-object p0
@@ -348,6 +370,7 @@
 .method public bridge synthetic createIntent(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
     .locals 0
 
+    .line 1
     check-cast p2, Landroidx/activity/result/PickVisualMediaRequest;
 
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia;->createIntent(Landroid/content/Context;Landroidx/activity/result/PickVisualMediaRequest;)Landroid/content/Intent;
@@ -371,6 +394,7 @@
         }
     .end annotation
 
+    .line 1
     const-string p0, "context"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
@@ -387,6 +411,7 @@
 .method public bridge synthetic getSynchronousResult(Landroid/content/Context;Ljava/lang/Object;)Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
     .locals 0
 
+    .line 2
     check-cast p2, Landroidx/activity/result/PickVisualMediaRequest;
 
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia;->getSynchronousResult(Landroid/content/Context;Landroidx/activity/result/PickVisualMediaRequest;)Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
@@ -423,6 +448,7 @@
     :goto_1
     if-eqz p2, :cond_3
 
+    .line 2
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p0
@@ -451,6 +477,7 @@
 .method public bridge synthetic parseResult(ILandroid/content/Intent;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia;->parseResult(ILandroid/content/Intent;)Landroid/net/Uri;
 
     move-result-object p0

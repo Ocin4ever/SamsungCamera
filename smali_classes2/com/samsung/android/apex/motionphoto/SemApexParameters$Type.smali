@@ -297,6 +297,7 @@
 .method public static valueOf(I)Lcom/samsung/android/apex/motionphoto/SemApexParameters$Type;
     .locals 5
 
+    .line 2
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/SemApexParameters$Type;->values()[Lcom/samsung/android/apex/motionphoto/SemApexParameters$Type;
 
     move-result-object v0
@@ -310,6 +311,7 @@
 
     aget-object v3, v0, v2
 
+    .line 3
     iget v4, v3, Lcom/samsung/android/apex/motionphoto/SemApexParameters$Type;->val:I
 
     if-ne p0, v4, :cond_0
@@ -321,6 +323,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     sget-object p0, Lcom/samsung/android/apex/motionphoto/SemApexParameters$Type;->NONE:Lcom/samsung/android/apex/motionphoto/SemApexParameters$Type;
 
@@ -330,6 +333,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/samsung/android/apex/motionphoto/SemApexParameters$Type;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/samsung/android/apex/motionphoto/SemApexParameters$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;

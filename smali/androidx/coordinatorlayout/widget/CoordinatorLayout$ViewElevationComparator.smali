@@ -40,10 +40,12 @@
 .method public compare(Landroid/view/View;Landroid/view/View;)I
     .locals 0
 
+    .line 2
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->getZ(Landroid/view/View;)F
 
     move-result p0
 
+    .line 3
     invoke-static {p2}, Landroidx/core/view/ViewCompat;->getZ(Landroid/view/View;)F
 
     move-result p1
@@ -74,6 +76,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     check-cast p2, Landroid/view/View;

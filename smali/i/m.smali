@@ -22,12 +22,15 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Li/m;->b:Ljava/lang/String;
 
+    .line 3
     new-instance v1, Li/o;
 
     invoke-direct {v1, v0, v0, v0}, Li/o;-><init>(Ljava/lang/String;Ljava/lang/String;Lk/d;)V
@@ -40,12 +43,15 @@
 .method public constructor <init>(Li/o;)V
     .locals 1
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Li/m;->b:Ljava/lang/String;
 
+    .line 6
     iput-object p1, p0, Li/m;->a:Li/o;
 
     return-void

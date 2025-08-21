@@ -42,6 +42,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Iterable;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Iterables$10;->apply(Ljava/lang/Iterable;)Ljava/util/Iterator;
@@ -63,6 +64,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0

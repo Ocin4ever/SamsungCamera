@@ -41,10 +41,12 @@
 .method private constructor <init>(Landroidx/savedstate/SavedStateRegistryOwner;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Landroidx/savedstate/SavedStateRegistryController;->owner:Landroidx/savedstate/SavedStateRegistryOwner;
 
+    .line 3
     new-instance p1, Landroidx/savedstate/SavedStateRegistry;
 
     invoke-direct {p1}, Landroidx/savedstate/SavedStateRegistry;-><init>()V
@@ -57,6 +59,7 @@
 .method public synthetic constructor <init>(Landroidx/savedstate/SavedStateRegistryOwner;Lkotlin/jvm/internal/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/savedstate/SavedStateRegistryController;-><init>(Landroidx/savedstate/SavedStateRegistryOwner;)V
 
     return-void

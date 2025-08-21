@@ -57,6 +57,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/HashBasedTable$Factory;->get()Ljava/util/Map;
 
     move-result-object p0
@@ -74,6 +75,7 @@
         }
     .end annotation
 
+    .line 2
     iget p0, p0, Lcom/google/common/collect/HashBasedTable$Factory;->expectedSize:I
 
     invoke-static {p0}, Lcom/google/common/collect/Maps;->newLinkedHashMapWithExpectedSize(I)Ljava/util/LinkedHashMap;

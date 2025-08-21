@@ -46,6 +46,7 @@
 .method public final invoke(Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/SelectableLine;Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/SelectableLine;)Ljava/lang/Integer;
     .locals 4
 
+    .line 2
     sget-object v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/DrawUtil;->INSTANCE:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/DrawUtil;
 
     iget-object v1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextSelectionHelper$findNearestLineInBlockLineByLine$sortedSelectableLines$1;->$point:Landroid/graphics/Point;
@@ -58,6 +59,7 @@
 
     move-result v1
 
+    .line 3
     iget-object v2, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextSelectionHelper$findNearestLineInBlockLineByLine$sortedSelectableLines$1;->$point:Landroid/graphics/Point;
 
     invoke-virtual {p2}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/SelectableLine;->getPoly()[Landroid/graphics/Point;
@@ -82,6 +84,7 @@
     :goto_0
     if-eqz v3, :cond_1
 
+    .line 4
     iget-object v1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextSelectionHelper$findNearestLineInBlockLineByLine$sortedSelectableLines$1;->$point:Landroid/graphics/Point;
 
     invoke-virtual {p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/SelectableLine;->getPoly()[Landroid/graphics/Point;
@@ -92,6 +95,7 @@
 
     move-result p1
 
+    .line 5
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextSelectionHelper$findNearestLineInBlockLineByLine$sortedSelectableLines$1;->$point:Landroid/graphics/Point;
 
     invoke-virtual {p2}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/SelectableLine;->getPoly()[Landroid/graphics/Point;
@@ -102,12 +106,14 @@
 
     move-result p0
 
+    .line 6
     invoke-static {p1, p0}, Ljava/lang/Float;->compare(FF)I
 
     move-result p0
 
     goto :goto_1
 
+    .line 7
     :cond_1
     invoke-static {v1, v2}, Ljava/lang/Float;->compare(FF)I
 
@@ -124,6 +130,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/SelectableLine;
 
     check-cast p2, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/SelectableLine;

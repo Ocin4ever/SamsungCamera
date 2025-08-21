@@ -128,6 +128,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/DescendingMultiset;->forwardMultiset()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -138,6 +139,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/DescendingMultiset;->delegate()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -148,6 +150,7 @@
 .method public bridge synthetic delegate()Ljava/util/Collection;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/DescendingMultiset;->delegate()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -182,10 +185,12 @@
         }
     .end annotation
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/DescendingMultiset;->elementSet:Ljava/util/NavigableSet;
 
     if-nez v0, :cond_0
 
+    .line 4
     new-instance v0, Lcom/google/common/collect/SortedMultisets$NavigableElementSet;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/SortedMultisets$NavigableElementSet;-><init>(Lcom/google/common/collect/SortedMultiset;)V
@@ -199,6 +204,7 @@
 .method public bridge synthetic elementSet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/DescendingMultiset;->elementSet()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -209,6 +215,7 @@
 .method public bridge synthetic elementSet()Ljava/util/SortedSet;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/DescendingMultiset;->elementSet()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -465,6 +472,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->standardToArray()[Ljava/lang/Object;
 
     move-result-object p0
@@ -482,6 +490,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ForwardingCollection;->standardToArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0

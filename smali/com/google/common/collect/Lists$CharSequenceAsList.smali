@@ -42,12 +42,14 @@
 .method public get(I)Ljava/lang/Character;
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$CharSequenceAsList;->size()I
 
     move-result v0
 
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/Lists$CharSequenceAsList;->sequence:Ljava/lang/CharSequence;
 
     invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
@@ -64,6 +66,7 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Lists$CharSequenceAsList;->get(I)Ljava/lang/Character;
 
     move-result-object p0

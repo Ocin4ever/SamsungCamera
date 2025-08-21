@@ -49,6 +49,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Class;->getInterfaces()[Ljava/lang/Class;
 
     move-result-object p0
@@ -63,6 +64,7 @@
 .method public bridge synthetic getInterfaces(Ljava/lang/Object;)Ljava/lang/Iterable;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Class;
 
     invoke-virtual {p0, p1}, Lcom/google/common/reflect/TypeToken$TypeCollector$2;->getInterfaces(Ljava/lang/Class;)Ljava/lang/Iterable;
@@ -84,12 +86,14 @@
         }
     .end annotation
 
+    .line 1
     return-object p1
 .end method
 
 .method public bridge synthetic getRawType(Ljava/lang/Object;)Ljava/lang/Class;
     .locals 0
 
+    .line 2
     check-cast p1, Ljava/lang/Class;
 
     invoke-virtual {p0, p1}, Lcom/google/common/reflect/TypeToken$TypeCollector$2;->getRawType(Ljava/lang/Class;)Ljava/lang/Class;
@@ -111,6 +115,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object p0
@@ -121,6 +126,7 @@
 .method public bridge synthetic getSuperclass(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Class;
 
     invoke-virtual {p0, p1}, Lcom/google/common/reflect/TypeToken$TypeCollector$2;->getSuperclass(Ljava/lang/Class;)Ljava/lang/Class;

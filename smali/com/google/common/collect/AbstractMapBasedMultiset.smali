@@ -438,8 +438,10 @@
 
     const-string v0, "count"
 
+    .line 1
     invoke-static {p2, v0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;
 
     if-nez p2, :cond_0
@@ -455,6 +457,7 @@
 
     move-result p1
 
+    .line 3
     :goto_0
     iget-wide v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;->size:J
 
@@ -483,12 +486,15 @@
 
     const-string v0, "oldCount"
 
+    .line 4
     invoke-static {p2, v0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
     const-string v0, "newCount"
 
+    .line 5
     invoke-static {p3, v0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
+    .line 6
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-virtual {v0, p1}, Lcom/google/common/collect/ObjectCountHashMap;->indexOf(Ljava/lang/Object;)I
@@ -510,10 +516,12 @@
     :cond_0
     if-lez p3, :cond_1
 
+    .line 7
     iget-object p2, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-virtual {p2, p1, p3}, Lcom/google/common/collect/ObjectCountHashMap;->put(Ljava/lang/Object;I)I
 
+    .line 8
     iget-wide p1, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;->size:J
 
     int-to-long v0, p3
@@ -525,6 +533,7 @@
     :cond_1
     return v2
 
+    .line 9
     :cond_2
     iget-object p1, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;
 
@@ -539,10 +548,12 @@
     :cond_3
     if-nez p3, :cond_4
 
+    .line 10
     iget-object p1, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-virtual {p1, v0}, Lcom/google/common/collect/ObjectCountHashMap;->removeEntry(I)I
 
+    .line 11
     iget-wide v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;->size:J
 
     int-to-long p1, p2
@@ -553,11 +564,13 @@
 
     goto :goto_0
 
+    .line 12
     :cond_4
     iget-object p1, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-virtual {p1, v0, p3}, Lcom/google/common/collect/ObjectCountHashMap;->setValue(II)V
 
+    .line 13
     iget-wide v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;->size:J
 
     sub-int/2addr p3, p2

@@ -31,6 +31,7 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/ShootingActionProvider;)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -54,14 +55,19 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/LayerKeyEventManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
+    .line 4
     iput-object p2, p0, Lcom/sec/android/app/camera/layer/LayerKeyEventManager;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
 
+    .line 5
     iput-object p3, p0, Lcom/sec/android/app/camera/layer/LayerKeyEventManager;->mShootingActionProvider:Lcom/sec/android/app/camera/interfaces/ShootingActionProvider;
 
+    .line 6
     iput-object p4, p0, Lcom/sec/android/app/camera/layer/LayerKeyEventManager;->mKeyEventListenerAdapterList:Ljava/util/ArrayList;
 
     return-void

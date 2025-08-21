@@ -46,6 +46,7 @@
 .method public final invoke()Ljava/lang/Boolean;
     .locals 6
 
+    .line 2
     sget-object v0, Landroidx/window/layout/SafeWindowLayoutComponentProvider;->INSTANCE:Landroidx/window/layout/SafeWindowLayoutComponentProvider;
 
     iget-object p0, p0, Landroidx/window/layout/SafeWindowLayoutComponentProvider$isFoldingFeatureValid$1;->$classLoader:Ljava/lang/ClassLoader;
@@ -60,6 +61,7 @@
 
     const-string v3, "getBounds"
 
+    .line 3
     invoke-virtual {p0, v3, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
@@ -68,6 +70,7 @@
 
     new-array v4, v1, [Ljava/lang/Class;
 
+    .line 4
     invoke-virtual {p0, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
@@ -76,12 +79,14 @@
 
     new-array v5, v1, [Ljava/lang/Class;
 
+    .line 5
     invoke-virtual {p0, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p0
 
     const-string v4, "getBoundsMethod"
 
+    .line 6
     invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-class v4, Landroid/graphics/Rect;
@@ -96,6 +101,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 7
     invoke-static {v0, v2}, Landroidx/window/layout/SafeWindowLayoutComponentProvider;->access$isPublic(Landroidx/window/layout/SafeWindowLayoutComponentProvider;Ljava/lang/reflect/Method;)Z
 
     move-result v2
@@ -104,6 +110,7 @@
 
     const-string v2, "getTypeMethod"
 
+    .line 8
     invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -118,6 +125,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 9
     invoke-static {v0, v3}, Landroidx/window/layout/SafeWindowLayoutComponentProvider;->access$isPublic(Landroidx/window/layout/SafeWindowLayoutComponentProvider;Ljava/lang/reflect/Method;)Z
 
     move-result v3
@@ -126,6 +134,7 @@
 
     const-string v3, "getStateMethod"
 
+    .line 10
     invoke-static {p0, v3}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v2}, Lkotlin/jvm/internal/a0;->b(Ljava/lang/Class;)Lu6/c;
@@ -138,6 +147,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 11
     invoke-static {v0, p0}, Landroidx/window/layout/SafeWindowLayoutComponentProvider;->access$isPublic(Landroidx/window/layout/SafeWindowLayoutComponentProvider;Ljava/lang/reflect/Method;)Z
 
     move-result p0
@@ -157,6 +167,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/window/layout/SafeWindowLayoutComponentProvider$isFoldingFeatureValid$1;->invoke()Ljava/lang/Boolean;
 
     move-result-object p0

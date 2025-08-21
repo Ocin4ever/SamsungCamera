@@ -35,8 +35,10 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/samsung/android/scs/ai/sdkcommon/asr/ServerType;-><init>(Landroid/os/Parcel;)V
 
+    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
@@ -49,8 +51,10 @@
 .method public constructor <init>(Lcom/samsung/android/scs/ai/sdkcommon/asr/ServerFeature;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/scs/ai/sdkcommon/asr/ServerType;-><init>(Lcom/samsung/android/scs/ai/sdkcommon/asr/ServerFeature;Ljava/lang/String;)V
 
+    .line 2
     iput-object p3, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/ServerInfo;->endpoint:Ljava/lang/String;
 
     return-void
@@ -59,8 +63,10 @@
 .method public constructor <init>(Lcom/samsung/android/scs/ai/sdkcommon/asr/ServerFeature;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2, p4}, Lcom/samsung/android/scs/ai/sdkcommon/asr/ServerType;-><init>(Lcom/samsung/android/scs/ai/sdkcommon/asr/ServerFeature;Ljava/lang/String;Z)V
 
+    .line 4
     iput-object p3, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/ServerInfo;->endpoint:Ljava/lang/String;
 
     return-void

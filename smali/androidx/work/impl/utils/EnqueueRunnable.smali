@@ -34,6 +34,7 @@
 .method public constructor <init>(Landroidx/work/impl/WorkContinuationImpl;)V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/work/impl/OperationImpl;
 
     invoke-direct {v0}, Landroidx/work/impl/OperationImpl;-><init>()V
@@ -46,10 +47,13 @@
 .method public constructor <init>(Landroidx/work/impl/WorkContinuationImpl;Landroidx/work/impl/OperationImpl;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Landroidx/work/impl/utils/EnqueueRunnable;->mWorkContinuation:Landroidx/work/impl/WorkContinuationImpl;
 
+    .line 4
     iput-object p2, p0, Landroidx/work/impl/utils/EnqueueRunnable;->mOperation:Landroidx/work/impl/OperationImpl;
 
     return-void

@@ -158,6 +158,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Object;->bb:Landroidx/emoji2/text/flatbuffer/ReadBuf;
 
     iget v1, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Object;->end:I
@@ -178,8 +179,10 @@
 
     const/16 v0, 0x22
 
+    .line 2
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 3
     iget-object v1, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Object;->bb:Landroidx/emoji2/text/flatbuffer/ReadBuf;
 
     iget v2, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Object;->end:I
@@ -194,6 +197,7 @@
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 4
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return-object p1

@@ -42,6 +42,7 @@
 .method public bridge synthetic onCallbackDied(Landroid/os/IInterface;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/room/IMultiInstanceInvalidationCallback;
 
     invoke-virtual {p0, p1, p2}, Landroidx/room/MultiInstanceInvalidationService$callbackList$1;->onCallbackDied(Landroidx/room/IMultiInstanceInvalidationCallback;Ljava/lang/Object;)V
@@ -60,6 +61,7 @@
 
     invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Landroidx/room/MultiInstanceInvalidationService$callbackList$1;->this$0:Landroidx/room/MultiInstanceInvalidationService;
 
     invoke-virtual {p0}, Landroidx/room/MultiInstanceInvalidationService;->getClientNames$room_runtime_release()Ljava/util/Map;

@@ -59,6 +59,7 @@
 
     const-string v0, ""
 
+    .line 6
     invoke-direct {p0, p1, p2, v0, p3}, Landroidx/room/RoomOpenHelper;-><init>(Landroidx/room/DatabaseConfiguration;Landroidx/room/RoomOpenHelper$Delegate;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -83,16 +84,21 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget v0, p2, Landroidx/room/RoomOpenHelper$Delegate;->version:I
 
     invoke-direct {p0, v0}, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;-><init>(I)V
 
+    .line 2
     iput-object p1, p0, Landroidx/room/RoomOpenHelper;->configuration:Landroidx/room/DatabaseConfiguration;
 
+    .line 3
     iput-object p2, p0, Landroidx/room/RoomOpenHelper;->delegate:Landroidx/room/RoomOpenHelper$Delegate;
 
+    .line 4
     iput-object p3, p0, Landroidx/room/RoomOpenHelper;->identityHash:Ljava/lang/String;
 
+    .line 5
     iput-object p4, p0, Landroidx/room/RoomOpenHelper;->legacyHash:Ljava/lang/String;
 
     return-void

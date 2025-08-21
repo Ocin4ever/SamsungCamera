@@ -24,8 +24,10 @@
 .method private constructor <init>(Ljavax/crypto/Mac;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/hash/AbstractByteHasher;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/hash/MacHashFunction$MacHasher;->mac:Ljavax/crypto/Mac;
 
     return-void
@@ -34,6 +36,7 @@
 .method public synthetic constructor <init>(Ljavax/crypto/Mac;Lcom/google/common/hash/MacHashFunction$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/hash/MacHashFunction$MacHasher;-><init>(Ljavax/crypto/Mac;)V
 
     return-void
@@ -80,8 +83,10 @@
 .method public update(B)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/MacHashFunction$MacHasher;->checkNotDone()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/hash/MacHashFunction$MacHasher;->mac:Ljavax/crypto/Mac;
 
     invoke-virtual {p0, p1}, Ljavax/crypto/Mac;->update(B)V
@@ -92,10 +97,13 @@
 .method public update(Ljava/nio/ByteBuffer;)V
     .locals 0
 
+    .line 7
     invoke-direct {p0}, Lcom/google/common/hash/MacHashFunction$MacHasher;->checkNotDone()V
 
+    .line 8
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 9
     iget-object p0, p0, Lcom/google/common/hash/MacHashFunction$MacHasher;->mac:Ljavax/crypto/Mac;
 
     invoke-virtual {p0, p1}, Ljavax/crypto/Mac;->update(Ljava/nio/ByteBuffer;)V
@@ -106,8 +114,10 @@
 .method public update([B)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Lcom/google/common/hash/MacHashFunction$MacHasher;->checkNotDone()V
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/hash/MacHashFunction$MacHasher;->mac:Ljavax/crypto/Mac;
 
     invoke-virtual {p0, p1}, Ljavax/crypto/Mac;->update([B)V
@@ -118,8 +128,10 @@
 .method public update([BII)V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Lcom/google/common/hash/MacHashFunction$MacHasher;->checkNotDone()V
 
+    .line 6
     iget-object p0, p0, Lcom/google/common/hash/MacHashFunction$MacHasher;->mac:Ljavax/crypto/Mac;
 
     invoke-virtual {p0, p1, p2, p3}, Ljavax/crypto/Mac;->update([BII)V

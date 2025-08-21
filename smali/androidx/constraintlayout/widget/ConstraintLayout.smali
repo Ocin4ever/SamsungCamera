@@ -127,14 +127,17 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mChildrenByIds:Landroid/util/SparseArray;
 
+    .line 3
     new-instance p1, Ljava/util/ArrayList;
 
     const/4 v0, 0x4
@@ -143,6 +146,7 @@
 
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintHelpers:Ljava/util/ArrayList;
 
+    .line 4
     new-instance p1, Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;
 
     invoke-direct {p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;-><init>()V
@@ -151,68 +155,89 @@
 
     const/4 p1, 0x0
 
+    .line 5
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinWidth:I
 
+    .line 6
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinHeight:I
 
     const v0, 0x7fffffff
 
+    .line 7
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxWidth:I
 
+    .line 8
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxHeight:I
 
     const/4 v0, 0x1
 
+    .line 9
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDirtyHierarchy:Z
 
     const/16 v0, 0x101
 
+    .line 10
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOptimizationLevel:I
 
     const/4 v0, 0x0
 
+    .line 11
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
 
+    .line 12
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintLayoutSpec:Landroidx/constraintlayout/widget/ConstraintLayoutStates;
 
     const/4 v1, -0x1
 
+    .line 13
     iput v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSetId:I
 
+    .line 14
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     iput-object v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDesignIds:Ljava/util/HashMap;
 
+    .line 15
     iput v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidth:I
 
+    .line 16
     iput v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeight:I
 
+    .line 17
     iput v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthSize:I
 
+    .line 18
     iput v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightSize:I
 
+    .line 19
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthMode:I
 
+    .line 20
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightMode:I
 
+    .line 21
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mTempMapIdToWidget:Landroid/util/SparseArray;
 
+    .line 22
     new-instance v1, Landroidx/constraintlayout/widget/ConstraintLayout$Measurer;
 
     invoke-direct {v1, p0, p0}, Landroidx/constraintlayout/widget/ConstraintLayout$Measurer;-><init>(Landroidx/constraintlayout/widget/ConstraintLayout;Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     iput-object v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMeasurer:Landroidx/constraintlayout/widget/ConstraintLayout$Measurer;
 
+    .line 23
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOnMeasureWidthMeasureSpec:I
 
+    .line 24
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOnMeasureHeightMeasureSpec:I
 
+    .line 25
     invoke-direct {p0, v0, p1, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->init(Landroid/util/AttributeSet;II)V
 
     return-void
@@ -221,14 +246,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
+    .line 26
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 27
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mChildrenByIds:Landroid/util/SparseArray;
 
+    .line 28
     new-instance p1, Ljava/util/ArrayList;
 
     const/4 v0, 0x4
@@ -237,6 +265,7 @@
 
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintHelpers:Ljava/util/ArrayList;
 
+    .line 29
     new-instance p1, Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;
 
     invoke-direct {p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;-><init>()V
@@ -245,68 +274,89 @@
 
     const/4 p1, 0x0
 
+    .line 30
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinWidth:I
 
+    .line 31
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinHeight:I
 
     const v0, 0x7fffffff
 
+    .line 32
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxWidth:I
 
+    .line 33
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxHeight:I
 
     const/4 v0, 0x1
 
+    .line 34
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDirtyHierarchy:Z
 
     const/16 v0, 0x101
 
+    .line 35
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOptimizationLevel:I
 
     const/4 v0, 0x0
 
+    .line 36
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
 
+    .line 37
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintLayoutSpec:Landroidx/constraintlayout/widget/ConstraintLayoutStates;
 
     const/4 v0, -0x1
 
+    .line 38
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSetId:I
 
+    .line 39
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDesignIds:Ljava/util/HashMap;
 
+    .line 40
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidth:I
 
+    .line 41
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeight:I
 
+    .line 42
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthSize:I
 
+    .line 43
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightSize:I
 
+    .line 44
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthMode:I
 
+    .line 45
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightMode:I
 
+    .line 46
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mTempMapIdToWidget:Landroid/util/SparseArray;
 
+    .line 47
     new-instance v0, Landroidx/constraintlayout/widget/ConstraintLayout$Measurer;
 
     invoke-direct {v0, p0, p0}, Landroidx/constraintlayout/widget/ConstraintLayout$Measurer;-><init>(Landroidx/constraintlayout/widget/ConstraintLayout;Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMeasurer:Landroidx/constraintlayout/widget/ConstraintLayout$Measurer;
 
+    .line 48
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOnMeasureWidthMeasureSpec:I
 
+    .line 49
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOnMeasureHeightMeasureSpec:I
 
+    .line 50
     invoke-direct {p0, p2, p1, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->init(Landroid/util/AttributeSet;II)V
 
     return-void
@@ -315,14 +365,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 2
 
+    .line 51
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 52
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mChildrenByIds:Landroid/util/SparseArray;
 
+    .line 53
     new-instance p1, Ljava/util/ArrayList;
 
     const/4 v0, 0x4
@@ -331,6 +384,7 @@
 
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintHelpers:Ljava/util/ArrayList;
 
+    .line 54
     new-instance p1, Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;
 
     invoke-direct {p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;-><init>()V
@@ -339,68 +393,89 @@
 
     const/4 p1, 0x0
 
+    .line 55
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinWidth:I
 
+    .line 56
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinHeight:I
 
     const v0, 0x7fffffff
 
+    .line 57
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxWidth:I
 
+    .line 58
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxHeight:I
 
     const/4 v0, 0x1
 
+    .line 59
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDirtyHierarchy:Z
 
     const/16 v0, 0x101
 
+    .line 60
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOptimizationLevel:I
 
     const/4 v0, 0x0
 
+    .line 61
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
 
+    .line 62
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintLayoutSpec:Landroidx/constraintlayout/widget/ConstraintLayoutStates;
 
     const/4 v0, -0x1
 
+    .line 63
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSetId:I
 
+    .line 64
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDesignIds:Ljava/util/HashMap;
 
+    .line 65
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidth:I
 
+    .line 66
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeight:I
 
+    .line 67
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthSize:I
 
+    .line 68
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightSize:I
 
+    .line 69
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthMode:I
 
+    .line 70
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightMode:I
 
+    .line 71
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mTempMapIdToWidget:Landroid/util/SparseArray;
 
+    .line 72
     new-instance v0, Landroidx/constraintlayout/widget/ConstraintLayout$Measurer;
 
     invoke-direct {v0, p0, p0}, Landroidx/constraintlayout/widget/ConstraintLayout$Measurer;-><init>(Landroidx/constraintlayout/widget/ConstraintLayout;Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMeasurer:Landroidx/constraintlayout/widget/ConstraintLayout$Measurer;
 
+    .line 73
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOnMeasureWidthMeasureSpec:I
 
+    .line 74
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOnMeasureHeightMeasureSpec:I
 
+    .line 75
     invoke-direct {p0, p2, p3, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->init(Landroid/util/AttributeSet;II)V
 
     return-void
@@ -409,14 +484,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 2
 
+    .line 76
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 77
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mChildrenByIds:Landroid/util/SparseArray;
 
+    .line 78
     new-instance p1, Ljava/util/ArrayList;
 
     const/4 v0, 0x4
@@ -425,6 +503,7 @@
 
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintHelpers:Ljava/util/ArrayList;
 
+    .line 79
     new-instance p1, Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;
 
     invoke-direct {p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;-><init>()V
@@ -433,68 +512,89 @@
 
     const/4 p1, 0x0
 
+    .line 80
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinWidth:I
 
+    .line 81
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinHeight:I
 
     const v0, 0x7fffffff
 
+    .line 82
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxWidth:I
 
+    .line 83
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxHeight:I
 
     const/4 v0, 0x1
 
+    .line 84
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDirtyHierarchy:Z
 
     const/16 v0, 0x101
 
+    .line 85
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOptimizationLevel:I
 
     const/4 v0, 0x0
 
+    .line 86
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
 
+    .line 87
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintLayoutSpec:Landroidx/constraintlayout/widget/ConstraintLayoutStates;
 
     const/4 v0, -0x1
 
+    .line 88
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSetId:I
 
+    .line 89
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDesignIds:Ljava/util/HashMap;
 
+    .line 90
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidth:I
 
+    .line 91
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeight:I
 
+    .line 92
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthSize:I
 
+    .line 93
     iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightSize:I
 
+    .line 94
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthMode:I
 
+    .line 95
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightMode:I
 
+    .line 96
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mTempMapIdToWidget:Landroid/util/SparseArray;
 
+    .line 97
     new-instance v0, Landroidx/constraintlayout/widget/ConstraintLayout$Measurer;
 
     invoke-direct {v0, p0, p0}, Landroidx/constraintlayout/widget/ConstraintLayout$Measurer;-><init>(Landroidx/constraintlayout/widget/ConstraintLayout;Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMeasurer:Landroidx/constraintlayout/widget/ConstraintLayout$Measurer;
 
+    .line 98
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOnMeasureWidthMeasureSpec:I
 
+    .line 99
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOnMeasureHeightMeasureSpec:I
 
+    .line 100
     invoke-direct {p0, p2, p3, p4}, Landroidx/constraintlayout/widget/ConstraintLayout;->init(Landroid/util/AttributeSet;II)V
 
     return-void
@@ -2265,6 +2365,7 @@
 .method public bridge synthetic generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/widget/ConstraintLayout;->generateDefaultLayoutParams()Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
     move-result-object p0
@@ -2275,6 +2376,7 @@
 .method public generateDefaultLayoutParams()Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
     .locals 1
 
+    .line 2
     new-instance p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
     const/4 v0, -0x2
@@ -2287,6 +2389,7 @@
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->generateLayoutParams(Landroid/util/AttributeSet;)Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
     move-result-object p0
@@ -2297,6 +2400,7 @@
 .method public generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 3
     new-instance p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
     invoke-direct {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
@@ -2307,6 +2411,7 @@
 .method public generateLayoutParams(Landroid/util/AttributeSet;)Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
     .locals 1
 
+    .line 2
     new-instance v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;

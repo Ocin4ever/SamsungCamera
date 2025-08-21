@@ -1044,6 +1044,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     sget-object v1, Landroidx/constraintlayout/core/state/State$Helper;->HORIZONTAL_CHAIN:Landroidx/constraintlayout/core/state/State$Helper;
 
     invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/core/state/State;->helper(Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Helper;)Landroidx/constraintlayout/core/state/HelperReference;
@@ -1060,6 +1061,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     sget-object v1, Landroidx/constraintlayout/core/state/State$Helper;->HORIZONTAL_CHAIN:Landroidx/constraintlayout/core/state/State$Helper;
 
     invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/core/state/State;->helper(Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Helper;)Landroidx/constraintlayout/core/state/HelperReference;
@@ -1068,6 +1070,7 @@
 
     check-cast p0, Landroidx/constraintlayout/core/state/helpers/HorizontalChainReference;
 
+    .line 3
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/state/HelperReference;->add([Ljava/lang/Object;)Landroidx/constraintlayout/core/state/HelperReference;
 
     return-object p0
@@ -1236,6 +1239,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     sget-object v1, Landroidx/constraintlayout/core/state/State$Helper;->VERTICAL_CHAIN:Landroidx/constraintlayout/core/state/State$Helper;
 
     invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/core/state/State;->helper(Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Helper;)Landroidx/constraintlayout/core/state/HelperReference;
@@ -1252,6 +1256,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     sget-object v1, Landroidx/constraintlayout/core/state/State$Helper;->VERTICAL_CHAIN:Landroidx/constraintlayout/core/state/State$Helper;
 
     invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/core/state/State;->helper(Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Helper;)Landroidx/constraintlayout/core/state/HelperReference;
@@ -1260,6 +1265,7 @@
 
     check-cast p0, Landroidx/constraintlayout/core/state/helpers/VerticalChainReference;
 
+    .line 3
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/state/HelperReference;->add([Ljava/lang/Object;)Landroidx/constraintlayout/core/state/HelperReference;
 
     return-object p0

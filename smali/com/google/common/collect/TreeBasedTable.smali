@@ -98,6 +98,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/TreeBasedTable;
 
     invoke-static {}, Lcom/google/common/collect/Ordering;->natural()Lcom/google/common/collect/Ordering;
@@ -131,8 +132,10 @@
         }
     .end annotation
 
+    .line 5
     new-instance v0, Lcom/google/common/collect/TreeBasedTable;
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/common/collect/TreeBasedTable;->rowComparator()Ljava/util/Comparator;
 
     move-result-object v1
@@ -143,6 +146,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/google/common/collect/TreeBasedTable;-><init>(Ljava/util/Comparator;Ljava/util/Comparator;)V
 
+    .line 7
     invoke-virtual {v0, p0}, Lcom/google/common/collect/TreeBasedTable;->putAll(Lcom/google/common/collect/Table;)V
 
     return-object v0
@@ -168,10 +172,13 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     new-instance v0, Lcom/google/common/collect/TreeBasedTable;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/TreeBasedTable;-><init>(Ljava/util/Comparator;Ljava/util/Comparator;)V
@@ -411,6 +418,7 @@
 .method public bridge synthetic row(Ljava/lang/Object;)Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeBasedTable;->row(Ljava/lang/Object;)Ljava/util/SortedMap;
 
     move-result-object p0
@@ -428,6 +436,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/TreeBasedTable$TreeRow;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/TreeBasedTable$TreeRow;-><init>(Lcom/google/common/collect/TreeBasedTable;Ljava/lang/Object;)V
@@ -466,6 +475,7 @@
 .method public bridge synthetic rowKeySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/TreeBasedTable;->rowKeySet()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -483,6 +493,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/StandardRowSortedTable;->rowKeySet()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -493,6 +504,7 @@
 .method public bridge synthetic rowMap()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/TreeBasedTable;->rowMap()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -512,6 +524,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/StandardRowSortedTable;->rowMap()Ljava/util/SortedMap;
 
     move-result-object p0

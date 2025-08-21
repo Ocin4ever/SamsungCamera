@@ -548,10 +548,12 @@
 
     const-string p1, "setAutoFramingManualTracking : regions is null!"
 
+    .line 2
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/VideoAutoFramingManager;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
@@ -581,6 +583,7 @@
 .method public setAutoFramingManualTrackingRegion(Landroid/graphics/Point;Landroid/graphics/Rect;Z)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/VideoAutoFramingManager;->mRegionSize:Landroid/util/Size;
 
     invoke-direct {p0, p2, p1, v0, p3}, Lcom/sec/android/app/camera/engine/VideoAutoFramingManager;->getMeteringRectangle(Landroid/graphics/Rect;Landroid/graphics/Point;Landroid/util/Size;Z)Landroid/hardware/camera2/params/MeteringRectangle;

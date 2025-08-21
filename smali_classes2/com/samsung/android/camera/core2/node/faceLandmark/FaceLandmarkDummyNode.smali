@@ -83,6 +83,7 @@
 
     const-string p1, "processBackgroundPreviewInternal"
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/samsung/android/camera/core2/node/Node;->printDummyMethodCallingMessage(Ljava/lang/String;)V
 
     return-void
@@ -91,6 +92,7 @@
 .method public bridge synthetic processBackgroundPreviewInternal(Ljava/lang/Object;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/samsung/android/camera/core2/util/DirectBuffer;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/faceLandmark/FaceLandmarkDummyNode;->processBackgroundPreviewInternal(Lcom/samsung/android/camera/core2/util/DirectBuffer;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V

@@ -40,6 +40,7 @@
 .method public get()Lcom/google/common/cache/AbstractCache$StatsCounter;
     .locals 0
 
+    .line 2
     new-instance p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;
 
     invoke-direct {p0}, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;-><init>()V
@@ -50,6 +51,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/CacheBuilder$2;->get()Lcom/google/common/cache/AbstractCache$StatsCounter;
 
     move-result-object p0

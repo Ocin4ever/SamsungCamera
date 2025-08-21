@@ -252,14 +252,17 @@
 .method public static getROI(Landroid/graphics/Bitmap;Landroid/graphics/Rect;)Landroid/graphics/Bitmap;
     .locals 4
 
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
 
+    .line 4
     iget v2, p1, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
@@ -270,17 +273,20 @@
 
     if-lt v2, v0, :cond_0
 
+    .line 5
     iget v2, p1, Landroid/graphics/Rect;->left:I
 
     sub-int/2addr v0, v2
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
+    .line 7
     :goto_0
     iget v2, p1, Landroid/graphics/Rect;->top:I
 
@@ -292,17 +298,20 @@
 
     if-lt v2, v1, :cond_1
 
+    .line 8
     iget v2, p1, Landroid/graphics/Rect;->top:I
 
     sub-int/2addr v1, v2
 
     goto :goto_1
 
+    .line 9
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result v1
 
+    .line 10
     :goto_1
     iget v2, p1, Landroid/graphics/Rect;->left:I
 
@@ -318,6 +327,7 @@
 .method public static getROI(Landroid/graphics/Bitmap;[Landroid/graphics/Point;)Landroid/graphics/Bitmap;
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/samsung/android/sdk/ocr/OCRResultUtils;->cornerToRect([Landroid/graphics/Point;)Landroid/graphics/Rect;
 
     move-result-object p1

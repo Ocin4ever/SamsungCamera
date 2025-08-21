@@ -46,16 +46,22 @@
 .method public constructor <init>(Ljava/util/Map;ZLjava/util/EnumSet;ZZ)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions;->a:Ljava/util/Map;
 
+    .line 4
     iput-boolean p2, p0, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions;->b:Z
 
+    .line 5
     iput-object p3, p0, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions;->c:Ljava/util/EnumSet;
 
+    .line 6
     iput-boolean p4, p0, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions;->d:Z
 
+    .line 7
     iput-boolean p5, p0, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions;->e:Z
 
     return-void
@@ -64,6 +70,7 @@
 .method public synthetic constructor <init>(Ljava/util/Map;ZLjava/util/EnumSet;ZZLcom/samsung/android/camera/core2/p;)V
     .locals 0
 
+    .line 1
     invoke-direct/range {p0 .. p5}, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions;-><init>(Ljava/util/Map;ZLjava/util/EnumSet;ZZ)V
 
     return-void

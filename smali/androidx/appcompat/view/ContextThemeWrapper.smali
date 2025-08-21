@@ -33,6 +33,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -41,8 +42,10 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
+    .line 3
     iput p2, p0, Landroidx/appcompat/view/ContextThemeWrapper;->mThemeResource:I
 
     return-void
@@ -51,8 +54,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/res/Resources$Theme;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
+    .line 5
     iput-object p2, p0, Landroidx/appcompat/view/ContextThemeWrapper;->mTheme:Landroid/content/res/Resources$Theme;
 
     return-void

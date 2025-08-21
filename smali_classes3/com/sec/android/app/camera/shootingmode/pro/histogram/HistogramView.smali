@@ -38,12 +38,15 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/histogram/HistogramView;->mIsHistogramSelected:Z
 
+    .line 3
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/pro/histogram/HistogramView;->initView()V
 
     return-void
@@ -52,12 +55,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
+    .line 5
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/histogram/HistogramView;->mIsHistogramSelected:Z
 
+    .line 6
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/pro/histogram/HistogramView;->initView()V
 
     return-void
@@ -66,12 +72,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 7
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x0
 
+    .line 8
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/histogram/HistogramView;->mIsHistogramSelected:Z
 
+    .line 9
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/pro/histogram/HistogramView;->initView()V
 
     return-void
@@ -654,6 +663,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 2
     check-cast p1, Lcom/sec/android/app/camera/shootingmode/pro/histogram/HistogramContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/shootingmode/pro/histogram/HistogramView;->setPresenter(Lcom/sec/android/app/camera/shootingmode/pro/histogram/HistogramContract$Presenter;)V
@@ -664,6 +674,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/shootingmode/pro/histogram/HistogramContract$Presenter;)V
     .locals 0
 
+    .line 1
     return-void
 .end method
 

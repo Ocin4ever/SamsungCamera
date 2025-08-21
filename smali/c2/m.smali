@@ -48,6 +48,7 @@
 
     move-object v5, p5
 
+    .line 9
     invoke-direct/range {v0 .. v6}, Lc2/m;-><init>(Lz1/r;Lz1/i;Lz1/e;Lcom/google/gson/reflect/TypeToken;Lz1/y;Z)V
 
     return-void
@@ -56,8 +57,10 @@
 .method public constructor <init>(Lz1/r;Lz1/i;Lz1/e;Lcom/google/gson/reflect/TypeToken;Lz1/y;Z)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lc2/l;-><init>()V
 
+    .line 2
     new-instance v0, Lc2/m$b;
 
     const/4 v1, 0x0
@@ -66,16 +69,22 @@
 
     iput-object v0, p0, Lc2/m;->f:Lc2/m$b;
 
+    .line 3
     iput-object p1, p0, Lc2/m;->a:Lz1/r;
 
+    .line 4
     iput-object p2, p0, Lc2/m;->b:Lz1/i;
 
+    .line 5
     iput-object p3, p0, Lc2/m;->c:Lz1/e;
 
+    .line 6
     iput-object p4, p0, Lc2/m;->d:Lcom/google/gson/reflect/TypeToken;
 
+    .line 7
     iput-object p5, p0, Lc2/m;->e:Lz1/y;
 
+    .line 8
     iput-boolean p6, p0, Lc2/m;->g:Z
 
     return-void

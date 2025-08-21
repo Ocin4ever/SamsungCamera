@@ -39,6 +39,7 @@
 .method public bridge synthetic createIntent(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
     .locals 0
 
+    .line 1
     check-cast p2, [Ljava/lang/String;
 
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$OpenMultipleDocuments;->createIntent(Landroid/content/Context;[Ljava/lang/String;)Landroid/content/Intent;
@@ -59,6 +60,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     new-instance p0, Landroid/content/Intent;
 
     const-string p1, "android.intent.action.OPEN_DOCUMENT"
@@ -67,6 +69,7 @@
 
     const-string p1, "android.intent.extra.MIME_TYPES"
 
+    .line 3
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object p0
@@ -75,12 +78,14 @@
 
     const/4 p2, 0x1
 
+    .line 4
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     move-result-object p0
 
     const-string p1, "*/*"
 
+    .line 5
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object p0
@@ -95,6 +100,7 @@
 .method public bridge synthetic getSynchronousResult(Landroid/content/Context;Ljava/lang/Object;)Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
     .locals 0
 
+    .line 2
     check-cast p2, [Ljava/lang/String;
 
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$OpenMultipleDocuments;->getSynchronousResult(Landroid/content/Context;[Ljava/lang/String;)Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
@@ -120,6 +126,7 @@
         }
     .end annotation
 
+    .line 1
     const-string p0, "context"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
@@ -136,6 +143,7 @@
 .method public bridge synthetic parseResult(ILandroid/content/Intent;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$OpenMultipleDocuments;->parseResult(ILandroid/content/Intent;)Ljava/util/List;
 
     move-result-object p0
@@ -178,6 +186,7 @@
     :goto_1
     if-eqz p2, :cond_2
 
+    .line 2
     sget-object p0, Landroidx/activity/result/contract/ActivityResultContracts$GetMultipleContents;->Companion:Landroidx/activity/result/contract/ActivityResultContracts$GetMultipleContents$Companion;
 
     invoke-virtual {p0, p2}, Landroidx/activity/result/contract/ActivityResultContracts$GetMultipleContents$Companion;->getClipDataUris$activity_release(Landroid/content/Intent;)Ljava/util/List;

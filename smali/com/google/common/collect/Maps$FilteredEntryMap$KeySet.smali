@@ -114,6 +114,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$KeySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -139,6 +140,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$KeySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0

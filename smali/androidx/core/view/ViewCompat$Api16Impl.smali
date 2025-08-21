@@ -126,6 +126,7 @@
 .method public static postInvalidateOnAnimation(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
 
     return-void
@@ -134,6 +135,7 @@
 .method public static postInvalidateOnAnimation(Landroid/view/View;IIII)V
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/View;->postInvalidateOnAnimation(IIII)V
 
     return-void

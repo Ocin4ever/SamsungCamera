@@ -221,16 +221,19 @@
 .method public execute(Ljava/lang/String;[F)Z
     .locals 8
 
+    .line 8
     invoke-static {p1}, Lvizinsight/atl/gallery_scan/Utils;->get_exif_corrected_bitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     const/4 v0, 0x2
 
+    .line 9
     invoke-static {p1, v0}, Lvizinsight/atl/gallery_scan/VZImageDecoder;->decodeImage(Landroid/graphics/Bitmap;I)[B
 
     move-result-object v2
 
+    .line 10
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
@@ -257,6 +260,7 @@
 .method public execute([BIIII[F)Z
     .locals 9
 
+    .line 1
     iget-boolean v0, p0, Lvizinsight/atl/gallery_scan/VZGalleryScan;->isValid:Z
 
     const/4 v1, 0x0
@@ -265,6 +269,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     array-length v0, p1
 
@@ -274,8 +279,10 @@
 
     iput-object v0, p0, Lvizinsight/atl/gallery_scan/VZGalleryScan;->image_byte_buffer:Ljava/nio/ByteBuffer;
 
+    .line 3
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
+    .line 4
     :try_start_0
     iget-object v3, p0, Lvizinsight/atl/gallery_scan/VZGalleryScan;->image_byte_buffer:Ljava/nio/ByteBuffer;
 
@@ -304,8 +311,10 @@
 
     const-string p2, "GalleryScanJNI not found"
 
+    .line 5
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     :goto_0
     iget-object p1, p0, Lvizinsight/atl/gallery_scan/VZGalleryScan;->image_byte_buffer:Ljava/nio/ByteBuffer;
 
@@ -313,6 +322,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 7
     invoke-direct {p0, p6}, Lvizinsight/atl/gallery_scan/VZGalleryScan;->top_left_first([F)V
 
     :cond_1

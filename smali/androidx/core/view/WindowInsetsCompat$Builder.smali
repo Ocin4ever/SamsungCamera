@@ -22,8 +22,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl30;
 
     invoke-direct {v0}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl30;-><init>()V
@@ -36,8 +38,10 @@
 .method public constructor <init>(Landroidx/core/view/WindowInsetsCompat;)V
     .locals 1
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     new-instance v0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl30;
 
     invoke-direct {v0, p1}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl30;-><init>(Landroidx/core/view/WindowInsetsCompat;)V

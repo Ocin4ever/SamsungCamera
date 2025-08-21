@@ -58,6 +58,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/work/impl/WorkerUpdater$enqueueUniquelyNamedPeriodic$enqueueNew$1;->invoke()V
 
     sget-object p0, Lf6/p;->a:Lf6/p;
@@ -68,12 +69,14 @@
 .method public final invoke()V
     .locals 5
 
+    .line 2
     iget-object v0, p0, Landroidx/work/impl/WorkerUpdater$enqueueUniquelyNamedPeriodic$enqueueNew$1;->$workRequest:Landroidx/work/WorkRequest;
 
     invoke-static {v0}, Lg6/n;->d(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Landroidx/work/impl/WorkContinuationImpl;
 
     iget-object v2, p0, Landroidx/work/impl/WorkerUpdater$enqueueUniquelyNamedPeriodic$enqueueNew$1;->$this_enqueueUniquelyNamedPeriodic:Landroidx/work/impl/WorkManagerImpl;
@@ -84,6 +87,7 @@
 
     invoke-direct {v1, v2, v3, v4, v0}, Landroidx/work/impl/WorkContinuationImpl;-><init>(Landroidx/work/impl/WorkManagerImpl;Ljava/lang/String;Landroidx/work/ExistingWorkPolicy;Ljava/util/List;)V
 
+    .line 4
     new-instance v0, Landroidx/work/impl/utils/EnqueueRunnable;
 
     iget-object p0, p0, Landroidx/work/impl/WorkerUpdater$enqueueUniquelyNamedPeriodic$enqueueNew$1;->$operation:Landroidx/work/impl/OperationImpl;

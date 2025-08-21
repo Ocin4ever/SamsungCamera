@@ -23,6 +23,7 @@
 .method public static isQuickScaleEnabled(Landroid/view/ScaleGestureDetector;)Z
     .locals 0
 
+    .line 2
     invoke-static {p0}, Landroidx/core/view/ScaleGestureDetectorCompat$Api19Impl;->isQuickScaleEnabled(Landroid/view/ScaleGestureDetector;)Z
 
     move-result p0
@@ -35,6 +36,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     check-cast p0, Landroid/view/ScaleGestureDetector;
 
     invoke-static {p0}, Landroidx/core/view/ScaleGestureDetectorCompat;->isQuickScaleEnabled(Landroid/view/ScaleGestureDetector;)Z
@@ -47,6 +49,7 @@
 .method public static setQuickScaleEnabled(Landroid/view/ScaleGestureDetector;Z)V
     .locals 0
 
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/view/ScaleGestureDetectorCompat$Api19Impl;->setQuickScaleEnabled(Landroid/view/ScaleGestureDetector;Z)V
 
     return-void
@@ -57,6 +60,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     check-cast p0, Landroid/view/ScaleGestureDetector;
 
     invoke-static {p0, p1}, Landroidx/core/view/ScaleGestureDetectorCompat;->setQuickScaleEnabled(Landroid/view/ScaleGestureDetector;Z)V

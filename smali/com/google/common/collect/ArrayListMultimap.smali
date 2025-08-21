@@ -38,6 +38,7 @@
 
     const/4 v1, 0x3
 
+    .line 1
     invoke-direct {p0, v0, v1}, Lcom/google/common/collect/ArrayListMultimap;-><init>(II)V
 
     return-void
@@ -46,6 +47,7 @@
 .method private constructor <init>(II)V
     .locals 0
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/Platform;->newHashMapWithExpectedSize(I)Ljava/util/Map;
 
     move-result-object p1
@@ -54,8 +56,10 @@
 
     const-string p1, "expectedValuesPerKey"
 
+    .line 3
     invoke-static {p2, p1}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
+    .line 4
     iput p2, p0, Lcom/google/common/collect/ArrayListMultimap;->expectedValuesPerKey:I
 
     return-void
@@ -71,6 +75,7 @@
         }
     .end annotation
 
+    .line 5
     invoke-interface {p1}, Lcom/google/common/collect/Multimap;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -79,10 +84,12 @@
 
     move-result v0
 
+    .line 6
     instance-of v1, p1, Lcom/google/common/collect/ArrayListMultimap;
 
     if-eqz v1, :cond_0
 
+    .line 7
     move-object v1, p1
 
     check-cast v1, Lcom/google/common/collect/ArrayListMultimap;
@@ -94,9 +101,11 @@
     :cond_0
     const/4 v1, 0x3
 
+    .line 8
     :goto_0
     invoke-direct {p0, v0, v1}, Lcom/google/common/collect/ArrayListMultimap;-><init>(II)V
 
+    .line 9
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ArrayListMultimap;->putAll(Lcom/google/common/collect/Multimap;)Z
 
     return-void
@@ -116,6 +125,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ArrayListMultimap;
 
     invoke-direct {v0}, Lcom/google/common/collect/ArrayListMultimap;-><init>()V
@@ -137,6 +147,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/ArrayListMultimap;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/ArrayListMultimap;-><init>(II)V
@@ -160,6 +171,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Lcom/google/common/collect/ArrayListMultimap;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/ArrayListMultimap;-><init>(Lcom/google/common/collect/Multimap;)V
@@ -254,6 +266,7 @@
 .method public bridge synthetic createCollection()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ArrayListMultimap;->createCollection()Ljava/util/List;
 
     move-result-object p0
@@ -271,6 +284,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     iget p0, p0, Lcom/google/common/collect/ArrayListMultimap;->expectedValuesPerKey:I
@@ -375,6 +389,7 @@
 .method public bridge synthetic putAll(Lcom/google/common/collect/Multimap;)Z
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractMultimap;->putAll(Lcom/google/common/collect/Multimap;)Z
 
     move-result p0
@@ -389,6 +404,7 @@
         .end annotation
     .end param
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractMultimap;->putAll(Ljava/lang/Object;Ljava/lang/Iterable;)Z
 
     move-result p0

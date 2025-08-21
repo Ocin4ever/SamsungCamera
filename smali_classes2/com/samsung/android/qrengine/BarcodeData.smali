@@ -23,22 +23,28 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/samsung/android/qrengine/BarcodeData;->mId:J
 
     const-string v0, ""
 
+    .line 3
     iput-object v0, p0, Lcom/samsung/android/qrengine/BarcodeData;->mData:Ljava/lang/String;
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Lcom/samsung/android/qrengine/BarcodeData;->mRawData:[B
 
+    .line 5
     iput-object v0, p0, Lcom/samsung/android/qrengine/BarcodeData;->mPreviousPosition:Lcom/samsung/android/qrengine/Position;
 
+    .line 6
     iput-object v0, p0, Lcom/samsung/android/qrengine/BarcodeData;->mCurrentPosition:Lcom/samsung/android/qrengine/Position;
 
     return-void
@@ -47,18 +53,25 @@
 .method public constructor <init>(JLjava/lang/String;[BLcom/samsung/android/qrengine/Symbology;Lcom/samsung/android/qrengine/Position;Lcom/samsung/android/qrengine/Position;)V
     .locals 0
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 8
     iput-wide p1, p0, Lcom/samsung/android/qrengine/BarcodeData;->mId:J
 
+    .line 9
     iput-object p3, p0, Lcom/samsung/android/qrengine/BarcodeData;->mData:Ljava/lang/String;
 
+    .line 10
     iput-object p4, p0, Lcom/samsung/android/qrengine/BarcodeData;->mRawData:[B
 
+    .line 11
     iput-object p5, p0, Lcom/samsung/android/qrengine/BarcodeData;->mSymbology:Lcom/samsung/android/qrengine/Symbology;
 
+    .line 12
     iput-object p6, p0, Lcom/samsung/android/qrengine/BarcodeData;->mPreviousPosition:Lcom/samsung/android/qrengine/Position;
 
+    .line 13
     iput-object p7, p0, Lcom/samsung/android/qrengine/BarcodeData;->mCurrentPosition:Lcom/samsung/android/qrengine/Position;
 
     return-void

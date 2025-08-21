@@ -234,6 +234,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 4
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -259,14 +260,17 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lcom/google/common/graph/ImmutableNetwork;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lcom/google/common/graph/ImmutableNetwork;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/graph/ImmutableNetwork;
 
@@ -517,6 +521,7 @@
 .method public bridge synthetic asGraph()Lcom/google/common/graph/Graph;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ImmutableNetwork;->asGraph()Lcom/google/common/graph/ImmutableGraph;
 
     move-result-object p0
@@ -534,6 +539,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/graph/ImmutableGraph;
 
     invoke-super {p0}, Lcom/google/common/graph/AbstractNetwork;->asGraph()Lcom/google/common/graph/Graph;

@@ -117,8 +117,10 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -139,6 +141,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/ExpiringData;->TAG:Ljava/lang/String;
 
+    .line 4
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
@@ -147,22 +150,27 @@
 
     iput-object v0, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/ExpiringData;->data:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 5
     new-instance v0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/h0;
 
     invoke-direct {v0}, Lcom/samsung/android/sdk/scs/ai/asr_6_0/h0;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/ExpiringData;->checkValidate:Ljava/util/function/Function;
 
+    .line 6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/ExpiringData;->lastTimeUpdate:J
 
+    .line 7
     iput-object p1, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/ExpiringData;->name:Ljava/lang/String;
 
+    .line 8
     iput-object p2, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/ExpiringData;->defaultSupplier:Ljava/util/function/Supplier;
 
+    .line 9
     iput-object p3, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/ExpiringData;->timeout:Ljava/time/Duration;
 
     return-void
@@ -171,6 +179,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;Ljava/util/function/Supplier;Ljava/time/Duration;Lcom/samsung/android/sdk/scs/ai/asr_6_0/i0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/sdk/scs/ai/asr_6_0/ExpiringData;-><init>(Ljava/lang/String;Ljava/util/function/Supplier;Ljava/time/Duration;)V
 
     return-void

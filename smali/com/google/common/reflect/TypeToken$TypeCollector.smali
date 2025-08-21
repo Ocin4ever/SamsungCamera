@@ -73,6 +73,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -81,6 +82,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/reflect/TypeToken$1;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/reflect/TypeToken$TypeCollector;-><init>()V
 
     return-void
@@ -98,6 +100,7 @@
         }
     .end annotation
 
+    .line 6
     invoke-interface {p2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -106,12 +109,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 7
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
 
     return p0
 
+    .line 8
     :cond_0
     invoke-virtual {p0, p1}, Lcom/google/common/reflect/TypeToken$TypeCollector;->getRawType(Ljava/lang/Object;)Ljava/lang/Class;
 
@@ -121,6 +126,7 @@
 
     move-result v0
 
+    .line 9
     invoke-virtual {p0, p1}, Lcom/google/common/reflect/TypeToken$TypeCollector;->getInterfaces(Ljava/lang/Object;)Ljava/lang/Iterable;
 
     move-result-object v1
@@ -140,6 +146,7 @@
 
     move-result-object v2
 
+    .line 10
     invoke-direct {p0, v2, p2}, Lcom/google/common/reflect/TypeToken$TypeCollector;->collectTypes(Ljava/lang/Object;Ljava/util/Map;)I
 
     move-result v2
@@ -150,6 +157,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_1
     invoke-virtual {p0, p1}, Lcom/google/common/reflect/TypeToken$TypeCollector;->getSuperclass(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -157,6 +165,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 12
     invoke-direct {p0, v1, p2}, Lcom/google/common/reflect/TypeToken$TypeCollector;->collectTypes(Ljava/lang/Object;Ljava/util/Map;)I
 
     move-result p0
@@ -168,6 +177,7 @@
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
+    .line 13
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -241,10 +251,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
+    .line 3
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -260,10 +272,12 @@
 
     move-result-object v1
 
+    .line 4
     invoke-direct {p0, v1, v0}, Lcom/google/common/reflect/TypeToken$TypeCollector;->collectTypes(Ljava/lang/Object;Ljava/util/Map;)I
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-static {}, Lcom/google/common/collect/Ordering;->natural()Lcom/google/common/collect/Ordering;
 
@@ -290,6 +304,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p1

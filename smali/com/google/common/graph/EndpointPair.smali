@@ -56,14 +56,17 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/common/graph/EndpointPair;->nodeU:Ljava/lang/Object;
 
+    .line 4
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -76,6 +79,7 @@
 .method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Lcom/google/common/graph/EndpointPair$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/graph/EndpointPair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
@@ -95,6 +99,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->isDirected()Z
 
     move-result p0
@@ -130,6 +135,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/Network;->isDirected()Z
 
     move-result p0
@@ -301,6 +307,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     iget-object v2, p0, Lcom/google/common/graph/EndpointPair;->nodeU:Ljava/lang/Object;
 
     aput-object v2, v0, v1
@@ -321,6 +328,7 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object p0

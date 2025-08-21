@@ -51,12 +51,14 @@
         }
     .end annotation
 
+    .line 3
     invoke-direct {p0}, Lcom/google/common/collect/Ordering;-><init>()V
 
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/util/Comparator;
 
+    .line 4
     invoke-static {p1, v0}, Lcom/google/common/collect/Iterables;->toArray(Ljava/lang/Iterable;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
@@ -80,6 +82,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Ordering;-><init>()V
 
     const/4 v0, 0x2
@@ -94,6 +97,7 @@
 
     aput-object p2, v0, p1
 
+    .line 2
     iput-object v0, p0, Lcom/google/common/collect/CompoundOrdering;->comparators:[Ljava/util/Comparator;
 
     return-void

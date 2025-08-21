@@ -156,6 +156,7 @@
 .method public readSystemState()Ljava/lang/Boolean;
     .locals 4
 
+    .line 2
     invoke-virtual {p0}, Landroidx/work/impl/constraints/trackers/ConstraintTracker;->getAppContext()Landroid/content/Context;
 
     move-result-object v0
@@ -174,6 +175,7 @@
 
     if-eqz p0, :cond_4
 
+    .line 3
     invoke-virtual {p0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -182,6 +184,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -227,6 +230,7 @@
     :goto_0
     move v0, v1
 
+    .line 5
     :cond_4
     :goto_1
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -239,6 +243,7 @@
 .method public bridge synthetic readSystemState()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/work/impl/constraints/trackers/StorageNotLowTracker;->readSystemState()Ljava/lang/Boolean;
 
     move-result-object p0

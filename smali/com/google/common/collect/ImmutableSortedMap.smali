@@ -131,6 +131,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/collect/ImmutableSortedMap;-><init>(Lcom/google/common/collect/RegularImmutableSortedSet;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableSortedMap;)V
 
     return-void
@@ -150,12 +151,16 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSortedMapFauxverideShim;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/collect/ImmutableSortedMap;->keySet:Lcom/google/common/collect/RegularImmutableSortedSet;
 
+    .line 4
     iput-object p2, p0, Lcom/google/common/collect/ImmutableSortedMap;->valueList:Lcom/google/common/collect/ImmutableList;
 
+    .line 5
     iput-object p3, p0, Lcom/google/common/collect/ImmutableSortedMap;->descendingMap:Lcom/google/common/collect/ImmutableSortedMap;
 
     return-void
@@ -205,10 +210,12 @@
         }
     .end annotation
 
+    .line 4
     sget-object v0, Lcom/google/common/collect/ImmutableSortedMap;->NATURAL_ORDER:Ljava/util/Comparator;
 
     check-cast v0, Lcom/google/common/collect/Ordering;
 
+    .line 5
     invoke-static {p0, v0}, Lcom/google/common/collect/ImmutableSortedMap;->copyOf(Ljava/lang/Iterable;Ljava/util/Comparator;)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -236,6 +243,7 @@
         }
     .end annotation
 
+    .line 6
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -267,10 +275,12 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/collect/ImmutableSortedMap;->NATURAL_ORDER:Ljava/util/Comparator;
 
     check-cast v0, Lcom/google/common/collect/Ordering;
 
+    .line 2
     invoke-static {p0, v0}, Lcom/google/common/collect/ImmutableSortedMap;->copyOfInternal(Ljava/util/Map;Ljava/util/Comparator;)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -296,6 +306,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -513,6 +524,7 @@
         }
     .end annotation
 
+    .line 2
     sget-object v0, Lcom/google/common/collect/ImmutableMap;->EMPTY_ENTRY_ARRAY:[Ljava/util/Map$Entry;
 
     invoke-static {p2, v0}, Lcom/google/common/collect/Iterables;->toArray(Ljava/lang/Iterable;[Ljava/lang/Object;)[Ljava/lang/Object;
@@ -521,6 +533,7 @@
 
     check-cast p2, [Ljava/util/Map$Entry;
 
+    .line 3
     array-length v0, p2
 
     invoke-static {p0, p1, p2, v0}, Lcom/google/common/collect/ImmutableSortedMap;->fromEntries(Ljava/util/Comparator;Z[Ljava/util/Map$Entry;I)Lcom/google/common/collect/ImmutableSortedMap;
@@ -556,8 +569,10 @@
 
     if-eq p3, v0, :cond_3
 
+    .line 4
     new-array v2, p3, [Ljava/lang/Object;
 
+    .line 5
     new-array v3, p3, [Ljava/lang/Object;
 
     if-eqz p1, :cond_0
@@ -565,30 +580,37 @@
     :goto_0
     if-ge v1, p3, :cond_2
 
+    .line 6
     aget-object p1, p2, v1
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 7
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 8
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 9
     invoke-static {v0, p1}, Lcom/google/common/collect/CollectPreconditions;->checkEntryNotNull(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 10
     aput-object v0, v2, v1
 
+    .line 11
     aput-object p1, v3, v1
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 12
     :cond_0
     new-instance p1, Lcom/google/common/collect/ImmutableSortedMap$1;
 
@@ -596,24 +618,29 @@
 
     invoke-static {p2, v1, p3, p1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;IILjava/util/Comparator;)V
 
+    .line 13
     aget-object p1, p2, v1
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 14
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
 
+    .line 15
     aput-object v4, v2, v1
 
+    .line 16
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
     aput-object p1, v3, v1
 
+    .line 17
     aget-object v5, v2, v1
 
     invoke-static {v5, p1}, Lcom/google/common/collect/CollectPreconditions;->checkEntryNotNull(Ljava/lang/Object;Ljava/lang/Object;)V
@@ -625,32 +652,40 @@
 
     add-int/lit8 v5, p1, -0x1
 
+    .line 18
     aget-object v5, p2, v5
 
     invoke-static {v5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast v5, Ljava/util/Map$Entry;
 
+    .line 19
     aget-object v6, p2, p1
 
     invoke-static {v6}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast v6, Ljava/util/Map$Entry;
 
+    .line 20
     invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v7
 
+    .line 21
     invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v8
 
+    .line 22
     invoke-static {v7, v8}, Lcom/google/common/collect/CollectPreconditions;->checkEntryNotNull(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 23
     aput-object v7, v2, p1
 
+    .line 24
     aput-object v8, v3, p1
 
+    .line 25
     invoke-interface {p0, v4, v7}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result v4
@@ -675,17 +710,20 @@
 
     goto :goto_1
 
+    .line 26
     :cond_2
     new-instance p1, Lcom/google/common/collect/ImmutableSortedMap;
 
     new-instance p2, Lcom/google/common/collect/RegularImmutableSortedSet;
 
+    .line 27
     invoke-static {v2}, Lcom/google/common/collect/ImmutableList;->asImmutableList([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p3
 
     invoke-direct {p2, p3, p0}, Lcom/google/common/collect/RegularImmutableSortedSet;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/util/Comparator;)V
 
+    .line 28
     invoke-static {v3}, Lcom/google/common/collect/ImmutableList;->asImmutableList([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -694,6 +732,7 @@
 
     return-object p1
 
+    .line 29
     :cond_3
     aget-object p1, p2, v1
 
@@ -701,6 +740,7 @@
 
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 30
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p2
@@ -715,6 +755,7 @@
 
     return-object p0
 
+    .line 31
     :cond_4
     invoke-static {p0}, Lcom/google/common/collect/ImmutableSortedMap;->emptyMap(Ljava/util/Comparator;)Lcom/google/common/collect/ImmutableSortedMap;
 
@@ -739,6 +780,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/Ordering;->natural()Lcom/google/common/collect/Ordering;
 
     move-result-object v0
@@ -846,6 +888,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/collect/ImmutableSortedMap;->NATURAL_EMPTY_MAP:Lcom/google/common/collect/ImmutableSortedMap;
 
     return-object v0
@@ -865,6 +908,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/Ordering;->natural()Lcom/google/common/collect/Ordering;
 
     move-result-object v0
@@ -896,6 +940,7 @@
 
     const/4 v1, 0x0
 
+    .line 6
     invoke-static {p0, p1}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -937,6 +982,7 @@
 
     const/4 v1, 0x0
 
+    .line 7
     invoke-static {p0, p1}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -986,6 +1032,7 @@
 
     const/4 v1, 0x0
 
+    .line 8
     invoke-static {p0, p1}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -1043,6 +1090,7 @@
 
     const/4 v1, 0x0
 
+    .line 9
     invoke-static {p0, p1}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -1081,6 +1129,7 @@
 
     aput-object p1, v0, p0
 
+    .line 10
     invoke-static {v0}, Lcom/google/common/collect/ImmutableSortedMap;->fromEntries([Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -1108,6 +1157,7 @@
 
     const/4 v1, 0x0
 
+    .line 11
     invoke-static {p0, p1}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -1116,6 +1166,7 @@
 
     const/4 p0, 0x1
 
+    .line 12
     invoke-static {p2, p3}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p1
@@ -1124,6 +1175,7 @@
 
     const/4 p0, 0x2
 
+    .line 13
     invoke-static {p4, p5}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p1
@@ -1132,6 +1184,7 @@
 
     const/4 p0, 0x3
 
+    .line 14
     invoke-static {p6, p7}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p1
@@ -1140,6 +1193,7 @@
 
     const/4 p0, 0x4
 
+    .line 15
     invoke-static {p8, p9}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p1
@@ -1148,12 +1202,14 @@
 
     const/4 p0, 0x5
 
+    .line 16
     invoke-static {p10, p11}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p1
 
     aput-object p1, v0, p0
 
+    .line 17
     invoke-static {v0}, Lcom/google/common/collect/ImmutableSortedMap;->fromEntries([Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -1181,6 +1237,7 @@
 
     const/4 v1, 0x0
 
+    .line 18
     invoke-static {p0, p1}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -1189,6 +1246,7 @@
 
     const/4 p0, 0x1
 
+    .line 19
     invoke-static {p2, p3}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p1
@@ -1197,6 +1255,7 @@
 
     const/4 p0, 0x2
 
+    .line 20
     invoke-static {p4, p5}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p1
@@ -1205,6 +1264,7 @@
 
     const/4 p0, 0x3
 
+    .line 21
     invoke-static {p6, p7}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p1
@@ -1213,6 +1273,7 @@
 
     const/4 p0, 0x4
 
+    .line 22
     invoke-static {p8, p9}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p1
@@ -1221,6 +1282,7 @@
 
     const/4 p0, 0x5
 
+    .line 23
     invoke-static {p10, p11}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p1
@@ -1229,12 +1291,14 @@
 
     const/4 p0, 0x6
 
+    .line 24
     invoke-static {p12, p13}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p1
 
     aput-object p1, v0, p0
 
+    .line 25
     invoke-static {v0}, Lcom/google/common/collect/ImmutableSortedMap;->fromEntries([Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -1262,6 +1326,7 @@
 
     const/4 v1, 0x0
 
+    .line 26
     invoke-static {p0, p1}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1270,6 +1335,7 @@
 
     const/4 v1, 0x1
 
+    .line 27
     invoke-static {p2, p3}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1278,6 +1344,7 @@
 
     const/4 v1, 0x2
 
+    .line 28
     invoke-static {p4, p5}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1286,6 +1353,7 @@
 
     const/4 v1, 0x3
 
+    .line 29
     invoke-static {p6, p7}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1294,6 +1362,7 @@
 
     const/4 v1, 0x4
 
+    .line 30
     invoke-static {p8, p9}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1302,6 +1371,7 @@
 
     const/4 v1, 0x5
 
+    .line 31
     invoke-static {p10, p11}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1310,6 +1380,7 @@
 
     const/4 v1, 0x6
 
+    .line 32
     invoke-static/range {p12 .. p13}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1318,12 +1389,14 @@
 
     const/4 v1, 0x7
 
+    .line 33
     invoke-static/range {p14 .. p15}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
 
     aput-object v2, v0, v1
 
+    .line 34
     invoke-static {v0}, Lcom/google/common/collect/ImmutableSortedMap;->fromEntries([Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object v0
@@ -1351,6 +1424,7 @@
 
     const/4 v1, 0x0
 
+    .line 35
     invoke-static {p0, p1}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1359,6 +1433,7 @@
 
     const/4 v1, 0x1
 
+    .line 36
     invoke-static {p2, p3}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1367,6 +1442,7 @@
 
     const/4 v1, 0x2
 
+    .line 37
     invoke-static {p4, p5}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1375,6 +1451,7 @@
 
     const/4 v1, 0x3
 
+    .line 38
     invoke-static {p6, p7}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1383,6 +1460,7 @@
 
     const/4 v1, 0x4
 
+    .line 39
     invoke-static {p8, p9}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1391,6 +1469,7 @@
 
     const/4 v1, 0x5
 
+    .line 40
     invoke-static {p10, p11}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1399,6 +1478,7 @@
 
     const/4 v1, 0x6
 
+    .line 41
     invoke-static/range {p12 .. p13}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1407,6 +1487,7 @@
 
     const/4 v1, 0x7
 
+    .line 42
     invoke-static/range {p14 .. p15}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1415,12 +1496,14 @@
 
     const/16 v1, 0x8
 
+    .line 43
     invoke-static/range {p16 .. p17}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
 
     aput-object v2, v0, v1
 
+    .line 44
     invoke-static {v0}, Lcom/google/common/collect/ImmutableSortedMap;->fromEntries([Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object v0
@@ -1448,6 +1531,7 @@
 
     const/4 v1, 0x0
 
+    .line 45
     invoke-static {p0, p1}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1456,6 +1540,7 @@
 
     const/4 v1, 0x1
 
+    .line 46
     invoke-static {p2, p3}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1464,6 +1549,7 @@
 
     const/4 v1, 0x2
 
+    .line 47
     invoke-static {p4, p5}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1472,6 +1558,7 @@
 
     const/4 v1, 0x3
 
+    .line 48
     invoke-static {p6, p7}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1480,6 +1567,7 @@
 
     const/4 v1, 0x4
 
+    .line 49
     invoke-static {p8, p9}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1488,6 +1576,7 @@
 
     const/4 v1, 0x5
 
+    .line 50
     invoke-static {p10, p11}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1496,6 +1585,7 @@
 
     const/4 v1, 0x6
 
+    .line 51
     invoke-static/range {p12 .. p13}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1504,6 +1594,7 @@
 
     const/4 v1, 0x7
 
+    .line 52
     invoke-static/range {p14 .. p15}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1512,6 +1603,7 @@
 
     const/16 v1, 0x8
 
+    .line 53
     invoke-static/range {p16 .. p17}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -1520,12 +1612,14 @@
 
     const/16 v1, 0x9
 
+    .line 54
     invoke-static/range {p18 .. p19}, Lcom/google/common/collect/ImmutableMap;->entryOf(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
 
     aput-object v2, v0, v1
 
+    .line 55
     invoke-static {v0}, Lcom/google/common/collect/ImmutableSortedMap;->fromEntries([Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object v0
@@ -1549,10 +1643,12 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Lcom/google/common/collect/ImmutableSortedMap;
 
     new-instance v1, Lcom/google/common/collect/RegularImmutableSortedSet;
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p1
@@ -1565,6 +1661,7 @@
 
     invoke-direct {v1, p1, p0}, Lcom/google/common/collect/RegularImmutableSortedSet;-><init>(Lcom/google/common/collect/ImmutableList;Ljava/util/Comparator;)V
 
+    .line 5
     invoke-static {p2}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -1773,6 +1870,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/ImmutableSortedMap;->keySet:Lcom/google/common/collect/RegularImmutableSortedSet;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedSet;->descendingSet()Lcom/google/common/collect/ImmutableSortedSet;
@@ -1785,6 +1883,7 @@
 .method public bridge synthetic descendingKeySet()Ljava/util/NavigableSet;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedMap;->descendingKeySet()Lcom/google/common/collect/ImmutableSortedSet;
 
     move-result-object p0
@@ -1802,16 +1901,19 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/ImmutableSortedMap;->descendingMap:Lcom/google/common/collect/ImmutableSortedMap;
 
     if-nez v0, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedMap;->comparator()Ljava/util/Comparator;
 
     move-result-object p0
@@ -1830,11 +1932,13 @@
 
     return-object p0
 
+    .line 5
     :cond_0
     new-instance v0, Lcom/google/common/collect/ImmutableSortedMap;
 
     iget-object v1, p0, Lcom/google/common/collect/ImmutableSortedMap;->keySet:Lcom/google/common/collect/RegularImmutableSortedSet;
 
+    .line 6
     invoke-virtual {v1}, Lcom/google/common/collect/ImmutableSortedSet;->descendingSet()Lcom/google/common/collect/ImmutableSortedSet;
 
     move-result-object v1
@@ -1856,6 +1960,7 @@
 .method public bridge synthetic descendingMap()Ljava/util/NavigableMap;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedMap;->descendingMap()Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -1874,6 +1979,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/ImmutableMap;->entrySet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -1884,6 +1990,7 @@
 .method public bridge synthetic entrySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedMap;->entrySet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -2040,6 +2147,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/ImmutableSortedMap;->headMap(Ljava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -2057,6 +2165,7 @@
         }
     .end annotation
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/collect/ImmutableSortedMap;->keySet:Lcom/google/common/collect/RegularImmutableSortedSet;
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2079,6 +2188,7 @@
 .method public bridge synthetic headMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableSortedMap;->headMap(Ljava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -2089,6 +2199,7 @@
 .method public bridge synthetic headMap(Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedMap;->headMap(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -2175,6 +2286,7 @@
 .method public bridge synthetic keySet()Lcom/google/common/collect/ImmutableSet;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedMap;->keySet()Lcom/google/common/collect/ImmutableSortedSet;
 
     move-result-object p0
@@ -2192,6 +2304,7 @@
         }
     .end annotation
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/ImmutableSortedMap;->keySet:Lcom/google/common/collect/RegularImmutableSortedSet;
 
     return-object p0
@@ -2200,6 +2313,7 @@
 .method public bridge synthetic keySet()Ljava/util/Set;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedMap;->keySet()Lcom/google/common/collect/ImmutableSortedSet;
 
     move-result-object p0
@@ -2323,6 +2437,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/ImmutableSortedMap;->keySet:Lcom/google/common/collect/RegularImmutableSortedSet;
 
     return-object p0
@@ -2331,6 +2446,7 @@
 .method public bridge synthetic navigableKeySet()Ljava/util/NavigableSet;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedMap;->navigableKeySet()Lcom/google/common/collect/ImmutableSortedSet;
 
     move-result-object p0
@@ -2404,6 +2520,7 @@
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, v0, p2, v1}, Lcom/google/common/collect/ImmutableSortedMap;->subMap(Ljava/lang/Object;ZLjava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -2421,10 +2538,13 @@
         }
     .end annotation
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-static {p3}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedMap;->comparator()Ljava/util/Comparator;
 
     move-result-object v0
@@ -2445,8 +2565,10 @@
     :goto_0
     const-string v1, "expected fromKey <= toKey but %s > %s"
 
+    .line 7
     invoke-static {v0, v1, p1, p3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 8
     invoke-virtual {p0, p3, p4}, Lcom/google/common/collect/ImmutableSortedMap;->headMap(Ljava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -2461,6 +2583,7 @@
 .method public bridge synthetic subMap(Ljava/lang/Object;ZLjava/lang/Object;Z)Ljava/util/NavigableMap;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/common/collect/ImmutableSortedMap;->subMap(Ljava/lang/Object;ZLjava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -2471,6 +2594,7 @@
 .method public bridge synthetic subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableSortedMap;->subMap(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -2490,6 +2614,7 @@
 
     const/4 v0, 0x1
 
+    .line 3
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/ImmutableSortedMap;->tailMap(Ljava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -2507,6 +2632,7 @@
         }
     .end annotation
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/collect/ImmutableSortedMap;->keySet:Lcom/google/common/collect/RegularImmutableSortedSet;
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2531,6 +2657,7 @@
 .method public bridge synthetic tailMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableSortedMap;->tailMap(Ljava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -2541,6 +2668,7 @@
 .method public bridge synthetic tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedMap;->tailMap(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSortedMap;
 
     move-result-object p0
@@ -2558,6 +2686,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/ImmutableSortedMap;->valueList:Lcom/google/common/collect/ImmutableList;
 
     return-object p0
@@ -2566,6 +2695,7 @@
 .method public bridge synthetic values()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedMap;->values()Lcom/google/common/collect/ImmutableCollection;
 
     move-result-object p0

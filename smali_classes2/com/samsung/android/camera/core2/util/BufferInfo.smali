@@ -19,6 +19,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/samsung/android/camera/core2/util/BufferInfo;-><init>(Lcom/samsung/android/camera/core2/util/DirectBuffer;Landroid/util/Size;Lcom/samsung/android/camera/core2/util/StrideInfo;I)V
 
     return-void
@@ -27,14 +28,19 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/util/DirectBuffer;Landroid/util/Size;Lcom/samsung/android/camera/core2/util/StrideInfo;I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/util/BufferInfo;->imageBuffer:Lcom/samsung/android/camera/core2/util/DirectBuffer;
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/camera/core2/util/BufferInfo;->imageSize:Landroid/util/Size;
 
+    .line 5
     iput-object p3, p0, Lcom/samsung/android/camera/core2/util/BufferInfo;->strideInfo:Lcom/samsung/android/camera/core2/util/StrideInfo;
 
+    .line 6
     iput p4, p0, Lcom/samsung/android/camera/core2/util/BufferInfo;->format:I
 
     return-void

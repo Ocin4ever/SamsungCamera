@@ -50,6 +50,7 @@
 .method public hasEmojiGlyph(Ljava/lang/CharSequence;)Z
     .locals 0
 
+    .line 1
     const/4 p0, 0x0
 
     return p0
@@ -58,6 +59,7 @@
 .method public hasEmojiGlyph(Ljava/lang/CharSequence;I)Z
     .locals 0
 
+    .line 2
     const/4 p0, 0x0
 
     return p0

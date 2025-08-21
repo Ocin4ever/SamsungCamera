@@ -65,6 +65,7 @@
 .method public static setScrollIndicators(Landroid/view/View;I)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setScrollIndicators(I)V
 
     return-void
@@ -73,6 +74,7 @@
 .method public static setScrollIndicators(Landroid/view/View;II)V
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroid/view/View;->setScrollIndicators(II)V
 
     return-void

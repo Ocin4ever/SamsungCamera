@@ -91,6 +91,7 @@
 .method public static copyToFile(Ljava/io/File;Landroid/content/res/Resources;I)Z
     .locals 0
 
+    .line 13
     :try_start_0
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
@@ -98,6 +99,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 14
     :try_start_1
     invoke-static {p0, p1}, Landroidx/core/graphics/TypefaceCompatUtil;->copyToFile(Ljava/io/File;Ljava/io/InputStream;)Z
 
@@ -105,6 +107,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 15
     invoke-static {p1}, Landroidx/core/graphics/TypefaceCompatUtil;->closeQuietly(Ljava/io/Closeable;)V
 
     return p0
@@ -122,12 +125,14 @@
     :goto_0
     invoke-static {p1}, Landroidx/core/graphics/TypefaceCompatUtil;->closeQuietly(Ljava/io/Closeable;)V
 
+    .line 16
     throw p0
 .end method
 
 .method public static copyToFile(Ljava/io/File;Ljava/io/InputStream;)Z
     .locals 5
 
+    .line 1
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskWrites()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v0
@@ -136,6 +141,7 @@
 
     const/4 v2, 0x0
 
+    .line 2
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
 
@@ -149,6 +155,7 @@
     :try_start_1
     new-array p0, p0, [B
 
+    .line 3
     :goto_0
     invoke-virtual {p1, p0}, Ljava/io/InputStream;->read([B)I
 
@@ -158,6 +165,7 @@
 
     if-eq v2, v4, :cond_0
 
+    .line 4
     invoke-virtual {v3, p0, v1, v2}, Ljava/io/FileOutputStream;->write([BII)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -165,9 +173,11 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-static {v3}, Landroidx/core/graphics/TypefaceCompatUtil;->closeQuietly(Ljava/io/Closeable;)V
 
+    .line 6
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     const/4 p0, 0x1
@@ -200,6 +210,7 @@
     :try_start_2
     const-string p1, "TypefaceCompatUtil"
 
+    .line 7
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -222,17 +233,22 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 8
     invoke-static {v2}, Landroidx/core/graphics/TypefaceCompatUtil;->closeQuietly(Ljava/io/Closeable;)V
 
+    .line 9
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     return v1
 
+    .line 10
     :goto_2
     invoke-static {v2}, Landroidx/core/graphics/TypefaceCompatUtil;->closeQuietly(Ljava/io/Closeable;)V
 
+    .line 11
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
+    .line 12
     throw p0
 .end method
 
@@ -327,6 +343,7 @@
 .method public static mmap(Landroid/content/Context;Landroid/os/CancellationSignal;Landroid/net/Uri;)Ljava/nio/ByteBuffer;
     .locals 7
 
+    .line 7
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -336,6 +353,7 @@
     :try_start_0
     const-string v1, "r"
 
+    .line 8
     invoke-static {p0, p2, v1, p1}, Landroidx/core/graphics/TypefaceCompatUtil$Api19Impl;->openFileDescriptor(Landroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p0
@@ -344,6 +362,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 9
     invoke-virtual {p0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -351,6 +370,7 @@
     :cond_0
     return-object v0
 
+    .line 10
     :cond_1
     :try_start_1
     new-instance p1, Ljava/io/FileInputStream;
@@ -363,15 +383,18 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
+    .line 11
     :try_start_2
     invoke-virtual {p1}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v1
 
+    .line 12
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->size()J
 
     move-result-wide v5
 
+    .line 13
     sget-object v2, Ljava/nio/channels/FileChannel$MapMode;->READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
 
     const-wide/16 v3, 0x0
@@ -382,11 +405,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 14
     :try_start_3
     invoke-virtual {p1}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
+    .line 15
     :try_start_4
     invoke-virtual {p0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_4
@@ -397,6 +422,7 @@
     :catchall_0
     move-exception p2
 
+    .line 16
     :try_start_5
     invoke-virtual {p1}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -418,6 +444,7 @@
     :catchall_2
     move-exception p1
 
+    .line 17
     :try_start_7
     invoke-virtual {p0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_7
@@ -443,6 +470,7 @@
 .method private static mmap(Ljava/io/File;)Ljava/nio/ByteBuffer;
     .locals 7
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -450,15 +478,18 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 2
     :try_start_1
     invoke-virtual {v0}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->size()J
 
     move-result-wide v5
 
+    .line 4
     sget-object v2, Ljava/nio/channels/FileChannel$MapMode;->READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
 
     const-wide/16 v3, 0x0
@@ -469,6 +500,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 5
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -479,6 +511,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     :try_start_3
     invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
     :try_end_3

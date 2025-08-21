@@ -23,6 +23,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/tabs/SeslTabDotLineIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -33,6 +34,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/android/material/tabs/SeslTabDotLineIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -41,8 +43,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2, p3, p4}, Lu1/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 4
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -55,6 +59,7 @@
 
     const/high16 p3, 0x40200000    # 2.5f
 
+    .line 5
     invoke-static {p2, p3, p1}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
     move-result p4
@@ -63,6 +68,7 @@
 
     iput p4, p0, Lcom/google/android/material/tabs/SeslTabDotLineIndicator;->b:I
 
+    .line 6
     invoke-static {p2, p3, p1}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
     move-result p3
@@ -73,18 +79,21 @@
 
     const/high16 p3, 0x40a00000    # 5.0f
 
+    .line 7
     invoke-static {p2, p3, p1}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/tabs/SeslTabDotLineIndicator;->e:F
 
+    .line 8
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/material/tabs/SeslTabDotLineIndicator;->c:Landroid/graphics/Paint;
 
+    .line 9
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setFlags(I)V
 
     return-void

@@ -54,26 +54,31 @@
 .method private constructor <init>(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam$Builder;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam$Builder;->access$600(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam$Builder;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;->inBitmap:Landroid/graphics/Bitmap;
 
+    .line 4
     invoke-static {p1}, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam$Builder;->access$700(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam$Builder;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;->cornerList:Ljava/util/ArrayList;
 
+    .line 5
     invoke-static {p1}, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam$Builder;->access$800(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam$Builder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;->execMode:I
 
+    .line 6
     invoke-static {p1}, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam$Builder;->access$900(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam$Builder;)I
 
     move-result p1
@@ -86,6 +91,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam$Builder;Lcom/samsung/android/smartscan/SmartScanRectify$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;-><init>(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam$Builder;)V
 
     return-void

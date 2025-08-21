@@ -120,12 +120,14 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/graph/EdgesConnecting;->getConnectingEdge()Ljava/lang/Object;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
+    .line 3
     invoke-static {}, Lcom/google/common/collect/ImmutableSet;->of()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -136,6 +138,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-static {p0}, Lcom/google/common/collect/Iterators;->singletonIterator(Ljava/lang/Object;)Lcom/google/common/collect/UnmodifiableIterator;
 
@@ -148,6 +151,7 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/EdgesConnecting;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object p0

@@ -25,6 +25,7 @@
 .method public constructor <init>(Lq4/f;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lq4/f$j;->a:Lq4/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,6 +36,7 @@
 .method public synthetic constructor <init>(Lq4/f;Lq4/n0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lq4/f$j;-><init>(Lq4/f;)V
 
     return-void

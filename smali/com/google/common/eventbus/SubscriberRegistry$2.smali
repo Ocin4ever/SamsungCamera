@@ -49,6 +49,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/reflect/TypeToken;->of(Ljava/lang/Class;)Lcom/google/common/reflect/TypeToken;
 
     move-result-object p0
@@ -61,6 +62,7 @@
 
     move-result-object p0
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/collect/ImmutableSet;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -71,6 +73,7 @@
 .method public bridge synthetic load(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Class;
 
     invoke-virtual {p0, p1}, Lcom/google/common/eventbus/SubscriberRegistry$2;->load(Ljava/lang/Class;)Lcom/google/common/collect/ImmutableSet;

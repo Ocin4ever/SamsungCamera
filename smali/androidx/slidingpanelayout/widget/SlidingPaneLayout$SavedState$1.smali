@@ -40,6 +40,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;
     .locals 1
 
+    .line 4
     new-instance p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;
 
     const/4 v0, 0x0
@@ -52,6 +53,7 @@
 .method public createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;
     .locals 0
 
+    .line 3
     new-instance p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;
 
     const/4 p2, 0x0
@@ -64,6 +66,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;
 
     move-result-object p0
@@ -74,6 +77,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState$1;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;
 
     move-result-object p0
@@ -84,6 +88,7 @@
 .method public newArray(I)[Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;
     .locals 0
 
+    .line 2
     new-array p0, p1, [Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;
 
     return-object p0
@@ -92,6 +97,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState$1;->newArray(I)[Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;
 
     move-result-object p0

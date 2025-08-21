@@ -54,6 +54,7 @@
 .method public bridge synthetic createEntries()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/FilteredKeySetMultimap;->createEntries()Ljava/util/Set;
 
     move-result-object p0
@@ -72,6 +73,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/FilteredKeySetMultimap$EntrySet;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/FilteredKeySetMultimap$EntrySet;-><init>(Lcom/google/common/collect/FilteredKeySetMultimap;)V
@@ -82,6 +84,7 @@
 .method public bridge synthetic entries()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/FilteredKeySetMultimap;->entries()Ljava/util/Set;
 
     move-result-object p0
@@ -100,6 +103,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->entries()Ljava/util/Collection;
 
     move-result-object p0
@@ -116,6 +120,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/FilteredKeySetMultimap;->get(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -137,6 +142,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0, p1}, Lcom/google/common/collect/FilteredKeyMultimap;->get(Ljava/lang/Object;)Ljava/util/Collection;
 
     move-result-object p0
@@ -149,6 +155,7 @@
 .method public bridge synthetic removeAll(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/FilteredKeySetMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -168,6 +175,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0, p1}, Lcom/google/common/collect/FilteredKeyMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/Collection;
 
     move-result-object p0
@@ -184,6 +192,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/FilteredKeySetMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p0
@@ -207,6 +216,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/Collection;
 
     move-result-object p0
@@ -219,6 +229,7 @@
 .method public bridge synthetic unfiltered()Lcom/google/common/collect/Multimap;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/FilteredKeySetMultimap;->unfiltered()Lcom/google/common/collect/SetMultimap;
 
     move-result-object p0
@@ -236,6 +247,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/FilteredKeyMultimap;->unfiltered:Lcom/google/common/collect/Multimap;
 
     check-cast p0, Lcom/google/common/collect/SetMultimap;

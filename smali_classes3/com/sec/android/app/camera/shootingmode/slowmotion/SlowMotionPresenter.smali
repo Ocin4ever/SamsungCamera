@@ -56,8 +56,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/slowmotion/SlowMotionContract$View;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
+    .line 2
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -70,14 +72,18 @@
 
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/slowmotion/SlowMotionPresenter;->mEventResultSpeed:I
 
     const-wide/16 p2, 0x0
 
+    .line 4
     iput-wide p2, p0, Lcom/sec/android/app/camera/shootingmode/slowmotion/SlowMotionPresenter;->mTotalRecordingTime:J
 
+    .line 5
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/slowmotion/SlowMotionPresenter;->mSystemTime:I
 
+    .line 6
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -90,8 +96,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/slowmotion/SlowMotionContract$View;I)V
     .locals 0
 
+    .line 7
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
+    .line 8
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -104,14 +112,18 @@
 
     const/4 p1, 0x0
 
+    .line 9
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/slowmotion/SlowMotionPresenter;->mEventResultSpeed:I
 
     const-wide/16 p2, 0x0
 
+    .line 10
     iput-wide p2, p0, Lcom/sec/android/app/camera/shootingmode/slowmotion/SlowMotionPresenter;->mTotalRecordingTime:J
 
+    .line 11
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/slowmotion/SlowMotionPresenter;->mSystemTime:I
 
+    .line 12
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V

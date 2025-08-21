@@ -33,6 +33,7 @@
 .method private synthetic a(Lco/polarr/mgcsc/v2/apis/PolarrMGC;)V
     .locals 1
 
+    .line 3
     iget-object v0, p0, Lco/polarr/mgcsc/f/f;->b:Lco/polarr/mgcsc/v2/apis/PolarrMGC;
 
     if-eqz v0, :cond_0
@@ -48,6 +49,7 @@
 .method private synthetic a(Ljava/lang/Runnable;)V
     .locals 1
 
+    .line 4
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lco/polarr/mgcsc/f/f;->d:Z
@@ -66,6 +68,7 @@
 .method public a()Landroid/os/Handler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lco/polarr/mgcsc/f/f;->e:Landroid/os/Handler;
 
     return-object p0
@@ -74,6 +77,7 @@
 .method public a(Landroid/os/Handler;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lco/polarr/mgcsc/f/f;->c:Landroid/os/Handler;
 
     return-void
@@ -82,6 +86,7 @@
 .method public b()Lco/polarr/mgcsc/v2/apis/PolarrMGC;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lco/polarr/mgcsc/f/f;->b:Lco/polarr/mgcsc/v2/apis/PolarrMGC;
 
     return-object p0
@@ -90,6 +95,7 @@
 .method public b(Landroid/os/Handler;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lco/polarr/mgcsc/f/f;->e:Landroid/os/Handler;
 
     return-void
@@ -98,6 +104,7 @@
 .method public synthetic b(Lco/polarr/mgcsc/v2/apis/PolarrMGC;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1}, Lco/polarr/mgcsc/f/f;->a(Lco/polarr/mgcsc/v2/apis/PolarrMGC;)V
 
     return-void
@@ -106,6 +113,7 @@
 .method public synthetic b(Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1}, Lco/polarr/mgcsc/f/f;->a(Ljava/lang/Runnable;)V
 
     return-void
@@ -114,6 +122,7 @@
 .method public c(Lco/polarr/mgcsc/v2/apis/PolarrMGC;)V
     .locals 2
 
+    .line 1
     const/4 v0, 0x0
 
     iput-object v0, p0, Lco/polarr/mgcsc/f/f;->a:Lco/polarr/mgcsc/entities/MovementSuggestion;
@@ -136,6 +145,7 @@
 .method public c(Ljava/lang/Runnable;)V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lco/polarr/mgcsc/f/f;->c:Landroid/os/Handler;
 
     new-instance v1, Lco/polarr/mgcsc/f/b;
@@ -150,6 +160,7 @@
 .method public c()Z
     .locals 0
 
+    .line 3
     iget-boolean p0, p0, Lco/polarr/mgcsc/f/f;->d:Z
 
     return p0

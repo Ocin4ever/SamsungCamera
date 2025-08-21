@@ -89,8 +89,10 @@
 .method public static makeSceneTransitionAnimation(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)Landroidx/core/app/ActivityOptionsCompat;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;
 
+    .line 2
     invoke-static {p0, p1, p2}, Landroidx/core/app/ActivityOptionsCompat$Api21Impl;->makeSceneTransitionAnimation(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)Landroid/app/ActivityOptions;
 
     move-result-object p0
@@ -117,17 +119,20 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     array-length v0, p1
 
     new-array v0, v0, [Landroid/util/Pair;
 
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_1
 
+    .line 5
     aget-object v2, p1, v1
 
     iget-object v3, v2, Landroidx/core/util/Pair;->first:Ljava/lang/Object;
@@ -151,9 +156,11 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 6
     :cond_1
     new-instance p1, Landroidx/core/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;
 
+    .line 7
     invoke-static {p0, v0}, Landroidx/core/app/ActivityOptionsCompat$Api21Impl;->makeSceneTransitionAnimation(Landroid/app/Activity;[Landroid/util/Pair;)Landroid/app/ActivityOptions;
 
     move-result-object p0

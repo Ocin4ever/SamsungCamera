@@ -58,6 +58,7 @@
 .method public apply(Ljava/lang/CharSequence;)Z
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/base/Predicates$ContainsPatternPredicate;->pattern:Lcom/google/common/base/CommonPattern;
 
     invoke-virtual {p0, p1}, Lcom/google/common/base/CommonPattern;->matcher(Ljava/lang/CharSequence;)Lcom/google/common/base/CommonMatcher;
@@ -74,6 +75,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/CharSequence;
 
     invoke-virtual {p0, p1}, Lcom/google/common/base/Predicates$ContainsPatternPredicate;->apply(Ljava/lang/CharSequence;)Z

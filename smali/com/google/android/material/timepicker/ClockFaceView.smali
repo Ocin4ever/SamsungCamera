@@ -40,6 +40,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 1
     sget v0, Ly0/a;->s:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/timepicker/ClockFaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -50,20 +51,24 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 7
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/timepicker/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 3
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView;->e:Landroid/graphics/Rect;
 
+    .line 4
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView;->f:Landroid/graphics/RectF;
 
+    .line 5
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -74,30 +79,37 @@
 
     new-array v1, v0, [F
 
+    .line 6
     fill-array-data v1, :array_0
 
     iput-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->j:[F
 
+    .line 7
     sget-object v1, Ly0/l;->d1:[I
 
     sget v2, Ly0/k;->w:I
 
+    .line 8
     invoke-virtual {p1, p2, v1, p3, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
+    .line 9
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
+    .line 10
     sget v1, Ly0/l;->f1:I
 
+    .line 11
     invoke-static {p1, p2, v1}, Lq1/c;->a(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->q:Landroid/content/res/ColorStateList;
 
+    .line 12
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v2
@@ -108,6 +120,7 @@
 
     invoke-virtual {v2, v3, p0, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
+    .line 13
     sget v2, Ly0/e;->v:I
 
     invoke-virtual {p0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -118,6 +131,7 @@
 
     iput-object v2, p0, Lcom/google/android/material/timepicker/ClockFaceView;->d:Lcom/google/android/material/timepicker/ClockHandView;
 
+    .line 14
     sget v3, Ly0/c;->k:I
 
     invoke-virtual {p3, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -134,10 +148,12 @@
 
     aput v5, v3, v6
 
+    .line 15
     invoke-virtual {v1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
     move-result v5
 
+    .line 16
     invoke-virtual {v1, v3, v5}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
     move-result v3
@@ -150,6 +166,7 @@
 
     const/4 v3, 0x2
 
+    .line 17
     invoke-virtual {v1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
     move-result v1
@@ -158,20 +175,26 @@
 
     iput-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView;->i:[I
 
+    .line 18
     invoke-virtual {v2, p0}, Lcom/google/android/material/timepicker/ClockHandView;->b(Lcom/google/android/material/timepicker/ClockHandView$c;)V
 
+    .line 19
     sget v0, Ly0/b;->b:I
 
+    .line 20
     invoke-static {p1, v0}, Landroidx/appcompat/content/res/AppCompatResources;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
+    .line 21
     invoke-virtual {v0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
     move-result v0
 
+    .line 22
     sget v1, Ly0/l;->e1:I
 
+    .line 23
     invoke-static {p1, p2, v1}, Lq1/c;->a(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -180,14 +203,17 @@
 
     goto :goto_0
 
+    .line 24
     :cond_0
     invoke-virtual {p1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
     move-result v0
 
+    .line 25
     :goto_0
     invoke-virtual {p0, v0}, Lcom/google/android/material/timepicker/c;->setBackgroundColor(I)V
 
+    .line 26
     invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object p1
@@ -196,12 +222,16 @@
 
     invoke-direct {v0, p0}, Lcom/google/android/material/timepicker/ClockFaceView$a;-><init>(Lcom/google/android/material/timepicker/ClockFaceView;)V
 
+    .line 27
     invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
+    .line 28
     invoke-virtual {p0, v4}, Landroid/view/View;->setFocusable(Z)V
 
+    .line 29
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 30
     new-instance p1, Lcom/google/android/material/timepicker/ClockFaceView$b;
 
     invoke-direct {p1, p0}, Lcom/google/android/material/timepicker/ClockFaceView$b;-><init>(Lcom/google/android/material/timepicker/ClockFaceView;)V
@@ -214,10 +244,13 @@
 
     const-string p2, ""
 
+    .line 31
     invoke-static {p1, p2}, Ljava/util/Arrays;->fill([Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 32
     invoke-virtual {p0, p1, v6}, Lcom/google/android/material/timepicker/ClockFaceView;->o([Ljava/lang/String;I)V
 
+    .line 33
     sget p1, Ly0/c;->x:I
 
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -226,6 +259,7 @@
 
     iput p1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->l:I
 
+    .line 34
     sget p1, Ly0/c;->y:I
 
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -234,6 +268,7 @@
 
     iput p1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->m:I
 
+    .line 35
     sget p1, Ly0/c;->m:I
 
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

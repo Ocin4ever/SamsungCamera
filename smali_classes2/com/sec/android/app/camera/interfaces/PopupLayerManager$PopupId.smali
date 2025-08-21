@@ -1447,14 +1447,18 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput-object p3, p0, Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;->mStyle:Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupStyle;
 
+    .line 3
     iput p4, p0, Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;->mPriority:I
 
     const/4 p1, 0x0
 
+    .line 4
     iput-object p1, p0, Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;->mViewId:Lcom/sec/android/app/camera/interfaces/ViewVisibilityEventManager$ViewId;
 
     return-void
@@ -1472,12 +1476,16 @@
         }
     .end annotation
 
+    .line 5
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 6
     iput-object p3, p0, Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;->mStyle:Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupStyle;
 
+    .line 7
     iput p4, p0, Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;->mPriority:I
 
+    .line 8
     iput-object p5, p0, Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;->mViewId:Lcom/sec/android/app/camera/interfaces/ViewVisibilityEventManager$ViewId;
 
     return-void

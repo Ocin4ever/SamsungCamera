@@ -858,6 +858,7 @@
 .method public getPreferenceAdapterPosition(Landroidx/preference/Preference;)I
     .locals 3
 
+    .line 4
     iget-object v0, p0, Landroidx/preference/PreferenceGroupAdapter;->mVisiblePreferences:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -869,6 +870,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 5
     iget-object v2, p0, Landroidx/preference/PreferenceGroupAdapter;->mVisiblePreferences:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -879,6 +881,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 6
     invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -901,6 +904,7 @@
 .method public getPreferenceAdapterPosition(Ljava/lang/String;)I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/preference/PreferenceGroupAdapter;->mVisiblePreferences:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -912,6 +916,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     iget-object v2, p0, Landroidx/preference/PreferenceGroupAdapter;->mVisiblePreferences:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -920,6 +925,7 @@
 
     check-cast v2, Landroidx/preference/Preference;
 
+    .line 3
     invoke-virtual {v2}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v2
@@ -993,18 +999,22 @@
 .method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;I)V
     .locals 1
 
+    .line 2
     invoke-virtual {p0, p2}, Landroidx/preference/PreferenceGroupAdapter;->getItem(I)Landroidx/preference/Preference;
 
     move-result-object p2
 
+    .line 3
     invoke-virtual {p1}, Landroidx/preference/PreferenceViewHolder;->resetState()V
 
+    .line 4
     invoke-virtual {p0, p2}, Landroidx/preference/PreferenceGroupAdapter;->isSwitchLayout(Landroidx/preference/Preference;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 5
     iget-object v0, p0, Landroidx/preference/PreferenceGroupAdapter;->mParent:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
@@ -1013,32 +1023,38 @@
 
     iput v0, p0, Landroidx/preference/PreferenceGroupAdapter;->mParentWidth:I
 
+    .line 6
     instance-of p0, p2, Landroidx/preference/SwitchPreference;
 
     if-eqz p0, :cond_0
 
+    .line 7
     check-cast p2, Landroidx/preference/SwitchPreference;
 
     invoke-virtual {p2, p1, v0}, Landroidx/preference/SwitchPreference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;I)V
 
     goto :goto_0
 
+    .line 8
     :cond_0
     instance-of p0, p2, Landroidx/preference/SwitchPreferenceCompat;
 
     if-eqz p0, :cond_1
 
+    .line 9
     check-cast p2, Landroidx/preference/SwitchPreferenceCompat;
 
     invoke-virtual {p2, p1, v0}, Landroidx/preference/SwitchPreferenceCompat;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;I)V
 
     goto :goto_0
 
+    .line 10
     :cond_1
     invoke-virtual {p2, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
     goto :goto_0
 
+    .line 11
     :cond_2
     invoke-virtual {p2, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
@@ -1049,6 +1065,7 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/preference/PreferenceViewHolder;
 
     invoke-virtual {p0, p1, p2}, Landroidx/preference/PreferenceGroupAdapter;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;I)V
@@ -1059,6 +1076,7 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/preference/PreferenceViewHolder;
     .locals 4
 
+    .line 2
     iget-object v0, p0, Landroidx/preference/PreferenceGroupAdapter;->mPreferenceResourceDescriptors:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1067,6 +1085,7 @@
 
     check-cast p2, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;
 
+    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1075,8 +1094,10 @@
 
     move-result-object v0
 
+    .line 4
     iput-object p1, p0, Landroidx/preference/PreferenceGroupAdapter;->mParent:Landroid/view/ViewGroup;
 
+    .line 5
     iget p0, p2, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mLayoutResId:I
 
     const/4 v1, 0x0
@@ -1087,6 +1108,7 @@
 
     const p1, 0x1020018
 
+    .line 6
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -1097,17 +1119,21 @@
 
     if-eqz p1, :cond_1
 
+    .line 7
     iget v3, p2, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mWidgetLayoutResId:I
 
     if-eqz v3, :cond_0
 
+    .line 8
     invoke-virtual {v0, v3, p1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     goto :goto_0
 
+    .line 9
     :cond_0
     invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
+    .line 10
     :cond_1
     :goto_0
     sget p1, Landroidx/preference/R$id;->badge_frame:I
@@ -1118,26 +1144,32 @@
 
     if-eqz p1, :cond_3
 
+    .line 11
     iget-boolean v0, p2, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mIsDotVisibled:Z
 
     const/4 v3, 0x1
 
     if-ne v0, v3, :cond_2
 
+    .line 12
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
 
+    .line 13
     :cond_2
     invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
+    .line 14
     :goto_1
     iget-object p2, p2, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mDotDescription:Ljava/lang/String;
 
     if-eqz p2, :cond_3
 
+    .line 15
     invoke-virtual {p1, p2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
+    .line 16
     :cond_3
     new-instance p1, Landroidx/preference/PreferenceViewHolder;
 
@@ -1149,6 +1181,7 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/preference/PreferenceGroupAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/preference/PreferenceViewHolder;
 
     move-result-object p0

@@ -112,6 +112,7 @@
 .method public add(IF)V
     .locals 3
 
+    .line 6
     iget v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mCountFloat:I
 
     iget-object v1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mTypeFloat:[I
@@ -120,6 +121,7 @@
 
     if-lt v0, v2, :cond_0
 
+    .line 7
     array-length v0, v1
 
     mul-int/lit8 v0, v0, 0x2
@@ -130,6 +132,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mTypeFloat:[I
 
+    .line 8
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mValueFloat:[F
 
     array-length v1, v0
@@ -142,6 +145,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mValueFloat:[F
 
+    .line 9
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mTypeFloat:[I
 
@@ -149,6 +153,7 @@
 
     aput p1, v0, v1
 
+    .line 10
     iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mValueFloat:[F
 
     add-int/lit8 v0, v1, 0x1
@@ -163,6 +168,7 @@
 .method public add(II)V
     .locals 3
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mCountInt:I
 
     iget-object v1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mTypeInt:[I
@@ -171,6 +177,7 @@
 
     if-lt v0, v2, :cond_0
 
+    .line 2
     array-length v0, v1
 
     mul-int/lit8 v0, v0, 0x2
@@ -181,6 +188,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mTypeInt:[I
 
+    .line 3
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mValueInt:[I
 
     array-length v1, v0
@@ -193,6 +201,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mValueInt:[I
 
+    .line 4
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mTypeInt:[I
 
@@ -200,6 +209,7 @@
 
     aput p1, v0, v1
 
+    .line 5
     iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mValueInt:[I
 
     add-int/lit8 v0, v1, 0x1
@@ -214,6 +224,7 @@
 .method public add(ILjava/lang/String;)V
     .locals 3
 
+    .line 11
     iget v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mCountString:I
 
     iget-object v1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mTypeString:[I
@@ -222,6 +233,7 @@
 
     if-lt v0, v2, :cond_0
 
+    .line 12
     array-length v0, v1
 
     mul-int/lit8 v0, v0, 0x2
@@ -232,6 +244,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mTypeString:[I
 
+    .line 13
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mValueString:[Ljava/lang/String;
 
     array-length v1, v0
@@ -246,6 +259,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mValueString:[Ljava/lang/String;
 
+    .line 14
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mTypeString:[I
 
@@ -253,6 +267,7 @@
 
     aput p1, v0, v1
 
+    .line 15
     iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mValueString:[Ljava/lang/String;
 
     add-int/lit8 v0, v1, 0x1
@@ -267,6 +282,7 @@
 .method public add(IZ)V
     .locals 3
 
+    .line 16
     iget v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mCountBoolean:I
 
     iget-object v1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mTypeBoolean:[I
@@ -275,6 +291,7 @@
 
     if-lt v0, v2, :cond_0
 
+    .line 17
     array-length v0, v1
 
     mul-int/lit8 v0, v0, 0x2
@@ -285,6 +302,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mTypeBoolean:[I
 
+    .line 18
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mValueBoolean:[Z
 
     array-length v1, v0
@@ -297,6 +315,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mValueBoolean:[Z
 
+    .line 19
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mTypeBoolean:[I
 
@@ -304,6 +323,7 @@
 
     aput p1, v0, v1
 
+    .line 20
     iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;->mValueBoolean:[Z
 
     add-int/lit8 v0, v1, 0x1

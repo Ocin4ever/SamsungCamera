@@ -46,6 +46,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/content/Context;
 
     check-cast p2, Landroidx/work/Configuration;
@@ -107,6 +108,7 @@
 
     invoke-static {p6, p1}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Landroidx/work/impl/WorkManagerImplExtKt$schedulers$1;->$schedulers:[Landroidx/work/impl/Scheduler;
 
     invoke-static {p0}, Lg6/k;->D([Ljava/lang/Object;)Ljava/util/List;

@@ -1182,6 +1182,7 @@
 .method public notifyThumbnailUpdated(Landroid/graphics/Bitmap;)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/sec/android/app/camera/watch/CameraControlService;->mCameraControlAidl:Lcom/samsung/accessory/saproviders/sacameracontrolprovider/aidl/a;
 
@@ -1196,6 +1197,7 @@
 
     const-string p1, "notifyThumbnailUpdated fail : RemoteException"
 
+    .line 2
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1205,6 +1207,7 @@
 .method public notifyThumbnailUpdated(Landroid/graphics/Bitmap;I)V
     .locals 0
 
+    .line 3
     :try_start_0
     iget-object p0, p0, Lcom/sec/android/app/camera/watch/CameraControlService;->mCameraControlAidl:Lcom/samsung/accessory/saproviders/sacameracontrolprovider/aidl/a;
 
@@ -1219,6 +1222,7 @@
 
     const-string p1, "notifyThumbnailUpdated fail : RemoteException"
 
+    .line 4
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

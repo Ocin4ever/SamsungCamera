@@ -19,6 +19,7 @@
 .method public static a(Landroid/graphics/PointF;Landroid/graphics/PointF;)F
     .locals 4
 
+    .line 1
     if-eqz p0, :cond_1
 
     if-nez p1, :cond_0
@@ -81,6 +82,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -281,6 +283,7 @@
 .method public static a(Landroid/graphics/Bitmap;)Lco/polarr/mgcsc/entities/a;
     .locals 11
 
+    .line 3
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v8
@@ -321,6 +324,7 @@
 .method public static a(Lco/polarr/mgcsc/entities/a;)Lco/polarr/mgcsc/utils/LineDetectResult;
     .locals 6
 
+    .line 4
     invoke-static {p0}, Lco/polarr/mgcsc/f/i/d;->c(Lco/polarr/mgcsc/entities/a;)V
 
     invoke-static {p0}, Lco/polarr/mgcsc/f/i/d;->d(Lco/polarr/mgcsc/entities/a;)Lco/polarr/mgcsc/entities/a;
@@ -431,6 +435,7 @@
         }
     .end annotation
 
+    .line 5
     move-object/from16 v0, p0
 
     new-instance v1, Ljava/util/ArrayList;
@@ -595,6 +600,7 @@
 .method public static a(Landroid/graphics/PointF;Landroid/graphics/PointF;F)Z
     .locals 4
 
+    .line 6
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
     iget p0, p0, Landroid/graphics/PointF;->y:F
@@ -657,6 +663,7 @@
         }
     .end annotation
 
+    .line 7
     move/from16 v0, p1
 
     move/from16 v1, p2

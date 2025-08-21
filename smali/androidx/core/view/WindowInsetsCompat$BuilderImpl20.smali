@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static sConstructor:Ljava/lang/reflect/Constructor;
+.field private static sConstructor:Ljava/lang/reflect/Constructor; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor<",
@@ -25,11 +25,11 @@
     .end annotation
 .end field
 
-.field private static sConstructorFetched:Z
+.field private static sConstructorFetched:Z = false
 
-.field private static sConsumedField:Ljava/lang/reflect/Field;
+.field private static sConsumedField:Ljava/lang/reflect/Field; = null
 
-.field private static sConsumedFieldFetched:Z
+.field private static sConsumedFieldFetched:Z = false
 
 
 # instance fields
@@ -48,8 +48,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;-><init>()V
 
+    .line 2
     invoke-static {}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->createWindowInsetsInstance()Landroid/view/WindowInsets;
 
     move-result-object v0
@@ -62,8 +64,10 @@
 .method public constructor <init>(Landroidx/core/view/WindowInsetsCompat;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;-><init>(Landroidx/core/view/WindowInsetsCompat;)V
 
+    .line 4
     invoke-virtual {p1}, Landroidx/core/view/WindowInsetsCompat;->toWindowInsets()Landroid/view/WindowInsets;
 
     move-result-object p1

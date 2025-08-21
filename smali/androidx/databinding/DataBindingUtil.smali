@@ -46,6 +46,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Landroidx/databinding/DataBindingUtil;->sDefaultComponent:Landroidx/databinding/DataBindingComponent;
 
     invoke-static {p0, v0}, Landroidx/databinding/DataBindingUtil;->bind(Landroid/view/View;Landroidx/databinding/DataBindingComponent;)Landroidx/databinding/ViewDataBinding;
@@ -68,6 +69,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p0}, Landroidx/databinding/DataBindingUtil;->getBinding(Landroid/view/View;)Landroidx/databinding/ViewDataBinding;
 
     move-result-object v0
@@ -76,19 +78,23 @@
 
     return-object v0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 4
     instance-of v1, v0, Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
+    .line 5
     move-object v1, v0
 
     check-cast v1, Ljava/lang/String;
 
+    .line 6
     sget-object v2, Landroidx/databinding/DataBindingUtil;->sMapper:Landroidx/databinding/DataBinderMapper;
 
     invoke-virtual {v2, v1}, Landroidx/databinding/DataBinderMapper;->getLayoutId(Ljava/lang/String;)I
@@ -97,6 +103,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 7
     sget-object v0, Landroidx/databinding/DataBindingUtil;->sMapper:Landroidx/databinding/DataBinderMapper;
 
     invoke-virtual {v0, p1, p0, v1}, Landroidx/databinding/DataBinderMapper;->getDataBinder(Landroidx/databinding/DataBindingComponent;Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
@@ -105,6 +112,7 @@
 
     return-object p0
 
+    .line 8
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -126,6 +134,7 @@
 
     throw p0
 
+    .line 9
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -149,6 +158,7 @@
         }
     .end annotation
 
+    .line 11
     sget-object v0, Landroidx/databinding/DataBindingUtil;->sMapper:Landroidx/databinding/DataBinderMapper;
 
     invoke-virtual {v0, p0, p1, p2}, Landroidx/databinding/DataBinderMapper;->getDataBinder(Landroidx/databinding/DataBindingComponent;Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
@@ -172,6 +182,7 @@
         }
     .end annotation
 
+    .line 10
     sget-object v0, Landroidx/databinding/DataBindingUtil;->sMapper:Landroidx/databinding/DataBinderMapper;
 
     invoke-virtual {v0, p0, p1, p2}, Landroidx/databinding/DataBinderMapper;->getDataBinder(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
@@ -428,6 +439,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Landroidx/databinding/DataBindingUtil;->sDefaultComponent:Landroidx/databinding/DataBindingComponent;
 
     invoke-static {p0, p1, p2, p3, v0}, Landroidx/databinding/DataBindingUtil;->inflate(Landroid/view/LayoutInflater;ILandroid/view/ViewGroup;ZLandroidx/databinding/DataBindingComponent;)Landroidx/databinding/ViewDataBinding;
@@ -469,10 +481,12 @@
     :goto_0
     if-eqz v1, :cond_1
 
+    .line 2
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
+    .line 3
     :cond_1
     invoke-virtual {p0, p1, p2, p3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -480,12 +494,14 @@
 
     if-eqz v1, :cond_2
 
+    .line 4
     invoke-static {p4, p2, v0, p1}, Landroidx/databinding/DataBindingUtil;->bindToAddedViews(Landroidx/databinding/DataBindingComponent;Landroid/view/ViewGroup;II)Landroidx/databinding/ViewDataBinding;
 
     move-result-object p0
 
     return-object p0
 
+    .line 5
     :cond_2
     invoke-static {p4, p0, p1}, Landroidx/databinding/DataBindingUtil;->bind(Landroidx/databinding/DataBindingComponent;Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
 
@@ -506,6 +522,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Landroidx/databinding/DataBindingUtil;->sDefaultComponent:Landroidx/databinding/DataBindingComponent;
 
     invoke-static {p0, p1, v0}, Landroidx/databinding/DataBindingUtil;->setContentView(Landroid/app/Activity;ILandroidx/databinding/DataBindingComponent;)Landroidx/databinding/ViewDataBinding;
@@ -529,8 +546,10 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setContentView(I)V
 
+    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object p0
@@ -541,6 +560,7 @@
 
     const v0, 0x1020002
 
+    .line 4
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p0
@@ -549,6 +569,7 @@
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-static {p2, p0, v0, p1}, Landroidx/databinding/DataBindingUtil;->bindToAddedViews(Landroidx/databinding/DataBindingComponent;Landroid/view/ViewGroup;II)Landroidx/databinding/ViewDataBinding;
 
     move-result-object p0

@@ -284,6 +284,7 @@
 .method public static create(Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)V
@@ -294,6 +295,7 @@
 .method public static create(Landroid/app/Dialog;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
 
+    .line 2
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-direct {v0, p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/app/Dialog;Landroidx/appcompat/app/AppCompatCallback;)V
@@ -304,6 +306,7 @@
 .method public static create(Landroid/content/Context;Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
 
+    .line 4
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-direct {v0, p0, p1, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/content/Context;Landroid/app/Activity;Landroidx/appcompat/app/AppCompatCallback;)V
@@ -314,6 +317,7 @@
 .method public static create(Landroid/content/Context;Landroid/view/Window;Landroidx/appcompat/app/AppCompatCallback;)Landroidx/appcompat/app/AppCompatDelegate;
     .locals 1
 
+    .line 3
     new-instance v0, Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-direct {v0, p0, p1, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl;-><init>(Landroid/content/Context;Landroid/view/Window;Landroidx/appcompat/app/AppCompatCallback;)V

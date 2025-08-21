@@ -101,8 +101,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -117,6 +119,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->EXTRA_TOUCH_AREA:I
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -133,6 +136,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->BIG_BUTTON_SIZE:F
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -149,6 +153,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->BIG_BUTTON_RESOURCE_SIZE:F
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -165,6 +170,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->SMALL_BUTTON_SIZE:F
 
+    .line 6
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -173,28 +179,36 @@
 
     const/4 p1, 0x0
 
+    .line 7
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mIsButtonListBackgroundVisible:Z
 
+    .line 8
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mIsItemUpdating:Z
 
+    .line 9
     sget-object p1, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;->NOT_SUPPORT:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mCurrentZoomCategory:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
     const/4 p1, -0x1
 
+    .line 10
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mSelectedButtonDeltaXFromCenter:I
 
+    .line 11
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mSelectedButtonZoomValue:I
 
     const/high16 p1, -0x40800000    # -1.0f
 
+    .line 12
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mSelectedButtonBackgroundSize:F
 
     const/4 p1, 0x0
 
+    .line 13
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mPendingUpdateRequestRunnable:Ljava/lang/Runnable;
 
+    .line 14
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView$1;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;)V
@@ -207,8 +221,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 15
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 16
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -223,6 +239,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->EXTRA_TOUCH_AREA:I
 
+    .line 17
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -239,6 +256,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->BIG_BUTTON_SIZE:F
 
+    .line 18
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -255,6 +273,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->BIG_BUTTON_RESOURCE_SIZE:F
 
+    .line 19
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -271,6 +290,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->SMALL_BUTTON_SIZE:F
 
+    .line 20
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -279,28 +299,36 @@
 
     const/4 p1, 0x0
 
+    .line 21
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mIsButtonListBackgroundVisible:Z
 
+    .line 22
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mIsItemUpdating:Z
 
+    .line 23
     sget-object p1, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;->NOT_SUPPORT:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mCurrentZoomCategory:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
     const/4 p1, -0x1
 
+    .line 24
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mSelectedButtonDeltaXFromCenter:I
 
+    .line 25
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mSelectedButtonZoomValue:I
 
     const/high16 p1, -0x40800000    # -1.0f
 
+    .line 26
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mSelectedButtonBackgroundSize:F
 
     const/4 p1, 0x0
 
+    .line 27
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mPendingUpdateRequestRunnable:Ljava/lang/Runnable;
 
+    .line 28
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView$1;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;)V
@@ -313,8 +341,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 29
     invoke-direct {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 30
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -329,6 +359,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->EXTRA_TOUCH_AREA:I
 
+    .line 31
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -345,6 +376,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->BIG_BUTTON_SIZE:F
 
+    .line 32
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -361,6 +393,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->BIG_BUTTON_RESOURCE_SIZE:F
 
+    .line 33
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -377,6 +410,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->SMALL_BUTTON_SIZE:F
 
+    .line 34
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -385,28 +419,36 @@
 
     const/4 p1, 0x0
 
+    .line 35
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mIsButtonListBackgroundVisible:Z
 
+    .line 36
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mIsItemUpdating:Z
 
+    .line 37
     sget-object p1, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;->NOT_SUPPORT:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mCurrentZoomCategory:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
     const/4 p1, -0x1
 
+    .line 38
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mSelectedButtonDeltaXFromCenter:I
 
+    .line 39
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mSelectedButtonZoomValue:I
 
     const/high16 p1, -0x40800000    # -1.0f
 
+    .line 40
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mSelectedButtonBackgroundSize:F
 
     const/4 p1, 0x0
 
+    .line 41
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mPendingUpdateRequestRunnable:Ljava/lang/Runnable;
 
+    .line 42
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView$1;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;)V
@@ -3064,6 +3106,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->setPresenter(Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListContract$Presenter;)V
@@ -3074,6 +3117,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListContract$Presenter;
 
     return-void
@@ -3090,6 +3134,7 @@
 .method public updateBackground(Landroid/view/View;II)V
     .locals 1
 
+    .line 8
     iget v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->EXTRA_TOUCH_AREA:I
 
     add-int/2addr p3, v0
@@ -3103,15 +3148,18 @@
     :cond_0
     const/4 p2, 0x0
 
+    .line 9
     :goto_0
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->setDarkMode(Z)V
 
+    .line 10
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->isButtonListBackgroundRequired()Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
+    .line 11
     iget-boolean p2, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mDarkMode:Z
 
     if-eqz p2, :cond_1
@@ -3123,6 +3171,7 @@
     :cond_1
     const p2, 0x7f080738
 
+    .line 12
     :goto_1
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -3143,6 +3192,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 1
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->isDarkMode()Z
 
     move-result v0
@@ -3157,6 +3207,7 @@
 
     const/4 p2, 0x0
 
+    .line 2
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->setDarkMode(Z)V
 
     goto :goto_0
@@ -3164,6 +3215,7 @@
     :cond_0
     if-nez p3, :cond_2
 
+    .line 3
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->isDarkMode()Z
 
     move-result p3
@@ -3178,8 +3230,10 @@
 
     const/4 p2, 0x1
 
+    .line 4
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->setDarkMode(Z)V
 
+    .line 5
     :goto_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->isButtonListBackgroundRequired()Z
 
@@ -3187,6 +3241,7 @@
 
     if-eqz p2, :cond_2
 
+    .line 6
     iget-boolean p2, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;->mDarkMode:Z
 
     if-eqz p2, :cond_1
@@ -3198,6 +3253,7 @@
     :cond_1
     const p2, 0x7f080738
 
+    .line 7
     :goto_1
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 

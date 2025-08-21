@@ -112,6 +112,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, p1, v0}, Lcom/sec/android/app/camera/util/debug/DebugUtil;->checkLoggingDuration(Ljava/lang/String;ZLjava/lang/String;)V
 
     return-void
@@ -120,14 +121,17 @@
 .method public static checkLoggingDuration(Ljava/lang/String;ZLjava/lang/String;)V
     .locals 3
 
+    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
+    .line 3
     sget-object v2, Lcom/sec/android/app/camera/util/debug/DebugUtil;->mLoggingDurationMap:Ljava/util/HashMap;
 
     if-nez v2, :cond_0
 
+    .line 4
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
@@ -137,6 +141,7 @@
     :cond_0
     if-nez p1, :cond_1
 
+    .line 5
     sget-object p1, Lcom/sec/android/app/camera/util/debug/DebugUtil;->mLoggingDurationMap:Ljava/util/HashMap;
 
     invoke-virtual {p1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -155,6 +160,7 @@
 
     invoke-virtual {p1, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 6
     :cond_1
     sget-object p1, Lcom/sec/android/app/camera/util/debug/DebugUtil;->mLoggingDurationMap:Ljava/util/HashMap;
 
@@ -172,10 +178,12 @@
 
     const-string v0, "Views:"
 
+    .line 24
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 25
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -191,6 +199,7 @@
 
     move-result-object p0
 
+    .line 26
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v2
@@ -199,6 +208,7 @@
 
     move-result-object p0
 
+    .line 27
     new-instance v2, Ljava/io/BufferedReader;
 
     new-instance v3, Ljava/io/InputStreamReader;
@@ -215,6 +225,7 @@
 
     invoke-direct {v2, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
+    .line 28
     :cond_0
     :goto_0
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -225,6 +236,7 @@
 
     const-string v4, "Java Heap:"
 
+    .line 29
     invoke-virtual {v3, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -241,6 +253,7 @@
     :try_start_1
     const-string v4, "[App Summery] Java Heap: "
 
+    .line 30
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {v5, v3}, Lcom/sec/android/app/camera/util/debug/DebugUtil;->getParsingMemoryInfo(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -256,6 +269,7 @@
     :cond_1
     const-string v4, "Native Heap:"
 
+    .line 31
     invoke-virtual {v3, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -264,6 +278,7 @@
 
     const-string v4, "Native Heap: "
 
+    .line 32
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {v5, v3}, Lcom/sec/android/app/camera/util/debug/DebugUtil;->getParsingMemoryInfo(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -279,6 +294,7 @@
     :cond_2
     const-string v4, "TOTAL PSS:"
 
+    .line 33
     invoke-virtual {v3, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -287,6 +303,7 @@
 
     const-string v4, "TOTAL PSS: "
 
+    .line 34
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, "PSS:"
@@ -301,6 +318,7 @@
 
     goto :goto_0
 
+    .line 35
     :cond_3
     invoke-virtual {v3, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -310,6 +328,7 @@
 
     const-string v2, "Views: "
 
+    .line 36
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {v0, v3}, Lcom/sec/android/app/camera/util/debug/DebugUtil;->getParsingMemoryInfo(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -318,12 +337,14 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 37
     :cond_4
     invoke-virtual {p0}, Ljava/lang/Process;->waitFor()I
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
+    .line 38
     :catch_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -337,18 +358,22 @@
 
     const-string v0, "activity"
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/ActivityManager;
 
+    .line 2
     new-instance v1, Landroid/app/ActivityManager$MemoryInfo;
 
     invoke-direct {v1}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
+    .line 3
     invoke-virtual {v0, v1}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
 
+    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -395,6 +420,7 @@
 
     const-string p1, "android.permission.DUMP"
 
+    .line 5
     invoke-virtual {p0, p1}, Landroid/content/Context;->checkSelfPermission(Ljava/lang/String;)I
 
     move-result p1
@@ -409,6 +435,7 @@
 
     if-nez p1, :cond_0
 
+    .line 6
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -424,20 +451,24 @@
     :cond_0
     const-string p0, "Need to set Permission DUMP and PACKAGE_USAGE_STATS"
 
+    .line 7
     invoke-static {v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     return-void
 
+    .line 8
     :cond_1
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object p0
 
+    .line 9
     new-instance p1, Ljava/util/TreeMap;
 
     invoke-direct {p1}, Ljava/util/TreeMap;-><init>()V
 
+    .line 10
     invoke-static {p0}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
 
     move-result-object p0
@@ -448,14 +479,17 @@
 
     invoke-virtual {p0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 11
     invoke-virtual {p1}, Ljava/util/TreeMap;->keySet()Ljava/util/Set;
 
     move-result-object p0
 
+    .line 12
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 13
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -485,10 +519,12 @@
 
     aput v3, v4, v5
 
+    .line 14
     invoke-virtual {v0, v4}, Landroid/app/ActivityManager;->getProcessMemoryInfo([I)[Landroid/os/Debug$MemoryInfo;
 
     move-result-object v3
 
+    .line 15
     array-length v6, v3
 
     move v7, v5
@@ -498,6 +534,7 @@
 
     aget-object v8, v3, v7
 
+    .line 16
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -540,6 +577,7 @@
 
     move-result-object v9
 
+    .line 17
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -572,6 +610,7 @@
 
     move-result-object v9
 
+    .line 18
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -602,6 +641,7 @@
 
     move-result-object v9
 
+    .line 19
     new-instance v10, Lcom/sec/android/app/camera/util/debug/DebugUtil$ComparableMemoryInfo;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -644,15 +684,18 @@
 
     invoke-direct {v10, v11, v8, v9}, Lcom/sec/android/app/camera/util/debug/DebugUtil$ComparableMemoryInfo;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
+    .line 20
     invoke-interface {v1, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_1
 
+    .line 21
     :cond_3
     invoke-static {v1}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
+    .line 22
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -670,6 +713,7 @@
 
     check-cast p1, Lcom/sec/android/app/camera/util/debug/DebugUtil$ComparableMemoryInfo;
 
+    .line 23
     invoke-virtual {p1, v5}, Lcom/sec/android/app/camera/util/debug/DebugUtil$ComparableMemoryInfo;->getInfo(I)Ljava/lang/String;
 
     move-result-object p1
@@ -691,6 +735,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0, v0}, Lcom/sec/android/app/camera/util/debug/DebugUtil;->dumpCallStack(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -703,6 +748,7 @@
 
     const-string v1, "DebugUtil"
 
+    .line 2
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -718,6 +764,7 @@
     :cond_0
     move v3, v0
 
+    .line 3
     :goto_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -727,17 +774,20 @@
 
     move-result-object v4
 
+    .line 4
     array-length v5, v4
 
     const/4 v6, -0x1
 
     if-lez v5, :cond_2
 
+    .line 5
     :goto_1
     array-length v5, v4
 
     if-ge v0, v5, :cond_2
 
+    .line 6
     aget-object v5, v4, v0
 
     invoke-virtual {v5}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
@@ -767,10 +817,12 @@
     :goto_2
     if-eq v0, v6, :cond_4
 
+    .line 7
     array-length v2, v4
 
     if-le v2, v0, :cond_4
 
+    .line 8
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -795,6 +847,7 @@
 
     move v2, v0
 
+    .line 9
     :goto_3
     array-length v5, v4
 
@@ -804,6 +857,7 @@
 
     if-ge v2, p0, :cond_3
 
+    .line 10
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -855,6 +909,7 @@
     :cond_3
     if-nez p1, :cond_5
 
+    .line 11
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -896,10 +951,12 @@
 
     if-nez v3, :cond_6
 
+    .line 12
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 13
     :cond_6
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -923,10 +980,12 @@
 
     move-result-object v0
 
+    .line 14
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 15
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -941,10 +1000,12 @@
 
     const-string p0, "dumpCallStack : Fail to create directory."
 
+    .line 16
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 17
     :cond_7
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -955,6 +1016,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/Runtime;->exec(Ljava/lang/String;)Ljava/lang/Process;
 
+    .line 18
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v2
@@ -992,8 +1054,10 @@
     :catch_0
     const-string p1, "dumpCallStack : IOException"
 
+    .line 19
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 20
     :goto_5
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

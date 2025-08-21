@@ -134,18 +134,21 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/samsung/android/qrengine/QRBarcodeDecoder$ImageCaptureMode;Lcom/samsung/android/qrengine/QRBarcodeDecoder$RecognitionTarget;)V
     .locals 2
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x5
 
     new-array v0, v0, [I
 
+    .line 15
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mDetectRoi:[I
 
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
+    .line 16
     fill-array-data v0, :array_0
 
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -162,36 +165,46 @@
 
     new-array v0, v0, [C
 
+    .line 17
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->barCodeType:[C
 
     const/4 v0, 0x0
 
+    .line 18
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->rgbFrameBitmap:Landroid/graphics/Bitmap;
 
+    .line 19
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->croppedBitmap:Landroid/graphics/Bitmap;
 
+    .line 20
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->cropCopyBitmap:Landroid/graphics/Bitmap;
 
     const/16 v0, 0xa
 
     new-array v0, v0, [I
 
+    .line 21
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mSavedIndex:[I
 
     const/4 v0, 0x0
 
+    .line 22
     iput-boolean v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->m_testFlag:Z
 
+    .line 23
     iput-boolean v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mIsProcessAborted:Z
 
+    .line 24
     iput-boolean v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mIsEngineInited:Z
 
+    .line 25
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->resultLabel:Ljava/util/List;
 
+    .line 26
     iput-object p1, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mContext:Landroid/content/Context;
 
     if-nez p1, :cond_0
@@ -200,13 +213,16 @@
 
     const-string p1, "init failed, context is null"
 
+    .line 27
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 28
     :cond_0
     invoke-direct {p0, p1}, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->copyModelFile(Landroid/content/Context;)V
 
+    .line 29
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -229,6 +245,7 @@
 
     move-result-object p1
 
+    .line 30
     invoke-virtual {p0, p2, p3, p1}, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->init(Lcom/samsung/android/qrengine/QRBarcodeDecoder$ImageCaptureMode;Lcom/samsung/android/qrengine/QRBarcodeDecoder$RecognitionTarget;Ljava/lang/String;)V
 
     return-void
@@ -245,18 +262,21 @@
 .method public constructor <init>(Lcom/samsung/android/qrengine/QRBarcodeDecoder$ImageCaptureMode;Lcom/samsung/android/qrengine/QRBarcodeDecoder$RecognitionTarget;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x5
 
     new-array v0, v0, [I
 
+    .line 2
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mDetectRoi:[I
 
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
+    .line 3
     fill-array-data v0, :array_0
 
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -273,30 +293,39 @@
 
     new-array v0, v0, [C
 
+    .line 4
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->barCodeType:[C
 
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->rgbFrameBitmap:Landroid/graphics/Bitmap;
 
+    .line 6
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->croppedBitmap:Landroid/graphics/Bitmap;
 
+    .line 7
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->cropCopyBitmap:Landroid/graphics/Bitmap;
 
     const/16 v0, 0xa
 
     new-array v0, v0, [I
 
+    .line 8
     iput-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mSavedIndex:[I
 
     const/4 v0, 0x0
 
+    .line 9
     iput-boolean v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->m_testFlag:Z
 
+    .line 10
     iput-boolean v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mIsProcessAborted:Z
 
+    .line 11
     iput-boolean v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mIsEngineInited:Z
 
+    .line 12
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -305,6 +334,7 @@
 
     const-string v0, ""
 
+    .line 13
     invoke-virtual {p0, p1, p2, v0}, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->init(Lcom/samsung/android/qrengine/QRBarcodeDecoder$ImageCaptureMode;Lcom/samsung/android/qrengine/QRBarcodeDecoder$RecognitionTarget;Ljava/lang/String;)V
 
     return-void
@@ -2141,6 +2171,7 @@
 .method public getRecognizedObjectImage(I)Landroid/graphics/Bitmap;
     .locals 10
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2163,6 +2194,7 @@
 
     new-array v7, v0, [I
 
+    .line 2
     iget-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mSavedData:[B
 
     if-eqz v0, :cond_3
@@ -2175,6 +2207,7 @@
 
     goto/16 :goto_1
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2260,16 +2293,21 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     iget v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mImageWidth:I
 
+    .line 5
     iget v1, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mImageHeight:I
 
+    .line 6
     iget-boolean v8, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mSavedRGBdata:Z
 
     if-eqz v8, :cond_2
 
+    .line 7
     iget v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mRGBDataWidth:I
 
+    .line 8
     iget v1, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mRGBDataHeight:I
 
     aget v5, v7, v5
@@ -2281,6 +2319,7 @@
 
     add-int/lit8 v9, v3, -0x2
 
+    .line 9
     aget v9, v7, v9
 
     aput v9, v7, v3
@@ -2299,6 +2338,7 @@
 
     move v6, v1
 
+    .line 10
     iget-object v3, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mContext:Landroid/content/Context;
 
     iget-object v4, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mSavedData:[B
@@ -2319,6 +2359,7 @@
     :goto_1
     const-string p0, "getRecognizedObjectImage failed"
 
+    .line 11
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -2329,6 +2370,7 @@
 .method public getRecognizedObjectImage(II)Landroid/graphics/Bitmap;
     .locals 10
 
+    .line 12
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2351,6 +2393,7 @@
 
     new-array v7, v0, [I
 
+    .line 13
     iget-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mSavedData:[B
 
     if-eqz v0, :cond_1
@@ -2363,6 +2406,7 @@
 
     goto :goto_0
 
+    .line 14
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2448,10 +2492,13 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 15
     iget v5, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mImageWidth:I
 
+    .line 16
     iget v6, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mImageHeight:I
 
+    .line 17
     iget-object v3, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mContext:Landroid/content/Context;
 
     iget-object v4, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mSavedData:[B
@@ -2472,6 +2519,7 @@
     :goto_0
     const-string p0, "getRecognizedObjectImage failed"
 
+    .line 18
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -2823,6 +2871,7 @@
 
     move-object/from16 v0, p0
 
+    .line 27
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2843,16 +2892,19 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 28
     iget-object v1, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->barCodeType:[C
 
     const/4 v3, 0x0
 
     invoke-static {v1, v3}, Ljava/util/Arrays;->fill([CC)V
 
+    .line 29
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
+    .line 30
     invoke-virtual/range {p3 .. p3}, [B->clone()Ljava/lang/Object;
 
     move-result-object v1
@@ -2874,9 +2926,11 @@
     :cond_0
     move v6, v3
 
+    .line 31
     :goto_0
     iput-boolean v6, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mSavedRGBdata:Z
 
+    .line 32
     iget v8, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mEngineId:I
 
     iget-object v6, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mResultRoi:[[I
@@ -2909,6 +2963,7 @@
 
     move-result-object v6
 
+    .line 33
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2925,6 +2980,7 @@
 
     invoke-static {v2, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 34
     iget-object v7, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCaptureMode:Lcom/samsung/android/qrengine/QRBarcodeDecoder$ImageCaptureMode;
 
     sget-object v8, Lcom/samsung/android/qrengine/QRBarcodeDecoder$ImageCaptureMode;->ContiniousVideo:Lcom/samsung/android/qrengine/QRBarcodeDecoder$ImageCaptureMode;
@@ -2941,8 +2997,10 @@
 
     const-string v0, "barcodeRecognize ContiniousVideo mode"
 
+    .line 35
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 36
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -2954,6 +3012,7 @@
 
     return v0
 
+    .line 37
     :cond_1
     iget-object v2, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mResult:[Ljava/lang/String;
 
@@ -2961,12 +3020,15 @@
 
     aput-object v7, v2, v3
 
+    .line 38
     iget-object v2, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCodeType:[Ljava/lang/String;
 
     aput-object v7, v2, v3
 
+    .line 39
     iput v3, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCount:I
 
+    .line 40
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -2985,6 +3047,7 @@
 
     if-ge v2, v8, :cond_4
 
+    .line 41
     iget-object v9, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->barCodeType:[C
 
     aget-char v9, v9, v2
@@ -2998,6 +3061,7 @@
 
     goto :goto_2
 
+    .line 42
     :cond_4
     :goto_3
     iget-object v9, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->barCodeType:[C
@@ -3010,6 +3074,7 @@
 
     if-lez v2, :cond_5
 
+    .line 43
     iget-object v8, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCodeType:[Ljava/lang/String;
 
     invoke-static {v9, v3, v2}, Ljava/lang/String;->copyValueOf([CII)Ljava/lang/String;
@@ -3018,6 +3083,7 @@
 
     aput-object v2, v8, v3
 
+    .line 44
     :cond_5
     iget-object v2, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCodeType:[Ljava/lang/String;
 
@@ -3029,27 +3095,32 @@
 
     if-eqz v2, :cond_6
 
+    .line 45
     iget-object v1, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCodeType:[Ljava/lang/String;
 
     const-string v2, "None"
 
     aput-object v2, v1, v3
 
+    .line 46
     iput v3, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCount:I
 
     return v7
 
+    .line 47
     :cond_6
     iget-object v2, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mResult:[Ljava/lang/String;
 
     aput-object v6, v2, v3
 
+    .line 48
     iget v2, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCount:I
 
     add-int/2addr v2, v1
 
     iput v2, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCount:I
 
+    .line 49
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -3068,33 +3139,40 @@
 
     const-string p0, "Bitmap is null"
 
+    .line 50
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
+    .line 51
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
+    .line 52
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
 
+    .line 53
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v6
 
+    .line 54
     iget-object v4, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->barCodeType:[C
 
     const/4 v10, 0x0
 
     invoke-static {v4, v10}, Ljava/util/Arrays;->fill([CC)V
 
+    .line 55
     invoke-static {p1}, Lcom/samsung/android/qrengine/ImageUtil;->bitmapToRGBbytes(Landroid/graphics/Bitmap;)[B
 
     move-result-object v4
 
+    .line 56
     invoke-virtual {v4}, [B->clone()Ljava/lang/Object;
 
     move-result-object p1
@@ -3105,12 +3183,16 @@
 
     const/4 p1, 0x1
 
+    .line 57
     iput-boolean p1, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mSavedRGBdata:Z
 
+    .line 58
     iput v5, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mRGBDataWidth:I
 
+    .line 59
     iput v6, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mRGBDataHeight:I
 
+    .line 60
     iget-object v7, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mResultRoi:[[I
 
     aget-object v7, v7, v10
@@ -3123,6 +3205,7 @@
 
     move-result-object v4
 
+    .line 61
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -3229,18 +3312,22 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 62
     iget-object p1, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mResult:[Ljava/lang/String;
 
     const-string v0, ""
 
     aput-object v0, p1, v10
 
+    .line 63
     iget-object p1, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCodeType:[Ljava/lang/String;
 
     aput-object v0, p1, v10
 
+    .line 64
     iput v10, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCount:I
 
+    .line 65
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -3257,6 +3344,7 @@
 
     if-ge p1, v0, :cond_3
 
+    .line 66
     iget-object v5, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->barCodeType:[C
 
     aget-char v5, v5, p1
@@ -3270,6 +3358,7 @@
 
     goto :goto_0
 
+    .line 67
     :cond_3
     :goto_1
     iget-object v5, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->barCodeType:[C
@@ -3282,6 +3371,7 @@
 
     if-lez p1, :cond_4
 
+    .line 68
     iget-object v0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCodeType:[Ljava/lang/String;
 
     invoke-static {v5, v10, p1}, Ljava/lang/String;->copyValueOf([CII)Ljava/lang/String;
@@ -3290,6 +3380,7 @@
 
     aput-object p1, v0, v10
 
+    .line 69
     :cond_4
     iget-object p1, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCodeType:[Ljava/lang/String;
 
@@ -3301,21 +3392,25 @@
 
     if-eqz p1, :cond_5
 
+    .line 70
     iget-object p1, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCodeType:[Ljava/lang/String;
 
     const-string v0, "None"
 
     aput-object v0, p1, v10
 
+    .line 71
     iput v10, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCount:I
 
     return v1
 
+    .line 72
     :cond_5
     iget-object p0, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mResult:[Ljava/lang/String;
 
     aput-object v4, p0, v10
 
+    .line 73
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p0
@@ -3332,6 +3427,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mDetectRoi:[I
 
     const/4 v2, 0x0
@@ -3340,28 +3436,34 @@
 
     const/4 v15, 0x1
 
+    .line 2
     aget v7, v1, v15
 
     const/4 v3, 0x2
 
+    .line 3
     aget v3, v1, v3
 
     sub-int v8, v3, v6
 
     const/4 v3, 0x3
 
+    .line 4
     aget v1, v1, v3
 
     sub-int v9, v1, v7
 
+    .line 5
     iget-object v1, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->barCodeType:[C
 
     invoke-static {v1, v2}, Ljava/util/Arrays;->fill([CC)V
 
+    .line 6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v16
 
+    .line 7
     invoke-virtual/range {p1 .. p1}, [B->clone()Ljava/lang/Object;
 
     move-result-object v1
@@ -3370,8 +3472,10 @@
 
     iput-object v1, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mSavedData:[B
 
+    .line 8
     iput-boolean v2, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mSavedRGBdata:Z
 
+    .line 9
     iget v4, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mImageWidth:I
 
     iget v5, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mImageHeight:I
@@ -3394,6 +3498,7 @@
 
     move-result-object v1
 
+    .line 10
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3412,6 +3517,7 @@
 
     invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 11
     iget-object v3, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCaptureMode:Lcom/samsung/android/qrengine/QRBarcodeDecoder$ImageCaptureMode;
 
     sget-object v5, Lcom/samsung/android/qrengine/QRBarcodeDecoder$ImageCaptureMode;->ContiniousVideo:Lcom/samsung/android/qrengine/QRBarcodeDecoder$ImageCaptureMode;
@@ -3428,8 +3534,10 @@
 
     const-string v0, "barcodeRecognize ContiniousVideo mode"
 
+    .line 12
     invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 13
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -3441,6 +3549,7 @@
 
     return v0
 
+    .line 14
     :cond_0
     iget-object v3, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mResult:[Ljava/lang/String;
 
@@ -3448,12 +3557,15 @@
 
     aput-object v4, v3, v2
 
+    .line 15
     iget-object v3, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCodeType:[Ljava/lang/String;
 
     aput-object v4, v3, v2
 
+    .line 16
     iput v2, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCount:I
 
+    .line 17
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -3472,6 +3584,7 @@
 
     if-ge v3, v5, :cond_3
 
+    .line 18
     iget-object v6, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->barCodeType:[C
 
     aget-char v6, v6, v3
@@ -3485,6 +3598,7 @@
 
     goto :goto_1
 
+    .line 19
     :cond_3
     :goto_2
     iget-object v6, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->barCodeType:[C
@@ -3497,6 +3611,7 @@
 
     if-lez v3, :cond_4
 
+    .line 20
     iget-object v5, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCodeType:[Ljava/lang/String;
 
     invoke-static {v6, v2, v3}, Ljava/lang/String;->copyValueOf([CII)Ljava/lang/String;
@@ -3505,6 +3620,7 @@
 
     aput-object v3, v5, v2
 
+    .line 21
     :cond_4
     iget-object v3, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCodeType:[Ljava/lang/String;
 
@@ -3516,27 +3632,32 @@
 
     if-eqz v3, :cond_5
 
+    .line 22
     iget-object v1, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCodeType:[Ljava/lang/String;
 
     const-string v3, "None"
 
     aput-object v3, v1, v2
 
+    .line 23
     iput v2, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCount:I
 
     return v4
 
+    .line 24
     :cond_5
     iget-object v3, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mResult:[Ljava/lang/String;
 
     aput-object v1, v3, v2
 
+    .line 25
     iget v1, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCount:I
 
     add-int/2addr v1, v15
 
     iput v1, v0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mCount:I
 
+    .line 26
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -3599,14 +3720,19 @@
 .method public setImageSize(II)Z
     .locals 0
 
+    .line 1
     iput p2, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mImageHeight:I
 
+    .line 2
     iput p1, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mImageWidth:I
 
+    .line 3
     iput p1, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mStrideWidth:I
 
+    .line 4
     iput p2, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mStrideHeight:I
 
+    .line 5
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->initData(II)V
 
     const/4 p0, 0x1
@@ -3617,14 +3743,19 @@
 .method public setImageSize(IIII)Z
     .locals 0
 
+    .line 6
     iput p2, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mImageHeight:I
 
+    .line 7
     iput p1, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mImageWidth:I
 
+    .line 8
     iput p3, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mStrideWidth:I
 
+    .line 9
     iput p4, p0, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->mStrideHeight:I
 
+    .line 10
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->initData(II)V
 
     const/4 p0, 0x1

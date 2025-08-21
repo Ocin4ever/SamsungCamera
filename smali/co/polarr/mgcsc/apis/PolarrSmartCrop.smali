@@ -263,6 +263,7 @@
         }
     .end annotation
 
+    .line 1
     move-object/from16 v0, p1
 
     move/from16 v9, p2
@@ -591,6 +592,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0, p1, p2, p3}, Lco/polarr/mgcsc/apis/PolarrSmartCrop;->getTopScoreCrops(Landroid/graphics/Bitmap;II)Ljava/util/List;
 
     move-result-object p0
@@ -646,6 +648,7 @@
 .method public init(Landroid/content/Context;)Z
     .locals 1
 
+    .line 1
     const-string v0, "/vendor/saiv/best_composition_db/SmartCrop.polarr.db"
 
     invoke-virtual {p0, p1, v0}, Lco/polarr/mgcsc/apis/PolarrSmartCrop;->poInit(Landroid/content/Context;Ljava/lang/String;)Z
@@ -658,6 +661,7 @@
 .method public init(Landroid/content/Context;Z)Z
     .locals 0
 
+    .line 2
     const-string p2, "/vendor/saiv/best_composition_db/SmartCrop.polarr.db"
 
     invoke-virtual {p0, p1, p2}, Lco/polarr/mgcsc/apis/PolarrSmartCrop;->poInit(Landroid/content/Context;Ljava/lang/String;)Z

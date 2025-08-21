@@ -52,12 +52,14 @@
 .method public append(C)Ljava/io/Writer;
     .locals 0
 
+    .line 1
     return-object p0
 .end method
 
 .method public append(Ljava/lang/CharSequence;)Ljava/io/Writer;
     .locals 0
 
+    .line 2
     return-object p0
 .end method
 
@@ -70,6 +72,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -84,6 +87,7 @@
 .method public bridge synthetic append(C)Ljava/lang/Appendable;
     .locals 0
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/common/io/CharStreams$NullWriter;->append(C)Ljava/io/Writer;
 
     move-result-object p0
@@ -94,6 +98,7 @@
 .method public bridge synthetic append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
     .locals 0
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/common/io/CharStreams$NullWriter;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
 
     move-result-object p0
@@ -104,6 +109,7 @@
 .method public bridge synthetic append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
     .locals 0
 
+    .line 5
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/common/io/CharStreams$NullWriter;->append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
 
     move-result-object p0
@@ -134,12 +140,14 @@
 .method public write(I)V
     .locals 0
 
+    .line 1
     return-void
 .end method
 
 .method public write(Ljava/lang/String;)V
     .locals 0
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -150,6 +158,7 @@
 
     add-int/2addr p3, p2
 
+    .line 5
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -162,6 +171,7 @@
 .method public write([C)V
     .locals 0
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -172,6 +182,7 @@
 
     add-int/2addr p3, p2
 
+    .line 3
     array-length p0, p1
 
     invoke-static {p2, p3, p0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V

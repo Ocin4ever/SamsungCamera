@@ -53,6 +53,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/AbstractValueGraph$2;->val$graph:Lcom/google/common/graph/ValueGraph;
 
     invoke-virtual {p1}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
@@ -77,6 +78,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/graph/EndpointPair;
 
     invoke-virtual {p0, p1}, Lcom/google/common/graph/AbstractValueGraph$2;->apply(Lcom/google/common/graph/EndpointPair;)Ljava/lang/Object;

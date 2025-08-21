@@ -26,6 +26,7 @@
 .method public static makeSceneTransitionAnimation(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)Landroid/app/ActivityOptions;
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2}, Landroid/app/ActivityOptions;->makeSceneTransitionAnimation(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)Landroid/app/ActivityOptions;
 
     move-result-object p0
@@ -51,6 +52,7 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
+    .line 2
     invoke-static {p0, p1}, Landroid/app/ActivityOptions;->makeSceneTransitionAnimation(Landroid/app/Activity;[Landroid/util/Pair;)Landroid/app/ActivityOptions;
 
     move-result-object p0

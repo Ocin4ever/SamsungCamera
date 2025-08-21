@@ -238,8 +238,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/pro/ProBaseContract$View;Z)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter$SensorInfoEventManager;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter$SensorInfoEventManager;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;)V
@@ -248,28 +250,38 @@
 
     const/4 v0, 0x1
 
+    .line 3
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mIsFrontEvStateManual:Z
 
+    .line 4
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mIsNormalLensEvStateManual:Z
 
+    .line 5
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mIsWideLensEvStateManual:Z
 
+    .line 6
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mIsTeleLensEvStateManual:Z
 
+    .line 7
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mIsSecondTeleLensEvStateManual:Z
 
+    .line 8
     iput v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mLastNearestIso:I
 
+    .line 9
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
+    .line 10
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getCameraSettings()Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
+    .line 11
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mView:Lcom/sec/android/app/camera/shootingmode/pro/ProBaseContract$View;
 
+    .line 12
     iput-boolean p3, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mIsShootingModePro:Z
 
     return-void
@@ -278,8 +290,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/pro/ProBaseContract$View;Z)V
     .locals 1
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 14
     new-instance v0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter$SensorInfoEventManager;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter$SensorInfoEventManager;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;)V
@@ -288,30 +302,41 @@
 
     const/4 v0, 0x1
 
+    .line 15
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mIsFrontEvStateManual:Z
 
+    .line 16
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mIsNormalLensEvStateManual:Z
 
+    .line 17
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mIsWideLensEvStateManual:Z
 
+    .line 18
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mIsTeleLensEvStateManual:Z
 
+    .line 19
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mIsSecondTeleLensEvStateManual:Z
 
+    .line 20
     iput v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mLastNearestIso:I
 
+    .line 21
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
 
+    .line 22
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
+    .line 23
     invoke-interface {p2}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getCameraSettings()Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
+    .line 24
     iput-object p3, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mView:Lcom/sec/android/app/camera/shootingmode/pro/ProBaseContract$View;
 
+    .line 25
     iput-boolean p4, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->mIsShootingModePro:Z
 
     return-void

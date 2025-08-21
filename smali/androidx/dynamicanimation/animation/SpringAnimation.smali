@@ -29,18 +29,22 @@
 .method public constructor <init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;-><init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Landroidx/dynamicanimation/animation/SpringAnimation;->mSpring:Landroidx/dynamicanimation/animation/SpringForce;
 
     const p1, 0x7f7fffff    # Float.MAX_VALUE
 
+    .line 3
     iput p1, p0, Landroidx/dynamicanimation/animation/SpringAnimation;->mPendingPosition:F
 
     const/4 p1, 0x0
 
+    .line 4
     iput-boolean p1, p0, Landroidx/dynamicanimation/animation/SpringAnimation;->mEndRequested:Z
 
     return-void
@@ -58,18 +62,22 @@
         }
     .end annotation
 
+    .line 5
     invoke-direct {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
 
     const/4 p1, 0x0
 
+    .line 6
     iput-object p1, p0, Landroidx/dynamicanimation/animation/SpringAnimation;->mSpring:Landroidx/dynamicanimation/animation/SpringForce;
 
     const p1, 0x7f7fffff    # Float.MAX_VALUE
 
+    .line 7
     iput p1, p0, Landroidx/dynamicanimation/animation/SpringAnimation;->mPendingPosition:F
 
     const/4 p1, 0x0
 
+    .line 8
     iput-boolean p1, p0, Landroidx/dynamicanimation/animation/SpringAnimation;->mEndRequested:Z
 
     return-void
@@ -87,20 +95,25 @@
         }
     .end annotation
 
+    .line 9
     invoke-direct {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
 
     const/4 p1, 0x0
 
+    .line 10
     iput-object p1, p0, Landroidx/dynamicanimation/animation/SpringAnimation;->mSpring:Landroidx/dynamicanimation/animation/SpringForce;
 
     const p1, 0x7f7fffff    # Float.MAX_VALUE
 
+    .line 11
     iput p1, p0, Landroidx/dynamicanimation/animation/SpringAnimation;->mPendingPosition:F
 
     const/4 p1, 0x0
 
+    .line 12
     iput-boolean p1, p0, Landroidx/dynamicanimation/animation/SpringAnimation;->mEndRequested:Z
 
+    .line 13
     new-instance p1, Landroidx/dynamicanimation/animation/SpringForce;
 
     invoke-direct {p1, p3}, Landroidx/dynamicanimation/animation/SpringForce;-><init>(F)V

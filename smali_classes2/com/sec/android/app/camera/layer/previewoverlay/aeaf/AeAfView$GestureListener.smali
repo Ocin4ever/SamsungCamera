@@ -29,10 +29,12 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;)V
     .locals 1
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView$GestureListener;->this$0:Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -53,6 +55,7 @@
 
     const/4 p1, 0x0
 
+    .line 4
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView$GestureListener;->mIsTouchDownInDeadZone:Z
 
     return-void
@@ -61,6 +64,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/l0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView$GestureListener;-><init>(Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;)V
 
     return-void

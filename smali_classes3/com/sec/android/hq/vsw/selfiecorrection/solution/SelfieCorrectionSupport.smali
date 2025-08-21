@@ -41,11 +41,13 @@
 
     move v2, v1
 
+    .line 6
     :goto_0
     array-length v3, p0
 
     if-ge v1, v3, :cond_1
 
+    .line 7
     aget-object v3, p0, v1
 
     iget v4, v3, Landroid/graphics/Rect;->right:I
@@ -67,6 +69,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     sget-object v1, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionSupport;->_TAG:Ljava/lang/String;
 
@@ -96,6 +99,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_2
     sget-object p0, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionSupport;->_TAG:Ljava/lang/String;
 
@@ -118,11 +122,13 @@
 
     move v2, v1
 
+    .line 1
     :goto_0
     array-length v3, p0
 
     if-ge v1, v3, :cond_1
 
+    .line 2
     aget-object v3, p0, v1
 
     invoke-virtual {v3}, Landroid/hardware/camera2/params/Face;->getBounds()Landroid/graphics/Rect;
@@ -143,6 +149,7 @@
 
     if-ge v2, v3, :cond_0
 
+    .line 3
     aget-object v0, p0, v1
 
     invoke-virtual {v0}, Landroid/hardware/camera2/params/Face;->getBounds()Landroid/graphics/Rect;
@@ -170,6 +177,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     sget-object v1, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionSupport;->_TAG:Ljava/lang/String;
 
@@ -199,6 +207,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_2
     sget-object p0, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionSupport;->_TAG:Ljava/lang/String;
 

@@ -18,6 +18,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Landroidx/lifecycle/Lifecycle$State;->INITIALIZED:Landroidx/lifecycle/Lifecycle$State;
 
     if-eq p1, v0, :cond_0
@@ -32,6 +33,7 @@
     :goto_0
     if-eqz v0, :cond_3
 
+    .line 2
     invoke-virtual {p0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
@@ -40,10 +42,12 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 3
     sget-object p0, Lf6/p;->a:Lf6/p;
 
     return-object p0
 
+    .line 4
     :cond_1
     new-instance v0, Landroidx/lifecycle/RepeatOnLifecycleKt$repeatOnLifecycle$3;
 
@@ -68,6 +72,7 @@
 
     return-object p0
 
+    .line 5
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -96,6 +101,7 @@
         }
     .end annotation
 
+    .line 6
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p0

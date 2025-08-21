@@ -21,6 +21,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-interface {p1}, Li6/d;->getContext()Li6/g;
 
     move-result-object v0
@@ -39,8 +40,10 @@
 .method public constructor <init>(Li6/d;Li6/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lk6/a;-><init>(Li6/d;)V
 
+    .line 2
     iput-object p2, p0, Lk6/d;->_context:Li6/g;
 
     return-void

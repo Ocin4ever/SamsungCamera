@@ -1481,6 +1481,7 @@
 .method public final query(Landroidx/sqlite/db/SupportSQLiteQuery;)Landroid/database/Cursor;
     .locals 2
 
+    .line 1
     const-string v0, "query"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
@@ -1503,12 +1504,15 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->assertNotMainThread()V
 
+    .line 4
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->assertNotSuspendingTransaction()V
 
     if-eqz p2, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->getOpenHelper()Landroidx/sqlite/db/SupportSQLiteOpenHelper;
 
     move-result-object p0
@@ -1523,6 +1527,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->getOpenHelper()Landroidx/sqlite/db/SupportSQLiteOpenHelper;
 
@@ -1547,6 +1552,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->getOpenHelper()Landroidx/sqlite/db/SupportSQLiteOpenHelper;
 
     move-result-object p0
@@ -1582,17 +1588,21 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->beginTransaction()V
 
+    .line 6
     :try_start_0
     invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 7
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->endTransaction()V
 
     return-object p1
@@ -1612,15 +1622,19 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->beginTransaction()V
 
+    .line 2
     :try_start_0
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->endTransaction()V
 
     return-void

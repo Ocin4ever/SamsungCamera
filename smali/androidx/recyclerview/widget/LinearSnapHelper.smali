@@ -25,8 +25,10 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/SnapHelper;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
@@ -35,16 +37,20 @@
 
     const/high16 v0, 0x3f000000    # 0.5f
 
+    .line 3
     iput v0, p0, Landroidx/recyclerview/widget/LinearSnapHelper;->mVelocityRatio:F
 
     const/4 v1, 0x1
 
+    .line 4
     iput v1, p0, Landroidx/recyclerview/widget/LinearSnapHelper;->mDeccelateTimeRatio:I
 
     const/high16 v2, 0x42c80000    # 100.0f
 
+    .line 5
     iput v2, p0, Landroidx/recyclerview/widget/LinearSnapHelper;->mMillisecondsPerInch:F
 
+    .line 6
     invoke-direct {p0, v0, v2, v1}, Landroidx/recyclerview/widget/LinearSnapHelper;->setSnapValue(FFI)V
 
     return-void
@@ -53,8 +59,10 @@
 .method public constructor <init>(F)V
     .locals 2
 
+    .line 7
     invoke-direct {p0}, Landroidx/recyclerview/widget/SnapHelper;-><init>()V
 
+    .line 8
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
@@ -63,16 +71,20 @@
 
     const/high16 v0, 0x3f000000    # 0.5f
 
+    .line 9
     iput v0, p0, Landroidx/recyclerview/widget/LinearSnapHelper;->mVelocityRatio:F
 
     const/4 v0, 0x1
 
+    .line 10
     iput v0, p0, Landroidx/recyclerview/widget/LinearSnapHelper;->mDeccelateTimeRatio:I
 
     const/high16 v1, 0x42c80000    # 100.0f
 
+    .line 11
     iput v1, p0, Landroidx/recyclerview/widget/LinearSnapHelper;->mMillisecondsPerInch:F
 
+    .line 12
     invoke-direct {p0, p1, v1, v0}, Landroidx/recyclerview/widget/LinearSnapHelper;->setSnapValue(FFI)V
 
     return-void
@@ -81,8 +93,10 @@
 .method public constructor <init>(FF)V
     .locals 2
 
+    .line 13
     invoke-direct {p0}, Landroidx/recyclerview/widget/SnapHelper;-><init>()V
 
+    .line 14
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
@@ -91,16 +105,20 @@
 
     const/high16 v0, 0x3f000000    # 0.5f
 
+    .line 15
     iput v0, p0, Landroidx/recyclerview/widget/LinearSnapHelper;->mVelocityRatio:F
 
     const/4 v0, 0x1
 
+    .line 16
     iput v0, p0, Landroidx/recyclerview/widget/LinearSnapHelper;->mDeccelateTimeRatio:I
 
     const/high16 v1, 0x42c80000    # 100.0f
 
+    .line 17
     iput v1, p0, Landroidx/recyclerview/widget/LinearSnapHelper;->mMillisecondsPerInch:F
 
+    .line 18
     invoke-direct {p0, p1, p2, v0}, Landroidx/recyclerview/widget/LinearSnapHelper;->setSnapValue(FFI)V
 
     return-void
@@ -109,8 +127,10 @@
 .method public constructor <init>(FFI)V
     .locals 1
 
+    .line 19
     invoke-direct {p0}, Landroidx/recyclerview/widget/SnapHelper;-><init>()V
 
+    .line 20
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
@@ -119,16 +139,20 @@
 
     const/high16 v0, 0x3f000000    # 0.5f
 
+    .line 21
     iput v0, p0, Landroidx/recyclerview/widget/LinearSnapHelper;->mVelocityRatio:F
 
     const/4 v0, 0x1
 
+    .line 22
     iput v0, p0, Landroidx/recyclerview/widget/LinearSnapHelper;->mDeccelateTimeRatio:I
 
     const/high16 v0, 0x42c80000    # 100.0f
 
+    .line 23
     iput v0, p0, Landroidx/recyclerview/widget/LinearSnapHelper;->mMillisecondsPerInch:F
 
+    .line 24
     invoke-direct {p0, p1, p2, p3}, Landroidx/recyclerview/widget/LinearSnapHelper;->setSnapValue(FFI)V
 
     return-void

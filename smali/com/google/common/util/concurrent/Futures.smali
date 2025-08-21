@@ -71,8 +71,10 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Lcom/google/common/util/concurrent/CollectionFuture$ListFuture;
 
+    .line 4
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -102,8 +104,10 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/CollectionFuture$ListFuture;
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -192,6 +196,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/util/concurrent/FuturesGetChecked;->getChecked(Ljava/util/concurrent/Future;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -220,6 +225,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p0, p1, p2, p3, p4}, Lcom/google/common/util/concurrent/FuturesGetChecked;->getChecked(Ljava/util/concurrent/Future;Ljava/lang/Class;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object p0
@@ -638,10 +644,12 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-static {p0, v0}, Lcom/google/common/util/concurrent/TrustedListenableFutureTask;->create(Ljava/lang/Runnable;Ljava/lang/Object;)Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     move-result-object p0
 
+    .line 4
     invoke-interface {p1, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-object p0
@@ -663,10 +671,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/util/concurrent/TrustedListenableFutureTask;->create(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p1, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-object p0
@@ -714,6 +724,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/util/concurrent/CollectionFuture$ListFuture;
 
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableList;
@@ -745,6 +756,7 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/CollectionFuture$ListFuture;
 
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
@@ -828,6 +840,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/util/concurrent/Futures$FutureCombiner;
 
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableList;
@@ -860,6 +873,7 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Futures$FutureCombiner;
 
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
@@ -891,6 +905,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/util/concurrent/Futures$FutureCombiner;
 
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableList;
@@ -923,6 +938,7 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Futures$FutureCombiner;
 
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;

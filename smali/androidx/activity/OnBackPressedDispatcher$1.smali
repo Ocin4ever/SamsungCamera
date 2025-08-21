@@ -46,6 +46,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/activity/OnBackPressedDispatcher$1;->invoke()V
 
     sget-object p0, Lf6/p;->a:Lf6/p;
@@ -56,6 +57,7 @@
 .method public final invoke()V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/activity/OnBackPressedDispatcher$1;->this$0:Landroidx/activity/OnBackPressedDispatcher;
 
     invoke-virtual {p0}, Landroidx/activity/OnBackPressedDispatcher;->updateBackInvokedCallbackState$activity_release()V

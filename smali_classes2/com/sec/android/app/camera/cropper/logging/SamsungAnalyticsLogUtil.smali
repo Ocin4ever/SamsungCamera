@@ -27,6 +27,7 @@
 .method public static sendSALog(Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,6 +54,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lu3/i;->b()Lu3/i;
 
     move-result-object v0
@@ -63,18 +65,22 @@
 
     sget-object v2, Lcom/sec/android/app/camera/cropper/logging/SamsungAnalyticsLogUtil;->mScreenId:Ljava/lang/String;
 
+    .line 3
     invoke-virtual {v1, v2}, Lu3/e;->j(Ljava/lang/String;)Lu3/e;
 
     move-result-object v1
 
+    .line 4
     invoke-virtual {v1, p0}, Lu3/e;->h(Ljava/lang/String;)Lu3/e;
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0}, Lu3/e;->a()Ljava/util/Map;
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {v0, p0}, Lu3/i;->g(Ljava/util/Map;)I
 
     return-void
@@ -83,6 +89,7 @@
 .method public static sendSALog(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
+    .line 7
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -115,14 +122,17 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 8
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "det"
 
+    .line 9
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 10
     invoke-static {}, Lu3/i;->b()Lu3/i;
 
     move-result-object p1
@@ -133,22 +143,27 @@
 
     sget-object v2, Lcom/sec/android/app/camera/cropper/logging/SamsungAnalyticsLogUtil;->mScreenId:Ljava/lang/String;
 
+    .line 11
     invoke-virtual {v1, v2}, Lu3/e;->j(Ljava/lang/String;)Lu3/e;
 
     move-result-object v1
 
+    .line 12
     invoke-virtual {v1, p0}, Lu3/e;->h(Ljava/lang/String;)Lu3/e;
 
     move-result-object p0
 
+    .line 13
     invoke-virtual {p0, v0}, Lu3/e;->f(Ljava/util/Map;)Lu3/e;
 
     move-result-object p0
 
+    .line 14
     invoke-virtual {p0}, Lu3/e;->a()Ljava/util/Map;
 
     move-result-object p0
 
+    .line 15
     invoke-virtual {p1, p0}, Lu3/i;->g(Ljava/util/Map;)I
 
     return-void

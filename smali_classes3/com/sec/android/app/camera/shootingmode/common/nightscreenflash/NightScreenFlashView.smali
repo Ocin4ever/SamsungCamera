@@ -14,8 +14,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->init()V
 
     return-void
@@ -24,8 +26,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 4
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->init()V
 
     return-void
@@ -34,8 +38,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 5
     invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 6
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->init()V
 
     return-void
@@ -365,6 +371,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 2
     check-cast p1, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->setPresenter(Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashContract$Presenter;)V
@@ -375,6 +382,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashContract$Presenter;)V
     .locals 0
 
+    .line 1
     return-void
 .end method
 
@@ -415,6 +423,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 15
     invoke-virtual {p1}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result v0
@@ -436,6 +445,7 @@
 
     move-result-object p1
 
+    .line 16
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->mViewBinding:Lp4/u5;
 
@@ -447,6 +457,7 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
+    .line 17
     iget v1, p1, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -465,6 +476,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
+    .line 18
     iget v1, p1, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -483,6 +495,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
+    .line 19
     iget v1, p1, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -501,6 +514,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
+    .line 20
     iget v1, p1, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -517,18 +531,21 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
+    .line 21
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->mViewBinding:Lp4/u5;
 
     iget-object v1, v1, Lp4/u5;->e:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 22
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->mViewBinding:Lp4/u5;
 
     iget-object v0, v0, Lp4/u5;->e:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
+    .line 23
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->mViewBinding:Lp4/u5;
 
     iget-object v0, v0, Lp4/u5;->d:Landroid/widget/ImageView;
@@ -539,6 +556,7 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
+    .line 24
     iget v1, p1, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -557,6 +575,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
+    .line 25
     iget v1, p1, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -575,6 +594,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
+    .line 26
     iget v1, p1, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -593,6 +613,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
+    .line 27
     iget p1, p1, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -609,12 +630,14 @@
 
     iput p1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
+    .line 28
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->mViewBinding:Lp4/u5;
 
     iget-object p1, p1, Lp4/u5;->d:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 29
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->mViewBinding:Lp4/u5;
 
     iget-object p1, p1, Lp4/u5;->d:Landroid/widget/ImageView;
@@ -625,18 +648,21 @@
 
     new-array p1, p1, [F
 
+    .line 30
     fill-array-data p1, :array_0
 
     invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object p1
 
+    .line 31
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 32
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -651,18 +677,21 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
+    .line 33
     new-instance v0, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/a;
 
     invoke-direct {v0, p0, p3, p2}, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/a;-><init>(Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;FF)V
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
+    .line 34
     new-instance p2, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView$3;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView$3;-><init>(Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;)V
 
     invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 35
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
     return-void
@@ -681,6 +710,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result v1
@@ -700,6 +730,7 @@
 
     move-result-object p1
 
+    .line 2
     :cond_1
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->mViewBinding:Lp4/u5;
 
@@ -711,24 +742,29 @@
 
     check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
 
+    .line 3
     iget v2, p1, Landroid/graphics/Rect;->top:I
 
     iput v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
+    .line 4
     iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
+    .line 5
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result p1
 
     iput p1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
+    .line 6
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->mViewBinding:Lp4/u5;
 
     iget-object p1, p1, Lp4/u5;->f:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 7
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->mViewBinding:Lp4/u5;
 
     iget-object p1, p1, Lp4/u5;->f:Landroid/widget/ImageView;
@@ -745,6 +781,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundColor(I)V
 
+    .line 8
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;->mViewBinding:Lp4/u5;
 
     iget-object p1, p1, Lp4/u5;->f:Landroid/widget/ImageView;
@@ -755,18 +792,21 @@
 
     new-array p1, p1, [F
 
+    .line 9
     fill-array-data p1, :array_0
 
     invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object p1
 
+    .line 10
     new-instance p2, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {p2}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 11
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -781,18 +821,21 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
+    .line 12
     new-instance p2, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/c;
 
     invoke-direct {p2, p0, p3}, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/c;-><init>(Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;F)V
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
+    .line 13
     new-instance p2, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView$2;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView$2;-><init>(Lcom/sec/android/app/camera/shootingmode/common/nightscreenflash/NightScreenFlashView;)V
 
     invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 14
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
     return-void

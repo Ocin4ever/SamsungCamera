@@ -22,8 +22,10 @@
 .method private constructor <init>(Ljava/io/File;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/io/ByteSource;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -38,6 +40,7 @@
 .method public synthetic constructor <init>(Ljava/io/File;Lcom/google/common/io/Files$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/io/Files$FileByteSource;-><init>(Ljava/io/File;)V
 
     return-void
@@ -48,6 +51,7 @@
 .method public openStream()Ljava/io/FileInputStream;
     .locals 1
 
+    .line 2
     new-instance v0, Ljava/io/FileInputStream;
 
     iget-object p0, p0, Lcom/google/common/io/Files$FileByteSource;->file:Ljava/io/File;
@@ -60,6 +64,7 @@
 .method public bridge synthetic openStream()Ljava/io/InputStream;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/io/Files$FileByteSource;->openStream()Ljava/io/FileInputStream;
 
     move-result-object p0

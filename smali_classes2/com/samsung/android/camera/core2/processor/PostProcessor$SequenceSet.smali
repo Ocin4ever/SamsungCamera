@@ -40,8 +40,10 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -52,6 +54,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/processor/PostProcessor$SequenceSet;->mActivatedSequenceSet:Ljava/util/Set;
 
+    .line 4
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -68,6 +71,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/processor/z;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/camera/core2/processor/PostProcessor$SequenceSet;-><init>()V
 
     return-void

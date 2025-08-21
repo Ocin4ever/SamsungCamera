@@ -49,6 +49,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/appcompat/util/SeslRoundedCorner;-><init>(Landroid/content/Context;Z)V
 
     return-void
@@ -57,18 +58,22 @@
 .method public constructor <init>(Landroid/content/Context;Z)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mRoundedCornerBounds:Landroid/graphics/Rect;
 
+    .line 4
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
+    .line 5
     sget v1, Landroidx/appcompat/R$dimen;->sesl_rounded_corner_radius:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -77,18 +82,21 @@
 
     iput v1, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mRoundRadius:I
 
+    .line 6
     invoke-static {p1}, Landroidx/appcompat/util/SeslMisc;->isLightTheme(Landroid/content/Context;)Z
 
     move-result v1
 
     xor-int/lit8 v1, v1, 0x1
 
+    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p1
 
     if-eqz p2, :cond_0
 
+    .line 8
     sget p2, Landroidx/appcompat/R$drawable;->sesl_top_left_round:I
 
     invoke-virtual {v0, p2, p1}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -101,6 +109,7 @@
 
     iput-object p2, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mTopLeftRound:Landroid/graphics/drawable/Drawable;
 
+    .line 9
     sget p2, Landroidx/appcompat/R$drawable;->sesl_top_right_round:I
 
     invoke-virtual {v0, p2, p1}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -113,6 +122,7 @@
 
     iput-object p2, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mTopRightRound:Landroid/graphics/drawable/Drawable;
 
+    .line 10
     sget p2, Landroidx/appcompat/R$drawable;->sesl_bottom_left_round:I
 
     invoke-virtual {v0, p2, p1}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -125,6 +135,7 @@
 
     iput-object p2, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mBottomLeftRound:Landroid/graphics/drawable/Drawable;
 
+    .line 11
     sget p2, Landroidx/appcompat/R$drawable;->sesl_bottom_right_round:I
 
     invoke-virtual {v0, p2, p1}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -139,6 +150,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_0
     sget p2, Landroidx/appcompat/R$drawable;->sesl_top_left_round:I
 
@@ -148,6 +160,7 @@
 
     iput-object p2, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mTopLeftRound:Landroid/graphics/drawable/Drawable;
 
+    .line 13
     sget p2, Landroidx/appcompat/R$drawable;->sesl_top_right_round:I
 
     invoke-virtual {v0, p2, p1}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -156,6 +169,7 @@
 
     iput-object p2, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mTopRightRound:Landroid/graphics/drawable/Drawable;
 
+    .line 14
     sget p2, Landroidx/appcompat/R$drawable;->sesl_bottom_left_round:I
 
     invoke-virtual {v0, p2, p1}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -164,6 +178,7 @@
 
     iput-object p2, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mBottomLeftRound:Landroid/graphics/drawable/Drawable;
 
+    .line 15
     sget p2, Landroidx/appcompat/R$drawable;->sesl_bottom_right_round:I
 
     invoke-virtual {v0, p2, p1}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -175,8 +190,10 @@
     :goto_0
     if-eqz v1, :cond_1
 
+    .line 16
     sget p1, Landroidx/appcompat/R$color;->sesl_round_and_bgcolor_dark:I
 
+    .line 17
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
@@ -191,9 +208,11 @@
 
     goto :goto_1
 
+    .line 18
     :cond_1
     sget p1, Landroidx/appcompat/R$color;->sesl_round_and_bgcolor_light:I
 
+    .line 19
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
@@ -206,6 +225,7 @@
 
     iput p1, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mTopLeftRoundColor:I
 
+    .line 20
     :goto_1
     new-instance p1, Landroid/graphics/PorterDuffColorFilter;
 
@@ -215,18 +235,22 @@
 
     invoke-direct {p1, p2, v0}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
 
+    .line 21
     iget-object p2, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mTopLeftRound:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
+    .line 22
     iget-object p2, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mTopRightRound:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
+    .line 23
     iget-object p2, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mBottomLeftRound:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
+    .line 24
     iget-object p0, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mBottomRightRound:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
@@ -339,10 +363,12 @@
 .method public drawRoundedCorner(Landroid/graphics/Canvas;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mRoundedCornerBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->getClipBounds(Landroid/graphics/Rect;)Z
 
+    .line 2
     invoke-direct {p0, p1}, Landroidx/appcompat/util/SeslRoundedCorner;->drawRoundedCornerInternal(Landroid/graphics/Canvas;)V
 
     return-void
@@ -351,6 +377,7 @@
 .method public drawRoundedCorner(Landroid/view/View;Landroid/graphics/Canvas;)V
     .locals 6
 
+    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
     move-result v0
@@ -361,6 +388,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p1}, Landroid/view/View;->getX()F
 
     move-result v0
@@ -369,6 +397,7 @@
 
     move-result v0
 
+    .line 5
     invoke-virtual {p1}, Landroid/view/View;->getY()F
 
     move-result v1
@@ -377,6 +406,7 @@
 
     move-result v1
 
+    .line 6
     invoke-virtual {p1}, Landroid/view/View;->getX()F
 
     move-result v2
@@ -389,6 +419,7 @@
 
     add-float/2addr v2, v3
 
+    .line 7
     invoke-virtual {p1}, Landroid/view/View;->getY()F
 
     move-result v4
@@ -399,19 +430,23 @@
 
     add-float/2addr v4, v3
 
+    .line 8
     invoke-virtual {p2, v2, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
     goto :goto_0
 
+    .line 9
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v0
 
+    .line 10
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v1
 
+    .line 11
     :goto_0
     iget-object v2, p0, Landroidx/appcompat/util/SeslRoundedCorner;->mRoundedCornerBounds:Landroid/graphics/Rect;
 
@@ -429,6 +464,7 @@
 
     invoke-virtual {v2, v0, v1, v3, p1}, Landroid/graphics/Rect;->set(IIII)V
 
+    .line 12
     invoke-direct {p0, p2}, Landroidx/appcompat/util/SeslRoundedCorner;->drawRoundedCornerInternal(Landroid/graphics/Canvas;)V
 
     return-void

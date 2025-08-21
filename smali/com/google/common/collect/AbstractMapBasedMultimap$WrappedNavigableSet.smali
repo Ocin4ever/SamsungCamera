@@ -199,6 +199,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;->getSortedSetDelegate()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -211,6 +212,7 @@
 .method public bridge synthetic getSortedSetDelegate()Ljava/util/SortedSet;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->getSortedSetDelegate()Ljava/util/NavigableSet;
 
     move-result-object p0

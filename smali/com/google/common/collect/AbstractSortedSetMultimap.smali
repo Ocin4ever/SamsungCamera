@@ -71,6 +71,7 @@
 .method public bridge synthetic createCollection()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractSortedSetMultimap;->createCollection()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -81,6 +82,7 @@
 .method public bridge synthetic createCollection()Ljava/util/Set;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractSortedSetMultimap;->createCollection()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -101,6 +103,7 @@
 .method public bridge synthetic createUnmodifiableEmptyCollection()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractSortedSetMultimap;->createUnmodifiableEmptyCollection()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -111,6 +114,7 @@
 .method public bridge synthetic createUnmodifiableEmptyCollection()Ljava/util/Set;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractSortedSetMultimap;->createUnmodifiableEmptyCollection()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -128,6 +132,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractSortedSetMultimap;->createCollection()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -146,6 +151,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/AbstractSortedSetMultimap;->get(Ljava/lang/Object;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -160,6 +166,7 @@
         .end annotation
     .end param
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/collect/AbstractSortedSetMultimap;->get(Ljava/lang/Object;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -181,6 +188,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractSetMultimap;->get(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -193,6 +201,7 @@
 .method public bridge synthetic removeAll(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/AbstractSortedSetMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -203,6 +212,7 @@
 .method public bridge synthetic removeAll(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/collect/AbstractSortedSetMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -222,6 +232,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractSetMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -238,6 +249,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/AbstractSortedSetMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -252,6 +264,7 @@
         .end annotation
     .end param
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/AbstractSortedSetMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -275,6 +288,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractSetMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p0
@@ -287,6 +301,7 @@
 .method public bridge synthetic unmodifiableCollectionSubclass(Ljava/util/Collection;)Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/AbstractSortedSetMultimap;->unmodifiableCollectionSubclass(Ljava/util/Collection;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -308,10 +323,12 @@
         }
     .end annotation
 
+    .line 2
     instance-of p0, p1, Ljava/util/NavigableSet;
 
     if-eqz p0, :cond_0
 
+    .line 3
     check-cast p1, Ljava/util/NavigableSet;
 
     invoke-static {p1}, Lcom/google/common/collect/Sets;->unmodifiableNavigableSet(Ljava/util/NavigableSet;)Ljava/util/NavigableSet;
@@ -320,6 +337,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     check-cast p1, Ljava/util/SortedSet;
 

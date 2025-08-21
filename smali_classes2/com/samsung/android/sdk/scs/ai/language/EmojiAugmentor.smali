@@ -57,20 +57,25 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationRunnable;
 
     iget-object v1, p0, Lcom/samsung/android/sdk/scs/ai/language/EmojiAugmentor;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationServiceExecutor;
 
     invoke-direct {v0, v1}, Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationRunnable;-><init>(Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationServiceExecutor;)V
 
+    .line 3
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationRunnable;->setAppInfo(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;)V
 
+    .line 4
     invoke-virtual {v0, p2}, Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationRunnable;->setInputText(Ljava/lang/String;)V
 
+    .line 5
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/language/EmojiAugmentor;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationServiceExecutor;
 
     invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 6
     invoke-virtual {v0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;->getTask()Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0
@@ -95,10 +100,12 @@
         }
     .end annotation
 
+    .line 7
     new-instance v0, Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationRunnable2;
 
     iget-object v1, p0, Lcom/samsung/android/sdk/scs/ai/language/EmojiAugmentor;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationServiceExecutor;
 
+    .line 8
     invoke-virtual {p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo;->isStreamingMode()Z
 
     move-result v2
@@ -119,16 +126,21 @@
     :goto_0
     invoke-direct {v0, v1, v2}, Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationRunnable2;-><init>(Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationServiceExecutor;Lcom/samsung/android/sdk/scs/base/tasks/TaskCompletionSource;)V
 
+    .line 9
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationRunnable2;->setAppInfo(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;)V
 
+    .line 10
     invoke-virtual {v0, p2}, Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationRunnable2;->setInputText(Ljava/lang/String;)V
 
+    .line 11
     invoke-virtual {v0, p3}, Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationRunnable2;->setExtraPrompt(Ljava/util/Map;)V
 
+    .line 12
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/language/EmojiAugmentor;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/EmojiAugmentationServiceExecutor;
 
     invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 13
     invoke-virtual {v0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;->getTask()Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0
@@ -154,6 +166,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/EmojiAugmentor;->emojiAugment(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;Ljava/lang/String;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0

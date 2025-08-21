@@ -56,6 +56,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Landroidx/slidingpanelayout/widget/FoldingFeatureObserver$registerLayoutStateChangeCallback$1$2;->this$0:Landroidx/slidingpanelayout/widget/FoldingFeatureObserver;
 
     invoke-static {p0}, Landroidx/slidingpanelayout/widget/FoldingFeatureObserver;->access$getOnFoldingFeatureChangeListener$p(Landroidx/slidingpanelayout/widget/FoldingFeatureObserver;)Landroidx/slidingpanelayout/widget/FoldingFeatureObserver$OnFoldingFeatureChangeListener;
@@ -66,6 +67,7 @@
 
     invoke-interface {p0, p1}, Landroidx/slidingpanelayout/widget/FoldingFeatureObserver$OnFoldingFeatureChangeListener;->onFoldingFeatureChange(Landroidx/window/layout/FoldingFeature;)V
 
+    .line 3
     :cond_0
     sget-object p0, Lf6/p;->a:Lf6/p;
 
@@ -75,6 +77,7 @@
 .method public bridge synthetic emit(Ljava/lang/Object;Li6/d;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/window/layout/FoldingFeature;
 
     invoke-virtual {p0, p1, p2}, Landroidx/slidingpanelayout/widget/FoldingFeatureObserver$registerLayoutStateChangeCallback$1$2;->emit(Landroidx/window/layout/FoldingFeature;Li6/d;)Ljava/lang/Object;

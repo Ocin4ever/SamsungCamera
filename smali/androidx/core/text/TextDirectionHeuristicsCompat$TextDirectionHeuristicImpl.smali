@@ -76,6 +76,7 @@
 
     if-ltz p3, :cond_1
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -84,16 +85,19 @@
 
     if-lt v0, p2, :cond_1
 
+    .line 3
     iget-object v0, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;->mAlgorithm:Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;
 
     if-nez v0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;->defaultIsRtl()Z
 
     move-result p0
 
     return p0
 
+    .line 5
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;->doCheck(Ljava/lang/CharSequence;II)Z
 
@@ -101,6 +105,7 @@
 
     return p0
 
+    .line 6
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -112,6 +117,7 @@
 .method public isRtl([CII)Z
     .locals 0
 
+    .line 1
     invoke-static {p1}, Ljava/nio/CharBuffer;->wrap([C)Ljava/nio/CharBuffer;
 
     move-result-object p1

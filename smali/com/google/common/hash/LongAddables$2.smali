@@ -40,6 +40,7 @@
 .method public get()Lcom/google/common/hash/LongAddable;
     .locals 1
 
+    .line 2
     new-instance p0, Lcom/google/common/hash/LongAddables$PureJavaLongAddable;
 
     const/4 v0, 0x0
@@ -52,6 +53,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/hash/LongAddables$2;->get()Lcom/google/common/hash/LongAddable;
 
     move-result-object p0

@@ -50,6 +50,7 @@
 
     const/4 v0, 0x0
 
+    .line 15
     invoke-direct {p0, p1, v0}, Landroidx/preference/SwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -58,6 +59,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
+    .line 14
     sget v0, Landroidx/preference/R$attr;->switchPreferenceStyle:I
 
     const v1, 0x101036d
@@ -76,6 +78,7 @@
 
     const/4 v0, 0x0
 
+    .line 13
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/preference/SwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -84,8 +87,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 3
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/TwoStatePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 2
     new-instance v0, Landroidx/preference/SwitchPreference$Listener;
 
     invoke-direct {v0, p0}, Landroidx/preference/SwitchPreference$Listener;-><init>(Landroidx/preference/SwitchPreference;)V
@@ -94,8 +99,10 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Landroidx/preference/SwitchPreference;->mWidth:I
 
+    .line 4
     new-instance v1, Landroidx/preference/SwitchPreference$DummyClickListener;
 
     const/4 v2, 0x0
@@ -104,14 +111,17 @@
 
     iput-object v1, p0, Landroidx/preference/SwitchPreference;->mClickListener:Landroidx/preference/SwitchPreference$DummyClickListener;
 
+    .line 5
     sget-object v1, Landroidx/preference/R$styleable;->SwitchPreference:[I
 
     invoke-virtual {p1, p2, v1, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 6
     iput v0, p0, Landroidx/preference/SwitchPreference;->mIsLargeLayout:I
 
+    .line 7
     sget p2, Landroidx/preference/R$styleable;->SwitchPreference_summaryOn:I
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_summaryOn:I
@@ -122,6 +132,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/TwoStatePreference;->setSummaryOn(Ljava/lang/CharSequence;)V
 
+    .line 8
     sget p2, Landroidx/preference/R$styleable;->SwitchPreference_summaryOff:I
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_summaryOff:I
@@ -132,6 +143,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/TwoStatePreference;->setSummaryOff(Ljava/lang/CharSequence;)V
 
+    .line 9
     sget p2, Landroidx/preference/R$styleable;->SwitchPreference_switchTextOn:I
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_switchTextOn:I
@@ -142,6 +154,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/SwitchPreference;->setSwitchTextOn(Ljava/lang/CharSequence;)V
 
+    .line 10
     sget p2, Landroidx/preference/R$styleable;->SwitchPreference_switchTextOff:I
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_switchTextOff:I
@@ -152,6 +165,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/SwitchPreference;->setSwitchTextOff(Ljava/lang/CharSequence;)V
 
+    .line 11
     sget p2, Landroidx/preference/R$styleable;->SwitchPreference_disableDependentsState:I
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_disableDependentsState:I
@@ -162,6 +176,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/TwoStatePreference;->setDisableDependentsState(Z)V
 
+    .line 12
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
@@ -668,8 +683,10 @@
 .method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
     .locals 2
 
+    .line 4
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
+    .line 5
     iget v0, p0, Landroidx/preference/SwitchPreference;->mIsLargeLayout:I
 
     const/4 v1, 0x1
@@ -678,12 +695,15 @@
 
     const v0, 0x1020040
 
+    .line 6
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
+    .line 7
     invoke-direct {p0, v0}, Landroidx/preference/SwitchPreference;->syncSwitchView(Landroid/view/View;)V
 
+    .line 8
     :cond_0
     invoke-virtual {p0, p1}, Landroidx/preference/TwoStatePreference;->syncSummaryView(Landroidx/preference/PreferenceViewHolder;)V
 
@@ -693,10 +713,13 @@
 .method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;I)V
     .locals 0
 
+    .line 1
     iput p2, p0, Landroidx/preference/SwitchPreference;->mWidth:I
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/preference/SwitchPreference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
+    .line 3
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-direct {p0, p1}, Landroidx/preference/SwitchPreference;->updateLayout(Landroid/view/View;)V
@@ -717,6 +740,7 @@
 .method public setSwitchTextOff(I)V
     .locals 1
 
+    .line 3
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -733,8 +757,10 @@
 .method public setSwitchTextOff(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/preference/SwitchPreference;->mSwitchOff:Ljava/lang/CharSequence;
 
+    .line 2
     invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
 
     return-void
@@ -743,6 +769,7 @@
 .method public setSwitchTextOn(I)V
     .locals 1
 
+    .line 3
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -759,8 +786,10 @@
 .method public setSwitchTextOn(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/preference/SwitchPreference;->mSwitchOn:Ljava/lang/CharSequence;
 
+    .line 2
     invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
 
     return-void

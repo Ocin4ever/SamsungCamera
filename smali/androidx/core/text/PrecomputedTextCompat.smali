@@ -49,16 +49,21 @@
 .method private constructor <init>(Landroid/text/PrecomputedText;Landroidx/core/text/PrecomputedTextCompat$Params;)V
     .locals 0
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 7
     iput-object p1, p0, Landroidx/core/text/PrecomputedTextCompat;->mText:Landroid/text/Spannable;
 
+    .line 8
     iput-object p2, p0, Landroidx/core/text/PrecomputedTextCompat;->mParams:Landroidx/core/text/PrecomputedTextCompat$Params;
 
     const/4 p2, 0x0
 
+    .line 9
     iput-object p2, p0, Landroidx/core/text/PrecomputedTextCompat;->mParagraphEnds:[I
 
+    .line 10
     iput-object p1, p0, Landroidx/core/text/PrecomputedTextCompat;->mWrapped:Landroid/text/PrecomputedText;
 
     return-void
@@ -67,20 +72,25 @@
 .method private constructor <init>(Ljava/lang/CharSequence;Landroidx/core/text/PrecomputedTextCompat$Params;[I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/text/SpannableString;
 
     invoke-direct {v0, p1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
     iput-object v0, p0, Landroidx/core/text/PrecomputedTextCompat;->mText:Landroid/text/Spannable;
 
+    .line 3
     iput-object p2, p0, Landroidx/core/text/PrecomputedTextCompat;->mParams:Landroidx/core/text/PrecomputedTextCompat$Params;
 
+    .line 4
     iput-object p3, p0, Landroidx/core/text/PrecomputedTextCompat;->mParagraphEnds:[I
 
     const/4 p1, 0x0
 
+    .line 5
     iput-object p1, p0, Landroidx/core/text/PrecomputedTextCompat;->mWrapped:Landroid/text/PrecomputedText;
 
     return-void

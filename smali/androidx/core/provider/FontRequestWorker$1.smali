@@ -63,6 +63,7 @@
 .method public call()Landroidx/core/provider/FontRequestWorker$TypefaceResult;
     .locals 3
 
+    .line 2
     iget-object v0, p0, Landroidx/core/provider/FontRequestWorker$1;->val$id:Ljava/lang/String;
 
     iget-object v1, p0, Landroidx/core/provider/FontRequestWorker$1;->val$context:Landroid/content/Context;
@@ -81,6 +82,7 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/core/provider/FontRequestWorker$1;->call()Landroidx/core/provider/FontRequestWorker$TypefaceResult;
 
     move-result-object p0

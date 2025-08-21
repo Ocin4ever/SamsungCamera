@@ -103,36 +103,45 @@
 .method private constructor <init>(Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData$Builder;)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iget-wide v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData$Builder;->a:D
 
     iput-wide v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData;->jsonVersion:D
 
+    .line 4
     iget v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData$Builder;->b:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData;->imageFormat:I
 
+    .line 5
     iget-object v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData$Builder;->c:Landroid/util/Size;
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData;->imageSize:Landroid/util/Size;
 
+    .line 6
     iget v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData$Builder;->d:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData;->rowStride:I
 
+    .line 7
     iget v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData$Builder;->e:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData;->heightSlice:I
 
+    .line 8
     iget-wide v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData$Builder;->f:J
 
     iput-wide v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData;->timeStamp:J
 
+    .line 9
     iget-object v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData$Builder;->g:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData;->physicalId:Ljava/lang/String;
 
+    .line 10
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData;->createCaptureResultMetaData(Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData$Builder;)Lcom/samsung/android/camera/core2/jsonData/component/CaptureResultMetaData;
 
     move-result-object p1
@@ -145,6 +154,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData$Builder;Lt2/c;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData;-><init>(Lcom/samsung/android/camera/core2/jsonData/PostProcessTempImageData$Builder;)V
 
     return-void

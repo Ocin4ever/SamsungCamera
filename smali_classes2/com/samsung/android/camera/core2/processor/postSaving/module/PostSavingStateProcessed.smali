@@ -101,6 +101,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object p1, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingStateProcessed;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -121,22 +122,26 @@
 
     invoke-static {p1, p2}, Lcom/samsung/android/camera/core2/util/CLog;->j(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 2
     new-instance p2, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingModuleCallback;
 
     invoke-direct {p2, p3}, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingModuleCallback;-><init>(Ljava/util/function/Consumer;)V
 
     invoke-virtual {p0, p2}, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState;->addModule(Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingModule;)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState;->runModules()Z
 
     move-result p2
 
+    .line 4
     iget-object p0, p0, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState;->mPostSavingStateChangedCallback:Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingStateChangedCallback;
 
     sget-object p3, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState$StateType;->COMPLETE:Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState$StateType;
 
     invoke-interface {p0, p3}, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingStateChangedCallback;->onStateChanged(Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingState$StateType;)V
 
+    .line 5
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,6 +177,7 @@
         }
     .end annotation
 
+    .line 6
     invoke-virtual {p0, p1, p2, p4}, Lcom/samsung/android/camera/core2/processor/postSaving/module/PostSavingStateProcessed;->runDraft(Lcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/ExtraBundle;Ljava/util/function/Consumer;)Z
 
     move-result p0

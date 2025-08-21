@@ -52,14 +52,17 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/scs/ai/sdkcommon/tts/TtsPackageInfo;->mPackageName:Ljava/lang/String;
 
+    .line 7
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
@@ -70,12 +73,14 @@
 
     iput-object v0, p0, Lcom/samsung/android/scs/ai/sdkcommon/tts/TtsPackageInfo;->mType:Lcom/samsung/android/scs/ai/sdkcommon/tts/TtsPackageType;
 
+    .line 8
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/scs/ai/sdkcommon/tts/TtsPackageInfo;->mSpeakerList:Ljava/util/List;
 
+    .line 9
     const-class v1, Lcom/samsung/android/scs/ai/sdkcommon/tts/TtsSpeakerInfo;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -84,6 +89,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readList(Ljava/util/List;Ljava/lang/ClassLoader;)V
 
+    .line 10
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object p1
@@ -106,12 +112,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/scs/ai/sdkcommon/tts/TtsPackageInfo;->mPackageName:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lcom/samsung/android/scs/ai/sdkcommon/tts/TtsPackageInfo;->mType:Lcom/samsung/android/scs/ai/sdkcommon/tts/TtsPackageType;
 
+    .line 4
     invoke-static {p3}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
 
     move-result-object p1

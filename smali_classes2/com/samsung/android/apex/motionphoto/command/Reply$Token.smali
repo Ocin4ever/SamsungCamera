@@ -32,6 +32,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-direct {p0, v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
 
     return-void
@@ -42,8 +43,10 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-direct {p0, v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/apex/motionphoto/command/Reply$Token;->mData:Ljava/lang/Object;
 
     return-void
@@ -54,6 +57,7 @@
 .method public awaitResponse()Lcom/samsung/android/apex/motionphoto/command/Reply;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/command/Reply;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -62,6 +66,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     :try_start_0
     invoke-super {p0}, Ljava/util/concurrent/LinkedBlockingQueue;->take()Ljava/lang/Object;
 
@@ -76,8 +81,10 @@
     :catch_0
     move-exception p0
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
+    .line 4
     new-instance v0, Lcom/samsung/android/apex/motionphoto/command/Reply;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/apex/motionphoto/command/Reply;-><init>(Ljava/lang/Exception;)V
@@ -88,6 +95,7 @@
 .method public awaitResponse(I)Lcom/samsung/android/apex/motionphoto/command/Reply;
     .locals 3
 
+    .line 5
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/command/Reply;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -110,6 +118,7 @@
 
     int-to-long v0, p1
 
+    .line 6
     :try_start_0
     sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -126,8 +135,10 @@
     :catch_0
     move-exception p0
 
+    .line 7
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
+    .line 8
     new-instance p1, Lcom/samsung/android/apex/motionphoto/command/Reply;
 
     invoke-direct {p1, p0}, Lcom/samsung/android/apex/motionphoto/command/Reply;-><init>(Ljava/lang/Exception;)V
@@ -138,6 +149,7 @@
 .method public awaitResponse(ILjava/util/concurrent/TimeUnit;)Lcom/samsung/android/apex/motionphoto/command/Reply;
     .locals 3
 
+    .line 9
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/command/Reply;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -160,6 +172,7 @@
 
     int-to-long v0, p1
 
+    .line 10
     :try_start_0
     invoke-super {p0, v0, v1, p2}, Ljava/util/concurrent/LinkedBlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
@@ -174,8 +187,10 @@
     :catch_0
     move-exception p0
 
+    .line 11
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
+    .line 12
     new-instance p1, Lcom/samsung/android/apex/motionphoto/command/Reply;
 
     invoke-direct {p1, p0}, Lcom/samsung/android/apex/motionphoto/command/Reply;-><init>(Ljava/lang/Exception;)V

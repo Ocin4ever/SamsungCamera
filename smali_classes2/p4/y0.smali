@@ -111,6 +111,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/y0;->s:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/y0;->t:Landroid/util/SparseIntArray;
@@ -139,6 +140,7 @@
 
     const/4 v13, 0x0
 
+    .line 2
     aget-object v2, v14, v13
 
     const/4 v3, 0x1
@@ -269,58 +271,72 @@
 
     move-object/from16 v2, p0
 
+    .line 3
     iput-wide v0, v2, Lp4/y0;->r:J
 
+    .line 4
     iget-object v0, v2, Lp4/x0;->a:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 5
     iget-object v0, v2, Lp4/x0;->b:Lp4/a0;
 
     invoke-virtual {v2, v0}, Landroidx/databinding/ViewDataBinding;->setContainedBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 6
     iget-object v0, v2, Lp4/x0;->c:Landroidx/constraintlayout/widget/Guideline;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 7
     iget-object v0, v2, Lp4/x0;->e:Lcom/sec/android/app/camera/layer/keyscreen/indicator/IndicatorView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 8
     iget-object v0, v2, Lp4/x0;->f:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {v0, v2}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 9
     iget-object v0, v2, Lp4/x0;->i:Landroidx/constraintlayout/widget/Guideline;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 10
     iget-object v0, v2, Lp4/x0;->j:Landroidx/constraintlayout/widget/Guideline;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 11
     iget-object v0, v2, Lp4/x0;->k:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {v0, v2}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 12
     iget-object v0, v2, Lp4/x0;->o:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 13
     iget-object v0, v2, Lp4/x0;->p:Landroidx/constraintlayout/widget/Guideline;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 14
     iget-object v0, v2, Lp4/x0;->q:Landroidx/constraintlayout/widget/Guideline;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     move-object/from16 v0, p2
 
+    .line 15
     invoke-virtual {v2, v0}, Landroidx/databinding/ViewDataBinding;->setRootTag([Landroid/view/View;)V
 
+    .line 16
     invoke-virtual/range {p0 .. p0}, Lp4/y0;->invalidateAll()V
 
     return-void

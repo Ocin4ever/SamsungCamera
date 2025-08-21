@@ -93,8 +93,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/pro/ProVideoContract$View;I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
+    .line 2
     new-instance p3, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter$LensInfoEventManager;
 
     const/4 v0, 0x0
@@ -103,6 +105,7 @@
 
     iput-object p3, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mAfLensInfoEventManager:Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter$LensInfoEventManager;
 
+    .line 3
     new-instance p3, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -117,32 +120,38 @@
 
     new-array p3, p3, [I
 
+    .line 4
     iput-object p3, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mAudioValue:[I
 
+    .line 5
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->initializeSettingChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p3
 
     iput-object p3, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mSettingChangeConsumerMap:Ljava/util/EnumMap;
 
+    .line 6
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->initializeVisibilityChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p3
 
     iput-object p3, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mVisibilityChangeConsumerMap:Ljava/util/EnumMap;
 
+    .line 7
     new-instance p3, Lcom/sec/android/app/camera/shootingmode/pro/u0;
 
     invoke-direct {p3, p0}, Lcom/sec/android/app/camera/shootingmode/pro/u0;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;)V
 
     iput-object p3, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mHideApertureIndicatorRunnable:Ljava/lang/Runnable;
 
+    .line 8
     new-instance p3, Lcom/sec/android/app/camera/shootingmode/pro/v0;
 
     invoke-direct {p3, p0}, Lcom/sec/android/app/camera/shootingmode/pro/v0;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;)V
 
     iput-object p3, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mTipsButtonVisibilityChangeRequestListener:Lcom/sec/android/app/camera/shootingmode/pro/tips/ProTipsManager$TipsButtonVisibilityChangeRequestListener;
 
+    .line 9
     new-instance p3, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;
 
     const/4 v0, 0x0
@@ -151,6 +160,7 @@
 
     iput-object p3, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mBasePresenter:Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;
 
+    .line 10
     invoke-virtual {p3}, Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;->initializeSettingKeyLists()V
 
     return-void
@@ -159,8 +169,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/pro/ProVideoContract$View;ILcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;)V
     .locals 0
 
+    .line 11
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
+    .line 12
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter$LensInfoEventManager;
 
     const/4 p2, 0x0
@@ -169,6 +181,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mAfLensInfoEventManager:Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter$LensInfoEventManager;
 
+    .line 13
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -183,32 +196,38 @@
 
     new-array p1, p1, [I
 
+    .line 14
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mAudioValue:[I
 
+    .line 15
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->initializeSettingChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mSettingChangeConsumerMap:Ljava/util/EnumMap;
 
+    .line 16
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->initializeVisibilityChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mVisibilityChangeConsumerMap:Ljava/util/EnumMap;
 
+    .line 17
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/pro/u0;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/pro/u0;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mHideApertureIndicatorRunnable:Ljava/lang/Runnable;
 
+    .line 18
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/pro/v0;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/pro/v0;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mTipsButtonVisibilityChangeRequestListener:Lcom/sec/android/app/camera/shootingmode/pro/tips/ProTipsManager$TipsButtonVisibilityChangeRequestListener;
 
+    .line 19
     iput-object p5, p0, Lcom/sec/android/app/camera/shootingmode/pro/ProVideoPresenter;->mBasePresenter:Lcom/sec/android/app/camera/shootingmode/pro/ProBasePresenter;
 
     return-void

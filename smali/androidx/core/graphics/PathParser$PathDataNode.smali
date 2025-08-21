@@ -24,10 +24,13 @@
 .method public constructor <init>(C[F)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-char p1, p0, Landroidx/core/graphics/PathParser$PathDataNode;->mType:C
 
+    .line 3
     iput-object p2, p0, Landroidx/core/graphics/PathParser$PathDataNode;->mParams:[F
 
     return-void
@@ -36,12 +39,15 @@
 .method public constructor <init>(Landroidx/core/graphics/PathParser$PathDataNode;)V
     .locals 2
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     iget-char v0, p1, Landroidx/core/graphics/PathParser$PathDataNode;->mType:C
 
     iput-char v0, p0, Landroidx/core/graphics/PathParser$PathDataNode;->mType:C
 
+    .line 6
     iget-object p1, p1, Landroidx/core/graphics/PathParser$PathDataNode;->mParams:[F
 
     const/4 v0, 0x0

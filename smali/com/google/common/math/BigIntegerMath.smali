@@ -495,6 +495,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -540,6 +541,7 @@
 
     ushr-int/2addr v0, v1
 
+    .line 2
     invoke-static {p0, p1, v0}, Lcom/google/common/math/BigIntegerMath;->listProduct(Ljava/util/List;II)Ljava/math/BigInteger;
 
     move-result-object p1
@@ -554,6 +556,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -587,6 +590,7 @@
 
     return-object p0
 
+    .line 4
     :cond_1
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -608,6 +612,7 @@
 
     return-object p0
 
+    .line 5
     :cond_2
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -617,6 +622,7 @@
 
     return-object p0
 
+    .line 6
     :cond_3
     sget-object p0, Ljava/math/BigInteger;->ONE:Ljava/math/BigInteger;
 

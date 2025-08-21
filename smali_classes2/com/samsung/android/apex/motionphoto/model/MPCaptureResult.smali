@@ -93,6 +93,7 @@
 
     if-eq v0, p9, :cond_0
 
+    .line 1
     sget-object p9, Lcom/samsung/android/apex/motionphoto/model/MPCaptureResult$$serializer;->INSTANCE:Lcom/samsung/android/apex/motionphoto/model/MPCaptureResult$$serializer;
 
     invoke-virtual {p9}, Lcom/samsung/android/apex/motionphoto/model/MPCaptureResult$$serializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -161,20 +162,28 @@
 
     invoke-static {p7, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput p1, p0, Lcom/samsung/android/apex/motionphoto/model/MPCaptureResult;->token:I
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/apex/motionphoto/model/MPCaptureResult;->tempPath:Ljava/lang/String;
 
+    .line 5
     iput-object p3, p0, Lcom/samsung/android/apex/motionphoto/model/MPCaptureResult;->camId:Ljava/lang/String;
 
+    .line 6
     iput-boolean p4, p0, Lcom/samsung/android/apex/motionphoto/model/MPCaptureResult;->skipShutterSound:Z
 
+    .line 7
     iput-object p5, p0, Lcom/samsung/android/apex/motionphoto/model/MPCaptureResult;->storedDatas:Ljava/util/List;
 
+    .line 8
     iput-object p6, p0, Lcom/samsung/android/apex/motionphoto/model/MPCaptureResult;->canceledDatas:Ljava/util/List;
 
+    .line 9
     iput-object p7, p0, Lcom/samsung/android/apex/motionphoto/model/MPCaptureResult;->shutterTrimTimes:Ljava/util/List;
 
     return-void

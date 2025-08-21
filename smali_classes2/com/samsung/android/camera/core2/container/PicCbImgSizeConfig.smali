@@ -20,6 +20,7 @@
 .method public constructor <init>(Landroid/util/Size;Ljava/lang/String;)V
     .locals 2
 
+    .line 4
     sget-object v0, Lcom/samsung/android/camera/core2/container/SensorPixelMode;->b:Lcom/samsung/android/camera/core2/container/SensorPixelMode;
 
     const/4 v1, 0x0
@@ -32,14 +33,19 @@
 .method public constructor <init>(Landroid/util/Size;Ljava/lang/String;Lcom/samsung/android/camera/core2/container/SensorPixelMode;I)V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     iput-object p1, p0, Lcom/samsung/android/camera/core2/container/PicCbImgSizeConfig;->a:Landroid/util/Size;
 
+    .line 7
     iput-object p2, p0, Lcom/samsung/android/camera/core2/container/PicCbImgSizeConfig;->b:Ljava/lang/String;
 
+    .line 8
     iput-object p3, p0, Lcom/samsung/android/camera/core2/container/PicCbImgSizeConfig;->c:Lcom/samsung/android/camera/core2/container/SensorPixelMode;
 
+    .line 9
     iput p4, p0, Lcom/samsung/android/camera/core2/container/PicCbImgSizeConfig;->d:I
 
     return-void
@@ -48,6 +54,7 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/CamCapabilityContainer$SecStreamConfig;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/CamCapabilityContainer$SecStreamConfig;->t()Landroid/util/Size;
 
     move-result-object v0
@@ -60,6 +67,7 @@
 
     move-result-object v1
 
+    .line 2
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/CamCapabilityContainer$SecStreamConfig;->r()Lcom/samsung/android/camera/core2/container/SensorPixelMode;
 
     move-result-object v2
@@ -68,6 +76,7 @@
 
     move-result p1
 
+    .line 3
     invoke-direct {p0, v0, v1, v2, p1}, Lcom/samsung/android/camera/core2/container/PicCbImgSizeConfig;-><init>(Landroid/util/Size;Ljava/lang/String;Lcom/samsung/android/camera/core2/container/SensorPixelMode;I)V
 
     return-void

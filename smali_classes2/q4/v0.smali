@@ -25,8 +25,10 @@
 .method public constructor <init>(Landroidx/appcompat/app/AppCompatActivity;)V
     .locals 2
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -35,18 +37,23 @@
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lq4/v0;->a:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
+    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
     iput-object v1, p0, Lq4/v0;->d:Landroid/content/Context;
 
+    .line 8
     iput-object p1, p0, Lq4/v0;->c:Landroidx/appcompat/app/AppCompatActivity;
 
+    .line 9
     iput-object v0, p0, Lq4/v0;->b:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
+    .line 10
     new-instance p1, Lq4/t0;
 
     invoke-direct {p1, v1}, Lq4/t0;-><init>(Landroid/content/Context;)V
@@ -59,14 +66,17 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;)V
     .locals 1
 
+    .line 1
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getActivity()Landroidx/appcompat/app/AppCompatActivity;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lq4/v0;-><init>(Landroidx/appcompat/app/AppCompatActivity;)V
 
+    .line 2
     iput-object p1, p0, Lq4/v0;->a:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
+    .line 3
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getCameraSettings()Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     move-result-object p1
@@ -616,6 +626,7 @@
 .method public isCameraDialogVisible()Z
     .locals 6
 
+    .line 8
     invoke-static {}, Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;->values()[Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;
 
     move-result-object v0
@@ -631,12 +642,14 @@
 
     aget-object v4, v0, v2
 
+    .line 9
     invoke-virtual {p0, v4}, Lq4/v0;->isCameraDialogVisible(Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
+    .line 10
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -669,6 +682,7 @@
 .method public isCameraDialogVisible(Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;)Z
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lq4/v0;->f:Ljava/lang/Object;
 
     monitor-enter v0
@@ -677,11 +691,13 @@
 
     if-nez p1, :cond_0
 
+    .line 2
     :try_start_0
     monitor-exit v0
 
     return v1
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lq4/v0;->c:Landroidx/appcompat/app/AppCompatActivity;
 
@@ -705,6 +721,7 @@
 
     if-eqz p0, :cond_3
 
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object p1
@@ -713,6 +730,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
@@ -749,6 +767,7 @@
 
     return v1
 
+    .line 6
     :cond_3
     :goto_0
     monitor-exit v0
@@ -758,6 +777,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -984,6 +1004,7 @@
 .method public showCameraDialog(Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;)V
     .locals 2
 
+    .line 14
     sget-object v0, Lq4/v0$a;->a:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -1006,20 +1027,24 @@
 
     const/4 v0, 0x0
 
+    .line 15
     invoke-virtual {p0, p1, v0, v0}, Lq4/v0;->showCameraDialog(Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 16
     :cond_0
     invoke-virtual {p0}, Lq4/v0;->l()V
 
     goto :goto_0
 
+    .line 17
     :cond_1
     invoke-virtual {p0}, Lq4/v0;->i()V
 
     goto :goto_0
 
+    .line 18
     :cond_2
     invoke-virtual {p0}, Lq4/v0;->j()V
 
@@ -1030,10 +1055,12 @@
 .method public showCameraDialog(Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lq4/v0;->f:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lq4/f;->a0(Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;)Z
 
@@ -1047,10 +1074,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     monitor-exit v0
 
     return-void
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p1}, Lq4/v0;->f(Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;)Z
 
@@ -1058,6 +1087,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     iget-object v1, p0, Lq4/v0;->a:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-static {v1}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
@@ -1073,6 +1103,7 @@
     :cond_1
     const-string v1, "CameraDialogManager"
 
+    .line 6
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1095,6 +1126,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     iget-object v1, p0, Lq4/v0;->c:Landroidx/appcompat/app/AppCompatActivity;
 
     invoke-virtual {v1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -1105,6 +1137,7 @@
 
     move-result-object v1
 
+    .line 8
     iget-object p0, p0, Lq4/v0;->c:Landroidx/appcompat/app/AppCompatActivity;
 
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -1127,8 +1160,10 @@
 
     if-eqz p0, :cond_2
 
+    .line 9
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->dismissAllowingStateLoss()V
 
+    .line 10
     :cond_2
     invoke-static {p1, p2, p3}, Lq4/f;->g0(Lcom/sec/android/app/camera/interfaces/CameraDialogManager$DialogId;Ljava/lang/String;Ljava/lang/String;)Lq4/f;
 
@@ -1136,6 +1171,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 11
     :try_start_1
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1158,8 +1194,10 @@
 
     const-string p1, "showCameraDialog is the error!"
 
+    .line 12
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 13
     :goto_0
     monitor-exit v0
 

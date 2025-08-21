@@ -37,6 +37,7 @@
 
     const/16 v0, 0x3c
 
+    .line 4
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/layer/previewoverlay/face/Repeater;-><init>(I)V
 
     return-void
@@ -45,8 +46,10 @@
 .method public constructor <init>(I)V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/sec/android/app/camera/layer/previewoverlay/face/Repeater$1;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/layer/previewoverlay/face/Repeater$1;-><init>(Lcom/sec/android/app/camera/layer/previewoverlay/face/Repeater;)V
@@ -57,6 +60,7 @@
 
     int-to-long v2, p1
 
+    .line 3
     div-long/2addr v0, v2
 
     iput-wide v0, p0, Lcom/sec/android/app/camera/layer/previewoverlay/face/Repeater;->mFrameTime:J

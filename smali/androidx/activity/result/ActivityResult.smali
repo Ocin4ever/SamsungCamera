@@ -40,10 +40,13 @@
 .method public constructor <init>(ILandroid/content/Intent;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Landroidx/activity/result/ActivityResult;->mResultCode:I
 
+    .line 3
     iput-object p2, p0, Landroidx/activity/result/ActivityResult;->mData:Landroid/content/Intent;
 
     return-void
@@ -52,14 +55,17 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroidx/activity/result/ActivityResult;->mResultCode:I
 
+    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0

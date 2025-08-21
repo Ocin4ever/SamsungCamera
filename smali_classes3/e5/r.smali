@@ -17,6 +17,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0, v1, v1}, Le5/r;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -25,8 +26,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 3
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
@@ -35,6 +38,7 @@
 
     const/4 p1, 0x0
 
+    .line 4
     iput p1, p0, Le5/r;->b:F
 
     return-void

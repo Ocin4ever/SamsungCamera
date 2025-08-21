@@ -320,6 +320,7 @@
 .method public generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/material/chip/b$c;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -334,6 +335,7 @@
 .method public generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 2
     new-instance p0, Lcom/google/android/material/chip/b$c;
 
     invoke-direct {p0, p1}, Lcom/google/android/material/chip/b$c;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
@@ -714,6 +716,7 @@
 .method public setSingleLine(I)V
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -730,6 +733,7 @@
 .method public setSingleLine(Z)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lm1/e;->setSingleLine(Z)V
 
     return-void
@@ -738,6 +742,7 @@
 .method public setSingleSelection(I)V
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -754,6 +759,7 @@
 .method public setSingleSelection(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/material/chip/b;->h:Lm1/a;
 
     invoke-virtual {p0, p1}, Lm1/a;->q(Z)V

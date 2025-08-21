@@ -106,38 +106,50 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/video/VideoContract$View;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mIsSuperSteadyLowBrightnessCondition:Z
 
+    .line 3
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mIsReconnectRequiredOnStop:Z
 
+    .line 4
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mIsShownTemperatureWarning:Z
 
     const/high16 p2, -0x80000000
 
+    .line 5
     iput p2, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mBackZoomValueWhileRecording:I
 
+    .line 6
     iput p2, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mFrontZoomValueWhileRecording:I
 
+    .line 7
     iput p2, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mBackTorchValueWhileRecording:I
 
+    .line 8
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mTrackingAfCount:I
 
     const-wide/16 p1, 0x0
 
+    .line 9
     iput-wide p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mCurrentRecordingTime:J
 
     const/4 p1, 0x0
 
+    .line 10
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mUhd60FpsRemosaicId:Lcom/sec/android/app/camera/interfaces/CommandId;
 
+    .line 11
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mIsNeedToShowSuperSteadyGuideToast:Ljava/lang/Boolean;
 
+    .line 12
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->initializeSettingChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p1
@@ -150,38 +162,50 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/video/VideoContract$View;I)V
     .locals 0
 
+    .line 13
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
     const/4 p1, 0x0
 
+    .line 14
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mIsSuperSteadyLowBrightnessCondition:Z
 
+    .line 15
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mIsReconnectRequiredOnStop:Z
 
+    .line 16
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mIsShownTemperatureWarning:Z
 
     const/high16 p2, -0x80000000
 
+    .line 17
     iput p2, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mBackZoomValueWhileRecording:I
 
+    .line 18
     iput p2, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mFrontZoomValueWhileRecording:I
 
+    .line 19
     iput p2, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mBackTorchValueWhileRecording:I
 
+    .line 20
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mTrackingAfCount:I
 
     const-wide/16 p1, 0x0
 
+    .line 21
     iput-wide p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mCurrentRecordingTime:J
 
     const/4 p1, 0x0
 
+    .line 22
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mUhd60FpsRemosaicId:Lcom/sec/android/app/camera/interfaces/CommandId;
 
+    .line 23
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->mIsNeedToShowSuperSteadyGuideToast:Ljava/lang/Boolean;
 
+    .line 24
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/video/VideoPresenter;->initializeSettingChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p1

@@ -1097,14 +1097,17 @@
 .method public static getThumbnailSize(IIF)Landroid/util/Size;
     .locals 2
 
+    .line 2
     sget-object v0, Lcom/sec/android/app/camera/interfaces/Resolution;->RESOLUTION_960X540:Lcom/sec/android/app/camera/interfaces/Resolution;
 
+    .line 3
     invoke-virtual {v0}, Lcom/sec/android/app/camera/interfaces/Resolution;->getHeight()I
 
     move-result v1
 
     if-le p1, v1, :cond_0
 
+    .line 4
     invoke-virtual {v0}, Lcom/sec/android/app/camera/interfaces/Resolution;->getHeight()I
 
     move-result p0
@@ -1125,6 +1128,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-static {p0, p1}, Lcom/sec/android/app/camera/util/factory/SizeFactory;->create(II)Landroid/util/Size;
 
@@ -1137,6 +1141,7 @@
 .method public static getThumbnailSize(Lcom/sec/android/app/camera/interfaces/Resolution;)Landroid/util/Size;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/interfaces/Resolution;->getWidth()I
 
     move-result v0

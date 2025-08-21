@@ -66,6 +66,7 @@
 .method public read()I
     .locals 4
 
+    .line 1
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->val$reader:Ljava/io/Reader;
@@ -78,6 +79,7 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 2
     iget-boolean v0, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->hitPadding:Z
 
     if-nez v0, :cond_2
@@ -96,6 +98,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_1
     new-instance v0, Lcom/google/common/io/BaseEncoding$DecodingException;
 
@@ -125,6 +128,7 @@
     :goto_1
     return v1
 
+    .line 4
     :cond_3
     iget v1, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->readChars:I
 
@@ -136,6 +140,7 @@
 
     int-to-char v0, v0
 
+    .line 5
     iget-object v1, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->this$0:Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;
 
     iget-object v1, v1, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;->paddingChar:Ljava/lang/Character;
@@ -148,6 +153,7 @@
 
     if-ne v1, v0, :cond_6
 
+    .line 6
     iget-boolean v0, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->hitPadding:Z
 
     if-nez v0, :cond_5
@@ -162,6 +168,7 @@
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 7
     invoke-virtual {v1, v0}, Lcom/google/common/io/BaseEncoding$Alphabet;->isValidPaddingStartPosition(I)Z
 
     move-result v0
@@ -170,6 +177,7 @@
 
     goto :goto_2
 
+    .line 8
     :cond_4
     new-instance v0, Lcom/google/common/io/BaseEncoding$DecodingException;
 
@@ -195,17 +203,20 @@
 
     throw v0
 
+    .line 9
     :cond_5
     :goto_2
     iput-boolean v2, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->hitPadding:Z
 
     goto :goto_0
 
+    .line 10
     :cond_6
     iget-boolean v1, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->hitPadding:Z
 
     if-nez v1, :cond_7
 
+    .line 11
     iget v1, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->bitBuffer:I
 
     iget-object v2, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->this$0:Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;
@@ -218,6 +229,7 @@
 
     iput v1, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->bitBuffer:I
 
+    .line 12
     invoke-virtual {v2, v0}, Lcom/google/common/io/BaseEncoding$Alphabet;->decode(C)I
 
     move-result v0
@@ -226,6 +238,7 @@
 
     iput v0, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->bitBuffer:I
 
+    .line 13
     iget v1, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->bitBufferLength:I
 
     iget-object v2, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->this$0:Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;
@@ -244,6 +257,7 @@
 
     sub-int/2addr v1, v2
 
+    .line 14
     iput v1, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->bitBufferLength:I
 
     shr-int p0, v0, v1
@@ -252,6 +266,7 @@
 
     return p0
 
+    .line 15
     :cond_7
     new-instance v1, Lcom/google/common/io/BaseEncoding$DecodingException;
 
@@ -289,6 +304,7 @@
 
     add-int/2addr p3, p2
 
+    .line 16
     array-length v0, p1
 
     invoke-static {p2, p3, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
@@ -298,6 +314,7 @@
     :goto_0
     if-ge v0, p3, :cond_2
 
+    .line 17
     invoke-virtual {p0}, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->read()I
 
     move-result v1
@@ -321,6 +338,7 @@
     :cond_1
     int-to-byte v1, v1
 
+    .line 18
     aput-byte v1, p1, v0
 
     add-int/lit8 v0, v0, 0x1

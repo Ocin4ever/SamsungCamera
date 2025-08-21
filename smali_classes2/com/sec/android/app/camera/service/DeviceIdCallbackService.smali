@@ -29,8 +29,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/service/AbstractCallbackService;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance p1, Lcom/sec/android/app/camera/service/DeviceIdCallbackService$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/service/DeviceIdCallbackService$1;-><init>(Lcom/sec/android/app/camera/service/DeviceIdCallbackService;)V
@@ -43,14 +45,17 @@
 .method public constructor <init>(Landroid/content/Context;La3/a;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/service/AbstractCallbackService;-><init>(Landroid/content/Context;)V
 
+    .line 4
     new-instance p1, Lcom/sec/android/app/camera/service/DeviceIdCallbackService$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/service/DeviceIdCallbackService$1;-><init>(Lcom/sec/android/app/camera/service/DeviceIdCallbackService;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/service/DeviceIdCallbackService;->mDeviceIdServiceConnection:Landroid/content/ServiceConnection;
 
+    .line 5
     iput-object p2, p0, Lcom/sec/android/app/camera/service/DeviceIdCallbackService;->mDeviceIdService:La3/a;
 
     return-void

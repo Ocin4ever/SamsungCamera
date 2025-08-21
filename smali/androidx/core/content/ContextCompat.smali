@@ -432,6 +432,7 @@
 
     move v5, p3
 
+    .line 1
     invoke-static/range {v0 .. v5}, Landroidx/core/content/ContextCompat;->registerReceiver(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
 
     move-result-object p0
@@ -452,6 +453,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -480,6 +482,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -499,6 +502,7 @@
 
     goto :goto_2
 
+    .line 4
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -508,6 +512,7 @@
 
     throw p0
 
+    .line 5
     :cond_6
     :goto_2
     invoke-static {}, Landroidx/core/os/BuildCompat;->isAtLeastT()Z
@@ -526,6 +531,7 @@
 
     move-object v4, p4
 
+    .line 6
     invoke-static/range {v0 .. v5}, Landroidx/core/content/ContextCompat$Api33Impl;->registerReceiver(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
 
     move-result-object p0
@@ -543,6 +549,7 @@
 
     move-object v4, p4
 
+    .line 7
     invoke-static/range {v0 .. v5}, Landroidx/core/content/ContextCompat$Api26Impl;->registerReceiver(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
 
     move-result-object p0
@@ -555,6 +562,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, p1, v0}, Landroidx/core/content/ContextCompat;->startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z
 
     move-result p0
@@ -565,6 +573,7 @@
 .method public static startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z
     .locals 0
 
+    .line 2
     invoke-static {p0, p1, p2}, Landroidx/core/content/ContextCompat$Api16Impl;->startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)V
 
     const/4 p0, 0x1

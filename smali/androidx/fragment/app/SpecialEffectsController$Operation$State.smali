@@ -121,10 +121,12 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 4
     sget-object p0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->GONE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     return-object p0
 
+    .line 5
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -146,11 +148,13 @@
 
     throw v0
 
+    .line 6
     :cond_1
     sget-object p0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->INVISIBLE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     return-object p0
 
+    .line 7
     :cond_2
     sget-object p0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->VISIBLE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
@@ -160,6 +164,7 @@
 .method public static from(Landroid/view/View;)Landroidx/fragment/app/SpecialEffectsController$Operation$State;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
 
     move-result v0
@@ -176,10 +181,12 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     sget-object p0, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->INVISIBLE:Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 

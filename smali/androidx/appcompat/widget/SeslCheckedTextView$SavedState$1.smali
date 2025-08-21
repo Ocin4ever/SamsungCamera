@@ -40,6 +40,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroidx/appcompat/widget/SeslCheckedTextView$SavedState;
     .locals 1
 
+    .line 2
     new-instance p0, Landroidx/appcompat/widget/SeslCheckedTextView$SavedState;
 
     const/4 v0, 0x0
@@ -52,6 +53,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/SeslCheckedTextView$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/appcompat/widget/SeslCheckedTextView$SavedState;
 
     move-result-object p0
@@ -62,6 +64,7 @@
 .method public newArray(I)[Landroidx/appcompat/widget/SeslCheckedTextView$SavedState;
     .locals 0
 
+    .line 2
     new-array p0, p1, [Landroidx/appcompat/widget/SeslCheckedTextView$SavedState;
 
     return-object p0
@@ -70,6 +73,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/SeslCheckedTextView$SavedState$1;->newArray(I)[Landroidx/appcompat/widget/SeslCheckedTextView$SavedState;
 
     move-result-object p0

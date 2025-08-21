@@ -161,6 +161,7 @@
 
     if-gez p2, :cond_0
 
+    .line 2
     iget-object p2, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
     invoke-interface {p2}, Landroidx/recyclerview/widget/ChildHelper$Callback;->getChildCount()I
@@ -169,11 +170,13 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/ChildHelper;->getOffset(I)I
 
     move-result p2
 
+    .line 4
     :goto_0
     iget-object v0, p0, Landroidx/recyclerview/widget/ChildHelper;->mBucket:Landroidx/recyclerview/widget/ChildHelper$Bucket;
 
@@ -181,8 +184,10 @@
 
     if-eqz p3, :cond_1
 
+    .line 5
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChildHelper;->hideViewInternal(Landroid/view/View;)V
 
+    .line 6
     :cond_1
     iget-object p0, p0, Landroidx/recyclerview/widget/ChildHelper;->mCallback:Landroidx/recyclerview/widget/ChildHelper$Callback;
 
@@ -196,6 +201,7 @@
 
     const/4 v0, -0x1
 
+    .line 1
     invoke-virtual {p0, p1, v0, p2}, Landroidx/recyclerview/widget/ChildHelper;->addView(Landroid/view/View;IZ)V
 
     return-void

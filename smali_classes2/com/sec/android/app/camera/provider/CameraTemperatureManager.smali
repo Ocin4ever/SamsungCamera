@@ -892,6 +892,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 8
     iget-object p0, p0, Lcom/sec/android/app/camera/provider/CameraTemperatureManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p0}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getActivity()Landroidx/appcompat/app/AppCompatActivity;
@@ -908,6 +909,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_0
     iget-object p1, p0, Lcom/sec/android/app/camera/provider/CameraTemperatureManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
@@ -1219,6 +1221,7 @@
 
     const/4 v0, 0x0
 
+    .line 7
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/provider/CameraTemperatureManager;->showFlashRestrictionToast(Lcom/sec/android/app/camera/interfaces/CommandId;)V
 
     return-void
@@ -1227,6 +1230,7 @@
 .method public showFlashRestrictionToast(Lcom/sec/android/app/camera/interfaces/CommandId;)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/provider/CameraTemperatureManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getLayerManager()Lcom/sec/android/app/camera/interfaces/LayerManager;
@@ -1241,16 +1245,19 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/interfaces/PopupLayerManager;->hidePopup(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/sec/android/app/camera/provider/CameraTemperatureManager;->getFlashRestrictionType()Lcom/sec/android/app/camera/provider/CameraTemperatureManager$FlashRestrictionType;
 
     move-result-object v0
 
+    .line 3
     sget-object v1, Lcom/sec/android/app/camera/provider/CameraTemperatureManager$FlashRestrictionType;->NONE:Lcom/sec/android/app/camera/provider/CameraTemperatureManager$FlashRestrictionType;
 
     if-ne v0, v1, :cond_0
 
     return-void
 
+    .line 4
     :cond_0
     iget-object v1, p0, Lcom/sec/android/app/camera/provider/CameraTemperatureManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
@@ -1273,6 +1280,7 @@
     :cond_1
     const/4 v2, 0x0
 
+    .line 5
     :goto_0
     invoke-virtual {v0, v2}, Lcom/sec/android/app/camera/provider/CameraTemperatureManager$FlashRestrictionType;->getStringId(Z)I
 
@@ -1282,6 +1290,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 6
     invoke-virtual {v0}, Lcom/sec/android/app/camera/provider/CameraTemperatureManager$FlashRestrictionType;->getSaLoggingId()Lcom/sec/android/app/camera/interfaces/SaLogEventId;
 
     move-result-object p0

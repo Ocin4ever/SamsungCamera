@@ -28,6 +28,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/i0;->l:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/i0;->m:Landroid/util/SparseIntArray;
@@ -48,6 +49,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     aget-object v3, p2, v0
 
     const/4 v4, 0x0
@@ -114,46 +116,57 @@
 
     const-wide/16 v1, -0x1
 
+    .line 3
     iput-wide v1, p0, Lp4/i0;->k:J
 
+    .line 4
     iget-object p1, p0, Lp4/h0;->a:Landroid/widget/ImageButton;
 
     const/4 p3, 0x0
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 5
     iget-object p1, p0, Lp4/h0;->b:Landroid/widget/ImageView;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 6
     iget-object p1, p0, Lp4/h0;->c:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 7
     iget-object p1, p0, Lp4/h0;->d:Landroid/widget/ImageView;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 8
     iget-object p1, p0, Lp4/h0;->e:Landroid/widget/ImageView;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 9
     iget-object p1, p0, Lp4/h0;->f:Landroid/widget/TextView;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 10
     iget-object p1, p0, Lp4/h0;->g:Landroid/widget/ImageView;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 11
     invoke-virtual {p0, p2}, Landroidx/databinding/ViewDataBinding;->setRootTag([Landroid/view/View;)V
 
+    .line 12
     new-instance p1, Lt4/a;
 
     invoke-direct {p1, p0, v0}, Lt4/a;-><init>(Lt4/a$a;I)V
 
     iput-object p1, p0, Lp4/i0;->j:Landroid/view/View$OnClickListener;
 
+    .line 13
     invoke-virtual {p0}, Lp4/i0;->invalidateAll()V
 
     return-void

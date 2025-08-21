@@ -953,6 +953,7 @@
         }
     .end annotation
 
+    .line 4
     new-instance v0, Lcom/samsung/android/camera/core2/ExtraBundle;
 
     invoke-direct {v0}, Lcom/samsung/android/camera/core2/ExtraBundle;-><init>()V
@@ -979,6 +980,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/camera/core2/node/Node$InputPort;->d(Ljava/lang/Object;Lcom/samsung/android/camera/core2/ExtraBundle;)Ljava/lang/Object;
 
     move-result-object p0
@@ -999,6 +1001,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/samsung/android/camera/core2/ExtraBundle;
 
     invoke-direct {v0}, Lcom/samsung/android/camera/core2/ExtraBundle;-><init>()V
@@ -1025,6 +1028,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/camera/core2/node/Node$OutputPort;->c(Ljava/lang/Object;Lcom/samsung/android/camera/core2/ExtraBundle;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1737,6 +1741,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/camera/core2/node/Node;->initialize(ZZ)V
 
     return-void
@@ -1747,6 +1752,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 2
     invoke-virtual {p0, p1, p2, v0, v1}, Lcom/samsung/android/camera/core2/node/Node;->initialize(ZZJ)V
 
     return-void
@@ -1755,16 +1761,19 @@
 .method public initialize(ZZJ)V
     .locals 7
 
+    .line 3
     iget v0, p0, Lcom/samsung/android/camera/core2/node/Node;->mNodeId:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/node/Node;->dummyInitialize()V
 
     return-void
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/camera/core2/node/Node;->mStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1776,6 +1785,7 @@
 
     const/4 v2, 0x0
 
+    .line 6
     :try_start_0
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/node/Node;->getNodeTag()Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
@@ -1807,12 +1817,14 @@
 
     invoke-static {v3, v4, v5}, Lcom/samsung/android/camera/core2/util/CLog;->l(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 7
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/node/Node;->isInitializing()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
+    .line 8
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/node/Node;->getNodeTag()Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     move-result-object p1
@@ -1824,6 +1836,7 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 9
     :goto_0
     iget-object p0, p0, Lcom/samsung/android/camera/core2/node/Node;->mStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -1831,6 +1844,7 @@
 
     return-void
 
+    .line 10
     :cond_1
     :try_start_1
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/node/Node;->isInitialized()Z
@@ -1839,14 +1853,17 @@
 
     if-eqz v3, :cond_3
 
+    .line 11
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/node/Node;->isActivated()Z
 
     move-result p2
 
     if-eq p2, p1, :cond_2
 
+    .line 12
     invoke-virtual {p0, p1}, Lcom/samsung/android/camera/core2/node/Node;->setActivate(Z)V
 
+    .line 13
     :cond_2
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/node/Node;->getNodeTag()Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
@@ -1858,6 +1875,7 @@
 
     goto :goto_0
 
+    .line 14
     :cond_3
     iget-object v3, p0, Lcom/samsung/android/camera/core2/node/Node;->mState:Lcom/samsung/android/camera/core2/node/Node$State;
 
@@ -1869,8 +1887,10 @@
 
     const-wide/16 v5, -0x1
 
+    .line 15
     iput-wide v5, p0, Lcom/samsung/android/camera/core2/node/Node;->mInitializingThreadId:J
 
+    .line 16
     new-instance p2, Ljava/util/Timer;
 
     invoke-direct {p2}, Ljava/util/Timer;-><init>()V
@@ -1881,6 +1901,7 @@
 
     invoke-virtual {p2, v3, p3, p4}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
+    .line 17
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1911,10 +1932,12 @@
 
     invoke-static {p1, v2}, Lcom/sec/android/app/TraceWrapper;->asyncTraceBegin(Ljava/lang/String;I)V
 
+    .line 18
     iput-object v4, p0, Lcom/samsung/android/camera/core2/node/Node;->mState:Lcom/samsung/android/camera/core2/node/Node$State;
 
     goto :goto_0
 
+    .line 19
     :cond_4
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -1926,33 +1949,40 @@
 
     iput-wide p2, p0, Lcom/samsung/android/camera/core2/node/Node;->mInitializingThreadId:J
 
+    .line 20
     iput-object v4, p0, Lcom/samsung/android/camera/core2/node/Node;->mState:Lcom/samsung/android/camera/core2/node/Node$State;
     :try_end_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 21
     iget-object p2, p0, Lcom/samsung/android/camera/core2/node/Node;->mStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 22
     :try_start_2
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/node/Node;->initializeInternal()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
+    .line 23
     iget-object p2, p0, Lcom/samsung/android/camera/core2/node/Node;->mStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p2}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 24
     :try_start_3
     invoke-virtual {p0, p1}, Lcom/samsung/android/camera/core2/node/Node;->setActivate(Z)V
 
+    .line 25
     iget-object p1, p0, Lcom/samsung/android/camera/core2/node/Node;->mInitializedCond:Ljava/util/concurrent/locks/Condition;
 
     invoke-interface {p1}, Ljava/util/concurrent/locks/Condition;->signalAll()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 26
     iget-object p0, p0, Lcom/samsung/android/camera/core2/node/Node;->mStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -1966,13 +1996,16 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 27
     throw p1
 
     :catch_0
     move-exception p1
 
+    .line 28
     invoke-virtual {p0, p1}, Lcom/samsung/android/camera/core2/node/Node;->handleInitializingFailed(Ljava/lang/Throwable;)V
 
+    .line 29
     throw p1
 
     :catchall_1
@@ -1983,6 +2016,7 @@
     :catch_1
     move-exception p1
 
+    .line 30
     :try_start_4
     new-instance p2, Ljava/lang/IllegalStateException;
 
@@ -2010,11 +2044,13 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
+    .line 31
     :goto_1
     iget-object p0, p0, Lcom/samsung/android/camera/core2/node/Node;->mStateLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 32
     throw p1
 .end method
 
@@ -2853,6 +2889,7 @@
 .method public processPicture(Lcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/ExtraBundle;)Lcom/samsung/android/camera/core2/util/ImageBuffer;
     .locals 1
 
+    .line 2
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/util/ImageBuffer;->g()Lcom/samsung/android/camera/core2/util/ImageInfo;
 
     move-result-object v0
@@ -2861,6 +2898,7 @@
 
     move-result-object v0
 
+    .line 3
     iget-object p0, p0, Lcom/samsung/android/camera/core2/node/Node;->mProcessPictureMap:Ljava/util/Map;
 
     invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2873,6 +2911,7 @@
 
     return-object p1
 
+    .line 4
     :cond_0
     invoke-interface {p0, p1, p2}, Ljava/util/function/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2886,6 +2925,7 @@
 .method public processPicture(Lcom/samsung/android/camera/core2/util/ImageFile;Lcom/samsung/android/camera/core2/ExtraBundle;)Lcom/samsung/android/camera/core2/util/ImageFile;
     .locals 0
 
+    .line 1
     return-object p1
 .end method
 

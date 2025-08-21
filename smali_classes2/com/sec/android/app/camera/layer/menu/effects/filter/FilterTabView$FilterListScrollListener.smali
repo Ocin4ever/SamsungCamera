@@ -24,12 +24,14 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/layer/menu/effects/filter/FilterTabView;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/menu/effects/filter/FilterTabView$FilterListScrollListener;->this$0:Lcom/sec/android/app/camera/layer/menu/effects/filter/FilterTabView;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
 
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Lcom/sec/android/app/camera/layer/menu/effects/filter/FilterTabView$FilterListScrollListener;->mState:I
 
     return-void
@@ -38,6 +40,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/layer/menu/effects/filter/FilterTabView;Lcom/sec/android/app/camera/layer/menu/effects/filter/j;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/layer/menu/effects/filter/FilterTabView$FilterListScrollListener;-><init>(Lcom/sec/android/app/camera/layer/menu/effects/filter/FilterTabView;)V
 
     return-void

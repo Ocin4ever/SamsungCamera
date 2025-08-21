@@ -29,22 +29,27 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/provider/CallStateManager;)V
     .locals 2
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/provider/CallStateManager$CallStateListener;->this$0:Lcom/sec/android/app/camera/provider/CallStateManager;
 
+    .line 3
     invoke-direct {p0}, Landroid/telephony/TelephonyCallback;-><init>()V
 
+    .line 4
     invoke-direct {p0}, Lcom/sec/android/app/camera/provider/CallStateManager$CallStateListener;->getActivityInfo()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/provider/CallStateManager$CallStateListener;->mActivityInfo:Ljava/lang/String;
 
+    .line 5
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/app/camera/provider/CallStateManager$CallStateListener;->mHashCode:I
 
+    .line 6
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,6 +80,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/provider/CallStateManager;Lcom/sec/android/app/camera/provider/n;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/provider/CallStateManager$CallStateListener;-><init>(Lcom/sec/android/app/camera/provider/CallStateManager;)V
 
     return-void

@@ -11,6 +11,7 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/samsung/android/sdk/ocr/OCRType;Lcom/samsung/android/sdk/ocr/OCRLanguage;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/sdk/ocr/RecognizerInternal;-><init>(Landroid/content/Context;Lcom/samsung/android/sdk/ocr/OCRType;Lcom/samsung/android/sdk/ocr/OCRLanguage;)V
 
     return-void
@@ -19,6 +20,7 @@
 .method public constructor <init>(Lcom/samsung/android/sdk/ocr/RecognizerParams;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/ocr/RecognizerInternal;-><init>(Lcom/samsung/android/sdk/ocr/RecognizerParams;)V
 
     return-void

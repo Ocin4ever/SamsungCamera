@@ -34,20 +34,25 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->mIsInitialized:Z
 
+    .line 3
     new-instance v0, Lcom/sec/android/app/camera/layer/menu/effects/beauty/a;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/layer/menu/effects/beauty/a;-><init>(Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->mHideManualBeautyListListener:Lcom/sec/android/app/camera/util/AnimationUtil$AnimationEndListener;
 
+    .line 4
     iput p1, p0, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->mOrientation:I
 
+    .line 5
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->initView()V
 
     return-void
@@ -56,20 +61,25 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 6
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
+    .line 7
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->mIsInitialized:Z
 
+    .line 8
     new-instance p2, Lcom/sec/android/app/camera/layer/menu/effects/beauty/a;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/layer/menu/effects/beauty/a;-><init>(Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;)V
 
     iput-object p2, p0, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->mHideManualBeautyListListener:Lcom/sec/android/app/camera/util/AnimationUtil$AnimationEndListener;
 
+    .line 9
     iput p1, p0, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->mOrientation:I
 
+    .line 10
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->initView()V
 
     return-void
@@ -78,20 +88,25 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 11
     invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x0
 
+    .line 12
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->mIsInitialized:Z
 
+    .line 13
     new-instance p2, Lcom/sec/android/app/camera/layer/menu/effects/beauty/a;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/layer/menu/effects/beauty/a;-><init>(Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;)V
 
     iput-object p2, p0, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->mHideManualBeautyListListener:Lcom/sec/android/app/camera/util/AnimationUtil$AnimationEndListener;
 
+    .line 14
     iput p1, p0, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->mOrientation:I
 
+    .line 15
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->initView()V
 
     return-void
@@ -1204,6 +1219,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->setPresenter(Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabContract$Presenter;)V
@@ -1214,6 +1230,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabView;->mPresenter:Lcom/sec/android/app/camera/layer/menu/effects/beauty/BeautyTabContract$Presenter;
 
     return-void

@@ -40,12 +40,14 @@
 .method public consumeCharacter(C)C
     .locals 2
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/net/MediaType$Tokenizer;->hasMore()Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/common/net/MediaType$Tokenizer;->previewChar()C
 
     move-result v0
@@ -64,6 +66,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 7
     iget v0, p0, Lcom/google/common/net/MediaType$Tokenizer;->position:I
 
     add-int/2addr v0, v1
@@ -76,22 +79,26 @@
 .method public consumeCharacter(Lcom/google/common/base/CharMatcher;)C
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/net/MediaType$Tokenizer;->hasMore()Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/net/MediaType$Tokenizer;->previewChar()C
 
     move-result v0
 
+    .line 3
     invoke-virtual {p1, v0}, Lcom/google/common/base/CharMatcher;->matches(C)Z
 
     move-result p1
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 4
     iget p1, p0, Lcom/google/common/net/MediaType$Tokenizer;->position:I
 
     add-int/lit8 p1, p1, 0x1

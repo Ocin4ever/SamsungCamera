@@ -34,6 +34,7 @@
 .method public bridge synthetic getPopup()Landroidx/appcompat/view/menu/ShowableListMenu;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/appcompat/widget/ListPopupWindow$1;->getPopup()Landroidx/appcompat/widget/ListPopupWindow;
 
     move-result-object p0
@@ -44,6 +45,7 @@
 .method public getPopup()Landroidx/appcompat/widget/ListPopupWindow;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/ListPopupWindow$1;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     return-object p0

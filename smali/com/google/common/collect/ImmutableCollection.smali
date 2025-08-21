@@ -218,6 +218,7 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object p0
@@ -280,6 +281,7 @@
 .method public final toArray()[Ljava/lang/Object;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/collect/ImmutableCollection;->EMPTY_ARRAY:[Ljava/lang/Object;
 
     invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -299,22 +301,27 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
 
+    .line 4
     array-length v1, p1
 
     if-ge v1, v0, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->internalArray()[Ljava/lang/Object;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->internalArrayStart()I
 
     move-result v0
@@ -329,6 +336,7 @@
 
     return-object p0
 
+    .line 7
     :cond_0
     invoke-static {p1, v0}, Lcom/google/common/collect/ObjectArrays;->newArray([Ljava/lang/Object;I)[Ljava/lang/Object;
 
@@ -336,6 +344,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     array-length v1, p1
 
@@ -343,12 +352,14 @@
 
     const/4 v1, 0x0
 
+    .line 9
     aput-object v1, p1, v0
 
     :cond_2
     :goto_0
     const/4 v0, 0x0
 
+    .line 10
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/ImmutableCollection;->copyIntoArray([Ljava/lang/Object;I)I
 
     return-object p1

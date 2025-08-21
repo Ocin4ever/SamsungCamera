@@ -80,8 +80,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaContract$View;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
+    .line 2
     sget-object p1, Ly2/i;->A0:Ly2/i;
 
     invoke-static {p1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -98,6 +100,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mCaptureResolutionId:I
 
+    .line 3
     invoke-static {p1}, Lcom/sec/android/app/camera/interfaces/Resolution;->getResolution(I)Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object p1
@@ -108,6 +111,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mCaptureResolutionWidth:I
 
+    .line 4
     iget p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mCaptureResolutionId:I
 
     invoke-static {p1}, Lcom/sec/android/app/camera/interfaces/Resolution;->getResolution(I)Lcom/sec/android/app/camera/interfaces/Resolution;
@@ -120,6 +124,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mCaptureResolutionHeight:I
 
+    .line 5
     iget p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mCaptureResolutionWidth:I
 
     int-to-float p2, p2
@@ -132,14 +137,19 @@
 
     const/4 p1, 0x0
 
+    .line 6
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mIsNeedToShowGuideSizeChangeAnimation:Z
 
+    .line 7
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mIsAngleChangeAvailable:Z
 
+    .line 8
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mIsShownHelpGuide:Z
 
+    .line 9
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mPostProgress:I
 
+    .line 10
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter$2;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter$2;-><init>(Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;)V
@@ -152,8 +162,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaContract$View;I)V
     .locals 0
 
+    .line 11
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
+    .line 12
     sget-object p1, Ly2/i;->A0:Ly2/i;
 
     invoke-static {p1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -170,6 +182,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mCaptureResolutionId:I
 
+    .line 13
     invoke-static {p1}, Lcom/sec/android/app/camera/interfaces/Resolution;->getResolution(I)Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object p1
@@ -180,6 +193,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mCaptureResolutionWidth:I
 
+    .line 14
     iget p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mCaptureResolutionId:I
 
     invoke-static {p1}, Lcom/sec/android/app/camera/interfaces/Resolution;->getResolution(I)Lcom/sec/android/app/camera/interfaces/Resolution;
@@ -192,6 +206,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mCaptureResolutionHeight:I
 
+    .line 15
     iget p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mCaptureResolutionWidth:I
 
     int-to-float p2, p2
@@ -204,14 +219,19 @@
 
     const/4 p1, 0x0
 
+    .line 16
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mIsNeedToShowGuideSizeChangeAnimation:Z
 
+    .line 17
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mIsAngleChangeAvailable:Z
 
+    .line 18
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mIsShownHelpGuide:Z
 
+    .line 19
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->mPostProgress:I
 
+    .line 20
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter$2;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter$2;-><init>(Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;)V
@@ -893,6 +913,7 @@
         }
     .end annotation
 
+    .line 5
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->getZoomManager()Lcom/sec/android/app/camera/interfaces/ZoomManager;
 
     move-result-object v0
@@ -901,10 +922,12 @@
 
     move-result-object v5
 
+    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 7
     array-length v1, p3
 
     const/4 v2, 0x0
@@ -916,16 +939,19 @@
 
     if-eqz v3, :cond_0
 
+    .line 8
     invoke-direct {p0, v3}, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->checkValidZoomLens(Lcom/sec/android/app/camera/interfaces/CommandId;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
+    .line 9
     invoke-direct {p0, v3}, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaPresenter;->getMinZoomValue(Lcom/sec/android/app/camera/interfaces/CommandId;)I
 
     move-result v4
 
+    .line 10
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -936,8 +962,10 @@
 
     if-nez v6, :cond_0
 
+    .line 11
     invoke-interface {v5, v3, v4}, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomLensDataHolder;->add(Lcom/sec/android/app/camera/interfaces/CommandId;I)V
 
+    .line 12
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -949,6 +977,7 @@
 
     goto :goto_0
 
+    .line 13
     :cond_1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->getZoomManager()Lcom/sec/android/app/camera/interfaces/ZoomManager;
 
@@ -2376,6 +2405,7 @@
 .method public refreshZoomProperty()V
     .locals 5
 
+    .line 1
     sget-object v0, Ly2/b;->H:Ly2/b;
 
     invoke-static {v0}, Ly2/d;->e(Ly2/b;)Z
@@ -2384,6 +2414,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v0, Lcom/sec/android/app/camera/interfaces/CommandId;->BACK_CAMERA_PANORAMA_LENS_TYPE_WIDE:Lcom/sec/android/app/camera/interfaces/CommandId;
 
     goto :goto_0
@@ -2394,6 +2425,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
+    .line 3
     sget-object v1, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;->LENS:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
     sget-object v2, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;->LENS:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;
@@ -2420,6 +2452,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_1
     invoke-super {p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->refreshZoomProperty()V
 

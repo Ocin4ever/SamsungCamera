@@ -37,6 +37,7 @@
 .method public get(Landroid/view/View;)Landroid/graphics/PointF;
     .locals 0
 
+    .line 1
     const/4 p0, 0x0
 
     return-object p0
@@ -45,6 +46,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroidx/transition/ChangeBounds$4;->get(Landroid/view/View;)Landroid/graphics/PointF;
@@ -57,26 +59,31 @@
 .method public set(Landroid/view/View;Landroid/graphics/PointF;)V
     .locals 2
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result p0
 
+    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v0
 
+    .line 4
     iget v1, p2, Landroid/graphics/PointF;->x:F
 
     invoke-static {v1}, Ljava/lang/Math;->round(F)I
 
     move-result v1
 
+    .line 5
     iget p2, p2, Landroid/graphics/PointF;->y:F
 
     invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
     move-result p2
 
+    .line 6
     invoke-static {p1, p0, v0, v1, p2}, Landroidx/transition/ViewUtils;->setLeftTopRightBottom(Landroid/view/View;IIII)V
 
     return-void
@@ -85,6 +92,7 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     check-cast p2, Landroid/graphics/PointF;

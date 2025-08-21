@@ -50,6 +50,7 @@
 
     const/16 v0, 0xa
 
+    .line 1
     invoke-direct {p0, v0}, Landroidx/collection/SparseArrayCompat;-><init>(I)V
 
     return-void
@@ -58,33 +59,40 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Landroidx/collection/SparseArrayCompat;->mGarbage:Z
 
     if-nez p1, :cond_0
 
+    .line 4
     sget-object p1, Landroidx/collection/ContainerHelpers;->EMPTY_INTS:[I
 
     iput-object p1, p0, Landroidx/collection/SparseArrayCompat;->mKeys:[I
 
+    .line 5
     sget-object p1, Landroidx/collection/ContainerHelpers;->EMPTY_OBJECTS:[Ljava/lang/Object;
 
     iput-object p1, p0, Landroidx/collection/SparseArrayCompat;->mValues:[Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-static {p1}, Landroidx/collection/ContainerHelpers;->idealIntArraySize(I)I
 
     move-result p1
 
+    .line 7
     new-array v0, p1, [I
 
     iput-object v0, p0, Landroidx/collection/SparseArrayCompat;->mKeys:[I
 
+    .line 8
     new-array p1, p1, [Ljava/lang/Object;
 
     iput-object p1, p0, Landroidx/collection/SparseArrayCompat;->mValues:[Ljava/lang/Object;
@@ -277,6 +285,7 @@
         }
     .end annotation
 
+    .line 2
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -284,6 +293,7 @@
 
     check-cast v0, Landroidx/collection/SparseArrayCompat;
 
+    .line 3
     iget-object v1, p0, Landroidx/collection/SparseArrayCompat;->mKeys:[I
 
     invoke-virtual {v1}, [I->clone()Ljava/lang/Object;
@@ -294,6 +304,7 @@
 
     iput-object v1, v0, Landroidx/collection/SparseArrayCompat;->mKeys:[I
 
+    .line 4
     iget-object p0, p0, Landroidx/collection/SparseArrayCompat;->mValues:[Ljava/lang/Object;
 
     invoke-virtual {p0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
@@ -311,6 +322,7 @@
     :catch_0
     move-exception p0
 
+    .line 5
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -321,6 +333,7 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/collection/SparseArrayCompat;->clone()Landroidx/collection/SparseArrayCompat;
 
     move-result-object p0
@@ -393,6 +406,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Landroidx/collection/SparseArrayCompat;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -408,6 +422,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Landroidx/collection/SparseArrayCompat;->mKeys:[I
 
     iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
@@ -418,6 +433,7 @@
 
     if-ltz p1, :cond_1
 
+    .line 3
     iget-object p0, p0, Landroidx/collection/SparseArrayCompat;->mValues:[Ljava/lang/Object;
 
     aget-object p0, p0, p1
@@ -744,6 +760,7 @@
 .method public remove(I)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/collection/SparseArrayCompat;->mKeys:[I
 
     iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
@@ -754,6 +771,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 2
     iget-object v0, p0, Landroidx/collection/SparseArrayCompat;->mValues:[Ljava/lang/Object;
 
     aget-object v1, v0, p1
@@ -762,10 +780,12 @@
 
     if-eq v1, v2, :cond_0
 
+    .line 3
     aput-object v2, v0, p1
 
     const/4 p1, 0x1
 
+    .line 4
     iput-boolean p1, p0, Landroidx/collection/SparseArrayCompat;->mGarbage:Z
 
     :cond_0
@@ -775,12 +795,14 @@
 .method public remove(ILjava/lang/Object;)Z
     .locals 1
 
+    .line 5
     invoke-virtual {p0, p1}, Landroidx/collection/SparseArrayCompat;->indexOfKey(I)I
 
     move-result p1
 
     if-ltz p1, :cond_1
 
+    .line 6
     invoke-virtual {p0, p1}, Landroidx/collection/SparseArrayCompat;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -789,12 +811,14 @@
 
     if-eqz p2, :cond_1
 
+    .line 7
     invoke-virtual {p2, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
+    .line 8
     :cond_0
     invoke-virtual {p0, p1}, Landroidx/collection/SparseArrayCompat;->removeAt(I)V
 
@@ -861,16 +885,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/collection/SparseArrayCompat;->indexOfKey(I)I
 
     move-result p1
 
     if-ltz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Landroidx/collection/SparseArrayCompat;->mValues:[Ljava/lang/Object;
 
     aget-object v0, p0, p1
 
+    .line 3
     aput-object p2, p0, p1
 
     return-object v0
@@ -889,12 +916,14 @@
         }
     .end annotation
 
+    .line 4
     invoke-virtual {p0, p1}, Landroidx/collection/SparseArrayCompat;->indexOfKey(I)I
 
     move-result p1
 
     if-ltz p1, :cond_1
 
+    .line 5
     iget-object v0, p0, Landroidx/collection/SparseArrayCompat;->mValues:[Ljava/lang/Object;
 
     aget-object v0, v0, p1
@@ -903,12 +932,14 @@
 
     if-eqz p2, :cond_1
 
+    .line 6
     invoke-virtual {p2, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
+    .line 7
     :cond_0
     iget-object p0, p0, Landroidx/collection/SparseArrayCompat;->mValues:[Ljava/lang/Object;
 

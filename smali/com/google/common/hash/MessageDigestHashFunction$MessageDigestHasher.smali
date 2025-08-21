@@ -26,10 +26,13 @@
 .method private constructor <init>(Ljava/security/MessageDigest;I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/hash/AbstractByteHasher;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->digest:Ljava/security/MessageDigest;
 
+    .line 4
     iput p2, p0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->bytes:I
 
     return-void
@@ -38,6 +41,7 @@
 .method public synthetic constructor <init>(Ljava/security/MessageDigest;ILcom/google/common/hash/MessageDigestHashFunction$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;-><init>(Ljava/security/MessageDigest;I)V
 
     return-void
@@ -114,8 +118,10 @@
 .method public update(B)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->checkNotDone()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->digest:Ljava/security/MessageDigest;
 
     invoke-virtual {p0, p1}, Ljava/security/MessageDigest;->update(B)V
@@ -126,8 +132,10 @@
 .method public update(Ljava/nio/ByteBuffer;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->checkNotDone()V
 
+    .line 6
     iget-object p0, p0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->digest:Ljava/security/MessageDigest;
 
     invoke-virtual {p0, p1}, Ljava/security/MessageDigest;->update(Ljava/nio/ByteBuffer;)V
@@ -138,8 +146,10 @@
 .method public update([BII)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->checkNotDone()V
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->digest:Ljava/security/MessageDigest;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/security/MessageDigest;->update([BII)V

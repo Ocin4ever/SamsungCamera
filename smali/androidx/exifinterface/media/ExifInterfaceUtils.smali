@@ -181,6 +181,7 @@
 
     move v2, v1
 
+    .line 1
     :goto_0
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
@@ -192,6 +193,7 @@
 
     add-int/2addr v2, v3
 
+    .line 2
     invoke-virtual {p1, v0, v1, v3}, Ljava/io/OutputStream;->write([BII)V
 
     goto :goto_0
@@ -210,12 +212,14 @@
     :goto_0
     if-lez p2, :cond_1
 
+    .line 3
     invoke-static {p2, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v2
 
     const/4 v3, 0x0
 
+    .line 4
     invoke-virtual {p0, v1, v3, v2}, Ljava/io/InputStream;->read([BII)I
 
     move-result v4
@@ -224,10 +228,12 @@
 
     sub-int/2addr p2, v4
 
+    .line 5
     invoke-virtual {p1, v1, v3, v4}, Ljava/io/OutputStream;->write([BII)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/io/IOException;
 

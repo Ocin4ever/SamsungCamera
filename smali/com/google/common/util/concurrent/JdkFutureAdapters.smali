@@ -37,14 +37,17 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lcom/google/common/util/concurrent/ListenableFuture;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lcom/google/common/util/concurrent/ListenableFuture;
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;
 
@@ -69,16 +72,20 @@
         }
     .end annotation
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     instance-of v0, p0, Lcom/google/common/util/concurrent/ListenableFuture;
 
     if-eqz v0, :cond_0
 
+    .line 6
     check-cast p0, Lcom/google/common/util/concurrent/ListenableFuture;
 
     return-object p0
 
+    .line 7
     :cond_0
     new-instance v0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;
 

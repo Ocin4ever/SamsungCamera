@@ -100,6 +100,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -145,6 +146,7 @@
 
     return-wide p0
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

@@ -42,12 +42,16 @@
 .method public constructor <init>(III)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/SpeechInfo;->speaker:I
 
+    .line 3
     iput p2, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/SpeechInfo;->startTime:I
 
+    .line 4
     iput p3, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/SpeechInfo;->endTime:I
 
     return-void
@@ -56,20 +60,24 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/SpeechInfo;->speaker:I
 
+    .line 7
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/SpeechInfo;->startTime:I
 
+    .line 8
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1

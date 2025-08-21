@@ -104,6 +104,7 @@
 .method public margin(I)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 2
     iput p1, p0, Landroidx/constraintlayout/core/state/helpers/BarrierReference;->mMargin:I
 
     return-object p0
@@ -112,6 +113,7 @@
 .method public margin(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/HelperReference;->mState:Landroidx/constraintlayout/core/state/State;
 
     invoke-virtual {v0, p1}, Landroidx/constraintlayout/core/state/State;->convertDimension(Ljava/lang/Object;)I

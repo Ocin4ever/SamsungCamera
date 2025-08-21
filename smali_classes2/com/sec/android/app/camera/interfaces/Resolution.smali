@@ -4924,18 +4924,25 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mId:I
 
+    .line 3
     iput p4, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mWidth:I
 
+    .line 4
     iput p5, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mHeight:I
 
+    .line 5
     iput-object p6, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mRatio:Lcom/sec/android/app/camera/interfaces/AspectRatio;
 
+    .line 6
     iput p7, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mMinFps:I
 
+    .line 7
     iput p7, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mMaxFps:I
 
     return-void
@@ -4951,18 +4958,25 @@
         }
     .end annotation
 
+    .line 8
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 9
     iput p3, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mId:I
 
+    .line 10
     iput p4, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mWidth:I
 
+    .line 11
     iput p5, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mHeight:I
 
+    .line 12
     iput-object p6, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mRatio:Lcom/sec/android/app/camera/interfaces/AspectRatio;
 
+    .line 13
     iput p7, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mMinFps:I
 
+    .line 14
     iput p8, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mMaxFps:I
 
     return-void
@@ -4990,14 +5004,17 @@
     :cond_0
     const-string v1, "_"
 
+    .line 1
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v1, 0x0
 
+    .line 2
     aget-object v1, p0, v1
 
+    .line 3
     array-length v2, p0
 
     const/4 v3, 0x1
@@ -5015,6 +5032,7 @@
 
     move-result-object p0
 
+    .line 4
     :goto_0
     invoke-static {}, Lcom/sec/android/app/camera/interfaces/Resolution;->values()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -5028,6 +5046,7 @@
 
     invoke-direct {v3, v1}, Lv4/a;-><init>(Ljava/lang/String;)V
 
+    .line 5
     invoke-interface {v2, v3}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v1
@@ -5036,6 +5055,7 @@
 
     invoke-direct {v2, p0}, Lv4/b;-><init>(Ljava/lang/String;)V
 
+    .line 6
     invoke-interface {v1, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -5044,14 +5064,17 @@
 
     invoke-direct {v1}, Lv4/c;-><init>()V
 
+    .line 7
     invoke-interface {p0, v1}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
+    .line 8
     invoke-interface {p0}, Ljava/util/stream/Stream;->findAny()Ljava/util/Optional;
 
     move-result-object p0
 
+    .line 9
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -5072,6 +5095,7 @@
 .method public static getResolution(I)Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 3
 
+    .line 4
     sget-object v0, Lcom/sec/android/app/camera/interfaces/Resolution;->mIdMap:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5088,6 +5112,7 @@
 
     return-object v0
 
+    .line 5
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -5113,6 +5138,7 @@
 .method public static getResolution(Ljava/lang/String;)Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 5
 
+    .line 1
     invoke-static {}, Lcom/sec/android/app/camera/interfaces/Resolution;->values()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v0
@@ -5126,6 +5152,7 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     invoke-virtual {v3}, Lcom/sec/android/app/camera/interfaces/Resolution;->getString()Ljava/lang/String;
 
     move-result-object v4
@@ -5143,6 +5170,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -5281,6 +5309,7 @@
 .method public getId()I
     .locals 0
 
+    .line 10
     iget p0, p0, Lcom/sec/android/app/camera/interfaces/Resolution;->mId:I
 
     return p0

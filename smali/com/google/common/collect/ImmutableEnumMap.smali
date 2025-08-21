@@ -48,10 +48,13 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableMap$IteratorBasedImmutableMap;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/collect/ImmutableEnumMap;->delegate:Ljava/util/EnumMap;
 
+    .line 4
     invoke-virtual {p1}, Ljava/util/AbstractMap;->isEmpty()Z
 
     move-result p0
@@ -66,6 +69,7 @@
 .method public synthetic constructor <init>(Ljava/util/EnumMap;Lcom/google/common/collect/ImmutableEnumMap$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/ImmutableEnumMap;-><init>(Ljava/util/EnumMap;)V
 
     return-void

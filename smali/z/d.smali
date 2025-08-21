@@ -15,6 +15,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 4
     invoke-direct {p0, v0, v0}, Lz/d;-><init>(FF)V
 
     return-void
@@ -23,10 +24,13 @@
 .method public constructor <init>(FF)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lz/d;->a:F
 
+    .line 3
     iput p2, p0, Lz/d;->b:F
 
     return-void

@@ -20,6 +20,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
+    .line 1
     const-string v0, "context"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
@@ -42,8 +43,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     invoke-direct {p0, p1, p2}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
+    .line 4
     sget-object p1, Landroidx/savedstate/SavedStateRegistryController;->Companion:Landroidx/savedstate/SavedStateRegistryController$Companion;
 
     invoke-virtual {p1, p0}, Landroidx/savedstate/SavedStateRegistryController$Companion;->create(Landroidx/savedstate/SavedStateRegistryOwner;)Landroidx/savedstate/SavedStateRegistryController;
@@ -52,6 +55,7 @@
 
     iput-object p1, p0, Landroidx/activity/ComponentDialog;->savedStateRegistryController:Landroidx/savedstate/SavedStateRegistryController;
 
+    .line 5
     new-instance p1, Landroidx/activity/OnBackPressedDispatcher;
 
     new-instance p2, Landroidx/activity/f;
@@ -74,6 +78,7 @@
 
     const/4 p2, 0x0
 
+    .line 2
     :cond_0
     invoke-direct {p0, p1, p2}, Landroidx/activity/ComponentDialog;-><init>(Landroid/content/Context;I)V
 
@@ -318,8 +323,10 @@
 .method public setContentView(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/activity/ComponentDialog;->initViewTreeOwners()V
 
+    .line 2
     invoke-super {p0, p1}, Landroid/app/Dialog;->setContentView(I)V
 
     return-void
@@ -332,8 +339,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     invoke-direct {p0}, Landroidx/activity/ComponentDialog;->initViewTreeOwners()V
 
+    .line 4
     invoke-super {p0, p1}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
 
     return-void
@@ -346,8 +355,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 5
     invoke-direct {p0}, Landroidx/activity/ComponentDialog;->initViewTreeOwners()V
 
+    .line 6
     invoke-super {p0, p1, p2}, Landroid/app/Dialog;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void

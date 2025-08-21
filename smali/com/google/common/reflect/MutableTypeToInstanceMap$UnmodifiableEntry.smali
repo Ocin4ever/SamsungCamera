@@ -99,6 +99,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/reflect/b;
 
     invoke-direct {v0}, Lcom/google/common/reflect/b;-><init>()V
@@ -128,6 +129,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/reflect/MutableTypeToInstanceMap$UnmodifiableEntry$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/reflect/MutableTypeToInstanceMap$UnmodifiableEntry$1;-><init>(Ljava/util/Set;)V
@@ -140,6 +142,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/MutableTypeToInstanceMap$UnmodifiableEntry;->delegate()Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -157,6 +160,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/reflect/MutableTypeToInstanceMap$UnmodifiableEntry;->delegate:Ljava/util/Map$Entry;
 
     return-object p0

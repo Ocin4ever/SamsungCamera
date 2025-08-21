@@ -68,6 +68,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/SeslCheckedTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -76,6 +77,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 2
     sget v0, Landroidx/appcompat/R$attr;->checkedTextViewStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/SeslCheckedTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -88,6 +90,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/appcompat/widget/SeslCheckedTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -96,24 +99,31 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 10
 
+    .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Landroidx/appcompat/widget/SeslCheckedTextView;->mCheckMarkTintList:Landroid/content/res/ColorStateList;
 
+    .line 6
     iput-object v0, p0, Landroidx/appcompat/widget/SeslCheckedTextView;->mCheckMarkTintMode:Landroid/graphics/PorterDuff$Mode;
 
     const/4 v0, 0x0
 
+    .line 7
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslCheckedTextView;->mHasCheckMarkTint:Z
 
+    .line 8
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslCheckedTextView;->mHasCheckMarkTintMode:Z
 
     const v1, 0x800003
 
+    .line 9
     iput v1, p0, Landroidx/appcompat/widget/SeslCheckedTextView;->mCheckMarkGravity:I
 
+    .line 10
     sget-object v4, Landroidx/appcompat/R$styleable;->CheckedTextView:[I
 
     invoke-virtual {p1, p2, v4, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
@@ -132,9 +142,11 @@
 
     move v8, p4
 
+    .line 11
     :try_start_0
     invoke-virtual/range {v2 .. v8}, Landroid/view/View;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
+    .line 12
     sget p2, Landroidx/appcompat/R$styleable;->CheckedTextView_android_checkMark:I
 
     invoke-virtual {v9, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -143,8 +155,10 @@
 
     if-eqz p2, :cond_0
 
+    .line 13
     invoke-virtual {p0, p2}, Landroidx/appcompat/widget/SeslCheckedTextView;->setCheckMarkDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 14
     :cond_0
     sget p2, Landroidx/appcompat/R$styleable;->CheckedTextView_android_checkMarkTintMode:I
 
@@ -158,6 +172,7 @@
 
     const/4 p3, -0x1
 
+    .line 15
     invoke-virtual {v9, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result p2
@@ -170,8 +185,10 @@
 
     iput-object p2, p0, Landroidx/appcompat/widget/SeslCheckedTextView;->mCheckMarkTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 16
     iput-boolean p4, p0, Landroidx/appcompat/widget/SeslCheckedTextView;->mHasCheckMarkTintMode:Z
 
+    .line 17
     :cond_1
     sget p2, Landroidx/appcompat/R$styleable;->CheckedTextView_android_checkMarkTint:I
 
@@ -181,14 +198,17 @@
 
     if-eqz p3, :cond_2
 
+    .line 18
     invoke-virtual {v9, p2}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object p2
 
     iput-object p2, p0, Landroidx/appcompat/widget/SeslCheckedTextView;->mCheckMarkTintList:Landroid/content/res/ColorStateList;
 
+    .line 19
     iput-boolean p4, p0, Landroidx/appcompat/widget/SeslCheckedTextView;->mHasCheckMarkTint:Z
 
+    .line 20
     :cond_2
     sget p2, Landroidx/appcompat/R$styleable;->CheckedTextView_checkMarkGravity:I
 
@@ -198,18 +218,22 @@
 
     iput p2, p0, Landroidx/appcompat/widget/SeslCheckedTextView;->mCheckMarkGravity:I
 
+    .line 21
     sget p2, Landroidx/appcompat/R$styleable;->CheckedTextView_android_checked:I
 
     invoke-virtual {v9, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p2
 
+    .line 22
     invoke-virtual {p0, p2}, Landroidx/appcompat/widget/SeslCheckedTextView;->setChecked(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 23
     invoke-virtual {v9}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 24
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -222,6 +246,7 @@
 
     iput p1, p0, Landroidx/appcompat/widget/SeslCheckedTextView;->mDrawablePadding:I
 
+    .line 25
     invoke-direct {p0}, Landroidx/appcompat/widget/SeslCheckedTextView;->applyCheckMarkTint()V
 
     return-void
@@ -229,8 +254,10 @@
     :catchall_0
     move-exception p0
 
+    .line 26
     invoke-virtual {v9}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 27
     throw p0
 .end method
 
@@ -914,6 +941,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget v0, p0, Landroidx/appcompat/widget/SeslCheckedTextView;->mCheckMarkResource:I
 
     if-ne p1, v0, :cond_0
@@ -923,6 +951,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -936,6 +965,7 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 3
     :goto_0
     invoke-direct {p0, v0, p1}, Landroidx/appcompat/widget/SeslCheckedTextView;->setCheckMarkDrawableInternal(Landroid/graphics/drawable/Drawable;I)V
 
@@ -947,6 +977,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/SeslCheckedTextView;->setCheckMarkDrawableInternal(Landroid/graphics/drawable/Drawable;I)V
 
     return-void

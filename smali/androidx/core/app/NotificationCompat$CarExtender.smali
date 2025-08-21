@@ -63,10 +63,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Landroidx/core/app/NotificationCompat$CarExtender;->mColor:I
 
     return-void
@@ -75,12 +77,15 @@
 .method public constructor <init>(Landroid/app/Notification;)V
     .locals 2
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 4
     iput v0, p0, Landroidx/core/app/NotificationCompat$CarExtender;->mColor:I
 
+    .line 5
     invoke-static {p1}, Landroidx/core/app/NotificationCompat;->getExtras(Landroid/app/Notification;)Landroid/os/Bundle;
 
     move-result-object v1
@@ -91,6 +96,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-static {p1}, Landroidx/core/app/NotificationCompat;->getExtras(Landroid/app/Notification;)Landroid/os/Bundle;
 
@@ -107,6 +113,7 @@
 
     const-string v1, "large_icon"
 
+    .line 7
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v1
@@ -117,6 +124,7 @@
 
     const-string v1, "app_color"
 
+    .line 8
     invoke-virtual {p1, v1, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -125,10 +133,12 @@
 
     const-string v0, "car_conversation"
 
+    .line 9
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
 
+    .line 10
     invoke-static {p1}, Landroidx/core/app/NotificationCompat$CarExtender;->getUnreadConversationFromBundle(Landroid/os/Bundle;)Landroidx/core/app/NotificationCompat$CarExtender$UnreadConversation;
 
     move-result-object p1

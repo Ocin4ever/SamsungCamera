@@ -37,20 +37,25 @@
 .method public constructor <init>(Landroidx/constraintlayout/widget/ConstraintAttribute;Ljava/lang/Object;)V
     .locals 1
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 11
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintAttribute;->mMethod:Z
 
+    .line 12
     iget-object v0, p1, Landroidx/constraintlayout/widget/ConstraintAttribute;->mName:Ljava/lang/String;
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintAttribute;->mName:Ljava/lang/String;
 
+    .line 13
     iget-object p1, p1, Landroidx/constraintlayout/widget/ConstraintAttribute;->mType:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
 
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintAttribute;->mType:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
 
+    .line 14
     invoke-virtual {p0, p2}, Landroidx/constraintlayout/widget/ConstraintAttribute;->setValue(Ljava/lang/Object;)V
 
     return-void
@@ -59,14 +64,18 @@
 .method public constructor <init>(Ljava/lang/String;Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintAttribute;->mMethod:Z
 
+    .line 3
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintAttribute;->mName:Ljava/lang/String;
 
+    .line 4
     iput-object p2, p0, Landroidx/constraintlayout/widget/ConstraintAttribute;->mType:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
 
     return-void
@@ -75,14 +84,19 @@
 .method public constructor <init>(Ljava/lang/String;Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;Ljava/lang/Object;Z)V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintAttribute;->mName:Ljava/lang/String;
 
+    .line 7
     iput-object p2, p0, Landroidx/constraintlayout/widget/ConstraintAttribute;->mType:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
 
+    .line 8
     iput-boolean p4, p0, Landroidx/constraintlayout/widget/ConstraintAttribute;->mMethod:Z
 
+    .line 9
     invoke-virtual {p0, p3}, Landroidx/constraintlayout/widget/ConstraintAttribute;->setValue(Ljava/lang/Object;)V
 
     return-void
@@ -1884,6 +1898,7 @@
 .method public setValue(Ljava/lang/Object;)V
     .locals 2
 
+    .line 9
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintAttribute$1;->$SwitchMap$androidx$constraintlayout$widget$ConstraintAttribute$AttributeType:[I
 
     iget-object v1, p0, Landroidx/constraintlayout/widget/ConstraintAttribute;->mType:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
@@ -1898,6 +1913,7 @@
 
     goto :goto_0
 
+    .line 10
     :pswitch_0
     check-cast p1, Ljava/lang/Float;
 
@@ -1909,6 +1925,7 @@
 
     goto :goto_0
 
+    .line 11
     :pswitch_1
     check-cast p1, Ljava/lang/Float;
 
@@ -1920,6 +1937,7 @@
 
     goto :goto_0
 
+    .line 12
     :pswitch_2
     check-cast p1, Ljava/lang/Integer;
 
@@ -1931,6 +1949,7 @@
 
     goto :goto_0
 
+    .line 13
     :pswitch_3
     check-cast p1, Ljava/lang/String;
 
@@ -1938,6 +1957,7 @@
 
     goto :goto_0
 
+    .line 14
     :pswitch_4
     check-cast p1, Ljava/lang/Boolean;
 
@@ -1949,6 +1969,7 @@
 
     goto :goto_0
 
+    .line 15
     :pswitch_5
     check-cast p1, Ljava/lang/Integer;
 
@@ -1977,6 +1998,7 @@
 .method public setValue([F)V
     .locals 6
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintAttribute$1;->$SwitchMap$androidx$constraintlayout$widget$ConstraintAttribute$AttributeType:[I
 
     iget-object v1, p0, Landroidx/constraintlayout/widget/ConstraintAttribute;->mType:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
@@ -1993,6 +2015,7 @@
 
     goto :goto_0
 
+    .line 2
     :pswitch_0
     aget p1, p1, v1
 
@@ -2000,6 +2023,7 @@
 
     goto :goto_0
 
+    .line 3
     :pswitch_1
     aget p1, p1, v1
 
@@ -2007,6 +2031,7 @@
 
     goto :goto_0
 
+    .line 4
     :pswitch_2
     invoke-static {p1}, Landroid/graphics/Color;->HSVToColor([F)I
 
@@ -2020,6 +2045,7 @@
 
     const/4 v1, 0x3
 
+    .line 5
     aget p1, p1, v1
 
     const/high16 v1, 0x437f0000    # 255.0f
@@ -2040,6 +2066,7 @@
 
     goto :goto_0
 
+    .line 6
     :pswitch_3
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -2049,6 +2076,7 @@
 
     throw p0
 
+    .line 7
     :pswitch_4
     aget p1, p1, v1
 
@@ -2067,6 +2095,7 @@
 
     goto :goto_0
 
+    .line 8
     :pswitch_5
     aget p1, p1, v1
 

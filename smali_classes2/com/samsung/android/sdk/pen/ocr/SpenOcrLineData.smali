@@ -264,6 +264,7 @@
 
     if-ge p2, v2, :cond_0
 
+    .line 5
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -293,6 +294,7 @@
 
     new-array v3, p2, [Landroid/graphics/Point;
 
+    .line 6
     new-instance v4, Landroid/graphics/Point;
 
     aget v5, p1, v1
@@ -345,14 +347,17 @@
 
     aput-object v4, v3, v8
 
+    .line 7
     iput-object v3, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrLineData;->mRect:[Landroid/graphics/Point;
 
     new-array p1, v2, [Ljava/lang/Object;
 
     aget-object v2, v3, v1
 
+    .line 8
     iget v2, v2, Landroid/graphics/Point;->x:I
 
+    .line 9
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -445,6 +450,7 @@
 
     const-string p0, "SpenOcrLineData::setRect [LT(%d, %d), RT(%d, %d), RB(%d, %d), LB(%d, %d)]"
 
+    .line 10
     invoke-static {p0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -457,6 +463,7 @@
 .method public setRect([Landroid/graphics/Point;)V
     .locals 4
 
+    .line 1
     iput-object p1, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrLineData;->mRect:[Landroid/graphics/Point;
 
     const/16 v0, 0x8
@@ -465,10 +472,12 @@
 
     const/4 v1, 0x0
 
+    .line 2
     aget-object p1, p1, v1
 
     iget p1, p1, Landroid/graphics/Point;->x:I
 
+    .line 3
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -575,6 +584,7 @@
 
     const-string p0, "SpenOcrLineData::setRect [LT(%d, %d), RT(%d, %d), RB(%d, %d), LB(%d, %d)]"
 
+    .line 4
     invoke-static {p0, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0

@@ -41,14 +41,18 @@
 .method public constructor <init>(Z)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lb2/h$e;->f:Ljava/lang/Object;
 
+    .line 3
     iput-boolean p1, p0, Lb2/h$e;->g:Z
 
+    .line 4
     iput-object p0, p0, Lb2/h$e;->e:Lb2/h$e;
 
     iput-object p0, p0, Lb2/h$e;->d:Lb2/h$e;
@@ -59,24 +63,33 @@
 .method public constructor <init>(ZLb2/h$e;Ljava/lang/Object;Lb2/h$e;Lb2/h$e;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     iput-object p2, p0, Lb2/h$e;->a:Lb2/h$e;
 
+    .line 7
     iput-object p3, p0, Lb2/h$e;->f:Ljava/lang/Object;
 
+    .line 8
     iput-boolean p1, p0, Lb2/h$e;->g:Z
 
     const/4 p1, 0x1
 
+    .line 9
     iput p1, p0, Lb2/h$e;->i:I
 
+    .line 10
     iput-object p4, p0, Lb2/h$e;->d:Lb2/h$e;
 
+    .line 11
     iput-object p5, p0, Lb2/h$e;->e:Lb2/h$e;
 
+    .line 12
     iput-object p0, p5, Lb2/h$e;->d:Lb2/h$e;
 
+    .line 13
     iput-object p0, p4, Lb2/h$e;->e:Lb2/h$e;
 
     return-void

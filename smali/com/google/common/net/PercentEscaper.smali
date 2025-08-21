@@ -168,8 +168,10 @@
 .method public escape(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -179,10 +181,12 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
+    .line 3
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
+    .line 4
     iget-object v3, p0, Lcom/google/common/net/PercentEscaper;->safeOctets:[Z
 
     array-length v4, v3
@@ -200,6 +204,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     :goto_1
     invoke-virtual {p0, p1, v1}, Lcom/google/common/escape/UnicodeEscaper;->escapeSlow(Ljava/lang/String;I)Ljava/lang/String;
@@ -215,6 +220,7 @@
 .method public escape(I)[C
     .locals 12
 
+    .line 6
     iget-object v0, p0, Lcom/google/common/net/PercentEscaper;->safeOctets:[Z
 
     array-length v1, v0
@@ -234,10 +240,12 @@
 
     if-ne p1, v0, :cond_1
 
+    .line 7
     iget-boolean p0, p0, Lcom/google/common/net/PercentEscaper;->plusForSpace:Z
 
     if-eqz p0, :cond_1
 
+    .line 8
     sget-object p0, Lcom/google/common/net/PercentEscaper;->PLUS_SIGN:[C
 
     return-object p0
@@ -263,6 +271,7 @@
 
     aput-char v3, p0, v1
 
+    .line 9
     sget-object v1, Lcom/google/common/net/PercentEscaper;->UPPER_HEX_DIGITS:[C
 
     and-int/lit8 v3, p1, 0xf
@@ -273,6 +282,7 @@
 
     ushr-int/2addr p1, v5
 
+    .line 10
     aget-char p1, v1, p1
 
     aput-char p1, p0, v0
@@ -298,6 +308,7 @@
 
     aput-char v3, p0, v4
 
+    .line 11
     sget-object v1, Lcom/google/common/net/PercentEscaper;->UPPER_HEX_DIGITS:[C
 
     and-int/lit8 v3, p1, 0xf
@@ -312,6 +323,7 @@
 
     or-int/2addr v3, v9
 
+    .line 12
     aget-char v3, v1, v3
 
     aput-char v3, p0, v5
@@ -320,6 +332,7 @@
 
     and-int/lit8 v3, p1, 0xf
 
+    .line 13
     aget-char v3, v1, v3
 
     aput-char v3, p0, v2
@@ -328,6 +341,7 @@
 
     or-int/2addr p1, v6
 
+    .line 14
     aget-char p1, v1, p1
 
     aput-char p1, p0, v0
@@ -355,6 +369,7 @@
 
     aput-char v3, p0, v8
 
+    .line 15
     sget-object v0, Lcom/google/common/net/PercentEscaper;->UPPER_HEX_DIGITS:[C
 
     and-int/lit8 v1, p1, 0xf
@@ -369,6 +384,7 @@
 
     or-int/2addr v1, v9
 
+    .line 16
     aget-char v1, v0, v1
 
     aput-char v1, p0, v11
@@ -377,6 +393,7 @@
 
     and-int/lit8 v1, p1, 0xf
 
+    .line 17
     aget-char v1, v0, v1
 
     aput-char v1, p0, v7
@@ -387,12 +404,14 @@
 
     or-int/2addr v1, v9
 
+    .line 18
     aget-char v1, v0, v1
 
     aput-char v1, p0, v5
 
     ushr-int/2addr p1, v2
 
+    .line 19
     aget-char p1, v0, p1
 
     aput-char p1, p0, v2
@@ -418,6 +437,7 @@
 
     aput-char v3, p0, v10
 
+    .line 20
     sget-object v0, Lcom/google/common/net/PercentEscaper;->UPPER_HEX_DIGITS:[C
 
     and-int/lit8 v1, p1, 0xf
@@ -434,6 +454,7 @@
 
     or-int/2addr v1, v9
 
+    .line 21
     aget-char v1, v0, v1
 
     const/16 v3, 0xa
@@ -444,6 +465,7 @@
 
     and-int/lit8 v1, p1, 0xf
 
+    .line 22
     aget-char v1, v0, v1
 
     aput-char v1, p0, v9
@@ -454,6 +476,7 @@
 
     or-int/2addr v1, v9
 
+    .line 23
     aget-char v1, v0, v1
 
     aput-char v1, p0, v11
@@ -462,6 +485,7 @@
 
     and-int/lit8 v1, p1, 0xf
 
+    .line 24
     aget-char v1, v0, v1
 
     aput-char v1, p0, v7
@@ -472,6 +496,7 @@
 
     or-int/2addr v1, v9
 
+    .line 25
     aget-char v1, v0, v1
 
     aput-char v1, p0, v5
@@ -480,12 +505,14 @@
 
     and-int/2addr p1, v11
 
+    .line 26
     aget-char p1, v0, p1
 
     aput-char p1, p0, v2
 
     return-object p0
 
+    .line 27
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

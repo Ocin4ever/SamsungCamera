@@ -22,8 +22,10 @@
 .method public constructor <init>(Landroid/content/ClipData;I)V
     .locals 1
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     new-instance v0, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;
 
     invoke-direct {v0, p1, p2}, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;-><init>(Landroid/content/ClipData;I)V
@@ -36,8 +38,10 @@
 .method public constructor <init>(Landroidx/core/view/ContentInfoCompat;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;
 
     invoke-direct {v0, p1}, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;-><init>(Landroidx/core/view/ContentInfoCompat;)V

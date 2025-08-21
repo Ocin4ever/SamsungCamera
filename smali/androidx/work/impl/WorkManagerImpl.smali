@@ -187,19 +187,23 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sget-object v0, Landroidx/work/impl/WorkManagerImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Landroidx/work/impl/WorkManagerImpl;->sDelegatedInstance:Landroidx/work/impl/WorkManagerImpl;
 
     if-eqz v1, :cond_0
 
+    .line 3
     monitor-exit v0
 
     return-object v1
 
+    .line 4
     :cond_0
     sget-object v1, Landroidx/work/impl/WorkManagerImpl;->sDefaultInstance:Landroidx/work/impl/WorkManagerImpl;
 
@@ -210,6 +214,7 @@
     :catchall_0
     move-exception v1
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -220,10 +225,12 @@
 .method public static getInstance(Landroid/content/Context;)Landroidx/work/impl/WorkManagerImpl;
     .locals 2
 
+    .line 6
     sget-object v0, Landroidx/work/impl/WorkManagerImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 7
     :try_start_0
     invoke-static {}, Landroidx/work/impl/WorkManagerImpl;->getInstance()Landroidx/work/impl/WorkManagerImpl;
 
@@ -231,30 +238,37 @@
 
     if-nez v1, :cond_1
 
+    .line 8
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
+    .line 9
     instance-of v1, p0, Landroidx/work/Configuration$Provider;
 
     if-eqz v1, :cond_0
 
+    .line 10
     move-object v1, p0
 
     check-cast v1, Landroidx/work/Configuration$Provider;
 
+    .line 11
     invoke-interface {v1}, Landroidx/work/Configuration$Provider;->getWorkManagerConfiguration()Landroidx/work/Configuration;
 
     move-result-object v1
 
+    .line 12
     invoke-static {p0, v1}, Landroidx/work/impl/WorkManagerImpl;->initialize(Landroid/content/Context;Landroidx/work/Configuration;)V
 
+    .line 13
     invoke-static {p0}, Landroidx/work/impl/WorkManagerImpl;->getInstance(Landroid/content/Context;)Landroidx/work/impl/WorkManagerImpl;
 
     move-result-object v1
 
     goto :goto_0
 
+    .line 14
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -264,6 +278,7 @@
 
     throw p0
 
+    .line 15
     :cond_1
     :goto_0
     monitor-exit v0
@@ -273,6 +288,7 @@
     :catchall_0
     move-exception p0
 
+    .line 16
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

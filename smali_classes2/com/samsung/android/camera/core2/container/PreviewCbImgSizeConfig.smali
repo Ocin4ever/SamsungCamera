@@ -16,6 +16,7 @@
 .method public constructor <init>(Landroid/util/Size;)V
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/samsung/android/camera/core2/util/SemImageFormat;->t:Lcom/samsung/android/camera/core2/util/SemImageFormat;
 
     invoke-direct {p0, p1, v0}, Lcom/samsung/android/camera/core2/container/PreviewCbImgSizeConfig;-><init>(Landroid/util/Size;Lcom/samsung/android/camera/core2/util/SemImageFormat;)V
@@ -26,10 +27,12 @@
 .method public constructor <init>(Landroid/util/Size;Lcom/samsung/android/camera/core2/util/SemImageFormat;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_1
 
+    .line 3
     sget-object v0, Lcom/samsung/android/camera/core2/util/SemImageFormat$Usage;->a:Lcom/samsung/android/camera/core2/util/SemImageFormat$Usage;
 
     invoke-virtual {p2, v0}, Lcom/samsung/android/camera/core2/util/SemImageFormat;->A(Lcom/samsung/android/camera/core2/util/SemImageFormat$Usage;)Z
@@ -38,12 +41,15 @@
 
     if-nez v0, :cond_0
 
+    .line 4
     iput-object p1, p0, Lcom/samsung/android/camera/core2/container/PreviewCbImgSizeConfig;->a:Landroid/util/Size;
 
+    .line 5
     iput-object p2, p0, Lcom/samsung/android/camera/core2/container/PreviewCbImgSizeConfig;->b:Lcom/samsung/android/camera/core2/util/SemImageFormat;
 
     return-void
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -65,6 +71,7 @@
 
     throw p0
 
+    .line 7
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

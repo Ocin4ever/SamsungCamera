@@ -66,12 +66,14 @@
 .method public write(I)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/hash/HashingOutputStream;->hasher:Lcom/google/common/hash/Hasher;
 
     int-to-byte v1, p1
 
     invoke-interface {v0, v1}, Lcom/google/common/hash/Hasher;->putByte(B)Lcom/google/common/hash/Hasher;
 
+    .line 2
     iget-object p0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
     invoke-virtual {p0, p1}, Ljava/io/OutputStream;->write(I)V
@@ -82,10 +84,12 @@
 .method public write([BII)V
     .locals 1
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/hash/HashingOutputStream;->hasher:Lcom/google/common/hash/Hasher;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/google/common/hash/Hasher;->putBytes([BII)Lcom/google/common/hash/Hasher;
 
+    .line 4
     iget-object p0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V

@@ -9,6 +9,7 @@
 
     const v0, 0x1010084
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lw1/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -19,12 +20,14 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-static {p1, p2, p3, v0}, Lx1/a;->c(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
 
     move-result-object p1
 
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 3
     invoke-virtual {p0, p2, p3, v0}, Lw1/a;->d(Landroid/util/AttributeSet;II)V
 
     return-void

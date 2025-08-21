@@ -42,6 +42,7 @@
 .method public bind(Landroidx/sqlite/db/SupportSQLiteStatement;Landroidx/work/impl/model/Preference;)V
     .locals 3
 
+    .line 2
     invoke-virtual {p2}, Landroidx/work/impl/model/Preference;->getKey()Ljava/lang/String;
 
     move-result-object p0
@@ -50,10 +51,12 @@
 
     if-nez p0, :cond_0
 
+    .line 3
     invoke-interface {p1, v0}, Landroidx/sqlite/db/SupportSQLiteProgram;->bindNull(I)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p2}, Landroidx/work/impl/model/Preference;->getKey()Ljava/lang/String;
 
@@ -61,6 +64,7 @@
 
     invoke-interface {p1, v0, p0}, Landroidx/sqlite/db/SupportSQLiteProgram;->bindString(ILjava/lang/String;)V
 
+    .line 5
     :goto_0
     invoke-virtual {p2}, Landroidx/work/impl/model/Preference;->getValue()Ljava/lang/Long;
 
@@ -70,10 +74,12 @@
 
     if-nez p0, :cond_1
 
+    .line 6
     invoke-interface {p1, v0}, Landroidx/sqlite/db/SupportSQLiteProgram;->bindNull(I)V
 
     goto :goto_1
 
+    .line 7
     :cond_1
     invoke-virtual {p2}, Landroidx/work/impl/model/Preference;->getValue()Ljava/lang/Long;
 
@@ -92,6 +98,7 @@
 .method public bridge synthetic bind(Landroidx/sqlite/db/SupportSQLiteStatement;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p2, Landroidx/work/impl/model/Preference;
 
     invoke-virtual {p0, p1, p2}, Landroidx/work/impl/model/PreferenceDao_Impl$1;->bind(Landroidx/sqlite/db/SupportSQLiteStatement;Landroidx/work/impl/model/Preference;)V

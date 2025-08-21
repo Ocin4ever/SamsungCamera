@@ -25,6 +25,7 @@
 
     if-gez v0, :cond_0
 
+    .line 2
     sget-object v0, Ljava/util/Locale;->UK:Ljava/util/Locale;
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -43,6 +44,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Ljava/util/Locale;->UK:Ljava/util/Locale;
 
@@ -60,6 +62,7 @@
 
     move-result-object p1
 
+    .line 4
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -89,6 +92,7 @@
 .method public static getTtsString(Landroid/content/Context;I)Ljava/lang/String;
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

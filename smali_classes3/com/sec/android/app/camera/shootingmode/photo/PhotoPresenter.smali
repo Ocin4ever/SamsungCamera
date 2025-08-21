@@ -119,8 +119,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/photo/PhotoContract$View;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
+    .line 2
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -131,6 +133,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mHandler:Landroid/os/Handler;
 
+    .line 3
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/photo/n;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/photo/n;-><init>(Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;)V
@@ -139,38 +142,46 @@
 
     const/4 p1, 0x0
 
+    .line 4
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mIsScreenFlashStarted:Z
 
+    .line 5
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mIsNeedToShowBurstShotGuideOnQuickTake:Z
 
+    .line 6
     sget-object p1, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$ShutterPendingAction;->NONE:Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$ShutterPendingAction;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mShutterPendingAction:Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$ShutterPendingAction;
 
+    .line 7
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->initializeVisibilityChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mVisibilityChangeConsumerMap:Ljava/util/EnumMap;
 
+    .line 8
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$1;-><init>(Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mShutterTriggerCheckerRunnable:Ljava/lang/Runnable;
 
+    .line 9
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/photo/o;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/photo/o;-><init>(Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mZoomChangeFinishRunnable:Ljava/lang/Runnable;
 
+    .line 10
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$2;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$2;-><init>(Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mLocalBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 11
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->initializeSettingChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p1
@@ -183,8 +194,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/photo/PhotoContract$View;I)V
     .locals 0
 
+    .line 12
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
+    .line 13
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -195,6 +208,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mHandler:Landroid/os/Handler;
 
+    .line 14
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/photo/n;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/photo/n;-><init>(Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;)V
@@ -203,38 +217,46 @@
 
     const/4 p1, 0x0
 
+    .line 15
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mIsScreenFlashStarted:Z
 
+    .line 16
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mIsNeedToShowBurstShotGuideOnQuickTake:Z
 
+    .line 17
     sget-object p1, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$ShutterPendingAction;->NONE:Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$ShutterPendingAction;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mShutterPendingAction:Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$ShutterPendingAction;
 
+    .line 18
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->initializeVisibilityChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mVisibilityChangeConsumerMap:Ljava/util/EnumMap;
 
+    .line 19
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$1;-><init>(Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mShutterTriggerCheckerRunnable:Ljava/lang/Runnable;
 
+    .line 20
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/photo/o;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/photo/o;-><init>(Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mZoomChangeFinishRunnable:Ljava/lang/Runnable;
 
+    .line 21
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$2;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter$2;-><init>(Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->mLocalBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 22
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->initializeSettingChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p1
@@ -2923,6 +2945,7 @@
 .method private refreshBackZoomProperty()V
     .locals 10
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->isZoomSupported()Z
@@ -2931,10 +2954,12 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-super {p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->refreshZoomProperty()V
 
     return-void
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
@@ -2948,6 +2973,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->getZoomManager()Lcom/sec/android/app/camera/interfaces/ZoomManager;
 
     move-result-object v0
@@ -2966,6 +2992,7 @@
 
     return-void
 
+    .line 5
     :cond_1
     sget-object v0, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;->TEXT:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;
 
@@ -2977,6 +3004,7 @@
 
     move-result-object v0
 
+    .line 6
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     sget-object v2, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->CAMERA_RESOLUTION:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
@@ -2999,6 +3027,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 7
     sget-object v1, Ly2/b;->B:Ly2/b;
 
     invoke-static {v1}, Ly2/d;->e(Ly2/b;)Z
@@ -3021,8 +3050,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 8
     sget-object v5, Lcom/sec/android/app/camera/interfaces/CommandId;->BACK_CAMERA_ZOOM_SECOND_TELE:Lcom/sec/android/app/camera/interfaces/CommandId;
 
+    .line 9
     :cond_2
     sget-object v1, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;->LEVEL:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
@@ -3038,6 +3069,7 @@
 
     return-void
 
+    .line 10
     :cond_3
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
 
@@ -3051,6 +3083,7 @@
 
     move-result-object v1
 
+    .line 11
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3069,6 +3102,7 @@
 
     invoke-static {v7, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 12
     iget-object v2, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     sget-object v7, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->CROP_ZOOM_X2:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
@@ -3093,10 +3127,12 @@
 
     if-eqz v2, :cond_4
 
+    .line 13
     sget-object v2, Lcom/sec/android/app/camera/interfaces/CommandId;->BACK_CAMERA_ZOOM_NORMAL_X2:Lcom/sec/android/app/camera/interfaces/CommandId;
 
     goto :goto_0
 
+    .line 14
     :cond_4
     iget-object v2, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -3108,10 +3144,12 @@
 
     if-ne v2, v6, :cond_5
 
+    .line 15
     sget-object v2, Lcom/sec/android/app/camera/interfaces/CommandId;->BACK_CAMERA_ZOOM_NORMAL_X2:Lcom/sec/android/app/camera/interfaces/CommandId;
 
     goto :goto_0
 
+    .line 16
     :cond_5
     iget-object v2, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -3123,6 +3161,7 @@
 
     if-ne v2, v6, :cond_6
 
+    .line 17
     sget-object v2, Lcom/sec/android/app/camera/interfaces/CommandId;->BACK_CAMERA_ZOOM_NORMAL_X2:Lcom/sec/android/app/camera/interfaces/CommandId;
 
     goto :goto_0
@@ -3130,6 +3169,7 @@
     :cond_6
     move-object v2, v5
 
+    .line 18
     :goto_0
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -3155,6 +3195,7 @@
 
     if-eqz v1, :cond_7
 
+    .line 19
     sget-object v1, Lcom/sec/android/app/camera/interfaces/CommandId;->BACK_CAMERA_ZOOM_SECOND_TELE_X2:Lcom/sec/android/app/camera/interfaces/CommandId;
 
     goto :goto_1
@@ -3162,6 +3203,7 @@
     :cond_7
     move-object v1, v5
 
+    .line 20
     :goto_1
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -3183,8 +3225,10 @@
 
     if-lt v7, v8, :cond_8
 
+    .line 21
     sget-object v5, Lcom/sec/android/app/camera/interfaces/CommandId;->BACK_CAMERA_ZOOM_X100:Lcom/sec/android/app/camera/interfaces/CommandId;
 
+    .line 22
     :cond_8
     sget-object v7, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;->LEVEL:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
@@ -3241,6 +3285,7 @@
         }
     .end annotation
 
+    .line 23
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->getZoomManager()Lcom/sec/android/app/camera/interfaces/ZoomManager;
 
     move-result-object v0
@@ -3249,10 +3294,12 @@
 
     move-result-object v5
 
+    .line 24
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 25
     array-length v1, p3
 
     const/4 v2, 0x0
@@ -3264,16 +3311,19 @@
 
     if-eqz v3, :cond_0
 
+    .line 26
     invoke-direct {p0, v3}, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->checkValidZoomLens(Lcom/sec/android/app/camera/interfaces/CommandId;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
+    .line 27
     invoke-direct {p0, v3}, Lcom/sec/android/app/camera/shootingmode/photo/PhotoPresenter;->getMinZoomValue(Lcom/sec/android/app/camera/interfaces/CommandId;)I
 
     move-result v4
 
+    .line 28
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -3284,8 +3334,10 @@
 
     if-nez v6, :cond_0
 
+    .line 29
     invoke-interface {v5, v3, v4}, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomLensDataHolder;->add(Lcom/sec/android/app/camera/interfaces/CommandId;I)V
 
+    .line 30
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -3297,6 +3349,7 @@
 
     goto :goto_0
 
+    .line 31
     :cond_1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->getZoomManager()Lcom/sec/android/app/camera/interfaces/ZoomManager;
 

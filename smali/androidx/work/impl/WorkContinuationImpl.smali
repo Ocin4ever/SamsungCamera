@@ -102,6 +102,7 @@
 
     move-object v4, p4
 
+    .line 2
     invoke-direct/range {v0 .. v5}, Landroidx/work/impl/WorkContinuationImpl;-><init>(Landroidx/work/impl/WorkManagerImpl;Ljava/lang/String;Landroidx/work/ExistingWorkPolicy;Ljava/util/List;Ljava/util/List;)V
 
     return-void
@@ -125,18 +126,25 @@
         }
     .end annotation
 
+    .line 3
     invoke-direct {p0}, Landroidx/work/WorkContinuation;-><init>()V
 
+    .line 4
     iput-object p1, p0, Landroidx/work/impl/WorkContinuationImpl;->mWorkManagerImpl:Landroidx/work/impl/WorkManagerImpl;
 
+    .line 5
     iput-object p2, p0, Landroidx/work/impl/WorkContinuationImpl;->mName:Ljava/lang/String;
 
+    .line 6
     iput-object p3, p0, Landroidx/work/impl/WorkContinuationImpl;->mExistingWorkPolicy:Landroidx/work/ExistingWorkPolicy;
 
+    .line 7
     iput-object p4, p0, Landroidx/work/impl/WorkContinuationImpl;->mWork:Ljava/util/List;
 
+    .line 8
     iput-object p5, p0, Landroidx/work/impl/WorkContinuationImpl;->mParents:Ljava/util/List;
 
+    .line 9
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-interface {p4}, Ljava/util/List;->size()I
@@ -147,6 +155,7 @@
 
     iput-object p1, p0, Landroidx/work/impl/WorkContinuationImpl;->mIds:Ljava/util/List;
 
+    .line 10
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -155,6 +164,7 @@
 
     if-eqz p5, :cond_0
 
+    .line 11
     invoke-interface {p5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -172,6 +182,7 @@
 
     check-cast p2, Landroidx/work/impl/WorkContinuationImpl;
 
+    .line 12
     iget-object p5, p0, Landroidx/work/impl/WorkContinuationImpl;->mAllIds:Ljava/util/List;
 
     iget-object p2, p2, Landroidx/work/impl/WorkContinuationImpl;->mAllIds:Ljava/util/List;
@@ -183,6 +194,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 13
     :goto_1
     invoke-interface {p4}, Ljava/util/List;->size()I
 
@@ -190,10 +202,12 @@
 
     if-ge p1, p2, :cond_3
 
+    .line 14
     sget-object p2, Landroidx/work/ExistingWorkPolicy;->REPLACE:Landroidx/work/ExistingWorkPolicy;
 
     if-ne p3, p2, :cond_2
 
+    .line 15
     invoke-interface {p4, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
@@ -216,6 +230,7 @@
 
     goto :goto_2
 
+    .line 16
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -225,6 +240,7 @@
 
     throw p0
 
+    .line 17
     :cond_2
     :goto_2
     invoke-interface {p4, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -237,10 +253,12 @@
 
     move-result-object p2
 
+    .line 18
     iget-object p5, p0, Landroidx/work/impl/WorkContinuationImpl;->mIds:Ljava/util/List;
 
     invoke-interface {p5, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 19
     iget-object p5, p0, Landroidx/work/impl/WorkContinuationImpl;->mAllIds:Ljava/util/List;
 
     invoke-interface {p5, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -268,6 +286,7 @@
 
     const/4 v2, 0x0
 
+    .line 1
     sget-object v3, Landroidx/work/ExistingWorkPolicy;->KEEP:Landroidx/work/ExistingWorkPolicy;
 
     const/4 v5, 0x0
@@ -295,16 +314,19 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Landroidx/work/impl/WorkContinuationImpl;->getIds()Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {p1, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
+    .line 3
     invoke-static {p0}, Landroidx/work/impl/WorkContinuationImpl;->prerequisitesFor(Landroidx/work/impl/WorkContinuationImpl;)Ljava/util/Set;
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -324,6 +346,7 @@
 
     check-cast v2, Ljava/lang/String;
 
+    .line 5
     invoke-interface {v0, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v2
@@ -332,6 +355,7 @@
 
     return v3
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Landroidx/work/impl/WorkContinuationImpl;->getParents()Ljava/util/List;
 
@@ -339,12 +363,14 @@
 
     if-eqz v0, :cond_3
 
+    .line 7
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
+    .line 8
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -362,6 +388,7 @@
 
     check-cast v1, Landroidx/work/impl/WorkContinuationImpl;
 
+    .line 9
     invoke-static {v1, p1}, Landroidx/work/impl/WorkContinuationImpl;->hasCycles(Landroidx/work/impl/WorkContinuationImpl;Ljava/util/Set;)Z
 
     move-result v1
@@ -370,6 +397,7 @@
 
     return v3
 
+    .line 10
     :cond_3
     invoke-virtual {p0}, Landroidx/work/impl/WorkContinuationImpl;->getIds()Ljava/util/List;
 
@@ -741,6 +769,7 @@
 .method public hasCycles()Z
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V

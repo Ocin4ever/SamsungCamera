@@ -37,6 +37,7 @@
 .method public bridge synthetic initialValue()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$1;->initialValue()Ljava/util/Queue;
 
     move-result-object p0
@@ -55,6 +56,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/Queues;->newArrayDeque()Ljava/util/ArrayDeque;
 
     move-result-object p0

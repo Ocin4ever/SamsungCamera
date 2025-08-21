@@ -13,6 +13,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 1
     sget v0, Landroidx/appcompat/R$attr;->editTextStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/textfield/TextInputEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -25,18 +26,21 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-static {p1, p2, p3, v0}, Lx1/a;->c(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
 
     move-result-object v1
 
     invoke-direct {p0, v1, p2, p3}, Landroidx/appcompat/widget/AppCompatEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 3
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lcom/google/android/material/textfield/TextInputEditText;->a:Landroid/graphics/Rect;
 
+    .line 4
     sget-object v4, Ly0/l;->x5:[I
 
     sget v6, Ly0/k;->k:I
@@ -49,18 +53,23 @@
 
     move v5, p3
 
+    .line 5
     invoke-static/range {v2 .. v7}, Lm1/q;->i(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 6
     sget p2, Ly0/l;->y5:I
 
+    .line 7
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p2
 
+    .line 8
     invoke-virtual {p0, p2}, Lcom/google/android/material/textfield/TextInputEditText;->setTextInputLayoutFocusedRectEnabled(Z)V
 
+    .line 9
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void

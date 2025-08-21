@@ -68,6 +68,7 @@
 
     move-object v4, p4
 
+    .line 1
     invoke-direct/range {v0 .. v5}, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable;-><init>(Landroidx/appcompat/widget/SeslAbsSeekBar;FFLandroid/content/res/ColorStateList;Z)V
 
     return-void
@@ -76,10 +77,12 @@
 .method public constructor <init>(Landroidx/appcompat/widget/SeslAbsSeekBar;FFLandroid/content/res/ColorStateList;Z)V
     .locals 2
 
+    .line 2
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable;->this$0:Landroidx/appcompat/widget/SeslAbsSeekBar;
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
+    .line 3
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
@@ -88,12 +91,15 @@
 
     const/4 v0, 0x0
 
+    .line 4
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable;->mIsStateChanged:Z
 
     const/16 v0, 0xff
 
+    .line 5
     iput v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable;->mAlpha:I
 
+    .line 6
     new-instance v0, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable$SliderState;
 
     const/4 v1, 0x0
@@ -102,38 +108,49 @@
 
     iput-object v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable;->mState:Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable$SliderState;
 
+    .line 7
     sget-object v0, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 8
     sget-object v0, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
+    .line 9
     iput-object p4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable;->mColorStateList:Landroid/content/res/ColorStateList;
 
+    .line 10
     invoke-virtual {p4}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
     move-result p4
 
     iput p4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable;->mColor:I
 
+    .line 11
     invoke-virtual {p1, p4}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 12
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
+    .line 13
     iput p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable;->mSliderMinWidth:F
 
+    .line 14
     iput p3, p0, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable;->mSliderMaxWidth:F
 
     const/high16 p1, 0x40000000    # 2.0f
 
     div-float/2addr p2, p1
 
+    .line 15
     iput p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable;->mRadius:F
 
+    .line 16
     iput-boolean p5, p0, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable;->mIsVertical:Z
 
+    .line 17
     invoke-direct {p0}, Landroidx/appcompat/widget/SeslAbsSeekBar$SliderDrawable;->initAnimator()V
 
     return-void

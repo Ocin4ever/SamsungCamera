@@ -51,6 +51,7 @@
 .method public apply(Ljava/lang/Void;)Landroidx/activity/result/ActivityResultRegistry;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/fragment/app/Fragment$8;->val$registry:Landroidx/activity/result/ActivityResultRegistry;
 
     return-object p0
@@ -59,6 +60,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment$8;->apply(Ljava/lang/Void;)Landroidx/activity/result/ActivityResultRegistry;

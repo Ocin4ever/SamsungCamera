@@ -13,6 +13,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lf4/b;
 
     invoke-direct {v0, p1}, Lf4/b;-><init>(Landroid/content/Context;)V
@@ -25,8 +26,10 @@
 .method public constructor <init>(Lu3/d;)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
@@ -35,8 +38,10 @@
 
     if-eqz p1, :cond_0
 
+    .line 4
     iput-object p1, p0, Lf4/a;->a:Lu3/d;
 
+    .line 5
     invoke-interface {p1}, Lu3/d;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
@@ -48,6 +53,7 @@
     :cond_0
     const-wide/16 v0, 0x5
 
+    .line 6
     invoke-virtual {p0, v0, v1}, Lf4/a;->a(J)V
 
     return-void

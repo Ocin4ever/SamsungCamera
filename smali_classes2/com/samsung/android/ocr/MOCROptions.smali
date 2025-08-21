@@ -39,68 +39,80 @@
 .method private constructor <init>(Lcom/samsung/android/ocr/MOCROptions$Builder;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCROptions$Builder;->access$000(Lcom/samsung/android/ocr/MOCROptions$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/samsung/android/ocr/MOCROptions;->useBeamSearch:Z
 
+    .line 4
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCROptions$Builder;->access$100(Lcom/samsung/android/ocr/MOCROptions$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/samsung/android/ocr/MOCROptions;->disableLineProcessing:Z
 
+    .line 5
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCROptions$Builder;->access$200(Lcom/samsung/android/ocr/MOCROptions$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/samsung/android/ocr/MOCROptions;->optimizeCpu:Z
 
+    .line 6
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCROptions$Builder;->access$300(Lcom/samsung/android/ocr/MOCROptions$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/samsung/android/ocr/MOCROptions;->getCharResult:Z
 
+    .line 7
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCROptions$Builder;->access$400(Lcom/samsung/android/ocr/MOCROptions$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/samsung/android/ocr/MOCROptions;->forceLang:Z
 
+    .line 8
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCROptions$Builder;->access$500(Lcom/samsung/android/ocr/MOCROptions$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/samsung/android/ocr/MOCROptions;->runInverted:Z
 
+    .line 9
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCROptions$Builder;->access$600(Lcom/samsung/android/ocr/MOCROptions$Builder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/ocr/MOCROptions;->numThreads:I
 
+    .line 10
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCROptions$Builder;->access$700(Lcom/samsung/android/ocr/MOCROptions$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/samsung/android/ocr/MOCROptions;->filterIcons:Z
 
+    .line 11
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCROptions$Builder;->access$800(Lcom/samsung/android/ocr/MOCROptions$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/samsung/android/ocr/MOCROptions;->detectOrientation:Z
 
+    .line 12
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCROptions$Builder;->access$900(Lcom/samsung/android/ocr/MOCROptions$Builder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/ocr/MOCROptions;->imageType:I
 
+    .line 13
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCROptions$Builder;->access$1000(Lcom/samsung/android/ocr/MOCROptions$Builder;)I
 
     move-result p1
@@ -113,6 +125,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/ocr/MOCROptions$Builder;Lcom/samsung/android/ocr/MOCROptions$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/ocr/MOCROptions;-><init>(Lcom/samsung/android/ocr/MOCROptions$Builder;)V
 
     return-void

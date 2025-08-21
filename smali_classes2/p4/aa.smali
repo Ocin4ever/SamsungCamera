@@ -37,6 +37,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/aa;->d:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/aa;->e:Landroid/util/SparseIntArray;
@@ -55,6 +56,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;Landroid/view/View;[Ljava/lang/Object;)V
     .locals 4
 
+    .line 2
     new-instance v0, Landroidx/databinding/ViewStubProxy;
 
     const/4 v1, 0x1
@@ -71,8 +73,10 @@
 
     const-wide/16 v2, -0x1
 
+    .line 3
     iput-wide v2, p0, Lp4/aa;->c:J
 
+    .line 4
     aget-object p1, p3, v1
 
     check-cast p1, Landroid/widget/HorizontalScrollView;
@@ -81,14 +85,18 @@
 
     const/4 p3, 0x0
 
+    .line 5
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 6
     iget-object p1, p0, Lp4/z9;->a:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {p1, p0}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 7
     invoke-virtual {p0, p2}, Landroidx/databinding/ViewDataBinding;->setRootTag(Landroid/view/View;)V
 
+    .line 8
     invoke-virtual {p0}, Lp4/aa;->invalidateAll()V
 
     return-void

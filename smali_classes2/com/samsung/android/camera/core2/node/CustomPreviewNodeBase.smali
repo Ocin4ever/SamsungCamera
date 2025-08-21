@@ -44,8 +44,10 @@
 .method public constructor <init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;ZLandroid/util/Size;J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/Node;-><init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Z)V
 
+    .line 2
     new-instance p1, Lcom/samsung/android/camera/core2/util/ExecutorServiceEx;
 
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
@@ -56,6 +58,7 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/CustomPreviewNodeBase;->mThreadPool:Lcom/samsung/android/camera/core2/util/ExecutorServiceEx;
 
+    .line 3
     new-instance p1, Ljava/util/concurrent/CountDownLatch;
 
     const/4 p2, 0x0
@@ -64,6 +67,7 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/CustomPreviewNodeBase;->mProcessingLatch:Ljava/util/concurrent/CountDownLatch;
 
+    .line 4
     new-instance p1, Lcom/samsung/android/camera/core2/util/TimeChecker;
 
     sget-object p2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -72,10 +76,12 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/CustomPreviewNodeBase;->mTimeChecker:Lcom/samsung/android/camera/core2/util/TimeChecker;
 
+    .line 5
     iput-object p4, p0, Lcom/samsung/android/camera/core2/node/CustomPreviewNodeBase;->mPreviewSize:Landroid/util/Size;
 
     const/16 p1, 0x64
 
+    .line 6
     iput p1, p0, Lcom/samsung/android/camera/core2/node/CustomPreviewNodeBase;->mProcessLatchWaitTimeoutMillis:I
 
     return-void
@@ -84,8 +90,10 @@
 .method public constructor <init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;ZLandroid/util/Size;JI)V
     .locals 0
 
+    .line 7
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/Node;-><init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Z)V
 
+    .line 8
     new-instance p1, Lcom/samsung/android/camera/core2/util/ExecutorServiceEx;
 
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
@@ -96,6 +104,7 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/CustomPreviewNodeBase;->mThreadPool:Lcom/samsung/android/camera/core2/util/ExecutorServiceEx;
 
+    .line 9
     new-instance p1, Ljava/util/concurrent/CountDownLatch;
 
     const/4 p2, 0x0
@@ -104,6 +113,7 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/CustomPreviewNodeBase;->mProcessingLatch:Ljava/util/concurrent/CountDownLatch;
 
+    .line 10
     new-instance p1, Lcom/samsung/android/camera/core2/util/TimeChecker;
 
     sget-object p2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -112,8 +122,10 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/CustomPreviewNodeBase;->mTimeChecker:Lcom/samsung/android/camera/core2/util/TimeChecker;
 
+    .line 11
     iput-object p4, p0, Lcom/samsung/android/camera/core2/node/CustomPreviewNodeBase;->mPreviewSize:Landroid/util/Size;
 
+    .line 12
     iput p7, p0, Lcom/samsung/android/camera/core2/node/CustomPreviewNodeBase;->mProcessLatchWaitTimeoutMillis:I
 
     return-void

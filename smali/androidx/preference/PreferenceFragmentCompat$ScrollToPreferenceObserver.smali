@@ -117,6 +117,7 @@
 .method public onItemRangeChanged(II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/preference/PreferenceFragmentCompat$ScrollToPreferenceObserver;->scrollToPreference()V
 
     return-void
@@ -125,6 +126,7 @@
 .method public onItemRangeChanged(IILjava/lang/Object;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Landroidx/preference/PreferenceFragmentCompat$ScrollToPreferenceObserver;->scrollToPreference()V
 
     return-void

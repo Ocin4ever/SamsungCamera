@@ -52,8 +52,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/widget/RotatableConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 2
     new-instance p1, Ljava/util/EnumMap;
 
     const-class p2, Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;
@@ -62,6 +64,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mPopups:Ljava/util/EnumMap;
 
+    .line 3
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -70,8 +73,10 @@
 
     const/4 p1, 0x0
 
+    .line 4
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mIsFixedOrientation:Z
 
+    .line 5
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,8 +109,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 6
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/widget/RotatableConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 7
     new-instance p1, Ljava/util/EnumMap;
 
     const-class p2, Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;
@@ -114,6 +121,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mPopups:Ljava/util/EnumMap;
 
+    .line 8
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -122,8 +130,10 @@
 
     const/4 p1, 0x0
 
+    .line 9
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mIsFixedOrientation:Z
 
+    .line 10
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -199,6 +209,7 @@
 .method private hideLowPriorityPopups(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;)V
     .locals 2
 
+    .line 2
     invoke-virtual {p1}, Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;->getPriority()I
 
     move-result v0
@@ -207,6 +218,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mPopups:Ljava/util/EnumMap;
 
     new-instance v1, Lcom/sec/android/app/camera/layer/popup/m0;
@@ -256,6 +268,7 @@
 .method private isPopupVisible(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;)Z
     .locals 1
 
+    .line 3
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mPopups:Ljava/util/EnumMap;
 
     invoke-virtual {v0, p1}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -292,6 +305,7 @@
 .method private isPriorityPopupVisible(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;)Z
     .locals 3
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mPopups:Ljava/util/EnumMap;
 
     invoke-virtual {p0}, Ljava/util/EnumMap;->entrySet()Ljava/util/Set;
@@ -315,18 +329,21 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;
 
+    .line 5
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v2
@@ -339,6 +356,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 6
     :cond_1
     invoke-virtual {v1}, Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;->getPriority()I
 
@@ -348,6 +366,7 @@
 
     if-eq v0, v2, :cond_0
 
+    .line 7
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -832,18 +851,21 @@
 
     if-eqz p2, :cond_1
 
+    .line 6
     invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 7
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mViewBinding:Lp4/d1;
 
     iget-object v0, v0, Lp4/d1;->c:Lcom/sec/android/app/camera/layer/popup/PopupLayerView;
 
     invoke-virtual {v0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
+    .line 8
     invoke-virtual {p0}, Landroid/view/View;->getRotation()F
 
     move-result v0
@@ -852,17 +874,21 @@
 
     invoke-virtual {p2, v0}, Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;->setOrientation(I)V
 
+    .line 9
     :cond_0
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->hideLowPriorityPopups(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;)V
 
     const/4 v0, 0x1
 
+    .line 10
     invoke-virtual {p2, v0}, Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;->setIsShowRequested(Z)V
 
+    .line 11
     iget-object p2, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mPresenter:Lcom/sec/android/app/camera/layer/popup/PopupLayerContract$Presenter;
 
     invoke-interface {p2, p1}, Lcom/sec/android/app/camera/layer/popup/PopupLayerContract$Presenter;->onShowPopup(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;)V
 
+    .line 12
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->sendVisibilityChangeEvent(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;)V
 
     return v0
@@ -876,6 +902,7 @@
 .method private showPopupInternal(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mPopups:Ljava/util/EnumMap;
 
     invoke-virtual {v0, p1}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -886,8 +913,10 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->createPopup(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
+    .line 3
     iget-object p2, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mPopups:Ljava/util/EnumMap;
 
     invoke-virtual {p2, p1}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -903,10 +932,12 @@
     :cond_0
     if-eqz p2, :cond_1
 
+    .line 4
     iget-object v1, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mPresenter:Lcom/sec/android/app/camera/layer/popup/PopupLayerContract$Presenter;
 
     invoke-interface {v1, p1, p2, p3}, Lcom/sec/android/app/camera/layer/popup/PopupLayerContract$Presenter;->updatePopupData(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
+    .line 5
     :cond_1
     :goto_0
     invoke-direct {p0, p1, v0}, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->showPopupInternal(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;)Z
@@ -1102,6 +1133,7 @@
 .method public hideLowPriorityPopups()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mPopups:Ljava/util/EnumMap;
 
     new-instance v1, Lcom/sec/android/app/camera/layer/popup/p0;
@@ -1217,6 +1249,7 @@
 .method public varargs isPopupVisible([Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;)Z
     .locals 4
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1228,6 +1261,7 @@
 
     aget-object v3, p1, v2
 
+    .line 2
     invoke-direct {p0, v3}, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->isPopupVisible(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;)Z
 
     move-result v3
@@ -1276,6 +1310,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->isPriorityPopupVisible(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;)Z
 
     move-result p0
@@ -1399,6 +1434,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/popup/PopupLayerContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->setPresenter(Lcom/sec/android/app/camera/layer/popup/PopupLayerContract$Presenter;)V
@@ -1409,6 +1445,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/layer/popup/PopupLayerContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->mPresenter:Lcom/sec/android/app/camera/layer/popup/PopupLayerContract$Presenter;
 
     return-void
@@ -1475,6 +1512,7 @@
 .method public showPopup(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;)Z
     .locals 2
 
+    .line 7
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1495,6 +1533,7 @@
 
     const/4 v0, 0x0
 
+    .line 8
     invoke-direct {p0, p1, v0, v0}, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->showPopupInternal(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -1505,6 +1544,7 @@
 .method public showPopup(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;I)Z
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1523,6 +1563,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1543,6 +1584,7 @@
 .method public showPopup(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;II)Z
     .locals 2
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1561,6 +1603,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1589,6 +1632,7 @@
 .method public showPopup(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;ILjava/lang/String;)Z
     .locals 4
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1607,6 +1651,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1645,6 +1690,7 @@
 .method public showPopup(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;Ljava/lang/CharSequence;)Z
     .locals 2
 
+    .line 9
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1665,6 +1711,7 @@
 
     const/4 v0, 0x0
 
+    .line 10
     invoke-direct {p0, p1, p2, v0}, Lcom/sec/android/app/camera/layer/popup/PopupLayerView;->showPopupInternal(Lcom/sec/android/app/camera/interfaces/PopupLayerManager$PopupId;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p0

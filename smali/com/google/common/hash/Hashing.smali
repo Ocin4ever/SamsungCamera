@@ -295,16 +295,21 @@
 .method public static varargs concatenating(Lcom/google/common/hash/HashFunction;Lcom/google/common/hash/HashFunction;[Lcom/google/common/hash/HashFunction;)Lcom/google/common/hash/HashFunction;
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 3
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 4
     invoke-static {v0, p2}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
+    .line 5
     new-instance p0, Lcom/google/common/hash/Hashing$ConcatenatedHashFunction;
 
     const/4 p1, 0x0
@@ -336,12 +341,15 @@
         }
     .end annotation
 
+    .line 6
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 7
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 8
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -359,10 +367,12 @@
 
     check-cast v1, Lcom/google/common/hash/HashFunction;
 
+    .line 9
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 10
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -378,6 +388,7 @@
 
     invoke-static {p0, v1, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
+    .line 11
     new-instance p0, Lcom/google/common/hash/Hashing$ConcatenatedHashFunction;
 
     const/4 v1, 0x0
@@ -414,8 +425,10 @@
     :goto_0
     const-string v2, "buckets must be positive: %s"
 
+    .line 2
     invoke-static {v1, v2, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
+    .line 3
     new-instance v1, Lcom/google/common/hash/Hashing$LinearCongruentialGenerator;
 
     invoke-direct {v1, p0, p1}, Lcom/google/common/hash/Hashing$LinearCongruentialGenerator;-><init>(J)V
@@ -425,6 +438,7 @@
 
     int-to-double p0, p0
 
+    .line 4
     invoke-virtual {v1}, Lcom/google/common/hash/Hashing$LinearCongruentialGenerator;->nextDouble()D
 
     move-result-wide v2
@@ -448,6 +462,7 @@
 .method public static consistentHash(Lcom/google/common/hash/HashCode;I)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/hash/HashCode;->padToLong()J
 
     move-result-wide v0
@@ -564,6 +579,7 @@
 .method public static hmacMd5(Ljava/security/Key;)Lcom/google/common/hash/HashFunction;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/MacHashFunction;
 
     const-string v1, "hmacMd5"
@@ -582,6 +598,7 @@
 .method public static hmacMd5([B)Lcom/google/common/hash/HashFunction;
     .locals 2
 
+    .line 2
     new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
 
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -604,6 +621,7 @@
 .method public static hmacSha1(Ljava/security/Key;)Lcom/google/common/hash/HashFunction;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/MacHashFunction;
 
     const-string v1, "hmacSha1"
@@ -622,6 +640,7 @@
 .method public static hmacSha1([B)Lcom/google/common/hash/HashFunction;
     .locals 2
 
+    .line 2
     new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
 
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -644,6 +663,7 @@
 .method public static hmacSha256(Ljava/security/Key;)Lcom/google/common/hash/HashFunction;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/MacHashFunction;
 
     const-string v1, "hmacSha256"
@@ -662,6 +682,7 @@
 .method public static hmacSha256([B)Lcom/google/common/hash/HashFunction;
     .locals 2
 
+    .line 2
     new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
 
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -684,6 +705,7 @@
 .method public static hmacSha512(Ljava/security/Key;)Lcom/google/common/hash/HashFunction;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/MacHashFunction;
 
     const-string v1, "hmacSha512"
@@ -702,6 +724,7 @@
 .method public static hmacSha512([B)Lcom/google/common/hash/HashFunction;
     .locals 2
 
+    .line 2
     new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
 
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -770,6 +793,7 @@
 .method public static murmur3_128()Lcom/google/common/hash/HashFunction;
     .locals 1
 
+    .line 2
     sget-object v0, Lcom/google/common/hash/Murmur3_128HashFunction;->MURMUR3_128:Lcom/google/common/hash/HashFunction;
 
     return-object v0
@@ -778,6 +802,7 @@
 .method public static murmur3_128(I)Lcom/google/common/hash/HashFunction;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/Murmur3_128HashFunction;
 
     invoke-direct {v0, p0}, Lcom/google/common/hash/Murmur3_128HashFunction;-><init>(I)V
@@ -790,6 +815,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     sget-object v0, Lcom/google/common/hash/Murmur3_32HashFunction;->MURMUR3_32:Lcom/google/common/hash/HashFunction;
 
     return-object v0
@@ -800,6 +826,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/Murmur3_32HashFunction;
 
     const/4 v1, 0x0
@@ -812,6 +839,7 @@
 .method public static murmur3_32_fixed()Lcom/google/common/hash/HashFunction;
     .locals 1
 
+    .line 2
     sget-object v0, Lcom/google/common/hash/Murmur3_32HashFunction;->MURMUR3_32_FIXED:Lcom/google/common/hash/HashFunction;
 
     return-object v0
@@ -820,6 +848,7 @@
 .method public static murmur3_32_fixed(I)Lcom/google/common/hash/HashFunction;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/Murmur3_32HashFunction;
 
     const/4 v1, 0x1
@@ -866,6 +895,7 @@
 .method public static sipHash24()Lcom/google/common/hash/HashFunction;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/SipHashFunction;->SIP_HASH_24:Lcom/google/common/hash/HashFunction;
 
     return-object v0
@@ -874,6 +904,7 @@
 .method public static sipHash24(JJ)Lcom/google/common/hash/HashFunction;
     .locals 8
 
+    .line 2
     new-instance v7, Lcom/google/common/hash/SipHashFunction;
 
     const/4 v1, 0x2

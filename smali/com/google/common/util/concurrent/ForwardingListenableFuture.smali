@@ -65,6 +65,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingListenableFuture;->delegate()Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object p0
@@ -75,6 +76,7 @@
 .method public bridge synthetic delegate()Ljava/util/concurrent/Future;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingListenableFuture;->delegate()Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object p0

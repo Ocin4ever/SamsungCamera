@@ -22,6 +22,7 @@
 .method private constructor <init>(Lcom/google/common/util/concurrent/AbstractIdleService;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;->this$0:Lcom/google/common/util/concurrent/AbstractIdleService;
 
     invoke-direct {p0}, Lcom/google/common/util/concurrent/AbstractService;-><init>()V
@@ -32,6 +33,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/util/concurrent/AbstractIdleService;Lcom/google/common/util/concurrent/AbstractIdleService$1;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;-><init>(Lcom/google/common/util/concurrent/AbstractIdleService;)V
 
     return-void

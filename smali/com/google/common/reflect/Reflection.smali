@@ -28,6 +28,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -44,6 +45,7 @@
 
     const/16 v0, 0x2e
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v0
@@ -57,6 +59,7 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 3
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0

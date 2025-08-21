@@ -96,32 +96,46 @@
 
     invoke-static {p10, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->revision:I
 
+    .line 3
     iput-object p2, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->titleId:Ljava/lang/Integer;
 
+    .line 4
     iput-object p3, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->descriptionId:Ljava/lang/Integer;
 
+    .line 5
     iput-object p4, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->iconId:Ljava/lang/Integer;
 
+    .line 6
     iput-object p5, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->suggestionFromId:Ljava/lang/Integer;
 
+    .line 7
     iput-object p6, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->listViewId:Ljava/lang/Integer;
 
+    .line 8
     iput p7, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->listViewItemId:I
 
+    .line 9
     iput-object p8, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->clickableIdList:Ljava/util/List;
 
+    .line 10
     iput-object p9, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->listView:Landroid/widget/RemoteViews;
 
+    .line 11
     iput-object p10, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->listItemView:Landroid/widget/RemoteViews;
 
+    .line 12
     iput-object p11, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->maxListItemVisibleCount:Ljava/lang/Integer;
 
+    .line 13
     iput-object p12, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->enableSwipeDismiss:Ljava/lang/Boolean;
 
+    .line 14
     iput-object p13, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;->extras:Landroid/os/Bundle;
 
     return-void
@@ -274,6 +288,7 @@
 
     move-object/from16 v12, p10
 
+    .line 15
     invoke-direct/range {v2 .. v15}, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/util/List;Landroid/widget/RemoteViews;Landroid/widget/RemoteViews;Ljava/lang/Integer;Ljava/lang/Boolean;Landroid/os/Bundle;)V
 
     return-void
@@ -288,10 +303,12 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 16
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
+    .line 17
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -317,6 +334,7 @@
     :cond_0
     move-object v4, v5
 
+    .line 18
     :goto_0
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -339,6 +357,7 @@
     :cond_1
     move-object v6, v5
 
+    .line 19
     :goto_1
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -361,6 +380,7 @@
     :cond_2
     move-object v7, v5
 
+    .line 20
     :goto_2
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -383,6 +403,7 @@
     :cond_3
     move-object v8, v5
 
+    .line 21
     :goto_3
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -405,17 +426,20 @@
     :cond_4
     move-object v9, v5
 
+    .line 22
     :goto_4
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
+    .line 23
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v2
 
     if-eqz v2, :cond_5
 
+    .line 24
     check-cast v2, Ljava/util/List;
 
     move-object v11, v2
@@ -425,6 +449,7 @@
     :cond_5
     move-object v11, v5
 
+    .line 25
     :goto_5
     const-class v2, Landroid/widget/RemoteViews;
 
@@ -438,6 +463,7 @@
 
     check-cast v12, Landroid/widget/RemoteViews;
 
+    .line 26
     invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v2
@@ -452,6 +478,7 @@
 
     check-cast v13, Landroid/widget/RemoteViews;
 
+    .line 27
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v1
@@ -471,6 +498,7 @@
     :cond_6
     move-object v1, v5
 
+    .line 28
     :goto_6
     sget-object v2, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
@@ -495,6 +523,7 @@
     :cond_7
     move-object v14, v5
 
+    .line 29
     :goto_7
     const-class v2, Landroid/os/Bundle;
 
@@ -526,10 +555,12 @@
 
     move-object v13, v1
 
+    .line 30
     invoke-direct/range {v2 .. v15}, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/util/List;Landroid/widget/RemoteViews;Landroid/widget/RemoteViews;Ljava/lang/Integer;Ljava/lang/Boolean;Landroid/os/Bundle;)V
 
     return-void
 
+    .line 31
     :cond_8
     new-instance v0, Ljava/lang/IllegalStateException;
 

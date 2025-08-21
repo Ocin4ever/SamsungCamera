@@ -11,8 +11,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Le5/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 2
     invoke-static {p1}, Lcom/sec/android/app/camera/util/SystemSettingsUtil;->isReduceTransparencyOn(Landroid/content/Context;)Z
 
     move-result p1
@@ -25,8 +27,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Le5/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 4
     invoke-static {p1}, Lcom/sec/android/app/camera/util/SystemSettingsUtil;->isReduceTransparencyOn(Landroid/content/Context;)Z
 
     move-result p1

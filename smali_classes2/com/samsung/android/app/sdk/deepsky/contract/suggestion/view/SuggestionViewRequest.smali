@@ -97,24 +97,34 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewRequest;->revision:I
 
+    .line 3
     iput-object p2, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewRequest;->surfaceHash:Ljava/lang/String;
 
+    .line 4
     iput-object p3, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewRequest;->suggestionItemId:Ljava/lang/String;
 
+    .line 5
     iput-object p4, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewRequest;->surfaceViewInfo:Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;
 
+    .line 6
     iput-object p5, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewRequest;->viewSpec:Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;
 
+    .line 7
     iput-object p6, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewRequest;->maxSuggestionCount:Ljava/lang/Integer;
 
+    .line 8
     iput-object p7, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewRequest;->extras:Landroid/os/Bundle;
 
+    .line 9
     iput-object p8, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewRequest;->includedDataIdList:Ljava/util/List;
 
+    .line 10
     iput-object p9, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewRequest;->excludedDataIdList:Ljava/util/List;
 
     return-void
@@ -219,6 +229,7 @@
 
     move-object v5, p3
 
+    .line 11
     invoke-direct/range {v2 .. v11}, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewRequest;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;Ljava/lang/Integer;Landroid/os/Bundle;Ljava/util/List;Ljava/util/List;)V
 
     return-void
@@ -231,10 +242,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 12
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
+    .line 13
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
@@ -245,6 +258,7 @@
 
     invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 14
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
@@ -255,6 +269,7 @@
 
     invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 15
     const-class v0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -269,6 +284,7 @@
 
     check-cast v5, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;
 
+    .line 16
     const-class v0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -283,6 +299,7 @@
 
     check-cast v6, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;
 
+    .line 17
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -306,6 +323,7 @@
     :cond_0
     move-object v0, v7
 
+    .line 18
     :goto_0
     const-class v1, Landroid/os/Bundle;
 
@@ -317,12 +335,14 @@
 
     move-result-object v8
 
+    .line 19
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
+    .line 20
     check-cast v1, Ljava/util/List;
 
     move-object v9, v1
@@ -332,6 +352,7 @@
     :cond_1
     move-object v9, v7
 
+    .line 21
     :goto_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
@@ -339,6 +360,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 22
     check-cast p1, Ljava/util/List;
 
     move-object v10, p1
@@ -353,10 +375,12 @@
 
     move-object v7, v0
 
+    .line 23
     invoke-direct/range {v1 .. v10}, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewRequest;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewSpec;Ljava/lang/Integer;Landroid/os/Bundle;Ljava/util/List;Ljava/util/List;)V
 
     return-void
 
+    .line 24
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -370,6 +394,7 @@
 
     throw p0
 
+    .line 25
     :cond_4
     new-instance p0, Ljava/lang/IllegalStateException;
 

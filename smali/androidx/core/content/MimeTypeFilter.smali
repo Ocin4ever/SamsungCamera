@@ -24,10 +24,12 @@
     :cond_0
     const-string v1, "/"
 
+    .line 4
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 5
     array-length v2, p1
 
     const/4 v3, 0x0
@@ -37,10 +39,12 @@
 
     aget-object v4, p1, v3
 
+    .line 6
     invoke-virtual {v4, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
+    .line 7
     invoke-static {p0, v5}, Landroidx/core/content/MimeTypeFilter;->mimeTypeAgainstFilter([Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result v5
@@ -70,10 +74,12 @@
     :cond_0
     const-string v1, "/"
 
+    .line 8
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
+    .line 9
     array-length v2, p0
 
     const/4 v3, 0x0
@@ -83,10 +89,12 @@
 
     aget-object v4, p0, v3
 
+    .line 10
     invoke-virtual {v4, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
+    .line 11
     invoke-static {v5, p1}, Landroidx/core/content/MimeTypeFilter;->mimeTypeAgainstFilter([Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result v5
@@ -116,14 +124,17 @@
     :cond_0
     const-string v0, "/"
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
+    .line 3
     invoke-static {p0, p1}, Landroidx/core/content/MimeTypeFilter;->mimeTypeAgainstFilter([Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result p0

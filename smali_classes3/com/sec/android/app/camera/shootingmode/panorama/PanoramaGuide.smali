@@ -109,8 +109,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -123,6 +125,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->LIVE_THUMBNAIL_OFFSET:F
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -135,6 +138,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->GUIDE_ARROW_OFFSET:F
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -147,6 +151,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->GUIDE_TEXT_MARGIN:F
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -159,6 +164,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->WARNING_ARROW_SWING_DISTANCE:F
 
+    .line 6
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -173,54 +179,63 @@
 
     const/4 p1, 0x0
 
+    .line 7
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mCaptureLiveThumbnailSize:Landroid/graphics/PointF;
 
+    .line 8
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mPortraitPreviewBackgroundSize:Landroid/graphics/PointF;
 
+    .line 9
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mPortraitCaptureBackgroundSize:Landroid/graphics/PointF;
 
+    .line 10
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mPortraitGuideSize:Landroid/graphics/PointF;
 
+    .line 11
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mPortraitPreviewLiveThumbnailSize:Landroid/graphics/PointF;
 
+    .line 12
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mLandscapePreviewBackgroundSize:Landroid/graphics/PointF;
 
+    .line 13
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mLandscapeCaptureBackgroundSize:Landroid/graphics/PointF;
 
+    .line 14
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mLandscapeGuideSize:Landroid/graphics/PointF;
 
+    .line 15
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p1
@@ -229,8 +244,10 @@
 
     const/4 p1, 0x0
 
+    .line 16
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mIsPanoramaWarning:Z
 
+    .line 17
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide$MainHandler;
 
     const/4 v0, 0x0
@@ -239,6 +256,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mHandler:Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide$MainHandler;
 
+    .line 18
     new-instance p1, Ljava/util/EnumMap;
 
     const-class v0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide$PanoramaGuideDirection;
@@ -247,12 +265,14 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mGuideArrow:Ljava/util/EnumMap;
 
+    .line 19
     new-instance p1, Ljava/util/EnumMap;
 
     invoke-direct {p1, v0}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mWarningArrow:Ljava/util/EnumMap;
 
+    .line 20
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->initView()V
 
     return-void
@@ -261,8 +281,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 21
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 22
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -275,6 +297,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->LIVE_THUMBNAIL_OFFSET:F
 
+    .line 23
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -287,6 +310,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->GUIDE_ARROW_OFFSET:F
 
+    .line 24
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -299,6 +323,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->GUIDE_TEXT_MARGIN:F
 
+    .line 25
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -311,6 +336,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->WARNING_ARROW_SWING_DISTANCE:F
 
+    .line 26
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -325,54 +351,63 @@
 
     const/4 p1, 0x0
 
+    .line 27
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mCaptureLiveThumbnailSize:Landroid/graphics/PointF;
 
+    .line 28
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mPortraitPreviewBackgroundSize:Landroid/graphics/PointF;
 
+    .line 29
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mPortraitCaptureBackgroundSize:Landroid/graphics/PointF;
 
+    .line 30
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mPortraitGuideSize:Landroid/graphics/PointF;
 
+    .line 31
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mPortraitPreviewLiveThumbnailSize:Landroid/graphics/PointF;
 
+    .line 32
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mLandscapePreviewBackgroundSize:Landroid/graphics/PointF;
 
+    .line 33
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mLandscapeCaptureBackgroundSize:Landroid/graphics/PointF;
 
+    .line 34
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mLandscapeGuideSize:Landroid/graphics/PointF;
 
+    .line 35
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p1
@@ -381,8 +416,10 @@
 
     const/4 p1, 0x0
 
+    .line 36
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mIsPanoramaWarning:Z
 
+    .line 37
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide$MainHandler;
 
     const/4 p2, 0x0
@@ -391,6 +428,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mHandler:Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide$MainHandler;
 
+    .line 38
     new-instance p1, Ljava/util/EnumMap;
 
     const-class p2, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide$PanoramaGuideDirection;
@@ -399,12 +437,14 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mGuideArrow:Ljava/util/EnumMap;
 
+    .line 39
     new-instance p1, Ljava/util/EnumMap;
 
     invoke-direct {p1, p2}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mWarningArrow:Ljava/util/EnumMap;
 
+    .line 40
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->initView()V
 
     return-void
@@ -413,8 +453,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 41
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 42
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -427,6 +469,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->LIVE_THUMBNAIL_OFFSET:F
 
+    .line 43
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -439,6 +482,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->GUIDE_ARROW_OFFSET:F
 
+    .line 44
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -451,6 +495,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->GUIDE_TEXT_MARGIN:F
 
+    .line 45
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -463,6 +508,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->WARNING_ARROW_SWING_DISTANCE:F
 
+    .line 46
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -477,54 +523,63 @@
 
     const/4 p1, 0x0
 
+    .line 47
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mCaptureLiveThumbnailSize:Landroid/graphics/PointF;
 
+    .line 48
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mPortraitPreviewBackgroundSize:Landroid/graphics/PointF;
 
+    .line 49
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mPortraitCaptureBackgroundSize:Landroid/graphics/PointF;
 
+    .line 50
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mPortraitGuideSize:Landroid/graphics/PointF;
 
+    .line 51
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mPortraitPreviewLiveThumbnailSize:Landroid/graphics/PointF;
 
+    .line 52
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mLandscapePreviewBackgroundSize:Landroid/graphics/PointF;
 
+    .line 53
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mLandscapeCaptureBackgroundSize:Landroid/graphics/PointF;
 
+    .line 54
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mLandscapeGuideSize:Landroid/graphics/PointF;
 
+    .line 55
     invoke-static {p1, p1}, Lcom/sec/android/app/camera/util/factory/PointFFactory;->create(FF)Landroid/graphics/PointF;
 
     move-result-object p1
@@ -533,8 +588,10 @@
 
     const/4 p1, 0x0
 
+    .line 56
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mIsPanoramaWarning:Z
 
+    .line 57
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide$MainHandler;
 
     const/4 p2, 0x0
@@ -543,6 +600,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mHandler:Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide$MainHandler;
 
+    .line 58
     new-instance p1, Ljava/util/EnumMap;
 
     const-class p2, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide$PanoramaGuideDirection;
@@ -551,6 +609,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/panorama/PanoramaGuide;->mGuideArrow:Ljava/util/EnumMap;
 
+    .line 59
     new-instance p1, Ljava/util/EnumMap;
 
     invoke-direct {p1, p2}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V

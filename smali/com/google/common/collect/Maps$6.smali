@@ -77,6 +77,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$6;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -87,6 +88,7 @@
 .method public bridge synthetic delegate()Ljava/util/Collection;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$6;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -104,6 +106,7 @@
         }
     .end annotation
 
+    .line 5
     iget-object p0, p0, Lcom/google/common/collect/Maps$6;->val$set:Ljava/util/NavigableSet;
 
     return-object p0
@@ -112,6 +115,7 @@
 .method public bridge synthetic delegate()Ljava/util/Set;
     .locals 0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$6;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -122,6 +126,7 @@
 .method public bridge synthetic delegate()Ljava/util/SortedSet;
     .locals 0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$6;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -164,6 +169,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/ForwardingNavigableSet;->headSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -189,6 +195,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/ForwardingSortedSet;->headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -218,10 +225,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0, p1, p2, p3, p4}, Lcom/google/common/collect/ForwardingNavigableSet;->subSet(Ljava/lang/Object;ZLjava/lang/Object;Z)Ljava/util/NavigableSet;
 
     move-result-object p0
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/collect/Maps;->access$400(Ljava/util/NavigableSet;)Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -247,6 +256,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/ForwardingSortedSet;->subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -272,6 +282,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/ForwardingNavigableSet;->tailSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -297,6 +308,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/ForwardingSortedSet;->tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
 
     move-result-object p0

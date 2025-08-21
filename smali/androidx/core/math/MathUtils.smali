@@ -27,6 +27,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -56,6 +57,7 @@
 
     return-wide v0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -69,6 +71,7 @@
 .method public static clamp(DDD)D
     .locals 1
 
+    .line 1
     cmpg-double v0, p0, p2
 
     if-gez v0, :cond_0
@@ -89,6 +92,7 @@
 .method public static clamp(FFF)F
     .locals 1
 
+    .line 2
     cmpg-float v0, p0, p1
 
     if-gez v0, :cond_0
@@ -109,6 +113,7 @@
 .method public static clamp(III)I
     .locals 0
 
+    .line 3
     if-ge p0, p1, :cond_0
 
     return p1
@@ -125,6 +130,7 @@
 .method public static clamp(JJJ)J
     .locals 1
 
+    .line 4
     cmp-long v0, p0, p2
 
     if-gez v0, :cond_0
@@ -153,6 +159,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -178,6 +185,7 @@
 
     return-wide p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -199,6 +207,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -224,6 +233,7 @@
 
     return-wide p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -253,6 +263,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -268,10 +279,12 @@
 
     mul-long v0, p0, p2
 
+    .line 2
     invoke-static {p0, p1}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v2
 
+    .line 3
     invoke-static {p2, p3}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v4
@@ -292,6 +305,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     div-long v2, v0, p2
 
     cmp-long v2, v2, p0
@@ -313,6 +327,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -338,6 +353,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -361,6 +377,7 @@
 
     return-wide p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -386,6 +403,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -415,6 +433,7 @@
 
     return-wide v0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/ArithmeticException;
 

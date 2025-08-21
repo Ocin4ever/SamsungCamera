@@ -115,78 +115,101 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/interfaces/Resolution;Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile$VideoOption;)V
     .locals 4
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
 
+    .line 3
     iput v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mOutputFormat:I
 
+    .line 4
     iput v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mVideoEncoder:I
 
     const/4 v1, 0x3
 
+    .line 5
     iput v1, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mAudioEncoder:I
 
     const/4 v1, 0x0
 
+    .line 6
     iput v1, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mVideoWidth:I
 
+    .line 7
     iput v1, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mVideoHeight:I
 
     const/16 v2, 0x1e
 
+    .line 8
     iput v2, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mVideoFrameRate:I
 
+    .line 9
     iput v1, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mVideoEncodingBitrate:I
 
     const v3, 0x3e800
 
+    .line 10
     iput v3, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mAudioEncodingBitrate:I
 
+    .line 11
     iput v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mAudioChannels:I
 
     const v3, 0xbb80
 
+    .line 12
     iput v3, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mAudioSamplingRate:I
 
+    .line 13
     iput v1, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mFileSizeInterval:I
 
+    .line 14
     iput v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mVideoSource:I
 
     const/4 v0, -0x1
 
+    .line 15
     iput v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mMaxDuration:I
 
+    .line 16
     iput v1, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mRecordingMode:I
 
     const/4 v0, 0x5
 
+    .line 17
     iput v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mAudioSource:I
 
+    .line 18
     iput v2, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mCaptureRate:I
 
+    .line 19
     iput-boolean v1, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mIsAudioEncodingDisabled:Z
 
+    .line 20
     invoke-virtual {p1}, Lcom/sec/android/app/camera/interfaces/Resolution;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mVideoWidth:I
 
+    .line 21
     invoke-virtual {p1}, Lcom/sec/android/app/camera/interfaces/Resolution;->getHeight()I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mVideoHeight:I
 
+    .line 22
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mVideoOption:Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile$VideoOption;
 
+    .line 23
     invoke-static {p1, p2}, Lcom/sec/android/app/camera/engine/recordingsession/VideoBitrate;->getBitrate(Lcom/sec/android/app/camera/interfaces/Resolution;Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile$VideoOption;)I
 
     move-result p2
 
     iput p2, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mVideoEncodingBitrate:I
 
+    .line 24
     sget-object p2, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->VIDEO_SIZE_INTERVAL_MAP:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/sec/android/app/camera/interfaces/Resolution;->getId()I
@@ -213,6 +236,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mFileSizeInterval:I
 
+    .line 25
     iget p0, p0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;->mVideoEncodingBitrate:I
 
     if-eqz p0, :cond_0
@@ -221,6 +245,7 @@
 
     return-void
 
+    .line 26
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -234,6 +259,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/interfaces/Resolution;Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile$VideoOption;Lcom/sec/android/app/camera/engine/recordingsession/h;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile;-><init>(Lcom/sec/android/app/camera/interfaces/Resolution;Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile$Profile$VideoOption;)V
 
     return-void

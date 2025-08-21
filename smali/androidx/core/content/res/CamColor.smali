@@ -991,6 +991,7 @@
 .method public static toColor(FFF)I
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/core/content/res/ViewingConditions;->DEFAULT:Landroidx/core/content/res/ViewingConditions;
 
     invoke-static {p0, p1, p2, v0}, Landroidx/core/content/res/CamColor;->toColor(FFFLandroidx/core/content/res/ViewingConditions;)I
@@ -1011,6 +1012,7 @@
 
     if-ltz v0, :cond_7
 
+    .line 2
     invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
     move-result v0
@@ -1051,6 +1053,7 @@
     :cond_1
     const/high16 v1, 0x43b40000    # 360.0f
 
+    .line 3
     invoke-static {v1, p0}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
@@ -1071,6 +1074,7 @@
     :goto_1
     sub-float v4, v1, p1
 
+    .line 4
     invoke-static {v4}, Ljava/lang/Math;->abs(F)F
 
     move-result v4
@@ -1081,6 +1085,7 @@
 
     if-ltz v4, :cond_5
 
+    .line 5
     invoke-static {p0, v0, p2}, Landroidx/core/content/res/CamColor;->findCamByJ(FFF)Landroidx/core/content/res/CamColor;
 
     move-result-object v4
@@ -1091,6 +1096,7 @@
 
     if-eqz v4, :cond_2
 
+    .line 6
     invoke-virtual {v4, p3}, Landroidx/core/content/res/CamColor;->viewed(Landroidx/core/content/res/ViewingConditions;)I
 
     move-result p0
@@ -1132,12 +1138,14 @@
     :cond_5
     if-nez v3, :cond_6
 
+    .line 7
     invoke-static {p2}, Landroidx/core/content/res/CamUtils;->intFromLStar(F)I
 
     move-result p0
 
     return p0
 
+    .line 8
     :cond_6
     invoke-virtual {v3, p3}, Landroidx/core/content/res/CamColor;->viewed(Landroidx/core/content/res/ViewingConditions;)I
 
@@ -1145,6 +1153,7 @@
 
     return p0
 
+    .line 9
     :cond_7
     :goto_3
     invoke-static {p2}, Landroidx/core/content/res/CamUtils;->intFromLStar(F)I

@@ -244,6 +244,7 @@
 .method public static semSetButtonShapeEnabled(Landroid/widget/TextView;Z)V
     .locals 5
 
+    .line 1
     sget-object v0, Landroidx/reflect/widget/SeslTextViewReflector;->mClass:Ljava/lang/Class;
 
     const/4 v1, 0x1
@@ -266,6 +267,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
+    .line 2
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -281,6 +283,7 @@
 .method public static semSetButtonShapeEnabled(Landroid/widget/TextView;ZI)V
     .locals 6
 
+    .line 3
     sget-object v0, Landroidx/reflect/widget/SeslTextViewReflector;->mClass:Ljava/lang/Class;
 
     const/4 v1, 0x2
@@ -309,6 +312,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
+    .line 4
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1

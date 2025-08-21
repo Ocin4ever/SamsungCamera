@@ -136,6 +136,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/LinkedHashMultimap;
 
     const/16 v1, 0x10
@@ -161,8 +162,10 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/LinkedHashMultimap;
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/collect/Maps;->capacity(I)I
 
     move-result p0
@@ -192,6 +195,7 @@
         }
     .end annotation
 
+    .line 4
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -206,6 +210,7 @@
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {v0, p0}, Lcom/google/common/collect/LinkedHashMultimap;->putAll(Lcom/google/common/collect/Multimap;)Z
 
     return-object v0
@@ -538,6 +543,7 @@
 .method public bridge synthetic createCollection()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/LinkedHashMultimap;->createCollection()Ljava/util/Set;
 
     move-result-object p0
@@ -559,6 +565,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Lcom/google/common/collect/LinkedHashMultimap$ValueSet;
 
     iget v1, p0, Lcom/google/common/collect/LinkedHashMultimap;->valueSetCapacity:I
@@ -578,6 +585,7 @@
         }
     .end annotation
 
+    .line 2
     iget p0, p0, Lcom/google/common/collect/LinkedHashMultimap;->valueSetCapacity:I
 
     invoke-static {p0}, Lcom/google/common/collect/Platform;->newLinkedHashSetWithExpectedSize(I)Ljava/util/Set;
@@ -590,6 +598,7 @@
 .method public bridge synthetic entries()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/LinkedHashMultimap;->entries()Ljava/util/Set;
 
     move-result-object p0
@@ -608,6 +617,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/AbstractSetMultimap;->entries()Ljava/util/Set;
 
     move-result-object p0
@@ -725,6 +735,7 @@
 .method public bridge synthetic putAll(Lcom/google/common/collect/Multimap;)Z
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractMultimap;->putAll(Lcom/google/common/collect/Multimap;)Z
 
     move-result p0
@@ -739,6 +750,7 @@
         .end annotation
     .end param
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractMultimap;->putAll(Ljava/lang/Object;Ljava/lang/Iterable;)Z
 
     move-result p0
@@ -773,6 +785,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/LinkedHashMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p0
@@ -796,6 +809,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractSetMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p0

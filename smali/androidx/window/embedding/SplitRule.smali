@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 7
 
+    .line 1
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -48,14 +49,19 @@
 .method public constructor <init>(IIFI)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Landroidx/window/embedding/EmbeddingRule;-><init>()V
 
+    .line 4
     iput p1, p0, Landroidx/window/embedding/SplitRule;->minWidth:I
 
+    .line 5
     iput p2, p0, Landroidx/window/embedding/SplitRule;->minSmallestWidth:I
 
+    .line 6
     iput p3, p0, Landroidx/window/embedding/SplitRule;->splitRatio:F
 
+    .line 7
     iput p4, p0, Landroidx/window/embedding/SplitRule;->layoutDirection:I
 
     return-void
@@ -93,6 +99,7 @@
 
     const/4 p4, 0x3
 
+    .line 2
     :cond_3
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/window/embedding/SplitRule;-><init>(IIFI)V
 

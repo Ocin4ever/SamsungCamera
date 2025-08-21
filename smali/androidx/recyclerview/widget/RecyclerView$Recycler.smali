@@ -182,6 +182,7 @@
 .method private invalidateDisplayListInt(Landroid/view/ViewGroup;Z)V
     .locals 4
 
+    .line 3
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -193,14 +194,17 @@
     :goto_0
     if-ltz v0, :cond_1
 
+    .line 4
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
+    .line 5
     instance-of v3, v2, Landroid/view/ViewGroup;
 
     if-eqz v3, :cond_0
 
+    .line 6
     check-cast v2, Landroid/view/ViewGroup;
 
     invoke-direct {p0, v2, v1}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->invalidateDisplayListInt(Landroid/view/ViewGroup;Z)V
@@ -215,6 +219,7 @@
 
     return-void
 
+    .line 7
     :cond_2
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
@@ -226,19 +231,24 @@
 
     const/4 p0, 0x0
 
+    .line 8
     invoke-virtual {p1, p0}, Landroid/view/View;->setVisibility(I)V
 
+    .line 9
     invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
 
+    .line 10
     :cond_3
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
     move-result p0
 
+    .line 11
     invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
 
+    .line 12
     invoke-virtual {p1, p0}, Landroid/view/View;->setVisibility(I)V
 
     :goto_1
@@ -248,12 +258,14 @@
 .method private invalidateDisplayListInt(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 1
 
+    .line 1
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     instance-of v0, p1, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Landroid/view/ViewGroup;
 
     const/4 v0, 0x0
@@ -307,6 +319,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->poolingContainerDetach(Landroidx/recyclerview/widget/RecyclerView$Adapter;Z)V
 
     return-void
@@ -322,10 +335,12 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$Recycler;->mRecyclerPool:Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->detachForPoolingContainer(Landroidx/recyclerview/widget/RecyclerView$Adapter;Z)V
 
     :cond_0
@@ -1497,6 +1512,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->getViewForPosition(IZ)Landroid/view/View;
 
     move-result-object p0
@@ -1509,6 +1525,7 @@
 
     const-wide v0, 0x7fffffffffffffffL
 
+    .line 2
     invoke-virtual {p0, p1, p2, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$Recycler;->tryGetViewHolderForPositionByDeadline(IZJ)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object p0

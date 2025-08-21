@@ -12,6 +12,7 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/util/concurrent/Executor;)V
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/google/common/eventbus/Dispatcher;->legacyAsync()Lcom/google/common/eventbus/Dispatcher;
 
     move-result-object v0
@@ -26,6 +27,7 @@
 .method public constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 3
 
+    .line 3
     invoke-static {}, Lcom/google/common/eventbus/Dispatcher;->legacyAsync()Lcom/google/common/eventbus/Dispatcher;
 
     move-result-object v0
@@ -44,6 +46,7 @@
 
     const-string v0, "default"
 
+    .line 2
     invoke-static {}, Lcom/google/common/eventbus/Dispatcher;->legacyAsync()Lcom/google/common/eventbus/Dispatcher;
 
     move-result-object v1

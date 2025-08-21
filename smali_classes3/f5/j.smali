@@ -29,6 +29,7 @@
 
     const/4 v6, -0x1
 
+    .line 1
     new-instance v7, Lf5/i;
 
     invoke-direct {v7, p2}, Lf5/i;-><init>(Ljava/util/List;)V
@@ -53,8 +54,10 @@
 .method public constructor <init>(ILjava/util/List;IIIILjava/util/function/IntFunction;)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Landroid/util/Range;
 
     const/4 v1, 0x0
@@ -67,24 +70,32 @@
 
     iput-object v0, p0, Lf5/j;->i:Landroid/util/Range;
 
+    .line 4
     iput-object p2, p0, Lf5/j;->d:Ljava/util/List;
 
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Lf5/j;->e:Ljava/util/List;
 
+    .line 6
     iput p1, p0, Lf5/j;->a:I
 
+    .line 7
     iput p6, p0, Lf5/j;->b:I
 
+    .line 8
     iput p5, p0, Lf5/j;->c:I
 
+    .line 9
     iput p3, p0, Lf5/j;->f:I
 
+    .line 10
     iput p4, p0, Lf5/j;->g:I
 
+    .line 11
     iput-object p7, p0, Lf5/j;->h:Ljava/util/function/IntFunction;
 
     return-void

@@ -53,8 +53,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;)V
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/cropper/view/CropImageView;->initCropImageView(Landroid/content/Context;)V
 
     return-void
@@ -63,8 +65,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/cropper/view/CropImageView;->initCropImageView(Landroid/content/Context;)V
 
     return-void
@@ -73,8 +77,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 5
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 6
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/cropper/view/CropImageView;->initCropImageView(Landroid/content/Context;)V
 
     return-void
@@ -980,6 +986,7 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     new-instance p1, Landroid/graphics/Rect;
 
     iget-object v0, p0, Lcom/sec/android/app/camera/cropper/view/CropImageView;->mResizedBitmap:Landroid/graphics/Bitmap;
@@ -1000,6 +1007,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget v0, p0, Lcom/sec/android/app/camera/cropper/view/CropImageView;->mPreviewScaledRatio:F
 
@@ -1007,6 +1015,7 @@
 
     move-result-object p1
 
+    .line 3
     iget-object v0, p0, Lcom/sec/android/app/camera/cropper/view/CropImageView;->mOriginalImageInfo:Lcom/sec/android/app/camera/cropper/view/CropImageView$OriginalImageInfo;
 
     invoke-static {v0}, Lcom/sec/android/app/camera/cropper/view/CropImageView$OriginalImageInfo;->d(Lcom/sec/android/app/camera/cropper/view/CropImageView$OriginalImageInfo;)I
@@ -1029,11 +1038,13 @@
 
     move-result-object p1
 
+    .line 4
     :goto_0
     invoke-static {p1}, Lcom/sec/android/app/camera/cropper/util/RectUtil;->convertRectToArrayList(Landroid/graphics/Rect;)Ljava/util/ArrayList;
 
     move-result-object p1
 
+    .line 5
     new-instance v0, Landroid/util/Size;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/cropper/view/CropImageView;->mResizedBitmap:Landroid/graphics/Bitmap;
@@ -1052,14 +1063,18 @@
 
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/cropper/polygon/PolygonHelper;->adjustPolygonBoundary(Landroid/util/Size;Ljava/util/ArrayList;)V
 
+    .line 6
     invoke-static {p1}, Lcom/sec/android/app/camera/cropper/polygon/PolygonHelper;->sortPointsClockwise(Ljava/util/ArrayList;)V
 
+    .line 7
     invoke-static {p1}, Lcom/sec/android/app/camera/cropper/handle/HandleHelper;->initHandleList(Ljava/util/ArrayList;)V
 
+    .line 8
     iget-object v0, p0, Lcom/sec/android/app/camera/cropper/view/CropImageView;->mPolygon:Lcom/sec/android/app/camera/cropper/polygon/Polygon;
 
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/cropper/polygon/Polygon;->setPointList(Ljava/util/ArrayList;)V
 
+    .line 9
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -1076,12 +1091,14 @@
         }
     .end annotation
 
+    .line 10
     invoke-static {p1}, Lcom/sec/android/app/camera/cropper/util/CropImageUtil;->isInvalidInitialPointList(Ljava/util/ArrayList;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 11
     iget-object p1, p0, Lcom/sec/android/app/camera/cropper/view/CropImageView;->mResizedBitmap:Landroid/graphics/Bitmap;
 
     invoke-static {p1}, Lcom/sec/android/app/camera/cropper/util/ArrayUtil;->createPointListFromBitmap(Landroid/graphics/Bitmap;)Ljava/util/ArrayList;
@@ -1090,6 +1107,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_0
     new-instance v0, Landroid/graphics/RectF;
 
@@ -1113,14 +1131,17 @@
 
     invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/RectF;-><init>(FFFF)V
 
+    .line 13
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/cropper/handle/HandleHelper;->getVirtualHandleIdList(Landroid/graphics/RectF;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v1
 
+    .line 14
     invoke-static {v0, p1, v1}, Lcom/sec/android/app/camera/cropper/util/CropImageUtil;->getPointListWithRealPoint(Landroid/graphics/RectF;Ljava/util/ArrayList;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object p1
 
+    .line 15
     :goto_0
     new-instance v0, Landroid/util/Size;
 
@@ -1140,10 +1161,13 @@
 
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/cropper/polygon/PolygonHelper;->adjustPolygonBoundary(Landroid/util/Size;Ljava/util/ArrayList;)V
 
+    .line 16
     invoke-static {p1}, Lcom/sec/android/app/camera/cropper/polygon/PolygonHelper;->sortPointsClockwise(Ljava/util/ArrayList;)V
 
+    .line 17
     invoke-static {p1}, Lcom/sec/android/app/camera/cropper/handle/HandleHelper;->initHandleList(Ljava/util/ArrayList;)V
 
+    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1162,10 +1186,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 19
     iget-object v0, p0, Lcom/sec/android/app/camera/cropper/view/CropImageView;->mPolygon:Lcom/sec/android/app/camera/cropper/polygon/Polygon;
 
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/cropper/polygon/Polygon;->setPointList(Ljava/util/ArrayList;)V
 
+    .line 20
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void

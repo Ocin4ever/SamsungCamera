@@ -178,10 +178,12 @@
 .method public addMapper(Landroidx/databinding/DataBinderMapper;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Landroidx/databinding/MergedDataBinderMapper;->mExistingMappers:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -190,14 +192,17 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Landroidx/databinding/MergedDataBinderMapper;->mMappers:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 4
     invoke-virtual {p1}, Landroidx/databinding/DataBinderMapper;->collectDependencies()Ljava/util/List;
 
     move-result-object p1
 
+    .line 5
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -215,6 +220,7 @@
 
     check-cast v0, Landroidx/databinding/DataBinderMapper;
 
+    .line 6
     invoke-virtual {p0, v0}, Landroidx/databinding/MergedDataBinderMapper;->addMapper(Landroidx/databinding/DataBinderMapper;)V
 
     goto :goto_0
@@ -226,6 +232,7 @@
 .method public addMapper(Ljava/lang/String;)V
     .locals 1
 
+    .line 7
     iget-object p0, p0, Landroidx/databinding/MergedDataBinderMapper;->mFeatureBindingMappers:Ljava/util/List;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -299,6 +306,7 @@
 .method public getDataBinder(Landroidx/databinding/DataBindingComponent;Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/databinding/MergedDataBinderMapper;->mMappers:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -318,6 +326,7 @@
 
     check-cast v1, Landroidx/databinding/DataBinderMapper;
 
+    .line 2
     invoke-virtual {v1, p1, p2, p3}, Landroidx/databinding/DataBinderMapper;->getDataBinder(Landroidx/databinding/DataBindingComponent;Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
 
     move-result-object v1
@@ -326,6 +335,7 @@
 
     return-object v1
 
+    .line 3
     :cond_1
     invoke-direct {p0}, Landroidx/databinding/MergedDataBinderMapper;->loadFeatures()Z
 
@@ -333,6 +343,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 4
     invoke-virtual {p0, p1, p2, p3}, Landroidx/databinding/MergedDataBinderMapper;->getDataBinder(Landroidx/databinding/DataBindingComponent;Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
 
     move-result-object p0
@@ -348,6 +359,7 @@
 .method public getDataBinder(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
     .locals 2
 
+    .line 5
     iget-object v0, p0, Landroidx/databinding/MergedDataBinderMapper;->mMappers:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -367,6 +379,7 @@
 
     check-cast v1, Landroidx/databinding/DataBinderMapper;
 
+    .line 6
     invoke-virtual {v1, p1, p2, p3}, Landroidx/databinding/DataBinderMapper;->getDataBinder(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
 
     move-result-object v1
@@ -375,6 +388,7 @@
 
     return-object v1
 
+    .line 7
     :cond_1
     invoke-direct {p0}, Landroidx/databinding/MergedDataBinderMapper;->loadFeatures()Z
 
@@ -382,6 +396,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 8
     invoke-virtual {p0, p1, p2, p3}, Landroidx/databinding/MergedDataBinderMapper;->getDataBinder(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
 
     move-result-object p0

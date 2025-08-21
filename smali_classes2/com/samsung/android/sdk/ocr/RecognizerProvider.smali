@@ -531,6 +531,7 @@
 .method public getRecognizer(Landroid/graphics/Bitmap;Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;)Lcom/samsung/android/sdk/ocr/IOCRecognizer;
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/samsung/android/sdk/ocr/RecognizerProvider$1;->$SwitchMap$com$samsung$android$sdk$ocr$OCRType:[I
 
     iget-object v1, p0, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->mOCRType:Lcom/samsung/android/sdk/ocr/OCRType;
@@ -553,6 +554,7 @@
 
     if-eq v0, p1, :cond_0
 
+    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -577,6 +579,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-direct {p0, p2}, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->getHandwrittenTypeRecognizer(Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;)Lcom/samsung/android/sdk/ocr/IOCRecognizer;
 
@@ -584,6 +587,7 @@
 
     return-object p0
 
+    .line 4
     :cond_1
     invoke-direct {p0, p2}, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->getPrintedTypeRecognizer(Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;)Lcom/samsung/android/sdk/ocr/IOCRecognizer;
 
@@ -591,6 +595,7 @@
 
     return-object p0
 
+    .line 5
     :cond_2
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->getAllTypeRecognizer(Landroid/graphics/Bitmap;Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;)Lcom/samsung/android/sdk/ocr/IOCRecognizer;
 
@@ -602,10 +607,12 @@
 .method public getRecognizer(ZLcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;)Lcom/samsung/android/sdk/ocr/IOCRecognizer;
     .locals 1
 
+    .line 6
     invoke-virtual {p2, p1}, Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;->setHandwrittenResult(Z)V
 
     if-eqz p1, :cond_0
 
+    .line 7
     iget-object p0, p0, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->mSOCRecognizer:Lcom/samsung/android/sdk/ocr/IOCRecognizer;
 
     goto :goto_0
@@ -613,6 +620,7 @@
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->mMOCRecognizer:Lcom/samsung/android/sdk/ocr/IOCRecognizer;
 
+    .line 8
     :goto_0
     invoke-interface {p0}, Lcom/samsung/android/sdk/ocr/IOCRecognizer;->getVersion()Ljava/lang/String;
 

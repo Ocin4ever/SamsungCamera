@@ -647,6 +647,7 @@
 .method public inflate(ILandroidx/preference/PreferenceGroup;)Landroidx/preference/Preference;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/preference/PreferenceInflater;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -659,6 +660,7 @@
 
     move-result-object p1
 
+    .line 2
     :try_start_0
     invoke-virtual {p0, p1, p2}, Landroidx/preference/PreferenceInflater;->inflate(Lorg/xmlpull/v1/XmlPullParser;Landroidx/preference/PreferenceGroup;)Landroidx/preference/Preference;
 
@@ -666,6 +668,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->close()V
 
     return-object p0
@@ -675,21 +678,25 @@
 
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->close()V
 
+    .line 4
     throw p0
 .end method
 
 .method public inflate(Lorg/xmlpull/v1/XmlPullParser;Landroidx/preference/PreferenceGroup;)Landroidx/preference/Preference;
     .locals 5
 
+    .line 5
     iget-object v0, p0, Landroidx/preference/PreferenceInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 6
     :try_start_0
     invoke-static {p1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v1
 
+    .line 7
     iget-object v2, p0, Landroidx/preference/PreferenceInflater;->mConstructorArgs:[Ljava/lang/Object;
 
     iget-object v3, p0, Landroidx/preference/PreferenceInflater;->mContext:Landroid/content/Context;
@@ -700,6 +707,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     :cond_0
     :try_start_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -717,6 +725,7 @@
     :cond_1
     if-ne v2, v3, :cond_2
 
+    .line 9
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -725,12 +734,14 @@
 
     move-result-object v2
 
+    .line 10
     check-cast v2, Landroidx/preference/PreferenceGroup;
 
     invoke-direct {p0, p2, v2}, Landroidx/preference/PreferenceInflater;->onMergeRoots(Landroidx/preference/PreferenceGroup;Landroidx/preference/PreferenceGroup;)Landroidx/preference/PreferenceGroup;
 
     move-result-object p2
 
+    .line 11
     invoke-direct {p0, p1, p2, v1}, Landroidx/preference/PreferenceInflater;->rInflate(Lorg/xmlpull/v1/XmlPullParser;Landroidx/preference/Preference;Landroid/util/AttributeSet;)V
     :try_end_1
     .catch Landroid/view/InflateException; {:try_start_1 .. :try_end_1} :catch_2
@@ -738,6 +749,7 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 12
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -745,6 +757,7 @@
 
     return-object p2
 
+    .line 13
     :cond_2
     :try_start_3
     new-instance p0, Landroid/view/InflateException;
@@ -779,6 +792,7 @@
     :catch_0
     move-exception p0
 
+    .line 14
     :try_start_4
     new-instance p2, Landroid/view/InflateException;
 
@@ -786,6 +800,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 15
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
 
     move-result-object p1
@@ -796,6 +811,7 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 16
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -808,13 +824,16 @@
 
     invoke-direct {p2, p1}, Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
 
+    .line 17
     invoke-virtual {p2, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
+    .line 18
     throw p2
 
     :catch_1
     move-exception p0
 
+    .line 19
     new-instance p1, Landroid/view/InflateException;
 
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
@@ -823,18 +842,22 @@
 
     invoke-direct {p1, p2}, Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
 
+    .line 20
     invoke-virtual {p1, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
+    .line 21
     throw p1
 
     :catch_2
     move-exception p0
 
+    .line 22
     throw p0
 
     :catchall_0
     move-exception p0
 
+    .line 23
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0

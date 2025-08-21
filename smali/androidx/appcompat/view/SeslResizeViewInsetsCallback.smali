@@ -25,6 +25,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/appcompat/view/SeslResizeViewInsetsCallback;-><init>(Landroid/view/View;III)V
 
     return-void
@@ -33,20 +34,27 @@
 .method public constructor <init>(Landroid/view/View;III)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p4}, Landroid/view/WindowInsetsAnimation$Callback;-><init>(I)V
 
     const/4 p4, -0x1
 
+    .line 3
     iput p4, p0, Landroidx/appcompat/view/SeslResizeViewInsetsCallback;->mOriginalHeight:I
 
+    .line 4
     iput p4, p0, Landroidx/appcompat/view/SeslResizeViewInsetsCallback;->mOriginalHeightSpec:I
 
+    .line 5
     iput-object p1, p0, Landroidx/appcompat/view/SeslResizeViewInsetsCallback;->mView:Landroid/view/View;
 
+    .line 6
     iput p2, p0, Landroidx/appcompat/view/SeslResizeViewInsetsCallback;->mPersistentInsetTypes:I
 
+    .line 7
     iput p3, p0, Landroidx/appcompat/view/SeslResizeViewInsetsCallback;->mDeferInsetTypes:I
 
+    .line 8
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -59,6 +67,7 @@
 
     iput p1, p0, Landroidx/appcompat/view/SeslResizeViewInsetsCallback;->mOldOrientation:I
 
+    .line 9
     iget-object p1, p0, Landroidx/appcompat/view/SeslResizeViewInsetsCallback;->mView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;

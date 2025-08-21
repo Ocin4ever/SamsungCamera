@@ -17,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +36,7 @@
 
     move-object v5, p4
 
+    .line 2
     invoke-direct/range {v0 .. v5}, Lb4/f;-><init>(Ljava/lang/String;JLjava/lang/String;Lb4/c;)V
 
     return-void
@@ -43,14 +45,19 @@
 .method public constructor <init>(Ljava/lang/String;JLjava/lang/String;Lb4/c;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     iput-object p1, p0, Lb4/f;->a:Ljava/lang/String;
 
+    .line 5
     iput-wide p2, p0, Lb4/f;->b:J
 
+    .line 6
     iput-object p4, p0, Lb4/f;->c:Ljava/lang/String;
 
+    .line 7
     iput-object p5, p0, Lb4/f;->d:Lb4/c;
 
     return-void

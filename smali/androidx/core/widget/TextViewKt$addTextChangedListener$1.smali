@@ -56,6 +56,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     check-cast p1, Ljava/lang/CharSequence;
 
     check-cast p2, Ljava/lang/Number;
@@ -86,5 +87,6 @@
 .method public final invoke(Ljava/lang/CharSequence;III)V
     .locals 0
 
+    .line 1
     return-void
 .end method

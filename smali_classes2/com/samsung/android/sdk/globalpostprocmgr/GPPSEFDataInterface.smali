@@ -41,6 +41,7 @@
 .method public static addSEFData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)Z
     .locals 9
 
+    .line 3
     new-instance v8, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFData;
 
     const/4 v4, 0x0
@@ -61,6 +62,7 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[BIIZ)V
 
+    .line 4
     sget-object p0, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFDataInterface;->mSefDataList:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -73,6 +75,7 @@
 .method public static addSEFData(Ljava/lang/String;Ljava/lang/String;[BII)Z
     .locals 9
 
+    .line 1
     new-instance v8, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFData;
 
     const-string v3, ""
@@ -93,6 +96,7 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[BIIZ)V
 
+    .line 2
     sget-object p0, Lcom/samsung/android/sdk/globalpostprocmgr/GPPSEFDataInterface;->mSefDataList:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z

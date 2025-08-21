@@ -118,6 +118,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, [J
 
     check-cast p2, [J
@@ -132,6 +133,7 @@
 .method public compare([J[J)I
     .locals 6
 
+    .line 2
     array-length p0, p1
 
     array-length v0, p2
@@ -145,6 +147,7 @@
     :goto_0
     if-ge v0, p0, :cond_1
 
+    .line 3
     aget-wide v1, p1, v0
 
     aget-wide v3, p2, v0
@@ -153,6 +156,7 @@
 
     if-eqz v5, :cond_0
 
+    .line 4
     invoke-static {v1, v2, v3, v4}, Lcom/google/common/primitives/UnsignedLongs;->compare(JJ)I
 
     move-result p0
@@ -164,6 +168,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     array-length p0, p1
 

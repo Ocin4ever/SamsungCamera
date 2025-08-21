@@ -26,6 +26,7 @@
 .method public bridge synthetic putBoolean(Z)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/hash/Hasher;->putBoolean(Z)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -39,6 +40,7 @@
 .method public bridge synthetic putByte(B)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/hash/Hasher;->putByte(B)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -58,6 +60,7 @@
 .method public bridge synthetic putBytes(Ljava/nio/ByteBuffer;)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/hash/Hasher;->putBytes(Ljava/nio/ByteBuffer;)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -68,6 +71,7 @@
 .method public bridge synthetic putBytes([B)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 2
     invoke-interface {p0, p1}, Lcom/google/common/hash/Hasher;->putBytes([B)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -78,6 +82,7 @@
 .method public bridge synthetic putBytes([BII)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 3
     invoke-interface {p0, p1, p2, p3}, Lcom/google/common/hash/Hasher;->putBytes([BII)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -91,6 +96,7 @@
 .method public bridge synthetic putChar(C)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/hash/Hasher;->putChar(C)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -104,6 +110,7 @@
 .method public bridge synthetic putDouble(D)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1, p2}, Lcom/google/common/hash/Hasher;->putDouble(D)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -117,6 +124,7 @@
 .method public bridge synthetic putFloat(F)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/hash/Hasher;->putFloat(F)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -130,6 +138,7 @@
 .method public bridge synthetic putInt(I)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/hash/Hasher;->putInt(I)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -143,6 +152,7 @@
 .method public bridge synthetic putLong(J)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1, p2}, Lcom/google/common/hash/Hasher;->putLong(J)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -173,6 +183,7 @@
 .method public bridge synthetic putShort(S)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/hash/Hasher;->putShort(S)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -186,6 +197,7 @@
 .method public bridge synthetic putString(Ljava/lang/CharSequence;Ljava/nio/charset/Charset;)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1, p2}, Lcom/google/common/hash/Hasher;->putString(Ljava/lang/CharSequence;Ljava/nio/charset/Charset;)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -199,6 +211,7 @@
 .method public bridge synthetic putUnencodedChars(Ljava/lang/CharSequence;)Lcom/google/common/hash/PrimitiveSink;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/hash/Hasher;->putUnencodedChars(Ljava/lang/CharSequence;)Lcom/google/common/hash/Hasher;
 
     move-result-object p0

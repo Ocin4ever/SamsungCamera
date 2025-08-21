@@ -57,6 +57,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, p1, v0}, Landroidx/appcompat/widget/TooltipCompat;->setTooltipText(Landroid/view/View;Ljava/lang/CharSequence;Z)V
 
     return-void
@@ -67,10 +68,12 @@
 
     if-nez p2, :cond_0
 
+    .line 2
     invoke-static {p0, p1}, Landroidx/appcompat/widget/TooltipCompat$Api26Impl;->setTooltipText(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-static {p0, p1}, Landroidx/appcompat/widget/TooltipCompatHandler;->setTooltipText(Landroid/view/View;Ljava/lang/CharSequence;)V
 

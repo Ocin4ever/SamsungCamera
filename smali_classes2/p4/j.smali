@@ -77,6 +77,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/j;->k:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/j;->l:Landroid/util/SparseIntArray;
@@ -101,6 +102,7 @@
 
     const/4 v0, 0x7
 
+    .line 2
     aget-object v0, p3, v0
 
     move-object v4, v0
@@ -181,8 +183,10 @@
 
     const-wide/16 v0, -0x1
 
+    .line 3
     iput-wide v0, v13, Lp4/j;->j:J
 
+    .line 4
     iget-object v0, v13, Lp4/i;->b:Lcom/sec/android/app/camera/widget/RotatableConstraintLayout;
 
     const/4 v1, 0x0
@@ -191,8 +195,10 @@
 
     move-object/from16 v0, p2
 
+    .line 5
     invoke-virtual {p0, v0}, Landroidx/databinding/ViewDataBinding;->setRootTag(Landroid/view/View;)V
 
+    .line 6
     invoke-virtual {p0}, Lp4/j;->invalidateAll()V
 
     return-void

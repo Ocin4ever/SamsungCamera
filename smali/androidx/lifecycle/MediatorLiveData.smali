@@ -39,8 +39,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/lifecycle/MutableLiveData;-><init>()V
 
+    .line 2
     new-instance v0, Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-direct {v0}, Landroidx/arch/core/internal/SafeIterableMap;-><init>()V
@@ -58,8 +60,10 @@
         }
     .end annotation
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/lifecycle/MutableLiveData;-><init>(Ljava/lang/Object;)V
 
+    .line 4
     new-instance p1, Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-direct {p1}, Landroidx/arch/core/internal/SafeIterableMap;-><init>()V

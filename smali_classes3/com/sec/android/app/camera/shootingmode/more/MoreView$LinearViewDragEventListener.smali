@@ -25,6 +25,7 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/shootingmode/more/MoreView;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/more/MoreView$LinearViewDragEventListener;->this$0:Lcom/sec/android/app/camera/shootingmode/more/MoreView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,6 +36,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/shootingmode/more/MoreView;Lcom/sec/android/app/camera/shootingmode/more/t;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/shootingmode/more/MoreView$LinearViewDragEventListener;-><init>(Lcom/sec/android/app/camera/shootingmode/more/MoreView;)V
 
     return-void

@@ -46,10 +46,12 @@
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     if-nez p2, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p2
@@ -58,6 +60,7 @@
 
     move-result-object p2
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p1, p2}, Lo1/e$d;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
@@ -67,6 +70,7 @@
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void

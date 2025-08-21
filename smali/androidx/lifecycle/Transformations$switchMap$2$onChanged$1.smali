@@ -39,6 +39,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/lifecycle/Transformations$switchMap$2$onChanged$1;->invoke(Ljava/lang/Object;)V
 
     sget-object p0, Lf6/p;->a:Lf6/p;
@@ -49,6 +50,7 @@
 .method public final invoke(Ljava/lang/Object;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/lifecycle/Transformations$switchMap$2$onChanged$1;->$result:Landroidx/lifecycle/MediatorLiveData;
 
     invoke-virtual {p0, p1}, Landroidx/lifecycle/MutableLiveData;->setValue(Ljava/lang/Object;)V

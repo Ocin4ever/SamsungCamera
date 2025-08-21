@@ -536,7 +536,11 @@
 .method public isMotionPhotoSupported()Z
     .locals 0
 
-    const/4 p0, 0x0
+    iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/feature/ShootingModeFeatureProviderImpl;->mCurrentShootingModeFeature:Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
+
+    invoke-interface {p0}, Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;->isMotionPhotoSupported()Z
+
+    move-result p0
 
     return p0
 .end method

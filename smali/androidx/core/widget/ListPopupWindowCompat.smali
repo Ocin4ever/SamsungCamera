@@ -23,6 +23,7 @@
 .method public static createDragToOpenListener(Landroid/widget/ListPopupWindow;Landroid/view/View;)Landroid/view/View$OnTouchListener;
     .locals 0
 
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/widget/ListPopupWindowCompat$Api19Impl;->createDragToOpenListener(Landroid/widget/ListPopupWindow;Landroid/view/View;)Landroid/view/View$OnTouchListener;
 
     move-result-object p0
@@ -35,6 +36,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     check-cast p0, Landroid/widget/ListPopupWindow;
 
     invoke-static {p0, p1}, Landroidx/core/widget/ListPopupWindowCompat;->createDragToOpenListener(Landroid/widget/ListPopupWindow;Landroid/view/View;)Landroid/view/View$OnTouchListener;

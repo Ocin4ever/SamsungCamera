@@ -9,7 +9,7 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "SpenOcrEngine"
 
-.field private static mSOCRSupport:Z
+.field private static mSOCRSupport:Z = false
 
 
 # instance fields
@@ -30,14 +30,18 @@
 .method public constructor <init>()V
     .locals 4
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 13
     iput-object v0, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrEngine;->mModelManager:Lcom/samsung/android/sdk/pen/ocr/SpenIOcrModelManager;
 
+    .line 14
     iput-object v0, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrEngine;->mModelLoader:Lcom/samsung/android/sdk/pen/ocr/SpenIOcrModelLoader;
 
+    .line 15
     invoke-virtual {p0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrEngine;->Native_init()J
 
     move-result-wide v0
@@ -54,6 +58,7 @@
 
     const-string v0, "SpenOcrEngine::SpenOcrEngine() Failed! (mNativeHandle == 0)"
 
+    .line 16
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -63,24 +68,30 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelLoaderFactory$MODEL_LOADER;)V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrEngine;->mModelManager:Lcom/samsung/android/sdk/pen/ocr/SpenIOcrModelManager;
 
+    .line 3
     iput-object v0, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrEngine;->mModelLoader:Lcom/samsung/android/sdk/pen/ocr/SpenIOcrModelLoader;
 
+    .line 4
     sget-boolean v0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrEngine;->mSOCRSupport:Z
 
     if-nez v0, :cond_0
 
+    .line 5
     invoke-static {p1}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrEngine;->loadOcrLibrary(Landroid/content/Context;)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrEngine;->mSOCRSupport:Z
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrEngine;->Native_init()J
 
@@ -98,10 +109,12 @@
 
     const-string p0, "SpenOcrEngine::SpenOcrEngine() Failed! (mNativeHandle == 0)"
 
+    .line 7
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 8
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -135,6 +148,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 9
     new-instance v0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelManager;
 
     iget-wide v1, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrEngine;->mNativeHandle:J
@@ -147,12 +161,14 @@
 
     iput-object v0, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrEngine;->mModelManager:Lcom/samsung/android/sdk/pen/ocr/SpenIOcrModelManager;
 
+    .line 10
     invoke-static {p1, v0, p2}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelLoaderFactory;->createModelLoader(Landroid/content/Context;Lcom/samsung/android/sdk/pen/ocr/SpenIOcrModelManager;Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelLoaderFactory$MODEL_LOADER;)Lcom/samsung/android/sdk/pen/ocr/SpenIOcrModelLoader;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrEngine;->mModelLoader:Lcom/samsung/android/sdk/pen/ocr/SpenIOcrModelLoader;
 
+    .line 11
     invoke-interface {p1}, Lcom/samsung/android/sdk/pen/ocr/SpenIOcrModelLoader;->loadCommonDB()Z
 
     return-void

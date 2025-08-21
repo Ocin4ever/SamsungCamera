@@ -86,28 +86,34 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 8
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult;->blockInfoList:Ljava/util/List;
 
+    .line 9
     sget-object v1, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$BlockInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
 
+    .line 10
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult;->entityInfoList:Ljava/util/List;
 
+    .line 11
     sget-object v1, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$EntityInfo;->CREATOR:Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$EntityInfo$CREATOR;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
 
+    .line 12
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
@@ -150,12 +156,16 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     iput-object p1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult;->blockInfoList:Ljava/util/List;
 
+    .line 5
     iput-object p2, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult;->entityInfoList:Ljava/util/List;
 
+    .line 6
     iput-object p3, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult;->languageTags:Ljava/lang/String;
 
     return-void
@@ -168,6 +178,7 @@
 
     if-eqz p5, :cond_0
 
+    .line 1
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
@@ -179,6 +190,7 @@
 
     const-string p3, ""
 
+    .line 2
     :cond_1
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult;-><init>(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
 

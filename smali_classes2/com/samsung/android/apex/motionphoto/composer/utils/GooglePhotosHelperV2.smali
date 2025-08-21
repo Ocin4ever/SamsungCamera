@@ -121,6 +121,7 @@
 .method private constructor <init>(Lcom/samsung/android/apex/motionphoto/composer/utils/XmpHandler;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelperV2;->handler:Lcom/samsung/android/apex/motionphoto/composer/utils/XmpHandler;
@@ -131,6 +132,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/apex/motionphoto/composer/utils/XmpHandler;Lkotlin/jvm/internal/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelperV2;-><init>(Lcom/samsung/android/apex/motionphoto/composer/utils/XmpHandler;)V
 
     return-void

@@ -127,6 +127,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lb6/c;->d:Lb6/f;
 
     invoke-direct {p0, v0}, Lb6/c;-><init>(Ljava/util/concurrent/ThreadFactory;)V
@@ -137,10 +138,13 @@
 .method public constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Lr5/a;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lb6/c;->b:Ljava/util/concurrent/ThreadFactory;
 
+    .line 4
     new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v0, Lb6/c;->i:Lb6/c$a;
@@ -149,6 +153,7 @@
 
     iput-object p1, p0, Lb6/c;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 5
     invoke-virtual {p0}, Lb6/c;->d()V
 
     return-void

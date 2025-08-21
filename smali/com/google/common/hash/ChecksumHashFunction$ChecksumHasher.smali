@@ -24,10 +24,12 @@
 .method private constructor <init>(Lcom/google/common/hash/ChecksumHashFunction;Ljava/util/zip/Checksum;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/hash/ChecksumHashFunction$ChecksumHasher;->this$0:Lcom/google/common/hash/ChecksumHashFunction;
 
     invoke-direct {p0}, Lcom/google/common/hash/AbstractByteHasher;-><init>()V
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -42,6 +44,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/hash/ChecksumHashFunction;Ljava/util/zip/Checksum;Lcom/google/common/hash/ChecksumHashFunction$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/hash/ChecksumHashFunction$ChecksumHasher;-><init>(Lcom/google/common/hash/ChecksumHashFunction;Ljava/util/zip/Checksum;)V
 
     return-void
@@ -87,6 +90,7 @@
 .method public update(B)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/hash/ChecksumHashFunction$ChecksumHasher;->checksum:Ljava/util/zip/Checksum;
 
     invoke-interface {p0, p1}, Ljava/util/zip/Checksum;->update(I)V
@@ -97,6 +101,7 @@
 .method public update([BII)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/hash/ChecksumHashFunction$ChecksumHasher;->checksum:Ljava/util/zip/Checksum;
 
     invoke-interface {p0, p1, p2, p3}, Ljava/util/zip/Checksum;->update([BII)V

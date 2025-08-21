@@ -23,6 +23,7 @@
 .method public static setImageUri(Landroid/widget/ImageView;Landroid/net/Uri;)V
     .locals 0
 
+    .line 3
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageURI(Landroid/net/Uri;)V
 
     return-void
@@ -35,10 +36,12 @@
 
     const/4 p1, 0x0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageURI(Landroid/net/Uri;)V
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

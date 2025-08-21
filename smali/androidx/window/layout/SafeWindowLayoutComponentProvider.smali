@@ -51,6 +51,7 @@
 .method public static final synthetic access$doesReturn(Landroidx/window/layout/SafeWindowLayoutComponentProvider;Ljava/lang/reflect/Method;Ljava/lang/Class;)Z
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/window/layout/SafeWindowLayoutComponentProvider;->doesReturn(Ljava/lang/reflect/Method;Ljava/lang/Class;)Z
 
     move-result p0
@@ -61,6 +62,7 @@
 .method public static final synthetic access$doesReturn(Landroidx/window/layout/SafeWindowLayoutComponentProvider;Ljava/lang/reflect/Method;Lu6/c;)Z
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/window/layout/SafeWindowLayoutComponentProvider;->doesReturn(Ljava/lang/reflect/Method;Lu6/c;)Z
 
     move-result p0
@@ -167,6 +169,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
 
     move-result-object p0
@@ -189,6 +192,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p2}, Lp6/a;->a(Lu6/c;)Ljava/lang/Class;
 
     move-result-object p2

@@ -388,8 +388,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object v5, p4, Landroidx/work/impl/model/WorkSpec;->id:Ljava/lang/String;
 
+    .line 2
     invoke-virtual {p1}, Landroidx/work/impl/WorkDatabase;->workSpecDao()Landroidx/work/impl/model/WorkSpecDao;
 
     move-result-object v0
@@ -400,6 +402,7 @@
 
     if-eqz v2, :cond_5
 
+    .line 3
     iget-object v0, v2, Landroidx/work/impl/model/WorkSpec;->state:Landroidx/work/WorkInfo$State;
 
     invoke-virtual {v0}, Landroidx/work/WorkInfo$State;->isFinished()Z
@@ -412,6 +415,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {v2}, Landroidx/work/impl/model/WorkSpec;->isPeriodic()Z
 
@@ -425,16 +429,19 @@
 
     if-nez v0, :cond_4
 
+    .line 5
     invoke-virtual {p0, v5}, Landroidx/work/impl/Processor;->isEnqueued(Ljava/lang/String;)Z
 
     move-result p0
 
     if-nez p0, :cond_1
 
+    .line 6
     move-object v0, p3
 
     check-cast v0, Ljava/lang/Iterable;
 
+    .line 7
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -452,10 +459,12 @@
 
     check-cast v1, Landroidx/work/impl/Scheduler;
 
+    .line 8
     invoke-interface {v1, v5}, Landroidx/work/impl/Scheduler;->cancel(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 9
     :cond_1
     new-instance v8, Landroidx/work/impl/g;
 
@@ -477,11 +486,13 @@
 
     if-nez p0, :cond_2
 
+    .line 10
     invoke-static {p2, p1, p3}, Landroidx/work/impl/Schedulers;->schedule(Landroidx/work/Configuration;Landroidx/work/impl/WorkDatabase;Ljava/util/List;)V
 
     :cond_2
     if-eqz p0, :cond_3
 
+    .line 11
     sget-object p0, Landroidx/work/WorkManager$UpdateResult;->APPLIED_FOR_NEXT_RUN:Landroidx/work/WorkManager$UpdateResult;
 
     goto :goto_1
@@ -492,11 +503,14 @@
     :goto_1
     return-object p0
 
+    .line 12
     :cond_4
     sget-object p0, Landroidx/work/impl/WorkerUpdater$updateWorkImpl$type$1;->INSTANCE:Landroidx/work/impl/WorkerUpdater$updateWorkImpl$type$1;
 
+    .line 13
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
+    .line 14
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -533,10 +547,12 @@
 
     move-result-object p0
 
+    .line 15
     invoke-direct {p1, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
+    .line 16
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -585,10 +601,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 17
     invoke-static {}, Landroidx/work/impl/utils/futures/SettableFuture;->create()Landroidx/work/impl/utils/futures/SettableFuture;
 
     move-result-object v0
 
+    .line 18
     invoke-virtual {p0}, Landroidx/work/impl/WorkManagerImpl;->getWorkTaskExecutor()Landroidx/work/impl/utils/taskexecutor/TaskExecutor;
 
     move-result-object v1
@@ -605,6 +623,7 @@
 
     const-string p0, "future"
 
+    .line 19
     invoke-static {v0, p0}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0

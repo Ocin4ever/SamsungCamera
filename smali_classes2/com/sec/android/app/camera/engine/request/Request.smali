@@ -32,8 +32,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/engine/request/CameraHolder;Lcom/sec/android/app/camera/engine/request/MakerHolder;Lcom/sec/android/app/camera/interfaces/InternalEngine;Lcom/sec/android/app/camera/engine/request/RequestId;)V
     .locals 0
 
+    .line 8
     invoke-direct {p0, p2, p3, p4}, Lcom/sec/android/app/camera/engine/request/Request;-><init>(Lcom/sec/android/app/camera/engine/request/MakerHolder;Lcom/sec/android/app/camera/interfaces/InternalEngine;Lcom/sec/android/app/camera/engine/request/RequestId;)V
 
+    .line 9
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/request/Request;->mCameraHolder:Lcom/sec/android/app/camera/engine/request/CameraHolder;
 
     return-void
@@ -42,22 +44,29 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/engine/request/MakerHolder;Lcom/sec/android/app/camera/interfaces/InternalEngine;Lcom/sec/android/app/camera/engine/request/RequestId;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/sec/android/app/camera/engine/request/Request;->mDiscarded:Z
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/request/Request;->mNextState:Lcom/sec/android/app/camera/interfaces/Engine$State;
 
+    .line 4
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/request/Request;->mNextCaptureState:Lcom/sec/android/app/camera/interfaces/Engine$CaptureState;
 
+    .line 5
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/request/Request;->mMakerHolder:Lcom/sec/android/app/camera/engine/request/MakerHolder;
 
+    .line 6
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/request/Request;->mEngine:Lcom/sec/android/app/camera/interfaces/InternalEngine;
 
+    .line 7
     iput-object p3, p0, Lcom/sec/android/app/camera/engine/request/Request;->mRequestId:Lcom/sec/android/app/camera/engine/request/RequestId;
 
     return-void

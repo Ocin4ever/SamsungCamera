@@ -338,6 +338,7 @@
 .method public static convertYuvToRGB([BII)Landroid/graphics/Bitmap;
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/google/android/renderscript/Toolkit;->a:Lcom/google/android/renderscript/Toolkit;
 
     sget-object v1, Ly1/b;->b:Ly1/b;
@@ -352,6 +353,7 @@
 .method public static convertYuvToRGB([BIIIIIZ)Landroid/graphics/Bitmap;
     .locals 2
 
+    .line 2
     sget-object v0, Lcom/google/android/renderscript/Toolkit;->a:Lcom/google/android/renderscript/Toolkit;
 
     sget-object v1, Ly1/b;->b:Ly1/b;
@@ -360,10 +362,12 @@
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {v0, p0, p3, p4}, Lcom/google/android/renderscript/Toolkit;->d(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
+    .line 4
     invoke-static {p0, p5, p6}, Lcom/sec/android/app/camera/util/ImageUtils;->rotateAndMirror(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -398,6 +402,7 @@
 
     const-string v0, "yyyyMMdd_HHmmss"
 
+    .line 1
     invoke-static {v0, p0, p1}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -412,6 +417,7 @@
 .method public static createFileName(JI)Ljava/lang/String;
     .locals 2
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -444,6 +450,7 @@
 .method public static createFileName(JLjava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -591,14 +598,17 @@
 .method public static getBitmap(Landroid/content/Context;I)Landroid/graphics/Bitmap;
     .locals 2
 
+    .line 5
     invoke-static {p0, p1}, Landroidx/appcompat/content/res/AppCompatResources;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
+    .line 6
     instance-of v1, v0, Lcom/samsung/android/graphics/spr/SemPathRenderingDrawable;
 
     if-eqz v1, :cond_0
 
+    .line 7
     check-cast v0, Lcom/samsung/android/graphics/spr/SemPathRenderingDrawable;
 
     invoke-virtual {v0}, Lcom/samsung/android/graphics/spr/SemPathRenderingDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -611,6 +621,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -629,14 +640,17 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
+    .line 2
     instance-of v1, v0, Lcom/samsung/android/graphics/spr/SemPathRenderingDrawable;
 
     if-eqz v1, :cond_0
 
+    .line 3
     check-cast v0, Lcom/samsung/android/graphics/spr/SemPathRenderingDrawable;
 
     invoke-virtual {v0}, Lcom/samsung/android/graphics/spr/SemPathRenderingDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -649,6 +663,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-static {p0, p1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -1322,6 +1337,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 8
     invoke-static {p1, v0}, Lcom/sec/android/app/camera/util/Util;->floatEquals(FF)Z
 
     move-result v0
@@ -1330,11 +1346,13 @@
 
     return-object p0
 
+    .line 9
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
+    .line 10
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
@@ -1361,22 +1379,26 @@
 
     if-le v1, v0, :cond_1
 
+    .line 11
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-virtual {p0, v1, v4}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
+    .line 12
     invoke-static {p0, v3, v0, v4}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
+    .line 13
     invoke-static {p0, v2, p1, v4}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
     return-object p0
 
+    .line 14
     :cond_1
     invoke-static {p0, v2, p1, v4}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
@@ -1388,6 +1410,7 @@
 .method public static getResizedBitmap(Landroid/graphics/Bitmap;IIII)Landroid/graphics/Bitmap;
     .locals 9
 
+    .line 1
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     const/4 v1, 0x1
@@ -1396,6 +1419,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
@@ -1412,27 +1436,32 @@
 
     if-le p0, p4, :cond_0
 
+    .line 3
     invoke-static {v0, v3, p4, v1}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
+    .line 4
     :cond_0
     invoke-static {v0, p1, p2, v1}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
+    .line 5
     invoke-static {}, Lcom/sec/android/app/camera/util/factory/MatrixFactory;->create()Landroid/graphics/Matrix;
 
     move-result-object v7
 
     int-to-float p0, p3
 
+    .line 6
     invoke-virtual {v7, p0}, Landroid/graphics/Matrix;->postRotate(F)Z
 
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
+    .line 7
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
@@ -1869,6 +1898,7 @@
 
     const/4 v0, 0x0
 
+    .line 28
     invoke-static {p0, v0, p1, p2, p3}, Lcom/sec/android/app/camera/util/ImageUtils;->getVideoThumbnail(Ljava/lang/String;Ljava/io/FileDescriptor;III)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -1883,10 +1913,12 @@
 
     const-string v1, "getVideoThumbnail"
 
+    .line 1
     invoke-static {v1}, Lcom/sec/android/app/TraceWrapper;->traceBegin(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
+    .line 2
     :try_start_0
     new-instance v2, Landroid/media/MediaMetadataRetriever;
 
@@ -1897,14 +1929,17 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     :try_start_1
     invoke-virtual {v2, p0}, Landroid/media/MediaMetadataRetriever;->setDataSource(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v2, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Ljava/io/FileDescriptor;)V
 
+    .line 5
     :goto_0
     invoke-virtual {v2}, Landroid/media/MediaMetadataRetriever;->getEmbeddedPicture()[B
 
@@ -1912,6 +1947,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 6
     array-length p1, p0
 
     const/4 v3, 0x0
@@ -1923,6 +1959,7 @@
     :cond_1
     if-eqz v1, :cond_2
 
+    .line 7
     invoke-static {v1, p2}, Lcom/sec/android/app/camera/util/ImageUtils;->getRotatedBitmap(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -1932,6 +1969,7 @@
     :cond_2
     const-wide/16 p0, 0x0
 
+    .line 8
     invoke-virtual {v2, p0, p1}, Landroid/media/MediaMetadataRetriever;->getFrameAtTime(J)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -1941,6 +1979,7 @@
     :goto_1
     move-object v1, p0
 
+    .line 9
     :try_start_2
     invoke-virtual {v2}, Landroid/media/MediaMetadataRetriever;->close()V
     :try_end_2
@@ -1952,6 +1991,7 @@
     :catchall_0
     move-exception p0
 
+    .line 10
     :try_start_3
     invoke-virtual {v2}, Landroid/media/MediaMetadataRetriever;->close()V
     :try_end_3
@@ -1974,6 +2014,7 @@
     :catch_0
     const-string p0, "getVideoThumbnail retriever.release failed"
 
+    .line 11
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
@@ -1981,8 +2022,10 @@
     :catch_1
     const-string p0, "getVideoThumbnail failed"
 
+    .line 12
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 13
     :goto_3
     invoke-static {}, Lcom/sec/android/app/TraceWrapper;->traceEnd()V
 
@@ -1996,10 +2039,12 @@
 
     const-string v1, "getVideoThumbnail"
 
+    .line 14
     invoke-static {v1}, Lcom/sec/android/app/TraceWrapper;->traceBegin(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
+    .line 15
     :try_start_0
     new-instance v2, Landroid/media/MediaMetadataRetriever;
 
@@ -2010,14 +2055,17 @@
 
     if-eqz p0, :cond_0
 
+    .line 16
     :try_start_1
     invoke-virtual {v2, p0}, Landroid/media/MediaMetadataRetriever;->setDataSource(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 17
     :cond_0
     invoke-virtual {v2, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Ljava/io/FileDescriptor;)V
 
+    .line 18
     :goto_0
     invoke-virtual {v2}, Landroid/media/MediaMetadataRetriever;->getEmbeddedPicture()[B
 
@@ -2027,6 +2075,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 19
     array-length v3, p0
 
     invoke-static {p0, p1, v3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
@@ -2038,6 +2087,7 @@
 
     const/4 p0, 0x2
 
+    .line 20
     invoke-static {v1, p2, p3, p4, p0}, Lcom/sec/android/app/camera/util/ImageUtils;->getResizedBitmap(Landroid/graphics/Bitmap;IIII)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -2047,11 +2097,13 @@
 
     goto :goto_2
 
+    .line 21
     :cond_2
     invoke-virtual {v2, p2, p3, p1, p1}, Landroid/media/MediaMetadataRetriever;->semSetVideoSize(IIZZ)V
 
     const-wide/16 p0, 0x0
 
+    .line 22
     invoke-virtual {v2, p0, p1}, Landroid/media/MediaMetadataRetriever;->getFrameAtTime(J)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -2060,6 +2112,7 @@
 
     goto :goto_1
 
+    .line 23
     :goto_2
     :try_start_2
     invoke-virtual {v2}, Landroid/media/MediaMetadataRetriever;->close()V
@@ -2072,6 +2125,7 @@
     :catchall_0
     move-exception p0
 
+    .line 24
     :try_start_3
     invoke-virtual {v2}, Landroid/media/MediaMetadataRetriever;->close()V
     :try_end_3
@@ -2094,6 +2148,7 @@
     :catch_0
     const-string p0, "getVideoThumbnail failed"
 
+    .line 25
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
@@ -2101,8 +2156,10 @@
     :catch_1
     const-string p0, "getVideoThumbnail retriever.release failed"
 
+    .line 26
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 27
     :goto_4
     invoke-static {}, Lcom/sec/android/app/TraceWrapper;->traceEnd()V
 
@@ -2467,29 +2524,36 @@
 .method public static makeBitmap(Ljava/lang/String;I)Landroid/graphics/Bitmap;
     .locals 2
 
+    .line 1
     :try_start_0
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
+    .line 2
     iput p1, v0, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     const/4 p1, 0x0
 
+    .line 3
     iput-boolean p1, v0, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
+    .line 4
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     iput-object v1, v0, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
+    .line 5
     iput-boolean p1, v0, Landroid/graphics/BitmapFactory$Options;->inPreferQualityOverSpeed:Z
 
     const/16 p1, 0x4000
 
     new-array p1, p1, [B
 
+    .line 6
     iput-object p1, v0, Landroid/graphics/BitmapFactory$Options;->inTempStorage:[B
 
+    .line 7
     invoke-static {p0, v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -2503,6 +2567,7 @@
 
     const-string p1, "makeBitmap failed : got oom exception"
 
+    .line 8
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -2515,6 +2580,7 @@
 
     const/4 v0, 0x0
 
+    .line 9
     :try_start_0
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
@@ -2522,10 +2588,13 @@
 
     const/4 v2, 0x1
 
+    .line 10
     iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
+    .line 11
     invoke-static {p0, v1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
+    .line 12
     invoke-static {v1, p1, p2}, Lcom/sec/android/app/camera/util/ImageUtils;->calculateInSampleSize(Landroid/graphics/BitmapFactory$Options;II)I
 
     move-result p1
@@ -2534,14 +2603,18 @@
 
     const/4 p1, 0x0
 
+    .line 13
     iput-boolean p1, v1, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
+    .line 14
     sget-object p2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     iput-object p2, v1, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
+    .line 15
     iput-boolean p1, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
+    .line 16
     invoke-static {p0, v1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -2555,17 +2628,20 @@
 
     return-object p0
 
+    .line 17
     :cond_1
     invoke-static {}, Lcom/sec/android/app/camera/util/factory/MatrixFactory;->create()Landroid/graphics/Matrix;
 
     move-result-object v6
 
+    .line 18
     invoke-static {p0}, Lcom/sec/android/app/camera/util/ImageUtils;->isSupportedConfig(Landroid/graphics/Bitmap;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
+    .line 19
     sget-object p2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-virtual {p0, p2, p1}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
@@ -2577,12 +2653,14 @@
 
     int-to-float p0, p3
 
+    .line 20
     invoke-virtual {v6, p0}, Landroid/graphics/Matrix;->postRotate(F)Z
 
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
+    .line 21
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v4
@@ -2606,6 +2684,7 @@
 
     const-string p1, "makeBitmap failed : got oom exception"
 
+    .line 22
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -2616,6 +2695,7 @@
 
     const/4 v0, 0x0
 
+    .line 23
     :try_start_0
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
@@ -2623,14 +2703,17 @@
 
     const/4 v2, 0x1
 
+    .line 24
     iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
+    .line 25
     array-length v2, p0
 
     const/4 v3, 0x0
 
     invoke-static {p0, v3, v2, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
+    .line 26
     iget-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->mCancel:Z
 
     if-nez v2, :cond_1
@@ -2647,6 +2730,7 @@
 
     goto :goto_0
 
+    .line 27
     :cond_0
     invoke-static {v1, v4, p1}, Lcom/sec/android/app/camera/util/ImageUtils;->computeSampleSize(Landroid/graphics/BitmapFactory$Options;II)I
 
@@ -2654,14 +2738,18 @@
 
     iput p1, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
+    .line 28
     iput-boolean v3, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
+    .line 29
     iput-boolean v3, v1, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
+    .line 30
     sget-object p1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     iput-object p1, v1, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
+    .line 31
     array-length p1, p0
 
     invoke-static {p0, v3, p1, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
@@ -2681,6 +2769,7 @@
 
     const-string p1, "makeBitmap failed : got oom exception"
 
+    .line 32
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -2689,6 +2778,7 @@
 .method public static makeDirectory(Ljava/io/File;)Z
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -2705,6 +2795,7 @@
 
     const-string v0, "Failed to create directory"
 
+    .line 3
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -2720,6 +2811,7 @@
 .method public static makeDirectory(Ljava/lang/String;)Z
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -3163,6 +3255,7 @@
 
     const/4 v1, 0x0
 
+    .line 3
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -3171,6 +3264,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 4
     :try_start_1
     invoke-virtual {p0}, Ljava/io/File;->createNewFile()Z
 
@@ -3180,8 +3274,10 @@
 
     const-string p0, "writeBitmapToJpegFile : save file already exist. skip create new file."
 
+    .line 5
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     :cond_0
     sget-object p0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -3191,6 +3287,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 7
     :try_start_2
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -3204,6 +3301,7 @@
     :catchall_0
     move-exception p0
 
+    .line 8
     :try_start_3
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -3226,6 +3324,7 @@
     :catch_0
     const-string p0, "writeBitmapToJpegFile : IOException"
 
+    .line 9
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -3233,6 +3332,7 @@
     :catch_1
     const-string p0, "writeBitmapToJpegFile : FileNotFoundException"
 
+    .line 10
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
@@ -3242,6 +3342,7 @@
 .method public static writeBitmapToJpegFile(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;)Z
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3262,6 +3363,7 @@
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 2
     invoke-static {v0, p2}, Lcom/sec/android/app/camera/util/ImageUtils;->writeBitmapToJpegFile(Ljava/io/File;Landroid/graphics/Bitmap;)Z
 
     move-result p0

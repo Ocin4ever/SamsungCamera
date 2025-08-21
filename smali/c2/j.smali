@@ -31,10 +31,13 @@
 .method public constructor <init>(Lz1/e;Lz1/w;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lz1/x;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lc2/j;->a:Lz1/e;
 
+    .line 4
     iput-object p2, p0, Lc2/j;->b:Lz1/w;
 
     return-void
@@ -43,6 +46,7 @@
 .method public synthetic constructor <init>(Lz1/e;Lz1/w;Lc2/j$a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lc2/j;-><init>(Lz1/e;Lz1/w;)V
 
     return-void

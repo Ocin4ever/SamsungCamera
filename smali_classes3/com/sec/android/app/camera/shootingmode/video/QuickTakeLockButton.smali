@@ -35,8 +35,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance p1, Landroid/animation/ValueAnimator;
 
     invoke-direct {p1}, Landroid/animation/ValueAnimator;-><init>()V
@@ -45,14 +47,17 @@
 
     const/4 p1, 0x0
 
+    .line 3
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/video/QuickTakeLockButton;->mDarkMode:Z
 
     const/4 p1, 0x0
 
+    .line 4
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/video/QuickTakeLockButton;->mTranslateY:F
 
     const/4 p1, 0x0
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/shootingmode/video/QuickTakeLockButton;->initView(Landroid/util/AttributeSet;)V
 
     return-void
@@ -61,8 +66,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 6
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 7
     new-instance p1, Landroid/animation/ValueAnimator;
 
     invoke-direct {p1}, Landroid/animation/ValueAnimator;-><init>()V
@@ -71,12 +78,15 @@
 
     const/4 p1, 0x0
 
+    .line 8
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/video/QuickTakeLockButton;->mDarkMode:Z
 
     const/4 p1, 0x0
 
+    .line 9
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/video/QuickTakeLockButton;->mTranslateY:F
 
+    .line 10
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/shootingmode/video/QuickTakeLockButton;->initView(Landroid/util/AttributeSet;)V
 
     return-void

@@ -141,6 +141,7 @@
 .method public detect(Landroid/graphics/Bitmap;)Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;
     .locals 7
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -169,6 +170,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-wide v3, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrRecognizer;->mNativeHandle:J
 
     const-wide/16 v5, 0x0
@@ -177,6 +179,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;->values()[Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;
 
     move-result-object v0
@@ -189,6 +192,7 @@
 
     aget-object p1, v0, p1
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -215,6 +219,7 @@
 
     return-object p1
 
+    .line 5
     :cond_0
     sget-object p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;->OE_RecogError:Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;
 
@@ -224,6 +229,7 @@
 .method public detect(Landroid/graphics/Bitmap;Lcom/samsung/android/sdk/pen/ocr/SpenRecogConfig;Lcom/samsung/android/sdk/pen/ocr/SpenOcrRecognitionListener;)Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;
     .locals 9
 
+    .line 6
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -252,6 +258,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     iget-wide v3, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrRecognizer;->mNativeHandle:J
 
     const-wide/16 v5, 0x0
@@ -260,6 +267,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;->values()[Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;
 
     move-result-object v0
@@ -280,6 +288,7 @@
 
     aget-object p1, v0, p1
 
+    .line 9
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -306,6 +315,7 @@
 
     return-object p1
 
+    .line 10
     :cond_0
     sget-object p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;->OE_RecogError:Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;
 
@@ -647,6 +657,7 @@
 .method public setConfiguration(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
+    .line 1
     iget-wide v0, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrRecognizer;->mNativeHandle:J
 
     const-wide/16 v2, 0x0
@@ -667,6 +678,7 @@
 
     aput-object p2, p1, v4
 
+    .line 2
     invoke-direct {p0, v0, v1, v3, p1}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrRecognizer;->Native_setConfiguration(J[Ljava/lang/String;[Ljava/lang/String;)V
 
     :cond_0
@@ -676,6 +688,7 @@
 .method public setConfiguration([Ljava/lang/String;[Ljava/lang/String;)V
     .locals 4
 
+    .line 3
     iget-wide v0, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrRecognizer;->mNativeHandle:J
 
     const-wide/16 v2, 0x0
@@ -684,6 +697,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrRecognizer;->Native_setConfiguration(J[Ljava/lang/String;[Ljava/lang/String;)V
 
     :cond_0

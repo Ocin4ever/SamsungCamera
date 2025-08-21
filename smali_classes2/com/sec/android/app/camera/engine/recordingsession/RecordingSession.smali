@@ -78,6 +78,7 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$Builder;)V
     .locals 1
 
+    .line 18
     new-instance v0, Lcom/sec/android/app/camera/engine/recordingsession/SessionContainer;
 
     invoke-direct {v0, p1}, Lcom/sec/android/app/camera/engine/recordingsession/SessionContainer;-><init>(Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$Builder;)V
@@ -90,8 +91,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/engine/recordingsession/SessionContainer;Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$Builder;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -104,12 +107,15 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mIsMainSession:Z
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMpUri:Landroid/net/Uri;
 
+    .line 5
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
@@ -118,6 +124,7 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaScanWaitingLatch:Ljava/util/concurrent/CountDownLatch;
 
+    .line 6
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x2
@@ -126,66 +133,77 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mPendingTrackCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 7
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mOnInfoHandlerMap:Ljava/util/HashMap;
 
+    .line 8
     new-instance v0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$1;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$1;-><init>(Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mRecordingTickRunnable:Ljava/lang/Runnable;
 
+    .line 9
     invoke-static {p2}, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$Builder;->a(Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$Builder;)Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mContext:Landroid/content/Context;
 
+    .line 10
     invoke-static {p2}, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$Builder;->c(Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$Builder;)Landroid/view/Surface;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mSurface:Landroid/view/Surface;
 
+    .line 11
     invoke-static {p2}, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$Builder;->b(Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$Builder;)Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$SessionEventListener;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mSessionEventListener:Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession$SessionEventListener;
 
+    .line 12
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/recordingsession/SessionContainer;->getDbInfo()Lcom/sec/android/app/camera/engine/recordingsession/DbInfo;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mDbInfo:Lcom/sec/android/app/camera/engine/recordingsession/DbInfo;
 
+    .line 13
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/recordingsession/SessionContainer;->getNextDbInfo()Lcom/sec/android/app/camera/engine/recordingsession/DbInfo;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mNextDbInfo:Lcom/sec/android/app/camera/engine/recordingsession/DbInfo;
 
+    .line 14
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/recordingsession/SessionContainer;->getFileInfo()Lcom/sec/android/app/camera/engine/recordingsession/FileInfo;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mFileInfo:Lcom/sec/android/app/camera/engine/recordingsession/FileInfo;
 
+    .line 15
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/recordingsession/SessionContainer;->getSettingInfo()Lcom/sec/android/app/camera/engine/recordingsession/SettingInfo;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mSettingInfo:Lcom/sec/android/app/camera/engine/recordingsession/SettingInfo;
 
+    .line 16
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/recordingsession/SessionContainer;->getMediaRecorder()Landroid/media/MediaRecorder;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->mMediaRecorder:Landroid/media/MediaRecorder;
 
+    .line 17
     invoke-direct {p0}, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSession;->initializeOnInfoEventMap()V
 
     return-void

@@ -1333,12 +1333,15 @@
 .method public setAnimation(I)V
     .locals 1
 
+    .line 1
     iput p1, p0, Lcom/airbnb/lottie/LottieAnimationView;->g:I
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView;->f:Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->o(I)Lm/l0;
 
     move-result-object p1
@@ -1351,12 +1354,15 @@
 .method public setAnimation(Ljava/lang/String;)V
     .locals 1
 
+    .line 4
     iput-object p1, p0, Lcom/airbnb/lottie/LottieAnimationView;->f:Ljava/lang/String;
 
     const/4 v0, 0x0
 
+    .line 5
     iput v0, p0, Lcom/airbnb/lottie/LottieAnimationView;->g:I
 
+    .line 6
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->n(Ljava/lang/String;)Lm/l0;
 
     move-result-object p1
@@ -1654,6 +1660,7 @@
 .method public setMaxFrame(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/airbnb/lottie/LottieAnimationView;->e:Lm/e0;
 
     invoke-virtual {p0, p1}, Lm/e0;->G0(I)V
@@ -1664,6 +1671,7 @@
 .method public setMaxFrame(Ljava/lang/String;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/airbnb/lottie/LottieAnimationView;->e:Lm/e0;
 
     invoke-virtual {p0, p1}, Lm/e0;->H0(Ljava/lang/String;)V
@@ -1694,6 +1702,7 @@
 .method public setMinFrame(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/airbnb/lottie/LottieAnimationView;->e:Lm/e0;
 
     invoke-virtual {p0, p1}, Lm/e0;->L0(I)V
@@ -1704,6 +1713,7 @@
 .method public setMinFrame(Ljava/lang/String;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/airbnb/lottie/LottieAnimationView;->e:Lm/e0;
 
     invoke-virtual {p0, p1}, Lm/e0;->M0(Ljava/lang/String;)V

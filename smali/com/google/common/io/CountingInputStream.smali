@@ -74,6 +74,7 @@
 .method public read()I
     .locals 5
 
+    .line 1
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
@@ -84,6 +85,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     iget-wide v1, p0, Lcom/google/common/io/CountingInputStream;->count:J
 
     const-wide/16 v3, 0x1
@@ -99,6 +101,7 @@
 .method public read([BII)I
     .locals 2
 
+    .line 3
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
@@ -109,6 +112,7 @@
 
     if-eq p1, p2, :cond_0
 
+    .line 4
     iget-wide p2, p0, Lcom/google/common/io/CountingInputStream;->count:J
 
     int-to-long v0, p1

@@ -170,6 +170,7 @@
 
     const/4 v0, 0x0
 
+    .line 58
     invoke-direct {p0, p1, v0}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -178,6 +179,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
+    .line 57
     sget v0, Landroidx/preference/R$attr;->preferenceStyle:I
 
     const v1, 0x101008e
@@ -196,6 +198,7 @@
 
     const/4 v0, 0x0
 
+    .line 56
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -204,70 +207,95 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const v0, 0x7fffffff
 
+    .line 2
     iput v0, p0, Landroidx/preference/Preference;->mOrder:I
 
     const/4 v1, 0x0
 
+    .line 3
     iput v1, p0, Landroidx/preference/Preference;->mViewId:I
 
     const/4 v2, 0x1
 
+    .line 4
     iput-boolean v2, p0, Landroidx/preference/Preference;->mEnabled:Z
 
+    .line 5
     iput-boolean v2, p0, Landroidx/preference/Preference;->mSelectable:Z
 
+    .line 6
     iput-boolean v2, p0, Landroidx/preference/Preference;->mPersistent:Z
 
+    .line 7
     iput-boolean v2, p0, Landroidx/preference/Preference;->mDependencyMet:Z
 
+    .line 8
     iput-boolean v2, p0, Landroidx/preference/Preference;->mParentDependencyMet:Z
 
+    .line 9
     iput-boolean v2, p0, Landroidx/preference/Preference;->mVisible:Z
 
+    .line 10
     iput-boolean v2, p0, Landroidx/preference/Preference;->mAllowDividerAbove:Z
 
+    .line 11
     iput-boolean v2, p0, Landroidx/preference/Preference;->mAllowDividerBelow:Z
 
+    .line 12
     iput-boolean v2, p0, Landroidx/preference/Preference;->mSingleLineTitle:Z
 
+    .line 13
     iput v1, p0, Landroidx/preference/Preference;->mDividerStartOffset:I
 
+    .line 14
     iput-boolean v2, p0, Landroidx/preference/Preference;->mShouldDisableView:Z
 
+    .line 15
     sget v3, Landroidx/preference/R$layout;->sesl_preference:I
 
     iput v3, p0, Landroidx/preference/Preference;->mLayoutResId:I
 
+    .line 16
     new-instance v3, Landroidx/preference/Preference$1;
 
     invoke-direct {v3, p0}, Landroidx/preference/Preference$1;-><init>(Landroidx/preference/Preference;)V
 
     iput-object v3, p0, Landroidx/preference/Preference;->mClickListener:Landroid/view/View$OnClickListener;
 
+    .line 17
     iput-boolean v1, p0, Landroidx/preference/Preference;->mIsPreferenceRoundedBg:Z
 
+    .line 18
     iput-boolean v1, p0, Landroidx/preference/Preference;->mSubheaderRound:Z
 
+    .line 19
     iput v1, p0, Landroidx/preference/Preference;->mWhere:I
 
+    .line 20
     iput-boolean v1, p0, Landroidx/preference/Preference;->mIsRoundChanged:Z
 
+    .line 21
     iput-boolean v1, p0, Landroidx/preference/Preference;->mChangedSummaryColor:Z
 
+    .line 22
     iput-boolean v1, p0, Landroidx/preference/Preference;->mChangedSummaryColorStateList:Z
 
+    .line 23
     iput-object p1, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
+    .line 24
     sget-object v3, Landroidx/preference/R$styleable;->Preference:[I
 
     invoke-virtual {p1, p2, v3, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
+    .line 25
     sget p3, Landroidx/preference/R$styleable;->Preference_icon:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_icon:I
@@ -278,6 +306,7 @@
 
     iput p3, p0, Landroidx/preference/Preference;->mIconResId:I
 
+    .line 26
     sget p3, Landroidx/preference/R$styleable;->Preference_key:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_key:I
@@ -288,6 +317,7 @@
 
     iput-object p3, p0, Landroidx/preference/Preference;->mKey:Ljava/lang/String;
 
+    .line 27
     sget p3, Landroidx/preference/R$styleable;->Preference_title:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_title:I
@@ -298,6 +328,7 @@
 
     iput-object p3, p0, Landroidx/preference/Preference;->mTitle:Ljava/lang/CharSequence;
 
+    .line 28
     sget p3, Landroidx/preference/R$styleable;->Preference_summary:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_summary:I
@@ -308,6 +339,7 @@
 
     iput-object p3, p0, Landroidx/preference/Preference;->mSummary:Ljava/lang/CharSequence;
 
+    .line 29
     sget p3, Landroidx/preference/R$styleable;->Preference_order:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_order:I
@@ -318,6 +350,7 @@
 
     iput p3, p0, Landroidx/preference/Preference;->mOrder:I
 
+    .line 30
     sget p3, Landroidx/preference/R$styleable;->Preference_fragment:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_fragment:I
@@ -328,6 +361,7 @@
 
     iput-object p3, p0, Landroidx/preference/Preference;->mFragment:Ljava/lang/String;
 
+    .line 31
     sget p3, Landroidx/preference/R$styleable;->Preference_layout:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_layout:I
@@ -340,6 +374,7 @@
 
     iput p3, p0, Landroidx/preference/Preference;->mLayoutResId:I
 
+    .line 32
     sget p3, Landroidx/preference/R$styleable;->Preference_widgetLayout:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_widgetLayout:I
@@ -350,6 +385,7 @@
 
     iput p3, p0, Landroidx/preference/Preference;->mWidgetLayoutResId:I
 
+    .line 33
     sget p3, Landroidx/preference/R$styleable;->Preference_isDotVisible:I
 
     invoke-static {p2, p3, p3, v1}, Landroidx/core/content/res/TypedArrayUtils;->getBoolean(Landroid/content/res/TypedArray;IIZ)Z
@@ -358,6 +394,7 @@
 
     iput-boolean p3, p0, Landroidx/preference/Preference;->mIsDotVisible:Z
 
+    .line 34
     sget p3, Landroidx/preference/R$styleable;->Preference_enabled:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_enabled:I
@@ -368,6 +405,7 @@
 
     iput-boolean p3, p0, Landroidx/preference/Preference;->mEnabled:Z
 
+    .line 35
     sget p3, Landroidx/preference/R$styleable;->Preference_selectable:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_selectable:I
@@ -378,6 +416,7 @@
 
     iput-boolean p3, p0, Landroidx/preference/Preference;->mSelectable:Z
 
+    .line 36
     sget p3, Landroidx/preference/R$styleable;->Preference_persistent:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_persistent:I
@@ -388,6 +427,7 @@
 
     iput-boolean p3, p0, Landroidx/preference/Preference;->mPersistent:Z
 
+    .line 37
     sget p3, Landroidx/preference/R$styleable;->Preference_dependency:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_dependency:I
@@ -398,6 +438,7 @@
 
     iput-object p3, p0, Landroidx/preference/Preference;->mDependencyKey:Ljava/lang/String;
 
+    .line 38
     sget p3, Landroidx/preference/R$styleable;->Preference_allowDividerAbove:I
 
     iget-boolean p4, p0, Landroidx/preference/Preference;->mSelectable:Z
@@ -408,6 +449,7 @@
 
     iput-boolean p3, p0, Landroidx/preference/Preference;->mAllowDividerAbove:Z
 
+    .line 39
     sget p3, Landroidx/preference/R$styleable;->Preference_allowDividerBelow:I
 
     iget-boolean p4, p0, Landroidx/preference/Preference;->mSelectable:Z
@@ -418,6 +460,7 @@
 
     iput-boolean p3, p0, Landroidx/preference/Preference;->mAllowDividerBelow:Z
 
+    .line 40
     sget p3, Landroidx/preference/R$styleable;->Preference_defaultValue:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -426,6 +469,7 @@
 
     if-eqz p4, :cond_0
 
+    .line 41
     invoke-virtual {p0, p2, p3}, Landroidx/preference/Preference;->onGetDefaultValue(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
 
     move-result-object p3
@@ -434,6 +478,7 @@
 
     goto :goto_0
 
+    .line 42
     :cond_0
     sget p3, Landroidx/preference/R$styleable;->Preference_android_defaultValue:I
 
@@ -443,24 +488,28 @@
 
     if-eqz p4, :cond_1
 
+    .line 43
     invoke-virtual {p0, p2, p3}, Landroidx/preference/Preference;->onGetDefaultValue(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
 
     move-result-object p3
 
     iput-object p3, p0, Landroidx/preference/Preference;->mDefaultValue:Ljava/lang/Object;
 
+    .line 44
     :cond_1
     :goto_0
     sget p3, Landroidx/preference/R$styleable;->Preference_shouldDisableView:I
 
     sget p4, Landroidx/preference/R$styleable;->Preference_android_shouldDisableView:I
 
+    .line 45
     invoke-static {p2, p3, p4, v2}, Landroidx/core/content/res/TypedArrayUtils;->getBoolean(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p3
 
     iput-boolean p3, p0, Landroidx/preference/Preference;->mShouldDisableView:Z
 
+    .line 46
     sget p3, Landroidx/preference/R$styleable;->Preference_singleLineTitle:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -471,6 +520,7 @@
 
     if-eqz p4, :cond_2
 
+    .line 47
     sget p4, Landroidx/preference/R$styleable;->Preference_android_singleLineTitle:I
 
     invoke-static {p2, p3, p4, v2}, Landroidx/core/content/res/TypedArrayUtils;->getBoolean(Landroid/content/res/TypedArray;IIZ)Z
@@ -479,6 +529,7 @@
 
     iput-boolean p3, p0, Landroidx/preference/Preference;->mSingleLineTitle:Z
 
+    .line 48
     :cond_2
     sget p3, Landroidx/preference/R$styleable;->Preference_iconSpaceReserved:I
 
@@ -490,6 +541,7 @@
 
     iput-boolean p3, p0, Landroidx/preference/Preference;->mIconSpaceReserved:Z
 
+    .line 49
     sget p3, Landroidx/preference/R$styleable;->Preference_isPreferenceVisible:I
 
     invoke-static {p2, p3, p3, v2}, Landroidx/core/content/res/TypedArrayUtils;->getBoolean(Landroid/content/res/TypedArray;IIZ)Z
@@ -498,6 +550,7 @@
 
     iput-boolean p3, p0, Landroidx/preference/Preference;->mVisible:Z
 
+    .line 50
     sget p3, Landroidx/preference/R$styleable;->Preference_enableCopying:I
 
     invoke-static {p2, p3, p3, v1}, Landroidx/core/content/res/TypedArrayUtils;->getBoolean(Landroid/content/res/TypedArray;IIZ)Z
@@ -506,12 +559,15 @@
 
     iput-boolean p3, p0, Landroidx/preference/Preference;->mCopyingEnabled:Z
 
+    .line 51
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 52
     new-instance p2, Landroid/util/TypedValue;
 
     invoke-direct {p2}, Landroid/util/TypedValue;-><init>()V
 
+    .line 53
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p3
@@ -520,10 +576,12 @@
 
     invoke-virtual {p3, p4, p2, v2}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
+    .line 54
     iget p3, p2, Landroid/util/TypedValue;->resourceId:I
 
     if-lez p3, :cond_3
 
+    .line 55
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -873,6 +931,7 @@
 .method public compareTo(Landroidx/preference/Preference;)I
     .locals 2
 
+    .line 2
     iget v0, p0, Landroidx/preference/Preference;->mOrder:I
 
     iget v1, p1, Landroidx/preference/Preference;->mOrder:I
@@ -883,6 +942,7 @@
 
     return v0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Landroidx/preference/Preference;->mTitle:Ljava/lang/CharSequence;
 
@@ -908,6 +968,7 @@
 
     return p0
 
+    .line 4
     :cond_3
     invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -929,6 +990,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/preference/Preference;
 
     invoke-virtual {p0, p1}, Landroidx/preference/Preference;->compareTo(Landroidx/preference/Preference;)I
@@ -1938,18 +2000,22 @@
 .method public onAttachedToHierarchy(Landroidx/preference/PreferenceManager;)V
     .locals 2
 
+    .line 1
     iput-object p1, p0, Landroidx/preference/Preference;->mPreferenceManager:Landroidx/preference/PreferenceManager;
 
+    .line 2
     iget-boolean v0, p0, Landroidx/preference/Preference;->mHasId:Z
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-virtual {p1}, Landroidx/preference/PreferenceManager;->getNextId()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroidx/preference/Preference;->mId:J
 
+    .line 4
     :cond_0
     invoke-direct {p0}, Landroidx/preference/Preference;->dispatchSetInitialValue()V
 
@@ -1959,19 +2025,23 @@
 .method public onAttachedToHierarchy(Landroidx/preference/PreferenceManager;J)V
     .locals 0
 
+    .line 5
     iput-wide p2, p0, Landroidx/preference/Preference;->mId:J
 
     const/4 p2, 0x1
 
+    .line 6
     iput-boolean p2, p0, Landroidx/preference/Preference;->mHasId:Z
 
     const/4 p2, 0x0
 
+    .line 7
     :try_start_0
     invoke-virtual {p0, p1}, Landroidx/preference/Preference;->onAttachedToHierarchy(Landroidx/preference/PreferenceManager;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     iput-boolean p2, p0, Landroidx/preference/Preference;->mHasId:Z
 
     return-void
@@ -1981,6 +2051,7 @@
 
     iput-boolean p2, p0, Landroidx/preference/Preference;->mHasId:Z
 
+    .line 9
     throw p1
 .end method
 
@@ -2529,6 +2600,7 @@
 .method public onSetInitialValue(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     return-void
 .end method
 
@@ -2537,6 +2609,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     invoke-virtual {p0, p2}, Landroidx/preference/Preference;->onSetInitialValue(Ljava/lang/Object;)V
 
     return-void
@@ -2553,6 +2626,7 @@
 .method public performClick()V
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Landroidx/preference/Preference;->isEnabled()Z
 
     move-result v0
@@ -2567,9 +2641,11 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroidx/preference/Preference;->onClick()V
 
+    .line 4
     iget-object v0, p0, Landroidx/preference/Preference;->mOnClickListener:Landroidx/preference/Preference$OnPreferenceClickListener;
 
     if-eqz v0, :cond_1
@@ -2582,6 +2658,7 @@
 
     return-void
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Landroidx/preference/Preference;->getPreferenceManager()Landroidx/preference/PreferenceManager;
 
@@ -2589,12 +2666,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-virtual {v0}, Landroidx/preference/PreferenceManager;->getOnPreferenceTreeClickListener()Landroidx/preference/PreferenceManager$OnPreferenceTreeClickListener;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
+    .line 7
     invoke-interface {v0, p0}, Landroidx/preference/PreferenceManager$OnPreferenceTreeClickListener;->onPreferenceTreeClick(Landroidx/preference/Preference;)Z
 
     move-result v0
@@ -2603,15 +2682,18 @@
 
     return-void
 
+    .line 8
     :cond_2
     iget-object v0, p0, Landroidx/preference/Preference;->mIntent:Landroid/content/Intent;
 
     if-eqz v0, :cond_3
 
+    .line 9
     invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
+    .line 10
     iget-object p0, p0, Landroidx/preference/Preference;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
@@ -2624,6 +2706,7 @@
 .method public performClick(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/preference/Preference;->performClick()V
 
     return-void
@@ -3094,14 +3177,17 @@
 .method public seslSetSummaryColor(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/preference/Preference;->mSummaryColor:I
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Landroidx/preference/Preference;->mChangedSummaryColor:Z
 
     const/4 p1, 0x0
 
+    .line 3
     iput-boolean p1, p0, Landroidx/preference/Preference;->mChangedSummaryColorStateList:Z
 
     return-void
@@ -3110,14 +3196,17 @@
 .method public seslSetSummaryColor(Landroid/content/res/ColorStateList;)V
     .locals 0
 
+    .line 4
     iput-object p1, p0, Landroidx/preference/Preference;->mSummaryColorStateList:Landroid/content/res/ColorStateList;
 
     const/4 p1, 0x1
 
+    .line 5
     iput-boolean p1, p0, Landroidx/preference/Preference;->mChangedSummaryColorStateList:Z
 
     const/4 p1, 0x0
 
+    .line 6
     iput-boolean p1, p0, Landroidx/preference/Preference;->mChangedSummaryColor:Z
 
     return-void
@@ -3215,6 +3304,7 @@
 .method public setIcon(I)V
     .locals 1
 
+    .line 5
     iget-object v0, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Landroidx/appcompat/content/res/AppCompatResources;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -3223,6 +3313,7 @@
 
     invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
+    .line 6
     iput p1, p0, Landroidx/preference/Preference;->mIconResId:I
 
     return-void
@@ -3231,16 +3322,20 @@
 .method public setIcon(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
 
     if-eq v0, p1, :cond_0
 
+    .line 2
     iput-object p1, p0, Landroidx/preference/Preference;->mIcon:Landroid/graphics/drawable/Drawable;
 
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Landroidx/preference/Preference;->mIconResId:I
 
+    .line 4
     invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
 
     :cond_0
@@ -3399,6 +3494,7 @@
 .method public setSummary(I)V
     .locals 1
 
+    .line 6
     iget-object v0, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -3413,12 +3509,14 @@
 .method public setSummary(Ljava/lang/CharSequence;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/preference/Preference;->getSummaryProvider()Landroidx/preference/Preference$SummaryProvider;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Landroidx/preference/Preference;->mSummary:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -3427,13 +3525,16 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     iput-object p1, p0, Landroidx/preference/Preference;->mSummary:Ljava/lang/CharSequence;
 
+    .line 4
     invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
 
     :cond_0
     return-void
 
+    .line 5
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -3457,6 +3558,7 @@
 .method public setTitle(I)V
     .locals 1
 
+    .line 4
     iget-object v0, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -3471,6 +3573,7 @@
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/preference/Preference;->mTitle:Ljava/lang/CharSequence;
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -3479,8 +3582,10 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iput-object p1, p0, Landroidx/preference/Preference;->mTitle:Ljava/lang/CharSequence;
 
+    .line 3
     invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
 
     :cond_0

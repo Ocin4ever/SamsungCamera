@@ -78,6 +78,7 @@
 .method public constructor <init>(Landroidx/fragment/app/Fragment;)V
     .locals 1
 
+    .line 2
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
@@ -94,6 +95,7 @@
 .method public constructor <init>(Landroidx/fragment/app/FragmentActivity;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
@@ -110,20 +112,24 @@
 .method public constructor <init>(Landroidx/fragment/app/FragmentManager;Landroidx/lifecycle/Lifecycle;)V
     .locals 1
 
+    .line 3
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
+    .line 4
     new-instance v0, Landroidx/collection/LongSparseArray;
 
     invoke-direct {v0}, Landroidx/collection/LongSparseArray;-><init>()V
 
     iput-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mFragments:Landroidx/collection/LongSparseArray;
 
+    .line 5
     new-instance v0, Landroidx/collection/LongSparseArray;
 
     invoke-direct {v0}, Landroidx/collection/LongSparseArray;-><init>()V
 
     iput-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mSavedStates:Landroidx/collection/LongSparseArray;
 
+    .line 6
     new-instance v0, Landroidx/collection/LongSparseArray;
 
     invoke-direct {v0}, Landroidx/collection/LongSparseArray;-><init>()V
@@ -132,16 +138,21 @@
 
     const/4 v0, 0x0
 
+    .line 7
     iput-boolean v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mIsInGracePeriod:Z
 
+    .line 8
     iput-boolean v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mHasStaleFragments:Z
 
+    .line 9
     iput-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
+    .line 10
     iput-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
     const/4 p1, 0x1
 
+    .line 11
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->setHasStableIds(Z)V
 
     return-void
@@ -792,6 +803,7 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/viewpager2/adapter/FragmentViewHolder;
 
     invoke-virtual {p0, p1, p2}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->onBindViewHolder(Landroidx/viewpager2/adapter/FragmentViewHolder;I)V
@@ -802,10 +814,12 @@
 .method public final onBindViewHolder(Landroidx/viewpager2/adapter/FragmentViewHolder;I)V
     .locals 7
 
+    .line 2
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemId()J
 
     move-result-wide v0
 
+    .line 3
     invoke-virtual {p1}, Landroidx/viewpager2/adapter/FragmentViewHolder;->getContainer()Landroid/widget/FrameLayout;
 
     move-result-object v2
@@ -814,12 +828,14 @@
 
     move-result v2
 
+    .line 4
     invoke-direct {p0, v2}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->itemForViewHolder(I)Ljava/lang/Long;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
+    .line 5
     invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
@@ -828,12 +844,14 @@
 
     if-eqz v4, :cond_0
 
+    .line 6
     invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
 
     invoke-direct {p0, v4, v5}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->removeFragment(J)V
 
+    .line 7
     iget-object v4, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mItemIdToViewHolder:Landroidx/collection/LongSparseArray;
 
     invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
@@ -842,6 +860,7 @@
 
     invoke-virtual {v4, v5, v6}, Landroidx/collection/LongSparseArray;->remove(J)V
 
+    .line 8
     :cond_0
     iget-object v3, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mItemIdToViewHolder:Landroidx/collection/LongSparseArray;
 
@@ -851,24 +870,29 @@
 
     invoke-virtual {v3, v0, v1, v2}, Landroidx/collection/LongSparseArray;->put(JLjava/lang/Object;)V
 
+    .line 9
     invoke-direct {p0, p2}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->ensureFragment(I)V
 
+    .line 10
     invoke-virtual {p1}, Landroidx/viewpager2/adapter/FragmentViewHolder;->getContainer()Landroid/widget/FrameLayout;
 
     move-result-object p2
 
+    .line 11
     invoke-static {p2}, Landroidx/core/view/ViewCompat;->isAttachedToWindow(Landroid/view/View;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 12
     invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
+    .line 13
     new-instance v0, Landroidx/viewpager2/adapter/FragmentStateAdapter$1;
 
     invoke-direct {v0, p0, p2, p1}, Landroidx/viewpager2/adapter/FragmentStateAdapter$1;-><init>(Landroidx/viewpager2/adapter/FragmentStateAdapter;Landroid/widget/FrameLayout;Landroidx/viewpager2/adapter/FragmentViewHolder;)V
@@ -877,6 +901,7 @@
 
     goto :goto_0
 
+    .line 14
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -886,6 +911,7 @@
 
     throw p0
 
+    .line 15
     :cond_2
     :goto_0
     invoke-virtual {p0}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->gcFragments()V
@@ -896,6 +922,7 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/viewpager2/adapter/FragmentViewHolder;
 
     move-result-object p0
@@ -906,6 +933,7 @@
 .method public final onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/viewpager2/adapter/FragmentViewHolder;
     .locals 0
 
+    .line 2
     invoke-static {p1}, Landroidx/viewpager2/adapter/FragmentViewHolder;->create(Landroid/view/ViewGroup;)Landroidx/viewpager2/adapter/FragmentViewHolder;
 
     move-result-object p0
@@ -930,6 +958,7 @@
 .method public bridge synthetic onFailedToRecycleView(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .locals 0
 
+    .line 2
     check-cast p1, Landroidx/viewpager2/adapter/FragmentViewHolder;
 
     invoke-virtual {p0, p1}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->onFailedToRecycleView(Landroidx/viewpager2/adapter/FragmentViewHolder;)Z
@@ -942,6 +971,7 @@
 .method public final onFailedToRecycleView(Landroidx/viewpager2/adapter/FragmentViewHolder;)Z
     .locals 0
 
+    .line 1
     const/4 p0, 0x1
 
     return p0
@@ -950,6 +980,7 @@
 .method public bridge synthetic onViewAttachedToWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/viewpager2/adapter/FragmentViewHolder;
 
     invoke-virtual {p0, p1}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->onViewAttachedToWindow(Landroidx/viewpager2/adapter/FragmentViewHolder;)V
@@ -960,8 +991,10 @@
 .method public final onViewAttachedToWindow(Landroidx/viewpager2/adapter/FragmentViewHolder;)V
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->placeFragmentInViewHolder(Landroidx/viewpager2/adapter/FragmentViewHolder;)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->gcFragments()V
 
     return-void
@@ -970,6 +1003,7 @@
 .method public bridge synthetic onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/viewpager2/adapter/FragmentViewHolder;
 
     invoke-virtual {p0, p1}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->onViewRecycled(Landroidx/viewpager2/adapter/FragmentViewHolder;)V
@@ -980,6 +1014,7 @@
 .method public final onViewRecycled(Landroidx/viewpager2/adapter/FragmentViewHolder;)V
     .locals 2
 
+    .line 2
     invoke-virtual {p1}, Landroidx/viewpager2/adapter/FragmentViewHolder;->getContainer()Landroid/widget/FrameLayout;
 
     move-result-object p1
@@ -988,18 +1023,21 @@
 
     move-result p1
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->itemForViewHolder(I)Ljava/lang/Long;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 4
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
 
     invoke-direct {p0, v0, v1}, Landroidx/viewpager2/adapter/FragmentStateAdapter;->removeFragment(J)V
 
+    .line 5
     iget-object p0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->mItemIdToViewHolder:Landroidx/collection/LongSparseArray;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J

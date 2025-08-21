@@ -252,8 +252,10 @@
 .method public static sortDescending([B)V
     .locals 2
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -266,14 +268,18 @@
 .method public static sortDescending([BII)V
     .locals 1
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     array-length v0, p0
 
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
+    .line 5
     invoke-static {p0, p1, p2}, Ljava/util/Arrays;->sort([BII)V
 
+    .line 6
     invoke-static {p0, p1, p2}, Lcom/google/common/primitives/Bytes;->reverse([BII)V
 
     return-void

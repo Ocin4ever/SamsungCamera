@@ -71,6 +71,7 @@
 .method public add(ILjava/lang/Object;)V
     .locals 7
 
+    .line 2
     sget-object v0, Lg6/b;->a:Lg6/b$a;
 
     invoke-virtual {p0}, Lg6/d;->size()I
@@ -79,12 +80,14 @@
 
     invoke-virtual {v0, p1, v1}, Lg6/b$a;->b(II)V
 
+    .line 3
     invoke-virtual {p0}, Lg6/d;->size()I
 
     move-result v0
 
     if-ne p1, v0, :cond_0
 
+    .line 4
     invoke-virtual {p0, p2}, Lg6/g;->addLast(Ljava/lang/Object;)V
 
     return-void
@@ -92,10 +95,12 @@
     :cond_0
     if-nez p1, :cond_1
 
+    .line 5
     invoke-virtual {p0, p2}, Lg6/g;->addFirst(Ljava/lang/Object;)V
 
     return-void
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lg6/d;->size()I
 
@@ -107,6 +112,7 @@
 
     invoke-virtual {p0, v0}, Lg6/g;->f(I)V
 
+    .line 7
     iget v0, p0, Lg6/g;->a:I
 
     add-int/2addr v0, p1
@@ -115,6 +121,7 @@
 
     move-result v0
 
+    .line 8
     invoke-virtual {p0}, Lg6/d;->size()I
 
     move-result v2
@@ -127,20 +134,24 @@
 
     if-ge p1, v2, :cond_3
 
+    .line 9
     invoke-virtual {p0, v0}, Lg6/g;->e(I)I
 
     move-result p1
 
+    .line 10
     iget v0, p0, Lg6/g;->a:I
 
     invoke-virtual {p0, v0}, Lg6/g;->e(I)I
 
     move-result v0
 
+    .line 11
     iget v2, p0, Lg6/g;->a:I
 
     if-lt p1, v2, :cond_2
 
+    .line 12
     iget-object v3, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     aget-object v4, v3, v2
@@ -151,10 +162,12 @@
 
     add-int/lit8 v5, p1, 0x1
 
+    .line 13
     invoke-static {v3, v3, v2, v4, v5}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 14
     :cond_2
     iget-object v4, p0, Lg6/g;->b:[Ljava/lang/Object;
 
@@ -164,6 +177,7 @@
 
     invoke-static {v4, v4, v5, v2, v6}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 15
     iget-object v2, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     array-length v4, v2
@@ -176,17 +190,21 @@
 
     add-int/lit8 v4, p1, 0x1
 
+    .line 16
     invoke-static {v2, v2, v3, v1, v4}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 17
     :goto_0
     iget-object v2, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     aput-object p2, v2, p1
 
+    .line 18
     iput v0, p0, Lg6/g;->a:I
 
     goto :goto_2
 
+    .line 19
     :cond_3
     iget p1, p0, Lg6/g;->a:I
 
@@ -202,6 +220,7 @@
 
     if-ge v0, p1, :cond_4
 
+    .line 20
     iget-object v2, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     add-int/lit8 v3, v0, 0x1
@@ -210,11 +229,13 @@
 
     goto :goto_1
 
+    .line 21
     :cond_4
     iget-object v2, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     invoke-static {v2, v2, v1, v3, p1}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 22
     iget-object p1, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     array-length v2, p1
@@ -227,17 +248,20 @@
 
     add-int/lit8 v2, v0, 0x1
 
+    .line 23
     array-length v3, p1
 
     sub-int/2addr v3, v1
 
     invoke-static {p1, p1, v2, v0, v3}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 24
     :goto_1
     iget-object p1, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     aput-object p2, p1, v0
 
+    .line 25
     :goto_2
     invoke-virtual {p0}, Lg6/d;->size()I
 
@@ -253,6 +277,7 @@
 .method public add(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lg6/g;->addLast(Ljava/lang/Object;)V
 
     const/4 p0, 0x1
@@ -267,6 +292,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 4
     sget-object v0, Lg6/b;->a:Lg6/b$a;
 
     invoke-virtual {p0}, Lg6/d;->size()I
@@ -275,6 +301,7 @@
 
     invoke-virtual {v0, p1, v1}, Lg6/b$a;->b(II)V
 
+    .line 5
     invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
@@ -285,6 +312,7 @@
 
     return v1
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Lg6/d;->size()I
 
@@ -292,12 +320,14 @@
 
     if-ne p1, v0, :cond_1
 
+    .line 7
     invoke-virtual {p0, p2}, Lg6/g;->addAll(Ljava/util/Collection;)Z
 
     move-result p0
 
     return p0
 
+    .line 8
     :cond_1
     invoke-virtual {p0}, Lg6/d;->size()I
 
@@ -311,6 +341,7 @@
 
     invoke-virtual {p0, v0}, Lg6/g;->f(I)V
 
+    .line 9
     iget v0, p0, Lg6/g;->a:I
 
     invoke-virtual {p0}, Lg6/d;->size()I
@@ -323,6 +354,7 @@
 
     move-result v0
 
+    .line 10
     iget v2, p0, Lg6/g;->a:I
 
     add-int/2addr v2, p1
@@ -331,10 +363,12 @@
 
     move-result v2
 
+    .line 11
     invoke-interface {p2}, Ljava/util/Collection;->size()I
 
     move-result v3
 
+    .line 12
     invoke-virtual {p0}, Lg6/d;->size()I
 
     move-result v4
@@ -347,6 +381,7 @@
 
     if-ge p1, v4, :cond_6
 
+    .line 13
     iget p1, p0, Lg6/g;->a:I
 
     sub-int v0, p1, v3
@@ -355,12 +390,14 @@
 
     if-ltz v0, :cond_2
 
+    .line 14
     iget-object v1, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     invoke-static {v1, v1, v0, p1, v2}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 15
     :cond_2
     iget-object v4, p0, Lg6/g;->b:[Ljava/lang/Object;
 
@@ -370,12 +407,14 @@
 
     sub-int v6, v2, p1
 
+    .line 16
     array-length v7, v4
 
     sub-int/2addr v7, v0
 
     if-lt v7, v6, :cond_3
 
+    .line 17
     invoke-static {v4, v4, v0, p1, v2}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
     goto :goto_0
@@ -383,8 +422,10 @@
     :cond_3
     add-int v6, p1, v7
 
+    .line 18
     invoke-static {v4, v4, v0, p1, v6}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 19
     iget-object p1, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     iget v4, p0, Lg6/g;->a:I
@@ -395,6 +436,7 @@
 
     goto :goto_0
 
+    .line 20
     :cond_4
     iget-object v4, p0, Lg6/g;->b:[Ljava/lang/Object;
 
@@ -404,6 +446,7 @@
 
     if-lt v3, v2, :cond_5
 
+    .line 21
     iget-object p1, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     array-length v4, p1
@@ -414,6 +457,7 @@
 
     goto :goto_0
 
+    .line 22
     :cond_5
     iget-object p1, p0, Lg6/g;->b:[Ljava/lang/Object;
 
@@ -423,15 +467,18 @@
 
     invoke-static {p1, p1, v4, v1, v3}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 23
     iget-object p1, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     invoke-static {p1, p1, v1, v3, v2}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 24
     :goto_0
     iput v0, p0, Lg6/g;->a:I
 
     sub-int/2addr v2, v3
 
+    .line 25
     invoke-virtual {p0, v2}, Lg6/g;->h(I)I
 
     move-result p1
@@ -447,21 +494,25 @@
 
     add-int/2addr v3, v0
 
+    .line 26
     iget-object v4, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     array-length v6, v4
 
     if-gt v3, v6, :cond_7
 
+    .line 27
     invoke-static {v4, v4, p1, v2, v0}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
     goto :goto_1
 
+    .line 28
     :cond_7
     array-length v6, v4
 
     if-lt p1, v6, :cond_8
 
+    .line 29
     array-length v1, v4
 
     sub-int/2addr p1, v1
@@ -470,6 +521,7 @@
 
     goto :goto_1
 
+    .line 30
     :cond_8
     array-length v6, v4
 
@@ -477,25 +529,30 @@
 
     sub-int v3, v0, v3
 
+    .line 31
     invoke-static {v4, v4, v1, v3, v0}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 32
     iget-object v0, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     invoke-static {v0, v0, p1, v2, v3}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
     goto :goto_1
 
+    .line 33
     :cond_9
     iget-object v4, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     invoke-static {v4, v4, v3, v1, v0}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 34
     iget-object v0, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     array-length v4, v0
 
     if-lt p1, v4, :cond_a
 
+    .line 35
     array-length v1, v0
 
     sub-int/2addr p1, v1
@@ -506,6 +563,7 @@
 
     goto :goto_1
 
+    .line 36
     :cond_a
     array-length v4, v0
 
@@ -515,6 +573,7 @@
 
     invoke-static {v0, v0, v1, v4, v6}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 37
     iget-object v0, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     array-length v1, v0
@@ -523,6 +582,7 @@
 
     invoke-static {v0, v0, p1, v2, v1}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 38
     :goto_1
     invoke-virtual {p0, v2, p2}, Lg6/g;->c(ILjava/util/Collection;)V
 
@@ -537,6 +597,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
@@ -547,6 +608,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lg6/d;->size()I
 
@@ -560,6 +622,7 @@
 
     invoke-virtual {p0, v0}, Lg6/g;->f(I)V
 
+    .line 3
     iget v0, p0, Lg6/g;->a:I
 
     invoke-virtual {p0}, Lg6/d;->size()I
@@ -1987,6 +2050,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 1
 
+    .line 10
     invoke-virtual {p0}, Lg6/d;->size()I
 
     move-result v0
@@ -2007,6 +2071,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     array-length v0, p1
 
     invoke-virtual {p0}, Lg6/d;->size()I
@@ -2026,6 +2091,7 @@
 
     move-result-object p1
 
+    .line 2
     :goto_0
     iget v0, p0, Lg6/g;->a:I
 
@@ -2039,10 +2105,12 @@
 
     move-result v4
 
+    .line 3
     iget v3, p0, Lg6/g;->a:I
 
     if-ge v3, v4, :cond_1
 
+    .line 4
     iget-object v0, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -2057,6 +2125,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_1
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
@@ -2066,6 +2135,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     iget-object v0, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     iget v1, p0, Lg6/g;->a:I
@@ -2076,6 +2146,7 @@
 
     invoke-static {v0, p1, v3, v1, v2}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 7
     iget-object v0, p0, Lg6/g;->b:[Ljava/lang/Object;
 
     array-length v1, v0
@@ -2086,6 +2157,7 @@
 
     invoke-static {v0, p1, v1, v3, v4}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 8
     :cond_2
     :goto_1
     array-length v0, p1
@@ -2096,6 +2168,7 @@
 
     if-le v0, v1, :cond_3
 
+    .line 9
     invoke-virtual {p0}, Lg6/d;->size()I
 
     move-result p0

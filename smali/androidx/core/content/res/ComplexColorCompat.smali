@@ -142,6 +142,7 @@
 .method public static from(I)Landroidx/core/content/res/ComplexColorCompat;
     .locals 2
 
+    .line 3
     new-instance v0, Landroidx/core/content/res/ComplexColorCompat;
 
     const/4 v1, 0x0
@@ -154,6 +155,7 @@
 .method public static from(Landroid/content/res/ColorStateList;)Landroidx/core/content/res/ComplexColorCompat;
     .locals 3
 
+    .line 2
     new-instance v0, Landroidx/core/content/res/ComplexColorCompat;
 
     invoke-virtual {p0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
@@ -170,6 +172,7 @@
 .method public static from(Landroid/graphics/Shader;)Landroidx/core/content/res/ComplexColorCompat;
     .locals 3
 
+    .line 1
     new-instance v0, Landroidx/core/content/res/ComplexColorCompat;
 
     const/4 v1, 0x0

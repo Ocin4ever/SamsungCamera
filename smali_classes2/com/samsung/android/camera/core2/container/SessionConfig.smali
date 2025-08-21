@@ -67,14 +67,17 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)V
     .locals 3
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;->i(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)Lcom/samsung/android/camera/core2/container/SessionConfig$SurfaceConfigCollector;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/SessionConfig;->a:Lcom/samsung/android/camera/core2/container/SessionConfig$SurfaceConfigCollector;
 
+    .line 4
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;->g(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)Lcom/samsung/android/camera/core2/container/SessionConfig$PreviewCbConfigCollector;
 
     move-result-object v0
@@ -89,6 +92,7 @@
 
     invoke-direct {v1, v2, v2}, Lcom/samsung/android/camera/core2/container/SessionConfig$PreviewCbConfigCollector;-><init>(Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;)V
 
+    .line 5
     invoke-virtual {v0, v1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -97,6 +101,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/SessionConfig;->b:Lcom/samsung/android/camera/core2/container/SessionConfig$PreviewCbConfigCollector;
 
+    .line 6
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;->e(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)Lcom/samsung/android/camera/core2/container/SessionConfig$PicCbConfigCollector;
 
     move-result-object v0
@@ -109,6 +114,7 @@
 
     invoke-direct {v1, v2, v2, v2}, Lcom/samsung/android/camera/core2/container/SessionConfig$PicCbConfigCollector;-><init>(Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;)V
 
+    .line 7
     invoke-virtual {v0, v1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -117,6 +123,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/SessionConfig;->c:Lcom/samsung/android/camera/core2/container/SessionConfig$PicCbConfigCollector;
 
+    .line 8
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;->h(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)Lcom/samsung/android/camera/core2/container/SessionConfig$PicCbConfigCollector;
 
     move-result-object v0
@@ -129,6 +136,7 @@
 
     invoke-direct {v1, v2, v2, v2}, Lcom/samsung/android/camera/core2/container/SessionConfig$PicCbConfigCollector;-><init>(Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;)V
 
+    .line 9
     invoke-virtual {v0, v1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -137,6 +145,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/SessionConfig;->d:Lcom/samsung/android/camera/core2/container/SessionConfig$PicCbConfigCollector;
 
+    .line 10
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;->j(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)Lcom/samsung/android/camera/core2/container/SessionConfig$PicCbConfigCollector;
 
     move-result-object v0
@@ -149,6 +158,7 @@
 
     invoke-direct {v1, v2, v2, v2}, Lcom/samsung/android/camera/core2/container/SessionConfig$PicCbConfigCollector;-><init>(Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;)V
 
+    .line 11
     invoke-virtual {v0, v1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -157,6 +167,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/SessionConfig;->e:Lcom/samsung/android/camera/core2/container/SessionConfig$PicCbConfigCollector;
 
+    .line 12
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;->f(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)Lcom/samsung/android/camera/core2/container/SessionConfig$PicCbConfigCollector;
 
     move-result-object v0
@@ -169,6 +180,7 @@
 
     invoke-direct {v1, v2, v2, v2}, Lcom/samsung/android/camera/core2/container/SessionConfig$PicCbConfigCollector;-><init>(Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;)V
 
+    .line 13
     invoke-virtual {v0, v1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -177,12 +189,14 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/SessionConfig;->f:Lcom/samsung/android/camera/core2/container/SessionConfig$PicCbConfigCollector;
 
+    .line 14
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;->k(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/SessionConfig;->h:Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;
 
+    .line 15
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;->d(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)Lcom/samsung/android/camera/core2/container/SessionConfig$DepthCbConfigCollector;
 
     move-result-object v0
@@ -195,6 +209,7 @@
 
     invoke-direct {v1, v2, v2}, Lcom/samsung/android/camera/core2/container/SessionConfig$DepthCbConfigCollector;-><init>(Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;)V
 
+    .line 16
     invoke-virtual {v0, v1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -203,18 +218,21 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/SessionConfig;->g:Lcom/samsung/android/camera/core2/container/SessionConfig$DepthCbConfigCollector;
 
+    .line 17
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;->a(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)Lcom/samsung/android/camera/core2/container/SessionConfig$BuilderConfig;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/SessionConfig;->i:Lcom/samsung/android/camera/core2/container/SessionConfig$BuilderConfig;
 
+    .line 18
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;->c(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)Lcom/samsung/android/camera/core2/local/parameter/SemCameraParameter;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/SessionConfig;->j:Lcom/samsung/android/camera/core2/local/parameter/SemCameraParameter;
 
+    .line 19
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;->b(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)Lcom/samsung/android/camera/core2/CamDevice$SessionStateCallback;
 
     move-result-object p1
@@ -227,6 +245,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;Lcom/samsung/android/camera/core2/container/l2;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/container/SessionConfig;-><init>(Lcom/samsung/android/camera/core2/container/SessionConfig$Builder;)V
 
     return-void

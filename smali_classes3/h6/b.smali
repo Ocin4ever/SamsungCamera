@@ -35,6 +35,7 @@
 
     const/16 v0, 0xa
 
+    .line 8
     invoke-direct {p0, v0}, Lh6/b;-><init>(I)V
 
     return-void
@@ -43,6 +44,7 @@
 .method public constructor <init>(I)V
     .locals 7
 
+    .line 9
     invoke-static {p1}, Lh6/c;->d(I)[Ljava/lang/Object;
 
     move-result-object v1
@@ -59,6 +61,7 @@
 
     move-object v0, p0
 
+    .line 10
     invoke-direct/range {v0 .. v6}, Lh6/b;-><init>([Ljava/lang/Object;IIZLh6/b;Lh6/b;)V
 
     return-void
@@ -67,18 +70,25 @@
 .method public constructor <init>([Ljava/lang/Object;IIZLh6/b;Lh6/b;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lg6/d;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lh6/b;->a:[Ljava/lang/Object;
 
+    .line 3
     iput p2, p0, Lh6/b;->b:I
 
+    .line 4
     iput p3, p0, Lh6/b;->c:I
 
+    .line 5
     iput-boolean p4, p0, Lh6/b;->d:Z
 
+    .line 6
     iput-object p5, p0, Lh6/b;->e:Lh6/b;
 
+    .line 7
     iput-object p6, p0, Lh6/b;->f:Lh6/b;
 
     return-void
@@ -121,14 +131,17 @@
 .method public add(ILjava/lang/Object;)V
     .locals 2
 
+    .line 3
     invoke-virtual {p0}, Lh6/b;->i()V
 
+    .line 4
     sget-object v0, Lg6/b;->a:Lg6/b$a;
 
     iget v1, p0, Lh6/b;->c:I
 
     invoke-virtual {v0, p1, v1}, Lg6/b$a;->b(II)V
 
+    .line 5
     iget v0, p0, Lh6/b;->b:I
 
     add-int/2addr v0, p1
@@ -141,8 +154,10 @@
 .method public add(Ljava/lang/Object;)Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lh6/b;->i()V
 
+    .line 2
     iget v0, p0, Lh6/b;->b:I
 
     iget v1, p0, Lh6/b;->c:I
@@ -163,18 +178,22 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {p0}, Lh6/b;->i()V
 
+    .line 5
     sget-object v0, Lg6/b;->a:Lg6/b$a;
 
     iget v1, p0, Lh6/b;->c:I
 
     invoke-virtual {v0, p1, v1}, Lg6/b$a;->b(II)V
 
+    .line 6
     invoke-interface {p2}, Ljava/util/Collection;->size()I
 
     move-result v0
 
+    .line 7
     iget v1, p0, Lh6/b;->b:I
 
     add-int/2addr v1, p1
@@ -201,12 +220,15 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Lh6/b;->i()V
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Collection;->size()I
 
     move-result v0
 
+    .line 3
     iget v1, p0, Lh6/b;->b:I
 
     iget v2, p0, Lh6/b;->c:I
@@ -648,6 +670,7 @@
 .method public listIterator()Ljava/util/ListIterator;
     .locals 2
 
+    .line 1
     new-instance v0, Lh6/b$a;
 
     const/4 v1, 0x0
@@ -660,12 +683,14 @@
 .method public listIterator(I)Ljava/util/ListIterator;
     .locals 2
 
+    .line 2
     sget-object v0, Lg6/b;->a:Lg6/b$a;
 
     iget v1, p0, Lh6/b;->c:I
 
     invoke-virtual {v0, p1, v1}, Lg6/b$a;->b(II)V
 
+    .line 3
     new-instance v0, Lh6/b$a;
 
     invoke-direct {v0, p0, p1}, Lh6/b$a;-><init>(Lh6/b;I)V
@@ -1067,6 +1092,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 2
 
+    .line 6
     iget-object v0, p0, Lh6/b;->a:[Ljava/lang/Object;
 
     iget v1, p0, Lh6/b;->b:I
@@ -1089,12 +1115,14 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     array-length v0, p1
 
     iget v1, p0, Lh6/b;->c:I
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     iget-object v0, p0, Lh6/b;->a:[Ljava/lang/Object;
 
     iget p0, p0, Lh6/b;->b:I
@@ -1115,6 +1143,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lh6/b;->a:[Ljava/lang/Object;
 
@@ -1126,6 +1155,7 @@
 
     invoke-static {v0, p1, v3, v2, v1}, Lg6/j;->d([Ljava/lang/Object;[Ljava/lang/Object;III)[Ljava/lang/Object;
 
+    .line 4
     array-length v0, p1
 
     iget p0, p0, Lh6/b;->c:I
@@ -1134,6 +1164,7 @@
 
     const/4 v0, 0x0
 
+    .line 5
     aput-object v0, p1, p0
 
     :cond_1

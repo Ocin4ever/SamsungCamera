@@ -20,6 +20,7 @@
 .method public final next()Ljava/lang/Boolean;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lg6/m;->nextBoolean()Z
 
     move-result p0
@@ -34,6 +35,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lg6/m;->nextBoolean()Z
 
     move-result p0

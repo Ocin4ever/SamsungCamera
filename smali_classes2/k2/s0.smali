@@ -29,30 +29,41 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     sget-object v0, Lk2/v;->j:Lk2/v;
 
     invoke-direct {p0, v0}, Lk2/u;-><init>(Lk2/v;)V
 
+    .line 2
     sget-object v0, Lk2/t0;->a:Lk2/t0;
 
     iput-object v0, p0, Lk2/s0;->j:Lk2/t0;
 
+    .line 3
     iput-object p2, p0, Lk2/s0;->b:Ljava/lang/String;
 
+    .line 4
     iput-object p1, p0, Lk2/s0;->c:Ljava/lang/String;
 
+    .line 5
     iput-object p3, p0, Lk2/s0;->d:Ljava/lang/String;
 
+    .line 6
     iput-boolean p4, p0, Lk2/s0;->e:Z
 
+    .line 7
     iput-object p5, p0, Lk2/s0;->f:Ljava/lang/String;
 
+    .line 8
     iput-object p6, p0, Lk2/s0;->g:Ljava/lang/String;
 
+    .line 9
     iput-object p7, p0, Lk2/s0;->h:Ljava/lang/String;
 
+    .line 10
     iput-object p8, p0, Lk2/s0;->i:Ljava/lang/String;
 
+    .line 11
     iput-object p9, p0, Lk2/s0;->k:Ljava/lang/String;
 
     return-void
@@ -61,8 +72,10 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lk2/t0;)V
     .locals 0
 
+    .line 12
     invoke-direct/range {p0 .. p9}, Lk2/s0;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 13
     iput-object p10, p0, Lk2/s0;->j:Lk2/t0;
 
     return-void

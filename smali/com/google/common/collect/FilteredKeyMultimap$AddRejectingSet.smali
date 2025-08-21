@@ -154,6 +154,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/FilteredKeyMultimap$AddRejectingSet;->delegate()Ljava/util/Set;
 
     move-result-object p0
@@ -164,6 +165,7 @@
 .method public bridge synthetic delegate()Ljava/util/Collection;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/FilteredKeyMultimap$AddRejectingSet;->delegate()Ljava/util/Set;
 
     move-result-object p0
@@ -181,6 +183,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object p0

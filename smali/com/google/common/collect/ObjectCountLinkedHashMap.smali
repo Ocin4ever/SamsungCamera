@@ -36,6 +36,7 @@
 
     const/4 v0, 0x3
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/collect/ObjectCountLinkedHashMap;-><init>(I)V
 
     return-void
@@ -46,6 +47,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 2
     invoke-direct {p0, p1, v0}, Lcom/google/common/collect/ObjectCountLinkedHashMap;-><init>(IF)V
 
     return-void
@@ -54,6 +56,7 @@
 .method public constructor <init>(IF)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/ObjectCountHashMap;-><init>(IF)V
 
     return-void
@@ -69,8 +72,10 @@
         }
     .end annotation
 
+    .line 4
     invoke-direct {p0}, Lcom/google/common/collect/ObjectCountHashMap;-><init>()V
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/common/collect/ObjectCountHashMap;->size()I
 
     move-result v0
@@ -79,6 +84,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/google/common/collect/ObjectCountLinkedHashMap;->init(IF)V
 
+    .line 6
     invoke-virtual {p1}, Lcom/google/common/collect/ObjectCountHashMap;->firstIndex()I
 
     move-result v0
@@ -88,6 +94,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 7
     invoke-virtual {p1, v0}, Lcom/google/common/collect/ObjectCountHashMap;->getKey(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -98,6 +105,7 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/google/common/collect/ObjectCountHashMap;->put(Ljava/lang/Object;I)I
 
+    .line 8
     invoke-virtual {p1, v0}, Lcom/google/common/collect/ObjectCountHashMap;->nextIndex(I)I
 
     move-result v0

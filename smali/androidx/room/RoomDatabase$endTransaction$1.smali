@@ -50,6 +50,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Landroidx/room/RoomDatabase$endTransaction$1;->this$0:Landroidx/room/RoomDatabase;
 
     invoke-static {p0}, Landroidx/room/RoomDatabase;->access$internalEndTransaction(Landroidx/room/RoomDatabase;)V
@@ -62,6 +63,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/sqlite/db/SupportSQLiteDatabase;
 
     invoke-virtual {p0, p1}, Landroidx/room/RoomDatabase$endTransaction$1;->invoke(Landroidx/sqlite/db/SupportSQLiteDatabase;)Ljava/lang/Object;

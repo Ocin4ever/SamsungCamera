@@ -379,6 +379,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v1
@@ -393,6 +394,7 @@
 
     const-string v3, "KeyPhraseExtractor isSupported - requestType : %s, language : %s"
 
+    .line 4
     invoke-static {v3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -401,6 +403,7 @@
 
     invoke-static {v3, v0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     iget-boolean v0, p0, Lcom/samsung/android/sdk/scs/ai/text/phrase/KeyPhraseExtractor;->isEventTitleGeneratorSupported:Z
 
     if-nez v0, :cond_0
@@ -411,19 +414,23 @@
 
     return v2
 
+    .line 6
     :cond_0
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
+    .line 7
     new-instance v2, Lcom/samsung/android/sdk/scs/ai/text/phrase/a;
 
     invoke-direct {v2, p0, p1, p2}, Lcom/samsung/android/sdk/scs/ai/text/phrase/a;-><init>(Lcom/samsung/android/sdk/scs/ai/text/phrase/KeyPhraseExtractor;Lcom/samsung/android/sdk/scs/ai/text/phrase/KeyPhraseExtractor$RequestType;Ljava/lang/String;)V
 
+    .line 8
     invoke-interface {v0, v2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     move-result-object p0
 
+    .line 9
     :try_start_0
     sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -439,6 +446,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     :goto_0
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
@@ -452,6 +460,7 @@
     :catch_0
     move-exception p0
 
+    .line 11
     :try_start_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -473,6 +482,7 @@
 
     invoke-static {v3, p0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 12
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_0
@@ -480,8 +490,10 @@
     :catch_1
     move-exception p1
 
+    .line 13
     invoke-interface {p0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
+    .line 14
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -502,12 +514,14 @@
 
     invoke-static {v3, p0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 15
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
+    .line 16
     :goto_1
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -515,9 +529,11 @@
 
     return p0
 
+    .line 17
     :goto_2
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
+    .line 18
     throw p0
 .end method
 
@@ -534,6 +550,7 @@
 
     const-string v0, "KeyPhraseExtractor isSupported - language : %s"
 
+    .line 1
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -542,6 +559,7 @@
 
     invoke-static {v0, p0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     sget-object p0, Lcom/samsung/android/sdk/scs/ai/text/phrase/KeyPhraseExtractor;->SUPPORTED_LANGUAGE:Ljava/util/Set;
 
     invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;

@@ -260,6 +260,7 @@
 .method private synthetic a(D)V
     .locals 5
 
+    .line 2
     iget-object v0, p0, Lco/polarr/mgcsc/e/h;->h:Landroid/widget/TextView;
 
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -308,6 +309,7 @@
 .method public a()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lco/polarr/mgcsc/e/h;->A:Landroid/hardware/SensorManager;
 
     invoke-virtual {v0, p0}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
@@ -318,6 +320,7 @@
 .method public a(F)V
     .locals 1
 
+    .line 3
     const/high16 v0, 0x447a0000    # 1000.0f
 
     mul-float/2addr p1, v0
@@ -332,6 +335,7 @@
 .method public a(I)V
     .locals 9
 
+    .line 4
     iget-object v0, p0, Lco/polarr/mgcsc/e/h;->m:Ljava/lang/Object;
 
     monitor-enter v0
@@ -419,6 +423,7 @@
 .method public a(Landroid/widget/TextView;)V
     .locals 0
 
+    .line 5
     iput-object p1, p0, Lco/polarr/mgcsc/e/h;->h:Landroid/widget/TextView;
 
     return-void
@@ -427,6 +432,7 @@
 .method public a(Z)V
     .locals 2
 
+    .line 6
     if-eqz p1, :cond_0
 
     const-wide/16 v0, 0x0
@@ -451,6 +457,7 @@
 .method public b()F
     .locals 12
 
+    .line 1
     iget-object v0, p0, Lco/polarr/mgcsc/e/h;->m:Ljava/lang/Object;
 
     monitor-enter v0
@@ -582,6 +589,7 @@
 .method public synthetic b(D)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lco/polarr/mgcsc/e/h;->a(D)V
 
     return-void
@@ -590,6 +598,7 @@
 .method public b(F)V
     .locals 1
 
+    .line 3
     const/high16 v0, 0x447a0000    # 1000.0f
 
     mul-float/2addr p1, v0
@@ -604,6 +613,7 @@
 .method public b(I)V
     .locals 2
 
+    .line 4
     int-to-long v0, p1
 
     iput-wide v0, p0, Lco/polarr/mgcsc/e/h;->b:J
@@ -614,6 +624,7 @@
 .method public c()F
     .locals 1
 
+    .line 1
     iget p0, p0, Lco/polarr/mgcsc/e/h;->J:I
 
     int-to-float p0, p0
@@ -628,6 +639,7 @@
 .method public c(F)V
     .locals 1
 
+    .line 2
     const/high16 v0, 0x447a0000    # 1000.0f
 
     mul-float/2addr p1, v0
@@ -642,6 +654,7 @@
 .method public c(I)V
     .locals 0
 
+    .line 3
     iput p1, p0, Lco/polarr/mgcsc/e/h;->G:I
 
     return-void
@@ -650,6 +663,7 @@
 .method public d()F
     .locals 1
 
+    .line 1
     iget p0, p0, Lco/polarr/mgcsc/e/h;->I:I
 
     int-to-float p0, p0
@@ -664,6 +678,7 @@
 .method public d(F)V
     .locals 1
 
+    .line 2
     const/high16 v0, 0x447a0000    # 1000.0f
 
     mul-float/2addr p1, v0
@@ -678,6 +693,7 @@
 .method public d(I)V
     .locals 0
 
+    .line 3
     iput p1, p0, Lco/polarr/mgcsc/e/h;->z:I
 
     return-void
@@ -686,6 +702,7 @@
 .method public e()J
     .locals 4
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -700,6 +717,7 @@
 .method public e(I)V
     .locals 0
 
+    .line 2
     iput p1, p0, Lco/polarr/mgcsc/e/h;->F:I
 
     return-void

@@ -13,6 +13,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-interface {p0, p1, v0}, Landroidx/work/impl/WorkLauncher;->startWork(Landroidx/work/impl/StartStopToken;Landroidx/work/WorkerParameters$RuntimeExtras;)V
 
     return-void
@@ -30,6 +31,7 @@
 
     const/16 v0, -0x200
 
+    .line 1
     invoke-interface {p0, p1, v0}, Landroidx/work/impl/WorkLauncher;->stopWork(Landroidx/work/impl/StartStopToken;I)V
 
     return-void

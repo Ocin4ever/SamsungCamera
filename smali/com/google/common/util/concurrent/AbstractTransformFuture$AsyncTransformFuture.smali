@@ -66,12 +66,14 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1, p2}, Lcom/google/common/util/concurrent/AsyncFunction;->apply(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object p0
 
     const-string p2, "AsyncFunction.apply returned null instead of a Future. Did you mean to return immediateFuture(null)? %s"
 
+    .line 3
     invoke-static {p0, p2, p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p0
@@ -84,6 +86,7 @@
         .end annotation
     .end param
 
+    .line 1
     check-cast p1, Lcom/google/common/util/concurrent/AsyncFunction;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/util/concurrent/AbstractTransformFuture$AsyncTransformFuture;->doTransform(Lcom/google/common/util/concurrent/AsyncFunction;Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
@@ -103,6 +106,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->setFuture(Lcom/google/common/util/concurrent/ListenableFuture;)Z
 
     return-void
@@ -111,6 +115,7 @@
 .method public bridge synthetic setResult(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/util/concurrent/ListenableFuture;
 
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/AbstractTransformFuture$AsyncTransformFuture;->setResult(Lcom/google/common/util/concurrent/ListenableFuture;)V

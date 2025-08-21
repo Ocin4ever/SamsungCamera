@@ -122,6 +122,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Synchronized$SynchronizedDeque;->delegate()Ljava/util/Deque;
 
     move-result-object p0
@@ -132,6 +133,7 @@
 .method public bridge synthetic delegate()Ljava/util/Collection;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/Synchronized$SynchronizedDeque;->delegate()Ljava/util/Deque;
 
     move-result-object p0
@@ -149,6 +151,7 @@
         }
     .end annotation
 
+    .line 4
     invoke-super {p0}, Lcom/google/common/collect/Synchronized$SynchronizedQueue;->delegate()Ljava/util/Queue;
 
     move-result-object p0
@@ -161,6 +164,7 @@
 .method public bridge synthetic delegate()Ljava/util/Queue;
     .locals 0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/Synchronized$SynchronizedDeque;->delegate()Ljava/util/Deque;
 
     move-result-object p0

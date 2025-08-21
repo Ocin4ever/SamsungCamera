@@ -39,16 +39,19 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 10
     invoke-interface {p0, p1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 11
     invoke-static {p0, p2}, Landroidx/core/app/ShareCompat;->configureMenuItem(Landroid/view/MenuItem;Landroidx/core/app/ShareCompat$IntentBuilder;)V
 
     return-void
 
+    .line 12
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -80,14 +83,17 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Landroid/view/MenuItem;->getActionProvider()Landroid/view/ActionProvider;
 
     move-result-object v0
 
+    .line 2
     instance-of v1, v0, Landroid/widget/ShareActionProvider;
 
     if-nez v1, :cond_0
 
+    .line 3
     new-instance v0, Landroid/widget/ShareActionProvider;
 
     invoke-virtual {p1}, Landroidx/core/app/ShareCompat$IntentBuilder;->getContext()Landroid/content/Context;
@@ -98,9 +104,11 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     check-cast v0, Landroid/widget/ShareActionProvider;
 
+    .line 5
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -110,6 +118,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-virtual {p1}, Landroidx/core/app/ShareCompat$IntentBuilder;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -128,14 +137,17 @@
 
     move-result-object v1
 
+    .line 7
     invoke-virtual {v0, v1}, Landroid/widget/ShareActionProvider;->setShareHistoryFileName(Ljava/lang/String;)V
 
+    .line 8
     invoke-virtual {p1}, Landroidx/core/app/ShareCompat$IntentBuilder;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Landroid/widget/ShareActionProvider;->setShareIntent(Landroid/content/Intent;)V
 
+    .line 9
     invoke-interface {p0, v0}, Landroid/view/MenuItem;->setActionProvider(Landroid/view/ActionProvider;)Landroid/view/MenuItem;
 
     return-void
@@ -144,16 +156,19 @@
 .method public static getCallingActivity(Landroid/app/Activity;)Landroid/content/ComponentName;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->getCallingActivity()Landroid/content/ComponentName;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
+    .line 3
     invoke-static {v0}, Landroidx/core/app/ShareCompat;->getCallingActivity(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     move-result-object p0
@@ -167,6 +182,7 @@
 
     const-string v0, "androidx.core.app.EXTRA_CALLING_ACTIVITY"
 
+    .line 4
     invoke-virtual {p0, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
@@ -177,6 +193,7 @@
 
     const-string v0, "android.support.v4.app.EXTRA_CALLING_ACTIVITY"
 
+    .line 5
     invoke-virtual {p0, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p0
@@ -192,10 +209,12 @@
 .method public static getCallingPackage(Landroid/app/Activity;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->getCallingPackage()Ljava/lang/String;
 
     move-result-object p0
@@ -204,6 +223,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {v0}, Landroidx/core/app/ShareCompat;->getCallingPackage(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p0
@@ -217,6 +237,7 @@
 
     const-string v0, "androidx.core.app.EXTRA_CALLING_PACKAGE"
 
+    .line 4
     invoke-virtual {p0, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -225,6 +246,7 @@
 
     const-string v0, "android.support.v4.app.EXTRA_CALLING_PACKAGE"
 
+    .line 5
     invoke-virtual {p0, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

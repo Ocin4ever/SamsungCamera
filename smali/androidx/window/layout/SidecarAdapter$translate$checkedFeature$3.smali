@@ -60,6 +60,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p1}, Landroidx/window/sidecar/SidecarDisplayFeature;->getType()I
 
     move-result p0
@@ -68,6 +69,7 @@
 
     if-ne p0, v0, :cond_1
 
+    .line 3
     invoke-virtual {p1}, Landroidx/window/sidecar/SidecarDisplayFeature;->getRect()Landroid/graphics/Rect;
 
     move-result-object p0
@@ -93,6 +95,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 4
     :cond_1
     :goto_0
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -105,6 +108,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/window/sidecar/SidecarDisplayFeature;
 
     invoke-virtual {p0, p1}, Landroidx/window/layout/SidecarAdapter$translate$checkedFeature$3;->invoke(Landroidx/window/sidecar/SidecarDisplayFeature;)Ljava/lang/Boolean;

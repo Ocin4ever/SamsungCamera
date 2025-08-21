@@ -50,6 +50,7 @@
 .method public bridge synthetic add(ILjava/lang/Object;)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Operation is not supported for read-only collection"
@@ -62,6 +63,7 @@
 .method public bridge synthetic add(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Operation is not supported for read-only collection"
@@ -74,6 +76,7 @@
 .method public addAll(ILjava/util/Collection;)Z
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Operation is not supported for read-only collection"
@@ -86,6 +89,7 @@
 .method public addAll(Ljava/util/Collection;)Z
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Operation is not supported for read-only collection"
@@ -307,6 +311,7 @@
 .method public listIterator()Ljava/util/ListIterator;
     .locals 0
 
+    .line 1
     sget-object p0, Lg6/x;->a:Lg6/x;
 
     return-object p0
@@ -317,10 +322,12 @@
 
     if-nez p1, :cond_0
 
+    .line 2
     sget-object p0, Lg6/x;->a:Lg6/x;
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -346,6 +353,7 @@
 .method public bridge synthetic remove(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Operation is not supported for read-only collection"
@@ -358,6 +366,7 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Operation is not supported for read-only collection"
@@ -453,6 +462,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lkotlin/jvm/internal/f;->a(Ljava/util/Collection;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -463,6 +473,7 @@
 .method public toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 1
 
+    .line 2
     const-string v0, "array"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V

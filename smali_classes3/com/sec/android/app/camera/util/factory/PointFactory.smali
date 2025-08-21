@@ -15,6 +15,7 @@
 .method public static create()Landroid/graphics/Point;
     .locals 1
 
+    .line 2
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
@@ -25,6 +26,7 @@
 .method public static create(II)Landroid/graphics/Point;
     .locals 1
 
+    .line 1
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0, p0, p1}, Landroid/graphics/Point;-><init>(II)V

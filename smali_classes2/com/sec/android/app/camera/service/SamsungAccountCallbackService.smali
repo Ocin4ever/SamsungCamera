@@ -37,28 +37,35 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/service/AbstractCallbackService;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;->mIBinder:Landroid/os/IBinder;
 
+    .line 3
     iput-object p1, p0, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;->mBackgroundHandler:Landroid/os/Handler;
 
+    .line 4
     iput-object p1, p0, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;->mBackgroundHandlerThread:Landroid/os/HandlerThread;
 
+    .line 5
     new-instance p1, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService$1;-><init>(Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;->mSaCallback:Lcom/msc/sa/aidl/ISACallback$Stub;
 
+    .line 6
     new-instance p1, Lcom/sec/android/app/camera/service/d;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/service/d;-><init>(Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;->mRequestAccessTokenRunnable:Ljava/lang/Runnable;
 
+    .line 7
     new-instance p1, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService$2;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService$2;-><init>(Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;)V
@@ -71,34 +78,42 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/msc/sa/aidl/ISAService;)V
     .locals 0
 
+    .line 8
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/service/AbstractCallbackService;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
+    .line 9
     iput-object p1, p0, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;->mIBinder:Landroid/os/IBinder;
 
+    .line 10
     iput-object p1, p0, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;->mBackgroundHandler:Landroid/os/Handler;
 
+    .line 11
     iput-object p1, p0, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;->mBackgroundHandlerThread:Landroid/os/HandlerThread;
 
+    .line 12
     new-instance p1, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService$1;-><init>(Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;->mSaCallback:Lcom/msc/sa/aidl/ISACallback$Stub;
 
+    .line 13
     new-instance p1, Lcom/sec/android/app/camera/service/d;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/service/d;-><init>(Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;->mRequestAccessTokenRunnable:Ljava/lang/Runnable;
 
+    .line 14
     new-instance p1, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService$2;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService$2;-><init>(Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;->saServiceConnection:Landroid/content/ServiceConnection;
 
+    .line 15
     iput-object p2, p0, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;->mSaService:Lcom/msc/sa/aidl/ISAService;
 
     return-void

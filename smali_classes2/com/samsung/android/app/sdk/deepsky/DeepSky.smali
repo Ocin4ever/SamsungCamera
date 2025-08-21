@@ -53,8 +53,10 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$suggestionRequestByLazy$2;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$suggestionRequestByLazy$2;-><init>(Landroid/content/Context;)V
@@ -65,6 +67,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky;->suggestionRequestByLazy$delegate:Lf6/d;
 
+    .line 4
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$donationByLazy$2;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$donationByLazy$2;-><init>(Landroid/content/Context;)V
@@ -75,6 +78,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky;->donationByLazy$delegate:Lf6/d;
 
+    .line 5
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$contributionByLazy$2;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$contributionByLazy$2;-><init>(Landroid/content/Context;)V
@@ -85,6 +89,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky;->contributionByLazy$delegate:Lf6/d;
 
+    .line 6
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$nudgeSuggestionByLazy$2;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$nudgeSuggestionByLazy$2;-><init>(Landroid/content/Context;)V
@@ -95,6 +100,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky;->nudgeSuggestionByLazy$delegate:Lf6/d;
 
+    .line 7
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$searchByLazy$2;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$searchByLazy$2;-><init>(Landroid/content/Context;)V
@@ -105,6 +111,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky;->searchByLazy$delegate:Lf6/d;
 
+    .line 8
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$widgetRotationByLazy$2;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$widgetRotationByLazy$2;-><init>(Landroid/content/Context;)V
@@ -115,6 +122,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky;->widgetRotationByLazy$delegate:Lf6/d;
 
+    .line 9
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$feedbackByLazy$2;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$feedbackByLazy$2;-><init>(Landroid/content/Context;)V
@@ -125,6 +133,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky;->feedbackByLazy$delegate:Lf6/d;
 
+    .line 10
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$smartWidgetByLazy$2;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$smartWidgetByLazy$2;-><init>(Landroid/content/Context;)V
@@ -141,6 +150,7 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Lkotlin/jvm/internal/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/DeepSky;-><init>(Landroid/content/Context;)V
 
     return-void

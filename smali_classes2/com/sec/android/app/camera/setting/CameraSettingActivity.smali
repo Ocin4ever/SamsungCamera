@@ -1930,6 +1930,7 @@
 .method public showSecondDepthFragment(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)V
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/setting/CameraSettingActivity$4;->$SwitchMap$com$sec$android$app$camera$interfaces$CameraSettings$Key:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -1956,6 +1957,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
@@ -1972,6 +1974,7 @@
 .method public showSecondDepthFragment(Ljava/lang/String;)V
     .locals 2
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -2147,21 +2150,25 @@
 
     goto :goto_1
 
+    .line 4
     :pswitch_0
     invoke-direct {p0}, Lcom/sec/android/app/camera/setting/CameraSettingActivity;->launchCameraAssistant()V
 
     goto :goto_1
 
+    .line 5
     :pswitch_1
     invoke-direct {p0}, Lcom/sec/android/app/camera/setting/CameraSettingActivity;->launchCustomizationService()V
 
     goto :goto_1
 
+    .line 6
     :pswitch_2
     invoke-direct {p0}, Lcom/sec/android/app/camera/setting/CameraSettingActivity;->startPermissionsActivity()V
 
     goto :goto_1
 
+    .line 7
     :pswitch_3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/CameraSettingActivity;->startAboutCameraActivity()V
 
@@ -2170,6 +2177,7 @@
     :pswitch_4
     const/4 v0, 0x0
 
+    .line 8
     invoke-virtual {p0, p1, v0}, Lcom/sec/android/app/camera/setting/CameraSettingActivity;->startActivityWithFragment(Ljava/lang/String;Landroid/os/Bundle;)V
 
     :goto_1

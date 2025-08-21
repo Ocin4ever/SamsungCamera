@@ -11,6 +11,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget p0, p0, Landroid/graphics/PointF;->x:F
 
     return p0
@@ -23,6 +24,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget p0, p0, Landroid/graphics/Point;->x:I
 
     return p0
@@ -35,6 +37,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget p0, p0, Landroid/graphics/PointF;->y:F
 
     return p0
@@ -47,6 +50,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget p0, p0, Landroid/graphics/Point;->y:I
 
     return p0
@@ -59,6 +63,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 5
     new-instance v0, Landroid/graphics/Point;
 
     iget v1, p0, Landroid/graphics/Point;->x:I
@@ -69,6 +74,7 @@
 
     neg-int p0, p1
 
+    .line 6
     invoke-virtual {v0, p0, p0}, Landroid/graphics/Point;->offset(II)V
 
     return-object v0
@@ -85,6 +91,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Landroid/graphics/Point;
 
     iget v1, p0, Landroid/graphics/Point;->x:I
@@ -93,6 +100,7 @@
 
     invoke-direct {v0, v1, p0}, Landroid/graphics/Point;-><init>(II)V
 
+    .line 2
     iget p0, p1, Landroid/graphics/Point;->x:I
 
     neg-int p0, p0
@@ -113,6 +121,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 7
     new-instance v0, Landroid/graphics/PointF;
 
     iget v1, p0, Landroid/graphics/PointF;->x:F
@@ -123,6 +132,7 @@
 
     neg-float p0, p1
 
+    .line 8
     invoke-virtual {v0, p0, p0}, Landroid/graphics/PointF;->offset(FF)V
 
     return-object v0
@@ -139,6 +149,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     new-instance v0, Landroid/graphics/PointF;
 
     iget v1, p0, Landroid/graphics/PointF;->x:F
@@ -147,6 +158,7 @@
 
     invoke-direct {v0, v1, p0}, Landroid/graphics/PointF;-><init>(FF)V
 
+    .line 4
     iget p0, p1, Landroid/graphics/PointF;->x:F
 
     neg-float p0, p0
@@ -167,6 +179,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 5
     new-instance v0, Landroid/graphics/Point;
 
     iget v1, p0, Landroid/graphics/Point;->x:I
@@ -175,6 +188,7 @@
 
     invoke-direct {v0, v1, p0}, Landroid/graphics/Point;-><init>(II)V
 
+    .line 6
     invoke-virtual {v0, p1, p1}, Landroid/graphics/Point;->offset(II)V
 
     return-object v0
@@ -191,6 +205,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Landroid/graphics/Point;
 
     iget v1, p0, Landroid/graphics/Point;->x:I
@@ -199,6 +214,7 @@
 
     invoke-direct {v0, v1, p0}, Landroid/graphics/Point;-><init>(II)V
 
+    .line 2
     iget p0, p1, Landroid/graphics/Point;->x:I
 
     iget p1, p1, Landroid/graphics/Point;->y:I
@@ -215,6 +231,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 7
     new-instance v0, Landroid/graphics/PointF;
 
     iget v1, p0, Landroid/graphics/PointF;->x:F
@@ -223,6 +240,7 @@
 
     invoke-direct {v0, v1, p0}, Landroid/graphics/PointF;-><init>(FF)V
 
+    .line 8
     invoke-virtual {v0, p1, p1}, Landroid/graphics/PointF;->offset(FF)V
 
     return-object v0
@@ -239,6 +257,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     new-instance v0, Landroid/graphics/PointF;
 
     iget v1, p0, Landroid/graphics/PointF;->x:F
@@ -247,6 +266,7 @@
 
     invoke-direct {v0, v1, p0}, Landroid/graphics/PointF;-><init>(FF)V
 
+    .line 4
     iget p0, p1, Landroid/graphics/PointF;->x:F
 
     iget p1, p1, Landroid/graphics/PointF;->y:F
@@ -299,6 +319,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Landroid/graphics/Point;
 
     iget v1, p0, Landroid/graphics/Point;->x:I
@@ -321,6 +342,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Landroid/graphics/PointF;
 
     iget v1, p0, Landroid/graphics/PointF;->x:F

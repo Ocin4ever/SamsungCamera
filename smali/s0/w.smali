@@ -536,6 +536,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0}, Ls0/w;->k(I)Ls0/z;
 
     move-result-object p0
@@ -546,6 +547,7 @@
 .method public final bridge synthetic listIterator(I)Ljava/util/ListIterator;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Ls0/w;->k(I)Ls0/z;
 
     move-result-object p0

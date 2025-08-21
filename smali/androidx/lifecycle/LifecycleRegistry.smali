@@ -83,6 +83,7 @@
 
     const/4 v0, 0x1
 
+    .line 8
     invoke-direct {p0, p1, v0}, Landroidx/lifecycle/LifecycleRegistry;-><init>(Landroidx/lifecycle/LifecycleOwner;Z)V
 
     return-void
@@ -91,26 +92,32 @@
 .method private constructor <init>(Landroidx/lifecycle/LifecycleOwner;Z)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Landroidx/lifecycle/Lifecycle;-><init>()V
 
+    .line 3
     iput-boolean p2, p0, Landroidx/lifecycle/LifecycleRegistry;->enforceMainThread:Z
 
+    .line 4
     new-instance p2, Landroidx/arch/core/internal/FastSafeIterableMap;
 
     invoke-direct {p2}, Landroidx/arch/core/internal/FastSafeIterableMap;-><init>()V
 
     iput-object p2, p0, Landroidx/lifecycle/LifecycleRegistry;->observerMap:Landroidx/arch/core/internal/FastSafeIterableMap;
 
+    .line 5
     sget-object p2, Landroidx/lifecycle/Lifecycle$State;->INITIALIZED:Landroidx/lifecycle/Lifecycle$State;
 
     iput-object p2, p0, Landroidx/lifecycle/LifecycleRegistry;->state:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 6
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p2, p0, Landroidx/lifecycle/LifecycleRegistry;->parentStates:Ljava/util/ArrayList;
 
+    .line 7
     new-instance p2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -123,6 +130,7 @@
 .method public synthetic constructor <init>(Landroidx/lifecycle/LifecycleOwner;ZLkotlin/jvm/internal/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/lifecycle/LifecycleRegistry;-><init>(Landroidx/lifecycle/LifecycleOwner;Z)V
 
     return-void

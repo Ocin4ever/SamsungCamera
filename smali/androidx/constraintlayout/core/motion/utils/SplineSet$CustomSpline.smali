@@ -50,6 +50,7 @@
 .method public setPoint(IF)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "don\'t call for custom attribute call setPoint(pos, ConstraintAttribute)"
@@ -62,6 +63,7 @@
 .method public setPoint(ILandroidx/constraintlayout/core/motion/CustomVariable;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/SplineSet$CustomSpline;->mConstraintAttributeList:Landroidx/constraintlayout/core/motion/utils/KeyFrameArray$CustomVar;
 
     invoke-virtual {p0, p1, p2}, Landroidx/constraintlayout/core/motion/utils/KeyFrameArray$CustomVar;->append(ILandroidx/constraintlayout/core/motion/CustomVariable;)V
@@ -72,6 +74,7 @@
 .method public setProperty(Landroidx/constraintlayout/core/motion/MotionWidget;F)V
     .locals 3
 
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/SplineSet;->mCurveFit:Landroidx/constraintlayout/core/motion/utils/CurveFit;
 
     float-to-double v1, p2
@@ -80,6 +83,7 @@
 
     invoke-virtual {v0, v1, v2, p2}, Landroidx/constraintlayout/core/motion/utils/CurveFit;->getPos(D[F)V
 
+    .line 3
     iget-object p2, p0, Landroidx/constraintlayout/core/motion/utils/SplineSet$CustomSpline;->mConstraintAttributeList:Landroidx/constraintlayout/core/motion/utils/KeyFrameArray$CustomVar;
 
     const/4 v0, 0x0
@@ -98,6 +102,7 @@
 .method public setProperty(Landroidx/constraintlayout/core/motion/utils/TypedValues;F)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/constraintlayout/core/motion/MotionWidget;
 
     invoke-virtual {p0, p1, p2}, Landroidx/constraintlayout/core/motion/utils/SplineSet$CustomSpline;->setProperty(Landroidx/constraintlayout/core/motion/MotionWidget;F)V

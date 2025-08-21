@@ -46,6 +46,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/work/impl/constraints/WorkConstraintsTracker$track$$inlined$combine$1$2;->invoke()[Ljava/lang/Object;
 
     move-result-object p0
@@ -62,6 +63,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Landroidx/work/impl/constraints/WorkConstraintsTracker$track$$inlined$combine$1$2;->$flowArray:[La7/e;
 
     array-length p0, p0

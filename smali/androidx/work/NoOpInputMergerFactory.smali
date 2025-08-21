@@ -33,6 +33,7 @@
 .method public bridge synthetic createInputMerger(Ljava/lang/String;)Landroidx/work/InputMerger;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/work/NoOpInputMergerFactory;->createInputMerger(Ljava/lang/String;)Ljava/lang/Void;
 
     move-result-object p0
@@ -45,6 +46,7 @@
 .method public createInputMerger(Ljava/lang/String;)Ljava/lang/Void;
     .locals 0
 
+    .line 1
     const-string p0, "className"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V

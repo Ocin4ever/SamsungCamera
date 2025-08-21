@@ -342,6 +342,7 @@
 .method public static indexOf([SS)I
     .locals 2
 
+    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -359,6 +360,7 @@
     :goto_0
     if-ge p2, p3, :cond_1
 
+    .line 2
     aget-short v0, p0, p2
 
     if-ne v0, p1, :cond_0
@@ -381,12 +383,15 @@
 
     const-string v0, "array"
 
+    .line 3
     invoke-static {p0, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "target"
 
+    .line 4
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -398,6 +403,7 @@
     :cond_0
     move v0, v1
 
+    .line 6
     :goto_0
     array-length v2, p0
 
@@ -411,6 +417,7 @@
 
     move v2, v1
 
+    .line 7
     :goto_1
     array-length v3, p1
 
@@ -418,6 +425,7 @@
 
     add-int v3, v0, v2
 
+    .line 8
     aget-short v3, p0, v3
 
     aget-short v4, p1, v2
@@ -498,6 +506,7 @@
 .method public static lastIndexOf([SS)I
     .locals 2
 
+    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -517,6 +526,7 @@
     :goto_0
     if-lt p3, p2, :cond_1
 
+    .line 2
     aget-short v0, p0, p3
 
     if-ne v0, p1, :cond_0
@@ -638,8 +648,10 @@
 .method public static reverse([S)V
     .locals 2
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -652,8 +664,10 @@
 .method public static reverse([SII)V
     .locals 2
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     array-length v0, p0
 
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
@@ -663,12 +677,15 @@
     :goto_0
     if-ge p1, p2, :cond_0
 
+    .line 5
     aget-short v0, p0, p1
 
+    .line 6
     aget-short v1, p0, p2
 
     aput-short v1, p0, p1
 
+    .line 7
     aput-short v0, p0, p2
 
     add-int/lit8 p1, p1, 0x1
@@ -716,8 +733,10 @@
 .method public static sortDescending([S)V
     .locals 2
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -730,14 +749,18 @@
 .method public static sortDescending([SII)V
     .locals 1
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     array-length v0, p0
 
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
+    .line 5
     invoke-static {p0, p1, p2}, Ljava/util/Arrays;->sort([SII)V
 
+    .line 6
     invoke-static {p0, p1, p2}, Lcom/google/common/primitives/Shorts;->reverse([SII)V
 
     return-void

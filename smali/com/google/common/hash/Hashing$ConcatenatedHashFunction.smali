@@ -18,8 +18,10 @@
 .method private varargs constructor <init>([Lcom/google/common/hash/HashFunction;)V
     .locals 6
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/hash/AbstractCompositeHashFunction;-><init>([Lcom/google/common/hash/HashFunction;)V
 
+    .line 3
     array-length p0, p1
 
     const/4 v0, 0x0
@@ -31,6 +33,7 @@
 
     aget-object v2, p1, v1
 
+    .line 4
     invoke-interface {v2}, Lcom/google/common/hash/HashFunction;->bits()I
 
     move-result v3
@@ -49,10 +52,12 @@
     :goto_1
     const-string v4, "the number of bits (%s) in hashFunction (%s) must be divisible by 8"
 
+    .line 5
     invoke-interface {v2}, Lcom/google/common/hash/HashFunction;->bits()I
 
     move-result v5
 
+    .line 6
     invoke-static {v3, v4, v5, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;ILjava/lang/Object;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -66,6 +71,7 @@
 .method public synthetic constructor <init>([Lcom/google/common/hash/HashFunction;Lcom/google/common/hash/Hashing$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/hash/Hashing$ConcatenatedHashFunction;-><init>([Lcom/google/common/hash/HashFunction;)V
 
     return-void

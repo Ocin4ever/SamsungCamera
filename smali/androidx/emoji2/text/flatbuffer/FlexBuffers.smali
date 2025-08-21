@@ -173,18 +173,21 @@
 .method public static getRoot(Landroidx/emoji2/text/flatbuffer/ReadBuf;)Landroidx/emoji2/text/flatbuffer/FlexBuffers$Reference;
     .locals 4
 
+    .line 2
     invoke-interface {p0}, Landroidx/emoji2/text/flatbuffer/ReadBuf;->limit()I
 
     move-result v0
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 3
     invoke-interface {p0, v0}, Landroidx/emoji2/text/flatbuffer/ReadBuf;->get(I)B
 
     move-result v1
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 4
     invoke-interface {p0, v0}, Landroidx/emoji2/text/flatbuffer/ReadBuf;->get(I)B
 
     move-result v2
@@ -195,6 +198,7 @@
 
     sub-int/2addr v0, v1
 
+    .line 5
     new-instance v3, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Reference;
 
     invoke-direct {v3, p0, v0, v1, v2}, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Reference;-><init>(Landroidx/emoji2/text/flatbuffer/ReadBuf;III)V
@@ -207,6 +211,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->hasArray()Z
 
     move-result v0

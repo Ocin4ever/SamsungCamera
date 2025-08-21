@@ -41,6 +41,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/k4;->m:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/k4;->n:Landroid/util/SparseIntArray;
@@ -65,6 +66,7 @@
 
     const/4 v0, 0x5
 
+    .line 2
     aget-object v0, p3, v0
 
     move-object v4, v0
@@ -153,46 +155,57 @@
 
     const-wide/16 v0, -0x1
 
+    .line 3
     iput-wide v0, v14, Lp4/k4;->l:J
 
+    .line 4
     iget-object v0, v14, Lp4/j4;->a:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 5
     iget-object v0, v14, Lp4/j4;->b:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 6
     iget-object v0, v14, Lp4/j4;->c:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 7
     iget-object v0, v14, Lp4/j4;->d:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 8
     iget-object v0, v14, Lp4/j4;->g:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 9
     iget-object v0, v14, Lp4/j4;->h:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 10
     iget-object v0, v14, Lp4/j4;->i:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 11
     iget-object v0, v14, Lp4/j4;->j:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     move-object/from16 v0, p2
 
+    .line 12
     invoke-virtual {p0, v0}, Landroidx/databinding/ViewDataBinding;->setRootTag(Landroid/view/View;)V
 
+    .line 13
     invoke-virtual {p0}, Lp4/k4;->invalidateAll()V
 
     return-void

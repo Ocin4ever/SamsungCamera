@@ -83,18 +83,23 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0xff
 
+    .line 2
     iput v0, p0, Lb1/b$a;->d:I
 
     const/4 v0, -0x2
 
+    .line 3
     iput v0, p0, Lb1/b$a;->e:I
 
+    .line 4
     iput v0, p0, Lb1/b$a;->f:I
 
+    .line 5
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     iput-object v0, p0, Lb1/b$a;->l:Ljava/lang/Boolean;
@@ -105,28 +110,35 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0xff
 
+    .line 7
     iput v0, p0, Lb1/b$a;->d:I
 
     const/4 v0, -0x2
 
+    .line 8
     iput v0, p0, Lb1/b$a;->e:I
 
+    .line 9
     iput v0, p0, Lb1/b$a;->f:I
 
+    .line 10
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     iput-object v0, p0, Lb1/b$a;->l:Ljava/lang/Boolean;
 
+    .line 11
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lb1/b$a;->a:I
 
+    .line 12
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -135,6 +147,7 @@
 
     iput-object v0, p0, Lb1/b$a;->b:Ljava/lang/Integer;
 
+    .line 13
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -143,36 +156,42 @@
 
     iput-object v0, p0, Lb1/b$a;->c:Ljava/lang/Integer;
 
+    .line 14
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lb1/b$a;->d:I
 
+    .line 15
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lb1/b$a;->e:I
 
+    .line 16
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lb1/b$a;->f:I
 
+    .line 17
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lb1/b$a;->h:Ljava/lang/CharSequence;
 
+    .line 18
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lb1/b$a;->i:I
 
+    .line 19
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -181,6 +200,7 @@
 
     iput-object v0, p0, Lb1/b$a;->k:Ljava/lang/Integer;
 
+    .line 20
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -189,6 +209,7 @@
 
     iput-object v0, p0, Lb1/b$a;->m:Ljava/lang/Integer;
 
+    .line 21
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -197,6 +218,7 @@
 
     iput-object v0, p0, Lb1/b$a;->n:Ljava/lang/Integer;
 
+    .line 22
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -205,6 +227,7 @@
 
     iput-object v0, p0, Lb1/b$a;->o:Ljava/lang/Integer;
 
+    .line 23
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -213,6 +236,7 @@
 
     iput-object v0, p0, Lb1/b$a;->p:Ljava/lang/Integer;
 
+    .line 24
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -221,6 +245,7 @@
 
     iput-object v0, p0, Lb1/b$a;->q:Ljava/lang/Integer;
 
+    .line 25
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -229,6 +254,7 @@
 
     iput-object v0, p0, Lb1/b$a;->r:Ljava/lang/Integer;
 
+    .line 26
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -237,6 +263,7 @@
 
     iput-object v0, p0, Lb1/b$a;->l:Ljava/lang/Boolean;
 
+    .line 27
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object p1

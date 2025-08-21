@@ -63,6 +63,7 @@
 .method public bridge synthetic isConstrained(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 2
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -79,6 +80,7 @@
 .method public isConstrained(Z)Z
     .locals 0
 
+    .line 1
     xor-int/lit8 p0, p1, 0x1
 
     return p0

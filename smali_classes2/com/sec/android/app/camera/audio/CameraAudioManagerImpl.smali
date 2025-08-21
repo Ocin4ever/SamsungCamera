@@ -60,6 +60,7 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/interfaces/Engine;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/sec/android/app/camera/audio/AudioManagerContainer;
 
     invoke-direct {v0, p1}, Lcom/sec/android/app/camera/audio/AudioManagerContainer;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;)V
@@ -72,14 +73,17 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/audio/AudioManagerContainer;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/audio/CameraAudioManagerImpl;->mSettingChangedListenerKeys:Ljava/util/ArrayList;
 
+    .line 4
     new-instance v0, Lcom/sec/android/app/camera/audio/h;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/audio/h;-><init>(Lcom/sec/android/app/camera/audio/CameraAudioManagerImpl;)V
@@ -88,46 +92,56 @@
 
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Lcom/sec/android/app/camera/audio/CameraAudioManagerImpl;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v0, 0x0
 
+    .line 6
     iput-boolean v0, p0, Lcom/sec/android/app/camera/audio/CameraAudioManagerImpl;->mIsShutterSoundForced:Z
 
+    .line 7
     iput-object p1, p0, Lcom/sec/android/app/camera/audio/CameraAudioManagerImpl;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
+    .line 8
     iput-object p2, p0, Lcom/sec/android/app/camera/audio/CameraAudioManagerImpl;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
 
+    .line 9
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getCameraSettings()Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/audio/CameraAudioManagerImpl;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
+    .line 10
     invoke-virtual {p3}, Lcom/sec/android/app/camera/audio/AudioManagerContainer;->getSoundManager()Lcom/sec/android/app/camera/audio/SoundManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/audio/CameraAudioManagerImpl;->mSoundManager:Lcom/sec/android/app/camera/audio/SoundManager;
 
+    .line 11
     invoke-virtual {p3}, Lcom/sec/android/app/camera/audio/AudioManagerContainer;->getMultiMicController()Lcom/sec/android/app/camera/audio/MultiMicController;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/audio/CameraAudioManagerImpl;->mMultiMicController:Lcom/sec/android/app/camera/audio/MultiMicController;
 
+    .line 12
     invoke-virtual {p3}, Lcom/sec/android/app/camera/audio/AudioManagerContainer;->getInputLevelMonitor()Lcom/sec/android/app/camera/audio/AudioMonitor;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/audio/CameraAudioManagerImpl;->mAudioMonitor:Lcom/sec/android/app/camera/audio/AudioMonitor;
 
+    .line 13
     invoke-virtual {p3}, Lcom/sec/android/app/camera/audio/AudioManagerContainer;->getAudioInputController()Lcom/sec/android/app/camera/audio/AudioInputController;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/audio/CameraAudioManagerImpl;->mAudioInputController:Lcom/sec/android/app/camera/audio/AudioInputController;
 
+    .line 14
     invoke-direct {p0, p3}, Lcom/sec/android/app/camera/audio/CameraAudioManagerImpl;->getAudioFocusRequest(Lcom/sec/android/app/camera/audio/AudioManagerContainer;)Landroid/media/AudioFocusRequest;
 
     move-result-object p1

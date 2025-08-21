@@ -75,10 +75,12 @@
         }
     .end annotation
 
+    .line 3
     invoke-super {p0, p1, p2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     const/4 p2, 0x1
 
+    .line 4
     invoke-direct {p0, p1, p2}, Landroidx/databinding/ObservableArrayList;->notifyAdd(II)V
 
     return-void
@@ -92,8 +94,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 2
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result p1
@@ -117,12 +121,14 @@
         }
     .end annotation
 
+    .line 4
     invoke-super {p0, p1, p2}, Ljava/util/ArrayList;->addAll(ILjava/util/Collection;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 5
     invoke-interface {p2}, Ljava/util/Collection;->size()I
 
     move-result p2
@@ -143,16 +149,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
 
+    .line 2
     invoke-super {p0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v1
@@ -213,12 +222,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
+    .line 2
     invoke-direct {p0, p1, v1}, Landroidx/databinding/ObservableArrayList;->notifyRemove(II)V
 
     return-object v0
@@ -227,12 +238,14 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 3
     invoke-virtual {p0, p1}, Ljava/util/AbstractList;->indexOf(Ljava/lang/Object;)I
 
     move-result p1
 
     if-ltz p1, :cond_0
 
+    .line 4
     invoke-virtual {p0, p1}, Landroidx/databinding/ObservableArrayList;->remove(I)Ljava/lang/Object;
 
     const/4 p0, 0x1

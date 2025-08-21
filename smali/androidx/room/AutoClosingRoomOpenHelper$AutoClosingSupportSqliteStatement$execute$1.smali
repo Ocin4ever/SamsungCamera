@@ -60,6 +60,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-interface {p1}, Landroidx/sqlite/db/SupportSQLiteStatement;->execute()V
 
     const/4 p0, 0x0
@@ -70,6 +71,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/sqlite/db/SupportSQLiteStatement;
 
     invoke-virtual {p0, p1}, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSqliteStatement$execute$1;->invoke(Landroidx/sqlite/db/SupportSQLiteStatement;)Ljava/lang/Object;

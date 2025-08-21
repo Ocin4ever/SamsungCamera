@@ -60,6 +60,7 @@
 
     const/4 v4, 0x0
 
+    .line 1
     sget v5, Landroidx/appcompat/R$attr;->popupMenuStyle:I
 
     const/4 v6, 0x0
@@ -80,6 +81,7 @@
 
     const/4 v4, 0x0
 
+    .line 2
     sget v5, Landroidx/appcompat/R$attr;->popupMenuStyle:I
 
     const/4 v6, 0x0
@@ -114,6 +116,7 @@
 
     move v5, p5
 
+    .line 3
     invoke-direct/range {v0 .. v6}, Landroidx/appcompat/view/menu/MenuPopupHelper;-><init>(Landroid/content/Context;Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/View;ZII)V
 
     return-void
@@ -122,36 +125,47 @@
 .method public constructor <init>(Landroid/content/Context;Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/View;ZII)V
     .locals 1
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const v0, 0x800003
 
+    .line 5
     iput v0, p0, Landroidx/appcompat/view/menu/MenuPopupHelper;->mDropDownGravity:I
 
     const/4 v0, 0x0
 
+    .line 6
     iput-boolean v0, p0, Landroidx/appcompat/view/menu/MenuPopupHelper;->mForceShowUpper:Z
 
     const/4 v0, 0x1
 
+    .line 7
     iput-boolean v0, p0, Landroidx/appcompat/view/menu/MenuPopupHelper;->mAllowScrollingAnchorParent:Z
 
+    .line 8
     new-instance v0, Landroidx/appcompat/view/menu/MenuPopupHelper$1;
 
     invoke-direct {v0, p0}, Landroidx/appcompat/view/menu/MenuPopupHelper$1;-><init>(Landroidx/appcompat/view/menu/MenuPopupHelper;)V
 
     iput-object v0, p0, Landroidx/appcompat/view/menu/MenuPopupHelper;->mInternalOnDismissListener:Landroid/widget/PopupWindow$OnDismissListener;
 
+    .line 9
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuPopupHelper;->mContext:Landroid/content/Context;
 
+    .line 10
     iput-object p2, p0, Landroidx/appcompat/view/menu/MenuPopupHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
+    .line 11
     iput-object p3, p0, Landroidx/appcompat/view/menu/MenuPopupHelper;->mAnchorView:Landroid/view/View;
 
+    .line 12
     iput-boolean p4, p0, Landroidx/appcompat/view/menu/MenuPopupHelper;->mOverflowOnly:Z
 
+    .line 13
     iput p5, p0, Landroidx/appcompat/view/menu/MenuPopupHelper;->mPopupStyleAttr:I
 
+    .line 14
     iput p6, p0, Landroidx/appcompat/view/menu/MenuPopupHelper;->mPopupStyleRes:I
 
     return-void
@@ -571,6 +585,7 @@
 .method public show()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/appcompat/view/menu/MenuPopupHelper;->tryShow()Z
 
     move-result p0
@@ -579,6 +594,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -592,6 +608,7 @@
 .method public show(II)V
     .locals 0
 
+    .line 3
     invoke-virtual {p0, p1, p2}, Landroidx/appcompat/view/menu/MenuPopupHelper;->tryShow(II)Z
 
     move-result p0
@@ -600,6 +617,7 @@
 
     return-void
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -613,6 +631,7 @@
 .method public tryShow()Z
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Landroidx/appcompat/view/menu/MenuPopupHelper;->isShowing()Z
 
     move-result v0
@@ -623,6 +642,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuPopupHelper;->mAnchorView:Landroid/view/View;
 
@@ -632,6 +652,7 @@
 
     return v2
 
+    .line 3
     :cond_1
     invoke-direct {p0, v2, v2, v2, v2}, Landroidx/appcompat/view/menu/MenuPopupHelper;->showPopup(IIZZ)V
 
@@ -641,6 +662,7 @@
 .method public tryShow(II)Z
     .locals 2
 
+    .line 4
     invoke-virtual {p0}, Landroidx/appcompat/view/menu/MenuPopupHelper;->isShowing()Z
 
     move-result v0
@@ -651,6 +673,7 @@
 
     return v1
 
+    .line 5
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuPopupHelper;->mAnchorView:Landroid/view/View;
 
@@ -660,6 +683,7 @@
 
     return p0
 
+    .line 6
     :cond_1
     invoke-direct {p0, p1, p2, v1, v1}, Landroidx/appcompat/view/menu/MenuPopupHelper;->showPopup(IIZZ)V
 

@@ -53,14 +53,17 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroid/widget/TabHost;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Landroidx/fragment/app/FragmentTabHost;->mTabs:Ljava/util/ArrayList;
 
+    .line 3
     invoke-direct {p0, p1, v0}, Landroidx/fragment/app/FragmentTabHost;->initFragmentTabHost(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -71,14 +74,17 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 4
     invoke-direct {p0, p1, p2}, Landroid/widget/TabHost;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/fragment/app/FragmentTabHost;->mTabs:Ljava/util/ArrayList;
 
+    .line 6
     invoke-direct {p0, p1, p2}, Landroidx/fragment/app/FragmentTabHost;->initFragmentTabHost(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -664,6 +670,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Must call setup() that takes a Context and FragmentManager"
@@ -678,14 +685,19 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1}, Landroidx/fragment/app/FragmentTabHost;->ensureHierarchy(Landroid/content/Context;)V
 
+    .line 3
     invoke-super {p0}, Landroid/widget/TabHost;->setup()V
 
+    .line 4
     iput-object p1, p0, Landroidx/fragment/app/FragmentTabHost;->mContext:Landroid/content/Context;
 
+    .line 5
     iput-object p2, p0, Landroidx/fragment/app/FragmentTabHost;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
+    .line 6
     invoke-direct {p0}, Landroidx/fragment/app/FragmentTabHost;->ensureContent()V
 
     return-void
@@ -696,22 +708,30 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 7
     invoke-direct {p0, p1}, Landroidx/fragment/app/FragmentTabHost;->ensureHierarchy(Landroid/content/Context;)V
 
+    .line 8
     invoke-super {p0}, Landroid/widget/TabHost;->setup()V
 
+    .line 9
     iput-object p1, p0, Landroidx/fragment/app/FragmentTabHost;->mContext:Landroid/content/Context;
 
+    .line 10
     iput-object p2, p0, Landroidx/fragment/app/FragmentTabHost;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
+    .line 11
     iput p3, p0, Landroidx/fragment/app/FragmentTabHost;->mContainerId:I
 
+    .line 12
     invoke-direct {p0}, Landroidx/fragment/app/FragmentTabHost;->ensureContent()V
 
+    .line 13
     iget-object p1, p0, Landroidx/fragment/app/FragmentTabHost;->mRealTabContent:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setId(I)V
 
+    .line 14
     invoke-virtual {p0}, Landroid/view/View;->getId()I
 
     move-result p1
@@ -722,6 +742,7 @@
 
     const p1, 0x1020012
 
+    .line 15
     invoke-virtual {p0, p1}, Landroid/view/View;->setId(I)V
 
     :cond_0

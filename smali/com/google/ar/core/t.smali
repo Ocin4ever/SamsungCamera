@@ -23,12 +23,14 @@
 .method public final a()V
     .locals 0
 
+    .line 1
     return-void
 .end method
 
 .method public final a(Landroid/os/Bundle;)V
     .locals 0
 
+    .line 2
     return-void
 .end method
 

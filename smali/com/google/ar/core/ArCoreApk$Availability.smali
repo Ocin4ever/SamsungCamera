@@ -157,8 +157,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/google/ar/core/ArCoreApk$Availability;->nativeCode:I
 
     return-void
@@ -167,6 +169,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;IILcom/google/ar/core/aj;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Lcom/google/ar/core/ArCoreApk$Availability;-><init>(Ljava/lang/String;II)V
 
     return-void

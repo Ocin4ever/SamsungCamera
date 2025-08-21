@@ -236,6 +236,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-static {p0, v0}, Landroidx/recyclerview/widget/DiffUtil;->calculateDiff(Landroidx/recyclerview/widget/DiffUtil$Callback;Z)Landroidx/recyclerview/widget/DiffUtil$DiffResult;
 
     move-result-object p0
@@ -246,22 +247,27 @@
 .method public static calculateDiff(Landroidx/recyclerview/widget/DiffUtil$Callback;Z)Landroidx/recyclerview/widget/DiffUtil$DiffResult;
     .locals 9
 
+    .line 2
     invoke-virtual {p0}, Landroidx/recyclerview/widget/DiffUtil$Callback;->getOldListSize()I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p0}, Landroidx/recyclerview/widget/DiffUtil$Callback;->getNewListSize()I
 
     move-result v1
 
+    .line 4
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
+    .line 6
     new-instance v3, Landroidx/recyclerview/widget/DiffUtil$Range;
 
     const/4 v5, 0x0
@@ -274,8 +280,10 @@
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 7
     div-int/lit8 v0, v0, 0x2
 
+    .line 8
     new-instance v1, Landroidx/recyclerview/widget/DiffUtil$CenteredArray;
 
     mul-int/lit8 v0, v0, 0x2
@@ -284,14 +292,17 @@
 
     invoke-direct {v1, v0}, Landroidx/recyclerview/widget/DiffUtil$CenteredArray;-><init>(I)V
 
+    .line 9
     new-instance v3, Landroidx/recyclerview/widget/DiffUtil$CenteredArray;
 
     invoke-direct {v3, v0}, Landroidx/recyclerview/widget/DiffUtil$CenteredArray;-><init>(I)V
 
+    .line 10
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 11
     :goto_0
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
@@ -299,6 +310,7 @@
 
     if-nez v5, :cond_3
 
+    .line 12
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v5
@@ -311,24 +323,28 @@
 
     check-cast v5, Landroidx/recyclerview/widget/DiffUtil$Range;
 
+    .line 13
     invoke-static {v5, p0, v1, v3}, Landroidx/recyclerview/widget/DiffUtil;->midPoint(Landroidx/recyclerview/widget/DiffUtil$Range;Landroidx/recyclerview/widget/DiffUtil$Callback;Landroidx/recyclerview/widget/DiffUtil$CenteredArray;Landroidx/recyclerview/widget/DiffUtil$CenteredArray;)Landroidx/recyclerview/widget/DiffUtil$Snake;
 
     move-result-object v6
 
     if-eqz v6, :cond_2
 
+    .line 14
     invoke-virtual {v6}, Landroidx/recyclerview/widget/DiffUtil$Snake;->diagonalSize()I
 
     move-result v7
 
     if-lez v7, :cond_0
 
+    .line 15
     invoke-virtual {v6}, Landroidx/recyclerview/widget/DiffUtil$Snake;->toDiagonal()Landroidx/recyclerview/widget/DiffUtil$Diagonal;
 
     move-result-object v7
 
     invoke-interface {v4, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 16
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -342,6 +358,7 @@
 
     goto :goto_1
 
+    .line 17
     :cond_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -349,63 +366,78 @@
 
     add-int/lit8 v7, v7, -0x1
 
+    .line 18
     invoke-interface {v0, v7}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Landroidx/recyclerview/widget/DiffUtil$Range;
 
+    .line 19
     :goto_1
     iget v8, v5, Landroidx/recyclerview/widget/DiffUtil$Range;->oldListStart:I
 
     iput v8, v7, Landroidx/recyclerview/widget/DiffUtil$Range;->oldListStart:I
 
+    .line 20
     iget v8, v5, Landroidx/recyclerview/widget/DiffUtil$Range;->newListStart:I
 
     iput v8, v7, Landroidx/recyclerview/widget/DiffUtil$Range;->newListStart:I
 
+    .line 21
     iget v8, v6, Landroidx/recyclerview/widget/DiffUtil$Snake;->startX:I
 
     iput v8, v7, Landroidx/recyclerview/widget/DiffUtil$Range;->oldListEnd:I
 
+    .line 22
     iget v8, v6, Landroidx/recyclerview/widget/DiffUtil$Snake;->startY:I
 
     iput v8, v7, Landroidx/recyclerview/widget/DiffUtil$Range;->newListEnd:I
 
+    .line 23
     invoke-interface {v2, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 24
     iget v7, v5, Landroidx/recyclerview/widget/DiffUtil$Range;->oldListEnd:I
 
     iput v7, v5, Landroidx/recyclerview/widget/DiffUtil$Range;->oldListEnd:I
 
+    .line 25
     iget v7, v5, Landroidx/recyclerview/widget/DiffUtil$Range;->newListEnd:I
 
     iput v7, v5, Landroidx/recyclerview/widget/DiffUtil$Range;->newListEnd:I
 
+    .line 26
     iget v7, v6, Landroidx/recyclerview/widget/DiffUtil$Snake;->endX:I
 
     iput v7, v5, Landroidx/recyclerview/widget/DiffUtil$Range;->oldListStart:I
 
+    .line 27
     iget v6, v6, Landroidx/recyclerview/widget/DiffUtil$Snake;->endY:I
 
     iput v6, v5, Landroidx/recyclerview/widget/DiffUtil$Range;->newListStart:I
 
+    .line 28
     invoke-interface {v2, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 29
     :cond_2
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 30
     :cond_3
     sget-object v0, Landroidx/recyclerview/widget/DiffUtil;->DIAGONAL_COMPARATOR:Ljava/util/Comparator;
 
     invoke-static {v4, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
+    .line 31
     new-instance v0, Landroidx/recyclerview/widget/DiffUtil$DiffResult;
 
+    .line 32
     invoke-virtual {v1}, Landroidx/recyclerview/widget/DiffUtil$CenteredArray;->backingData()[I
 
     move-result-object v5

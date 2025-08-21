@@ -171,13 +171,16 @@
 
     monitor-enter p0
 
+    .line 9
     :try_start_0
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->checkOpen()V
 
+    .line 10
     iget-object v0, p0, Lcom/google/common/io/CharSequenceReader;->seq:Ljava/lang/CharSequence;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 11
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->hasRemaining()Z
 
     move-result v0
@@ -221,15 +224,19 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->checkOpen()V
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/io/CharSequenceReader;->seq:Ljava/lang/CharSequence;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->hasRemaining()Z
 
     move-result v0
@@ -238,12 +245,14 @@
 
     if-nez v0, :cond_0
 
+    .line 5
     monitor-exit p0
 
     const/4 p0, -0x1
 
     return p0
 
+    .line 6
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
@@ -263,6 +272,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 7
     iget-object v2, p0, Lcom/google/common/io/CharSequenceReader;->seq:Ljava/lang/CharSequence;
 
     iget v3, p0, Lcom/google/common/io/CharSequenceReader;->pos:I
@@ -283,6 +293,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     monitor-exit p0
 
@@ -303,17 +314,21 @@
 
     add-int v0, p2, p3
 
+    .line 12
     :try_start_0
     array-length v1, p1
 
     invoke-static {p2, v0, v1}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
+    .line 13
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->checkOpen()V
 
+    .line 14
     iget-object v0, p0, Lcom/google/common/io/CharSequenceReader;->seq:Ljava/lang/CharSequence;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 15
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->hasRemaining()Z
 
     move-result v0
@@ -322,12 +337,14 @@
 
     if-nez v0, :cond_0
 
+    .line 16
     monitor-exit p0
 
     const/4 p0, -0x1
 
     return p0
 
+    .line 17
     :cond_0
     :try_start_1
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->remaining()I
@@ -345,6 +362,7 @@
 
     add-int v1, p2, v0
 
+    .line 18
     iget-object v2, p0, Lcom/google/common/io/CharSequenceReader;->seq:Ljava/lang/CharSequence;
 
     iget v3, p0, Lcom/google/common/io/CharSequenceReader;->pos:I
@@ -365,6 +383,7 @@
 
     goto :goto_0
 
+    .line 19
     :cond_1
     monitor-exit p0
 

@@ -44,6 +44,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     new-instance p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$LineInfo;
 
     invoke-direct {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$LineInfo;-><init>(Landroid/os/Parcel;)V
@@ -54,6 +55,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$LineInfo$Companion$CREATOR$1;->createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$LineInfo;
 
     move-result-object p0
@@ -64,6 +66,7 @@
 .method public newArray(I)[Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$LineInfo;
     .locals 0
 
+    .line 2
     new-array p0, p1, [Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$LineInfo;
 
     return-object p0
@@ -72,6 +75,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$LineInfo$Companion$CREATOR$1;->newArray(I)[Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$LineInfo;
 
     move-result-object p0

@@ -265,10 +265,12 @@
 .method public constructor <init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Lcom/samsung/android/camera/core2/node/MultiFrameNodeBase$MultiFrameInitParam;Lcom/samsung/android/camera/core2/node/macroRawSr/MacroRawSrNodeBase$NodeCallback;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/camera/core2/node/macroRawSr/arcsoft/ArcMacroRawSrNodeBase;-><init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Lcom/samsung/android/camera/core2/node/MultiFrameNodeBase$MultiFrameInitParam;Lcom/samsung/android/camera/core2/node/macroRawSr/MacroRawSrNodeBase$NodeCallback;)V
 
     const/4 p1, -0x1
 
+    .line 4
     iput p1, p0, Lcom/samsung/android/camera/core2/node/macroRawSr/arcsoft/v1/ArcMacroRawSrNode;->mFirstRawInputIndex:I
 
     return-void
@@ -279,12 +281,14 @@
 
     const v0, 0x47b7c4
 
+    .line 1
     sget-object v1, Lcom/samsung/android/camera/core2/node/macroRawSr/arcsoft/v1/ArcMacroRawSrNode;->ARC_MACRO_RAW_SR_V1_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/samsung/android/camera/core2/node/macroRawSr/arcsoft/ArcMacroRawSrNodeBase;-><init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Lcom/samsung/android/camera/core2/node/MultiFrameNodeBase$MultiFrameInitParam;Lcom/samsung/android/camera/core2/node/macroRawSr/MacroRawSrNodeBase$NodeCallback;)V
 
     const/4 p1, -0x1
 
+    .line 2
     iput p1, p0, Lcom/samsung/android/camera/core2/node/macroRawSr/arcsoft/v1/ArcMacroRawSrNode;->mFirstRawInputIndex:I
 
     return-void

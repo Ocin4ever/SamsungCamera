@@ -353,8 +353,10 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/DenseImmutableTable;->columnMap:Lcom/google/common/collect/ImmutableMap;
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/collect/ImmutableMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -365,6 +367,7 @@
 .method public bridge synthetic columnMap()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/DenseImmutableTable;->columnMap()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -540,8 +543,10 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/DenseImmutableTable;->rowMap:Lcom/google/common/collect/ImmutableMap;
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/collect/ImmutableMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -552,6 +557,7 @@
 .method public bridge synthetic rowMap()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/DenseImmutableTable;->rowMap()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0

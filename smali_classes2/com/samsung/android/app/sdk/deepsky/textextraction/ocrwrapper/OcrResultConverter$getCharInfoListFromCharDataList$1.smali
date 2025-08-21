@@ -46,6 +46,7 @@
 .method public final invoke(Lcom/samsung/android/sdk/ocr/OCRResult$CharData;)Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$CharInfo;
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/ocrwrapper/OcrResultConverter;->INSTANCE:Lcom/samsung/android/app/sdk/deepsky/textextraction/ocrwrapper/OcrResultConverter;
 
     const-string v1, "it"
@@ -64,6 +65,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     check-cast p1, Lcom/samsung/android/sdk/ocr/OCRResult$CharData;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/ocrwrapper/OcrResultConverter$getCharInfoListFromCharDataList$1;->invoke(Lcom/samsung/android/sdk/ocr/OCRResult$CharData;)Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$CharInfo;

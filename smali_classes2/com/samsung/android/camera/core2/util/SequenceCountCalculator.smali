@@ -111,10 +111,12 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     const/4 p1, 0x0
 
+    .line 4
     iput-object p1, p0, Lcom/samsung/android/camera/core2/util/SequenceCountCalculator;->a:Ljava/util/function/Predicate;
 
     return-void
@@ -123,6 +125,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;ILcom/samsung/android/camera/core2/util/k3;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/core2/util/SequenceCountCalculator;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -131,8 +134,10 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/util/function/Predicate;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 6
     iput-object p3, p0, Lcom/samsung/android/camera/core2/util/SequenceCountCalculator;->a:Ljava/util/function/Predicate;
 
     return-void
@@ -141,6 +146,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;ILjava/util/function/Predicate;Lcom/samsung/android/camera/core2/util/k3;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/util/SequenceCountCalculator;-><init>(Ljava/lang/String;ILjava/util/function/Predicate;)V
 
     return-void

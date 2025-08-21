@@ -95,8 +95,10 @@
         }
     .end annotation
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 15
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v1, Lcom/google/common/util/concurrent/ClosingFuture$State;->OPEN:Lcom/google/common/util/concurrent/ClosingFuture$State;
@@ -105,6 +107,7 @@
 
     iput-object v0, p0, Lcom/google/common/util/concurrent/ClosingFuture;->state:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 16
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
 
     const/4 v1, 0x0
@@ -113,18 +116,23 @@
 
     iput-object v0, p0, Lcom/google/common/util/concurrent/ClosingFuture;->closeables:Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
 
+    .line 17
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 18
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$3;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/util/concurrent/ClosingFuture$3;-><init>(Lcom/google/common/util/concurrent/ClosingFuture;Lcom/google/common/util/concurrent/ClosingFuture$AsyncClosingCallable;)V
 
+    .line 19
     invoke-static {v0}, Lcom/google/common/util/concurrent/TrustedListenableFutureTask;->create(Lcom/google/common/util/concurrent/AsyncCallable;)Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     move-result-object p1
 
+    .line 20
     invoke-interface {p2, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 21
     iput-object p1, p0, Lcom/google/common/util/concurrent/ClosingFuture;->future:Lcom/google/common/util/concurrent/FluentFuture;
 
     return-void
@@ -142,8 +150,10 @@
         }
     .end annotation
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 7
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v1, Lcom/google/common/util/concurrent/ClosingFuture$State;->OPEN:Lcom/google/common/util/concurrent/ClosingFuture$State;
@@ -152,6 +162,7 @@
 
     iput-object v0, p0, Lcom/google/common/util/concurrent/ClosingFuture;->state:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 8
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
 
     const/4 v1, 0x0
@@ -160,18 +171,23 @@
 
     iput-object v0, p0, Lcom/google/common/util/concurrent/ClosingFuture;->closeables:Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
 
+    .line 9
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 10
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$2;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/util/concurrent/ClosingFuture$2;-><init>(Lcom/google/common/util/concurrent/ClosingFuture;Lcom/google/common/util/concurrent/ClosingFuture$ClosingCallable;)V
 
+    .line 11
     invoke-static {v0}, Lcom/google/common/util/concurrent/TrustedListenableFutureTask;->create(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     move-result-object p1
 
+    .line 12
     invoke-interface {p2, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 13
     iput-object p1, p0, Lcom/google/common/util/concurrent/ClosingFuture;->future:Lcom/google/common/util/concurrent/FluentFuture;
 
     return-void
@@ -187,8 +203,10 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v1, Lcom/google/common/util/concurrent/ClosingFuture$State;->OPEN:Lcom/google/common/util/concurrent/ClosingFuture$State;
@@ -197,6 +215,7 @@
 
     iput-object v0, p0, Lcom/google/common/util/concurrent/ClosingFuture;->state:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 4
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
 
     const/4 v1, 0x0
@@ -205,6 +224,7 @@
 
     iput-object v0, p0, Lcom/google/common/util/concurrent/ClosingFuture;->closeables:Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/util/concurrent/FluentFuture;->from(Lcom/google/common/util/concurrent/ListenableFuture;)Lcom/google/common/util/concurrent/FluentFuture;
 
     move-result-object p1
@@ -217,6 +237,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/util/concurrent/ListenableFuture;Lcom/google/common/util/concurrent/ClosingFuture$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/ClosingFuture;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;)V
 
     return-void
@@ -655,6 +676,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p0, p1}, Lcom/google/common/collect/Lists;->asList(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -679,6 +701,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$Combiner;
 
     const/4 v1, 0x0
@@ -708,6 +731,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$Combiner2;
 
     const/4 v1, 0x0
@@ -739,6 +763,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;
 
     const/4 v1, 0x0
@@ -774,6 +799,7 @@
         }
     .end annotation
 
+    .line 4
     new-instance v6, Lcom/google/common/util/concurrent/ClosingFuture$Combiner4;
 
     const/4 v5, 0x0
@@ -823,6 +849,7 @@
         }
     .end annotation
 
+    .line 5
     new-instance v7, Lcom/google/common/util/concurrent/ClosingFuture$Combiner5;
 
     const/4 v6, 0x0
@@ -891,14 +918,17 @@
 
     aput-object p5, v0, p1
 
+    .line 6
     invoke-static {p0, v0}, Lcom/google/common/collect/FluentIterable;->of(Ljava/lang/Object;[Ljava/lang/Object;)Lcom/google/common/collect/FluentIterable;
 
     move-result-object p0
 
+    .line 7
     invoke-virtual {p0, p6}, Lcom/google/common/collect/FluentIterable;->append([Ljava/lang/Object;)Lcom/google/common/collect/FluentIterable;
 
     move-result-object p0
 
+    .line 8
     invoke-static {p0}, Lcom/google/common/util/concurrent/ClosingFuture;->whenAllSucceed(Ljava/lang/Iterable;)Lcom/google/common/util/concurrent/ClosingFuture$Combiner;
 
     move-result-object p0
@@ -919,6 +949,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$Combiner;
 
     const/4 v1, 0x1

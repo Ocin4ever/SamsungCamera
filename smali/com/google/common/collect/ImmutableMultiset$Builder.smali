@@ -45,6 +45,7 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/collect/ImmutableMultiset$Builder;-><init>(I)V
 
     return-void
@@ -53,14 +54,18 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableCollection$Builder;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->buildInvoked:Z
 
+    .line 4
     iput-boolean v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->isLinkedHash:Z
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/collect/ObjectCountHashMap;->createWithExpectedSize(I)Lcom/google/common/collect/ObjectCountHashMap;
 
     move-result-object p1
@@ -73,16 +78,20 @@
 .method public constructor <init>(Z)V
     .locals 0
 
+    .line 6
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableCollection$Builder;-><init>()V
 
     const/4 p1, 0x0
 
+    .line 7
     iput-boolean p1, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->buildInvoked:Z
 
+    .line 8
     iput-boolean p1, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->isLinkedHash:Z
 
     const/4 p1, 0x0
 
+    .line 9
     iput-object p1, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     return-void
@@ -134,6 +143,7 @@
 .method public bridge synthetic add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$Builder;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableMultiset$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMultiset$Builder;
 
     move-result-object p0
@@ -144,6 +154,7 @@
 .method public bridge synthetic add([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$Builder;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableMultiset$Builder;->add([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMultiset$Builder;
 
     move-result-object p0
@@ -163,6 +174,7 @@
 
     const/4 v0, 0x1
 
+    .line 3
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/ImmutableMultiset$Builder;->addCopies(Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableMultiset$Builder;
 
     move-result-object p0
@@ -180,6 +192,7 @@
         }
     .end annotation
 
+    .line 4
     invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableCollection$Builder;->add([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$Builder;
 
     return-object p0
@@ -188,6 +201,7 @@
 .method public bridge synthetic addAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableCollection$Builder;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableMultiset$Builder;->addAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableMultiset$Builder;
 
     move-result-object p0
@@ -198,6 +212,7 @@
 .method public bridge synthetic addAll(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableCollection$Builder;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableMultiset$Builder;->addAll(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableMultiset$Builder;
 
     move-result-object p0
@@ -217,24 +232,29 @@
         }
     .end annotation
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     instance-of v0, p1, Lcom/google/common/collect/Multiset;
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/collect/Multisets;->cast(Ljava/lang/Iterable;)Lcom/google/common/collect/Multiset;
 
     move-result-object p1
 
+    .line 6
     invoke-static {p1}, Lcom/google/common/collect/ImmutableMultiset$Builder;->tryGetMap(Ljava/lang/Iterable;)Lcom/google/common/collect/ObjectCountHashMap;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 7
     iget-object p1, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-virtual {p1}, Lcom/google/common/collect/ObjectCountHashMap;->size()I
@@ -251,6 +271,7 @@
 
     invoke-virtual {p1, v1}, Lcom/google/common/collect/ObjectCountHashMap;->ensureCapacity(I)V
 
+    .line 8
     invoke-virtual {v0}, Lcom/google/common/collect/ObjectCountHashMap;->firstIndex()I
 
     move-result p1
@@ -258,6 +279,7 @@
     :goto_0
     if-ltz p1, :cond_2
 
+    .line 9
     invoke-virtual {v0, p1}, Lcom/google/common/collect/ObjectCountHashMap;->getKey(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -268,17 +290,20 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/google/common/collect/ImmutableMultiset$Builder;->addCopies(Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableMultiset$Builder;
 
+    .line 10
     invoke-virtual {v0, p1}, Lcom/google/common/collect/ObjectCountHashMap;->nextIndex(I)I
 
     move-result p1
 
     goto :goto_0
 
+    .line 11
     :cond_0
     invoke-interface {p1}, Lcom/google/common/collect/Multiset;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 
+    .line 12
     iget-object v1, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-virtual {v1}, Lcom/google/common/collect/ObjectCountHashMap;->size()I
@@ -295,6 +320,7 @@
 
     invoke-virtual {v1, v0}, Lcom/google/common/collect/ObjectCountHashMap;->ensureCapacity(I)V
 
+    .line 13
     invoke-interface {p1}, Lcom/google/common/collect/Multiset;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -316,6 +342,7 @@
 
     check-cast v0, Lcom/google/common/collect/Multiset$Entry;
 
+    .line 14
     invoke-interface {v0}, Lcom/google/common/collect/Multiset$Entry;->getElement()Ljava/lang/Object;
 
     move-result-object v1
@@ -328,6 +355,7 @@
 
     goto :goto_1
 
+    .line 15
     :cond_1
     invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableCollection$Builder;->addAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableCollection$Builder;
 
@@ -347,6 +375,7 @@
         }
     .end annotation
 
+    .line 16
     invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableCollection$Builder;->addAll(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableCollection$Builder;
 
     return-object p0
@@ -408,6 +437,7 @@
 .method public bridge synthetic build()Lcom/google/common/collect/ImmutableCollection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMultiset$Builder;->build()Lcom/google/common/collect/ImmutableMultiset;
 
     move-result-object p0
@@ -425,10 +455,12 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-virtual {v0}, Lcom/google/common/collect/ObjectCountHashMap;->size()I
@@ -437,17 +469,20 @@
 
     if-nez v0, :cond_0
 
+    .line 4
     invoke-static {}, Lcom/google/common/collect/ImmutableMultiset;->of()Lcom/google/common/collect/ImmutableMultiset;
 
     move-result-object p0
 
     return-object p0
 
+    .line 5
     :cond_0
     iget-boolean v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->isLinkedHash:Z
 
     if-eqz v0, :cond_1
 
+    .line 6
     new-instance v0, Lcom/google/common/collect/ObjectCountHashMap;
 
     iget-object v1, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
@@ -458,13 +493,16 @@
 
     const/4 v0, 0x0
 
+    .line 7
     iput-boolean v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->isLinkedHash:Z
 
     :cond_1
     const/4 v0, 0x1
 
+    .line 8
     iput-boolean v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->buildInvoked:Z
 
+    .line 9
     new-instance v0, Lcom/google/common/collect/RegularImmutableMultiset;
 
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;

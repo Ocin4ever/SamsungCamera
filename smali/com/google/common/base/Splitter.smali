@@ -30,6 +30,7 @@
 .method private constructor <init>(Lcom/google/common/base/Splitter$Strategy;)V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/google/common/base/CharMatcher;->none()Lcom/google/common/base/CharMatcher;
 
     move-result-object v0
@@ -46,14 +47,19 @@
 .method private constructor <init>(Lcom/google/common/base/Splitter$Strategy;ZLcom/google/common/base/CharMatcher;I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/base/Splitter;->strategy:Lcom/google/common/base/Splitter$Strategy;
 
+    .line 4
     iput-boolean p2, p0, Lcom/google/common/base/Splitter;->omitEmptyStrings:Z
 
+    .line 5
     iput-object p3, p0, Lcom/google/common/base/Splitter;->trimmer:Lcom/google/common/base/CharMatcher;
 
+    .line 6
     iput p4, p0, Lcom/google/common/base/Splitter;->limit:I
 
     return-void
@@ -124,6 +130,7 @@
 .method public static on(C)Lcom/google/common/base/Splitter;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/CharMatcher;->is(C)Lcom/google/common/base/CharMatcher;
 
     move-result-object p0
@@ -138,8 +145,10 @@
 .method public static on(Lcom/google/common/base/CharMatcher;)Lcom/google/common/base/Splitter;
     .locals 2
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     new-instance v0, Lcom/google/common/base/Splitter;
 
     new-instance v1, Lcom/google/common/base/Splitter$1;
@@ -156,6 +165,7 @@
 
     const-string v0, ""
 
+    .line 9
     invoke-virtual {p0, v0}, Lcom/google/common/base/CommonPattern;->matcher(Ljava/lang/CharSequence;)Lcom/google/common/base/CommonMatcher;
 
     move-result-object v0
@@ -168,8 +178,10 @@
 
     const-string v1, "The pattern may not match the empty string: %s"
 
+    .line 10
     invoke-static {v0, v1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 11
     new-instance v0, Lcom/google/common/base/Splitter;
 
     new-instance v1, Lcom/google/common/base/Splitter$3;
@@ -184,6 +196,7 @@
 .method public static on(Ljava/lang/String;)Lcom/google/common/base/Splitter;
     .locals 4
 
+    .line 4
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -206,12 +219,14 @@
 
     invoke-static {v0, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 5
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-ne v0, v1, :cond_1
 
+    .line 6
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result p0
@@ -222,6 +237,7 @@
 
     return-object p0
 
+    .line 7
     :cond_1
     new-instance v0, Lcom/google/common/base/Splitter;
 
@@ -237,6 +253,7 @@
 .method public static on(Ljava/util/regex/Pattern;)Lcom/google/common/base/Splitter;
     .locals 1
 
+    .line 8
     new-instance v0, Lcom/google/common/base/JdkPattern;
 
     invoke-direct {v0, p0}, Lcom/google/common/base/JdkPattern;-><init>(Ljava/util/regex/Pattern;)V
@@ -407,6 +424,7 @@
 .method public trimResults()Lcom/google/common/base/Splitter;
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/google/common/base/CharMatcher;->whitespace()Lcom/google/common/base/CharMatcher;
 
     move-result-object v0
@@ -421,8 +439,10 @@
 .method public trimResults(Lcom/google/common/base/CharMatcher;)Lcom/google/common/base/Splitter;
     .locals 3
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     new-instance v0, Lcom/google/common/base/Splitter;
 
     iget-object v1, p0, Lcom/google/common/base/Splitter;->strategy:Lcom/google/common/base/Splitter$Strategy;
@@ -439,6 +459,7 @@
 .method public withKeyValueSeparator(C)Lcom/google/common/base/Splitter$MapSplitter;
     .locals 0
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Splitter;->on(C)Lcom/google/common/base/Splitter;
 
     move-result-object p1
@@ -453,6 +474,7 @@
 .method public withKeyValueSeparator(Lcom/google/common/base/Splitter;)Lcom/google/common/base/Splitter$MapSplitter;
     .locals 2
 
+    .line 3
     new-instance v0, Lcom/google/common/base/Splitter$MapSplitter;
 
     const/4 v1, 0x0
@@ -465,6 +487,7 @@
 .method public withKeyValueSeparator(Ljava/lang/String;)Lcom/google/common/base/Splitter$MapSplitter;
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Splitter;->on(Ljava/lang/String;)Lcom/google/common/base/Splitter;
 
     move-result-object p1

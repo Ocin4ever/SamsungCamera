@@ -24,8 +24,10 @@
 .method private constructor <init>(I[I)V
     .locals 4
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -37,12 +39,14 @@
 
     aget v3, p2, v2
 
+    .line 4
     invoke-static {v3, p1}, Lcom/google/common/math/Quantiles;->access$300(II)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     array-length v0, p2
 
@@ -55,8 +59,10 @@
 
     invoke-static {v1, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 6
     iput p1, p0, Lcom/google/common/math/Quantiles$ScaleAndIndexes;->scale:I
 
+    .line 7
     iput-object p2, p0, Lcom/google/common/math/Quantiles$ScaleAndIndexes;->indexes:[I
 
     return-void
@@ -65,6 +71,7 @@
 .method public synthetic constructor <init>(I[ILcom/google/common/math/Quantiles$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/math/Quantiles$ScaleAndIndexes;-><init>(I[I)V
 
     return-void
@@ -88,6 +95,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/primitives/Doubles;->toArray(Ljava/util/Collection;)[D
 
     move-result-object p1
@@ -111,6 +119,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p1}, [D->clone()Ljava/lang/Object;
 
     move-result-object p1
@@ -136,6 +145,7 @@
         }
     .end annotation
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/math/Quantiles;->access$500([I)[D
 
     move-result-object p1
@@ -159,6 +169,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/math/Quantiles;->access$400([J)[D
 
     move-result-object p1

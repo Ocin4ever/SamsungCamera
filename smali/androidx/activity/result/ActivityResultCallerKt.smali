@@ -57,6 +57,7 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Landroidx/activity/result/b;
 
     invoke-direct {v0, p4}, Landroidx/activity/result/b;-><init>(Lq6/l;)V
@@ -69,6 +70,7 @@
 
     invoke-static {p0, p3}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     new-instance p3, Landroidx/activity/result/ActivityResultCallerLauncher;
 
     invoke-direct {p3, p0, p1, p2}, Landroidx/activity/result/ActivityResultCallerLauncher;-><init>(Landroidx/activity/result/ActivityResultLauncher;Landroidx/activity/result/contract/ActivityResultContract;Ljava/lang/Object;)V
@@ -108,6 +110,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     new-instance v0, Landroidx/activity/result/a;
 
     invoke-direct {v0, p3}, Landroidx/activity/result/a;-><init>(Lq6/l;)V
@@ -120,6 +123,7 @@
 
     invoke-static {p0, p3}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 4
     new-instance p3, Landroidx/activity/result/ActivityResultCallerLauncher;
 
     invoke-direct {p3, p0, p1, p2}, Landroidx/activity/result/ActivityResultCallerLauncher;-><init>(Landroidx/activity/result/ActivityResultLauncher;Landroidx/activity/result/contract/ActivityResultContract;Ljava/lang/Object;)V

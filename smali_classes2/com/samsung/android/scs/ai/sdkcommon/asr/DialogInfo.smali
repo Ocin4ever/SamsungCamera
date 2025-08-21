@@ -56,6 +56,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object v0
@@ -68,20 +69,24 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 7
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/DialogInfo;->speakerList:Ljava/util/List;
 
+    .line 8
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/DialogInfo;->speechInfos:Ljava/util/List;
 
+    .line 9
     const-class p0, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -90,6 +95,7 @@
 
     invoke-virtual {p1, v0, p0}, Landroid/os/Parcel;->readList(Ljava/util/List;Ljava/lang/ClassLoader;)V
 
+    .line 10
     const-class p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/SpeechInfo;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -112,20 +118,24 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/DialogInfo;->speakerList:Ljava/util/List;
 
+    .line 4
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/DialogInfo;->speechInfos:Ljava/util/List;
 
+    .line 5
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     return-void

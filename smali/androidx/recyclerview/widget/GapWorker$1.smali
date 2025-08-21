@@ -40,6 +40,7 @@
 .method public compare(Landroidx/recyclerview/widget/GapWorker$Task;Landroidx/recyclerview/widget/GapWorker$Task;)I
     .locals 5
 
+    .line 2
     iget-object p0, p1, Landroidx/recyclerview/widget/GapWorker$Task;->view:Landroidx/recyclerview/widget/RecyclerView;
 
     const/4 v0, 0x0
@@ -82,6 +83,7 @@
     :goto_2
     return v1
 
+    .line 3
     :cond_3
     iget-boolean p0, p1, Landroidx/recyclerview/widget/GapWorker$Task;->immediate:Z
 
@@ -96,6 +98,7 @@
     :cond_4
     return v1
 
+    .line 4
     :cond_5
     iget p0, p2, Landroidx/recyclerview/widget/GapWorker$Task;->viewVelocity:I
 
@@ -107,6 +110,7 @@
 
     return p0
 
+    .line 5
     :cond_6
     iget p0, p1, Landroidx/recyclerview/widget/GapWorker$Task;->distanceToItem:I
 
@@ -125,6 +129,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/recyclerview/widget/GapWorker$Task;
 
     check-cast p2, Landroidx/recyclerview/widget/GapWorker$Task;

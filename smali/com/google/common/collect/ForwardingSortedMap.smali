@@ -97,6 +97,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMap;->delegate()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -107,6 +108,7 @@
 .method public bridge synthetic delegate()Ljava/util/Map;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMap;->delegate()Ljava/util/SortedMap;
 
     move-result-object p0

@@ -475,10 +475,13 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 3
     iput p3, p0, Lcom/samsung/android/camera/core2/util/SemImageFormat;->a:I
 
+    .line 4
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1
@@ -491,10 +494,13 @@
 .method public constructor <init>(Ljava/lang/String;IILjava/util/List;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 6
     iput p3, p0, Lcom/samsung/android/camera/core2/util/SemImageFormat;->a:I
 
+    .line 7
     iput-object p4, p0, Lcom/samsung/android/camera/core2/util/SemImageFormat;->b:Ljava/util/List;
 
     return-void
@@ -503,6 +509,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;IILjava/util/List;Lcom/samsung/android/camera/core2/util/y2;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/camera/core2/util/SemImageFormat;-><init>(Ljava/lang/String;IILjava/util/List;)V
 
     return-void

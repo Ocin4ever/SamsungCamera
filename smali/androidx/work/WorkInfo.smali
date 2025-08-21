@@ -113,6 +113,7 @@
         }
     .end annotation
 
+    .line 1
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -181,6 +182,7 @@
         }
     .end annotation
 
+    .line 2
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -256,6 +258,7 @@
         }
     .end annotation
 
+    .line 3
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -337,6 +340,7 @@
         }
     .end annotation
 
+    .line 4
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -418,6 +422,7 @@
         }
     .end annotation
 
+    .line 5
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -501,6 +506,7 @@
         }
     .end annotation
 
+    .line 6
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -590,6 +596,7 @@
         }
     .end annotation
 
+    .line 7
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -681,6 +688,7 @@
         }
     .end annotation
 
+    .line 8
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -772,6 +780,7 @@
         }
     .end annotation
 
+    .line 9
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -887,30 +896,43 @@
 
     invoke-static {p8, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 11
     iput-object p1, p0, Landroidx/work/WorkInfo;->id:Ljava/util/UUID;
 
+    .line 12
     iput-object p2, p0, Landroidx/work/WorkInfo;->state:Landroidx/work/WorkInfo$State;
 
+    .line 13
     iput-object p3, p0, Landroidx/work/WorkInfo;->tags:Ljava/util/Set;
 
+    .line 14
     iput-object p4, p0, Landroidx/work/WorkInfo;->outputData:Landroidx/work/Data;
 
+    .line 15
     iput-object p5, p0, Landroidx/work/WorkInfo;->progress:Landroidx/work/Data;
 
+    .line 16
     iput p6, p0, Landroidx/work/WorkInfo;->runAttemptCount:I
 
+    .line 17
     iput p7, p0, Landroidx/work/WorkInfo;->generation:I
 
+    .line 18
     iput-object p8, p0, Landroidx/work/WorkInfo;->constraints:Landroidx/work/Constraints;
 
+    .line 19
     iput-wide p9, p0, Landroidx/work/WorkInfo;->initialDelayMillis:J
 
+    .line 20
     iput-object p11, p0, Landroidx/work/WorkInfo;->periodicityInfo:Landroidx/work/WorkInfo$PeriodicityInfo;
 
+    .line 21
     iput-wide p12, p0, Landroidx/work/WorkInfo;->nextScheduleTimeMillis:J
 
+    .line 22
     iput p14, p0, Landroidx/work/WorkInfo;->stopReason:I
 
     return-void
@@ -927,6 +949,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 23
     sget-object v1, Landroidx/work/Data;->EMPTY:Landroidx/work/Data;
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
@@ -943,6 +966,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 24
     sget-object v1, Landroidx/work/Data;->EMPTY:Landroidx/work/Data;
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
@@ -985,6 +1009,7 @@
 
     if-eqz v1, :cond_4
 
+    .line 25
     sget-object v1, Landroidx/work/Constraints;->NONE:Landroidx/work/Constraints;
 
     move-object v11, v1
@@ -1059,6 +1084,7 @@
 
     move-object/from16 v6, p3
 
+    .line 26
     invoke-direct/range {v3 .. v17}, Landroidx/work/WorkInfo;-><init>(Ljava/util/UUID;Landroidx/work/WorkInfo$State;Ljava/util/Set;Landroidx/work/Data;Landroidx/work/Data;IILandroidx/work/Constraints;JLandroidx/work/WorkInfo$PeriodicityInfo;JI)V
 
     return-void

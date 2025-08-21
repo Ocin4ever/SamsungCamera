@@ -222,6 +222,7 @@
 .method public static physicalSizeEquals(Landroid/view/Display$Mode;Landroid/graphics/Point;)Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/Display$Mode;->getPhysicalWidth()I
 
     move-result v0
@@ -238,6 +239,7 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/view/Display$Mode;->getPhysicalWidth()I
 
@@ -270,6 +272,7 @@
 .method public static physicalSizeEquals(Landroid/view/Display$Mode;Landroid/view/Display$Mode;)Z
     .locals 2
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/Display$Mode;->getPhysicalWidth()I
 
     move-result v0
@@ -280,6 +283,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/Display$Mode;->getPhysicalHeight()I
 
     move-result p0

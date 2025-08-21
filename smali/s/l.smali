@@ -50,6 +50,7 @@
 
     move-object v0, p0
 
+    .line 1
     invoke-direct/range {v0 .. v9}, Ls/l;-><init>(Ls/e;Ls/m;Ls/g;Ls/b;Ls/d;Ls/b;Ls/b;Ls/b;Ls/b;)V
 
     return-void
@@ -58,24 +59,34 @@
 .method public constructor <init>(Ls/e;Ls/m;Ls/g;Ls/b;Ls/d;Ls/b;Ls/b;Ls/b;Ls/b;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Ls/l;->a:Ls/e;
 
+    .line 4
     iput-object p2, p0, Ls/l;->b:Ls/m;
 
+    .line 5
     iput-object p3, p0, Ls/l;->c:Ls/g;
 
+    .line 6
     iput-object p4, p0, Ls/l;->d:Ls/b;
 
+    .line 7
     iput-object p5, p0, Ls/l;->e:Ls/d;
 
+    .line 8
     iput-object p6, p0, Ls/l;->h:Ls/b;
 
+    .line 9
     iput-object p7, p0, Ls/l;->i:Ls/b;
 
+    .line 10
     iput-object p8, p0, Ls/l;->f:Ls/b;
 
+    .line 11
     iput-object p9, p0, Ls/l;->g:Ls/b;
 
     return-void

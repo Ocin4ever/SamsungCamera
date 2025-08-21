@@ -1253,6 +1253,7 @@
 .method public bridge synthetic performShowView(I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->performShowView(I)V
 
     return-void
@@ -1261,6 +1262,7 @@
 .method public bridge synthetic performShowView(IZ)V
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->performShowView(IZ)V
 
     return-void
@@ -1484,6 +1486,7 @@
 .method public bridge synthetic setCenterButtonEnabled(Z)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->setCenterButtonEnabled(Z)V
 
     return-void
@@ -1492,6 +1495,7 @@
 .method public bridge synthetic setCenterButtonEnabled(ZI)V
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->setCenterButtonEnabled(ZI)V
 
     return-void
@@ -1661,6 +1665,7 @@
 .method public bridge synthetic showView(I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->showView(I)V
 
     return-void
@@ -1669,6 +1674,7 @@
 .method public bridge synthetic showView(IZ)V
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->showView(IZ)V
 
     return-void
@@ -1776,6 +1782,7 @@
 .method public bridge synthetic updateQuickViewThumbnail()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->updateQuickViewThumbnail()V
 
     return-void
@@ -1784,6 +1791,7 @@
 .method public bridge synthetic updateQuickViewThumbnail(Landroid/graphics/Bitmap;I)V
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->updateQuickViewThumbnail(Landroid/graphics/Bitmap;I)V
 
     return-void
@@ -1800,6 +1808,7 @@
 .method public bridge synthetic updateRightButtonContentDescription(I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->updateRightButtonContentDescription(I)V
 
     return-void
@@ -1808,6 +1817,7 @@
 .method public bridge synthetic updateRightButtonContentDescription(Ljava/lang/String;)V
     .locals 0
 
+    .line 2
     invoke-super {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->updateRightButtonContentDescription(Ljava/lang/String;)V
 
     return-void

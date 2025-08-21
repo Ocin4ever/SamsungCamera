@@ -34,50 +34,59 @@
 .method private constructor <init>(Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;->c(Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/sdk/scs/ai/language/AppInfo;->apiKey:Ljava/lang/String;
 
+    .line 4
     invoke-static {p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;->f(Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/sdk/scs/ai/language/AppInfo;->serverUrl:Ljava/lang/String;
 
+    .line 5
     invoke-static {p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;->a(Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/sdk/scs/ai/language/AppInfo;->appId:Ljava/lang/String;
 
+    .line 6
     invoke-static {p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;->g(Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/sdk/scs/ai/language/AppInfo;->signingKey:Ljava/lang/String;
 
+    .line 7
     invoke-static {p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;->b(Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/sdk/scs/ai/language/AppInfo;->accessToken:Ljava/lang/String;
 
+    .line 8
     invoke-static {p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;->h(Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/sdk/scs/ai/language/AppInfo;->userId:Ljava/lang/String;
 
+    .line 9
     invoke-static {p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;->e(Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;)Lcom/samsung/android/sdk/scs/ai/language/AppInfo$RequestType;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/sdk/scs/ai/language/AppInfo;->requestType:Lcom/samsung/android/sdk/scs/ai/language/AppInfo$RequestType;
 
+    .line 10
     invoke-static {p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;->d(Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;)Z
 
     move-result p1
@@ -90,6 +99,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;Lm3/a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo;-><init>(Lcom/samsung/android/sdk/scs/ai/language/AppInfo$Builder;)V
 
     return-void

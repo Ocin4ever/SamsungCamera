@@ -114,6 +114,7 @@
 
     const-string p0, "--"
 
+    .line 10
     invoke-virtual {p4, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     return-void
@@ -123,6 +124,7 @@
 
     const/4 p2, 0x0
 
+    .line 11
     invoke-static {p0, p1, p4, p2}, Landroidx/core/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;I)V
 
     return-void
@@ -133,6 +135,7 @@
 
     const/4 v0, 0x0
 
+    .line 9
     invoke-static {p0, p1, p2, v0}, Landroidx/core/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;I)V
 
     return-void
@@ -141,15 +144,18 @@
 .method public static formatDuration(JLjava/io/PrintWriter;I)V
     .locals 2
 
+    .line 5
     sget-object v0, Landroidx/core/util/TimeUtils;->sFormatSync:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 6
     :try_start_0
     invoke-static {p0, p1, p3}, Landroidx/core/util/TimeUtils;->formatDurationLocked(JI)I
 
     move-result p0
 
+    .line 7
     new-instance p1, Ljava/lang/String;
 
     sget-object p3, Landroidx/core/util/TimeUtils;->sFormatStr:[C
@@ -160,6 +166,7 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 8
     monitor-exit v0
 
     return-void
@@ -177,21 +184,25 @@
 .method public static formatDuration(JLjava/lang/StringBuilder;)V
     .locals 2
 
+    .line 1
     sget-object v0, Landroidx/core/util/TimeUtils;->sFormatSync:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
+    .line 2
     :try_start_0
     invoke-static {p0, p1, v1}, Landroidx/core/util/TimeUtils;->formatDurationLocked(JI)I
 
     move-result p0
 
+    .line 3
     sget-object p1, Landroidx/core/util/TimeUtils;->sFormatStr:[C
 
     invoke-virtual {p2, p1, v1, p0}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
 
+    .line 4
     monitor-exit v0
 
     return-void

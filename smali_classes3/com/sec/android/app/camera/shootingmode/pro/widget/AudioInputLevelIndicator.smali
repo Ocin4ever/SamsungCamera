@@ -39,8 +39,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -55,6 +57,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->LEFT_AUDIO_BAR_LEFT:I
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -71,6 +74,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->LEFT_AUDIO_BAR_RIGHT:I
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -87,6 +91,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->RIGHT_AUDIO_BAR_LEFT:I
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -101,6 +106,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->RIGHT_AUDIO_BAR_RIGHT:I
 
+    .line 6
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -115,6 +121,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->AUDIO_BAR_HEIGHT:I
 
+    .line 7
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -131,6 +138,7 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->AUDIO_BAR_BOTTOM:I
 
+    .line 8
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -143,12 +151,15 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->AUDIO_BAR_TOP:I
 
+    .line 9
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->mLeftAudioBarTop:I
 
+    .line 10
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->mRightAudioBarTop:I
 
     const/4 p1, 0x0
 
+    .line 11
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->init(Landroid/util/AttributeSet;)V
 
     return-void
@@ -157,8 +168,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
+    .line 12
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 13
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -173,6 +186,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->LEFT_AUDIO_BAR_LEFT:I
 
+    .line 14
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -189,6 +203,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->LEFT_AUDIO_BAR_RIGHT:I
 
+    .line 15
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -205,6 +220,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->RIGHT_AUDIO_BAR_LEFT:I
 
+    .line 16
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -219,6 +235,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->RIGHT_AUDIO_BAR_RIGHT:I
 
+    .line 17
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -233,6 +250,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->AUDIO_BAR_HEIGHT:I
 
+    .line 18
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -249,6 +267,7 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->AUDIO_BAR_BOTTOM:I
 
+    .line 19
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -261,10 +280,13 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->AUDIO_BAR_TOP:I
 
+    .line 20
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->mLeftAudioBarTop:I
 
+    .line 21
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->mRightAudioBarTop:I
 
+    .line 22
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/shootingmode/pro/widget/AudioInputLevelIndicator;->init(Landroid/util/AttributeSet;)V
 
     return-void

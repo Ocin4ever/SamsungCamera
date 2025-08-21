@@ -39,32 +39,38 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 8
 
+    .line 1
     sget v0, Ly0/a;->m:I
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {p1, v0, v1}, Lq1/b;->b(Landroid/content/Context;IZ)Z
 
     move-result v3
 
     sget v0, Ly0/a;->l:I
 
+    .line 3
     invoke-static {p1, v0, v1}, Lh1/a;->b(Landroid/content/Context;II)I
 
     move-result v4
 
     sget v0, Ly0/a;->k:I
 
+    .line 4
     invoke-static {p1, v0, v1}, Lh1/a;->b(Landroid/content/Context;II)I
 
     move-result v5
 
     sget v0, Ly0/a;->j:I
 
+    .line 5
     invoke-static {p1, v0, v1}, Lh1/a;->b(Landroid/content/Context;II)I
 
     move-result v6
 
+    .line 6
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -77,6 +83,7 @@
 
     move-object v2, p0
 
+    .line 7
     invoke-direct/range {v2 .. v7}, Lk1/a;-><init>(ZIIIF)V
 
     return-void
@@ -85,16 +92,22 @@
 .method public constructor <init>(ZIIIF)V
     .locals 0
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 9
     iput-boolean p1, p0, Lk1/a;->a:Z
 
+    .line 10
     iput p2, p0, Lk1/a;->b:I
 
+    .line 11
     iput p3, p0, Lk1/a;->c:I
 
+    .line 12
     iput p4, p0, Lk1/a;->d:I
 
+    .line 13
     iput p5, p0, Lk1/a;->e:F
 
     return-void

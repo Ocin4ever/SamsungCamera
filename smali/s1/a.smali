@@ -84,6 +84,7 @@
 
     const/high16 v0, -0x1000000
 
+    .line 1
     invoke-direct {p0, v0}, Ls1/a;-><init>(I)V
 
     return-void
@@ -92,32 +93,39 @@
 .method public constructor <init>(I)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Ls1/a;->g:Landroid/graphics/Path;
 
+    .line 4
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Ls1/a;->h:Landroid/graphics/Paint;
 
+    .line 5
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v1, p0, Ls1/a;->a:Landroid/graphics/Paint;
 
+    .line 6
     invoke-virtual {p0, p1}, Ls1/a;->d(I)V
 
     const/4 p1, 0x0
 
+    .line 7
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 8
     new-instance p1, Landroid/graphics/Paint;
 
     const/4 v0, 0x4
@@ -126,10 +134,12 @@
 
     iput-object p1, p0, Ls1/a;->b:Landroid/graphics/Paint;
 
+    .line 9
     sget-object v0, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 10
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, p1}, Landroid/graphics/Paint;-><init>(Landroid/graphics/Paint;)V

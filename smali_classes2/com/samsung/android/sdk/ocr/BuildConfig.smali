@@ -16,7 +16,7 @@
 
 .field public static final VERSION_NAME:Ljava/lang/String; = "3.3.231214"
 
-.field public static final useLocalAssetProvider:Z
+.field public static final useLocalAssetProvider:Z = false
 
 
 # direct methods

@@ -15,6 +15,7 @@
 .method public constructor <init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/MultiFrameNodeBase;-><init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;I)V
 
     return-void
@@ -23,6 +24,7 @@
 .method public constructor <init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/MultiFrameNodeBase;-><init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Z)V
 
     return-void

@@ -37,65 +37,80 @@
 .method public constructor <init>(Lm/e0;Lu/b;Ljava/lang/String;ZLjava/util/List;Ls/l;)V
     .locals 1
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     new-instance v0, Ln/a;
 
     invoke-direct {v0}, Ln/a;-><init>()V
 
     iput-object v0, p0, Lo/d;->a:Landroid/graphics/Paint;
 
+    .line 7
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lo/d;->b:Landroid/graphics/RectF;
 
+    .line 8
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lo/d;->c:Landroid/graphics/Matrix;
 
+    .line 9
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lo/d;->d:Landroid/graphics/Path;
 
+    .line 10
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lo/d;->e:Landroid/graphics/RectF;
 
+    .line 11
     iput-object p3, p0, Lo/d;->f:Ljava/lang/String;
 
+    .line 12
     iput-object p1, p0, Lo/d;->i:Lm/e0;
 
+    .line 13
     iput-boolean p4, p0, Lo/d;->g:Z
 
+    .line 14
     iput-object p5, p0, Lo/d;->h:Ljava/util/List;
 
     if-eqz p6, :cond_0
 
+    .line 15
     invoke-virtual {p6}, Ls/l;->b()Lp/p;
 
     move-result-object p1
 
     iput-object p1, p0, Lo/d;->k:Lp/p;
 
+    .line 16
     invoke-virtual {p1, p2}, Lp/p;->a(Lu/b;)V
 
+    .line 17
     iget-object p1, p0, Lo/d;->k:Lp/p;
 
     invoke-virtual {p1, p0}, Lp/p;->b(Lp/a$b;)V
 
+    .line 18
     :cond_0
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 19
     invoke-interface {p5}, Ljava/util/List;->size()I
 
     move-result p1
@@ -105,16 +120,19 @@
     :goto_0
     if-ltz p1, :cond_2
 
+    .line 20
     invoke-interface {p5, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Lo/c;
 
+    .line 21
     instance-of p3, p2, Lo/j;
 
     if-eqz p3, :cond_1
 
+    .line 22
     check-cast p2, Lo/j;
 
     invoke-interface {p0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -124,6 +142,7 @@
 
     goto :goto_0
 
+    .line 23
     :cond_2
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -134,6 +153,7 @@
     :goto_1
     if-ltz p1, :cond_3
 
+    .line 24
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
@@ -161,10 +181,12 @@
 .method public constructor <init>(Lm/e0;Lu/b;Lt/p;)V
     .locals 7
 
+    .line 1
     invoke-virtual {p3}, Lt/p;->c()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 2
     invoke-virtual {p3}, Lt/p;->d()Z
 
     move-result v4
@@ -177,6 +199,7 @@
 
     move-result-object v5
 
+    .line 3
     invoke-virtual {p3}, Lt/p;->b()Ljava/util/List;
 
     move-result-object p3
@@ -191,6 +214,7 @@
 
     move-object v2, p2
 
+    .line 4
     invoke-direct/range {v0 .. v6}, Lo/d;-><init>(Lm/e0;Lu/b;Ljava/lang/String;ZLjava/util/List;Ls/l;)V
 
     return-void

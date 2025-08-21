@@ -24,18 +24,25 @@
 .method public constructor <init>(JLjava/lang/String;Ljava/lang/String;IJJ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/samsung/android/sdk/globalpostprocmgr/PPPipelineData;->mId:J
 
+    .line 3
     iput-object p3, p0, Lcom/samsung/android/sdk/globalpostprocmgr/PPPipelineData;->mName:Ljava/lang/String;
 
+    .line 4
     iput-object p4, p0, Lcom/samsung/android/sdk/globalpostprocmgr/PPPipelineData;->mPluginList:Ljava/lang/String;
 
+    .line 5
     iput p5, p0, Lcom/samsung/android/sdk/globalpostprocmgr/PPPipelineData;->mPriority:I
 
+    .line 6
     iput-wide p6, p0, Lcom/samsung/android/sdk/globalpostprocmgr/PPPipelineData;->mVersion:J
 
+    .line 7
     iput-wide p8, p0, Lcom/samsung/android/sdk/globalpostprocmgr/PPPipelineData;->mUpdateTime:J
 
     return-void
@@ -44,16 +51,22 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;IJJ)V
     .locals 0
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 9
     iput-object p1, p0, Lcom/samsung/android/sdk/globalpostprocmgr/PPPipelineData;->mName:Ljava/lang/String;
 
+    .line 10
     iput-object p2, p0, Lcom/samsung/android/sdk/globalpostprocmgr/PPPipelineData;->mPluginList:Ljava/lang/String;
 
+    .line 11
     iput p3, p0, Lcom/samsung/android/sdk/globalpostprocmgr/PPPipelineData;->mPriority:I
 
+    .line 12
     iput-wide p4, p0, Lcom/samsung/android/sdk/globalpostprocmgr/PPPipelineData;->mVersion:J
 
+    .line 13
     iput-wide p6, p0, Lcom/samsung/android/sdk/globalpostprocmgr/PPPipelineData;->mUpdateTime:J
 
     return-void

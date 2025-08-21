@@ -7,6 +7,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;)Lco/polarr/mgcsc/f/g/a;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object p0
@@ -37,6 +38,7 @@
 .method private static a(Ljava/io/InputStream;)Lco/polarr/mgcsc/f/g/a;
     .locals 6
 
+    .line 2
     new-instance v0, Lco/polarr/mgcsc/f/g/a;
 
     invoke-direct {v0}, Lco/polarr/mgcsc/f/g/a;-><init>()V
@@ -1617,6 +1619,7 @@
 .method private static a(Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 1
 
+    .line 3
     :try_start_0
     const-string v0, "true"
 
@@ -1659,6 +1662,7 @@
 .method public static a(Lco/polarr/mgcsc/v2/apis/PolarrMGC;Lco/polarr/mgcsc/f/g/a;)V
     .locals 4
 
+    .line 4
     if-nez p1, :cond_0
 
     return-void

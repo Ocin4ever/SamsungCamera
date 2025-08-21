@@ -95,20 +95,25 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverRunnable;
 
     iget-object v1, p0, Lcom/samsung/android/sdk/scs/ai/language/SmartCoverer;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverServiceExecutor;
 
     invoke-direct {v0, v1}, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverRunnable;-><init>(Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverServiceExecutor;)V
 
+    .line 3
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverRunnable;->setAppInfo(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;)V
 
+    .line 4
     invoke-virtual {v0, p2}, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverRunnable;->setInputText(Ljava/lang/String;)V
 
+    .line 5
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/language/SmartCoverer;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverServiceExecutor;
 
     invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 6
     invoke-virtual {v0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;->getTask()Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0
@@ -133,10 +138,12 @@
         }
     .end annotation
 
+    .line 7
     new-instance v0, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverRunnable2;
 
     iget-object v1, p0, Lcom/samsung/android/sdk/scs/ai/language/SmartCoverer;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverServiceExecutor;
 
+    .line 8
     invoke-virtual {p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo;->isStreamingMode()Z
 
     move-result v2
@@ -157,6 +164,7 @@
     :goto_0
     invoke-direct {v0, v1, v2}, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverRunnable2;-><init>(Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverServiceExecutor;Lcom/samsung/android/sdk/scs/base/tasks/TaskCompletionSource;)V
 
+    .line 9
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -179,16 +187,21 @@
 
     invoke-static {v2, v1}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 10
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverRunnable2;->setAppInfo(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;)V
 
+    .line 11
     invoke-virtual {v0, p2}, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverRunnable2;->setInputText(Ljava/lang/String;)V
 
+    .line 12
     invoke-virtual {v0, p3}, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverRunnable2;->setExtraPrompt(Ljava/util/Map;)V
 
+    .line 13
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/language/SmartCoverer;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/SmartCoverServiceExecutor;
 
     invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 14
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,6 +222,7 @@
 
     invoke-static {v2, p0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 15
     invoke-virtual {v0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;->getTask()Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0
@@ -234,6 +248,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/SmartCoverer;->smartCover(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;Ljava/lang/String;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0

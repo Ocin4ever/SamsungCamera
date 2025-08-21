@@ -148,6 +148,7 @@
 .method public static getInstance()Landroidx/core/text/BidiFormatter;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/core/text/BidiFormatter$Builder;
 
     invoke-direct {v0}, Landroidx/core/text/BidiFormatter$Builder;-><init>()V
@@ -162,6 +163,7 @@
 .method public static getInstance(Ljava/util/Locale;)Landroidx/core/text/BidiFormatter;
     .locals 1
 
+    .line 3
     new-instance v0, Landroidx/core/text/BidiFormatter$Builder;
 
     invoke-direct {v0, p0}, Landroidx/core/text/BidiFormatter$Builder;-><init>(Ljava/util/Locale;)V
@@ -176,6 +178,7 @@
 .method public static getInstance(Z)Landroidx/core/text/BidiFormatter;
     .locals 1
 
+    .line 2
     new-instance v0, Landroidx/core/text/BidiFormatter$Builder;
 
     invoke-direct {v0, p0}, Landroidx/core/text/BidiFormatter$Builder;-><init>(Z)V
@@ -348,6 +351,7 @@
 .method public isRtl(Ljava/lang/CharSequence;)Z
     .locals 2
 
+    .line 2
     iget-object p0, p0, Landroidx/core/text/BidiFormatter;->mDefaultTextDirectionHeuristicCompat:Landroidx/core/text/TextDirectionHeuristicCompat;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
@@ -366,6 +370,7 @@
 .method public isRtl(Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/core/text/BidiFormatter;->isRtl(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -384,6 +389,7 @@
 .method public unicodeWrap(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 2
 
+    .line 19
     iget-object v0, p0, Landroidx/core/text/BidiFormatter;->mDefaultTextDirectionHeuristicCompat:Landroidx/core/text/TextDirectionHeuristicCompat;
 
     const/4 v1, 0x1
@@ -400,6 +406,7 @@
 
     const/4 v0, 0x1
 
+    .line 15
     invoke-virtual {p0, p1, p2, v0}, Landroidx/core/text/BidiFormatter;->unicodeWrap(Ljava/lang/CharSequence;Landroidx/core/text/TextDirectionHeuristicCompat;Z)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -419,6 +426,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
@@ -427,10 +435,12 @@
 
     move-result p2
 
+    .line 3
     new-instance v0, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v0}, Landroid/text/SpannableStringBuilder;-><init>()V
 
+    .line 4
     invoke-virtual {p0}, Landroidx/core/text/BidiFormatter;->getStereoReset()Z
 
     move-result v1
@@ -441,6 +451,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 5
     sget-object v1, Landroidx/core/text/TextDirectionHeuristicsCompat;->RTL:Landroidx/core/text/TextDirectionHeuristicCompat;
 
     goto :goto_0
@@ -448,6 +459,7 @@
     :cond_1
     sget-object v1, Landroidx/core/text/TextDirectionHeuristicsCompat;->LTR:Landroidx/core/text/TextDirectionHeuristicCompat;
 
+    .line 6
     :goto_0
     invoke-direct {p0, p1, v1}, Landroidx/core/text/BidiFormatter;->markBefore(Ljava/lang/CharSequence;Landroidx/core/text/TextDirectionHeuristicCompat;)Ljava/lang/String;
 
@@ -455,6 +467,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
+    .line 7
     :cond_2
     iget-boolean v1, p0, Landroidx/core/text/BidiFormatter;->mIsRtlContext:Z
 
@@ -469,17 +482,21 @@
     :cond_3
     const/16 v1, 0x202a
 
+    .line 8
     :goto_1
     invoke-virtual {v0, v1}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
+    .line 9
     invoke-virtual {v0, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     const/16 v1, 0x202c
 
+    .line 10
     invoke-virtual {v0, v1}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     goto :goto_2
 
+    .line 11
     :cond_4
     invoke-virtual {v0, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
@@ -488,6 +505,7 @@
 
     if-eqz p2, :cond_5
 
+    .line 12
     sget-object p2, Landroidx/core/text/TextDirectionHeuristicsCompat;->RTL:Landroidx/core/text/TextDirectionHeuristicCompat;
 
     goto :goto_3
@@ -495,6 +513,7 @@
     :cond_5
     sget-object p2, Landroidx/core/text/TextDirectionHeuristicsCompat;->LTR:Landroidx/core/text/TextDirectionHeuristicCompat;
 
+    .line 13
     :goto_3
     invoke-direct {p0, p1, p2}, Landroidx/core/text/BidiFormatter;->markAfter(Ljava/lang/CharSequence;Landroidx/core/text/TextDirectionHeuristicCompat;)Ljava/lang/String;
 
@@ -509,6 +528,7 @@
 .method public unicodeWrap(Ljava/lang/CharSequence;Z)Ljava/lang/CharSequence;
     .locals 1
 
+    .line 17
     iget-object v0, p0, Landroidx/core/text/BidiFormatter;->mDefaultTextDirectionHeuristicCompat:Landroidx/core/text/TextDirectionHeuristicCompat;
 
     invoke-virtual {p0, p1, v0, p2}, Landroidx/core/text/BidiFormatter;->unicodeWrap(Ljava/lang/CharSequence;Landroidx/core/text/TextDirectionHeuristicCompat;Z)Ljava/lang/CharSequence;
@@ -521,6 +541,7 @@
 .method public unicodeWrap(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 18
     iget-object v0, p0, Landroidx/core/text/BidiFormatter;->mDefaultTextDirectionHeuristicCompat:Landroidx/core/text/TextDirectionHeuristicCompat;
 
     const/4 v1, 0x1
@@ -537,6 +558,7 @@
 
     const/4 v0, 0x1
 
+    .line 14
     invoke-virtual {p0, p1, p2, v0}, Landroidx/core/text/BidiFormatter;->unicodeWrap(Ljava/lang/String;Landroidx/core/text/TextDirectionHeuristicCompat;Z)Ljava/lang/String;
 
     move-result-object p0
@@ -553,6 +575,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Landroidx/core/text/BidiFormatter;->unicodeWrap(Ljava/lang/CharSequence;Landroidx/core/text/TextDirectionHeuristicCompat;Z)Ljava/lang/CharSequence;
 
@@ -568,6 +591,7 @@
 .method public unicodeWrap(Ljava/lang/String;Z)Ljava/lang/String;
     .locals 1
 
+    .line 16
     iget-object v0, p0, Landroidx/core/text/BidiFormatter;->mDefaultTextDirectionHeuristicCompat:Landroidx/core/text/TextDirectionHeuristicCompat;
 
     invoke-virtual {p0, p1, v0, p2}, Landroidx/core/text/BidiFormatter;->unicodeWrap(Ljava/lang/String;Landroidx/core/text/TextDirectionHeuristicCompat;Z)Ljava/lang/String;

@@ -59,6 +59,7 @@
 .method public compare(DD)Lcom/google/common/collect/ComparisonChain;
     .locals 0
 
+    .line 6
     invoke-static {p1, p2, p3, p4}, Ljava/lang/Double;->compare(DD)I
 
     move-result p1
@@ -73,6 +74,7 @@
 .method public compare(FF)Lcom/google/common/collect/ComparisonChain;
     .locals 0
 
+    .line 5
     invoke-static {p1, p2}, Ljava/lang/Float;->compare(FF)I
 
     move-result p1
@@ -87,6 +89,7 @@
 .method public compare(II)Lcom/google/common/collect/ComparisonChain;
     .locals 0
 
+    .line 3
     invoke-static {p1, p2}, Lcom/google/common/primitives/Ints;->compare(II)I
 
     move-result p1
@@ -101,6 +104,7 @@
 .method public compare(JJ)Lcom/google/common/collect/ComparisonChain;
     .locals 0
 
+    .line 4
     invoke-static {p1, p2, p3, p4}, Lcom/google/common/primitives/Longs;->compare(JJ)I
 
     move-result p1
@@ -125,6 +129,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
     move-result p1
@@ -157,6 +162,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p3, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result p1

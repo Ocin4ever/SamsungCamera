@@ -79,6 +79,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     :try_start_0
     invoke-static {p0, v0}, Lcom/google/common/io/Closeables;->close(Ljava/io/Closeable;Z)V
     :try_end_0
@@ -89,6 +90,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -101,6 +103,7 @@
 
     const/4 v0, 0x1
 
+    .line 3
     :try_start_0
     invoke-static {p0, v0}, Lcom/google/common/io/Closeables;->close(Ljava/io/Closeable;Z)V
     :try_end_0
@@ -111,6 +114,7 @@
     :catch_0
     move-exception p0
 
+    .line 4
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V

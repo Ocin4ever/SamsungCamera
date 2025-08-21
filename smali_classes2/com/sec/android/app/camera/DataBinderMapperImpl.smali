@@ -6753,6 +6753,7 @@
 .method public getDataBinder(Landroidx/databinding/DataBindingComponent;Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/DataBinderMapperImpl;->INTERNAL_LAYOUT_ID_LOOKUP:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p3}, Landroid/util/SparseIntArray;->get(I)I
@@ -6761,6 +6762,7 @@
 
     if-lez p3, :cond_4
 
+    .line 2
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -6769,6 +6771,7 @@
 
     add-int/lit8 v1, p3, -0x1
 
+    .line 3
     div-int/lit8 v1, v1, 0x32
 
     if-eqz v1, :cond_2
@@ -6783,6 +6786,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/sec/android/app/camera/DataBinderMapperImpl;->internalGetViewDataBinding2(Landroidx/databinding/DataBindingComponent;Landroid/view/View;ILjava/lang/Object;)Landroidx/databinding/ViewDataBinding;
 
@@ -6790,6 +6794,7 @@
 
     return-object p0
 
+    .line 5
     :cond_1
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/sec/android/app/camera/DataBinderMapperImpl;->internalGetViewDataBinding1(Landroidx/databinding/DataBindingComponent;Landroid/view/View;ILjava/lang/Object;)Landroidx/databinding/ViewDataBinding;
 
@@ -6797,6 +6802,7 @@
 
     return-object p0
 
+    .line 6
     :cond_2
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/sec/android/app/camera/DataBinderMapperImpl;->internalGetViewDataBinding0(Landroidx/databinding/DataBindingComponent;Landroid/view/View;ILjava/lang/Object;)Landroidx/databinding/ViewDataBinding;
 
@@ -6804,6 +6810,7 @@
 
     return-object p0
 
+    .line 7
     :cond_3
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -6827,12 +6834,14 @@
 
     if-eqz p2, :cond_25
 
+    .line 8
     array-length v0, p2
 
     if-nez v0, :cond_0
 
     goto/16 :goto_0
 
+    .line 9
     :cond_0
     sget-object v0, Lcom/sec/android/app/camera/DataBinderMapperImpl;->INTERNAL_LAYOUT_ID_LOOKUP:Landroid/util/SparseIntArray;
 
@@ -6844,6 +6853,7 @@
 
     const/4 v0, 0x0
 
+    .line 10
     aget-object v0, p2, v0
 
     invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -6859,18 +6869,21 @@
     :sswitch_0
     const-string p0, "layout/widget_night_scene_button_0"
 
+    .line 11
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
+    .line 12
     new-instance p0, Lp4/i9;
 
     invoke-direct {p0, p1, p2}, Lp4/i9;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 13
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6895,18 +6908,21 @@
     :sswitch_1
     const-string p0, "layout/widget_dialer_0"
 
+    .line 14
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
+    .line 15
     new-instance p0, Lp4/c9;
 
     invoke-direct {p0, p1, p2}, Lp4/c9;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 16
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6931,18 +6947,21 @@
     :sswitch_2
     const-string p0, "layout/shooting_mode_video_quick_take_lock_button_0"
 
+    .line 17
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_3
 
+    .line 18
     new-instance p0, Lp4/w8;
 
     invoke-direct {p0, p1, p2}, Lp4/w8;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 19
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6967,18 +6986,21 @@
     :sswitch_3
     const-string p0, "layout/shooting_mode_video_autoframing_button_0"
 
+    .line 20
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_4
 
+    .line 21
     new-instance p0, Lp4/s8;
 
     invoke-direct {p0, p1, p2}, Lp4/s8;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 22
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7003,18 +7025,21 @@
     :sswitch_4
     const-string p0, "layout/shooting_mode_pro_pro_slider_container_0"
 
+    .line 23
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_5
 
+    .line 24
     new-instance p0, Lp4/t7;
 
     invoke-direct {p0, p1, p2}, Lp4/t7;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 25
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7039,18 +7064,21 @@
     :sswitch_5
     const-string p0, "layout/shooting_mode_pro_pro_horizontal_scroll_view_0"
 
+    .line 26
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_6
 
+    .line 27
     new-instance p0, Lp4/r7;
 
     invoke-direct {p0, p1, p2}, Lp4/r7;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 28
     :cond_6
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7075,18 +7103,21 @@
     :sswitch_6
     const-string p0, "layout/shooting_mode_pro_focus_control_panel_0"
 
+    .line 29
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_7
 
+    .line 30
     new-instance p0, Lp4/j7;
 
     invoke-direct {p0, p1, p2}, Lp4/j7;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 31
     :cond_7
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7111,18 +7142,21 @@
     :sswitch_7
     const-string p0, "layout/shooting_mode_pro_audio_control_panel_0"
 
+    .line 32
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_8
 
+    .line 33
     new-instance p0, Lp4/f7;
 
     invoke-direct {p0, p1, p2}, Lp4/f7;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 34
     :cond_8
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7147,18 +7181,21 @@
     :sswitch_8
     const-string p0, "layout/shooting_mode_photo_intelligent_smart_scan_capture_button_0"
 
+    .line 35
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_9
 
+    .line 36
     new-instance p0, Lp4/r6;
 
     invoke-direct {p0, p1, p2}, Lp4/r6;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 37
     :cond_9
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7183,18 +7220,21 @@
     :sswitch_9
     const-string p0, "layout/shooting_mode_photo_intelligent_smart_scan_0"
 
+    .line 38
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_a
 
+    .line 39
     new-instance p0, Lp4/p6;
 
     invoke-direct {p0, p1, p2}, Lp4/p6;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 40
     :cond_a
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7219,18 +7259,21 @@
     :sswitch_a
     const-string p0, "layout/shooting_mode_photo_intelligent_scene_button_0"
 
+    .line 41
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_b
 
+    .line 42
     new-instance p0, Lp4/n6;
 
     invoke-direct {p0, p1, p2}, Lp4/n6;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 43
     :cond_b
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7255,18 +7298,21 @@
     :sswitch_b
     const-string p0, "layout/shooting_mode_photo_intelligent_0"
 
+    .line 44
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_c
 
+    .line 45
     new-instance p0, Lp4/j6;
 
     invoke-direct {p0, p1, p2}, Lp4/j6;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 46
     :cond_c
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7291,18 +7337,21 @@
     :sswitch_c
     const-string p0, "layout/shooting_mode_hyperlapse_trails_button_0"
 
+    .line 47
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_d
 
+    .line 48
     new-instance p0, Lp4/m5;
 
     invoke-direct {p0, p1, p2}, Lp4/m5;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 49
     :cond_d
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7327,18 +7376,21 @@
     :sswitch_d
     const-string p0, "layout/shooting_mode_common_focus_enhancer_0"
 
+    .line 50
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_e
 
+    .line 51
     new-instance p0, Lp4/c5;
 
     invoke-direct {p0, p1, p2}, Lp4/c5;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 52
     :cond_e
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7363,18 +7415,21 @@
     :sswitch_e
     const-string p0, "layout/preview_overlay_level_meter_0"
 
+    .line 53
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_f
 
+    .line 54
     new-instance p0, Lp4/y4;
 
     invoke-direct {p0, p1, p2}, Lp4/y4;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 55
     :cond_f
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7399,18 +7454,21 @@
     :sswitch_f
     const-string p0, "layout/preview_overlay_inclinometer_0"
 
+    .line 56
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_10
 
+    .line 57
     new-instance p0, Lp4/w4;
 
     invoke-direct {p0, p1, p2}, Lp4/w4;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 58
     :cond_10
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7435,18 +7493,21 @@
     :sswitch_10
     const-string p0, "layout/preview_overlay_ae_af_0"
 
+    .line 59
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_11
 
+    .line 60
     new-instance p0, Lp4/u4;
 
     invoke-direct {p0, p1, p2}, Lp4/u4;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 61
     :cond_11
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7471,18 +7532,21 @@
     :sswitch_11
     const-string p0, "layout/preview_animation_black_area_0"
 
+    .line 62
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_12
 
+    .line 63
     new-instance p0, Lp4/s4;
 
     invoke-direct {p0, p1, p2}, Lp4/s4;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 64
     :cond_12
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7507,18 +7571,21 @@
     :sswitch_12
     const-string p0, "layout/menu_effects_menu_color_tone_v3_0"
 
+    .line 65
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_13
 
+    .line 66
     new-instance p0, Lp4/x2;
 
     invoke-direct {p0, p1, p2}, Lp4/x2;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 67
     :cond_13
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7543,18 +7610,21 @@
     :sswitch_13
     const-string p0, "layout/menu_effects_menu_color_tone_v2_0"
 
+    .line 68
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_14
 
+    .line 69
     new-instance p0, Lp4/v2;
 
     invoke-direct {p0, p1, p2}, Lp4/v2;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 70
     :cond_14
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7579,18 +7649,21 @@
     :sswitch_14
     const-string p0, "layout/menu_effects_menu_color_tone_0"
 
+    .line 71
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_15
 
+    .line 72
     new-instance p0, Lp4/t2;
 
     invoke-direct {p0, p1, p2}, Lp4/t2;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 73
     :cond_15
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7615,18 +7688,21 @@
     :sswitch_15
     const-string p0, "layout/menu_effects_menu_beauty_0"
 
+    .line 74
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_16
 
+    .line 75
     new-instance p0, Lp4/p2;
 
     invoke-direct {p0, p1, p2}, Lp4/p2;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 76
     :cond_16
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7651,18 +7727,21 @@
     :sswitch_16
     const-string p0, "layout/menu_effects_filter_list_0"
 
+    .line 77
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_17
 
+    .line 78
     new-instance p0, Lp4/n2;
 
     invoke-direct {p0, p1, p2}, Lp4/n2;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 79
     :cond_17
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7687,18 +7766,21 @@
     :sswitch_17
     const-string p0, "layout/menu_effects_filter_adding_filters_0"
 
+    .line 80
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_18
 
+    .line 81
     new-instance p0, Lp4/l2;
 
     invoke-direct {p0, p1, p2}, Lp4/l2;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 82
     :cond_18
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7723,18 +7805,21 @@
     :sswitch_18
     const-string p0, "layout/layer_shooting_mode_overlay_timer_0"
 
+    .line 83
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_19
 
+    .line 84
     new-instance p0, Lp4/v1;
 
     invoke-direct {p0, p1, p2}, Lp4/v1;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 85
     :cond_19
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7759,18 +7844,21 @@
     :sswitch_19
     const-string p0, "layout/layer_resizable_key_screen_0"
 
+    .line 86
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1a
 
+    .line 87
     new-instance p0, Lp4/l1;
 
     invoke-direct {p0, p1, p2}, Lp4/l1;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 88
     :cond_1a
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7795,18 +7883,21 @@
     :sswitch_1a
     const-string p0, "layout/layer_key_screen_0"
 
+    .line 89
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1b
 
+    .line 90
     new-instance p0, Lp4/y0;
 
     invoke-direct {p0, p1, p2}, Lp4/y0;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 91
     :cond_1b
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7831,18 +7922,21 @@
     :sswitch_1b
     const-string p0, "layout/layer_empty_key_screen_0"
 
+    .line 92
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1c
 
+    .line 93
     new-instance p0, Lp4/w0;
 
     invoke-direct {p0, p1, p2}, Lp4/w0;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 94
     :cond_1c
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7867,18 +7961,21 @@
     :sswitch_1c
     const-string p0, "layout/key_screen_right_button_0"
 
+    .line 95
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1d
 
+    .line 96
     new-instance p0, Lp4/m0;
 
     invoke-direct {p0, p1, p2}, Lp4/m0;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 97
     :cond_1d
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7903,18 +8000,21 @@
     :sswitch_1d
     const-string p0, "layout/key_screen_left_button_0"
 
+    .line 98
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1e
 
+    .line 99
     new-instance p0, Lp4/i0;
 
     invoke-direct {p0, p1, p2}, Lp4/i0;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 100
     :cond_1e
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7939,18 +8039,21 @@
     :sswitch_1e
     const-string p0, "layout/key_screen_center_button_0"
 
+    .line 101
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1f
 
+    .line 102
     new-instance p0, Lp4/d0;
 
     invoke-direct {p0, p1, p2}, Lp4/d0;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 103
     :cond_1f
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -7975,18 +8078,21 @@
     :sswitch_1f
     const-string p0, "layout/key_screen_bottom_buttons_layout_0"
 
+    .line 104
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_20
 
+    .line 105
     new-instance p0, Lp4/b0;
 
     invoke-direct {p0, p1, p2}, Lp4/b0;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 106
     :cond_20
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -8011,18 +8117,21 @@
     :sswitch_20
     const-string p0, "layout/document_scan_save_button_0"
 
+    .line 107
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_21
 
+    .line 108
     new-instance p0, Lp4/l;
 
     invoke-direct {p0, p1, p2}, Lp4/l;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 109
     :cond_21
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -8047,18 +8156,21 @@
     :sswitch_21
     const-string p0, "layout/divide_ae_af_0"
 
+    .line 110
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_22
 
+    .line 111
     new-instance p0, Lp4/h;
 
     invoke-direct {p0, p1, p2}, Lp4/h;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 112
     :cond_22
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -8083,18 +8195,21 @@
     :sswitch_22
     const-string p0, "layout/ae_af_0"
 
+    .line 113
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_23
 
+    .line 114
     new-instance p0, Lp4/d;
 
     invoke-direct {p0, p1, p2}, Lp4/d;-><init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
 
     return-object p0
 
+    .line 115
     :cond_23
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -8116,6 +8231,7 @@
 
     throw p0
 
+    .line 116
     :cond_24
     new-instance p0, Ljava/lang/RuntimeException;
 

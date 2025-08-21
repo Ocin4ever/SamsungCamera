@@ -24,14 +24,17 @@
 
     invoke-static {p5, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 13
     invoke-virtual {p0}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
+    .line 14
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
 
     const/4 p1, 0x1
 
+    .line 15
     :try_start_0
     invoke-interface {p5, p0}, Lq6/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -39,6 +42,7 @@
 
     invoke-static {p1}, Lkotlin/jvm/internal/l;->b(I)V
 
+    .line 16
     invoke-virtual {p0, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     invoke-static {p1}, Lkotlin/jvm/internal/l;->a(I)V
@@ -77,14 +81,17 @@
 
     invoke-static {p5, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 9
     invoke-virtual {p0}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
+    .line 10
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
     const/4 p1, 0x1
 
+    .line 11
     :try_start_0
     invoke-interface {p5, p0}, Lq6/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -92,6 +99,7 @@
 
     invoke-static {p1}, Lkotlin/jvm/internal/l;->b(I)V
 
+    .line 12
     invoke-virtual {p0, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     invoke-static {p1}, Lkotlin/jvm/internal/l;->a(I)V
@@ -134,14 +142,17 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 17
     invoke-virtual {p0}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
+    .line 18
     invoke-virtual {p0, p1}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
 
     const/4 p1, 0x1
 
+    .line 19
     :try_start_0
     invoke-interface {p2, p0}, Lq6/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -149,6 +160,7 @@
 
     invoke-static {p1}, Lkotlin/jvm/internal/l;->b(I)V
 
+    .line 20
     invoke-virtual {p0, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     invoke-static {p1}, Lkotlin/jvm/internal/l;->a(I)V
@@ -191,14 +203,17 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;)Z
 
     const/4 p1, 0x1
 
+    .line 3
     :try_start_0
     invoke-interface {p2, p0}, Lq6/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -206,6 +221,7 @@
 
     invoke-static {p1}, Lkotlin/jvm/internal/l;->b(I)V
 
+    .line 4
     invoke-virtual {p0, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     invoke-static {p1}, Lkotlin/jvm/internal/l;->a(I)V
@@ -248,14 +264,17 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {p0}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
+    .line 6
     invoke-virtual {p0, p1}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/RectF;)Z
 
     const/4 p1, 0x1
 
+    .line 7
     :try_start_0
     invoke-interface {p2, p0}, Lq6/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -263,6 +282,7 @@
 
     invoke-static {p1}, Lkotlin/jvm/internal/l;->b(I)V
 
+    .line 8
     invoke-virtual {p0, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     invoke-static {p1}, Lkotlin/jvm/internal/l;->a(I)V

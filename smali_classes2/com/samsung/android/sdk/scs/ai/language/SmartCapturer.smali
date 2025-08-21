@@ -51,20 +51,25 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCaptureRunnable;
 
     iget-object v1, p0, Lcom/samsung/android/sdk/scs/ai/language/SmartCapturer;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/SmartCaptureServiceExecutor;
 
     invoke-direct {v0, v1}, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCaptureRunnable;-><init>(Lcom/samsung/android/sdk/scs/ai/language/service/SmartCaptureServiceExecutor;)V
 
+    .line 3
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCaptureRunnable;->setAppInfo(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;)V
 
+    .line 4
     invoke-virtual {v0, p2}, Lcom/samsung/android/sdk/scs/ai/language/service/SmartCaptureRunnable;->setInputText(Ljava/lang/String;)V
 
+    .line 5
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/language/SmartCapturer;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/SmartCaptureServiceExecutor;
 
     invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 6
     invoke-virtual {v0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;->getTask()Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0
@@ -90,6 +95,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/SmartCapturer;->smartCapture(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;Ljava/lang/String;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0

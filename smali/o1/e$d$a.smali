@@ -61,6 +61,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lo1/e$d$a;->a(Landroid/os/Parcel;)Lo1/e$d;
 
     move-result-object p0
@@ -71,6 +72,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lo1/e$d$a;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lo1/e$d;
 
     move-result-object p0

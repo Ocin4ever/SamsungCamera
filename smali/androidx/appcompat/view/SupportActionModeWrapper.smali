@@ -169,6 +169,7 @@
 .method public setSubtitle(I)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/view/SupportActionModeWrapper;->mWrappedObject:Landroidx/appcompat/view/ActionMode;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/ActionMode;->setSubtitle(I)V
@@ -179,6 +180,7 @@
 .method public setSubtitle(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/SupportActionModeWrapper;->mWrappedObject:Landroidx/appcompat/view/ActionMode;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/ActionMode;->setSubtitle(Ljava/lang/CharSequence;)V
@@ -199,6 +201,7 @@
 .method public setTitle(I)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/view/SupportActionModeWrapper;->mWrappedObject:Landroidx/appcompat/view/ActionMode;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/ActionMode;->setTitle(I)V
@@ -209,6 +212,7 @@
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/SupportActionModeWrapper;->mWrappedObject:Landroidx/appcompat/view/ActionMode;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/ActionMode;->setTitle(Ljava/lang/CharSequence;)V

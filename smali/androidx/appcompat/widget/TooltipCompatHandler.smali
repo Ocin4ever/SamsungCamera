@@ -19,15 +19,15 @@
 
 .field private static final TAG:Ljava/lang/String; = "TooltipCompatHandler"
 
-.field private static sActiveHandler:Landroidx/appcompat/widget/TooltipCompatHandler;
+.field private static sActiveHandler:Landroidx/appcompat/widget/TooltipCompatHandler; = null
 
-.field private static sIsCustomTooltipPosition:Z
+.field private static sIsCustomTooltipPosition:Z = false
 
-.field private static sIsForceActionBarX:Z
+.field private static sIsForceActionBarX:Z = false
 
-.field private static sIsForceBelow:Z
+.field private static sIsForceBelow:Z = false
 
-.field private static sIsTooltipNull:Z
+.field private static sIsTooltipNull:Z = false
 
 .field private static sLayoutDirection:I
 

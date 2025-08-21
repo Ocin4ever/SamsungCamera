@@ -54,12 +54,15 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/sdk/ocr/OCRResult$AbsData;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult$WordData;->mCharDataList:Ljava/util/ArrayList;
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -72,18 +75,22 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/ocr/OCRResult$AbsData;-><init>(Landroid/os/Parcel;)V
 
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult$WordData;->mCharDataList:Ljava/util/ArrayList;
 
+    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult$WordData;->mCharDataList:Ljava/util/ArrayList;
 
+    .line 7
     sget-object p0, Lcom/samsung/android/sdk/ocr/OCRResult$CharData;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0, p0}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V

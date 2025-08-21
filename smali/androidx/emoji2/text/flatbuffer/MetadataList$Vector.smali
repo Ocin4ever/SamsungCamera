@@ -36,6 +36,7 @@
 .method public get(I)Landroidx/emoji2/text/flatbuffer/MetadataList;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/emoji2/text/flatbuffer/MetadataList;
 
     invoke-direct {v0}, Landroidx/emoji2/text/flatbuffer/MetadataList;-><init>()V
@@ -50,6 +51,7 @@
 .method public get(Landroidx/emoji2/text/flatbuffer/MetadataList;I)Landroidx/emoji2/text/flatbuffer/MetadataList;
     .locals 1
 
+    .line 2
     invoke-virtual {p0, p2}, Landroidx/emoji2/text/flatbuffer/BaseVector;->__element(I)I
 
     move-result p2

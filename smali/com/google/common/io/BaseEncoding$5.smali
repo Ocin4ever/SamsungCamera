@@ -58,6 +58,7 @@
 .method public write(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/BaseEncoding$5;->val$separatingAppendable:Ljava/lang/Appendable;
 
     int-to-char p1, p1
@@ -70,6 +71,7 @@
 .method public write([CII)V
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

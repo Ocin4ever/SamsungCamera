@@ -61,6 +61,7 @@
 .method public constructor <init>(Landroid/app/NotificationChannel;)V
     .locals 2
 
+    .line 8
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->getId()Ljava/lang/String;
 
     move-result-object v0
@@ -71,96 +72,112 @@
 
     invoke-direct {p0, v0, v1}, Landroidx/core/app/NotificationChannelCompat;-><init>(Ljava/lang/String;I)V
 
+    .line 9
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->getName()Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/core/app/NotificationChannelCompat;->mName:Ljava/lang/CharSequence;
 
+    .line 10
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->getDescription()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/core/app/NotificationChannelCompat;->mDescription:Ljava/lang/String;
 
+    .line 11
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->getGroup()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/core/app/NotificationChannelCompat;->mGroupId:Ljava/lang/String;
 
+    .line 12
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->canShowBadge()Z
 
     move-result v0
 
     iput-boolean v0, p0, Landroidx/core/app/NotificationChannelCompat;->mShowBadge:Z
 
+    .line 13
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->getSound()Landroid/net/Uri;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/core/app/NotificationChannelCompat;->mSound:Landroid/net/Uri;
 
+    .line 14
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->getAudioAttributes()Landroid/media/AudioAttributes;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/core/app/NotificationChannelCompat;->mAudioAttributes:Landroid/media/AudioAttributes;
 
+    .line 15
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->shouldShowLights()Z
 
     move-result v0
 
     iput-boolean v0, p0, Landroidx/core/app/NotificationChannelCompat;->mLights:Z
 
+    .line 16
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->getLightColor()I
 
     move-result v0
 
     iput v0, p0, Landroidx/core/app/NotificationChannelCompat;->mLightColor:I
 
+    .line 17
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->shouldVibrate()Z
 
     move-result v0
 
     iput-boolean v0, p0, Landroidx/core/app/NotificationChannelCompat;->mVibrationEnabled:Z
 
+    .line 18
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->getVibrationPattern()[J
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/core/app/NotificationChannelCompat;->mVibrationPattern:[J
 
+    .line 19
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->getParentChannelId()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/core/app/NotificationChannelCompat;->mParentId:Ljava/lang/String;
 
+    .line 20
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->getConversationId()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/core/app/NotificationChannelCompat;->mConversationId:Ljava/lang/String;
 
+    .line 21
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->canBypassDnd()Z
 
     move-result v0
 
     iput-boolean v0, p0, Landroidx/core/app/NotificationChannelCompat;->mBypassDnd:Z
 
+    .line 22
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->getLockscreenVisibility()I
 
     move-result v0
 
     iput v0, p0, Landroidx/core/app/NotificationChannelCompat;->mLockscreenVisibility:I
 
+    .line 23
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->canBubble()Z
 
     move-result v0
 
     iput-boolean v0, p0, Landroidx/core/app/NotificationChannelCompat;->mCanBubble:Z
 
+    .line 24
     invoke-virtual {p1}, Landroid/app/NotificationChannel;->isImportantConversation()Z
 
     move-result p1
@@ -173,20 +190,25 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Landroidx/core/app/NotificationChannelCompat;->mShowBadge:Z
 
+    .line 3
     sget-object v0, Landroid/provider/Settings$System;->DEFAULT_NOTIFICATION_URI:Landroid/net/Uri;
 
     iput-object v0, p0, Landroidx/core/app/NotificationChannelCompat;->mSound:Landroid/net/Uri;
 
     const/4 v0, 0x0
 
+    .line 4
     iput v0, p0, Landroidx/core/app/NotificationChannelCompat;->mLightColor:I
 
+    .line 5
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -195,8 +217,10 @@
 
     iput-object p1, p0, Landroidx/core/app/NotificationChannelCompat;->mId:Ljava/lang/String;
 
+    .line 6
     iput p2, p0, Landroidx/core/app/NotificationChannelCompat;->mImportance:I
 
+    .line 7
     sget-object p1, Landroid/app/Notification;->AUDIO_ATTRIBUTES_DEFAULT:Landroid/media/AudioAttributes;
 
     iput-object p1, p0, Landroidx/core/app/NotificationChannelCompat;->mAudioAttributes:Landroid/media/AudioAttributes;

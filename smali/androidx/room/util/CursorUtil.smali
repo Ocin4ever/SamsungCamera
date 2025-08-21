@@ -159,6 +159,7 @@
 .method private static final findColumnIndexBySuffix(Landroid/database/Cursor;Ljava/lang/String;)I
     .locals 0
 
+    .line 1
     const/4 p0, -0x1
 
     return p0
@@ -175,6 +176,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,6 +191,7 @@
 
     move-result-object v0
 
+    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -205,6 +208,7 @@
 
     move-result-object v2
 
+    .line 4
     array-length v3, p0
 
     const/4 v4, 0x0
@@ -220,6 +224,7 @@
 
     add-int/lit8 v8, v6, 0x1
 
+    .line 5
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
     move-result v9
@@ -236,6 +241,7 @@
 
     const/4 v9, 0x0
 
+    .line 6
     invoke-static {v7, v0, v4, v11, v9}, Lw6/n;->i(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result v10
@@ -244,6 +250,7 @@
 
     return v6
 
+    .line 7
     :cond_0
     invoke-virtual {v7, v4}, Ljava/lang/String;->charAt(I)C
 

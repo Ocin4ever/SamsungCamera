@@ -60,6 +60,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p0
@@ -68,6 +69,7 @@
 
     const/4 p0, 0x0
 
+    .line 3
     invoke-interface {p1, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -90,6 +92,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Landroidx/work/impl/WorkManagerImpl$2;->apply(Ljava/util/List;)Landroidx/work/WorkInfo;

@@ -263,6 +263,7 @@
 .method public onSearchRequested()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/qr/UserInteractionAwareCallback;->mCallback:Landroid/view/Window$Callback;
 
     invoke-interface {p0}, Landroid/view/Window$Callback;->onSearchRequested()Z
@@ -275,6 +276,7 @@
 .method public onSearchRequested(Landroid/view/SearchEvent;)Z
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/qr/UserInteractionAwareCallback;->mCallback:Landroid/view/Window$Callback;
 
     invoke-interface {p0, p1}, Landroid/view/Window$Callback;->onSearchRequested(Landroid/view/SearchEvent;)Z
@@ -307,6 +309,7 @@
 .method public onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/qr/UserInteractionAwareCallback;->mCallback:Landroid/view/Window$Callback;
 
     invoke-interface {p0, p1}, Landroid/view/Window$Callback;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
@@ -319,6 +322,7 @@
 .method public onWindowStartingActionMode(Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/qr/UserInteractionAwareCallback;->mCallback:Landroid/view/Window$Callback;
 
     invoke-interface {p0, p1, p2}, Landroid/view/Window$Callback;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;

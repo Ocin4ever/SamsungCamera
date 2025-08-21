@@ -46,16 +46,22 @@
 .method public final invoke(Landroid/database/sqlite/SQLiteDatabase;Landroid/database/sqlite/SQLiteCursorDriver;Ljava/lang/String;Landroid/database/sqlite/SQLiteQuery;)Landroid/database/sqlite/SQLiteCursor;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase$query$cursorFactory$1;->$query:Landroidx/sqlite/db/SupportSQLiteQuery;
 
+    .line 3
     new-instance p1, Landroidx/sqlite/db/framework/FrameworkSQLiteProgram;
 
+    .line 4
     invoke-static {p4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/Object;)V
 
+    .line 5
     invoke-direct {p1, p4}, Landroidx/sqlite/db/framework/FrameworkSQLiteProgram;-><init>(Landroid/database/sqlite/SQLiteProgram;)V
 
+    .line 6
     invoke-interface {p0, p1}, Landroidx/sqlite/db/SupportSQLiteQuery;->bindTo(Landroidx/sqlite/db/SupportSQLiteProgram;)V
 
+    .line 7
     new-instance p0, Landroid/database/sqlite/SQLiteCursor;
 
     invoke-direct {p0, p2, p3, p4}, Landroid/database/sqlite/SQLiteCursor;-><init>(Landroid/database/sqlite/SQLiteCursorDriver;Ljava/lang/String;Landroid/database/sqlite/SQLiteQuery;)V
@@ -66,6 +72,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/database/sqlite/SQLiteDatabase;
 
     check-cast p2, Landroid/database/sqlite/SQLiteCursorDriver;

@@ -28,8 +28,10 @@
 .method private constructor <init>(Landroid/content/Context;III)V
     .locals 2
 
+    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/DividerItemDecoration;-><init>(Landroid/content/Context;I)V
 
+    .line 3
     invoke-static {}, Lcom/sec/android/app/camera/util/factory/RectFactory;->create()Landroid/graphics/Rect;
 
     move-result-object p2
@@ -46,10 +48,12 @@
 
     aput v0, p2, v1
 
+    .line 4
     invoke-virtual {p1, p2}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 5
     :try_start_0
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -59,10 +63,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->close()V
 
+    .line 7
     iput p3, p0, Lcom/sec/android/app/camera/setting/HighEfficiencyVideoActivity$ListDivider;->mLeftMargin:I
 
+    .line 8
     iput p4, p0, Lcom/sec/android/app/camera/setting/HighEfficiencyVideoActivity$ListDivider;->mRightMargin:I
 
     return-void
@@ -72,6 +79,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 9
     :try_start_1
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->close()V
     :try_end_1
@@ -92,6 +100,7 @@
 .method public synthetic constructor <init>(Landroid/content/Context;IIILcom/sec/android/app/camera/setting/c2;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/setting/HighEfficiencyVideoActivity$ListDivider;-><init>(Landroid/content/Context;III)V
 
     return-void

@@ -14,6 +14,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 3
     new-instance v0, Lh6/d;
 
     invoke-direct {v0}, Lh6/d;-><init>()V
@@ -30,8 +31,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Lg6/e;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lh6/h;->a:Lh6/d;
 
     return-void

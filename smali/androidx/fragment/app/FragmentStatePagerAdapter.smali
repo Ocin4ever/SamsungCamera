@@ -61,6 +61,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/fragment/app/FragmentStatePagerAdapter;-><init>(Landroidx/fragment/app/FragmentManager;I)V
 
     return-void
@@ -69,28 +70,35 @@
 .method public constructor <init>(Landroidx/fragment/app/FragmentManager;I)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Landroidx/viewpager/widget/PagerAdapter;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Landroidx/fragment/app/FragmentStatePagerAdapter;->mCurTransaction:Landroidx/fragment/app/FragmentTransaction;
 
+    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Landroidx/fragment/app/FragmentStatePagerAdapter;->mSavedState:Ljava/util/ArrayList;
 
+    .line 5
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Landroidx/fragment/app/FragmentStatePagerAdapter;->mFragments:Ljava/util/ArrayList;
 
+    .line 6
     iput-object v0, p0, Landroidx/fragment/app/FragmentStatePagerAdapter;->mCurrentPrimaryItem:Landroidx/fragment/app/Fragment;
 
+    .line 7
     iput-object p1, p0, Landroidx/fragment/app/FragmentStatePagerAdapter;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
+    .line 8
     iput p2, p0, Landroidx/fragment/app/FragmentStatePagerAdapter;->mBehavior:I
 
     return-void

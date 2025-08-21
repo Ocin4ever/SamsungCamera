@@ -25,6 +25,7 @@
 .method public constructor <init>(Lz2/a;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lz2/a$b;->a:Lz2/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,6 +36,7 @@
 .method public synthetic constructor <init>(Lz2/a;Lz2/a$a;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lz2/a$b;-><init>(Lz2/a;)V
 
     return-void

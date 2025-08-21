@@ -22,8 +22,10 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/fragment/app/FragmentActivity;-><init>()V
 
+    .line 2
     invoke-direct {p0}, Landroidx/appcompat/app/AppCompatActivity;->initDelegate()V
 
     return-void
@@ -32,8 +34,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/fragment/app/FragmentActivity;-><init>(I)V
 
+    .line 4
     invoke-direct {p0}, Landroidx/appcompat/app/AppCompatActivity;->initDelegate()V
 
     return-void
@@ -718,8 +722,10 @@
 .method public setContentView(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/appcompat/app/AppCompatActivity;->initViewTreeOwners()V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getDelegate()Landroidx/appcompat/app/AppCompatDelegate;
 
     move-result-object p0
@@ -732,8 +738,10 @@
 .method public setContentView(Landroid/view/View;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Landroidx/appcompat/app/AppCompatActivity;->initViewTreeOwners()V
 
+    .line 4
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getDelegate()Landroidx/appcompat/app/AppCompatDelegate;
 
     move-result-object p0
@@ -746,8 +754,10 @@
 .method public setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Landroidx/appcompat/app/AppCompatActivity;->initViewTreeOwners()V
 
+    .line 6
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getDelegate()Landroidx/appcompat/app/AppCompatDelegate;
 
     move-result-object p0

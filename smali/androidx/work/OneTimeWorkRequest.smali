@@ -68,6 +68,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Landroidx/work/OneTimeWorkRequest;->Companion:Landroidx/work/OneTimeWorkRequest$Companion;
 
     invoke-virtual {v0, p0}, Landroidx/work/OneTimeWorkRequest$Companion;->from(Ljava/lang/Class;)Landroidx/work/OneTimeWorkRequest;
@@ -94,6 +95,7 @@
         }
     .end annotation
 
+    .line 2
     sget-object v0, Landroidx/work/OneTimeWorkRequest;->Companion:Landroidx/work/OneTimeWorkRequest$Companion;
 
     invoke-virtual {v0, p0}, Landroidx/work/OneTimeWorkRequest$Companion;->from(Ljava/util/List;)Ljava/util/List;

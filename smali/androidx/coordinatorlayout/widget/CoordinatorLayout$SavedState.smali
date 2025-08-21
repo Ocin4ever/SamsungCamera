@@ -54,20 +54,26 @@
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 5
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
+    .line 2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
+    .line 3
     new-array v1, v0, [I
 
+    .line 4
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readIntArray([I)V
 
+    .line 5
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
 
     move-result-object p1
 
+    .line 6
     new-instance p2, Landroid/util/SparseArray;
 
     invoke-direct {p2, v0}, Landroid/util/SparseArray;-><init>(I)V
@@ -79,6 +85,7 @@
     :goto_0
     if-ge p2, v0, :cond_0
 
+    .line 7
     iget-object v2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$SavedState;->behaviorStates:Landroid/util/SparseArray;
 
     aget v3, v1, p2
@@ -98,6 +105,7 @@
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
+    .line 8
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void

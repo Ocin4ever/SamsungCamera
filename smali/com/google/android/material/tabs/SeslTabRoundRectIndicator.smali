@@ -17,6 +17,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/tabs/SeslTabRoundRectIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -27,6 +28,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/android/material/tabs/SeslTabRoundRectIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -35,14 +37,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 2
 
+    .line 3
     invoke-direct {p0, p1, p2, p3, p4}, Lu1/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 4
     new-instance p2, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {p2}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     iput-object p2, p0, Lcom/google/android/material/tabs/SeslTabRoundRectIndicator;->b:Landroid/view/animation/Interpolator;
 
+    .line 5
     new-instance p2, Landroid/view/animation/PathInterpolator;
 
     const/4 p3, 0x0
@@ -57,19 +62,23 @@
 
     iput-object p2, p0, Lcom/google/android/material/tabs/SeslTabRoundRectIndicator;->c:Landroid/view/animation/PathInterpolator;
 
+    .line 6
     invoke-static {p1}, Landroidx/appcompat/util/SeslMisc;->isLightTheme(Landroid/content/Context;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
+    .line 7
     sget p3, Ly0/d;->t:I
 
     goto :goto_0
 
+    .line 8
     :cond_0
     sget p3, Ly0/d;->s:I
 
+    .line 9
     :goto_0
     invoke-static {p1, p3}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -77,6 +86,7 @@
 
     invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
+    .line 10
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -87,14 +97,17 @@
 
     goto :goto_1
 
+    .line 11
     :cond_1
     sget p2, Ly0/b;->j:I
 
+    .line 12
     :goto_1
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
 
+    .line 13
     invoke-virtual {p0, p1}, Lcom/google/android/material/tabs/SeslTabRoundRectIndicator;->b(I)V
 
     return-void

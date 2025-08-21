@@ -24,12 +24,15 @@
 .method public constructor <init>(D)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/math/LinearTransformation;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;->x:D
 
     const/4 p1, 0x0
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;->inverse:Lcom/google/common/math/LinearTransformation;
 
     return-void
@@ -38,10 +41,13 @@
 .method public constructor <init>(DLcom/google/common/math/LinearTransformation;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0}, Lcom/google/common/math/LinearTransformation;-><init>()V
 
+    .line 5
     iput-wide p1, p0, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;->x:D
 
+    .line 6
     iput-object p3, p0, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;->inverse:Lcom/google/common/math/LinearTransformation;
 
     return-void

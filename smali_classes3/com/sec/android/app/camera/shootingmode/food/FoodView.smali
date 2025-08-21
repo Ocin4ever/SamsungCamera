@@ -1220,6 +1220,7 @@
 .method private moveEffectGuide(II)V
     .locals 2
 
+    .line 5
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodView;->mViewBinding:Lp4/h5;
 
     iget-object v0, v0, Lp4/h5;->b:Lcom/sec/android/app/camera/widget/ResizableRect;
@@ -1232,14 +1233,18 @@
 
     const/16 v1, 0xe
 
+    .line 6
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->removeRule(I)V
 
     const/16 v1, 0xf
 
+    .line 7
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->removeRule(I)V
 
+    .line 8
     iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
+    .line 9
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodView;->mViewBinding:Lp4/h5;
 
     iget-object p1, p1, Lp4/h5;->e:Landroid/widget/RelativeLayout;
@@ -1252,6 +1257,7 @@
 
     iput p2, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
+    .line 10
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodView;->mViewBinding:Lp4/h5;
 
     iget-object p1, p1, Lp4/h5;->b:Lcom/sec/android/app/camera/widget/ResizableRect;
@@ -1272,6 +1278,7 @@
 
     iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
 
+    .line 11
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodView;->mViewBinding:Lp4/h5;
 
     iget-object p1, p1, Lp4/h5;->b:Lcom/sec/android/app/camera/widget/ResizableRect;
@@ -1302,6 +1309,7 @@
 
     iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
+    .line 12
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodView;->mViewBinding:Lp4/h5;
 
     iget-object p0, p0, Lp4/h5;->b:Lcom/sec/android/app/camera/widget/ResizableRect;
@@ -1705,6 +1713,7 @@
 .method public moveEffectGuide(Landroid/graphics/PointF;)V
     .locals 3
 
+    .line 1
     iget v0, p1, Landroid/graphics/PointF;->x:F
 
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodView;->mViewBinding:Lp4/h5;
@@ -1723,6 +1732,7 @@
 
     sub-float/2addr v0, v1
 
+    .line 2
     iget p1, p1, Landroid/graphics/PointF;->y:F
 
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodView;->mViewBinding:Lp4/h5;
@@ -1739,12 +1749,14 @@
 
     sub-float/2addr p1, v1
 
+    .line 3
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/food/FoodView;->cancelEffectGuideAnimation()V
 
     float-to-int v0, v0
 
     float-to-int p1, p1
 
+    .line 4
     invoke-direct {p0, v0, p1}, Lcom/sec/android/app/camera/shootingmode/food/FoodView;->moveEffectGuide(II)V
 
     return-void

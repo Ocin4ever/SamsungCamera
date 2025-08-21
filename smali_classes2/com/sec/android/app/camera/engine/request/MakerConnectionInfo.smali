@@ -137,48 +137,57 @@
 .method private constructor <init>(Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters;)V
     .locals 10
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
 
     new-array v1, v0, [Ljava/util/Map$Entry;
 
+    .line 3
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$ColorSpaceMode;->SRGB:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$ColorSpaceMode;
 
     sget-object v3, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$ColorSpaceMode;->b:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$ColorSpaceMode;
 
+    .line 4
     invoke-static {v2, v3}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
+    .line 5
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
     aput-object v2, v1, v3
 
+    .line 6
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$ColorSpaceMode;->DISPLAY_P3_PHOTO:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$ColorSpaceMode;
 
     sget-object v5, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$ColorSpaceMode;->c:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$ColorSpaceMode;
 
+    .line 7
     invoke-static {v2, v5}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
 
     const/4 v5, 0x1
 
+    .line 8
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
     aput-object v2, v1, v5
 
+    .line 9
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$ColorSpaceMode;->DISPLAY_P3_VIDEO:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$ColorSpaceMode;
 
     sget-object v7, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$ColorSpaceMode;->d:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$ColorSpaceMode;
 
+    .line 10
     invoke-static {v2, v7}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -187,6 +196,7 @@
 
     aput-object v2, v1, v7
 
+    .line 11
     invoke-static {v1}, Ljava/util/Map;->ofEntries([Ljava/util/Map$Entry;)Ljava/util/Map;
 
     move-result-object v1
@@ -195,10 +205,12 @@
 
     new-array v1, v7, [Ljava/util/Map$Entry;
 
+    .line 12
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$ExternalDeviceType;->NONE:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$ExternalDeviceType;
 
     sget-object v8, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$ExternalDeviceConnected;->b:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$ExternalDeviceConnected;
 
+    .line 13
     invoke-static {v2, v8}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -209,12 +221,14 @@
 
     sget-object v8, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$ExternalDeviceConnected;->c:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$ExternalDeviceConnected;
 
+    .line 14
     invoke-static {v2, v8}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
 
     aput-object v2, v1, v5
 
+    .line 15
     invoke-static {v1}, Ljava/util/Map;->ofEntries([Ljava/util/Map$Entry;)Ljava/util/Map;
 
     move-result-object v1
@@ -223,8 +237,10 @@
 
     new-array v1, v7, [Ljava/util/Map$Entry;
 
+    .line 16
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$QualityOptimizationMode;->MIN:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$QualityOptimizationMode;
 
+    .line 17
     invoke-static {v2, v4}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -233,12 +249,14 @@
 
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$QualityOptimizationMode;->MID:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$QualityOptimizationMode;
 
+    .line 18
     invoke-static {v2, v6}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
 
     aput-object v2, v1, v5
 
+    .line 19
     invoke-static {v1}, Ljava/util/Map;->ofEntries([Ljava/util/Map$Entry;)Ljava/util/Map;
 
     move-result-object v1
@@ -247,10 +265,12 @@
 
     new-array v1, v7, [Ljava/util/Map$Entry;
 
+    .line 20
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$RecordingDrMode;->SDR:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$RecordingDrMode;
 
     sget-object v8, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$RecordingDrMode;->c:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$RecordingDrMode;
 
+    .line 21
     invoke-static {v2, v8}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -261,12 +281,14 @@
 
     sget-object v8, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$RecordingDrMode;->d:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$RecordingDrMode;
 
+    .line 22
     invoke-static {v2, v8}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
 
     aput-object v2, v1, v5
 
+    .line 23
     invoke-static {v1}, Ljava/util/Map;->ofEntries([Ljava/util/Map$Entry;)Ljava/util/Map;
 
     move-result-object v1
@@ -275,8 +297,10 @@
 
     new-array v1, v7, [Ljava/util/Map$Entry;
 
+    .line 24
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$RecordingExtraMode;->NONE:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$RecordingExtraMode;
 
+    .line 25
     invoke-static {v2, v4}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -285,12 +309,14 @@
 
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$RecordingExtraMode;->AUTO_FRAMING:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$RecordingExtraMode;
 
+    .line 26
     invoke-static {v2, v6}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
 
     aput-object v2, v1, v5
 
+    .line 27
     invoke-static {v1}, Ljava/util/Map;->ofEntries([Ljava/util/Map$Entry;)Ljava/util/Map;
 
     move-result-object v1
@@ -301,10 +327,12 @@
 
     new-array v2, v1, [Ljava/util/Map$Entry;
 
+    .line 28
     sget-object v8, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$SensorFlipMode;->FLIP_MODE_NONE:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$SensorFlipMode;
 
     sget-object v9, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SensorFlipMode;->b:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SensorFlipMode;
 
+    .line 29
     invoke-static {v8, v9}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v8
@@ -315,6 +343,7 @@
 
     sget-object v9, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SensorFlipMode;->d:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SensorFlipMode;
 
+    .line 30
     invoke-static {v8, v9}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v8
@@ -325,6 +354,7 @@
 
     sget-object v9, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SensorFlipMode;->c:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SensorFlipMode;
 
+    .line 31
     invoke-static {v8, v9}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v8
@@ -335,12 +365,14 @@
 
     sget-object v9, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SensorFlipMode;->e:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SensorFlipMode;
 
+    .line 32
     invoke-static {v8, v9}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v8
 
     aput-object v8, v2, v0
 
+    .line 33
     invoke-static {v2}, Ljava/util/Map;->ofEntries([Ljava/util/Map$Entry;)Ljava/util/Map;
 
     move-result-object v2
@@ -349,10 +381,12 @@
 
     new-array v1, v1, [Ljava/util/Map$Entry;
 
+    .line 34
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$SsmMode;->SINGLE:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$SsmMode;
 
     sget-object v8, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SsmShotMode;->d:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SsmShotMode;
 
+    .line 35
     invoke-static {v2, v8}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -363,6 +397,7 @@
 
     sget-object v8, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SsmShotMode;->c:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SsmShotMode;
 
+    .line 36
     invoke-static {v2, v8}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -373,6 +408,7 @@
 
     sget-object v8, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SsmShotMode;->f:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SsmShotMode;
 
+    .line 37
     invoke-static {v2, v8}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
@@ -383,12 +419,14 @@
 
     sget-object v8, Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SsmShotMode;->e:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters$SsmShotMode;
 
+    .line 38
     invoke-static {v2, v8}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v2
 
     aput-object v2, v1, v0
 
+    .line 39
     invoke-static {v1}, Ljava/util/Map;->ofEntries([Ljava/util/Map$Entry;)Ljava/util/Map;
 
     move-result-object v1
@@ -397,8 +435,10 @@
 
     new-array v0, v0, [Ljava/util/Map$Entry;
 
+    .line 40
     sget-object v1, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$VdisMode;->VDIS_OFF:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$VdisMode;
 
+    .line 41
     invoke-static {v1, v4}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
@@ -407,6 +447,7 @@
 
     sget-object v1, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$VdisMode;->VDIS_NORMAL:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$VdisMode;
 
+    .line 42
     invoke-static {v1, v6}, Ljava/util/Map;->entry(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
@@ -415,6 +456,7 @@
 
     sget-object v1, Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$VdisMode;->VDIS_CENTER_CROP:Lcom/sec/android/app/camera/interfaces/Engine$ConnectionInfo$VdisMode;
 
+    .line 43
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -425,30 +467,40 @@
 
     aput-object v1, v0, v7
 
+    .line 44
     invoke-static {v0}, Ljava/util/Map;->ofEntries([Ljava/util/Map$Entry;)Ljava/util/Map;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/request/MakerConnectionInfo;->mVdisModeMap:Ljava/util/Map;
 
+    .line 45
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/request/MakerConnectionInfo;->mParameters:Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters;
 
     const/4 p1, 0x0
 
+    .line 46
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/request/MakerConnectionInfo;->mPreviewSurfaceData:Lcom/samsung/android/camera/core2/container/SurfaceData;
 
+    .line 47
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/request/MakerConnectionInfo;->mRecorderSurface:Landroid/view/Surface;
 
+    .line 48
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/request/MakerConnectionInfo;->mPictureSize:Landroid/util/Size;
 
+    .line 49
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/request/MakerConnectionInfo;->mExtraPictureSize:Landroid/util/Pair;
 
+    .line 50
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/request/MakerConnectionInfo;->mMainPreviewCallbackSize:Landroid/util/Size;
 
+    .line 51
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/request/MakerConnectionInfo;->mSubPreviewCallbackSize:Landroid/util/Size;
 
+    .line 52
     iput v3, p0, Lcom/sec/android/app/camera/engine/request/MakerConnectionInfo;->mEffectProcessorMode:I
 
+    .line 53
     iput v3, p0, Lcom/sec/android/app/camera/engine/request/MakerConnectionInfo;->mMultiCameraEffectProcessorMode:I
 
     return-void
@@ -457,6 +509,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters;Lcom/sec/android/app/camera/engine/request/o0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/engine/request/MakerConnectionInfo;-><init>(Lcom/samsung/android/camera/core2/container/DeviceConfiguration$Parameters;)V
 
     return-void

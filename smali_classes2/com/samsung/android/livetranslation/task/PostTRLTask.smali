@@ -366,6 +366,7 @@
 .method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 3
 
+    .line 2
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/PostTRLTask;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -386,6 +387,7 @@
 
     invoke-static {p1, v0}, Lcom/samsung/android/livetranslation/util/LTTLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 3
     new-instance p1, Lcom/samsung/android/livetranslation/task/TRLResultManager;
 
     iget-object v0, p0, Lcom/samsung/android/livetranslation/task/PostTRLTask;->contextHolder:Ljava/lang/ref/WeakReference;
@@ -406,22 +408,26 @@
 
     move-result-object p1
 
+    .line 4
     iget-object v0, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTask;->mKeyFrame:Lcom/samsung/android/livetranslation/text/KeyFrame;
 
     iget-object v1, p0, Lcom/samsung/android/livetranslation/task/PostTRLTask;->translatedStr:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setTRLResultString(Ljava/util/List;)V
 
+    .line 5
     invoke-virtual {p1}, Lcom/samsung/android/livetranslation/task/TRLResultOrganizer;->setTRLResultToKeyFrame()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
+    .line 6
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object p0
 
+    .line 7
     :cond_0
     new-instance p1, Lcom/samsung/android/livetranslation/task/SceneTextFormatter;
 
@@ -429,16 +435,20 @@
 
     const/4 v0, 0x0
 
+    .line 8
     invoke-static {v0}, Lcom/samsung/android/livetranslation/task/SceneTextFormatter;->setTextScaleX(Z)V
 
+    .line 9
     iget-object v0, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTask;->mKeyFrame:Lcom/samsung/android/livetranslation/text/KeyFrame;
 
     invoke-direct {p0, v0}, Lcom/samsung/android/livetranslation/task/PostTRLTask;->detectAndClearSameTranslatedResult(Lcom/samsung/android/livetranslation/text/KeyFrame;)V
 
+    .line 10
     iget-object p0, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTask;->mKeyFrame:Lcom/samsung/android/livetranslation/text/KeyFrame;
 
     invoke-virtual {p1, p0}, Lcom/samsung/android/livetranslation/task/SceneTextFormatter;->doSceneTextFormatting(Lcom/samsung/android/livetranslation/text/KeyFrame;)V
 
+    .line 11
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object p0
@@ -447,6 +457,7 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/livetranslation/task/PostTRLTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
@@ -459,24 +470,28 @@
 .method public onPostExecute(Ljava/lang/Boolean;)V
     .locals 2
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/PostTRLTask;->TAG:Ljava/lang/String;
 
     const-string v0, "onPostExecute: TRL completed"
 
     invoke-static {p1, v0}, Lcom/samsung/android/livetranslation/util/LTTLogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 4
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTask;->mStatusListener:Lcom/samsung/android/livetranslation/task/LiveTranslationTask$TaskStatusListener;
 
     sget-object v0, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$STATUS;->TRL_COMPLETED:Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$STATUS;
 
     invoke-interface {p1, v0}, Lcom/samsung/android/livetranslation/task/LiveTranslationTask$TaskStatusListener;->updateStatus(Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$STATUS;)V
 
+    .line 5
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/PostTRLTask;->liveTranslationTaskManagerListener:Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$LiveTranslationTaskManagerListener;
 
     const/4 v0, 0x1
@@ -489,6 +504,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/PostTRLTask;->TAG:Ljava/lang/String;
 
@@ -496,12 +512,14 @@
 
     invoke-static {p1, v0}, Lcom/samsung/android/livetranslation/util/LTTLogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 7
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTask;->mStatusListener:Lcom/samsung/android/livetranslation/task/LiveTranslationTask$TaskStatusListener;
 
     sget-object v0, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$STATUS;->TRL_FAIL:Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$STATUS;
 
     invoke-interface {p1, v0}, Lcom/samsung/android/livetranslation/task/LiveTranslationTask$TaskStatusListener;->updateStatus(Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$STATUS;)V
 
+    .line 8
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/PostTRLTask;->liveTranslationTaskManagerListener:Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$LiveTranslationTaskManagerListener;
 
     const/4 v0, 0x0
@@ -519,6 +537,7 @@
 .method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/livetranslation/task/PostTRLTask;->onPostExecute(Ljava/lang/Boolean;)V

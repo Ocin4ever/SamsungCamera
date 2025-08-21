@@ -68,6 +68,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/m4;->o:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/m4;->p:Landroid/util/SparseIntArray;
@@ -92,6 +93,7 @@
 
     const/4 v0, 0x4
 
+    .line 2
     aget-object v0, p3, v0
 
     move-object v4, v0
@@ -174,42 +176,51 @@
 
     const-wide/16 v0, -0x1
 
+    .line 3
     iput-wide v0, v13, Lp4/m4;->n:J
 
+    .line 4
     iget-object v0, v13, Lp4/l4;->c:Landroid/widget/RadioButton;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 5
     iget-object v0, v13, Lp4/l4;->d:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 6
     iget-object v0, v13, Lp4/l4;->g:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 7
     iget-object v0, v13, Lp4/l4;->h:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     move-object/from16 v0, p2
 
+    .line 8
     invoke-virtual {v13, v0}, Landroidx/databinding/ViewDataBinding;->setRootTag(Landroid/view/View;)V
 
+    .line 9
     new-instance v0, Lt4/a;
 
     invoke-direct {v0, v13, v14}, Lt4/a;-><init>(Lt4/a$a;I)V
 
     iput-object v0, v13, Lp4/m4;->k:Landroid/view/View$OnClickListener;
 
+    .line 10
     new-instance v0, Lt4/a;
 
     invoke-direct {v0, v13, v15}, Lt4/a;-><init>(Lt4/a$a;I)V
 
     iput-object v0, v13, Lp4/m4;->l:Landroid/view/View$OnClickListener;
 
+    .line 11
     new-instance v0, Lt4/a;
 
     const/4 v1, 0x1
@@ -218,6 +229,7 @@
 
     iput-object v0, v13, Lp4/m4;->m:Landroid/view/View$OnClickListener;
 
+    .line 12
     invoke-virtual/range {p0 .. p0}, Lp4/m4;->invalidateAll()V
 
     return-void

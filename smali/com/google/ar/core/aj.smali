@@ -33,26 +33,31 @@
 .method public static a(Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
 
+    .line 6
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
     const-string v1, "content"
 
+    .line 7
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
     const-string v1, "com.google.ar.core.services.arcorecontentprovider"
 
+    .line 8
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
+    .line 9
     invoke-virtual {v0, p0}, Landroid/net/Uri$Builder;->path(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
+    .line 10
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
@@ -63,6 +68,7 @@
 .method public static a(Landroid/content/Context;)Lcom/google/ar/core/ArCoreApk$Availability;
     .locals 0
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Lcom/google/ar/core/aj;->b(Landroid/content/Context;)Landroid/app/PendingIntent;
 
@@ -70,10 +76,12 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     sget-object p0, Lcom/google/ar/core/ArCoreApk$Availability;->SUPPORTED_APK_TOO_OLD:Lcom/google/ar/core/ArCoreApk$Availability;
 
     return-object p0
 
+    .line 3
     :cond_0
     sget-object p0, Lcom/google/ar/core/ArCoreApk$Availability;->SUPPORTED_INSTALLED:Lcom/google/ar/core/ArCoreApk$Availability;
     :try_end_0
@@ -83,11 +91,13 @@
 
     return-object p0
 
+    .line 4
     :catch_0
     sget-object p0, Lcom/google/ar/core/ArCoreApk$Availability;->UNKNOWN_ERROR:Lcom/google/ar/core/ArCoreApk$Availability;
 
     return-object p0
 
+    .line 5
     :catch_1
     sget-object p0, Lcom/google/ar/core/ArCoreApk$Availability;->UNSUPPORTED_DEVICE_NOT_CAPABLE:Lcom/google/ar/core/ArCoreApk$Availability;
 
@@ -277,21 +287,25 @@
 .method public a(Lcom/google/ar/core/ArCoreApk$Availability;)V
     .locals 2
 
+    .line 11
     iget-object v0, p0, Lcom/google/ar/core/aj;->a:Lcom/google/ar/core/h;
 
     monitor-enter v0
 
+    .line 12
     :try_start_0
     iget-object v1, p0, Lcom/google/ar/core/aj;->a:Lcom/google/ar/core/h;
 
     invoke-static {v1, p1}, Lcom/google/ar/core/h;->a(Lcom/google/ar/core/h;Lcom/google/ar/core/ArCoreApk$Availability;)Lcom/google/ar/core/ArCoreApk$Availability;
 
+    .line 13
     iget-object p0, p0, Lcom/google/ar/core/aj;->a:Lcom/google/ar/core/h;
 
     const/4 p1, 0x0
 
     invoke-static {p0, p1}, Lcom/google/ar/core/h;->a(Lcom/google/ar/core/h;Z)Z
 
+    .line 14
     monitor-exit v0
 
     return-void

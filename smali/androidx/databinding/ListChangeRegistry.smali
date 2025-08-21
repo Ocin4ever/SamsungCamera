@@ -120,17 +120,20 @@
 
     monitor-enter p0
 
+    .line 2
     :try_start_0
     invoke-super {p0, p1, p2, p3}, Landroidx/databinding/CallbackRegistry;->notifyCallbacks(Ljava/lang/Object;ILjava/lang/Object;)V
 
     if-eqz p3, :cond_0
 
+    .line 3
     sget-object p1, Landroidx/databinding/ListChangeRegistry;->sListChanges:Landroidx/core/util/Pools$SynchronizedPool;
 
     invoke-virtual {p1, p3}, Landroidx/core/util/Pools$SynchronizedPool;->release(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     :cond_0
     monitor-exit p0
 
@@ -147,6 +150,7 @@
 .method public bridge synthetic notifyCallbacks(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/databinding/ObservableList;
 
     check-cast p3, Landroidx/databinding/ListChangeRegistry$ListChanges;
@@ -163,6 +167,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0, v1}, Landroidx/databinding/ListChangeRegistry;->notifyCallbacks(Landroidx/databinding/ObservableList;ILandroidx/databinding/ListChangeRegistry$ListChanges;)V
 
     return-void
@@ -173,12 +178,14 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-static {p2, v0, p3}, Landroidx/databinding/ListChangeRegistry;->acquire(III)Landroidx/databinding/ListChangeRegistry$ListChanges;
 
     move-result-object p2
 
     const/4 p3, 0x1
 
+    .line 3
     invoke-virtual {p0, p1, p3, p2}, Landroidx/databinding/ListChangeRegistry;->notifyCallbacks(Landroidx/databinding/ObservableList;ILandroidx/databinding/ListChangeRegistry$ListChanges;)V
 
     return-void

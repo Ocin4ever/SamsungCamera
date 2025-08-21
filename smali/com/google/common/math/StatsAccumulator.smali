@@ -317,6 +317,7 @@
 .method public addAll(Lcom/google/common/math/Stats;)V
     .locals 12
 
+    .line 11
     invoke-virtual {p1}, Lcom/google/common/math/Stats;->count()J
 
     move-result-wide v0
@@ -329,6 +330,7 @@
 
     return-void
 
+    .line 12
     :cond_0
     invoke-virtual {p1}, Lcom/google/common/math/Stats;->count()J
 
@@ -360,6 +362,7 @@
 .method public addAll(Lcom/google/common/math/StatsAccumulator;)V
     .locals 12
 
+    .line 13
     invoke-virtual {p1}, Lcom/google/common/math/StatsAccumulator;->count()J
 
     move-result-wide v0
@@ -372,6 +375,7 @@
 
     return-void
 
+    .line 14
     :cond_0
     invoke-virtual {p1}, Lcom/google/common/math/StatsAccumulator;->count()J
 
@@ -412,6 +416,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -429,6 +434,7 @@
 
     check-cast v0, Ljava/lang/Number;
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
 
     move-result-wide v0
@@ -453,6 +459,7 @@
         }
     .end annotation
 
+    .line 3
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -460,6 +467,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -481,6 +489,7 @@
 .method public varargs addAll([D)V
     .locals 4
 
+    .line 5
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -490,6 +499,7 @@
 
     aget-wide v2, p1, v1
 
+    .line 6
     invoke-virtual {p0, v2, v3}, Lcom/google/common/math/StatsAccumulator;->add(D)V
 
     add-int/lit8 v1, v1, 0x1
@@ -503,6 +513,7 @@
 .method public varargs addAll([I)V
     .locals 4
 
+    .line 7
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -514,6 +525,7 @@
 
     int-to-double v2, v2
 
+    .line 8
     invoke-virtual {p0, v2, v3}, Lcom/google/common/math/StatsAccumulator;->add(D)V
 
     add-int/lit8 v1, v1, 0x1
@@ -527,6 +539,7 @@
 .method public varargs addAll([J)V
     .locals 4
 
+    .line 9
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -538,6 +551,7 @@
 
     long-to-double v2, v2
 
+    .line 10
     invoke-virtual {p0, v2, v3}, Lcom/google/common/math/StatsAccumulator;->add(D)V
 
     add-int/lit8 v1, v1, 0x1

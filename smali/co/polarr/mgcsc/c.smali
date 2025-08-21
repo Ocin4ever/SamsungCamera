@@ -10,7 +10,7 @@
 
 .field public static final TF_OD_API_INPUT_SIZE:I = 0x12c
 
-.field public static final TRACKING_LAST_SUGGESTION:Z
+.field public static final TRACKING_LAST_SUGGESTION:Z = false
 
 .field public static final a:Lco/polarr/mgcsc/utils/d;
 

@@ -19,22 +19,28 @@
 .method public constructor <init>(JJ)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lz0/d;->c:Landroid/animation/TimeInterpolator;
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Lz0/d;->d:I
 
     const/4 v0, 0x1
 
+    .line 4
     iput v0, p0, Lz0/d;->e:I
 
+    .line 5
     iput-wide p1, p0, Lz0/d;->a:J
 
+    .line 6
     iput-wide p3, p0, Lz0/d;->b:J
 
     return-void
@@ -43,20 +49,26 @@
 .method public constructor <init>(JJLandroid/animation/TimeInterpolator;)V
     .locals 1
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 8
     iput v0, p0, Lz0/d;->d:I
 
     const/4 v0, 0x1
 
+    .line 9
     iput v0, p0, Lz0/d;->e:I
 
+    .line 10
     iput-wide p1, p0, Lz0/d;->a:J
 
+    .line 11
     iput-wide p3, p0, Lz0/d;->b:J
 
+    .line 12
     iput-object p5, p0, Lz0/d;->c:Landroid/animation/TimeInterpolator;
 
     return-void

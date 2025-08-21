@@ -52,6 +52,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/base/Converter;-><init>(Z)V
 
     return-void
@@ -60,8 +61,10 @@
 .method public constructor <init>(Z)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-boolean p1, p0, Lcom/google/common/base/Converter;->handleNullAutomatically:Z
 
     return-void

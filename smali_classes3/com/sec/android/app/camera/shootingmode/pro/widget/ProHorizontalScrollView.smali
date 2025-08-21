@@ -154,14 +154,17 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mBarRangeArray:Ljava/util/ArrayList;
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -174,6 +177,7 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->MAX_FLING_VELOCITY:I
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -188,6 +192,7 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->SIDE_MARGIN:I
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -204,42 +209,51 @@
 
     const/4 v0, -0x1
 
+    .line 6
     iput v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mPreviousStep:I
 
     const/high16 v0, -0x80000000
 
+    .line 7
     iput v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mCurrentHapticIndex:I
 
     const/4 v0, 0x0
 
+    .line 8
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
+    .line 9
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mIsSliderPressed:Z
 
     const/4 v0, 0x1
 
+    .line 10
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mIsAutoMode:Z
 
+    .line 11
     new-instance v0, Landroid/util/Range;
 
     invoke-direct {v0, v1, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mSliderRange:Landroid/util/Range;
 
+    .line 12
     new-instance v0, Le5/a0;
 
     invoke-direct {v0}, Le5/a0;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mSeekBarAccessibilityDelegate:Le5/a0;
 
+    .line 13
     new-instance v0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView$1;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView$1;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mScrollToNearestTickRunnable:Ljava/lang/Runnable;
 
+    .line 14
     new-instance v0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView$2;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView$2;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;)V
@@ -248,6 +262,7 @@
 
     const/4 v0, 0x0
 
+    .line 15
     invoke-direct {p0, p1, v0}, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -256,14 +271,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
+    .line 16
     invoke-direct {p0, p1, p2}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 17
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mBarRangeArray:Ljava/util/ArrayList;
 
+    .line 18
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -276,6 +294,7 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->MAX_FLING_VELOCITY:I
 
+    .line 19
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -290,6 +309,7 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->SIDE_MARGIN:I
 
+    .line 20
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -306,48 +326,58 @@
 
     const/4 v0, -0x1
 
+    .line 21
     iput v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mPreviousStep:I
 
     const/high16 v0, -0x80000000
 
+    .line 22
     iput v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mCurrentHapticIndex:I
 
     const/4 v0, 0x0
 
+    .line 23
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
+    .line 24
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mIsSliderPressed:Z
 
     const/4 v0, 0x1
 
+    .line 25
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mIsAutoMode:Z
 
+    .line 26
     new-instance v0, Landroid/util/Range;
 
     invoke-direct {v0, v1, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mSliderRange:Landroid/util/Range;
 
+    .line 27
     new-instance v0, Le5/a0;
 
     invoke-direct {v0}, Le5/a0;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mSeekBarAccessibilityDelegate:Le5/a0;
 
+    .line 28
     new-instance v0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView$1;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView$1;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mScrollToNearestTickRunnable:Ljava/lang/Runnable;
 
+    .line 29
     new-instance v0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView$2;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView$2;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->mScrollStoppedCheckerRunnable:Ljava/lang/Runnable;
 
+    .line 30
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void

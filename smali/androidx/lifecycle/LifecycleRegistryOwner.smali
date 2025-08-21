@@ -15,6 +15,7 @@
 .method public bridge synthetic getLifecycle()Landroidx/lifecycle/Lifecycle;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleRegistryOwner;->getLifecycle()Landroidx/lifecycle/LifecycleRegistry;
 
     move-result-object p0

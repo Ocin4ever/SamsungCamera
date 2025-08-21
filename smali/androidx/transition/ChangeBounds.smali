@@ -179,18 +179,22 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/transition/Transition;-><init>()V
 
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
+    .line 2
     iput-object v0, p0, Landroidx/transition/ChangeBounds;->mTempLocation:[I
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Landroidx/transition/ChangeBounds;->mResizeClip:Z
 
+    .line 4
     iput-boolean v0, p0, Landroidx/transition/ChangeBounds;->mReparent:Z
 
     return-void
@@ -199,26 +203,32 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
+    .line 5
     invoke-direct {p0, p1, p2}, Landroidx/transition/Transition;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
+    .line 6
     iput-object v0, p0, Landroidx/transition/ChangeBounds;->mTempLocation:[I
 
     const/4 v0, 0x0
 
+    .line 7
     iput-boolean v0, p0, Landroidx/transition/ChangeBounds;->mResizeClip:Z
 
+    .line 8
     iput-boolean v0, p0, Landroidx/transition/ChangeBounds;->mReparent:Z
 
+    .line 9
     sget-object v1, Landroidx/transition/Styleable;->CHANGE_BOUNDS:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 10
     check-cast p2, Landroid/content/res/XmlResourceParser;
 
     const-string v1, "resizeClip"
@@ -227,8 +237,10 @@
 
     move-result p2
 
+    .line 11
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 12
     invoke-virtual {p0, p2}, Landroidx/transition/ChangeBounds;->setResizeClip(Z)V
 
     return-void

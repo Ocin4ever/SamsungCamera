@@ -71,44 +71,52 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager;->mImmediateProcessorLock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 4
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->newCondition()Ljava/util/concurrent/locks/Condition;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager;->mImmediateProcessorReleaseCond:Ljava/util/concurrent/locks/Condition;
 
+    .line 5
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager;->mPostProcessorResumeFutureLock:Ljava/lang/Object;
 
+    .line 6
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager;->mPostProcessorLock:Ljava/lang/Object;
 
+    .line 7
     new-instance v0, Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager$1;-><init>(Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager;->mPostProcessorCallback:Lcom/samsung/android/camera/core2/processor/ProcessCallback;
 
+    .line 8
     new-instance v0, Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager$2;-><init>(Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager;->mProcessorStatusCallback:Lcom/samsung/android/camera/core2/processor/ProcessorStatusCallback;
 
+    .line 9
     sget-object p0, Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const-string v0, "PictureProcessorManager"
@@ -121,6 +129,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/processor/manager/b;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/camera/core2/processor/manager/PictureProcessorManager;-><init>()V
 
     return-void

@@ -140,6 +140,7 @@
 .method public bridge synthetic listIterator()Ljava/util/ListIterator;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ImmutableList;->listIterator()Lcom/google/common/collect/UnmodifiableListIterator;
 
     move-result-object p0
@@ -150,6 +151,7 @@
 .method public bridge synthetic listIterator(I)Ljava/util/ListIterator;
     .locals 0
 
+    .line 2
     invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableList;->listIterator(I)Lcom/google/common/collect/UnmodifiableListIterator;
 
     move-result-object p0
@@ -175,10 +177,12 @@
         }
     .end annotation
 
+    .line 2
     iget v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->length:I
 
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->this$0:Lcom/google/common/collect/ImmutableList;
 
     iget p0, p0, Lcom/google/common/collect/ImmutableList$SubList;->offset:I
@@ -197,6 +201,7 @@
 .method public bridge synthetic subList(II)Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableList$SubList;->subList(II)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0

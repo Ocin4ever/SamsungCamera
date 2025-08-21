@@ -159,10 +159,12 @@
 .method public draw()V
     .locals 10
 
+    .line 1
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mProgram:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
+    .line 2
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mu_MatrixHandle:I
 
     iget-object v1, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->projectionMatrix:[F
@@ -175,22 +177,27 @@
 
     const v0, 0x84c0
 
+    .line 3
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const/16 v0, 0xde1
 
+    .line 4
     iget v1, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mTextureId:I
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 5
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mu_TextureUnitHandle:I
 
     invoke-static {v0, v3}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
+    .line 6
     iget-object v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mVerticesFloatBuffer:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v0, v3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 7
     iget v4, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->ma_PositionHandle:I
 
     const/4 v5, 0x2
@@ -205,60 +212,72 @@
 
     invoke-static/range {v4 .. v9}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
+    .line 8
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->ma_PositionHandle:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     const-string v0, "glEnableVertexAttribArray ma_PositionHandle"
 
+    .line 9
     invoke-static {v0}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->checkGLError(Ljava/lang/String;)I
 
+    .line 10
     iget-object v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mVerticesFloatBuffer:Ljava/nio/FloatBuffer;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 11
     iget v4, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->ma_TextureCoordinatesHandle:I
 
     iget-object v9, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mVerticesFloatBuffer:Ljava/nio/FloatBuffer;
 
     invoke-static/range {v4 .. v9}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
+    .line 12
     iget p0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->ma_TextureCoordinatesHandle:I
 
     invoke-static {p0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     const-string p0, "glEnableVertexAttribArray ma_TextureCoordinatesHandle"
 
+    .line 13
     invoke-static {p0}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->checkGLError(Ljava/lang/String;)I
 
     const/16 p0, 0xbe2
 
+    .line 14
     invoke-static {p0}, Landroid/opengl/GLES20;->glEnable(I)V
 
     const/16 p0, 0x302
 
     const/16 v0, 0x303
 
+    .line 15
     invoke-static {p0, v0}, Landroid/opengl/GLES20;->glBlendFunc(II)V
 
     const/4 p0, 0x5
 
     const/4 v0, 0x4
 
+    .line 16
     invoke-static {p0, v3, v0}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
     const-string p0, "Calling glFinish blocking call"
 
     const-string v0, "PIP"
 
+    .line 17
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 18
     invoke-static {}, Landroid/opengl/GLES20;->glFinish()V
 
     const-string p0, "Finished glFinish"
 
+    .line 19
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -269,12 +288,15 @@
 
     const/4 p1, 0x0
 
+    .line 20
     invoke-static {p1, p1, p1, p1}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
+    .line 21
     iget p1, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mProgram:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
+    .line 22
     iget p1, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mu_MatrixHandle:I
 
     iget-object p2, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->projectionMatrix:[F
@@ -287,22 +309,27 @@
 
     const p1, 0x84c0
 
+    .line 23
     invoke-static {p1}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const/16 p1, 0xde1
 
+    .line 24
     iget p2, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mTextureId:I
 
     invoke-static {p1, p2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 25
     iget p1, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mu_TextureUnitHandle:I
 
     invoke-static {p1, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
+    .line 26
     iget-object p1, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mVerticesFloatBuffer:Ljava/nio/FloatBuffer;
 
     invoke-virtual {p1, v1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 27
     iget v2, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->ma_PositionHandle:I
 
     const/4 v3, 0x2
@@ -317,60 +344,72 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
+    .line 28
     iget p1, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->ma_PositionHandle:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     const-string p1, "glEnableVertexAttribArray ma_PositionHandle"
 
+    .line 29
     invoke-static {p1}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->checkGLError(Ljava/lang/String;)I
 
+    .line 30
     iget-object p1, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mVerticesFloatBuffer:Ljava/nio/FloatBuffer;
 
     const/4 p2, 0x2
 
     invoke-virtual {p1, p2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 31
     iget v2, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->ma_TextureCoordinatesHandle:I
 
     iget-object v7, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mVerticesFloatBuffer:Ljava/nio/FloatBuffer;
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
+    .line 32
     iget p0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->ma_TextureCoordinatesHandle:I
 
     invoke-static {p0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     const-string p0, "glEnableVertexAttribArray ma_TextureCoordinatesHandle"
 
+    .line 33
     invoke-static {p0}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->checkGLError(Ljava/lang/String;)I
 
     const/16 p0, 0xbe2
 
+    .line 34
     invoke-static {p0}, Landroid/opengl/GLES20;->glEnable(I)V
 
     const/16 p0, 0x302
 
     const/16 p1, 0x303
 
+    .line 35
     invoke-static {p0, p1}, Landroid/opengl/GLES20;->glBlendFunc(II)V
 
     const/4 p0, 0x5
 
     const/4 p1, 0x4
 
+    .line 36
     invoke-static {p0, v1, p1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
     const-string p0, "Calling glFinish blocking call"
 
     const-string p1, "PIP"
 
+    .line 37
     invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 38
     invoke-static {}, Landroid/opengl/GLES20;->glFinish()V
 
     const-string p0, "Finished glFinish"
 
+    .line 39
     invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -379,12 +418,15 @@
 .method public loadTexture(Landroid/graphics/Bitmap;III)I
     .locals 10
 
+    .line 1
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mTextureId:I
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->deleteTexture()V
 
+    .line 3
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
@@ -392,22 +434,27 @@
 
     const/4 v1, 0x0
 
+    .line 4
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
+    .line 5
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
+    .line 6
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
     iput v2, v0, Landroid/graphics/Rect;->right:I
 
+    .line 7
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v2
 
     iput v2, v0, Landroid/graphics/Rect;->bottom:I
 
+    .line 8
     invoke-static {p1}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->loadTexture(Landroid/graphics/Bitmap;)I
 
     move-result p1
@@ -420,8 +467,10 @@
 
     const-string v2, "not able to load new texture"
 
+    .line 9
     invoke-static {p1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 10
     :cond_1
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
@@ -433,6 +482,7 @@
 
     div-float/2addr p1, v2
 
+    .line 11
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
     move-result v0
@@ -460,6 +510,7 @@
 
     move v0, v3
 
+    .line 12
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -481,14 +532,17 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 13
     iget-object v2, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->projectionMatrix:[F
 
     invoke-static {v2, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
+    .line 14
     iget-object v2, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->projectionMatrix:[F
 
     invoke-static {v2, v1, p1, v0, v3}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
 
+    .line 15
     iget-object v4, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->projectionMatrix:[F
 
     const/4 v5, 0x0
@@ -507,10 +561,13 @@
 
     const/4 p1, 0x0
 
+    .line 16
     invoke-static {p1, p1, p1, p1}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
+    .line 17
     invoke-static {v1, v1, p3, p4}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
+    .line 18
     iget p0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mTextureId:I
 
     return p0
@@ -519,17 +576,21 @@
 .method public loadTexture(Ljava/lang/String;II)I
     .locals 2
 
+    .line 19
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mTextureId:I
 
     if-eqz v0, :cond_0
 
+    .line 20
     invoke-direct {p0}, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->deleteTexture()V
 
+    .line 21
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
+    .line 22
     invoke-static {p1, p2, p3, v0}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->loadTexture(Ljava/lang/String;IILandroid/graphics/Rect;)I
 
     move-result p1
@@ -542,8 +603,10 @@
 
     const-string v1, "not able to load new texture"
 
+    .line 23
     invoke-static {p1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 24
     :cond_1
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
@@ -555,6 +618,7 @@
 
     div-float/2addr p1, p2
 
+    .line 25
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
     move-result p2
@@ -582,6 +646,7 @@
 
     move p2, v0
 
+    .line 26
     :goto_0
     iget-object p3, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->projectionMatrix:[F
 
@@ -589,10 +654,12 @@
 
     invoke-static {p3, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
+    .line 27
     iget-object p3, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->projectionMatrix:[F
 
     invoke-static {p3, v1, p1, p2, v0}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
 
+    .line 28
     iget p0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_2d;->mTextureId:I
 
     return p0

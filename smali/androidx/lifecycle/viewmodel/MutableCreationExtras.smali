@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -23,8 +24,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0}, Landroidx/lifecycle/viewmodel/CreationExtras;-><init>()V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/lifecycle/viewmodel/CreationExtras;->getMap$lifecycle_viewmodel_release()Ljava/util/Map;
 
     move-result-object p0
@@ -45,6 +48,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 4
     sget-object p1, Landroidx/lifecycle/viewmodel/CreationExtras$Empty;->INSTANCE:Landroidx/lifecycle/viewmodel/CreationExtras$Empty;
 
     :cond_0

@@ -49,6 +49,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     sget-object v0, Lcom/samsung/android/sdk/scs/ai/language/NotesOrganizationFormatType;->BASIC:Lcom/samsung/android/sdk/scs/ai/language/NotesOrganizationFormatType;
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/samsung/android/sdk/scs/ai/language/NotesOrganizer;->notesOrganize(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;Ljava/lang/String;Lcom/samsung/android/sdk/scs/ai/language/NotesOrganizationFormatType;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
@@ -76,26 +77,32 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 3
     new-instance v0, Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationRunnable;
 
     iget-object v1, p0, Lcom/samsung/android/sdk/scs/ai/language/NotesOrganizer;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationServiceExecutor;
 
     invoke-direct {v0, v1}, Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationRunnable;-><init>(Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationServiceExecutor;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationRunnable;->setAppInfo(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationRunnable;->setInputText(Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {p3}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationRunnable;->setFormatType(Ljava/lang/String;)V
 
+    .line 7
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/language/NotesOrganizer;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationServiceExecutor;
 
     invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 8
     invoke-virtual {v0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;->getTask()Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0
@@ -121,10 +128,12 @@
         }
     .end annotation
 
+    .line 9
     new-instance v0, Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationRunnable2;
 
     iget-object v1, p0, Lcom/samsung/android/sdk/scs/ai/language/NotesOrganizer;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationServiceExecutor;
 
+    .line 10
     invoke-virtual {p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo;->isStreamingMode()Z
 
     move-result v2
@@ -145,6 +154,7 @@
     :goto_0
     invoke-direct {v0, v1, v2}, Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationRunnable2;-><init>(Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationServiceExecutor;Lcom/samsung/android/sdk/scs/base/tasks/TaskCompletionSource;)V
 
+    .line 11
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -167,22 +177,28 @@
 
     invoke-static {v2, v1}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 12
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationRunnable2;->setAppInfo(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;)V
 
+    .line 13
     invoke-virtual {v0, p2}, Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationRunnable2;->setInputText(Ljava/lang/String;)V
 
+    .line 14
     invoke-virtual {p3}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationRunnable2;->setFormatType(Ljava/lang/String;)V
 
+    .line 15
     invoke-virtual {v0, p4}, Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationRunnable2;->setExtraPrompt(Ljava/util/Map;)V
 
+    .line 16
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/language/NotesOrganizer;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/NotesOrganizationServiceExecutor;
 
     invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 17
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -203,6 +219,7 @@
 
     invoke-static {v2, p0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 18
     invoke-virtual {v0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;->getTask()Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0
@@ -228,6 +245,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/NotesOrganizer;->notesOrganize(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;Ljava/lang/String;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0

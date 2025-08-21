@@ -46,8 +46,10 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 3
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
+    .line 4
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -74,6 +76,7 @@
 .method public synthetic constructor <init>(Landroid/os/Parcel;Lf1/a$a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lf1/a$b;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -82,6 +85,7 @@
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void

@@ -159,10 +159,12 @@
 .method public getItem(I)Landroidx/appcompat/view/menu/MenuItemImpl;
     .locals 1
 
+    .line 2
     iget-boolean v0, p0, Landroidx/appcompat/view/menu/MenuAdapter;->mOverflowOnly:Z
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuAdapter;->mAdapterMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
     invoke-virtual {v0}, Landroidx/appcompat/view/menu/MenuBuilder;->getNonActionItems()Ljava/util/ArrayList;
@@ -178,6 +180,7 @@
 
     move-result-object v0
 
+    .line 4
     :goto_0
     iget p0, p0, Landroidx/appcompat/view/menu/MenuAdapter;->mExpandedIndex:I
 
@@ -187,6 +190,7 @@
 
     add-int/lit8 p1, p1, 0x1
 
+    .line 5
     :cond_1
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -200,6 +204,7 @@
 .method public bridge synthetic getItem(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/MenuAdapter;->getItem(I)Landroidx/appcompat/view/menu/MenuItemImpl;
 
     move-result-object p0

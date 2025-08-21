@@ -46,6 +46,7 @@
 .method public call(Lcom/google/common/util/concurrent/Service$Listener;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractService$3;->val$from:Lcom/google/common/util/concurrent/Service$State;
 
     invoke-virtual {p1, p0}, Lcom/google/common/util/concurrent/Service$Listener;->terminated(Lcom/google/common/util/concurrent/Service$State;)V
@@ -56,6 +57,7 @@
 .method public bridge synthetic call(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/util/concurrent/Service$Listener;
 
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/AbstractService$3;->call(Lcom/google/common/util/concurrent/Service$Listener;)V

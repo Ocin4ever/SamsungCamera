@@ -324,10 +324,12 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 4
 
+    .line 1
     iget-object v0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
 
     iget v0, v0, Landroidx/collection/SimpleArrayMap;->mSize:I
 
+    .line 2
     new-array v1, v0, [Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -335,6 +337,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 3
     iget-object v3, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
 
     invoke-virtual {v3, v2}, Landroidx/collection/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -361,6 +364,7 @@
         }
     .end annotation
 
+    .line 4
     iget-object p0, p0, Landroidx/collection/ArrayMap$ValueCollection;->this$0:Landroidx/collection/ArrayMap;
 
     const/4 v0, 0x1

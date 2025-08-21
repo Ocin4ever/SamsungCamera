@@ -141,6 +141,7 @@
 
     const/4 v1, 0x1
 
+    .line 1
     invoke-direct {p0, p1, v0, v1}, Lo1/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -151,6 +152,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, v0, p2}, Lo1/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -161,6 +163,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-direct {p0, p1, p2, v0, p3}, Lo1/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -169,8 +172,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 3
 
+    .line 4
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 5
     const-class p2, Lo1/a;
 
     invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -181,36 +186,48 @@
 
     const/4 p2, 0x0
 
+    .line 6
     iput-boolean p2, p0, Lo1/a;->b:Z
 
     const/4 p3, -0x1
 
+    .line 7
     iput p3, p0, Lo1/a;->s:I
 
+    .line 8
     sget-object p3, Lo1/a;->N:Lo1/a$d;
 
     iput-object p3, p0, Lo1/a;->y:Lo1/a$d;
 
     const/4 p3, 0x0
 
+    .line 9
     iput p3, p0, Lo1/a;->z:F
 
+    .line 10
     iput-boolean p2, p0, Lo1/a;->A:Z
 
+    .line 11
     iput p2, p0, Lo1/a;->B:I
 
+    .line 12
     iput p2, p0, Lo1/a;->C:I
 
+    .line 13
     iput-boolean p2, p0, Lo1/a;->D:Z
 
+    .line 14
     iput p2, p0, Lo1/a;->E:I
 
     const/4 p2, 0x1
 
+    .line 15
     iput p2, p0, Lo1/a;->G:I
 
+    .line 16
     iput p4, p0, Lo1/a;->I:I
 
+    .line 17
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
@@ -221,6 +238,7 @@
 
     invoke-virtual {p1, p3, p0, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
+    .line 18
     sget p1, Ly0/e;->R:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -231,6 +249,7 @@
 
     iput-object p1, p0, Lo1/a;->m:Landroid/widget/FrameLayout;
 
+    .line 19
     sget p1, Ly0/e;->Q:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -239,6 +258,7 @@
 
     iput-object p1, p0, Lo1/a;->n:Landroid/view/View;
 
+    .line 20
     sget p1, Ly0/e;->S:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -249,6 +269,7 @@
 
     iput-object p1, p0, Lo1/a;->o:Landroid/widget/ImageView;
 
+    .line 21
     sget p3, Ly0/e;->T:I
 
     invoke-virtual {p0, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -259,6 +280,7 @@
 
     iput-object p3, p0, Lo1/a;->p:Landroid/view/ViewGroup;
 
+    .line 22
     sget p4, Ly0/e;->V:I
 
     invoke-virtual {p0, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -269,6 +291,7 @@
 
     iput-object p4, p0, Lo1/a;->q:Landroid/widget/TextView;
 
+    .line 23
     sget v0, Ly0/e;->U:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -279,12 +302,14 @@
 
     iput-object v0, p0, Lo1/a;->r:Landroid/widget/TextView;
 
+    .line 24
     invoke-virtual {p0}, Lo1/a;->getItemBackgroundResId()I
 
     move-result v1
 
     invoke-virtual {p0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
+    .line 25
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -299,6 +324,7 @@
 
     iput v1, p0, Lo1/a;->e:I
 
+    .line 26
     invoke-virtual {p3}, Landroid/view/View;->getPaddingBottom()I
 
     move-result p3
@@ -307,12 +333,16 @@
 
     const/4 p3, 0x2
 
+    .line 27
     invoke-static {p4, p3}, Landroidx/core/view/ViewCompat;->setImportantForAccessibility(Landroid/view/View;I)V
 
+    .line 28
     invoke-static {v0, p3}, Landroidx/core/view/ViewCompat;->setImportantForAccessibility(Landroid/view/View;I)V
 
+    .line 29
     invoke-virtual {p0, p2}, Landroid/view/View;->setFocusable(Z)V
 
+    .line 30
     invoke-virtual {p4}, Landroid/widget/TextView;->getTextSize()F
 
     move-result p2
@@ -325,6 +355,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 31
     new-instance p2, Lo1/a$a;
 
     invoke-direct {p2, p0}, Lo1/a$a;-><init>(Lo1/a;)V
@@ -334,6 +365,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 32
     invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroidx/core/view/AccessibilityDelegateCompat;)V
 
     return-void
@@ -2734,6 +2766,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -2743,6 +2776,7 @@
 
     move-result-object p1
 
+    .line 2
     :goto_0
     invoke-virtual {p0, p1}, Lo1/a;->setItemBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -2754,12 +2788,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
     move-result-object p1
@@ -2772,9 +2808,11 @@
 
     move-result-object p1
 
+    .line 5
     :cond_0
     iput-object p1, p0, Lo1/a;->d:Landroid/graphics/drawable/Drawable;
 
+    .line 6
     invoke-virtual {p0}, Lo1/a;->n()V
 
     return-void

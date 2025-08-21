@@ -17,8 +17,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 7
     new-instance v0, Landroid/graphics/Point;
 
     const/4 v1, 0x0
@@ -27,18 +29,21 @@
 
     iput-object v0, p0, Lcom/samsung/android/qrengine/Position;->mTopLeft:Landroid/graphics/Point;
 
+    .line 8
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0, v1, v1}, Landroid/graphics/Point;-><init>(II)V
 
     iput-object v0, p0, Lcom/samsung/android/qrengine/Position;->mTopRight:Landroid/graphics/Point;
 
+    .line 9
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0, v1, v1}, Landroid/graphics/Point;-><init>(II)V
 
     iput-object v0, p0, Lcom/samsung/android/qrengine/Position;->mBottomLeft:Landroid/graphics/Point;
 
+    .line 10
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0, v1, v1}, Landroid/graphics/Point;-><init>(II)V
@@ -51,14 +56,19 @@
 .method public constructor <init>(Landroid/graphics/Point;Landroid/graphics/Point;Landroid/graphics/Point;Landroid/graphics/Point;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/qrengine/Position;->mTopLeft:Landroid/graphics/Point;
 
+    .line 3
     iput-object p2, p0, Lcom/samsung/android/qrengine/Position;->mTopRight:Landroid/graphics/Point;
 
+    .line 4
     iput-object p3, p0, Lcom/samsung/android/qrengine/Position;->mBottomLeft:Landroid/graphics/Point;
 
+    .line 5
     iput-object p4, p0, Lcom/samsung/android/qrengine/Position;->mBottomRight:Landroid/graphics/Point;
 
     return-void

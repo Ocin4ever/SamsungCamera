@@ -186,6 +186,7 @@
 
     const-string v0, "is_available"
 
+    .line 9
     invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
@@ -194,16 +195,19 @@
 
     const/4 v2, 0x0
 
+    .line 10
     invoke-virtual {p1, v1, v2}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
     const-string v2, "resource_package_name"
 
+    .line 11
     invoke-virtual {p1, v2}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 12
     invoke-direct {p0, v0, v1, p1}, Lcom/samsung/android/sdk/scs/ai/asr_6_0/Environment;-><init>(ZILjava/lang/String;)V
 
     return-void
@@ -212,22 +216,28 @@
 .method private constructor <init>(ZILjava/lang/String;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-boolean p1, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/Environment;->isAvailable:Z
 
+    .line 3
     iput p2, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/Environment;->errorCode:I
 
+    .line 4
     iput-object p3, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/Environment;->targetPackage:Ljava/lang/String;
 
     if-eqz p3, :cond_0
 
+    .line 5
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/Environment;->storeLinkIntent:Landroid/content/Intent;
 
+    .line 6
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -248,6 +258,7 @@
 
     invoke-virtual {p1, p2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
+    .line 7
     iget-object p1, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/Environment;->storeLinkIntent:Landroid/content/Intent;
 
     const-string p2, "type"
@@ -256,6 +267,7 @@
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 8
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/Environment;->storeLinkIntent:Landroid/content/Intent;
 
     const p1, 0x14000020

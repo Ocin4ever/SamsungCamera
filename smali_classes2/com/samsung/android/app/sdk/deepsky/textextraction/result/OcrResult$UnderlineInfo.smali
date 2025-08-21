@@ -51,10 +51,13 @@
 .method public constructor <init>(Landroid/graphics/PointF;Landroid/graphics/PointF;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$UnderlineInfo;->start:Landroid/graphics/PointF;
 
+    .line 3
     iput-object p2, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$UnderlineInfo;->stop:Landroid/graphics/PointF;
 
     return-void
@@ -67,6 +70,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 4
     const-class v0, Landroid/graphics/PointF;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -79,6 +83,7 @@
 
     check-cast v1, Landroid/graphics/PointF;
 
+    .line 5
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
@@ -89,6 +94,7 @@
 
     check-cast p1, Landroid/graphics/PointF;
 
+    .line 6
     invoke-direct {p0, v1, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$UnderlineInfo;-><init>(Landroid/graphics/PointF;Landroid/graphics/PointF;)V
 
     return-void

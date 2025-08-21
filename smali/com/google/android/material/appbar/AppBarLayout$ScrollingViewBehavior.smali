@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, La1/b;-><init>()V
 
     return-void
@@ -26,24 +27,31 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0, p1, p2}, La1/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 3
     sget-object v0, Ly0/l;->q4:[I
 
+    .line 4
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 5
     sget p2, Ly0/l;->r4:I
 
     const/4 v0, 0x0
 
+    .line 6
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p2
 
+    .line 7
     invoke-virtual {p0, p2}, La1/b;->k(I)V
 
+    .line 8
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void

@@ -42,6 +42,7 @@
 .method public areContentsTheSame(Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomLensData;Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomLensData;)Z
     .locals 6
 
+    .line 2
     invoke-virtual {p1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomLensData;->getCommandId()Lcom/sec/android/app/camera/interfaces/CommandId;
 
     move-result-object p1
@@ -56,6 +57,7 @@
 
     return v1
 
+    .line 3
     :cond_0
     iget-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView$1;->this$0:Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;
 
@@ -67,6 +69,7 @@
 
     return v1
 
+    .line 4
     :cond_1
     iget-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView$1;->this$0:Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;
 
@@ -76,6 +79,7 @@
 
     check-cast p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListAdapter;
 
+    .line 5
     invoke-virtual {p1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListAdapter;->getPreviousItemCount()I
 
     move-result v0
@@ -88,6 +92,7 @@
 
     return v1
 
+    .line 6
     :cond_2
     invoke-virtual {p1}, Landroidx/recyclerview/widget/ListAdapter;->getCurrentList()Ljava/util/List;
 
@@ -95,6 +100,7 @@
 
     move v2, v1
 
+    .line 7
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -104,6 +110,7 @@
 
     if-ge v2, v3, :cond_4
 
+    .line 8
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -135,6 +142,7 @@
 
     return v1
 
+    .line 9
     :cond_5
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView$1;->this$0:Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;
 
@@ -146,11 +154,13 @@
 
     return v1
 
+    .line 10
     :cond_6
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensButton;
 
+    .line 11
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomLensButton;->isNeedToReBinding()Z
 
     move-result p2
@@ -159,6 +169,7 @@
 
     return v1
 
+    .line 12
     :cond_7
     invoke-virtual {p0}, Landroid/view/View;->isSelected()Z
 
@@ -179,6 +190,7 @@
 .method public bridge synthetic areContentsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomLensData;
 
     check-cast p2, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomLensData;
@@ -193,6 +205,7 @@
 .method public areItemsTheSame(Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomLensData;Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomLensData;)Z
     .locals 3
 
+    .line 2
     invoke-virtual {p1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomLensData;->getZoomValue()I
 
     move-result v0
@@ -207,6 +220,7 @@
 
     return v2
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomLensData;->getLensType()I
 
@@ -220,6 +234,7 @@
 
     return v2
 
+    .line 4
     :cond_1
     iget-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView$1;->this$0:Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;
 
@@ -231,6 +246,7 @@
 
     return v2
 
+    .line 5
     :cond_2
     iget-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView$1;->this$0:Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;
 
@@ -240,6 +256,7 @@
 
     check-cast p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListAdapter;
 
+    .line 6
     invoke-virtual {p1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListAdapter;->getNextItemCount()I
 
     move-result p1
@@ -269,6 +286,7 @@
     :cond_3
     move p1, v2
 
+    .line 7
     :goto_0
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView$1;->this$0:Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;
 
@@ -287,6 +305,7 @@
 .method public bridge synthetic areItemsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomLensData;
 
     check-cast p2, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomLensData;

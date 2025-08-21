@@ -40,6 +40,7 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lk0/a;-><init>()V
 
     const-string v0, "scopeUri must not be null or empty"
@@ -58,6 +59,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-direct {p0, v0, p1}, Lcom/google/android/gms/common/api/Scope;-><init>(ILjava/lang/String;)V
 
     return-void

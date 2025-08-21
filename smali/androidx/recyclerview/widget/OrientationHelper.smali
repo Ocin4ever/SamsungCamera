@@ -23,18 +23,22 @@
 .method private constructor <init>(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, -0x80000000
 
+    .line 3
     iput v0, p0, Landroidx/recyclerview/widget/OrientationHelper;->mLastTotalSpace:I
 
+    .line 4
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/OrientationHelper;->mTmpRect:Landroid/graphics/Rect;
 
+    .line 5
     iput-object p1, p0, Landroidx/recyclerview/widget/OrientationHelper;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     return-void
@@ -43,6 +47,7 @@
 .method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroidx/recyclerview/widget/OrientationHelper$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/OrientationHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     return-void

@@ -46,6 +46,7 @@
 .method public write([B)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {p0, p1}, Ljava/io/OutputStream;->write([B)V
@@ -56,6 +57,7 @@
 .method public write([BII)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V

@@ -741,6 +741,7 @@
 .method public static hasLocationPermissions(Landroid/content/Context;)Z
     .locals 5
 
+    .line 3
     sget-object v0, Lcom/sec/android/app/camera/util/PermissionUtils;->mPermissionMap:Landroid/util/ArrayMap;
 
     const/4 v1, 0x2
@@ -770,6 +771,7 @@
 
     aget-object v4, v0, v3
 
+    .line 4
     invoke-virtual {p0, v4}, Landroid/content/Context;->checkSelfPermission(Ljava/lang/String;)I
 
     move-result v4
@@ -792,6 +794,7 @@
 .method public static hasLocationPermissions(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 6
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/util/PermissionUtils;->mPermissionMap:Landroid/util/ArrayMap;
 
     const/4 v1, 0x2
@@ -821,6 +824,7 @@
 
     aget-object v4, v0, v3
 
+    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
@@ -847,6 +851,7 @@
 .method public static hasPermissions(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
+    .line 3
     invoke-virtual {p0, p1}, Landroid/content/Context;->checkSelfPermission(Ljava/lang/String;)I
 
     move-result p0
@@ -867,6 +872,7 @@
 .method public static hasPermissions(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;)Z
     .locals 5
 
+    .line 4
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -878,6 +884,7 @@
 
     aget-object v3, p2, v2
 
+    .line 5
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
@@ -904,6 +911,7 @@
 .method public static hasPermissions(Landroid/content/Context;[Ljava/lang/String;)Z
     .locals 4
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -915,6 +923,7 @@
 
     aget-object v3, p1, v2
 
+    .line 2
     invoke-virtual {p0, v3}, Landroid/content/Context;->checkSelfPermission(Ljava/lang/String;)I
 
     move-result v3

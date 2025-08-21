@@ -422,21 +422,25 @@
 .method private updatePreferenceAttr(Landroidx/preference/Preference;)V
     .locals 1
 
+    .line 1
     instance-of v0, p1, Lcom/sec/android/app/camera/setting/CameraSwitchPreference;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/sec/android/app/camera/setting/CameraSwitchPreference;
 
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/AdvancedIntelligentOptionsFragment;->updatePreferenceAttr(Lcom/sec/android/app/camera/setting/CameraSwitchPreference;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     instance-of v0, p1, Lcom/sec/android/app/camera/setting/CameraRadioButtonPreference;
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast p1, Lcom/sec/android/app/camera/setting/CameraRadioButtonPreference;
 
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/AdvancedIntelligentOptionsFragment;->updatePreferenceAttr(Lcom/sec/android/app/camera/setting/CameraRadioButtonPreference;)V
@@ -449,6 +453,7 @@
 .method private updatePreferenceAttr(Lcom/sec/android/app/camera/setting/CameraRadioButtonPreference;)V
     .locals 4
 
+    .line 5
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -459,13 +464,16 @@
 
     const-string p1, "updatePreferenceAttr : preference key is null"
 
+    .line 6
     invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 7
     :cond_0
     sget-object v0, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->QUALITY_OPTIMIZATION:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
+    .line 8
     iget-object v1, p0, Lcom/sec/android/app/camera/setting/CameraPreferenceFragment;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {v1, v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->getDefaultValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
@@ -478,6 +486,7 @@
 
     invoke-virtual {p1, v1}, Landroidx/preference/Preference;->setDefaultValue(Ljava/lang/Object;)V
 
+    .line 9
     invoke-virtual {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->getPreferenceKey()Ljava/lang/String;
 
     move-result-object v1
@@ -488,8 +497,10 @@
 
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/CameraRadioButtonPreference;->setEventId(Lcom/sec/android/app/camera/interfaces/SaLogEventId;)V
 
+    .line 10
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/AdvancedIntelligentOptionsFragment;->registerPreferenceClickListener(Landroidx/preference/Preference;)V
 
+    .line 11
     iget-object p0, p0, Lcom/sec/android/app/camera/setting/CameraPreferenceFragment;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {p0, v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->get(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
@@ -498,6 +509,7 @@
 
     const-string v0, "quality_optimization_max"
 
+    .line 12
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v1
@@ -516,6 +528,7 @@
 
     move v1, v2
 
+    .line 13
     :cond_1
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/CameraRadioButtonPreference;->setChecked(Z)V
 
@@ -524,6 +537,7 @@
     :cond_2
     const-string v0, "quality_optimization_mid"
 
+    .line 14
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v3
@@ -538,6 +552,7 @@
 
     move v1, v2
 
+    .line 15
     :cond_3
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/CameraRadioButtonPreference;->setChecked(Z)V
 
@@ -550,6 +565,7 @@
 
     move v1, v2
 
+    .line 16
     :cond_5
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/CameraRadioButtonPreference;->setChecked(Z)V
 
@@ -560,10 +576,12 @@
 .method private updatePreferenceAttr(Lcom/sec/android/app/camera/setting/CameraSwitchPreference;)V
     .locals 3
 
+    .line 17
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 18
     iget-object v1, p0, Lcom/sec/android/app/camera/setting/AdvancedIntelligentOptionsFragment;->mSettingKeyMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -574,6 +592,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 19
     iget-object v2, p0, Lcom/sec/android/app/camera/setting/CameraPreferenceFragment;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {v2, v1}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->getDefaultValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
@@ -586,18 +605,21 @@
 
     invoke-virtual {p1, v2}, Landroidx/preference/Preference;->setDefaultValue(Ljava/lang/Object;)V
 
+    .line 20
     iget-object v2, p0, Lcom/sec/android/app/camera/setting/CameraPreferenceFragment;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {v2, v1}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->get(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
 
     move-result v2
 
+    .line 21
     invoke-static {v2}, Lcom/sec/android/app/camera/util/Util;->toBoolean(I)Z
 
     move-result v2
 
     invoke-virtual {p1, v2}, Lcom/sec/android/app/camera/setting/CameraSwitchPreference;->setChecked(Z)V
 
+    .line 22
     invoke-virtual {v1}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->getPreferenceKey()Ljava/lang/String;
 
     move-result-object v2
@@ -608,6 +630,7 @@
 
     invoke-virtual {p1, v2}, Lcom/sec/android/app/camera/setting/CameraSwitchPreference;->setEventId(Lcom/sec/android/app/camera/interfaces/SaLogEventId;)V
 
+    .line 23
     invoke-direct {p0, v1, v0}, Lcom/sec/android/app/camera/setting/AdvancedIntelligentOptionsFragment;->updateSummary(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Ljava/lang/String;)V
 
     :cond_0

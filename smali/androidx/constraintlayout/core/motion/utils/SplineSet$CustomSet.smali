@@ -50,6 +50,7 @@
 .method public setPoint(IF)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "don\'t call for custom attribute call setPoint(pos, ConstraintAttribute)"
@@ -62,6 +63,7 @@
 .method public setPoint(ILandroidx/constraintlayout/core/motion/CustomAttribute;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/SplineSet$CustomSet;->mConstraintAttributeList:Landroidx/constraintlayout/core/motion/utils/KeyFrameArray$CustomArray;
 
     invoke-virtual {p0, p1, p2}, Landroidx/constraintlayout/core/motion/utils/KeyFrameArray$CustomArray;->append(ILandroidx/constraintlayout/core/motion/CustomAttribute;)V

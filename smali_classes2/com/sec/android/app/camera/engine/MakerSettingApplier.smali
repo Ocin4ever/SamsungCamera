@@ -124,6 +124,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/MakerSettingApplier;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/engine/CommonEngine;->getRequestQueue()Lcom/sec/android/app/camera/engine/request/RequestQueue;
@@ -144,6 +145,7 @@
 .method public applySettings(Lcom/sec/android/app/camera/interfaces/InternalEngine$MakerPublicSettingsUpdater;)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/MakerSettingApplier;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/engine/CommonEngine;->getRequestQueue()Lcom/sec/android/app/camera/engine/request/RequestQueue;

@@ -128,6 +128,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -138,6 +139,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/base/Supplier;
 
     invoke-virtual {p0, p1}, Lcom/google/common/base/Suppliers$SupplierFunctionImpl;->apply(Lcom/google/common/base/Supplier;)Ljava/lang/Object;

@@ -52,32 +52,38 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/util/Sequencer$Step;)V
     .locals 2
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 10
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/util/Sequencer$Step;->c:Ljava/util/Set;
 
+    .line 11
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/util/Sequencer$Step;->e()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/util/Sequencer$Step;->a:Ljava/lang/String;
 
+    .line 12
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/util/Sequencer$Step;->d()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/camera/core2/util/Sequencer$Step;->b:I
 
+    .line 13
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/util/Sequencer$Step;->h()Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/samsung/android/camera/core2/util/Sequencer$Step;->d:Z
 
+    .line 14
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/util/Sequencer$Step;->c()Ljava/util/Set;
 
     move-result-object p0
@@ -90,6 +96,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/util/Sequencer$Step;Lcom/samsung/android/camera/core2/util/w3;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/util/Sequencer$Step;-><init>(Lcom/samsung/android/camera/core2/util/Sequencer$Step;)V
 
     return-void
@@ -98,20 +105,26 @@
 .method public varargs constructor <init>(Ljava/lang/String;IZ[Ljava/lang/String;)V
     .locals 1
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/util/Sequencer$Step;->c:Ljava/util/Set;
 
+    .line 5
     iput-object p1, p0, Lcom/samsung/android/camera/core2/util/Sequencer$Step;->a:Ljava/lang/String;
 
+    .line 6
     iput p2, p0, Lcom/samsung/android/camera/core2/util/Sequencer$Step;->b:I
 
+    .line 7
     iput-boolean p3, p0, Lcom/samsung/android/camera/core2/util/Sequencer$Step;->d:Z
 
+    .line 8
     invoke-static {p4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -124,6 +137,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;IZ[Ljava/lang/String;Lcom/samsung/android/camera/core2/util/w3;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/camera/core2/util/Sequencer$Step;-><init>(Ljava/lang/String;IZ[Ljava/lang/String;)V
 
     return-void

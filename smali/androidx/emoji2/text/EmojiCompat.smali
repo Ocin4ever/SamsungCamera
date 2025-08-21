@@ -279,6 +279,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, v0}, Landroidx/emoji2/text/EmojiCompat;->init(Landroid/content/Context;Landroidx/emoji2/text/DefaultEmojiCompatConfig$DefaultEmojiCompatConfigFactory;)Landroidx/emoji2/text/EmojiCompat;
 
     move-result-object p0
@@ -289,10 +290,12 @@
 .method public static init(Landroid/content/Context;Landroidx/emoji2/text/DefaultEmojiCompatConfig$DefaultEmojiCompatConfigFactory;)Landroidx/emoji2/text/EmojiCompat;
     .locals 1
 
+    .line 2
     sget-boolean v0, Landroidx/emoji2/text/EmojiCompat;->sHasDoneDefaultConfigLookup:Z
 
     if-eqz v0, :cond_0
 
+    .line 3
     sget-object p0, Landroidx/emoji2/text/EmojiCompat;->sInstance:Landroidx/emoji2/text/EmojiCompat;
 
     return-object p0
@@ -302,6 +305,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     new-instance p1, Landroidx/emoji2/text/DefaultEmojiCompatConfig$DefaultEmojiCompatConfigFactory;
 
@@ -309,15 +313,18 @@
 
     invoke-direct {p1, v0}, Landroidx/emoji2/text/DefaultEmojiCompatConfig$DefaultEmojiCompatConfigFactory;-><init>(Landroidx/emoji2/text/DefaultEmojiCompatConfig$DefaultEmojiCompatConfigHelper;)V
 
+    .line 5
     :goto_0
     invoke-virtual {p1, p0}, Landroidx/emoji2/text/DefaultEmojiCompatConfig$DefaultEmojiCompatConfigFactory;->create(Landroid/content/Context;)Landroidx/emoji2/text/EmojiCompat$Config;
 
     move-result-object p0
 
+    .line 6
     sget-object p1, Landroidx/emoji2/text/EmojiCompat;->CONFIG_LOCK:Ljava/lang/Object;
 
     monitor-enter p1
 
+    .line 7
     :try_start_0
     sget-boolean v0, Landroidx/emoji2/text/EmojiCompat;->sHasDoneDefaultConfigLookup:Z
 
@@ -325,13 +332,16 @@
 
     if-eqz p0, :cond_2
 
+    .line 8
     invoke-static {p0}, Landroidx/emoji2/text/EmojiCompat;->init(Landroidx/emoji2/text/EmojiCompat$Config;)Landroidx/emoji2/text/EmojiCompat;
 
     :cond_2
     const/4 p0, 0x1
 
+    .line 9
     sput-boolean p0, Landroidx/emoji2/text/EmojiCompat;->sHasDoneDefaultConfigLookup:Z
 
+    .line 10
     :cond_3
     sget-object p0, Landroidx/emoji2/text/EmojiCompat;->sInstance:Landroidx/emoji2/text/EmojiCompat;
 
@@ -342,6 +352,7 @@
     :catchall_0
     move-exception p0
 
+    .line 11
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -352,25 +363,31 @@
 .method public static init(Landroidx/emoji2/text/EmojiCompat$Config;)Landroidx/emoji2/text/EmojiCompat;
     .locals 2
 
+    .line 12
     sget-object v0, Landroidx/emoji2/text/EmojiCompat;->sInstance:Landroidx/emoji2/text/EmojiCompat;
 
     if-nez v0, :cond_1
 
+    .line 13
     sget-object v1, Landroidx/emoji2/text/EmojiCompat;->INSTANCE_LOCK:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 14
     :try_start_0
     sget-object v0, Landroidx/emoji2/text/EmojiCompat;->sInstance:Landroidx/emoji2/text/EmojiCompat;
 
     if-nez v0, :cond_0
 
+    .line 15
     new-instance v0, Landroidx/emoji2/text/EmojiCompat;
 
     invoke-direct {v0, p0}, Landroidx/emoji2/text/EmojiCompat;-><init>(Landroidx/emoji2/text/EmojiCompat$Config;)V
 
+    .line 16
     sput-object v0, Landroidx/emoji2/text/EmojiCompat;->sInstance:Landroidx/emoji2/text/EmojiCompat;
 
+    .line 17
     :cond_0
     monitor-exit v1
 
@@ -489,17 +506,21 @@
 .method public static reset(Landroidx/emoji2/text/EmojiCompat$Config;)Landroidx/emoji2/text/EmojiCompat;
     .locals 2
 
+    .line 1
     sget-object v0, Landroidx/emoji2/text/EmojiCompat;->INSTANCE_LOCK:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     new-instance v1, Landroidx/emoji2/text/EmojiCompat;
 
     invoke-direct {v1, p0}, Landroidx/emoji2/text/EmojiCompat;-><init>(Landroidx/emoji2/text/EmojiCompat$Config;)V
 
+    .line 3
     sput-object v1, Landroidx/emoji2/text/EmojiCompat;->sInstance:Landroidx/emoji2/text/EmojiCompat;
 
+    .line 4
     monitor-exit v0
 
     return-object v1
@@ -507,6 +528,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -517,13 +539,16 @@
 .method public static reset(Landroidx/emoji2/text/EmojiCompat;)Landroidx/emoji2/text/EmojiCompat;
     .locals 1
 
+    .line 6
     sget-object v0, Landroidx/emoji2/text/EmojiCompat;->INSTANCE_LOCK:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 7
     :try_start_0
     sput-object p0, Landroidx/emoji2/text/EmojiCompat;->sInstance:Landroidx/emoji2/text/EmojiCompat;
 
+    .line 8
     sget-object p0, Landroidx/emoji2/text/EmojiCompat;->sInstance:Landroidx/emoji2/text/EmojiCompat;
 
     monitor-exit v0
@@ -533,6 +558,7 @@
     :catchall_0
     move-exception p0
 
+    .line 9
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -663,6 +689,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroidx/emoji2/text/EmojiCompat;->isInitialized()Z
 
     move-result v0
@@ -673,8 +700,10 @@
 
     const-string v0, "sequence cannot be null"
 
+    .line 2
     invoke-static {p1, v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object p0, p0, Landroidx/emoji2/text/EmojiCompat;->mHelper:Landroidx/emoji2/text/EmojiCompat$CompatInternal;
 
     invoke-virtual {p0, p1}, Landroidx/emoji2/text/EmojiCompat$CompatInternal;->hasEmojiGlyph(Ljava/lang/CharSequence;)Z
@@ -689,6 +718,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 4
     invoke-direct {p0}, Landroidx/emoji2/text/EmojiCompat;->isInitialized()Z
 
     move-result v0
@@ -699,8 +729,10 @@
 
     const-string v0, "sequence cannot be null"
 
+    .line 5
     invoke-static {p1, v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     iget-object p0, p0, Landroidx/emoji2/text/EmojiCompat;->mHelper:Landroidx/emoji2/text/EmojiCompat$CompatInternal;
 
     invoke-virtual {p0, p1, p2}, Landroidx/emoji2/text/EmojiCompat$CompatInternal;->hasEmojiGlyph(Ljava/lang/CharSequence;I)Z
@@ -946,11 +978,13 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
+    .line 2
     :goto_0
     invoke-virtual {p0, p1, v0, v1}, Landroidx/emoji2/text/EmojiCompat;->process(Ljava/lang/CharSequence;II)Ljava/lang/CharSequence;
 
@@ -964,6 +998,7 @@
 
     const v0, 0x7fffffff
 
+    .line 3
     invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/emoji2/text/EmojiCompat;->process(Ljava/lang/CharSequence;III)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -986,6 +1021,7 @@
 
     move v4, p4
 
+    .line 4
     invoke-virtual/range {v0 .. v5}, Landroidx/emoji2/text/EmojiCompat;->process(Ljava/lang/CharSequence;IIII)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -996,6 +1032,7 @@
 .method public process(Ljava/lang/CharSequence;IIII)Ljava/lang/CharSequence;
     .locals 7
 
+    .line 5
     invoke-direct {p0}, Landroidx/emoji2/text/EmojiCompat;->isInitialized()Z
 
     move-result v0
@@ -1006,14 +1043,17 @@
 
     const-string v0, "start cannot be negative"
 
+    .line 6
     invoke-static {p2, v0}, Landroidx/core/util/Preconditions;->checkArgumentNonnegative(ILjava/lang/String;)I
 
     const-string v0, "end cannot be negative"
 
+    .line 7
     invoke-static {p3, v0}, Landroidx/core/util/Preconditions;->checkArgumentNonnegative(ILjava/lang/String;)I
 
     const-string v0, "maxEmojiCount cannot be negative"
 
+    .line 8
     invoke-static {p4, v0}, Landroidx/core/util/Preconditions;->checkArgumentNonnegative(ILjava/lang/String;)I
 
     const/4 v0, 0x0
@@ -1032,6 +1072,7 @@
     :goto_0
     const-string v3, "start should be <= than end"
 
+    .line 9
     invoke-static {v2, v3}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
     if-nez p1, :cond_1
@@ -1040,6 +1081,7 @@
 
     return-object p0
 
+    .line 10
     :cond_1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -1059,6 +1101,7 @@
 
     invoke-static {v2, v3}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 11
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v2
@@ -1077,6 +1120,7 @@
 
     invoke-static {v2, v3}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 12
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v2
@@ -1094,6 +1138,7 @@
 
     if-eq p5, v1, :cond_5
 
+    .line 13
     iget-boolean v0, p0, Landroidx/emoji2/text/EmojiCompat;->mReplaceAll:Z
 
     :cond_5
@@ -1104,6 +1149,7 @@
     :cond_6
     move v6, v1
 
+    .line 14
     :goto_3
     iget-object v1, p0, Landroidx/emoji2/text/EmojiCompat;->mHelper:Landroidx/emoji2/text/EmojiCompat$CompatInternal;
 

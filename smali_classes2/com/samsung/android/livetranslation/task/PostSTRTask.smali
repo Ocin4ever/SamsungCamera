@@ -995,16 +995,19 @@
 .method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 2
 
+    .line 2
     sget-object p1, Lcom/samsung/android/livetranslation/task/PostSTRTask;->TAG:Ljava/lang/String;
 
     const-string v0, "doInBackground()"
 
     invoke-static {p1, v0}, Lcom/samsung/android/livetranslation/util/LTTLogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 3
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
+    .line 4
     iget-object v1, p0, Lcom/samsung/android/livetranslation/task/PostSTRTask;->lttOcrResult:Lcom/samsung/android/livetranslation/data/LttOcrResult;
 
     invoke-direct {p0, v1, v0}, Lcom/samsung/android/livetranslation/task/PostSTRTask;->convertOcrResultAndSetToKeyFrame(Lcom/samsung/android/livetranslation/data/LttOcrResult;Ljava/util/concurrent/CopyOnWriteArrayList;)Z
@@ -1015,8 +1018,10 @@
 
     const-string p0, "PostSTR Success"
 
+    .line 5
     invoke-static {p1, p0}, Lcom/samsung/android/livetranslation/util/LTTLogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 6
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object p0
@@ -1024,8 +1029,10 @@
     :cond_0
     const-string p0, "PostSTR Failed"
 
+    .line 7
     invoke-static {p1, p0}, Lcom/samsung/android/livetranslation/util/LTTLogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 8
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object p0
@@ -1034,6 +1041,7 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/livetranslation/task/PostSTRTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
@@ -1277,18 +1285,21 @@
 .method public onPostExecute(Ljava/lang/Boolean;)V
     .locals 3
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTask;->mStatusListener:Lcom/samsung/android/livetranslation/task/LiveTranslationTask$TaskStatusListener;
 
     sget-object v0, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$STATUS;->STR_COMPLETED:Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$STATUS;
 
     invoke-interface {p1, v0}, Lcom/samsung/android/livetranslation/task/LiveTranslationTask$TaskStatusListener;->updateStatus(Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$STATUS;)V
 
+    .line 4
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/PostSTRTask;->liveTranslationTaskManagerListener:Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$LiveTranslationTaskManagerListener;
 
     iget-object v0, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTask;->mKeyFrame:Lcom/samsung/android/livetranslation/text/KeyFrame;
@@ -1303,6 +1314,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTask;->mStatusListener:Lcom/samsung/android/livetranslation/task/LiveTranslationTask$TaskStatusListener;
 
@@ -1310,6 +1322,7 @@
 
     invoke-interface {p1, v0}, Lcom/samsung/android/livetranslation/task/LiveTranslationTask$TaskStatusListener;->updateStatus(Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$STATUS;)V
 
+    .line 6
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/PostSTRTask;->liveTranslationTaskManagerListener:Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$LiveTranslationTaskManagerListener;
 
     iget-object p0, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTask;->mKeyFrame:Lcom/samsung/android/livetranslation/text/KeyFrame;
@@ -1329,6 +1342,7 @@
 .method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/livetranslation/task/PostSTRTask;->onPostExecute(Ljava/lang/Boolean;)V

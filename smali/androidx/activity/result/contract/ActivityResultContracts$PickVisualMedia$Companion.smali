@@ -18,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,6 +27,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;-><init>()V
 
     return-void
@@ -179,6 +181,7 @@
 .method public final isPhotoPickerAvailable()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;->isSystemPickerAvailable$activity_release()Z
 
     move-result p0
@@ -193,6 +196,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;->isSystemPickerAvailable$activity_release()Z
 
     move-result v0
@@ -205,6 +209,7 @@
 
     if-nez v0, :cond_1
 
+    .line 3
     invoke-virtual {p0, p1}, Landroidx/activity/result/contract/ActivityResultContracts$PickVisualMedia$Companion;->isGmsPickerAvailable$activity_release(Landroid/content/Context;)Z
 
     move-result p0

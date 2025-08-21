@@ -217,8 +217,10 @@
         }
     .end annotation
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/google/common/graph/AbstractNetwork;->validateEndpoints(Lcom/google/common/graph/EndpointPair;)V
 
+    .line 6
     invoke-virtual {p1}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object v0
@@ -242,10 +244,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/graph/AbstractNetwork;->edgesConnecting(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Set;->size()I
 
     move-result v0
@@ -256,6 +260,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -266,6 +271,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -307,8 +313,10 @@
         }
     .end annotation
 
+    .line 6
     invoke-virtual {p0, p1}, Lcom/google/common/graph/AbstractNetwork;->validateEndpoints(Lcom/google/common/graph/EndpointPair;)V
 
+    .line 7
     invoke-virtual {p1}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object v0
@@ -334,14 +342,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/graph/Network;->outEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {p0, p2}, Lcom/google/common/graph/Network;->inEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v1
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v2
@@ -352,6 +363,7 @@
 
     if-gt v2, v3, :cond_0
 
+    .line 4
     invoke-direct {p0, p1, p2}, Lcom/google/common/graph/AbstractNetwork;->connectedPredicate(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/base/Predicate;
 
     move-result-object p0
@@ -366,6 +378,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-direct {p0, p2, p1}, Lcom/google/common/graph/AbstractNetwork;->connectedPredicate(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/base/Predicate;
 
@@ -461,8 +474,10 @@
         }
     .end annotation
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/google/common/graph/AbstractNetwork;->isOrderingCompatible(Lcom/google/common/graph/EndpointPair;)Z
 
     move-result v0
@@ -473,6 +488,7 @@
 
     return p0
 
+    .line 6
     :cond_0
     invoke-virtual {p1}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
@@ -497,10 +513,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-interface {p0}, Lcom/google/common/graph/Network;->nodes()Ljava/util/Set;
 
     move-result-object v0

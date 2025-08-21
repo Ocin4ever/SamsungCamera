@@ -15,6 +15,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/camera/core2/node/Node2;-><init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Z)V
 
     return-void
@@ -23,14 +24,17 @@
 .method public constructor <init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Z)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/Node;-><init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Z)V
 
+    .line 3
     new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/Node2;->mStateLock2:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 4
     invoke-virtual {p1}, Ljava/util/concurrent/locks/ReentrantLock;->newCondition()Ljava/util/concurrent/locks/Condition;
 
     move-result-object p1

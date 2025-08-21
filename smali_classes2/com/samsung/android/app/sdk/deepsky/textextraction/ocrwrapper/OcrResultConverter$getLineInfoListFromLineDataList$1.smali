@@ -46,6 +46,7 @@
 .method public final invoke(Lcom/samsung/android/sdk/ocr/OCRResult$LineData;)Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$LineInfo;
     .locals 3
 
+    .line 2
     sget-object v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/ocrwrapper/OcrResultConverter;->INSTANCE:Lcom/samsung/android/app/sdk/deepsky/textextraction/ocrwrapper/OcrResultConverter;
 
     invoke-virtual {p1}, Lcom/samsung/android/sdk/ocr/OCRResult$LineData;->getWordDataList()Ljava/util/ArrayList;
@@ -64,6 +65,7 @@
 
     const-string v2, "it"
 
+    .line 3
     invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/ocrwrapper/OcrResultConverter$getLineInfoListFromLineDataList$1;->$validRect:Landroid/graphics/Rect;
@@ -78,6 +80,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/samsung/android/sdk/ocr/OCRResult$LineData;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/ocrwrapper/OcrResultConverter$getLineInfoListFromLineDataList$1;->invoke(Lcom/samsung/android/sdk/ocr/OCRResult$LineData;)Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$LineInfo;

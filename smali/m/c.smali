@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static a:Z
+.field public static a:Z = false
 
-.field public static b:Z
+.field public static b:Z = false
 
 .field public static c:[Ljava/lang/String;
 

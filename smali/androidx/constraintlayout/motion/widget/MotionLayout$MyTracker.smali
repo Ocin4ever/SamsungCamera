@@ -93,10 +93,12 @@
 .method public computeCurrentVelocity(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->tracker:Landroid/view/VelocityTracker;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->computeCurrentVelocity(I)V
 
     :cond_0
@@ -106,10 +108,12 @@
 .method public computeCurrentVelocity(IF)V
     .locals 0
 
+    .line 3
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->tracker:Landroid/view/VelocityTracker;
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-virtual {p0, p1, p2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
     :cond_0
@@ -119,10 +123,12 @@
 .method public getXVelocity()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->tracker:Landroid/view/VelocityTracker;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/VelocityTracker;->getXVelocity()F
 
     move-result p0
@@ -138,10 +144,12 @@
 .method public getXVelocity(I)F
     .locals 0
 
+    .line 3
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->tracker:Landroid/view/VelocityTracker;
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->getXVelocity(I)F
 
     move-result p0
@@ -157,10 +165,12 @@
 .method public getYVelocity()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->tracker:Landroid/view/VelocityTracker;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/VelocityTracker;->getYVelocity()F
 
     move-result p0
@@ -176,10 +186,12 @@
 .method public getYVelocity(I)F
     .locals 1
 
+    .line 3
     iget-object v0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->tracker:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->getYVelocity(I)F
 
     move-result p0

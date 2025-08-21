@@ -6,7 +6,7 @@
 # static fields
 .field public static final MAX_SDK_WHERE_REQUIRED:I = 0x14
 
-.field private static sCompatVectorFromResourcesEnabled:Z
+.field private static sCompatVectorFromResourcesEnabled:Z = false
 
 
 # instance fields
@@ -163,6 +163,7 @@
 .method public getDrawable(I)Landroid/graphics/drawable/Drawable;
     .locals 2
 
+    .line 2
     iget-object v0, p0, Landroidx/appcompat/widget/VectorEnabledTintResources;->mContextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
@@ -173,6 +174,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {}, Landroidx/appcompat/widget/ResourceManagerInternal;->get()Landroidx/appcompat/widget/ResourceManagerInternal;
 
     move-result-object v1
@@ -183,6 +185,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ResourcesWrapper;->getDrawableCanonical(I)Landroid/graphics/drawable/Drawable;
 
@@ -194,6 +197,7 @@
 .method public bridge synthetic getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/ResourcesWrapper;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
@@ -204,6 +208,7 @@
 .method public bridge synthetic getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/ResourcesWrapper;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
@@ -214,6 +219,7 @@
 .method public bridge synthetic getDrawableForDensity(IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2, p3}, Landroidx/appcompat/widget/ResourcesWrapper;->getDrawableForDensity(IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
@@ -284,6 +290,7 @@
 .method public bridge synthetic getQuantityString(II)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/ResourcesWrapper;->getQuantityString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -294,6 +301,7 @@
 .method public bridge synthetic getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2, p3}, Landroidx/appcompat/widget/ResourcesWrapper;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -354,6 +362,7 @@
 .method public bridge synthetic getString(I)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/appcompat/widget/ResourcesWrapper;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -364,6 +373,7 @@
 .method public bridge synthetic getString(I[Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/ResourcesWrapper;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -384,6 +394,7 @@
 .method public bridge synthetic getText(I)Ljava/lang/CharSequence;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/appcompat/widget/ResourcesWrapper;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -394,6 +405,7 @@
 .method public bridge synthetic getText(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/ResourcesWrapper;->getText(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -414,6 +426,7 @@
 .method public bridge synthetic getValue(ILandroid/util/TypedValue;Z)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroidx/appcompat/widget/ResourcesWrapper;->getValue(ILandroid/util/TypedValue;Z)V
 
     return-void
@@ -422,6 +435,7 @@
 .method public bridge synthetic getValue(Ljava/lang/String;Landroid/util/TypedValue;Z)V
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2, p3}, Landroidx/appcompat/widget/ResourcesWrapper;->getValue(Ljava/lang/String;Landroid/util/TypedValue;Z)V
 
     return-void
@@ -468,6 +482,7 @@
 .method public bridge synthetic openRawResource(I)Ljava/io/InputStream;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/appcompat/widget/ResourcesWrapper;->openRawResource(I)Ljava/io/InputStream;
 
     move-result-object p0
@@ -478,6 +493,7 @@
 .method public bridge synthetic openRawResource(ILandroid/util/TypedValue;)Ljava/io/InputStream;
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/ResourcesWrapper;->openRawResource(ILandroid/util/TypedValue;)Ljava/io/InputStream;
 
     move-result-object p0

@@ -28,6 +28,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
     return-void
@@ -36,6 +37,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/collect/Sets$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Sets$SetView;-><init>()V
 
     return-void
@@ -142,6 +144,7 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Sets$SetView;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object p0

@@ -106,6 +106,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 5
     sget-object v0, Landroidx/room/util/FtsTableInfo;->Companion:Landroidx/room/util/FtsTableInfo$Companion;
 
     invoke-virtual {v0, p3}, Landroidx/room/util/FtsTableInfo$Companion;->parseOptions(Ljava/lang/String;)Ljava/util/Set;
@@ -144,12 +145,16 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/room/util/FtsTableInfo;->name:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Landroidx/room/util/FtsTableInfo;->columns:Ljava/util/Set;
 
+    .line 4
     iput-object p3, p0, Landroidx/room/util/FtsTableInfo;->options:Ljava/util/Set;
 
     return-void

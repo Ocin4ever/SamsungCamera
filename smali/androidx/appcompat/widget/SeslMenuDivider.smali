@@ -23,6 +23,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/SeslMenuDivider;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -33,6 +34,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/SeslMenuDivider;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -41,8 +43,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
 
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 4
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -55,6 +59,7 @@
 
     const/4 v0, 0x1
 
+    .line 5
     invoke-static {v0, p3, p2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
     move-result p3
@@ -65,6 +70,7 @@
 
     const/high16 p3, 0x40400000    # 3.0f
 
+    .line 6
     invoke-static {v0, p3, p2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
     move-result p2
@@ -73,18 +79,22 @@
 
     iput p2, p0, Landroidx/appcompat/widget/SeslMenuDivider;->mInterval:I
 
+    .line 7
     new-instance p2, Landroid/graphics/Paint;
 
     invoke-direct {p2}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p2, p0, Landroidx/appcompat/widget/SeslMenuDivider;->mPaint:Landroid/graphics/Paint;
 
+    .line 8
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setFlags(I)V
 
+    .line 9
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
+    .line 10
     invoke-static {p1}, Landroidx/appcompat/util/SeslMisc;->isLightTheme(Landroid/content/Context;)Z
 
     move-result p1
@@ -95,16 +105,19 @@
 
     goto :goto_0
 
+    .line 11
     :cond_0
     sget p1, Landroidx/appcompat/R$color;->sesl_popup_menu_divider_color_dark:I
 
     :goto_0
     const/4 p3, 0x0
 
+    .line 12
     invoke-static {p2, p1, p3}, Landroidx/core/content/res/ResourcesCompat;->getColor(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)I
 
     move-result p1
 
+    .line 13
     iget-object p0, p0, Landroidx/appcompat/widget/SeslMenuDivider;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setColor(I)V

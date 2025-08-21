@@ -46,6 +46,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/samsung/android/sdk/scs/base/tasks/TaskListenersManager;
 
     invoke-direct {v0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskListenersManager;-><init>()V
@@ -65,14 +66,17 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Lcom/samsung/android/sdk/scs/base/tasks/Task;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/sdk/scs/base/tasks/TaskImpl;->mLock:Ljava/lang/Object;
 
+    .line 4
     iput-object p1, p0, Lcom/samsung/android/sdk/scs/base/tasks/TaskImpl;->mListenersManager:Lcom/samsung/android/sdk/scs/base/tasks/TaskListenersManager;
 
     return-void
@@ -156,6 +160,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/samsung/android/sdk/scs/base/tasks/TaskExecutors;->MAIN_THREAD:Ljava/util/concurrent/Executor;
 
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/sdk/scs/base/tasks/TaskImpl;->addOnCompleteListener(Ljava/util/concurrent/Executor;Lcom/samsung/android/sdk/scs/base/tasks/OnCompleteListener;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
@@ -178,6 +183,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/samsung/android/sdk/scs/base/tasks/TaskImpl;->mListenersManager:Lcom/samsung/android/sdk/scs/base/tasks/TaskListenersManager;
 
     new-instance v1, Lcom/samsung/android/sdk/scs/base/tasks/CompleteListenerCompletion;
@@ -186,6 +192,7 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/sdk/scs/base/tasks/TaskListenersManager;->add(Lcom/samsung/android/sdk/scs/base/tasks/TaskListenerCompletion;)V
 
+    .line 3
     invoke-direct {p0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskImpl;->process()V
 
     return-object p0

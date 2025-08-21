@@ -42,6 +42,7 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/InternalEngine;Lcom/sec/android/app/camera/interfaces/CameraContext;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile;
 
     invoke-direct {v0, p1}, Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile;-><init>(Lcom/sec/android/app/camera/interfaces/InternalEngine;)V
@@ -54,24 +55,30 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/InternalEngine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSessionManagerImpl;->mRecordingSessionMap:Ljava/util/concurrent/ConcurrentHashMap;
 
+    .line 4
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSessionManagerImpl;->mEngine:Lcom/sec/android/app/camera/interfaces/InternalEngine;
 
+    .line 5
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSessionManagerImpl;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
+    .line 6
     invoke-interface {p2}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getCameraSettings()Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSessionManagerImpl;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
+    .line 7
     iput-object p3, p0, Lcom/sec/android/app/camera/engine/recordingsession/RecordingSessionManagerImpl;->mMediaRecorderProfile:Lcom/sec/android/app/camera/engine/recordingsession/MediaRecorderProfile;
 
     return-void

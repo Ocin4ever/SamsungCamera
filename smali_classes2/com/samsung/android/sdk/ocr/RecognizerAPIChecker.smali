@@ -95,6 +95,7 @@
 .method public static isValidParameter(Landroid/graphics/Bitmap;)Z
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/samsung/android/sdk/ocr/RecognizerAPIChecker;->isInputBitmapNull(Landroid/graphics/Bitmap;)Z
 
     move-result p0
@@ -114,6 +115,7 @@
 .method public static isValidParameter(Landroid/graphics/Bitmap;Lcom/samsung/android/sdk/ocr/OCRResult;)Z
     .locals 1
 
+    .line 2
     invoke-static {p0}, Lcom/samsung/android/sdk/ocr/RecognizerAPIChecker;->isInputBitmapNull(Landroid/graphics/Bitmap;)Z
 
     move-result p0
@@ -124,6 +126,7 @@
 
     return v0
 
+    .line 3
     :cond_0
     invoke-static {p1}, Lcom/samsung/android/sdk/ocr/RecognizerAPIChecker;->isResultContainerNull(Lcom/samsung/android/sdk/ocr/OCRResult;)Z
 
@@ -142,6 +145,7 @@
 .method public static isValidParameter(Landroid/graphics/Bitmap;[Landroid/graphics/Point;)Z
     .locals 1
 
+    .line 4
     invoke-static {p0}, Lcom/samsung/android/sdk/ocr/RecognizerAPIChecker;->isInputBitmapNull(Landroid/graphics/Bitmap;)Z
 
     move-result p0
@@ -152,6 +156,7 @@
 
     return v0
 
+    .line 5
     :cond_0
     invoke-static {p1}, Lcom/samsung/android/sdk/ocr/RecognizerAPIChecker;->isPointContainerNull([Landroid/graphics/Point;)Z
 
@@ -161,6 +166,7 @@
 
     return v0
 
+    .line 6
     :cond_1
     invoke-static {p1}, Lcom/samsung/android/sdk/ocr/RecognizerAPIChecker;->preparePointContainer([Landroid/graphics/Point;)V
 

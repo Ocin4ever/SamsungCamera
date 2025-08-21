@@ -122,46 +122,58 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mDrawPath:I
 
     const/high16 v1, 0x7fc00000    # Float.NaN
 
+    .line 3
     iput v1, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mPathRotate:F
 
+    .line 4
     iput v1, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mProgress:F
 
     const/4 v2, -0x1
 
+    .line 5
     iput v2, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mPathMotionArc:I
 
+    .line 6
     iput v2, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mAnimateRelativeTo:I
 
+    .line 7
     iput v1, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mRelativeAngle:F
 
     const/4 v1, 0x0
 
+    .line 8
     iput-object v1, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mRelativeToController:Landroidx/constraintlayout/core/motion/Motion;
 
+    .line 9
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->customAttributes:Ljava/util/HashMap;
 
+    .line 10
     iput v0, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mMode:I
 
     const/16 v0, 0x12
 
     new-array v1, v0, [D
 
+    .line 11
     iput-object v1, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mTempValue:[D
 
     new-array v0, v0, [D
 
+    .line 12
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mTempDelta:[D
 
     return-void
@@ -170,56 +182,71 @@
 .method public constructor <init>(IILandroidx/constraintlayout/core/motion/key/MotionKeyPosition;Landroidx/constraintlayout/core/motion/MotionPaths;Landroidx/constraintlayout/core/motion/MotionPaths;)V
     .locals 3
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 14
     iput v0, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mDrawPath:I
 
     const/high16 v1, 0x7fc00000    # Float.NaN
 
+    .line 15
     iput v1, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mPathRotate:F
 
+    .line 16
     iput v1, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mProgress:F
 
     const/4 v2, -0x1
 
+    .line 17
     iput v2, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mPathMotionArc:I
 
+    .line 18
     iput v2, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mAnimateRelativeTo:I
 
+    .line 19
     iput v1, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mRelativeAngle:F
 
     const/4 v1, 0x0
 
+    .line 20
     iput-object v1, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mRelativeToController:Landroidx/constraintlayout/core/motion/Motion;
 
+    .line 21
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->customAttributes:Ljava/util/HashMap;
 
+    .line 22
     iput v0, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mMode:I
 
     const/16 v0, 0x12
 
     new-array v1, v0, [D
 
+    .line 23
     iput-object v1, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mTempValue:[D
 
     new-array v0, v0, [D
 
+    .line 24
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->mTempDelta:[D
 
+    .line 25
     iget v0, p4, Landroidx/constraintlayout/core/motion/MotionPaths;->mAnimateRelativeTo:I
 
     if-eq v0, v2, :cond_0
 
+    .line 26
     invoke-virtual/range {p0 .. p5}, Landroidx/constraintlayout/core/motion/MotionPaths;->initPolar(IILandroidx/constraintlayout/core/motion/key/MotionKeyPosition;Landroidx/constraintlayout/core/motion/MotionPaths;Landroidx/constraintlayout/core/motion/MotionPaths;)V
 
     return-void
 
+    .line 27
     :cond_0
     iget v0, p3, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPositionType:I
 
@@ -231,15 +258,18 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 28
     invoke-virtual {p0, p3, p4, p5}, Landroidx/constraintlayout/core/motion/MotionPaths;->initCartesian(Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;Landroidx/constraintlayout/core/motion/MotionPaths;Landroidx/constraintlayout/core/motion/MotionPaths;)V
 
     return-void
 
+    .line 29
     :cond_1
     invoke-virtual/range {p0 .. p5}, Landroidx/constraintlayout/core/motion/MotionPaths;->initScreen(IILandroidx/constraintlayout/core/motion/key/MotionKeyPosition;Landroidx/constraintlayout/core/motion/MotionPaths;Landroidx/constraintlayout/core/motion/MotionPaths;)V
 
     return-void
 
+    .line 30
     :cond_2
     invoke-virtual {p0, p3, p4, p5}, Landroidx/constraintlayout/core/motion/MotionPaths;->initPath(Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;Landroidx/constraintlayout/core/motion/MotionPaths;Landroidx/constraintlayout/core/motion/MotionPaths;)V
 
@@ -439,6 +469,7 @@
 .method public compareTo(Landroidx/constraintlayout/core/motion/MotionPaths;)I
     .locals 0
 
+    .line 2
     iget p0, p0, Landroidx/constraintlayout/core/motion/MotionPaths;->position:F
 
     iget p1, p1, Landroidx/constraintlayout/core/motion/MotionPaths;->position:F
@@ -453,6 +484,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/constraintlayout/core/motion/MotionPaths;
 
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/motion/MotionPaths;->compareTo(Landroidx/constraintlayout/core/motion/MotionPaths;)I
@@ -697,18 +729,23 @@
 
     move-object/from16 v1, p3
 
+    .line 1
     iget v2, v0, Landroidx/constraintlayout/core/motion/MotionPaths;->x:F
 
+    .line 2
     iget v3, v0, Landroidx/constraintlayout/core/motion/MotionPaths;->y:F
 
+    .line 3
     iget v4, v0, Landroidx/constraintlayout/core/motion/MotionPaths;->width:F
 
+    .line 4
     iget v5, v0, Landroidx/constraintlayout/core/motion/MotionPaths;->height:F
 
     const/4 v6, 0x0
 
     move v7, v6
 
+    .line 5
     :goto_0
     array-length v8, v1
 
@@ -718,10 +755,12 @@
 
     if-ge v7, v8, :cond_4
 
+    .line 6
     aget-wide v11, p4, v7
 
     double-to-float v8, v11
 
+    .line 7
     aget v11, v1, v7
 
     if-eq v11, v10, :cond_3
@@ -761,6 +800,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_4
     iget-object v0, v0, Landroidx/constraintlayout/core/motion/MotionPaths;->mRelativeToController:Landroidx/constraintlayout/core/motion/Motion;
 
@@ -774,6 +814,7 @@
 
     move-wide/from16 v11, p1
 
+    .line 9
     invoke-virtual {v0, v11, v12, v7, v8}, Landroidx/constraintlayout/core/motion/Motion;->getCenter(D[F[F)V
 
     aget v0, v7, v6
@@ -786,6 +827,7 @@
 
     float-to-double v2, v3
 
+    .line 10
     invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v13
@@ -804,6 +846,7 @@
 
     float-to-double v6, v6
 
+    .line 11
     invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v2
@@ -831,6 +874,7 @@
 
     add-float/2addr v2, v0
 
+    .line 12
     aput v2, p5, p6
 
     add-int/lit8 v2, p6, 0x1
@@ -841,6 +885,7 @@
 
     add-float/2addr v3, v0
 
+    .line 13
     aput v3, p5, v2
 
     return-void
@@ -853,12 +898,16 @@
 
     move-object/from16 v1, p3
 
+    .line 14
     iget v2, v0, Landroidx/constraintlayout/core/motion/MotionPaths;->x:F
 
+    .line 15
     iget v3, v0, Landroidx/constraintlayout/core/motion/MotionPaths;->y:F
 
+    .line 16
     iget v4, v0, Landroidx/constraintlayout/core/motion/MotionPaths;->width:F
 
+    .line 17
     iget v5, v0, Landroidx/constraintlayout/core/motion/MotionPaths;->height:F
 
     const/4 v8, 0x0
@@ -871,6 +920,7 @@
 
     const/4 v12, 0x0
 
+    .line 18
     :goto_0
     array-length v13, v1
 
@@ -878,14 +928,17 @@
 
     if-ge v8, v13, :cond_4
 
+    .line 19
     aget-wide v6, p4, v8
 
     double-to-float v6, v6
 
+    .line 20
     aget-wide v13, p6, v8
 
     double-to-float v13, v13
 
+    .line 21
     aget v14, v1, v8
 
     if-eq v14, v15, :cond_3
@@ -946,6 +999,7 @@
 
     add-float/2addr v12, v11
 
+    .line 22
     iget-object v0, v0, Landroidx/constraintlayout/core/motion/MotionPaths;->mRelativeToController:Landroidx/constraintlayout/core/motion/Motion;
 
     if-eqz v0, :cond_5
@@ -958,6 +1012,7 @@
 
     move-wide/from16 v12, p1
 
+    .line 23
     invoke-virtual {v0, v12, v13, v7, v6}, Landroidx/constraintlayout/core/motion/Motion;->getCenter(D[F[F)V
 
     const/4 v0, 0x0
@@ -976,6 +1031,7 @@
 
     float-to-double v14, v3
 
+    .line 24
     invoke-static {v14, v15}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v16
@@ -998,6 +1054,7 @@
 
     float-to-double v7, v7
 
+    .line 25
     invoke-static {v14, v15}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v12
@@ -1020,6 +1077,7 @@
 
     float-to-double v9, v9
 
+    .line 26
     invoke-static {v14, v15}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v12
@@ -1044,6 +1102,7 @@
 
     float-to-double v11, v0
 
+    .line 27
     invoke-static {v14, v15}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v17
@@ -1088,6 +1147,7 @@
 
     const/4 v4, 0x0
 
+    .line 28
     aput v2, p5, v4
 
     div-float/2addr v5, v0
@@ -1098,10 +1158,13 @@
 
     const/4 v0, 0x1
 
+    .line 29
     aput v3, p5, v0
 
+    .line 30
     aput v10, p7, v4
 
+    .line 31
     aput v12, p7, v0
 
     return-void

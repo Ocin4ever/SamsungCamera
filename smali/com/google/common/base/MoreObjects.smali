@@ -63,6 +63,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -79,6 +80,7 @@
 .method public static toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -99,6 +101,7 @@
 .method public static toStringHelper(Ljava/lang/String;)Lcom/google/common/base/MoreObjects$ToStringHelper;
     .locals 2
 
+    .line 3
     new-instance v0, Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     const/4 v1, 0x0

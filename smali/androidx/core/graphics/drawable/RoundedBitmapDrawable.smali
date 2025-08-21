@@ -597,6 +597,7 @@
 .method public setTargetDensity(I)V
     .locals 1
 
+    .line 3
     iget v0, p0, Landroidx/core/graphics/drawable/RoundedBitmapDrawable;->mTargetDensity:I
 
     if-eq v0, p1, :cond_2
@@ -605,15 +606,19 @@
 
     const/16 p1, 0xa0
 
+    .line 4
     :cond_0
     iput p1, p0, Landroidx/core/graphics/drawable/RoundedBitmapDrawable;->mTargetDensity:I
 
+    .line 5
     iget-object p1, p0, Landroidx/core/graphics/drawable/RoundedBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz p1, :cond_1
 
+    .line 6
     invoke-direct {p0}, Landroidx/core/graphics/drawable/RoundedBitmapDrawable;->computeBitmapSize()V
 
+    .line 7
     :cond_1
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
@@ -624,6 +629,7 @@
 .method public setTargetDensity(Landroid/graphics/Canvas;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getDensity()I
 
     move-result p1
@@ -636,6 +642,7 @@
 .method public setTargetDensity(Landroid/util/DisplayMetrics;)V
     .locals 0
 
+    .line 2
     iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
 
     invoke-virtual {p0, p1}, Landroidx/core/graphics/drawable/RoundedBitmapDrawable;->setTargetDensity(I)V

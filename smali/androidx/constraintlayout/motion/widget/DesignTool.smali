@@ -1060,6 +1060,7 @@
 .method public getKeyframe(III)Ljava/lang/Object;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/DesignTool;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     iget-object v0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout;->mScene:Landroidx/constraintlayout/motion/widget/MotionScene;
@@ -1070,6 +1071,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1085,6 +1087,7 @@
 .method public getKeyframe(Ljava/lang/Object;II)Ljava/lang/Object;
     .locals 1
 
+    .line 3
     iget-object v0, p0, Landroidx/constraintlayout/motion/widget/DesignTool;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     iget-object v0, v0, Landroidx/constraintlayout/motion/widget/MotionLayout;->mScene:Landroidx/constraintlayout/motion/widget/MotionScene;
@@ -1095,6 +1098,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     check-cast p1, Landroid/view/View;
 
@@ -1102,6 +1106,7 @@
 
     move-result p1
 
+    .line 5
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/DesignTool;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     iget-object v0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout;->mScene:Landroidx/constraintlayout/motion/widget/MotionScene;

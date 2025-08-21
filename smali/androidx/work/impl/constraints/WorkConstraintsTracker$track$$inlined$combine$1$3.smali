@@ -68,6 +68,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Landroidx/work/impl/constraints/WorkConstraintsTracker$track$$inlined$combine$1$3;
 
     invoke-direct {p0, p3}, Landroidx/work/impl/constraints/WorkConstraintsTracker$track$$inlined$combine$1$3;-><init>(Li6/d;)V
@@ -88,6 +89,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     check-cast p1, La7/f;
 
     check-cast p2, [Ljava/lang/Object;

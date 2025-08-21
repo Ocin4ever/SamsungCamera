@@ -394,6 +394,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, p1, p2, v0}, Landroidx/room/util/DBUtil;->query(Landroidx/room/RoomDatabase;Landroidx/sqlite/db/SupportSQLiteQuery;ZLandroid/os/CancellationSignal;)Landroid/database/Cursor;
 
     move-result-object p0
@@ -412,16 +413,19 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0, p1, p3}, Landroidx/room/RoomDatabase;->query(Landroidx/sqlite/db/SupportSQLiteQuery;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
     move-result-object p0
 
     if-eqz p2, :cond_1
 
+    .line 3
     instance-of p1, p0, Landroid/database/AbstractWindowedCursor;
 
     if-eqz p1, :cond_1
 
+    .line 4
     move-object p1, p0
 
     check-cast p1, Landroid/database/AbstractWindowedCursor;
@@ -430,12 +434,14 @@
 
     move-result p2
 
+    .line 5
     invoke-virtual {p1}, Landroid/database/AbstractWindowedCursor;->hasWindow()Z
 
     move-result p3
 
     if-eqz p3, :cond_0
 
+    .line 6
     invoke-virtual {p1}, Landroid/database/AbstractWindowedCursor;->getWindow()Landroid/database/CursorWindow;
 
     move-result-object p1
@@ -452,6 +458,7 @@
     :goto_0
     if-ge p1, p2, :cond_1
 
+    .line 7
     invoke-static {p0}, Landroidx/room/util/CursorUtil;->copyAndClose(Landroid/database/Cursor;)Landroid/database/Cursor;
 
     move-result-object p0

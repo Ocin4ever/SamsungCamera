@@ -114,11 +114,13 @@
 
     const/4 v3, 0x1
 
+    .line 2
     :try_start_0
     invoke-static {v3}, Lcom/sec/android/app/camera/util/factory/CountDownLatchFactory;->create(I)Ljava/util/concurrent/CountDownLatch;
 
     move-result-object v4
 
+    .line 3
     iget-object v5, p0, Lcom/sec/android/app/camera/provider/WaitCallbackServiceTask;->mCallbackService:Lcom/sec/android/app/camera/service/AbstractCallbackService;
 
     new-instance v6, Lcom/sec/android/app/camera/provider/s;
@@ -127,11 +129,13 @@
 
     invoke-virtual {v5, v6}, Lcom/sec/android/app/camera/service/AbstractCallbackService;->bind(Lcom/sec/android/app/camera/service/AbstractCallbackService$CompleteListener;)V
 
+    .line 4
     invoke-virtual {v4}, Ljava/util/concurrent/CountDownLatch;->await()V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,6 +158,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     iget-object p0, p0, Lcom/sec/android/app/camera/provider/WaitCallbackServiceTask;->mCallbackService:Lcom/sec/android/app/camera/service/AbstractCallbackService;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/service/AbstractCallbackService;->unbind()V
@@ -168,6 +173,7 @@
     :catch_0
     move-exception v3
 
+    .line 7
     :try_start_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -201,6 +207,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 8
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -223,12 +230,14 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 9
     iget-object p0, p0, Lcom/sec/android/app/camera/provider/WaitCallbackServiceTask;->mCallbackService:Lcom/sec/android/app/camera/service/AbstractCallbackService;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/service/AbstractCallbackService;->unbind()V
 
     const/4 v3, -0x1
 
+    .line 10
     :goto_0
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -236,6 +245,7 @@
 
     return-object p0
 
+    .line 11
     :goto_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -259,16 +269,19 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 12
     iget-object p0, p0, Lcom/sec/android/app/camera/provider/WaitCallbackServiceTask;->mCallbackService:Lcom/sec/android/app/camera/service/AbstractCallbackService;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/service/AbstractCallbackService;->unbind()V
 
+    .line 13
     throw v3
 .end method
 
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/provider/WaitCallbackServiceTask;->call()Ljava/lang/Integer;
 
     move-result-object p0

@@ -62,6 +62,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Iterators$4;->next()Ljava/util/List;
 
     move-result-object p0
@@ -79,12 +80,14 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/Iterators$4;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
+    .line 3
     iget v0, p0, Lcom/google/common/collect/Iterators$4;->val$size:I
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -93,6 +96,7 @@
 
     move v2, v1
 
+    .line 4
     :goto_0
     iget v3, p0, Lcom/google/common/collect/Iterators$4;->val$size:I
 
@@ -106,6 +110,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 5
     iget-object v3, p0, Lcom/google/common/collect/Iterators$4;->val$iterator:Ljava/util/Iterator;
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -121,6 +126,7 @@
     :cond_0
     move v3, v2
 
+    .line 6
     :goto_1
     iget v4, p0, Lcom/google/common/collect/Iterators$4;->val$size:I
 
@@ -128,12 +134,14 @@
 
     const/4 v4, 0x0
 
+    .line 7
     aput-object v4, v0, v3
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
+    .line 8
     :cond_1
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -143,6 +151,7 @@
 
     move-result-object v0
 
+    .line 9
     iget-boolean v3, p0, Lcom/google/common/collect/Iterators$4;->val$pad:Z
 
     if-nez v3, :cond_3
@@ -153,6 +162,7 @@
 
     goto :goto_2
 
+    .line 10
     :cond_2
     invoke-interface {v0, v1, v2}, Ljava/util/List;->subList(II)Ljava/util/List;
 
@@ -164,6 +174,7 @@
     :goto_2
     return-object v0
 
+    .line 11
     :cond_4
     new-instance p0, Ljava/util/NoSuchElementException;
 

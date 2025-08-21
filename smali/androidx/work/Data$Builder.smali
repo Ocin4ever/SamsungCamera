@@ -276,6 +276,7 @@
 .method public putAll(Landroidx/work/Data;)Landroidx/work/Data$Builder;
     .locals 0
 
+    .line 1
     iget-object p1, p1, Landroidx/work/Data;->mValues:Ljava/util/Map;
 
     invoke-virtual {p0, p1}, Landroidx/work/Data$Builder;->putAll(Ljava/util/Map;)Landroidx/work/Data$Builder;
@@ -296,6 +297,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -317,16 +319,19 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {p0, v1, v0}, Landroidx/work/Data$Builder;->put(Ljava/lang/String;Ljava/lang/Object;)Landroidx/work/Data$Builder;
 
     goto :goto_0

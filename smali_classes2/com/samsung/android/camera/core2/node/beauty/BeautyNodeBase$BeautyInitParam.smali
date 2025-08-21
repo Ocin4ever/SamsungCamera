@@ -32,6 +32,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/camera/core2/node/beauty/BeautyNodeBase$BeautyInitParam;-><init>(Landroid/util/Size;Lcom/samsung/android/camera/core2/CamCapability;Z)V
 
     return-void
@@ -40,12 +41,16 @@
 .method public constructor <init>(Landroid/util/Size;Lcom/samsung/android/camera/core2/CamCapability;Z)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/beauty/BeautyNodeBase$BeautyInitParam;->a:Landroid/util/Size;
 
+    .line 4
     iput-boolean p3, p0, Lcom/samsung/android/camera/core2/node/beauty/BeautyNodeBase$BeautyInitParam;->b:Z
 
+    .line 5
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/CamCapability;->l()Ljava/lang/Integer;
 
     move-result-object p1
@@ -58,6 +63,7 @@
 
     iput p1, p0, Lcom/samsung/android/camera/core2/node/beauty/BeautyNodeBase$BeautyInitParam;->c:I
 
+    .line 6
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/CamCapability;->q2()Ljava/lang/Integer;
 
     move-result-object p1
@@ -70,6 +76,7 @@
 
     iput p1, p0, Lcom/samsung/android/camera/core2/node/beauty/BeautyNodeBase$BeautyInitParam;->d:I
 
+    .line 7
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/CamCapability;->W()Ljava/lang/Boolean;
 
     move-result-object p1

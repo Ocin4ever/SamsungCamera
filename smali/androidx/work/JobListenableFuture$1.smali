@@ -60,6 +60,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Landroidx/work/JobListenableFuture$1;->invoke(Ljava/lang/Throwable;)V
@@ -74,6 +75,7 @@
 
     if-nez p1, :cond_1
 
+    .line 2
     iget-object p0, p0, Landroidx/work/JobListenableFuture$1;->this$0:Landroidx/work/JobListenableFuture;
 
     invoke-static {p0}, Landroidx/work/JobListenableFuture;->access$getUnderlying$p(Landroidx/work/JobListenableFuture;)Landroidx/work/impl/utils/futures/SettableFuture;
@@ -101,6 +103,7 @@
 
     throw p0
 
+    .line 3
     :cond_1
     instance-of v0, p1, Ljava/util/concurrent/CancellationException;
 
@@ -118,6 +121,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_2
     iget-object p0, p0, Landroidx/work/JobListenableFuture$1;->this$0:Landroidx/work/JobListenableFuture;
 

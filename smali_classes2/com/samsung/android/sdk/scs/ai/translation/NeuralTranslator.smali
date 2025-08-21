@@ -591,14 +591,18 @@
 
     const-string v1, "NeuralTranslator -- clear() executed"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;->neuralTranslationRunnableExecutor:Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;
 
+    .line 3
     invoke-virtual {v0}, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;->executeClearAndRefresh()Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object v0
 
+    .line 4
     new-instance v1, Lcom/samsung/android/sdk/scs/ai/translation/s;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/sdk/scs/ai/translation/s;-><init>(Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;)V
@@ -623,6 +627,7 @@
         }
     .end annotation
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -641,6 +646,7 @@
 
     invoke-static {v1, v0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 6
     iget-object v0, p0, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;->context:Landroid/content/Context;
 
     const-string v1, "FEATURE_NEURAL_TRANSLATION_CLEAR_WITH_SOURCE_ID"
@@ -651,6 +657,7 @@
 
     if-nez v0, :cond_0
 
+    .line 7
     iget-object v0, p0, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;->neuralTranslationRunnableExecutor:Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;->executeClearWithSourceId(Ljava/lang/String;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
@@ -659,6 +666,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     iget-object p1, p0, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;->neuralTranslationRunnableExecutor:Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;
 
@@ -666,6 +674,7 @@
 
     move-result-object p1
 
+    .line 9
     :goto_0
     new-instance v0, Lcom/samsung/android/sdk/scs/ai/translation/r;
 
@@ -918,10 +927,12 @@
 
     const-string v1, "NeuralTranslator -- identifyLanguage() executed - default"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "en"
 
+    .line 2
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;->identifyLanguage(Ljava/lang/String;Ljava/lang/String;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0
@@ -943,6 +954,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -961,6 +973,7 @@
 
     invoke-static {v1, v0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 4
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;->neuralTranslationRunnableExecutor:Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;
 
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;->executeLanguageIdentification(Ljava/lang/String;Ljava/lang/String;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
@@ -1025,10 +1038,12 @@
 
     const-string v1, "NeuralTranslator -- identifyLanguagePackCode() executed - default"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "en"
 
+    .line 2
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;->identifyLanguagePackCode(Ljava/lang/String;Ljava/lang/String;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0
@@ -1050,6 +1065,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1068,6 +1084,7 @@
 
     invoke-static {v1, v0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 4
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;->neuralTranslationRunnableExecutor:Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;
 
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;->executeLanguagePackCodeIdentification(Ljava/lang/String;Ljava/lang/String;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
@@ -1096,10 +1113,12 @@
 
     const-string v1, "NeuralTranslator -- identifyLanguageWithList() executed - default"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "en"
 
+    .line 2
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;->identifyLanguageWithList(Ljava/util/ArrayList;Ljava/lang/String;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0
@@ -1124,6 +1143,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1142,6 +1162,7 @@
 
     invoke-static {v1, v0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 4
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;->neuralTranslationRunnableExecutor:Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;
 
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;->executeLanguageIdentificationWithList(Ljava/util/ArrayList;Ljava/lang/String;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
@@ -1272,8 +1293,10 @@
 
     const-string v1, "NeuralTranslator -- translate() executed"
 
+    .line 3
     invoke-static {v0, v1}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 4
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;->neuralTranslationRunnableExecutor:Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;
 
     invoke-virtual {p0, p2, p1}, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRunnableExecutor;->executeTranslationRunnable(Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRequest;Lcom/samsung/android/sdk/scs/ai/language/AppInfo;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
@@ -1300,10 +1323,12 @@
 
     const-string v1, "NeuralTranslator -- translate() executed (without app info)"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p0, v0, p1}, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslator;->translate(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationRequest;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0

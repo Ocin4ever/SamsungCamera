@@ -143,30 +143,40 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/samsung/android/sdk/cover/ScoverState;->switchState:Z
 
     const/4 v0, 0x2
 
+    .line 3
     iput v0, p0, Lcom/samsung/android/sdk/cover/ScoverState;->type:I
 
     const/4 v0, 0x0
 
+    .line 4
     iput v0, p0, Lcom/samsung/android/sdk/cover/ScoverState;->color:I
 
+    .line 5
     iput v0, p0, Lcom/samsung/android/sdk/cover/ScoverState;->widthPixel:I
 
+    .line 6
     iput v0, p0, Lcom/samsung/android/sdk/cover/ScoverState;->heightPixel:I
 
+    .line 7
     iput-boolean v0, p0, Lcom/samsung/android/sdk/cover/ScoverState;->attached:Z
 
+    .line 8
     iput v0, p0, Lcom/samsung/android/sdk/cover/ScoverState;->model:I
 
+    .line 9
     iput-boolean v0, p0, Lcom/samsung/android/sdk/cover/ScoverState;->fakeCover:Z
 
+    .line 10
     iput v0, p0, Lcom/samsung/android/sdk/cover/ScoverState;->fotaMode:I
 
     return-void
@@ -175,26 +185,36 @@
 .method public constructor <init>(ZIIII)V
     .locals 0
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 12
     iput-boolean p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->switchState:Z
 
+    .line 13
     iput p2, p0, Lcom/samsung/android/sdk/cover/ScoverState;->type:I
 
+    .line 14
     iput p3, p0, Lcom/samsung/android/sdk/cover/ScoverState;->color:I
 
+    .line 15
     iput p4, p0, Lcom/samsung/android/sdk/cover/ScoverState;->widthPixel:I
 
+    .line 16
     iput p5, p0, Lcom/samsung/android/sdk/cover/ScoverState;->heightPixel:I
 
     const/4 p1, 0x0
 
+    .line 17
     iput-boolean p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->attached:Z
 
+    .line 18
     iput p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->model:I
 
+    .line 19
     iput-boolean p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->fakeCover:Z
 
+    .line 20
     iput p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->fotaMode:I
 
     return-void
@@ -203,26 +223,36 @@
 .method public constructor <init>(ZIIIIZ)V
     .locals 0
 
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 22
     iput-boolean p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->switchState:Z
 
+    .line 23
     iput p2, p0, Lcom/samsung/android/sdk/cover/ScoverState;->type:I
 
+    .line 24
     iput p3, p0, Lcom/samsung/android/sdk/cover/ScoverState;->color:I
 
+    .line 25
     iput p4, p0, Lcom/samsung/android/sdk/cover/ScoverState;->widthPixel:I
 
+    .line 26
     iput p5, p0, Lcom/samsung/android/sdk/cover/ScoverState;->heightPixel:I
 
+    .line 27
     iput-boolean p6, p0, Lcom/samsung/android/sdk/cover/ScoverState;->attached:Z
 
     const/4 p1, 0x0
 
+    .line 28
     iput p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->model:I
 
+    .line 29
     iput-boolean p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->fakeCover:Z
 
+    .line 30
     iput p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->fotaMode:I
 
     return-void
@@ -231,26 +261,36 @@
 .method public constructor <init>(ZIIIIZI)V
     .locals 0
 
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 32
     iput-boolean p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->switchState:Z
 
+    .line 33
     iput p2, p0, Lcom/samsung/android/sdk/cover/ScoverState;->type:I
 
+    .line 34
     iput p3, p0, Lcom/samsung/android/sdk/cover/ScoverState;->color:I
 
+    .line 35
     iput p4, p0, Lcom/samsung/android/sdk/cover/ScoverState;->widthPixel:I
 
+    .line 36
     iput p5, p0, Lcom/samsung/android/sdk/cover/ScoverState;->heightPixel:I
 
+    .line 37
     iput-boolean p6, p0, Lcom/samsung/android/sdk/cover/ScoverState;->attached:Z
 
+    .line 38
     iput p7, p0, Lcom/samsung/android/sdk/cover/ScoverState;->model:I
 
     const/4 p1, 0x0
 
+    .line 39
     iput-boolean p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->fakeCover:Z
 
+    .line 40
     iput p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->fotaMode:I
 
     return-void
@@ -259,26 +299,36 @@
 .method public constructor <init>(ZIIIIZIZ)V
     .locals 0
 
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 42
     iput-boolean p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->switchState:Z
 
+    .line 43
     iput p2, p0, Lcom/samsung/android/sdk/cover/ScoverState;->type:I
 
+    .line 44
     iput p3, p0, Lcom/samsung/android/sdk/cover/ScoverState;->color:I
 
+    .line 45
     iput p4, p0, Lcom/samsung/android/sdk/cover/ScoverState;->widthPixel:I
 
+    .line 46
     iput p5, p0, Lcom/samsung/android/sdk/cover/ScoverState;->heightPixel:I
 
+    .line 47
     iput-boolean p6, p0, Lcom/samsung/android/sdk/cover/ScoverState;->attached:Z
 
+    .line 48
     iput p7, p0, Lcom/samsung/android/sdk/cover/ScoverState;->model:I
 
+    .line 49
     iput-boolean p8, p0, Lcom/samsung/android/sdk/cover/ScoverState;->fakeCover:Z
 
     const/4 p1, 0x0
 
+    .line 50
     iput p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->fotaMode:I
 
     return-void
@@ -287,24 +337,34 @@
 .method public constructor <init>(ZIIIIZIZI)V
     .locals 0
 
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 52
     iput-boolean p1, p0, Lcom/samsung/android/sdk/cover/ScoverState;->switchState:Z
 
+    .line 53
     iput p2, p0, Lcom/samsung/android/sdk/cover/ScoverState;->type:I
 
+    .line 54
     iput p3, p0, Lcom/samsung/android/sdk/cover/ScoverState;->color:I
 
+    .line 55
     iput p4, p0, Lcom/samsung/android/sdk/cover/ScoverState;->widthPixel:I
 
+    .line 56
     iput p5, p0, Lcom/samsung/android/sdk/cover/ScoverState;->heightPixel:I
 
+    .line 57
     iput-boolean p6, p0, Lcom/samsung/android/sdk/cover/ScoverState;->attached:Z
 
+    .line 58
     iput p7, p0, Lcom/samsung/android/sdk/cover/ScoverState;->model:I
 
+    .line 59
     iput-boolean p8, p0, Lcom/samsung/android/sdk/cover/ScoverState;->fakeCover:Z
 
+    .line 60
     iput p9, p0, Lcom/samsung/android/sdk/cover/ScoverState;->fotaMode:I
 
     return-void

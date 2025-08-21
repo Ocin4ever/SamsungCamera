@@ -35,8 +35,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/activity/ComponentActivity;-><init>()V
 
+    .line 2
     new-instance v0, Landroidx/fragment/app/FragmentActivity$HostCallbacks;
 
     invoke-direct {v0, p0}, Landroidx/fragment/app/FragmentActivity$HostCallbacks;-><init>(Landroidx/fragment/app/FragmentActivity;)V
@@ -47,6 +49,7 @@
 
     iput-object v0, p0, Landroidx/fragment/app/FragmentActivity;->mFragments:Landroidx/fragment/app/FragmentController;
 
+    .line 3
     new-instance v0, Landroidx/lifecycle/LifecycleRegistry;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/LifecycleRegistry;-><init>(Landroidx/lifecycle/LifecycleOwner;)V
@@ -55,8 +58,10 @@
 
     const/4 v0, 0x1
 
+    .line 4
     iput-boolean v0, p0, Landroidx/fragment/app/FragmentActivity;->mStopped:Z
 
+    .line 5
     invoke-direct {p0}, Landroidx/fragment/app/FragmentActivity;->init()V
 
     return-void
@@ -65,8 +70,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 6
     invoke-direct {p0, p1}, Landroidx/activity/ComponentActivity;-><init>(I)V
 
+    .line 7
     new-instance p1, Landroidx/fragment/app/FragmentActivity$HostCallbacks;
 
     invoke-direct {p1, p0}, Landroidx/fragment/app/FragmentActivity$HostCallbacks;-><init>(Landroidx/fragment/app/FragmentActivity;)V
@@ -77,6 +84,7 @@
 
     iput-object p1, p0, Landroidx/fragment/app/FragmentActivity;->mFragments:Landroidx/fragment/app/FragmentController;
 
+    .line 8
     new-instance p1, Landroidx/lifecycle/LifecycleRegistry;
 
     invoke-direct {p1, p0}, Landroidx/lifecycle/LifecycleRegistry;-><init>(Landroidx/lifecycle/LifecycleOwner;)V
@@ -85,8 +93,10 @@
 
     const/4 p1, 0x1
 
+    .line 9
     iput-boolean p1, p0, Landroidx/fragment/app/FragmentActivity;->mStopped:Z
 
+    .line 10
     invoke-direct {p0}, Landroidx/fragment/app/FragmentActivity;->init()V
 
     return-void
@@ -512,12 +522,14 @@
 .method public onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
     .locals 1
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, p4}, Landroidx/fragment/app/FragmentActivity;->dispatchFragmentsOnCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-super {p0, p1, p2, p3, p4}, Landroid/app/Activity;->onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object p0
@@ -533,12 +545,14 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, v0, p1, p2, p3}, Landroidx/fragment/app/FragmentActivity;->dispatchFragmentsOnCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 4
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object p0
@@ -777,6 +791,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/fragment/app/FragmentActivity;->startActivityFromFragment(Landroidx/fragment/app/Fragment;Landroid/content/Intent;ILandroid/os/Bundle;)V
 
     return-void
@@ -789,10 +804,12 @@
 
     if-ne p3, v0, :cond_0
 
+    .line 2
     invoke-static {p0, p2, v0, p4}, Landroidx/core/app/ActivityCompat;->startActivityForResult(Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V
 
     return-void
 
+    .line 3
     :cond_0
     invoke-virtual {p1, p2, p3, p4}, Landroidx/fragment/app/Fragment;->startActivityForResult(Landroid/content/Intent;ILandroid/os/Bundle;)V
 

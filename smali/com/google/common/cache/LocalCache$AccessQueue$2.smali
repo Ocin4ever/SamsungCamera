@@ -51,10 +51,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1}, Lcom/google/common/cache/ReferenceEntry;->getNextInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object p1
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$AccessQueue$2;->this$0:Lcom/google/common/cache/LocalCache$AccessQueue;
 
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
@@ -70,6 +72,7 @@
 .method public bridge synthetic computeNext(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/cache/ReferenceEntry;
 
     invoke-virtual {p0, p1}, Lcom/google/common/cache/LocalCache$AccessQueue$2;->computeNext(Lcom/google/common/cache/ReferenceEntry;)Lcom/google/common/cache/ReferenceEntry;

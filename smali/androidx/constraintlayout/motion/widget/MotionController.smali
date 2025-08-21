@@ -4537,10 +4537,12 @@
 .method public setStartState(Landroid/graphics/Rect;Landroidx/constraintlayout/widget/ConstraintSet;II)V
     .locals 7
 
+    .line 18
     iget v6, p2, Landroidx/constraintlayout/widget/ConstraintSet;->mRotate:I
 
     if-eqz v6, :cond_0
 
+    .line 19
     iget-object v2, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mTempRect:Landroid/graphics/Rect;
 
     move-object v0, p0
@@ -4555,6 +4557,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/motion/widget/MotionController;->rotate(Landroid/graphics/Rect;Landroid/graphics/Rect;III)V
 
+    .line 20
     :cond_0
     iget-object p3, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mStartMotionPath:Landroidx/constraintlayout/motion/widget/MotionPaths;
 
@@ -4562,10 +4565,13 @@
 
     iput p4, p3, Landroidx/constraintlayout/motion/widget/MotionPaths;->time:F
 
+    .line 21
     iput p4, p3, Landroidx/constraintlayout/motion/widget/MotionPaths;->position:F
 
+    .line 22
     invoke-direct {p0, p3}, Landroidx/constraintlayout/motion/widget/MotionController;->readView(Landroidx/constraintlayout/motion/widget/MotionPaths;)V
 
+    .line 23
     iget-object p3, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mStartMotionPath:Landroidx/constraintlayout/motion/widget/MotionPaths;
 
     iget p4, p1, Landroid/graphics/Rect;->left:I
@@ -4590,44 +4596,52 @@
 
     invoke-virtual {p3, p4, v0, v1, v2}, Landroidx/constraintlayout/motion/widget/MotionPaths;->setBounds(FFFF)V
 
+    .line 24
     iget p3, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mId:I
 
     invoke-virtual {p2, p3}, Landroidx/constraintlayout/widget/ConstraintSet;->getParameters(I)Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
     move-result-object p3
 
+    .line 25
     iget-object p4, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mStartMotionPath:Landroidx/constraintlayout/motion/widget/MotionPaths;
 
     invoke-virtual {p4, p3}, Landroidx/constraintlayout/motion/widget/MotionPaths;->applyParameters(Landroidx/constraintlayout/widget/ConstraintSet$Constraint;)V
 
+    .line 26
     iget-object p4, p3, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
 
     iget p4, p4, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mMotionStagger:F
 
     iput p4, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mMotionStagger:F
 
+    .line 27
     iget-object p4, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mStartPoint:Landroidx/constraintlayout/motion/widget/MotionConstrainedPoint;
 
     iget v0, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mId:I
 
     invoke-virtual {p4, p1, p2, v6, v0}, Landroidx/constraintlayout/motion/widget/MotionConstrainedPoint;->setState(Landroid/graphics/Rect;Landroidx/constraintlayout/widget/ConstraintSet;II)V
 
+    .line 28
     iget-object p1, p3, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
 
     iget p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotTarget:I
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mTransformPivotTarget:I
 
+    .line 29
     iget-object p1, p3, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
 
     iget p2, p1, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mQuantizeMotionSteps:I
 
     iput p2, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mQuantizeMotionSteps:I
 
+    .line 30
     iget p1, p1, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->mQuantizeMotionPhase:F
 
     iput p1, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mQuantizeMotionPhase:F
 
+    .line 31
     iget-object p1, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -4654,14 +4668,17 @@
 .method public setStartState(Landroidx/constraintlayout/motion/utils/ViewState;Landroid/view/View;III)V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mStartMotionPath:Landroidx/constraintlayout/motion/widget/MotionPaths;
 
     const/4 v1, 0x0
 
     iput v1, v0, Landroidx/constraintlayout/motion/widget/MotionPaths;->time:F
 
+    .line 2
     iput v1, v0, Landroidx/constraintlayout/motion/widget/MotionPaths;->position:F
 
+    .line 3
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -4676,6 +4693,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget p4, p1, Landroidx/constraintlayout/motion/utils/ViewState;->left:I
 
@@ -4683,12 +4701,14 @@
 
     add-int/2addr p4, v1
 
+    .line 5
     iget v1, p1, Landroidx/constraintlayout/motion/utils/ViewState;->top:I
 
     iget v3, p1, Landroidx/constraintlayout/motion/utils/ViewState;->bottom:I
 
     add-int/2addr v1, v3
 
+    .line 6
     invoke-virtual {p1}, Landroidx/constraintlayout/motion/utils/ViewState;->width()I
 
     move-result v3
@@ -4701,6 +4721,7 @@
 
     iput p5, v0, Landroid/graphics/Rect;->left:I
 
+    .line 7
     invoke-virtual {p1}, Landroidx/constraintlayout/motion/utils/ViewState;->height()I
 
     move-result p5
@@ -4711,6 +4732,7 @@
 
     iput p4, v0, Landroid/graphics/Rect;->top:I
 
+    .line 8
     iget p4, v0, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p1}, Landroidx/constraintlayout/motion/utils/ViewState;->width()I
@@ -4721,6 +4743,7 @@
 
     iput p4, v0, Landroid/graphics/Rect;->right:I
 
+    .line 9
     iget p4, v0, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p1}, Landroidx/constraintlayout/motion/utils/ViewState;->height()I
@@ -4733,6 +4756,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     iget p5, p1, Landroidx/constraintlayout/motion/utils/ViewState;->left:I
 
@@ -4740,12 +4764,14 @@
 
     add-int/2addr p5, v1
 
+    .line 11
     iget v1, p1, Landroidx/constraintlayout/motion/utils/ViewState;->top:I
 
     iget v3, p1, Landroidx/constraintlayout/motion/utils/ViewState;->bottom:I
 
     add-int/2addr v1, v3
 
+    .line 12
     invoke-virtual {p1}, Landroidx/constraintlayout/motion/utils/ViewState;->width()I
 
     move-result v3
@@ -4756,6 +4782,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
+    .line 13
     invoke-virtual {p1}, Landroidx/constraintlayout/motion/utils/ViewState;->height()I
 
     move-result v1
@@ -4768,6 +4795,7 @@
 
     iput p4, v0, Landroid/graphics/Rect;->top:I
 
+    .line 14
     iget p4, v0, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p1}, Landroidx/constraintlayout/motion/utils/ViewState;->width()I
@@ -4778,6 +4806,7 @@
 
     iput p4, v0, Landroid/graphics/Rect;->right:I
 
+    .line 15
     iget p4, v0, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p1}, Landroidx/constraintlayout/motion/utils/ViewState;->height()I
@@ -4788,6 +4817,7 @@
 
     iput p4, v0, Landroid/graphics/Rect;->bottom:I
 
+    .line 16
     :goto_0
     iget-object p4, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mStartMotionPath:Landroidx/constraintlayout/motion/widget/MotionPaths;
 
@@ -4813,6 +4843,7 @@
 
     invoke-virtual {p4, p5, v1, v2, v3}, Landroidx/constraintlayout/motion/widget/MotionPaths;->setBounds(FFFF)V
 
+    .line 17
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionController;->mStartPoint:Landroidx/constraintlayout/motion/widget/MotionConstrainedPoint;
 
     iget p1, p1, Landroidx/constraintlayout/motion/utils/ViewState;->rotation:F

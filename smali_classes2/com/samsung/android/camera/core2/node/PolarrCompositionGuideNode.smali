@@ -523,6 +523,7 @@
 .method public bridge synthetic processBackgroundPreviewInternal(Ljava/lang/Object;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
     .locals 0
 
+    .line 1
     check-cast p1, [B
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->processBackgroundPreviewInternal([BLcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
@@ -535,6 +536,7 @@
 
     move-object/from16 v0, p0
 
+    .line 2
     :try_start_0
     invoke-virtual/range {p2 .. p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->r()Lcom/samsung/android/camera/core2/util/StrideInfo;
 
@@ -542,6 +544,7 @@
 
     iput-object v1, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mPreviewStrideInfo:Lcom/samsung/android/camera/core2/util/StrideInfo;
 
+    .line 3
     sget-object v1, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->POLARR_COMPOSITION_GUIDE_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const-string v2, "processBackgroundPreview - PreviewSize(%s), StrideInfo(%s)"
@@ -572,12 +575,14 @@
 
     invoke-static {v1, v2, v4}, Lcom/samsung/android/camera/core2/util/CLog;->s(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     iget-object v1, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mSensorInfoActiveArraySize:Landroid/graphics/Rect;
 
     const/4 v2, 0x0
 
     if-nez v1, :cond_1
 
+    .line 5
     iget-object v1, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mCamCapability:Lcom/samsung/android/camera/core2/CamCapability;
 
     invoke-virtual {v1}, Lcom/samsung/android/camera/core2/CamCapability;->H0()Ljava/lang/Boolean;
@@ -590,6 +595,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 6
     iget-object v1, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mLatestCaptureResult:Landroid/hardware/camera2/CaptureResult;
 
     sget-object v4, Lcom/samsung/android/camera/core2/local/vendorkey/SemCaptureResult;->r2:Landroid/hardware/camera2/CaptureResult$Key;
@@ -605,6 +611,7 @@
     :cond_0
     move-object v1, v2
 
+    .line 7
     :goto_0
     iget-object v4, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mCamCapability:Lcom/samsung/android/camera/core2/CamCapability;
 
@@ -614,6 +621,7 @@
 
     iput-object v1, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mSensorInfoActiveArraySize:Landroid/graphics/Rect;
 
+    .line 8
     :cond_1
     new-instance v1, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;
 
@@ -635,6 +643,7 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
+    .line 9
     invoke-static {v4, v5}, Lcom/samsung/android/camera/core2/local/vendorkey/SemCaptureResult;->a(Landroid/hardware/camera2/CaptureResult;Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v4
@@ -647,6 +656,7 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
+    .line 10
     invoke-static {v4, v5}, Lcom/samsung/android/camera/core2/local/vendorkey/SemCaptureResult;->a(Landroid/hardware/camera2/CaptureResult;Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v4
@@ -659,6 +669,7 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
+    .line 11
     invoke-static {v4, v5}, Lcom/samsung/android/camera/core2/local/vendorkey/SemCaptureResult;->a(Landroid/hardware/camera2/CaptureResult;Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v4
@@ -671,6 +682,7 @@
 
     sget-object v5, Lcom/samsung/android/camera/core2/local/vendorkey/SemCaptureResult;->x:Landroid/hardware/camera2/CaptureResult$Key;
 
+    .line 12
     invoke-static {v4, v5}, Lcom/samsung/android/camera/core2/local/vendorkey/SemCaptureResult;->a(Landroid/hardware/camera2/CaptureResult;Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v4
@@ -681,6 +693,7 @@
 
     iget v4, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mEngineMode:I
 
+    .line 13
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v15
@@ -689,52 +702,61 @@
 
     invoke-direct/range {v8 .. v15}, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;-><init>([Landroid/hardware/camera2/params/Face;Landroid/graphics/Rect;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
 
+    .line 14
     new-instance v4, Lco/polarr/mgcsc/entities/ImageParam;
 
     invoke-direct {v4}, Lco/polarr/mgcsc/entities/ImageParam;-><init>()V
 
+    .line 15
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;->f(Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;)[Landroid/hardware/camera2/params/Face;
 
     move-result-object v5
 
     iput-object v5, v4, Lco/polarr/mgcsc/entities/ImageParam;->detFaces:[Landroid/hardware/camera2/params/Face;
 
+    .line 16
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;->g(Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;)Landroid/graphics/Rect;
 
     move-result-object v5
 
     iput-object v5, v4, Lco/polarr/mgcsc/entities/ImageParam;->cPixelRect:Landroid/graphics/Rect;
 
+    .line 17
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;->b(Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;)I
 
     move-result v5
 
     iput v5, v4, Lco/polarr/mgcsc/entities/ImageParam;->afMode:I
 
+    .line 18
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;->c(Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;)I
 
     move-result v5
 
     iput v5, v4, Lco/polarr/mgcsc/entities/ImageParam;->afState:I
 
+    .line 19
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;->a(Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;)I
 
     move-result v5
 
     iput v5, v4, Lco/polarr/mgcsc/entities/ImageParam;->aeState:I
 
+    .line 20
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;->d(Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;)I
 
     move-result v5
 
     iput v5, v4, Lco/polarr/mgcsc/entities/ImageParam;->bvValue:I
 
+    .line 21
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;->e(Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$CompositionGuideParam;)I
 
     move-result v5
 
     iput v5, v4, Lco/polarr/mgcsc/entities/ImageParam;->mode:I
 
+    .line 22
     iget-boolean v5, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mIsNativeInitialized:Z
 
     if-eqz v5, :cond_3
@@ -759,10 +781,12 @@
 
     if-lez v1, :cond_3
 
+    .line 23
     iget-object v1, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mFaceInfo:Lcom/samsung/android/camera/core2/container/FaceInfo;
 
     iput v6, v1, Lcom/samsung/android/camera/core2/container/FaceInfo;->a:I
 
+    .line 24
     new-instance v1, Lcom/samsung/android/camera/core2/util/BufferInfo;
 
     iget-object v5, v0, Lcom/samsung/android/camera/core2/node/BackgroundPreviewNodeBase;->mPreviewSize:Landroid/util/Size;
@@ -771,6 +795,7 @@
 
     invoke-direct {v1, v2, v5, v8}, Lcom/samsung/android/camera/core2/util/BufferInfo;-><init>(Lcom/samsung/android/camera/core2/util/DirectBuffer;Landroid/util/Size;Lcom/samsung/android/camera/core2/util/StrideInfo;)V
 
+    .line 25
     sget-object v2, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->NATIVE_COMMAND_GET_FACE_LANDMARK:Lcom/samsung/android/camera/core2/node/NativeNode$Command;
 
     const/4 v5, 0x3
@@ -791,6 +816,7 @@
 
     invoke-virtual {v0, v2, v5}, Lcom/samsung/android/camera/core2/node/Node;->nativeCall(Lcom/samsung/android/camera/core2/node/NativeNode$Command;[Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 26
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -799,6 +825,7 @@
 
     move v1, v6
 
+    .line 27
     :goto_1
     iget-object v2, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mFaceInfo:Lcom/samsung/android/camera/core2/container/FaceInfo;
 
@@ -806,10 +833,12 @@
 
     if-ge v1, v2, :cond_3
 
+    .line 28
     new-instance v2, Lco/polarr/mgcsc/entities/FaceItem;
 
     invoke-direct {v2}, Lco/polarr/mgcsc/entities/FaceItem;-><init>()V
 
+    .line 29
     new-instance v3, Landroid/graphics/Rect;
 
     iget-object v5, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mFaceInfo:Lcom/samsung/android/camera/core2/container/FaceInfo;
@@ -822,6 +851,7 @@
 
     iput-object v3, v2, Lco/polarr/mgcsc/entities/FaceItem;->roi:Landroid/graphics/Rect;
 
+    .line 30
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
@@ -835,6 +865,7 @@
 
     if-ge v3, v5, :cond_2
 
+    .line 31
     iget-object v5, v2, Lco/polarr/mgcsc/entities/FaceItem;->lmFaces:Ljava/util/List;
 
     new-instance v7, Landroid/graphics/Point;
@@ -855,6 +886,7 @@
 
     goto :goto_2
 
+    .line 32
     :cond_2
     iget-object v3, v4, Lco/polarr/mgcsc/entities/ImageParam;->faces:Ljava/util/List;
 
@@ -864,6 +896,7 @@
 
     goto :goto_1
 
+    .line 33
     :cond_3
     iget-object v1, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mPreviewStrideInfo:Lcom/samsung/android/camera/core2/util/StrideInfo;
 
@@ -881,6 +914,7 @@
 
     iget-object v1, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mPreviewStrideInfo:Lcom/samsung/android/camera/core2/util/StrideInfo;
 
+    .line 34
     invoke-virtual {v1}, Lcom/samsung/android/camera/core2/util/StrideInfo;->getHeightSlice()I
 
     move-result v1
@@ -895,17 +929,20 @@
 
     goto :goto_3
 
+    .line 35
     :cond_4
     iget-object v1, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->polarrMGCInterface:Lco/polarr/mgcsc/apis/PolarrMGCInterface;
 
     iget-object v2, v0, Lcom/samsung/android/camera/core2/node/BackgroundPreviewNodeBase;->mPreviewSize:Landroid/util/Size;
 
+    .line 36
     invoke-virtual {v2}, Landroid/util/Size;->getWidth()I
 
     move-result v18
 
     iget-object v2, v0, Lcom/samsung/android/camera/core2/node/BackgroundPreviewNodeBase;->mPreviewSize:Landroid/util/Size;
 
+    .line 37
     invoke-virtual {v2}, Landroid/util/Size;->getHeight()I
 
     move-result v19
@@ -924,36 +961,42 @@
 
     move-object/from16 v22, v4
 
+    .line 38
     invoke-interface/range {v16 .. v22}, Lco/polarr/mgcsc/apis/PolarrMGCInterface;->processing([BIIIZLco/polarr/mgcsc/entities/ImageParam;)Lco/polarr/mgcsc/entities/MovementSuggestion;
 
     move-result-object v1
 
     goto :goto_4
 
+    .line 39
     :cond_5
     :goto_3
     iget-object v1, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->polarrMGCInterface:Lco/polarr/mgcsc/apis/PolarrMGCInterface;
 
     iget-object v2, v0, Lcom/samsung/android/camera/core2/node/BackgroundPreviewNodeBase;->mPreviewSize:Landroid/util/Size;
 
+    .line 40
     invoke-virtual {v2}, Landroid/util/Size;->getWidth()I
 
     move-result v18
 
     iget-object v2, v0, Lcom/samsung/android/camera/core2/node/BackgroundPreviewNodeBase;->mPreviewSize:Landroid/util/Size;
 
+    .line 41
     invoke-virtual {v2}, Landroid/util/Size;->getHeight()I
 
     move-result v19
 
     iget-object v2, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mPreviewStrideInfo:Lcom/samsung/android/camera/core2/util/StrideInfo;
 
+    .line 42
     invoke-virtual {v2}, Lcom/samsung/android/camera/core2/util/StrideInfo;->getRowStride()I
 
     move-result v20
 
     iget-object v2, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mPreviewStrideInfo:Lcom/samsung/android/camera/core2/util/StrideInfo;
 
+    .line 43
     invoke-virtual {v2}, Lcom/samsung/android/camera/core2/util/StrideInfo;->getHeightSlice()I
 
     move-result v21
@@ -972,10 +1015,12 @@
 
     move-object/from16 v24, v4
 
+    .line 44
     invoke-interface/range {v16 .. v24}, Lco/polarr/mgcsc/apis/PolarrMGCInterface;->processing([BIIIIIZLco/polarr/mgcsc/entities/ImageParam;)Lco/polarr/mgcsc/entities/MovementSuggestion;
 
     move-result-object v1
 
+    .line 45
     :goto_4
     iget-object v2, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mNodeCallback:Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$NodeCallback;
 
@@ -989,6 +1034,7 @@
 
     invoke-interface {v2, v3, v4, v5, v6}, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode$NodeCallback;->a(FFFI)V
 
+    .line 46
     iget v1, v1, Lco/polarr/mgcsc/entities/MovementSuggestion;->status:I
 
     iput v1, v0, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->mEngineStatus:I
@@ -1000,6 +1046,7 @@
     :catch_0
     move-exception v0
 
+    .line 47
     sget-object v1, Lcom/samsung/android/camera/core2/node/PolarrCompositionGuideNode;->POLARR_COMPOSITION_GUIDE_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance v2, Ljava/lang/StringBuilder;

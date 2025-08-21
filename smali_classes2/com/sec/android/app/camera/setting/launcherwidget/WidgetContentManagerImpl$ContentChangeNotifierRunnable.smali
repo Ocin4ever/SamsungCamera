@@ -31,6 +31,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +40,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/setting/launcherwidget/b;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/sec/android/app/camera/setting/launcherwidget/WidgetContentManagerImpl$ContentChangeNotifierRunnable;-><init>()V
 
     return-void

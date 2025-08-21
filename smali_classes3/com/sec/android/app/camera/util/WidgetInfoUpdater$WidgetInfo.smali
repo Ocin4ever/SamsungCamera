@@ -66,6 +66,7 @@
 .method public get(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
     .locals 2
 
+    .line 8
     sget-object v0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$1;->$SwitchMap$com$sec$android$app$camera$interfaces$CameraSettings$Key:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -90,10 +91,12 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 9
     iget p0, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mStorage:I
 
     return p0
 
+    .line 10
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -113,22 +116,26 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 11
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw p0
 
+    .line 12
     :cond_1
     iget p0, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mStartingMode:I
 
     return p0
 
+    .line 13
     :cond_2
     iget p0, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mChangeBackgroundImage:I
 
     return p0
 
+    .line 14
     :cond_3
     iget p0, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mCameraFacing:I
 
@@ -138,6 +145,7 @@
 .method public get(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -215,6 +223,7 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
+    .line 2
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -233,27 +242,32 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw p0
 
+    .line 4
     :pswitch_0
     iget-object p0, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mSaveTo:Ljava/lang/String;
 
     return-object p0
 
+    .line 5
     :pswitch_1
     iget-object p0, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mBackgroundSelectedImageUri:Ljava/lang/String;
 
     return-object p0
 
+    .line 6
     :pswitch_2
     iget-object p0, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mBackgroundRecentImageUri:Ljava/lang/String;
 
     return-object p0
 
+    .line 7
     :pswitch_3
     iget-object p0, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mCameraTitle:Ljava/lang/String;
 
@@ -409,6 +423,7 @@
 .method public update(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;I)V
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$1;->$SwitchMap$com$sec$android$app$camera$interfaces$CameraSettings$Key:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -433,10 +448,12 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     iput p2, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mStorage:I
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -456,22 +473,26 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw p0
 
+    .line 5
     :cond_1
     iput p2, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mStartingMode:I
 
     goto :goto_0
 
+    .line 6
     :cond_2
     iput p2, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mChangeBackgroundImage:I
 
     goto :goto_0
 
+    .line 7
     :cond_3
     iput p2, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mCameraFacing:I
 
@@ -482,6 +503,7 @@
 .method public update(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 8
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -559,6 +581,7 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
+    .line 9
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -577,27 +600,32 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 10
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw p0
 
+    .line 11
     :pswitch_0
     iput-object p2, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mSaveTo:Ljava/lang/String;
 
     goto :goto_1
 
+    .line 12
     :pswitch_1
     iput-object p2, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mBackgroundSelectedImageUri:Ljava/lang/String;
 
     goto :goto_1
 
+    .line 13
     :pswitch_2
     iput-object p2, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mBackgroundRecentImageUri:Ljava/lang/String;
 
     goto :goto_1
 
+    .line 14
     :pswitch_3
     iput-object p2, p0, Lcom/sec/android/app/camera/util/WidgetInfoUpdater$WidgetInfo;->mCameraTitle:Ljava/lang/String;
 

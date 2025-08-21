@@ -65,6 +65,7 @@
 
     if-gt p1, v0, :cond_0
 
+    .line 4
     sget-object v0, Lg/s;->a:Lg/s;
 
     goto :goto_0
@@ -75,8 +76,10 @@
     :goto_0
     invoke-direct {p0, v0}, Lg/r;-><init>(Lg/s;)V
 
+    .line 5
     iput p1, p0, Lg/o;->f:I
 
+    .line 6
     invoke-static {p1}, Lg/p;->m(I)Lg/p;
 
     move-result-object p1
@@ -89,16 +92,19 @@
 .method public constructor <init>(Lg/p;)V
     .locals 1
 
+    .line 1
     sget-object v0, Lg/s;->a:Lg/s;
 
     invoke-direct {p0, v0}, Lg/r;-><init>(Lg/s;)V
 
+    .line 2
     invoke-virtual {p1}, Lg/p;->a()I
 
     move-result v0
 
     iput v0, p0, Lg/o;->f:I
 
+    .line 3
     iput-object p1, p0, Lg/o;->e:Lg/p;
 
     return-void

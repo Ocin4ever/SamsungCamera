@@ -39,6 +39,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/AbsActionBarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -49,6 +50,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/AbsActionBarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -57,18 +59,22 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 2
 
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 4
     new-instance p2, Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;
 
     invoke-direct {p2, p0}, Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;-><init>(Landroidx/appcompat/widget/AbsActionBarView;)V
 
     iput-object p2, p0, Landroidx/appcompat/widget/AbsActionBarView;->mVisAnimListener:Landroidx/appcompat/widget/AbsActionBarView$VisibilityAnimListener;
 
+    .line 5
     new-instance p2, Landroid/util/TypedValue;
 
     invoke-direct {p2}, Landroid/util/TypedValue;-><init>()V
 
+    .line 6
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p3
@@ -87,6 +93,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 7
     new-instance p3, Landroid/view/ContextThemeWrapper;
 
     iget p2, p2, Landroid/util/TypedValue;->resourceId:I
@@ -97,6 +104,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     iput-object p1, p0, Landroidx/appcompat/widget/AbsActionBarView;->mPopupContext:Landroid/content/Context;
 

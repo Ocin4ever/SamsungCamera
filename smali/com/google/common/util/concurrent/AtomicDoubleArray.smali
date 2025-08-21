@@ -23,8 +23,10 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLongArray;
 
     invoke-direct {v0, p1}, Ljava/util/concurrent/atomic/AtomicLongArray;-><init>(I)V
@@ -37,10 +39,13 @@
 .method public constructor <init>([D)V
     .locals 5
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     array-length v0, p1
 
+    .line 5
     new-array v1, v0, [J
 
     const/4 v2, 0x0
@@ -48,6 +53,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 6
     aget-wide v3, p1, v2
 
     invoke-static {v3, v4}, Ljava/lang/Double;->doubleToRawLongBits(D)J
@@ -60,6 +66,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     new-instance p1, Ljava/util/concurrent/atomic/AtomicLongArray;
 

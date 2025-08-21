@@ -28,6 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,14 +37,19 @@
 .method public constructor <init>(IIIJ)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput p1, p0, Lcom/samsung/android/camera/core2/node/allInFocus/arcsoft/AllInFocusNodeBase$AllInFocusCaptureParam;->jpegOrientation:I
 
+    .line 4
     iput p2, p0, Lcom/samsung/android/camera/core2/node/allInFocus/arcsoft/AllInFocusNodeBase$AllInFocusCaptureParam;->centerDepth:I
 
+    .line 5
     iput p3, p0, Lcom/samsung/android/camera/core2/node/allInFocus/arcsoft/AllInFocusNodeBase$AllInFocusCaptureParam;->planeAngle:I
 
+    .line 6
     iput-wide p4, p0, Lcom/samsung/android/camera/core2/node/allInFocus/arcsoft/AllInFocusNodeBase$AllInFocusCaptureParam;->firstTimeStamp:J
 
     return-void

@@ -53,6 +53,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, v0, v0}, Lg0/a;-><init>(ILandroid/app/PendingIntent;Ljava/lang/String;)V
 
     return-void
@@ -61,6 +62,7 @@
 .method public constructor <init>(IILandroid/app/PendingIntent;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lk0/a;-><init>()V
 
     iput p1, p0, Lg0/a;->a:I
@@ -79,6 +81,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-direct {p0, p1, p2, v0}, Lg0/a;-><init>(ILandroid/app/PendingIntent;Ljava/lang/String;)V
 
     return-void
@@ -89,6 +92,7 @@
 
     const/4 v0, 0x1
 
+    .line 4
     invoke-direct {p0, v0, p1, p2, p3}, Lg0/a;-><init>(IILandroid/app/PendingIntent;Ljava/lang/String;)V
 
     return-void

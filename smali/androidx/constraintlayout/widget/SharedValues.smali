@@ -238,6 +238,7 @@
 .method public removeListener(ILandroidx/constraintlayout/widget/SharedValues$SharedValuesListener;)V
     .locals 3
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/widget/SharedValues;->mValuesListeners:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -254,11 +255,13 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -277,6 +280,7 @@
 
     check-cast v1, Ljava/lang/ref/WeakReference;
 
+    .line 4
     invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v2
@@ -287,11 +291,13 @@
 
     if-ne v2, p2, :cond_1
 
+    .line 5
     :cond_2
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 6
     :cond_3
     invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
 
@@ -301,6 +307,7 @@
 .method public removeListener(Landroidx/constraintlayout/widget/SharedValues$SharedValuesListener;)V
     .locals 2
 
+    .line 7
     iget-object v0, p0, Landroidx/constraintlayout/widget/SharedValues;->mValuesListeners:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -324,6 +331,7 @@
 
     check-cast v1, Ljava/lang/Integer;
 
+    .line 8
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1

@@ -54,6 +54,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl$initEntityCapsule$1$onClick$1;->invoke()V
 
     sget-object p0, Lf6/p;->a:Lf6/p;
@@ -64,6 +65,7 @@
 .method public final invoke()V
     .locals 3
 
+    .line 2
     iget-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl$initEntityCapsule$1$onClick$1;->$capsuleType:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -84,6 +86,7 @@
 
     invoke-static {v1, v0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/logger/LibLogger;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     iget-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl$initEntityCapsule$1$onClick$1;->this$0:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl;
 
     invoke-static {v0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl;->access$getCapsuleListener$p(Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl;)Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelper$CapsuleListener;
@@ -96,6 +99,7 @@
 
     invoke-interface {v0, v2}, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelper$CapsuleListener;->onClick(Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;)V
 
+    .line 4
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl$initEntityCapsule$1$onClick$1;->$entity:Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$EntityInfo;
@@ -104,6 +108,7 @@
 
     move-result-object p0
 
+    .line 5
     move-object v0, p0
 
     check-cast v0, Ljava/util/Collection;
@@ -120,6 +125,7 @@
 
     const/4 v0, 0x0
 
+    .line 6
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -134,12 +140,15 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 7
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     move-result-object v0
 
+    .line 8
     invoke-virtual {v0, v2}, Landroid/app/ActivityOptions;->setPendingIntentBackgroundActivityLaunchAllowed(Z)V
 
+    .line 9
     invoke-virtual {v0}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object v0
@@ -153,6 +162,7 @@
     :catch_0
     const-string p0, "error in sending intent"
 
+    .line 10
     invoke-static {v1, p0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/logger/LibLogger;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1

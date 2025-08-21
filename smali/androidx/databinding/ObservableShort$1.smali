@@ -40,6 +40,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroidx/databinding/ObservableShort;
     .locals 0
 
+    .line 2
     new-instance p0, Landroidx/databinding/ObservableShort;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -56,6 +57,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/databinding/ObservableShort$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/databinding/ObservableShort;
 
     move-result-object p0
@@ -66,6 +68,7 @@
 .method public newArray(I)[Landroidx/databinding/ObservableShort;
     .locals 0
 
+    .line 2
     new-array p0, p1, [Landroidx/databinding/ObservableShort;
 
     return-object p0
@@ -74,6 +77,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/databinding/ObservableShort$1;->newArray(I)[Landroidx/databinding/ObservableShort;
 
     move-result-object p0

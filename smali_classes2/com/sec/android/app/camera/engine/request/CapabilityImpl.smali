@@ -1593,6 +1593,7 @@
 .method public getSensorInfoActiveArraySize()Landroid/graphics/Rect;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/request/CapabilityImpl;->mCamCapability:Lcom/samsung/android/camera/core2/CamCapability;
 
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/CamCapability;->j2()Landroid/graphics/Rect;
@@ -1605,6 +1606,7 @@
 .method public getSensorInfoActiveArraySize(Z)Landroid/graphics/Rect;
     .locals 1
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/request/CapabilityImpl;->mCamCapability:Lcom/samsung/android/camera/core2/CamCapability;
 
     invoke-virtual {v0}, Lcom/samsung/android/camera/core2/CamCapability;->H0()Ljava/lang/Boolean;
@@ -1631,6 +1633,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/request/CapabilityImpl;->mCamCapability:Lcom/samsung/android/camera/core2/CamCapability;
 
@@ -1640,6 +1643,7 @@
 
     return-object p0
 
+    .line 4
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/request/CapabilityImpl;->mCamCapability:Lcom/samsung/android/camera/core2/CamCapability;

@@ -66,6 +66,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
     return-void
@@ -74,6 +75,7 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Landroidx/collection/SimpleArrayMap;-><init>(I)V
 
     return-void
@@ -82,6 +84,7 @@
 .method public constructor <init>(Landroidx/collection/SimpleArrayMap;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/collection/SimpleArrayMap;-><init>(Landroidx/collection/SimpleArrayMap;)V
 
     return-void

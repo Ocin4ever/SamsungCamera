@@ -42,6 +42,7 @@
 .method public get(Landroidx/appcompat/widget/SeslProgressBar;)Ljava/lang/Float;
     .locals 0
 
+    .line 2
     invoke-static {p1}, Landroidx/appcompat/widget/SeslProgressBar;->access$800(Landroidx/appcompat/widget/SeslProgressBar;)F
 
     move-result p0
@@ -56,6 +57,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/appcompat/widget/SeslProgressBar;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/SeslProgressBar$1;->get(Landroidx/appcompat/widget/SeslProgressBar;)Ljava/lang/Float;
@@ -70,8 +72,10 @@
 
     const p0, 0x102000d
 
+    .line 2
     invoke-static {p1, p0, p2}, Landroidx/appcompat/widget/SeslProgressBar;->access$700(Landroidx/appcompat/widget/SeslProgressBar;IF)V
 
+    .line 3
     invoke-static {p1, p2}, Landroidx/appcompat/widget/SeslProgressBar;->access$802(Landroidx/appcompat/widget/SeslProgressBar;F)F
 
     return-void
@@ -80,6 +84,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/appcompat/widget/SeslProgressBar;
 
     invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/SeslProgressBar$1;->setValue(Landroidx/appcompat/widget/SeslProgressBar;F)V

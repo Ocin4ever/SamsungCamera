@@ -29,6 +29,7 @@
 .method public static getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;
     .locals 3
 
+    .line 1
     invoke-static {p0}, Landroidx/core/app/NavUtils$Api16Impl;->getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;
 
     move-result-object v0
@@ -37,6 +38,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     invoke-static {p0}, Landroidx/core/app/NavUtils;->getParentActivityName(Landroid/app/Activity;)Ljava/lang/String;
 
@@ -48,11 +50,13 @@
 
     return-object v1
 
+    .line 3
     :cond_1
     new-instance v2, Landroid/content/ComponentName;
 
     invoke-direct {v2, p0, v0}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
+    .line 4
     :try_start_0
     invoke-static {p0, v2}, Landroidx/core/app/NavUtils;->getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
 
@@ -60,12 +64,14 @@
 
     if-nez p0, :cond_2
 
+    .line 5
     invoke-static {v2}, Landroid/content/Intent;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 6
     :cond_2
     new-instance p0, Landroid/content/Intent;
 
@@ -80,6 +86,7 @@
     :goto_0
     return-object p0
 
+    .line 7
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -109,6 +116,7 @@
 .method public static getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
     .locals 2
 
+    .line 13
     invoke-static {p0, p1}, Landroidx/core/app/NavUtils;->getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object v0
@@ -119,27 +127,32 @@
 
     return-object p0
 
+    .line 14
     :cond_0
     new-instance v1, Landroid/content/ComponentName;
 
+    .line 15
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-direct {v1, p1, v0}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 16
     invoke-static {p0, v1}, Landroidx/core/app/NavUtils;->getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object p0
 
     if-nez p0, :cond_1
 
+    .line 17
     invoke-static {v1}, Landroid/content/Intent;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 18
     :cond_1
     new-instance p0, Landroid/content/Intent;
 
@@ -165,6 +178,7 @@
         }
     .end annotation
 
+    .line 8
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-direct {v0, p0, p1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
@@ -179,23 +193,27 @@
 
     return-object p0
 
+    .line 9
     :cond_0
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-direct {v0, p0, p1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
+    .line 10
     invoke-static {p0, v0}, Landroidx/core/app/NavUtils;->getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object p0
 
     if-nez p0, :cond_1
 
+    .line 11
     invoke-static {v0}, Landroid/content/Intent;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 12
     :cond_1
     new-instance p0, Landroid/content/Intent;
 
@@ -212,6 +230,7 @@
 .method public static getParentActivityName(Landroid/app/Activity;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Landroid/app/Activity;->getComponentName()Landroid/content/ComponentName;
 
@@ -228,6 +247,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
@@ -238,22 +258,26 @@
 .method public static getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
     .locals 2
 
+    .line 3
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     const v1, 0x100c0280
 
+    .line 4
     invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->getActivityInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;
 
     move-result-object p1
 
+    .line 5
     iget-object v0, p1, Landroid/content/pm/ActivityInfo;->parentActivityName:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
+    .line 6
     :cond_0
     iget-object p1, p1, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
@@ -266,6 +290,7 @@
     :cond_1
     const-string v1, "android.support.PARENT_ACTIVITY"
 
+    .line 7
     invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -277,6 +302,7 @@
     :cond_2
     const/4 v0, 0x0
 
+    .line 8
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -285,6 +311,7 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 9
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

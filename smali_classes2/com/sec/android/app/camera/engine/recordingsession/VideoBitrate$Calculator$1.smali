@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, p2, v0}, Lcom/sec/android/app/camera/engine/recordingsession/VideoBitrate$Calculator;-><init>(Ljava/lang/String;ILcom/sec/android/app/camera/engine/recordingsession/s0;)V
 
     return-void
@@ -28,6 +29,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;ILcom/sec/android/app/camera/engine/recordingsession/r0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/engine/recordingsession/VideoBitrate$Calculator$1;-><init>(Ljava/lang/String;I)V
 
     return-void

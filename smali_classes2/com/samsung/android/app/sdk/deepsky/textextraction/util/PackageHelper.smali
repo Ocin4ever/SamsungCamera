@@ -41,12 +41,14 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const/16 p1, 0x80
 
+    .line 2
     :try_start_0
     invoke-virtual {p0, p2, p1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
     :try_end_0
@@ -56,6 +58,7 @@
 
     return p0
 
+    .line 3
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -97,15 +100,18 @@
 
     const/4 p0, 0x0
 
+    .line 4
     :try_start_0
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-direct {v0, p2, p3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
 
+    .line 6
     invoke-virtual {p1, v0, p0}, Landroid/content/pm/PackageManager;->getActivityInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -114,6 +120,7 @@
 
     goto :goto_0
 
+    .line 7
     :catch_0
     new-instance p1, Ljava/lang/StringBuilder;
 

@@ -172,10 +172,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/google/ar/core/Session$c;->b:I
 
+    .line 3
     iput-object p4, p0, Lcom/google/ar/core/Session$c;->h:Ljava/lang/Class;
 
     return-void
@@ -184,6 +187,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;IILjava/lang/Class;B)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/ar/core/Session$c;-><init>(Ljava/lang/String;IILjava/lang/Class;)V
 
     return-void
@@ -202,6 +206,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/ar/core/Session$c;->values()[Lcom/google/ar/core/Session$c;
 
     move-result-object v0
@@ -215,6 +220,7 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     iget-object v4, v3, Lcom/google/ar/core/Session$c;->h:Ljava/lang/Class;
 
     if-eqz v4, :cond_0
@@ -232,6 +238,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     sget-object p0, Lcom/google/ar/core/Session$c;->a:Lcom/google/ar/core/Session$c;
 

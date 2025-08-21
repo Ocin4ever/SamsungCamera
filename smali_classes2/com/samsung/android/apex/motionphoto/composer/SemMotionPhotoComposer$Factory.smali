@@ -26,10 +26,12 @@
 .method public static create(Landroid/content/Context;)Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-static {v0}, Lcom/samsung/android/apex/motionphoto/common/SemApexUtils;->isValidLocalClient(Ljava/lang/String;)Z
 
     move-result v1
@@ -38,12 +40,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     new-instance v0, Lcom/samsung/android/apex/motionphoto/composer/LocalComposer;
 
     invoke-direct {v0, p0, v2}, Lcom/samsung/android/apex/motionphoto/composer/LocalComposer;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     return-object v0
 
+    .line 4
     :cond_0
     invoke-static {v0}, Lcom/samsung/android/apex/motionphoto/common/SemApexUtils;->isValidRemoteClient(Ljava/lang/String;)Z
 
@@ -51,12 +55,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     new-instance v0, Lcom/samsung/android/apex/motionphoto/composer/RemoteComposer;
 
     invoke-direct {v0, p0, v2}, Lcom/samsung/android/apex/motionphoto/composer/RemoteComposer;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     return-object v0
 
+    .line 6
     :cond_1
     sget-object p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->TAG:Ljava/lang/String;
 
@@ -82,22 +88,26 @@
 .method public static create(Landroid/content/Context;Ljava/lang/String;)Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;
     .locals 2
 
+    .line 7
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 8
     invoke-static {v0}, Lcom/samsung/android/apex/motionphoto/common/SemApexUtils;->isValidLocalClient(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 9
     new-instance v0, Lcom/samsung/android/apex/motionphoto/composer/LocalComposer;
 
     invoke-direct {v0, p0, p1}, Lcom/samsung/android/apex/motionphoto/composer/LocalComposer;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     return-object v0
 
+    .line 10
     :cond_0
     invoke-static {v0}, Lcom/samsung/android/apex/motionphoto/common/SemApexUtils;->isValidRemoteClient(Ljava/lang/String;)Z
 
@@ -105,12 +115,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 11
     new-instance v0, Lcom/samsung/android/apex/motionphoto/composer/RemoteComposer;
 
     invoke-direct {v0, p0, p1}, Lcom/samsung/android/apex/motionphoto/composer/RemoteComposer;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     return-object v0
 
+    .line 12
     :cond_1
     sget-object p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->TAG:Ljava/lang/String;
 

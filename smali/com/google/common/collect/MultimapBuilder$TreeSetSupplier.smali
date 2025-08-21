@@ -71,6 +71,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/MultimapBuilder$TreeSetSupplier;->get()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -88,6 +89,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Ljava/util/TreeSet;
 
     iget-object p0, p0, Lcom/google/common/collect/MultimapBuilder$TreeSetSupplier;->comparator:Ljava/util/Comparator;

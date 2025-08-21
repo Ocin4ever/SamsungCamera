@@ -264,6 +264,7 @@
 .method public static getLocusId(Landroid/content/pm/ShortcutInfo;)Landroidx/core/content/LocusIdCompat;
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Landroid/content/pm/ShortcutInfo;->getLocusId()Landroid/content/LocusId;
 
     move-result-object v0
@@ -274,6 +275,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/content/pm/ShortcutInfo;->getLocusId()Landroid/content/LocusId;
 
@@ -605,6 +607,7 @@
 .method public getLocusId()Landroidx/core/content/LocusIdCompat;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/content/pm/ShortcutInfoCompat;->mLocusId:Landroidx/core/content/LocusIdCompat;
 
     return-object p0

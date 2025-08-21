@@ -56,14 +56,17 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/fragment/app/BackStackState;->mFragments:Ljava/util/List;
 
+    .line 6
     sget-object v0, Landroidx/fragment/app/BackStackRecordState;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
@@ -89,10 +92,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/fragment/app/BackStackState;->mFragments:Ljava/util/List;
 
+    .line 3
     iput-object p2, p0, Landroidx/fragment/app/BackStackState;->mTransactions:Ljava/util/List;
 
     return-void

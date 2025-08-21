@@ -229,6 +229,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$AsMapView;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Maps$AsMapView;-><init>(Ljava/util/Set;Lcom/google/common/base/Function;)V
@@ -254,6 +255,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Lcom/google/common/collect/Maps$NavigableAsMapView;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Maps$NavigableAsMapView;-><init>(Ljava/util/NavigableSet;Lcom/google/common/base/Function;)V
@@ -279,6 +281,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/Maps$SortedAsMapView;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Maps$SortedAsMapView;-><init>(Ljava/util/SortedSet;Lcom/google/common/base/Function;)V
@@ -506,18 +509,22 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Ljava/util/SortedMap;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Ljava/util/SortedMap;
 
+    .line 3
     invoke-static {p0, p1}, Lcom/google/common/collect/Maps;->difference(Ljava/util/SortedMap;Ljava/util/Map;)Lcom/google/common/collect/SortedMapDifference;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-static {}, Lcom/google/common/base/Equivalence;->equals()Lcom/google/common/base/Equivalence;
 
@@ -550,20 +557,25 @@
         }
     .end annotation
 
+    .line 5
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     invoke-static {}, Lcom/google/common/collect/Maps;->newLinkedHashMap()Ljava/util/LinkedHashMap;
 
     move-result-object v7
 
+    .line 7
     new-instance v8, Ljava/util/LinkedHashMap;
 
     invoke-direct {v8, p1}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
 
+    .line 8
     invoke-static {}, Lcom/google/common/collect/Maps;->newLinkedHashMap()Ljava/util/LinkedHashMap;
 
     move-result-object v9
 
+    .line 9
     invoke-static {}, Lcom/google/common/collect/Maps;->newLinkedHashMap()Ljava/util/LinkedHashMap;
 
     move-result-object v10
@@ -582,8 +594,10 @@
 
     move-object v6, v10
 
+    .line 10
     invoke-static/range {v0 .. v6}, Lcom/google/common/collect/Maps;->doDifference(Ljava/util/Map;Ljava/util/Map;Lcom/google/common/base/Equivalence;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)V
 
+    .line 11
     new-instance p0, Lcom/google/common/collect/Maps$MapDifferenceImpl;
 
     invoke-direct {p0, v7, v8, v9, v10}, Lcom/google/common/collect/Maps$MapDifferenceImpl;-><init>(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)V
@@ -609,10 +623,13 @@
         }
     .end annotation
 
+    .line 12
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 13
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 14
     invoke-interface {p0}, Ljava/util/SortedMap;->comparator()Ljava/util/Comparator;
 
     move-result-object v0
@@ -621,24 +638,30 @@
 
     move-result-object v0
 
+    .line 15
     invoke-static {v0}, Lcom/google/common/collect/Maps;->newTreeMap(Ljava/util/Comparator;)Ljava/util/TreeMap;
 
     move-result-object v8
 
+    .line 16
     invoke-static {v0}, Lcom/google/common/collect/Maps;->newTreeMap(Ljava/util/Comparator;)Ljava/util/TreeMap;
 
     move-result-object v9
 
+    .line 17
     invoke-interface {v9, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
+    .line 18
     invoke-static {v0}, Lcom/google/common/collect/Maps;->newTreeMap(Ljava/util/Comparator;)Ljava/util/TreeMap;
 
     move-result-object v10
 
+    .line 19
     invoke-static {v0}, Lcom/google/common/collect/Maps;->newTreeMap(Ljava/util/Comparator;)Ljava/util/TreeMap;
 
     move-result-object v0
 
+    .line 20
     invoke-static {}, Lcom/google/common/base/Equivalence;->equals()Lcom/google/common/base/Equivalence;
 
     move-result-object v3
@@ -655,8 +678,10 @@
 
     move-object v7, v0
 
+    .line 21
     invoke-static/range {v1 .. v7}, Lcom/google/common/collect/Maps;->doDifference(Ljava/util/Map;Ljava/util/Map;Lcom/google/common/base/Equivalence;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)V
 
+    .line 22
     new-instance p0, Lcom/google/common/collect/Maps$SortedMapDifferenceImpl;
 
     invoke-direct {p0, v8, v9, v10, v0}, Lcom/google/common/collect/Maps$SortedMapDifferenceImpl;-><init>(Ljava/util/SortedMap;Ljava/util/SortedMap;Ljava/util/SortedMap;Ljava/util/SortedMap;)V
@@ -828,14 +853,18 @@
         }
     .end annotation
 
+    .line 13
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 14
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 15
     instance-of v0, p0, Lcom/google/common/collect/Maps$FilteredEntryBiMap;
 
     if-eqz v0, :cond_0
 
+    .line 16
     check-cast p0, Lcom/google/common/collect/Maps$FilteredEntryBiMap;
 
     invoke-static {p0, p1}, Lcom/google/common/collect/Maps;->filterFiltered(Lcom/google/common/collect/Maps$FilteredEntryBiMap;Lcom/google/common/base/Predicate;)Lcom/google/common/collect/BiMap;
@@ -844,6 +873,7 @@
 
     goto :goto_0
 
+    .line 17
     :cond_0
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntryBiMap;
 
@@ -875,12 +905,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     instance-of v0, p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;
 
     invoke-static {p0, p1}, Lcom/google/common/collect/Maps;->filterFiltered(Lcom/google/common/collect/Maps$AbstractFilteredMap;Lcom/google/common/base/Predicate;)Ljava/util/Map;
@@ -889,6 +922,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntryMap;
 
@@ -926,12 +960,15 @@
         }
     .end annotation
 
+    .line 9
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 10
     instance-of v0, p0, Lcom/google/common/collect/Maps$FilteredEntryNavigableMap;
 
     if-eqz v0, :cond_0
 
+    .line 11
     check-cast p0, Lcom/google/common/collect/Maps$FilteredEntryNavigableMap;
 
     invoke-static {p0, p1}, Lcom/google/common/collect/Maps;->filterFiltered(Lcom/google/common/collect/Maps$FilteredEntryNavigableMap;Lcom/google/common/base/Predicate;)Ljava/util/NavigableMap;
@@ -940,6 +977,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_0
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntryNavigableMap;
 
@@ -977,12 +1015,15 @@
         }
     .end annotation
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     instance-of v0, p0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     if-eqz v0, :cond_0
 
+    .line 7
     check-cast p0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     invoke-static {p0, p1}, Lcom/google/common/collect/Maps;->filterFiltered(Lcom/google/common/collect/Maps$FilteredEntrySortedMap;Lcom/google/common/base/Predicate;)Ljava/util/SortedMap;
@@ -991,6 +1032,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
@@ -1028,12 +1070,14 @@
         }
     .end annotation
 
+    .line 7
     iget-object v0, p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;->predicate:Lcom/google/common/base/Predicate;
 
     invoke-static {v0, p1}, Lcom/google/common/base/Predicates;->and(Lcom/google/common/base/Predicate;Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
 
+    .line 8
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntryBiMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntryBiMap;->unfiltered()Lcom/google/common/collect/BiMap;
@@ -1065,12 +1109,14 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntryMap;
 
     iget-object v1, p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;->unfiltered:Ljava/util/Map;
 
     iget-object p0, p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;->predicate:Lcom/google/common/base/Predicate;
 
+    .line 2
     invoke-static {p0, p1}, Lcom/google/common/base/Predicates;->and(Lcom/google/common/base/Predicate;Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p0
@@ -1100,6 +1146,7 @@
         }
     .end annotation
 
+    .line 5
     invoke-static {p0}, Lcom/google/common/collect/Maps$FilteredEntryNavigableMap;->access$500(Lcom/google/common/collect/Maps$FilteredEntryNavigableMap;)Lcom/google/common/base/Predicate;
 
     move-result-object v0
@@ -1108,6 +1155,7 @@
 
     move-result-object p1
 
+    .line 6
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntryNavigableMap;
 
     invoke-static {p0}, Lcom/google/common/collect/Maps$FilteredEntryNavigableMap;->access$600(Lcom/google/common/collect/Maps$FilteredEntryNavigableMap;)Ljava/util/NavigableMap;
@@ -1139,12 +1187,14 @@
         }
     .end annotation
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;->predicate:Lcom/google/common/base/Predicate;
 
     invoke-static {v0, p1}, Lcom/google/common/base/Predicates;->and(Lcom/google/common/base/Predicate;Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
 
+    .line 4
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->sortedMap()Ljava/util/SortedMap;
@@ -1174,8 +1224,10 @@
         }
     .end annotation
 
+    .line 8
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 9
     invoke-static {p1}, Lcom/google/common/collect/Maps;->keyPredicateOnEntries(Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
@@ -1205,16 +1257,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/Maps;->keyPredicateOnEntries(Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object v0
 
+    .line 3
     instance-of v1, p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;
 
     if-eqz v1, :cond_0
 
+    .line 4
     check-cast p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;
 
     invoke-static {p0, v0}, Lcom/google/common/collect/Maps;->filterFiltered(Lcom/google/common/collect/Maps$AbstractFilteredMap;Lcom/google/common/base/Predicate;)Ljava/util/Map;
@@ -1223,6 +1279,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance v1, Lcom/google/common/collect/Maps$FilteredKeyMap;
 
@@ -1258,6 +1315,7 @@
         }
     .end annotation
 
+    .line 7
     invoke-static {p1}, Lcom/google/common/collect/Maps;->keyPredicateOnEntries(Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
@@ -1287,6 +1345,7 @@
         }
     .end annotation
 
+    .line 6
     invoke-static {p1}, Lcom/google/common/collect/Maps;->keyPredicateOnEntries(Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
@@ -1316,6 +1375,7 @@
         }
     .end annotation
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/collect/Maps;->valuePredicateOnEntries(Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
@@ -1345,6 +1405,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/Maps;->valuePredicateOnEntries(Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
@@ -1374,6 +1435,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/collect/Maps;->valuePredicateOnEntries(Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
@@ -1403,6 +1465,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/Maps;->valuePredicateOnEntries(Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
@@ -1802,6 +1865,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/EnumMap;
 
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1831,6 +1895,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Ljava/util/EnumMap;
 
     invoke-direct {v0, p0}, Ljava/util/EnumMap;-><init>(Ljava/util/Map;)V
@@ -1852,6 +1917,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -1875,6 +1941,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0, p0}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
@@ -1942,6 +2009,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
@@ -1965,6 +2033,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0, p0}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
@@ -2011,6 +2080,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
@@ -2034,6 +2104,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0, p0}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
@@ -2057,6 +2128,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0, p0}, Ljava/util/TreeMap;-><init>(Ljava/util/SortedMap;)V
@@ -2612,6 +2684,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -2641,12 +2714,15 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->builder()Lcom/google/common/collect/ImmutableMap$Builder;
 
     move-result-object v0
 
+    .line 4
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2654,10 +2730,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 6
     invoke-interface {p1, v1}, Lcom/google/common/base/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -2666,6 +2744,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap$Builder;->buildKeepingLast()Lcom/google/common/collect/ImmutableMap;
 
@@ -2779,6 +2858,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$TransformedEntriesMap;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Maps$TransformedEntriesMap;-><init>(Ljava/util/Map;Lcom/google/common/collect/Maps$EntryTransformer;)V
@@ -2806,6 +2886,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Lcom/google/common/collect/Maps$TransformedEntriesNavigableMap;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Maps$TransformedEntriesNavigableMap;-><init>(Ljava/util/NavigableMap;Lcom/google/common/collect/Maps$EntryTransformer;)V
@@ -2833,6 +2914,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/Maps$TransformedEntriesSortedMap;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Maps$TransformedEntriesSortedMap;-><init>(Ljava/util/SortedMap;Lcom/google/common/collect/Maps$EntryTransformer;)V
@@ -2891,6 +2973,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/Maps;->asEntryTransformer(Lcom/google/common/base/Function;)Lcom/google/common/collect/Maps$EntryTransformer;
 
     move-result-object p1
@@ -2922,6 +3005,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/collect/Maps;->asEntryTransformer(Lcom/google/common/base/Function;)Lcom/google/common/collect/Maps$EntryTransformer;
 
     move-result-object p1
@@ -2953,6 +3037,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/Maps;->asEntryTransformer(Lcom/google/common/base/Function;)Lcom/google/common/collect/Maps$EntryTransformer;
 
     move-result-object p1
@@ -2982,6 +3067,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -3011,12 +3097,15 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->builder()Lcom/google/common/collect/ImmutableMap$Builder;
 
     move-result-object v0
 
+    .line 4
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -3024,10 +3113,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 6
     invoke-interface {p1, v1}, Lcom/google/common/base/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -3036,6 +3127,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     :try_start_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap$Builder;->buildOrThrow()Lcom/google/common/collect/ImmutableMap;
@@ -3049,8 +3141,10 @@
     :catch_0
     move-exception p0
 
+    .line 8
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
+    .line 9
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p0

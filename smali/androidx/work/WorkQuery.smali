@@ -90,6 +90,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Landroidx/work/WorkQuery$Builder;->fromIds(Ljava/util/List;)Landroidx/work/WorkQuery$Builder;
 
     move-result-object p0
@@ -104,6 +105,7 @@
 .method public static varargs fromIds([Ljava/util/UUID;)Landroidx/work/WorkQuery;
     .locals 0
 
+    .line 2
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -127,6 +129,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Landroidx/work/WorkQuery$Builder;->fromStates(Ljava/util/List;)Landroidx/work/WorkQuery$Builder;
 
     move-result-object p0
@@ -141,6 +144,7 @@
 .method public static varargs fromStates([Landroidx/work/WorkInfo$State;)Landroidx/work/WorkQuery;
     .locals 0
 
+    .line 2
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -168,6 +172,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Landroidx/work/WorkQuery$Builder;->fromTags(Ljava/util/List;)Landroidx/work/WorkQuery$Builder;
 
     move-result-object p0
@@ -182,6 +187,7 @@
 .method public static varargs fromTags([Ljava/lang/String;)Landroidx/work/WorkQuery;
     .locals 0
 
+    .line 2
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -205,6 +211,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p0}, Landroidx/work/WorkQuery$Builder;->fromUniqueWorkNames(Ljava/util/List;)Landroidx/work/WorkQuery$Builder;
 
     move-result-object p0
@@ -219,6 +226,7 @@
 .method public static varargs fromUniqueWorkNames([Ljava/lang/String;)Landroidx/work/WorkQuery;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0

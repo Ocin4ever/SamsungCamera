@@ -20,6 +20,7 @@
 .method public constructor <init>(FF)V
     .locals 0
 
+    .line 9
     invoke-static {p1, p2}, Landroidx/core/view/animation/PathInterpolatorApi14;->createQuad(FF)Landroid/graphics/Path;
 
     move-result-object p1
@@ -32,6 +33,7 @@
 .method public constructor <init>(FFFF)V
     .locals 0
 
+    .line 10
     invoke-static {p1, p2, p3, p4}, Landroidx/core/view/animation/PathInterpolatorApi14;->createCubic(FFFF)Landroid/graphics/Path;
 
     move-result-object p1
@@ -44,14 +46,17 @@
 .method public constructor <init>(Landroid/graphics/Path;)V
     .locals 8
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/graphics/PathMeasure;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Landroid/graphics/PathMeasure;-><init>(Landroid/graphics/Path;Z)V
 
+    .line 3
     invoke-virtual {v0}, Landroid/graphics/PathMeasure;->getLength()F
 
     move-result p1
@@ -66,10 +71,12 @@
 
     add-int/2addr v2, v3
 
+    .line 4
     new-array v4, v2, [F
 
     iput-object v4, p0, Landroidx/core/view/animation/PathInterpolatorApi14;->mX:[F
 
+    .line 5
     new-array v4, v2, [F
 
     iput-object v4, p0, Landroidx/core/view/animation/PathInterpolatorApi14;->mY:[F
@@ -95,14 +102,17 @@
 
     const/4 v7, 0x0
 
+    .line 6
     invoke-virtual {v0, v6, v4, v7}, Landroid/graphics/PathMeasure;->getPosTan(F[F[F)Z
 
+    .line 7
     iget-object v6, p0, Landroidx/core/view/animation/PathInterpolatorApi14;->mX:[F
 
     aget v7, v4, v1
 
     aput v7, v6, v5
 
+    .line 8
     iget-object v6, p0, Landroidx/core/view/animation/PathInterpolatorApi14;->mY:[F
 
     aget v7, v4, v3

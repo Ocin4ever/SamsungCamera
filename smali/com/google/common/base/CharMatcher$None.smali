@@ -74,6 +74,7 @@
 .method public indexIn(Ljava/lang/CharSequence;)I
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 p0, -0x1
@@ -84,10 +85,12 @@
 .method public indexIn(Ljava/lang/CharSequence;I)I
     .locals 0
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result p0
 
+    .line 3
     invoke-static {p2, p0}, Lcom/google/common/base/Preconditions;->checkPositionIndex(II)I
 
     const/4 p0, -0x1
@@ -178,6 +181,7 @@
 .method public replaceFrom(Ljava/lang/CharSequence;C)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -188,8 +192,10 @@
 .method public replaceFrom(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 0
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p0

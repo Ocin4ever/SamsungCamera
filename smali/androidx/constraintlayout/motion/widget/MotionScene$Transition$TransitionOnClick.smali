@@ -41,18 +41,23 @@
 .method public constructor <init>(Landroid/content/Context;Landroidx/constraintlayout/motion/widget/MotionScene$Transition;Lorg/xmlpull/v1/XmlPullParser;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition$TransitionOnClick;->mTargetId:I
 
     const/16 v0, 0x11
 
+    .line 3
     iput v0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition$TransitionOnClick;->mMode:I
 
+    .line 4
     iput-object p2, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition$TransitionOnClick;->mTransition:Landroidx/constraintlayout/motion/widget/MotionScene$Transition;
 
+    .line 5
     invoke-static {p3}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object p2
@@ -63,6 +68,7 @@
 
     move-result-object p1
 
+    .line 6
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
 
     move-result p2
@@ -72,14 +78,17 @@
     :goto_0
     if-ge p3, p2, :cond_2
 
+    .line 7
     invoke-virtual {p1, p3}, Landroid/content/res/TypedArray;->getIndex(I)I
 
     move-result v0
 
+    .line 8
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->OnClick_targetId:I
 
     if-ne v0, v1, :cond_0
 
+    .line 9
     iget v1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition$TransitionOnClick;->mTargetId:I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -90,11 +99,13 @@
 
     goto :goto_1
 
+    .line 10
     :cond_0
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->OnClick_clickAction:I
 
     if-ne v0, v1, :cond_1
 
+    .line 11
     iget v1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition$TransitionOnClick;->mMode:I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -109,6 +120,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_2
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -118,12 +130,16 @@
 .method public constructor <init>(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;II)V
     .locals 0
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 14
     iput-object p1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition$TransitionOnClick;->mTransition:Landroidx/constraintlayout/motion/widget/MotionScene$Transition;
 
+    .line 15
     iput p2, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition$TransitionOnClick;->mTargetId:I
 
+    .line 16
     iput p3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition$TransitionOnClick;->mMode:I
 
     return-void

@@ -67,6 +67,7 @@
 .method public bridge synthetic doBackward(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/Ints$IntConverter;->doBackward(Ljava/lang/Integer;)Ljava/lang/String;
@@ -79,6 +80,7 @@
 .method public doBackward(Ljava/lang/Integer;)Ljava/lang/String;
     .locals 0
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Integer;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -89,6 +91,7 @@
 .method public doForward(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 0
 
+    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->decode(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -99,6 +102,7 @@
 .method public bridge synthetic doForward(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/Ints$IntConverter;->doForward(Ljava/lang/String;)Ljava/lang/Integer;

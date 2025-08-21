@@ -58,6 +58,7 @@
 
     const-class p0, Landroidx/window/layout/SafeWindowLayoutComponentProvider;
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object p0
@@ -66,6 +67,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     sget-object v1, Landroidx/window/layout/SafeWindowLayoutComponentProvider;->INSTANCE:Landroidx/window/layout/SafeWindowLayoutComponentProvider;
 
     invoke-static {v1, p0}, Landroidx/window/layout/SafeWindowLayoutComponentProvider;->access$canUseWindowLayoutComponent(Landroidx/window/layout/SafeWindowLayoutComponentProvider;Ljava/lang/ClassLoader;)Z
@@ -74,6 +76,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 4
     :try_start_0
     invoke-static {}, Landroidx/window/extensions/WindowExtensionsProvider;->getWindowExtensions()Landroidx/window/extensions/WindowExtensions;
 
@@ -89,6 +92,7 @@
 
     goto :goto_0
 
+    .line 5
     :catch_0
     move-object p0, v0
 
@@ -96,6 +100,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     move-object p0, v0
 
@@ -108,6 +113,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/window/layout/SafeWindowLayoutComponentProvider$windowLayoutComponent$2;->invoke()Landroidx/window/extensions/layout/WindowLayoutComponent;
 
     move-result-object p0

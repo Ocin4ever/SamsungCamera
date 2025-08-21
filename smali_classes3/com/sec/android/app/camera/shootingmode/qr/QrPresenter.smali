@@ -49,14 +49,17 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/qr/QrContract$View;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
+    .line 2
     sget-object p1, Lcom/sec/android/app/camera/shootingmode/qr/QrPresenter$QrDetectionState;->IDLE:Lcom/sec/android/app/camera/shootingmode/qr/QrPresenter$QrDetectionState;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/qr/QrPresenter;->mState:Lcom/sec/android/app/camera/shootingmode/qr/QrPresenter$QrDetectionState;
 
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/qr/QrPresenter;->mOrientation:I
 
     return-void
@@ -65,14 +68,17 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/qr/QrContract$View;I)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
+    .line 5
     sget-object p1, Lcom/sec/android/app/camera/shootingmode/qr/QrPresenter$QrDetectionState;->IDLE:Lcom/sec/android/app/camera/shootingmode/qr/QrPresenter$QrDetectionState;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/qr/QrPresenter;->mState:Lcom/sec/android/app/camera/shootingmode/qr/QrPresenter$QrDetectionState;
 
     const/4 p1, 0x0
 
+    .line 6
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/qr/QrPresenter;->mOrientation:I
 
     return-void

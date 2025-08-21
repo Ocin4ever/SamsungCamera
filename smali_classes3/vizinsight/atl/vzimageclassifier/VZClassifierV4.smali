@@ -80,6 +80,7 @@
         }
     .end annotation
 
+    .line 15
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,14 +99,17 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 16
     new-instance v0, Lvizinsight/atl/vzimageclassifier/VZImageDecoder;
 
     invoke-direct {v0}, Lvizinsight/atl/vzimageclassifier/VZImageDecoder;-><init>()V
 
+    .line 17
     invoke-static {p1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v8
 
+    .line 18
     :try_start_0
     new-instance v1, Landroid/media/ExifInterface;
 
@@ -115,10 +119,12 @@
 
     const/4 v2, 0x1
 
+    .line 19
     invoke-virtual {v1, p1, v2}, Landroid/media/ExifInterface;->getAttributeInt(Ljava/lang/String;I)I
 
     move-result p1
 
+    .line 20
     new-instance v6, Landroid/graphics/Matrix;
 
     invoke-direct {v6}, Landroid/graphics/Matrix;-><init>()V
@@ -140,6 +146,7 @@
     :cond_0
     const/high16 p1, 0x43870000    # 270.0f
 
+    .line 21
     invoke-virtual {v6, p1}, Landroid/graphics/Matrix;->preRotate(F)Z
 
     goto :goto_0
@@ -147,6 +154,7 @@
     :cond_1
     const/high16 p1, 0x42b40000    # 90.0f
 
+    .line 22
     invoke-virtual {v6, p1}, Landroid/graphics/Matrix;->preRotate(F)Z
 
     goto :goto_0
@@ -154,6 +162,7 @@
     :cond_2
     const/high16 p1, 0x43340000    # 180.0f
 
+    .line 23
     invoke-virtual {v6, p1}, Landroid/graphics/Matrix;->preRotate(F)Z
 
     :goto_0
@@ -161,6 +170,7 @@
 
     const/4 v3, 0x0
 
+    .line 24
     invoke-virtual {v8}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v4
@@ -184,16 +194,19 @@
     :catch_0
     move-exception p1
 
+    .line 25
     invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
 
     :goto_1
     const/4 p1, 0x2
 
+    .line 26
     :try_start_1
     invoke-virtual {v0, v8, p1}, Lvizinsight/atl/vzimageclassifier/VZImageDecoder;->decodeImage(Landroid/graphics/Bitmap;I)[B
 
     move-result-object v2
 
+    .line 27
     invoke-virtual {v8}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
@@ -212,6 +225,7 @@
 
     move-result-object v1
 
+    .line 28
     invoke-virtual {v8}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_1
@@ -223,24 +237,28 @@
 
     const-string v2, "AJ Debug"
 
+    .line 29
     invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 30
     invoke-virtual {v8}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
     div-int/lit16 v1, v1, 0x1f4
 
+    .line 31
     invoke-virtual {v8}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
     div-int/2addr v2, v1
 
+    .line 32
     invoke-virtual {v8}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
@@ -249,14 +267,17 @@
 
     const/4 v4, 0x0
 
+    .line 33
     invoke-static {v8, v2, v3, v4}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
+    .line 34
     invoke-virtual {v0, v2, p1}, Lvizinsight/atl/vzimageclassifier/VZImageDecoder;->decodeImage(Landroid/graphics/Bitmap;I)[B
 
     move-result-object v4
 
+    .line 35
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
@@ -275,12 +296,15 @@
 
     move-result-object p0
 
+    .line 36
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 37
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 38
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -298,10 +322,12 @@
 
     check-cast v0, Lvizinsight/atl/vzimageclassifier/VZEntity;
 
+    .line 39
     invoke-virtual {v0}, Lvizinsight/atl/vzimageclassifier/VZEntity;->getRegion()Landroid/graphics/Rect;
 
     move-result-object v2
 
+    .line 40
     new-instance v3, Landroid/graphics/Rect;
 
     iget v4, v2, Landroid/graphics/Rect;->left:I
@@ -322,6 +348,7 @@
 
     invoke-direct {v3, v4, v5, v6, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
+    .line 41
     new-instance v2, Lvizinsight/atl/vzimageclassifier/VZEntity;
 
     invoke-virtual {v0}, Lvizinsight/atl/vzimageclassifier/VZEntity;->getLabel()Ljava/lang/String;
@@ -355,6 +382,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->auto_mode:I
 
     if-nez v0, :cond_1
@@ -369,11 +397,13 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p1, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->detections:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
+    .line 3
     iget-object p1, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->detections:Ljava/util/List;
 
     new-instance p2, Lvizinsight/atl/vzimageclassifier/VZEntity;
@@ -386,10 +416,12 @@
 
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 4
     iget-object p0, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->detections:Ljava/util/List;
 
     return-object p0
 
+    .line 5
     :cond_1
     :goto_0
     iget-object v0, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->mVZ:Lvizinsight/atl/vzimageclassifier/VZClassifier;
@@ -408,14 +440,17 @@
 
     move-result-object p1
 
+    .line 6
     iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->encoded_string:Ljava/lang/String;
 
+    .line 7
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
+    .line 8
     iget-object p0, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->detections:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->clear()V
@@ -424,6 +459,7 @@
 
     return-object p0
 
+    .line 9
     :cond_2
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -443,6 +479,7 @@
 
     invoke-static {p3, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 10
     invoke-virtual {p0, p1}, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->parse_encoded_string(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p0
@@ -461,6 +498,7 @@
         }
     .end annotation
 
+    .line 11
     array-length v0, p1
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
@@ -469,8 +507,10 @@
 
     iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->bb:Ljava/nio/ByteBuffer;
 
+    .line 12
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
+    .line 13
     iget-object v2, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->bb:Ljava/nio/ByteBuffer;
 
     move-object v1, p0
@@ -487,6 +527,7 @@
 
     move-result-object p1
 
+    .line 14
     iget-object p0, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->bb:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
@@ -875,10 +916,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget v0, p1, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam;->autoMode:I
 
     iput v0, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->auto_mode:I
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -899,6 +942,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -917,6 +961,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -935,18 +980,21 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     iget-object v0, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->mVZ:Lvizinsight/atl/vzimageclassifier/VZClassifier;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1}, Lvizinsight/atl/vzimageclassifier/VZClassifier;->setSceneInfoJni(Lvizinsight/atl/vzimageclassifier/SceneDetectorParam;I)V
 
+    .line 7
     iget-object v0, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->mVZ:Lvizinsight/atl/vzimageclassifier/VZClassifier;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, p1, v1}, Lvizinsight/atl/vzimageclassifier/VZClassifier;->setSceneInfoJni(Lvizinsight/atl/vzimageclassifier/SceneDetectorParam;I)V
 
+    .line 8
     iget-object p0, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->mVZ:Lvizinsight/atl/vzimageclassifier/VZClassifier;
 
     const/4 v0, 0x2
@@ -960,6 +1008,7 @@
 .method public setSceneInfo(Lvizinsight/atl/vzimageclassifier/SceneDetectorParam;I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lvizinsight/atl/vzimageclassifier/VZClassifierV4;->mVZ:Lvizinsight/atl/vzimageclassifier/VZClassifier;
 
     invoke-virtual {p0, p1, p2}, Lvizinsight/atl/vzimageclassifier/VZClassifier;->setSceneInfoJni(Lvizinsight/atl/vzimageclassifier/SceneDetectorParam;I)V

@@ -1035,6 +1035,7 @@
 .method private registerCallStateListener(Lcom/sec/android/app/camera/provider/CallStateManager$CallStateListener;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/provider/CallStateManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getApplicationContext()Landroid/content/Context;
@@ -1053,6 +1054,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/provider/CallStateManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p0}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getContext()Landroid/content/Context;
@@ -1072,6 +1074,7 @@
 .method private registerCallStateListener(Lcom/sec/android/app/camera/provider/CallStateManager$CallStateListener;I)V
     .locals 2
 
+    .line 3
     iget-object v0, p0, Lcom/sec/android/app/camera/provider/CallStateManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getApplicationContext()Landroid/content/Context;
@@ -1094,6 +1097,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/sec/android/app/camera/provider/CallStateManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p0}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getContext()Landroid/content/Context;
@@ -1278,6 +1282,7 @@
 .method private unregisterCallStateListener(Lcom/sec/android/app/camera/provider/CallStateManager$CallStateListener;)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/provider/CallStateManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p0}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getApplicationContext()Landroid/content/Context;
@@ -1296,6 +1301,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/telephony/TelephonyManager;->unregisterTelephonyCallback(Landroid/telephony/TelephonyCallback;)V
 
     :cond_0
@@ -1305,6 +1311,7 @@
 .method private unregisterCallStateListener(Lcom/sec/android/app/camera/provider/CallStateManager$CallStateListener;I)V
     .locals 1
 
+    .line 3
     iget-object p0, p0, Lcom/sec/android/app/camera/provider/CallStateManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p0}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getApplicationContext()Landroid/content/Context;
@@ -1327,6 +1334,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 4
     invoke-virtual {p0, p1}, Landroid/telephony/TelephonyManager;->unregisterTelephonyCallback(Landroid/telephony/TelephonyCallback;)V
 
     :cond_0

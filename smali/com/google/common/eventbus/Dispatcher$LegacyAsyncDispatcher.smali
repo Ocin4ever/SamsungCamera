@@ -36,8 +36,10 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/eventbus/Dispatcher;-><init>()V
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/Queues;->newConcurrentLinkedQueue()Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     move-result-object v0
@@ -50,6 +52,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/eventbus/Dispatcher$1;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Lcom/google/common/eventbus/Dispatcher$LegacyAsyncDispatcher;-><init>()V
 
     return-void

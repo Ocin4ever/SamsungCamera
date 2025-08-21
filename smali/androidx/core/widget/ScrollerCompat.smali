@@ -44,6 +44,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, v0}, Landroidx/core/widget/ScrollerCompat;->create(Landroid/content/Context;Landroid/view/animation/Interpolator;)Landroidx/core/widget/ScrollerCompat;
 
     move-result-object p0
@@ -56,6 +57,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     new-instance v0, Landroidx/core/widget/ScrollerCompat;
 
     invoke-direct {v0, p0, p1}, Landroidx/core/widget/ScrollerCompat;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
@@ -98,6 +100,7 @@
 
     move-object v0, p0
 
+    .line 1
     iget-object v0, v0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     move v1, p1
@@ -128,6 +131,7 @@
 
     move-object v0, p0
 
+    .line 2
     iget-object v0, v0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     move v1, p1
@@ -308,6 +312,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/OverScroller;->startScroll(IIII)V
@@ -320,6 +325,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     iget-object v0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     move v1, p1

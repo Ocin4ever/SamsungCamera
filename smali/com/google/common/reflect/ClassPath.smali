@@ -800,6 +800,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath;->resources:Lcom/google/common/collect/ImmutableSet;
 
     invoke-static {p0}, Lcom/google/common/collect/FluentIterable;->from(Ljava/lang/Iterable;)Lcom/google/common/collect/FluentIterable;
@@ -808,6 +809,7 @@
 
     const-class v0, Lcom/google/common/reflect/ClassPath$ClassInfo;
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/common/collect/FluentIterable;->filter(Ljava/lang/Class;)Lcom/google/common/collect/FluentIterable;
 
     move-result-object p0
@@ -816,10 +818,12 @@
 
     invoke-direct {v0}, Lcom/google/common/reflect/a;-><init>()V
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/common/collect/FluentIterable;->filter(Lcom/google/common/base/Predicate;)Lcom/google/common/collect/FluentIterable;
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/collect/FluentIterable;->toSet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -840,12 +844,15 @@
         }
     .end annotation
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     invoke-static {}, Lcom/google/common/collect/ImmutableSet;->builder()Lcom/google/common/collect/ImmutableSet$Builder;
 
     move-result-object v0
 
+    .line 7
     invoke-virtual {p0}, Lcom/google/common/reflect/ClassPath;->getTopLevelClasses()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -868,6 +875,7 @@
 
     check-cast v1, Lcom/google/common/reflect/ClassPath$ClassInfo;
 
+    .line 8
     invoke-virtual {v1}, Lcom/google/common/reflect/ClassPath$ClassInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -878,10 +886,12 @@
 
     if-eqz v2, :cond_0
 
+    .line 9
     invoke-virtual {v0, v1}, Lcom/google/common/collect/ImmutableSet$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet$Builder;
 
     goto :goto_0
 
+    .line 10
     :cond_1
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableSet$Builder;->build()Lcom/google/common/collect/ImmutableSet;
 

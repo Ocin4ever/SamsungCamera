@@ -29,12 +29,16 @@
 .method public constructor <init>(Ljava/util/function/Predicate;Lcom/samsung/android/camera/core2/maker/MakerFactory$MakerConstructor;Lcom/samsung/android/camera/core2/maker/MakerFactory$MakerConstructor;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/maker/MakerFactory$PredicatorMakerBuilder;->a:Ljava/util/function/Predicate;
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/camera/core2/maker/MakerFactory$PredicatorMakerBuilder;->b:Lcom/samsung/android/camera/core2/maker/MakerFactory$MakerConstructor;
 
+    .line 5
     iput-object p3, p0, Lcom/samsung/android/camera/core2/maker/MakerFactory$PredicatorMakerBuilder;->c:Lcom/samsung/android/camera/core2/maker/MakerFactory$MakerConstructor;
 
     return-void
@@ -43,6 +47,7 @@
 .method public synthetic constructor <init>(Ljava/util/function/Predicate;Lcom/samsung/android/camera/core2/maker/MakerFactory$MakerConstructor;Lcom/samsung/android/camera/core2/maker/MakerFactory$MakerConstructor;Lcom/samsung/android/camera/core2/maker/gb;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/maker/MakerFactory$PredicatorMakerBuilder;-><init>(Ljava/util/function/Predicate;Lcom/samsung/android/camera/core2/maker/MakerFactory$MakerConstructor;Lcom/samsung/android/camera/core2/maker/MakerFactory$MakerConstructor;)V
 
     return-void

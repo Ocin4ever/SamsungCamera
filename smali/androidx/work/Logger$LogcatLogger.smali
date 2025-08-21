@@ -34,12 +34,14 @@
 .method public debug(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iget p0, p0, Landroidx/work/Logger$LogcatLogger;->mLoggingLevel:I
 
     const/4 v0, 0x3
 
     if-gt p0, v0, :cond_0
 
+    .line 2
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -49,12 +51,14 @@
 .method public debug(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 3
     iget p0, p0, Landroidx/work/Logger$LogcatLogger;->mLoggingLevel:I
 
     const/4 v0, 0x3
 
     if-gt p0, v0, :cond_0
 
+    .line 4
     invoke-static {p1, p2, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -64,12 +68,14 @@
 .method public error(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iget p0, p0, Landroidx/work/Logger$LogcatLogger;->mLoggingLevel:I
 
     const/4 v0, 0x6
 
     if-gt p0, v0, :cond_0
 
+    .line 2
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -79,12 +85,14 @@
 .method public error(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 3
     iget p0, p0, Landroidx/work/Logger$LogcatLogger;->mLoggingLevel:I
 
     const/4 v0, 0x6
 
     if-gt p0, v0, :cond_0
 
+    .line 4
     invoke-static {p1, p2, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -94,12 +102,14 @@
 .method public info(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iget p0, p0, Landroidx/work/Logger$LogcatLogger;->mLoggingLevel:I
 
     const/4 v0, 0x4
 
     if-gt p0, v0, :cond_0
 
+    .line 2
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -109,12 +119,14 @@
 .method public info(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 3
     iget p0, p0, Landroidx/work/Logger$LogcatLogger;->mLoggingLevel:I
 
     const/4 v0, 0x4
 
     if-gt p0, v0, :cond_0
 
+    .line 4
     invoke-static {p1, p2, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -124,12 +136,14 @@
 .method public verbose(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iget p0, p0, Landroidx/work/Logger$LogcatLogger;->mLoggingLevel:I
 
     const/4 v0, 0x2
 
     if-gt p0, v0, :cond_0
 
+    .line 2
     invoke-static {p1, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -139,12 +153,14 @@
 .method public verbose(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 3
     iget p0, p0, Landroidx/work/Logger$LogcatLogger;->mLoggingLevel:I
 
     const/4 v0, 0x2
 
     if-gt p0, v0, :cond_0
 
+    .line 4
     invoke-static {p1, p2, p3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -154,12 +170,14 @@
 .method public warning(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iget p0, p0, Landroidx/work/Logger$LogcatLogger;->mLoggingLevel:I
 
     const/4 v0, 0x5
 
     if-gt p0, v0, :cond_0
 
+    .line 2
     invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -169,12 +187,14 @@
 .method public warning(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 3
     iget p0, p0, Landroidx/work/Logger$LogcatLogger;->mLoggingLevel:I
 
     const/4 v0, 0x5
 
     if-gt p0, v0, :cond_0
 
+    .line 4
     invoke-static {p1, p2, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0

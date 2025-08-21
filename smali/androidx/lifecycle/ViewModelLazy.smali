@@ -73,6 +73,7 @@
         }
     .end annotation
 
+    .line 1
     const-string v0, "viewModelClass"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
@@ -133,14 +134,19 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Landroidx/lifecycle/ViewModelLazy;->viewModelClass:Lu6/c;
 
+    .line 4
     iput-object p2, p0, Landroidx/lifecycle/ViewModelLazy;->storeProducer:Lq6/a;
 
+    .line 5
     iput-object p3, p0, Landroidx/lifecycle/ViewModelLazy;->factoryProducer:Lq6/a;
 
+    .line 6
     iput-object p4, p0, Landroidx/lifecycle/ViewModelLazy;->extrasProducer:Lq6/a;
 
     return-void
@@ -153,8 +159,10 @@
 
     if-eqz p5, :cond_0
 
+    .line 7
     sget-object p4, Landroidx/lifecycle/ViewModelLazy$1;->INSTANCE:Landroidx/lifecycle/ViewModelLazy$1;
 
+    .line 8
     :cond_0
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lu6/c;Lq6/a;Lq6/a;Lq6/a;)V
 
@@ -171,10 +179,12 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->cached:Landroidx/lifecycle/ViewModel;
 
     if-nez v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->factoryProducer:Lq6/a;
 
     invoke-interface {v0}, Lq6/a;->invoke()Ljava/lang/Object;
@@ -183,6 +193,7 @@
 
     check-cast v0, Landroidx/lifecycle/ViewModelProvider$Factory;
 
+    .line 4
     iget-object v1, p0, Landroidx/lifecycle/ViewModelLazy;->storeProducer:Lq6/a;
 
     invoke-interface {v1}, Lq6/a;->invoke()Ljava/lang/Object;
@@ -191,8 +202,10 @@
 
     check-cast v1, Landroidx/lifecycle/ViewModelStore;
 
+    .line 5
     new-instance v2, Landroidx/lifecycle/ViewModelProvider;
 
+    .line 6
     iget-object v3, p0, Landroidx/lifecycle/ViewModelLazy;->extrasProducer:Lq6/a;
 
     invoke-interface {v3}, Lq6/a;->invoke()Ljava/lang/Object;
@@ -201,8 +214,10 @@
 
     check-cast v3, Landroidx/lifecycle/viewmodel/CreationExtras;
 
+    .line 7
     invoke-direct {v2, v1, v0, v3}, Landroidx/lifecycle/ViewModelProvider;-><init>(Landroidx/lifecycle/ViewModelStore;Landroidx/lifecycle/ViewModelProvider$Factory;Landroidx/lifecycle/viewmodel/CreationExtras;)V
 
+    .line 8
     iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->viewModelClass:Lu6/c;
 
     invoke-static {v0}, Lp6/a;->a(Lu6/c;)Ljava/lang/Class;
@@ -213,6 +228,7 @@
 
     move-result-object v0
 
+    .line 9
     iput-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->cached:Landroidx/lifecycle/ViewModel;
 
     :cond_0
@@ -222,6 +238,7 @@
 .method public bridge synthetic getValue()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/lifecycle/ViewModelLazy;->getValue()Landroidx/lifecycle/ViewModel;
 
     move-result-object p0

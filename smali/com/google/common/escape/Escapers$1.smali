@@ -28,6 +28,7 @@
 .method public escape(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -40,6 +41,7 @@
 .method public escape(C)[C
     .locals 0
 
+    .line 1
     const/4 p0, 0x0
 
     return-object p0

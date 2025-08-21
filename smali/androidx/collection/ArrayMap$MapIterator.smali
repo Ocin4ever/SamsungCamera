@@ -279,6 +279,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/collection/ArrayMap$MapIterator;->next()Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -296,12 +297,14 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Landroidx/collection/ArrayMap$MapIterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget v0, p0, Landroidx/collection/ArrayMap$MapIterator;->mIndex:I
 
     const/4 v1, 0x1
@@ -310,10 +313,12 @@
 
     iput v0, p0, Landroidx/collection/ArrayMap$MapIterator;->mIndex:I
 
+    .line 4
     iput-boolean v1, p0, Landroidx/collection/ArrayMap$MapIterator;->mEntryValid:Z
 
     return-object p0
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 

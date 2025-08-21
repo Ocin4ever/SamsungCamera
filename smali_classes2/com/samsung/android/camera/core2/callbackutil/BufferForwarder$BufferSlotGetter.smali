@@ -28,16 +28,20 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder;Landroid/media/Image;Landroid/hardware/camera2/TotalCaptureResult;)V
     .locals 0
 
+    .line 5
     iput-object p1, p0, Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder$BufferSlotGetter;->d:Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
+    .line 6
     iput-object p1, p0, Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder$BufferSlotGetter;->a:Lcom/samsung/android/camera/core2/util/ImageBuffer;
 
+    .line 7
     iput-object p2, p0, Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder$BufferSlotGetter;->b:Landroid/media/Image;
 
+    .line 8
     iput-object p3, p0, Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder$BufferSlotGetter;->c:Landroid/hardware/camera2/TotalCaptureResult;
 
     return-void
@@ -46,16 +50,20 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder;Lcom/samsung/android/camera/core2/util/ImageBuffer;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder$BufferSlotGetter;->d:Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p2, p0, Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder$BufferSlotGetter;->a:Lcom/samsung/android/camera/core2/util/ImageBuffer;
 
     const/4 p1, 0x0
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder$BufferSlotGetter;->b:Landroid/media/Image;
 
+    .line 4
     iput-object p1, p0, Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder$BufferSlotGetter;->c:Landroid/hardware/camera2/TotalCaptureResult;
 
     return-void

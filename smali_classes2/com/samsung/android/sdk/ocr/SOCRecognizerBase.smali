@@ -380,18 +380,21 @@
 .method public detectBlock(Landroid/graphics/Bitmap;Landroid/graphics/Point;[Landroid/graphics/Point;)Z
     .locals 4
 
+    .line 3
     new-instance v0, Lcom/samsung/android/sdk/pen/ocr/SpenRecogConfig;
 
     const-string v1, "common"
 
     invoke-direct {v0, v1}, Lcom/samsung/android/sdk/pen/ocr/SpenRecogConfig;-><init>(Ljava/lang/String;)V
 
+    .line 4
     iget-object v1, p0, Lcom/samsung/android/sdk/ocr/SOCRecognizerBase;->mRecognizer:Lcom/samsung/android/sdk/pen/ocr/SpenIOcrRecognizer;
 
     invoke-interface {v1, p1, v0, p0}, Lcom/samsung/android/sdk/pen/ocr/SpenIOcrRecognizer;->detect(Landroid/graphics/Bitmap;Lcom/samsung/android/sdk/pen/ocr/SpenRecogConfig;Lcom/samsung/android/sdk/pen/ocr/SpenOcrRecognitionListener;)Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;
 
     move-result-object v0
 
+    .line 5
     sget-object v1, Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;->OE_Success:Lcom/samsung/android/sdk/pen/ocr/SpenOcrError;
 
     const-string v2, "SOCRecognizerBase"
@@ -400,6 +403,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 6
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -425,10 +429,12 @@
     :cond_0
     if-nez p2, :cond_1
 
+    .line 7
     invoke-static {p1}, Lcom/samsung/android/sdk/ocr/OCRResultUtils;->getImageCenter(Landroid/graphics/Bitmap;)Landroid/graphics/Point;
 
     move-result-object p2
 
+    .line 8
     :cond_1
     iget-object p1, p0, Lcom/samsung/android/sdk/ocr/SOCRecognizerBase;->mOcrPageData:Lcom/samsung/android/sdk/pen/ocr/SpenOcrPageData;
 
@@ -440,10 +446,12 @@
 
     const-string p0, "Fail to find nearest block"
 
+    .line 9
     invoke-static {v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
 
+    .line 10
     :cond_2
     iget-object p2, p0, Lcom/samsung/android/sdk/ocr/SOCRecognizerBase;->mOcrPageData:Lcom/samsung/android/sdk/pen/ocr/SpenOcrPageData;
 
@@ -461,6 +469,7 @@
 
     move-result-object p1
 
+    .line 11
     invoke-virtual {p0, p3, p1}, Lcom/samsung/android/sdk/ocr/SOCRecognizerBase;->isValidDetectedBlockPoints([Landroid/graphics/Point;[Landroid/graphics/Point;)Z
 
     move-result p0
@@ -469,16 +478,19 @@
 
     return v3
 
+    .line 12
     :cond_3
     array-length p0, p3
 
     array-length p0, p1
 
+    .line 13
     :goto_0
     array-length p0, p3
 
     if-ge v3, p0, :cond_4
 
+    .line 14
     new-instance p0, Landroid/graphics/Point;
 
     aget-object p2, p1, v3
@@ -500,6 +512,7 @@
 .method public detectBlock(Landroid/graphics/Bitmap;[Landroid/graphics/Point;)Z
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/graphics/Point;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -516,6 +529,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/Point;-><init>(II)V
 
+    .line 2
     invoke-virtual {p0, p1, v0, p2}, Lcom/samsung/android/sdk/ocr/SOCRecognizerBase;->detectBlock(Landroid/graphics/Bitmap;Landroid/graphics/Point;[Landroid/graphics/Point;)Z
 
     move-result p0

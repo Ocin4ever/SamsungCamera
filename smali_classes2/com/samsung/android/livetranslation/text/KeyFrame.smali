@@ -290,14 +290,17 @@
 .method public clone()Lcom/samsung/android/livetranslation/text/KeyFrame;
     .locals 4
 
+    .line 2
     new-instance v0, Lcom/samsung/android/livetranslation/text/KeyFrame;
 
     invoke-direct {v0}, Lcom/samsung/android/livetranslation/text/KeyFrame;-><init>()V
 
+    .line 3
     iget-wide v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mFrameId:J
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setFrameId(J)V
 
+    .line 4
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mBuffer:[B
 
     const/4 v2, 0x0
@@ -306,64 +309,80 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setBufferWithCopy([BII)V
 
+    .line 5
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mFrameFormat:Lcom/samsung/android/livetranslation/text/KeyFrame$FrameFormat;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setFrameFormat(Lcom/samsung/android/livetranslation/text/KeyFrame$FrameFormat;)V
 
+    .line 6
     iget-boolean v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mIsMobile:Z
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setIsMobile(Z)V
 
+    .line 7
     iget v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mWidth:I
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setWidth(I)V
 
+    .line 8
     iget v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mHeight:I
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setHeight(I)V
 
+    .line 9
     iget v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mRotation:I
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setRotation(I)V
 
+    .line 10
     iget v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mResizeRatio:F
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setResizeRatio(F)V
 
+    .line 11
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mTRLReqStr:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setTRLReqString(Ljava/util/List;)V
 
+    .line 12
     iget v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mSTRCP:I
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setSTRCP(I)V
 
+    .line 13
     iget v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mTRLCP:I
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setTRLCP(I)V
 
+    .line 14
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mSrcLang:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setSrcLang(Ljava/lang/String;)V
 
+    .line 15
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mTarLang:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setTarLang(Ljava/lang/String;)V
 
+    .line 16
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mTRLUnit:Lcom/samsung/android/livetranslation/text/KeyFrame$TRL_UNIT;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setTRLUnit(Lcom/samsung/android/livetranslation/text/KeyFrame$TRL_UNIT;)V
 
+    .line 17
     iget v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mGoogleBlockCount:I
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setGoogleBlockCount(I)V
 
+    .line 18
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mSortedSrcLangList:Ljava/util/List;
 
     if-eqz v1, :cond_0
 
+    .line 19
     invoke-direct {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setSortedSrcLangList(Ljava/util/List;)V
 
+    .line 20
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mSceneTexts:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -371,15 +390,18 @@
 
     const/4 p0, 0x0
 
+    .line 21
     invoke-virtual {v0, p0}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setSceneTexts(Ljava/util/concurrent/CopyOnWriteArrayList;)V
 
     goto :goto_1
 
+    .line 22
     :cond_1
     new-instance v1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
+    .line 23
     iget-object p0, p0, Lcom/samsung/android/livetranslation/text/KeyFrame;->mSceneTexts:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -399,14 +421,17 @@
 
     check-cast v2, Lcom/samsung/android/livetranslation/text/SceneText;
 
+    .line 24
     invoke-virtual {v2}, Lcom/samsung/android/livetranslation/text/SceneText;->clone()Lcom/samsung/android/livetranslation/text/SceneText;
 
     move-result-object v2
 
+    .line 25
     invoke-virtual {v1, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 26
     :cond_2
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setSceneTexts(Ljava/util/concurrent/CopyOnWriteArrayList;)V
 
@@ -417,6 +442,7 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/livetranslation/text/KeyFrame;->clone()Lcom/samsung/android/livetranslation/text/KeyFrame;
 
     move-result-object p0

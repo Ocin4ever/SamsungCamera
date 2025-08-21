@@ -347,6 +347,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/CacheBuilderSpec;->toCacheBuilder()Lcom/google/common/cache/CacheBuilder;
 
     move-result-object p0
@@ -372,6 +373,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/cache/CacheBuilderSpec;->parse(Ljava/lang/String;)Lcom/google/common/cache/CacheBuilderSpec;
 
     move-result-object p0
@@ -414,10 +416,13 @@
         }
     .end annotation
 
+    .line 3
     invoke-direct {p0}, Lcom/google/common/cache/CacheBuilder;->checkWeightWithWeigher()V
 
+    .line 4
     invoke-direct {p0}, Lcom/google/common/cache/CacheBuilder;->checkNonLoadingCache()V
 
+    .line 5
     new-instance v0, Lcom/google/common/cache/LocalCache$LocalManualCache;
 
     invoke-direct {v0, p0}, Lcom/google/common/cache/LocalCache$LocalManualCache;-><init>(Lcom/google/common/cache/CacheBuilder;)V
@@ -437,8 +442,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/cache/CacheBuilder;->checkWeightWithWeigher()V
 
+    .line 2
     new-instance v0, Lcom/google/common/cache/LocalCache$LocalLoadingCache;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/cache/LocalCache$LocalLoadingCache;-><init>(Lcom/google/common/cache/CacheBuilder;Lcom/google/common/cache/CacheLoader;)V

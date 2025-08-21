@@ -46,6 +46,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractScheduledService$ServiceDelegate$1;->get()Ljava/lang/String;
 
     move-result-object p0
@@ -56,6 +57,7 @@
 .method public get()Ljava/lang/String;
     .locals 3
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractScheduledService$ServiceDelegate$1;->this$1:Lcom/google/common/util/concurrent/AbstractScheduledService$ServiceDelegate;
 
     iget-object v0, v0, Lcom/google/common/util/concurrent/AbstractScheduledService$ServiceDelegate;->this$0:Lcom/google/common/util/concurrent/AbstractScheduledService;

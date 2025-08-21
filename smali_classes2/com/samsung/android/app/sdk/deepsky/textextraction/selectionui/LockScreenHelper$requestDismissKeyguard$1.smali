@@ -56,6 +56,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/LockScreenHelper$requestDismissKeyguard$1;->invoke()V
 
     sget-object p0, Lf6/p;->a:Lf6/p;
@@ -66,5 +67,6 @@
 .method public final invoke()V
     .locals 0
 
+    .line 1
     return-void
 .end method

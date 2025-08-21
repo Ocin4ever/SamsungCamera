@@ -36,16 +36,20 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 10
     iput-object v0, p0, Lcom/google/ar/core/Config;->session:Lcom/google/ar/core/Session;
 
     const-wide/16 v0, 0x0
 
+    .line 11
     iput-wide v0, p0, Lcom/google/ar/core/Config;->nativeHandle:J
 
+    .line 12
     iput-wide v0, p0, Lcom/google/ar/core/Config;->nativeSymbolTableHandle:J
 
     return-void
@@ -54,10 +58,13 @@
 .method public constructor <init>(Lcom/google/ar/core/Session;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/ar/core/Config;->session:Lcom/google/ar/core/Session;
 
+    .line 3
     iget-wide v0, p1, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
 
     invoke-static {v0, v1}, Lcom/google/ar/core/Config;->nativeCreate(J)J
@@ -66,6 +73,7 @@
 
     iput-wide v0, p0, Lcom/google/ar/core/Config;->nativeHandle:J
 
+    .line 4
     iget-wide v0, p1, Lcom/google/ar/core/Session;->nativeSymbolTableHandle:J
 
     iput-wide v0, p0, Lcom/google/ar/core/Config;->nativeSymbolTableHandle:J
@@ -76,12 +84,16 @@
 .method public constructor <init>(Lcom/google/ar/core/Session;J)V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     iput-object p1, p0, Lcom/google/ar/core/Config;->session:Lcom/google/ar/core/Session;
 
+    .line 7
     iput-wide p2, p0, Lcom/google/ar/core/Config;->nativeHandle:J
 
+    .line 8
     iget-wide p1, p1, Lcom/google/ar/core/Session;->nativeSymbolTableHandle:J
 
     iput-wide p1, p0, Lcom/google/ar/core/Config;->nativeSymbolTableHandle:J

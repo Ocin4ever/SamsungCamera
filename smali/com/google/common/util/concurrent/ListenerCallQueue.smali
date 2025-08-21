@@ -228,6 +228,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p1}, Lcom/google/common/util/concurrent/ListenerCallQueue;->enqueueHelper(Lcom/google/common/util/concurrent/ListenerCallQueue$Event;Ljava/lang/Object;)V
 
     return-void
@@ -247,6 +248,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lcom/google/common/util/concurrent/ListenerCallQueue;->enqueueHelper(Lcom/google/common/util/concurrent/ListenerCallQueue$Event;Ljava/lang/Object;)V
 
     return-void

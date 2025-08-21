@@ -63,6 +63,7 @@
 .method public provideSummary(Landroidx/preference/EditTextPreference;)Ljava/lang/CharSequence;
     .locals 0
 
+    .line 2
     invoke-virtual {p1}, Landroidx/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object p0
@@ -73,6 +74,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p1}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -85,6 +87,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p1}, Landroidx/preference/EditTextPreference;->getText()Ljava/lang/String;
 
@@ -96,6 +99,7 @@
 .method public bridge synthetic provideSummary(Landroidx/preference/Preference;)Ljava/lang/CharSequence;
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/preference/EditTextPreference;
 
     invoke-virtual {p0, p1}, Landroidx/preference/EditTextPreference$SimpleSummaryProvider;->provideSummary(Landroidx/preference/EditTextPreference;)Ljava/lang/CharSequence;

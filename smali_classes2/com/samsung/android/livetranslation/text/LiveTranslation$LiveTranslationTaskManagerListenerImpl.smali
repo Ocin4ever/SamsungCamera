@@ -25,6 +25,7 @@
 .method private constructor <init>(Lcom/samsung/android/livetranslation/text/LiveTranslation;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/livetranslation/text/LiveTranslation$LiveTranslationTaskManagerListenerImpl;->this$0:Lcom/samsung/android/livetranslation/text/LiveTranslation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,6 +36,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/livetranslation/text/LiveTranslation;Lcom/samsung/android/livetranslation/text/j;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/livetranslation/text/LiveTranslation$LiveTranslationTaskManagerListenerImpl;-><init>(Lcom/samsung/android/livetranslation/text/LiveTranslation;)V
 
     return-void

@@ -296,22 +296,27 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/samsung/android/livetranslation/geometry/SmallestSurroundingRectangle;->computeConvexHullPoints(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
 
+    .line 2
     invoke-static {p0}, Lcom/samsung/android/livetranslation/geometry/SmallestSurroundingRectangle;->computeAlignmentPointIndex(Ljava/util/List;)I
 
     move-result v0
 
+    .line 3
     invoke-static {p0, v0}, Lcom/samsung/android/livetranslation/geometry/SmallestSurroundingRectangle;->computeAlignedBounds(Ljava/util/List;I)Landroid/graphics/RectF;
 
     move-result-object v1
 
+    .line 4
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     new-instance v3, Landroid/graphics/PointF;
 
     iget v4, v1, Landroid/graphics/RectF;->left:F
@@ -322,6 +327,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 6
     new-instance v3, Landroid/graphics/PointF;
 
     iget v4, v1, Landroid/graphics/RectF;->right:F
@@ -332,6 +338,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 7
     new-instance v3, Landroid/graphics/PointF;
 
     iget v4, v1, Landroid/graphics/RectF;->right:F
@@ -342,6 +349,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 8
     new-instance v3, Landroid/graphics/PointF;
 
     iget v4, v1, Landroid/graphics/RectF;->left:F
@@ -352,20 +360,24 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 9
     invoke-static {p0, v0}, Lcom/samsung/android/livetranslation/geometry/SmallestSurroundingRectangle;->computeEdgeAngleRad(Ljava/util/List;I)D
 
     move-result-wide v3
 
+    .line 10
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/graphics/PointF;
 
+    .line 11
     new-instance v0, Lcom/samsung/android/livetranslation/geometry/AffineTransform;
 
     invoke-direct {v0}, Lcom/samsung/android/livetranslation/geometry/AffineTransform;-><init>()V
 
+    .line 12
     iget v1, p0, Landroid/graphics/PointF;->x:F
 
     iget p0, p0, Landroid/graphics/PointF;->y:F
@@ -376,16 +388,19 @@
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/livetranslation/geometry/AffineTransform;->concatenate(Landroid/graphics/Matrix;)V
 
+    .line 13
     invoke-static {v3, v4}, Lcom/samsung/android/livetranslation/geometry/AffineTransform;->getRotateInstance(D)Landroid/graphics/Matrix;
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/livetranslation/geometry/AffineTransform;->concatenate(Landroid/graphics/Matrix;)V
 
+    .line 14
     invoke-static {v2, v0}, Lcom/samsung/android/livetranslation/geometry/SmallestSurroundingRectangle;->transform(Ljava/util/List;Lcom/samsung/android/livetranslation/geometry/AffineTransform;)Ljava/util/List;
 
     move-result-object p0
 
+    .line 15
     new-instance v0, Lcom/samsung/android/livetranslation/geometry/SmallestSurroundingRectangle$1;
 
     invoke-direct {v0}, Lcom/samsung/android/livetranslation/geometry/SmallestSurroundingRectangle$1;-><init>()V
@@ -398,6 +413,7 @@
 .method public static computeCorners([Landroid/graphics/Point;[Landroid/graphics/Point;)[Landroid/graphics/Point;
     .locals 5
 
+    .line 16
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -409,6 +425,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 17
     new-instance v2, Landroid/graphics/PointF;
 
     aget-object v3, p0, v1
@@ -425,6 +442,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 18
     new-instance v2, Landroid/graphics/PointF;
 
     aget-object v3, p1, v1
@@ -445,11 +463,13 @@
 
     goto :goto_0
 
+    .line 19
     :cond_0
     invoke-static {v0}, Lcom/samsung/android/livetranslation/geometry/SmallestSurroundingRectangle;->computeCorners(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
 
+    .line 20
     invoke-static {p0}, Lcom/samsung/android/livetranslation/geometry/SmallestSurroundingRectangle;->sortPoint(Ljava/util/List;)[Landroid/graphics/Point;
 
     move-result-object p0
@@ -787,6 +807,7 @@
 .method private static crossProduct(Landroid/graphics/PointF;Landroid/graphics/PointF;)F
     .locals 2
 
+    .line 2
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
     iget v1, p1, Landroid/graphics/PointF;->y:F
@@ -807,6 +828,7 @@
 .method private static crossProduct(Landroid/graphics/PointF;Landroid/graphics/PointF;Landroid/graphics/PointF;)F
     .locals 3
 
+    .line 1
     iget v0, p1, Landroid/graphics/PointF;->x:F
 
     iget v1, p0, Landroid/graphics/PointF;->x:F

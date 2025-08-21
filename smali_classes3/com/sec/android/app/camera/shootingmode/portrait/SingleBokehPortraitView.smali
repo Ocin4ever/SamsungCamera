@@ -533,6 +533,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/shootingmode/portrait/SingleBokehPortraitContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/shootingmode/portrait/SingleBokehPortraitView;->setPresenter(Lcom/sec/android/app/camera/shootingmode/portrait/SingleBokehPortraitContract$Presenter;)V
@@ -543,6 +544,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/shootingmode/portrait/SingleBokehPortraitContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeView;->mPresenter:Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$Presenter;
 
     return-void

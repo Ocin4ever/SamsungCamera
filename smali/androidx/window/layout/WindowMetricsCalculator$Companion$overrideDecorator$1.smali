@@ -56,6 +56,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object p0, p0, Lkotlin/jvm/internal/c;->receiver:Ljava/lang/Object;
 
     check-cast p0, Landroidx/window/layout/WindowMetricsCalculatorDecorator;
@@ -70,6 +71,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     check-cast p1, Landroidx/window/layout/WindowMetricsCalculator;
 
     invoke-virtual {p0, p1}, Landroidx/window/layout/WindowMetricsCalculator$Companion$overrideDecorator$1;->invoke(Landroidx/window/layout/WindowMetricsCalculator;)Landroidx/window/layout/WindowMetricsCalculator;

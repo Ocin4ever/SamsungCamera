@@ -311,6 +311,7 @@
 .method public static constrain(FFF)F
     .locals 1
 
+    .line 1
     cmpl-float v0, p0, p2
 
     if-lez v0, :cond_0
@@ -331,6 +332,7 @@
 .method public static constrain(III)I
     .locals 0
 
+    .line 2
     if-le p0, p2, :cond_0
 
     return p2

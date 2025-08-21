@@ -56,6 +56,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     check-cast p1, Landroid/text/Editable;
 
     invoke-virtual {p0, p1}, Landroidx/core/widget/TextViewKt$addTextChangedListener$3;->invoke(Landroid/text/Editable;)V
@@ -68,5 +69,6 @@
 .method public final invoke(Landroid/text/Editable;)V
     .locals 0
 
+    .line 1
     return-void
 .end method

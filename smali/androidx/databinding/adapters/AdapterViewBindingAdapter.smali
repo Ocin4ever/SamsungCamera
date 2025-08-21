@@ -51,12 +51,14 @@
 .method public static setSelectedItemPosition(Landroid/widget/AdapterView;I)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v0
 
     if-eq v0, p1, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/widget/AdapterView;->setSelection(I)V
 
     :cond_0
@@ -66,18 +68,22 @@
 .method public static setSelectedItemPosition(Landroid/widget/AdapterView;ILandroid/widget/Adapter;)V
     .locals 1
 
+    .line 3
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v0
 
     if-eq p2, v0, :cond_0
 
+    .line 4
     invoke-virtual {p0, p2}, Landroid/widget/AdapterView;->setAdapter(Landroid/widget/Adapter;)V
 
+    .line 5
     invoke-virtual {p0, p1}, Landroid/widget/AdapterView;->setSelection(I)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
 
@@ -85,6 +91,7 @@
 
     if-eq p2, p1, :cond_1
 
+    .line 7
     invoke-virtual {p0, p1}, Landroid/widget/AdapterView;->setSelection(I)V
 
     :cond_1
@@ -95,6 +102,7 @@
 .method public static setSelection(Landroid/widget/AdapterView;I)V
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Landroidx/databinding/adapters/AdapterViewBindingAdapter;->setSelectedItemPosition(Landroid/widget/AdapterView;I)V
 
     return-void
@@ -103,6 +111,7 @@
 .method public static setSelection(Landroid/widget/AdapterView;ILandroid/widget/Adapter;)V
     .locals 0
 
+    .line 2
     invoke-static {p0, p1, p2}, Landroidx/databinding/adapters/AdapterViewBindingAdapter;->setSelectedItemPosition(Landroid/widget/AdapterView;ILandroid/widget/Adapter;)V
 
     return-void

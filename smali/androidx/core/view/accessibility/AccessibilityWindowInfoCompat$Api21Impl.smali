@@ -134,6 +134,7 @@
 .method public static obtain()Landroid/view/accessibility/AccessibilityWindowInfo;
     .locals 1
 
+    .line 1
     invoke-static {}, Landroid/view/accessibility/AccessibilityWindowInfo;->obtain()Landroid/view/accessibility/AccessibilityWindowInfo;
 
     move-result-object v0
@@ -144,6 +145,7 @@
 .method public static obtain(Landroid/view/accessibility/AccessibilityWindowInfo;)Landroid/view/accessibility/AccessibilityWindowInfo;
     .locals 0
 
+    .line 2
     invoke-static {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->obtain(Landroid/view/accessibility/AccessibilityWindowInfo;)Landroid/view/accessibility/AccessibilityWindowInfo;
 
     move-result-object p0

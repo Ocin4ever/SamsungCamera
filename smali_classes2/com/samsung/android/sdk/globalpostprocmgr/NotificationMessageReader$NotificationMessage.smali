@@ -44,6 +44,7 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
+    .line 5
     invoke-static {p2}, Lcom/samsung/android/sdk/globalpostprocmgr/NotificationMessageReader$NotificationMessage$ACTION;->access$100(I)Lcom/samsung/android/sdk/globalpostprocmgr/NotificationMessageReader$NotificationMessage$ACTION;
 
     move-result-object p2
@@ -56,12 +57,16 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/samsung/android/sdk/globalpostprocmgr/NotificationMessageReader$NotificationMessage$ACTION;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/sdk/globalpostprocmgr/NotificationMessageReader$NotificationMessage;->packageName:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lcom/samsung/android/sdk/globalpostprocmgr/NotificationMessageReader$NotificationMessage;->action:Lcom/samsung/android/sdk/globalpostprocmgr/NotificationMessageReader$NotificationMessage$ACTION;
 
+    .line 4
     iput-object p3, p0, Lcom/samsung/android/sdk/globalpostprocmgr/NotificationMessageReader$NotificationMessage;->trigger:Ljava/lang/String;
 
     return-void

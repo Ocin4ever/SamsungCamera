@@ -175,80 +175,104 @@
 
     invoke-static {v9, v10}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object v1, v0, Landroidx/work/impl/model/WorkSpec;->id:Ljava/lang/String;
 
+    .line 3
     iput-object v2, v0, Landroidx/work/impl/model/WorkSpec;->state:Landroidx/work/WorkInfo$State;
 
+    .line 4
     iput-object v3, v0, Landroidx/work/impl/model/WorkSpec;->workerClassName:Ljava/lang/String;
 
+    .line 5
     iput-object v4, v0, Landroidx/work/impl/model/WorkSpec;->inputMergerClassName:Ljava/lang/String;
 
+    .line 6
     iput-object v5, v0, Landroidx/work/impl/model/WorkSpec;->input:Landroidx/work/Data;
 
+    .line 7
     iput-object v6, v0, Landroidx/work/impl/model/WorkSpec;->output:Landroidx/work/Data;
 
     move-wide/from16 v1, p7
 
+    .line 8
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->initialDelay:J
 
     move-wide/from16 v1, p9
 
+    .line 9
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->intervalDuration:J
 
     move-wide/from16 v1, p11
 
+    .line 10
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->flexDuration:J
 
+    .line 11
     iput-object v7, v0, Landroidx/work/impl/model/WorkSpec;->constraints:Landroidx/work/Constraints;
 
     move/from16 v1, p14
 
+    .line 12
     iput v1, v0, Landroidx/work/impl/model/WorkSpec;->runAttemptCount:I
 
+    .line 13
     iput-object v8, v0, Landroidx/work/impl/model/WorkSpec;->backoffPolicy:Landroidx/work/BackoffPolicy;
 
     move-wide/from16 v1, p16
 
+    .line 14
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->backoffDelayDuration:J
 
     move-wide/from16 v1, p18
 
+    .line 15
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->lastEnqueueTime:J
 
     move-wide/from16 v1, p20
 
+    .line 16
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->minimumRetentionDuration:J
 
     move-wide/from16 v1, p22
 
+    .line 17
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->scheduleRequestedAt:J
 
     move/from16 v1, p24
 
+    .line 18
     iput-boolean v1, v0, Landroidx/work/impl/model/WorkSpec;->expedited:Z
 
+    .line 19
     iput-object v9, v0, Landroidx/work/impl/model/WorkSpec;->outOfQuotaPolicy:Landroidx/work/OutOfQuotaPolicy;
 
     move/from16 v1, p26
 
+    .line 20
     iput v1, v0, Landroidx/work/impl/model/WorkSpec;->periodCount:I
 
     move/from16 v1, p27
 
+    .line 21
     iput v1, v0, Landroidx/work/impl/model/WorkSpec;->generation:I
 
     move-wide/from16 v1, p28
 
+    .line 22
     iput-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->nextScheduleTimeOverride:J
 
     move/from16 v1, p30
 
+    .line 23
     iput v1, v0, Landroidx/work/impl/model/WorkSpec;->nextScheduleTimeOverrideGeneration:I
 
     move/from16 v1, p31
 
+    .line 24
     iput v1, v0, Landroidx/work/impl/model/WorkSpec;->stopReason:I
 
     return-void
@@ -263,6 +287,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 25
     sget-object v1, Landroidx/work/WorkInfo$State;->ENQUEUED:Landroidx/work/WorkInfo$State;
 
     move-object v4, v1
@@ -277,6 +302,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 26
     const-class v1, Landroidx/work/OverwritingInputMerger;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -301,6 +327,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 27
     sget-object v1, Landroidx/work/Data;->EMPTY:Landroidx/work/Data;
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
@@ -317,6 +344,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 28
     sget-object v1, Landroidx/work/Data;->EMPTY:Landroidx/work/Data;
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
@@ -371,6 +399,7 @@
 
     if-eqz v1, :cond_7
 
+    .line 29
     sget-object v1, Landroidx/work/Constraints;->NONE:Landroidx/work/Constraints;
 
     move-object v15, v1
@@ -399,6 +428,7 @@
 
     if-eqz v1, :cond_9
 
+    .line 30
     sget-object v1, Landroidx/work/BackoffPolicy;->EXPONENTIAL:Landroidx/work/BackoffPolicy;
 
     move-object/from16 v17, v1
@@ -481,6 +511,7 @@
 
     if-eqz v2, :cond_f
 
+    .line 31
     sget-object v2, Landroidx/work/OutOfQuotaPolicy;->RUN_AS_NON_EXPEDITED_WORK_REQUEST:Landroidx/work/OutOfQuotaPolicy;
 
     move-object/from16 v28, v2
@@ -589,6 +620,7 @@
 
     move/from16 v33, v0
 
+    .line 32
     invoke-direct/range {v2 .. v33}, Landroidx/work/impl/model/WorkSpec;-><init>(Ljava/lang/String;Landroidx/work/WorkInfo$State;Ljava/lang/String;Ljava/lang/String;Landroidx/work/Data;Landroidx/work/Data;JJJLandroidx/work/Constraints;ILandroidx/work/BackoffPolicy;JJJJZLandroidx/work/OutOfQuotaPolicy;IIJII)V
 
     return-void
@@ -613,12 +645,16 @@
 
     invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 34
     iget-object v4, v0, Landroidx/work/impl/model/WorkSpec;->workerClassName:Ljava/lang/String;
 
+    .line 35
     iget-object v3, v0, Landroidx/work/impl/model/WorkSpec;->state:Landroidx/work/WorkInfo$State;
 
+    .line 36
     iget-object v5, v0, Landroidx/work/impl/model/WorkSpec;->inputMergerClassName:Ljava/lang/String;
 
+    .line 37
     new-instance v7, Landroidx/work/Data;
 
     move-object v6, v7
@@ -627,6 +663,7 @@
 
     invoke-direct {v7, v8}, Landroidx/work/Data;-><init>(Landroidx/work/Data;)V
 
+    .line 38
     new-instance v8, Landroidx/work/Data;
 
     move-object v7, v8
@@ -635,12 +672,16 @@
 
     invoke-direct {v8, v9}, Landroidx/work/Data;-><init>(Landroidx/work/Data;)V
 
+    .line 39
     iget-wide v8, v0, Landroidx/work/impl/model/WorkSpec;->initialDelay:J
 
+    .line 40
     iget-wide v10, v0, Landroidx/work/impl/model/WorkSpec;->intervalDuration:J
 
+    .line 41
     iget-wide v12, v0, Landroidx/work/impl/model/WorkSpec;->flexDuration:J
 
+    .line 42
     new-instance v15, Landroidx/work/Constraints;
 
     move-object v14, v15
@@ -649,50 +690,62 @@
 
     invoke-direct {v15, v1}, Landroidx/work/Constraints;-><init>(Landroidx/work/Constraints;)V
 
+    .line 43
     iget v15, v0, Landroidx/work/impl/model/WorkSpec;->runAttemptCount:I
 
+    .line 44
     iget-object v1, v0, Landroidx/work/impl/model/WorkSpec;->backoffPolicy:Landroidx/work/BackoffPolicy;
 
     move-object/from16 v16, v1
 
     move-object/from16 v35, v2
 
+    .line 45
     iget-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->backoffDelayDuration:J
 
     move-wide/from16 v17, v1
 
+    .line 46
     iget-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->lastEnqueueTime:J
 
     move-wide/from16 v19, v1
 
+    .line 47
     iget-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->minimumRetentionDuration:J
 
     move-wide/from16 v21, v1
 
+    .line 48
     iget-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->scheduleRequestedAt:J
 
     move-wide/from16 v23, v1
 
+    .line 49
     iget-boolean v1, v0, Landroidx/work/impl/model/WorkSpec;->expedited:Z
 
     move/from16 v25, v1
 
+    .line 50
     iget-object v1, v0, Landroidx/work/impl/model/WorkSpec;->outOfQuotaPolicy:Landroidx/work/OutOfQuotaPolicy;
 
     move-object/from16 v26, v1
 
+    .line 51
     iget v1, v0, Landroidx/work/impl/model/WorkSpec;->periodCount:I
 
     move/from16 v27, v1
 
+    .line 52
     iget-wide v1, v0, Landroidx/work/impl/model/WorkSpec;->nextScheduleTimeOverride:J
 
     move-wide/from16 v29, v1
 
+    .line 53
     iget v1, v0, Landroidx/work/impl/model/WorkSpec;->nextScheduleTimeOverrideGeneration:I
 
     move/from16 v31, v1
 
+    .line 54
     iget v0, v0, Landroidx/work/impl/model/WorkSpec;->stopReason:I
 
     move/from16 v32, v0
@@ -707,6 +760,7 @@
 
     move-object/from16 v2, v35
 
+    .line 55
     invoke-direct/range {v1 .. v34}, Landroidx/work/impl/model/WorkSpec;-><init>(Ljava/lang/String;Landroidx/work/WorkInfo$State;Ljava/lang/String;Ljava/lang/String;Landroidx/work/Data;Landroidx/work/Data;JJJLandroidx/work/Constraints;ILandroidx/work/BackoffPolicy;JJJJZLandroidx/work/OutOfQuotaPolicy;IIJIIILkotlin/jvm/internal/g;)V
 
     return-void
@@ -779,6 +833,7 @@
 
     const/16 v33, 0x0
 
+    .line 33
     invoke-direct/range {v0 .. v33}, Landroidx/work/impl/model/WorkSpec;-><init>(Ljava/lang/String;Landroidx/work/WorkInfo$State;Ljava/lang/String;Ljava/lang/String;Landroidx/work/Data;Landroidx/work/Data;JJJLandroidx/work/Constraints;ILandroidx/work/BackoffPolicy;JJJJZLandroidx/work/OutOfQuotaPolicy;IIJIIILkotlin/jvm/internal/g;)V
 
     return-void
@@ -2238,25 +2293,31 @@
 
     if-gez v2, :cond_0
 
+    .line 1
     invoke-static {}, Landroidx/work/Logger;->get()Landroidx/work/Logger;
 
     move-result-object v2
 
+    .line 2
     sget-object v3, Landroidx/work/impl/model/WorkSpec;->TAG:Ljava/lang/String;
 
     const-string v4, "Interval duration lesser than minimum allowed value; Changed to 900000"
 
+    .line 3
     invoke-virtual {v2, v3, v4}, Landroidx/work/Logger;->warning(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 4
     :cond_0
     invoke-static {p1, p2, v0, v1}, Lt6/f;->c(JJ)J
 
     move-result-wide v2
 
+    .line 5
     invoke-static {p1, p2, v0, v1}, Lt6/f;->c(JJ)J
 
     move-result-wide p1
 
+    .line 6
     invoke-virtual {p0, v2, v3, p1, p2}, Landroidx/work/impl/model/WorkSpec;->setPeriodic(JJ)V
 
     return-void
@@ -2271,16 +2332,20 @@
 
     if-gez v2, :cond_0
 
+    .line 7
     invoke-static {}, Landroidx/work/Logger;->get()Landroidx/work/Logger;
 
     move-result-object v2
 
+    .line 8
     sget-object v3, Landroidx/work/impl/model/WorkSpec;->TAG:Ljava/lang/String;
 
     const-string v4, "Interval duration lesser than minimum allowed value; Changed to 900000"
 
+    .line 9
     invoke-virtual {v2, v3, v4}, Landroidx/work/Logger;->warning(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 10
     :cond_0
     invoke-static {p1, p2, v0, v1}, Lt6/f;->c(JJ)J
 
@@ -2294,16 +2359,20 @@
 
     if-gez v0, :cond_1
 
+    .line 11
     invoke-static {}, Landroidx/work/Logger;->get()Landroidx/work/Logger;
 
     move-result-object v0
 
+    .line 12
     sget-object v1, Landroidx/work/impl/model/WorkSpec;->TAG:Ljava/lang/String;
 
     const-string v2, "Flex duration lesser than minimum allowed value; Changed to 300000"
 
+    .line 13
     invoke-virtual {v0, v1, v2}, Landroidx/work/Logger;->warning(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 14
     :cond_1
     iget-wide v0, p0, Landroidx/work/impl/model/WorkSpec;->intervalDuration:J
 
@@ -2311,12 +2380,15 @@
 
     if-lez v0, :cond_2
 
+    .line 15
     invoke-static {}, Landroidx/work/Logger;->get()Landroidx/work/Logger;
 
     move-result-object v0
 
+    .line 16
     sget-object v1, Landroidx/work/impl/model/WorkSpec;->TAG:Ljava/lang/String;
 
+    .line 17
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2331,11 +2403,13 @@
 
     move-result-object p1
 
+    .line 18
     invoke-virtual {v0, v1, p1}, Landroidx/work/Logger;->warning(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     const-wide/32 v4, 0x493e0
 
+    .line 19
     iget-wide v6, p0, Landroidx/work/impl/model/WorkSpec;->intervalDuration:J
 
     move-wide v2, p3

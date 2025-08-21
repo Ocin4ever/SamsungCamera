@@ -248,8 +248,10 @@
 .method public changeSideButtonMarginToCenter(I)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->changeLeftButtonMarginToCenter(I)V
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->changeRightButtonMarginToCenter(I)V
 
     return-void
@@ -258,8 +260,10 @@
 .method public changeSideButtonMarginToCenter(II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->changeLeftButtonMarginToCenter(I)V
 
+    .line 2
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->changeRightButtonMarginToCenter(I)V
 
     return-void
@@ -1192,6 +1196,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->performShowView(IZ)V
 
     return-void
@@ -1204,6 +1209,7 @@
 
     move v1, v0
 
+    .line 2
     :goto_0
     iget-object v2, p0, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->mViewArray:Landroid/util/SparseArray;
 
@@ -1213,6 +1219,7 @@
 
     if-ge v1, v2, :cond_4
 
+    .line 3
     iget-object v2, p0, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->mViewArray:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->keyAt(I)I
@@ -1249,6 +1256,7 @@
 
     if-eqz v2, :cond_3
 
+    .line 4
     iget-object v2, p0, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->mViewArray:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -1263,6 +1271,7 @@
 
     check-cast v2, Landroid/view/View;
 
+    .line 5
     invoke-virtual {v2}, Landroid/view/View;->isEnabled()Z
 
     move-result v3
@@ -1279,6 +1288,7 @@
     :goto_1
     if-eqz p2, :cond_2
 
+    .line 6
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v4
@@ -1290,10 +1300,13 @@
     :cond_1
     const/4 v4, 0x0
 
+    .line 7
     invoke-virtual {v2, v4}, Landroid/view/View;->setAlpha(F)V
 
+    .line 8
     invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
 
+    .line 9
     invoke-virtual {v2}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v2
@@ -1308,6 +1321,7 @@
 
     goto :goto_3
 
+    .line 10
     :cond_2
     :goto_2
     invoke-virtual {v2}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1316,8 +1330,10 @@
 
     invoke-virtual {v4}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
+    .line 11
     invoke-virtual {v2, v3}, Landroid/view/View;->setAlpha(F)V
 
+    .line 12
     invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
 
     :cond_3
@@ -1454,6 +1470,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->setCenterButtonEnabled(ZI)V
 
     return-void
@@ -1462,6 +1479,7 @@
 .method public setCenterButtonEnabled(ZI)V
     .locals 4
 
+    .line 2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->getCenterButton()Lcom/sec/android/app/camera/layer/keyscreen/centerbutton/CenterButtonView;
 
     move-result-object v0
@@ -1474,6 +1492,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->getCenterButton()Lcom/sec/android/app/camera/layer/keyscreen/centerbutton/CenterButtonView;
 
@@ -1481,6 +1500,7 @@
 
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/centerbutton/CenterButtonView;->setEnabled(Z)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->getCenterButton()Lcom/sec/android/app/camera/layer/keyscreen/centerbutton/CenterButtonView;
 
     move-result-object v0
@@ -1500,6 +1520,7 @@
     :cond_1
     const v0, 0x3ee66666    # 0.45f
 
+    .line 5
     :goto_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->getCenterButton()Lcom/sec/android/app/camera/layer/keyscreen/centerbutton/CenterButtonView;
 
@@ -1529,6 +1550,7 @@
 
     invoke-virtual {p2, v0}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
+    .line 6
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/KeyScreenLayerContract$Presenter;
 
     invoke-interface {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/KeyScreenLayerContract$Presenter;->onCenterButtonEnabled(Z)V
@@ -1542,6 +1564,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/keyscreen/KeyScreenLayerContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->setPresenter(Lcom/sec/android/app/camera/layer/keyscreen/KeyScreenLayerContract$Presenter;)V
@@ -1552,6 +1575,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/layer/keyscreen/KeyScreenLayerContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/KeyScreenLayerContract$Presenter;
 
     return-void
@@ -1676,6 +1700,7 @@
 .method public showView(I)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/KeyScreenLayerContract$Presenter;
 
     const/4 v0, 0x1
@@ -1688,6 +1713,7 @@
 .method public showView(IZ)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/KeyScreenLayerContract$Presenter;
 
     invoke-interface {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/KeyScreenLayerContract$Presenter;->onShowViewRequested(IZ)V
@@ -1838,6 +1864,7 @@
 .method public updateQuickViewThumbnail()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->getLeftButton()Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/LeftButtonView;
 
     move-result-object p0
@@ -1850,6 +1877,7 @@
 .method public updateQuickViewThumbnail(Landroid/graphics/Bitmap;I)V
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->getLeftButton()Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/LeftButtonView;
 
     move-result-object p0
@@ -1872,6 +1900,7 @@
 .method public updateRightButtonContentDescription(I)V
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1898,6 +1927,7 @@
 .method public updateRightButtonContentDescription(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/AbstractKeyScreenView;->getRightButton()Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/RightButtonView;
 
     move-result-object p0

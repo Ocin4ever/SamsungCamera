@@ -1274,6 +1274,7 @@
 .method public static isValidZipCode(Ljava/lang/String;)Z
     .locals 1
 
+    .line 6
     sget-object v0, Landroidx/core/text/util/FindAddress;->sZipCodeRe:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -1292,6 +1293,7 @@
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-static {p1, v0}, Landroidx/core/text/util/FindAddress;->matchState(Ljava/lang/String;I)Ljava/util/regex/MatchResult;
 
     move-result-object p1
@@ -1312,6 +1314,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     invoke-interface {p1}, Ljava/util/regex/MatchResult;->groupCount()I
 
@@ -1322,6 +1325,7 @@
 
     add-int/lit8 v2, v1, -0x1
 
+    .line 2
     invoke-interface {p1, v1}, Ljava/util/regex/MatchResult;->group(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1337,6 +1341,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_2
     :goto_1
     sget-object p1, Landroidx/core/text/util/FindAddress;->sZipCodeRe:Ljava/util/regex/Pattern;
@@ -1355,6 +1360,7 @@
 
     aget-object p1, p1, v1
 
+    .line 4
     invoke-virtual {p1, p0}, Landroidx/core/text/util/FindAddress$ZipRange;->matches(Ljava/lang/String;)Z
 
     move-result p0

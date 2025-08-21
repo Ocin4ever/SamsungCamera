@@ -171,6 +171,7 @@
 .method public readFully([B)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -183,6 +184,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -193,6 +195,7 @@
 .method public readFully([BII)V
     .locals 0
 
+    .line 3
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -205,6 +208,7 @@
     :catch_0
     move-exception p0
 
+    .line 4
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V

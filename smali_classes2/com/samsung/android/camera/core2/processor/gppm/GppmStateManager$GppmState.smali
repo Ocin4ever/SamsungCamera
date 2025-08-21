@@ -131,6 +131,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -139,6 +140,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;ILcom/samsung/android/camera/core2/processor/gppm/j;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager$GppmState;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -180,6 +182,7 @@
 .method public updateState(Landroid/content/Context;Landroid/os/Bundle;)Z
     .locals 1
 
+    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     new-instance p2, Ljava/lang/StringBuilder;

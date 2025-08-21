@@ -13,6 +13,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lp/q;-><init>(Lz/c;Ljava/lang/Object;)V
 
     return-void
@@ -21,14 +22,17 @@
 .method public constructor <init>(Lz/c;Ljava/lang/Object;)V
     .locals 1
 
+    .line 2
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lp/a;-><init>(Ljava/util/List;)V
 
+    .line 3
     invoke-virtual {p0, p1}, Lp/a;->n(Lz/c;)V
 
+    .line 4
     iput-object p2, p0, Lp/q;->i:Ljava/lang/Object;
 
     return-void

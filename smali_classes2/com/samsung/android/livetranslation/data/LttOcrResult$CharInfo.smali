@@ -55,14 +55,17 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 7
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/livetranslation/data/LttOcrResult$CharInfo;->charString:Ljava/lang/String;
 
+    .line 8
     const-class v0, Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -77,6 +80,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/livetranslation/data/LttOcrResult$CharInfo;->rect:Landroid/graphics/Rect;
 
+    .line 9
     sget-object v0, Landroid/graphics/Point;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
@@ -87,6 +91,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/livetranslation/data/LttOcrResult$CharInfo;->poly:[Landroid/graphics/Point;
 
+    .line 10
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result p1
@@ -109,16 +114,21 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/graphics/Rect;[Landroid/graphics/Point;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/livetranslation/data/LttOcrResult$CharInfo;->charString:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lcom/samsung/android/livetranslation/data/LttOcrResult$CharInfo;->rect:Landroid/graphics/Rect;
 
+    .line 4
     iput-object p3, p0, Lcom/samsung/android/livetranslation/data/LttOcrResult$CharInfo;->poly:[Landroid/graphics/Point;
 
     const/4 p1, 0x0
 
+    .line 5
     iput-boolean p1, p0, Lcom/samsung/android/livetranslation/data/LttOcrResult$CharInfo;->isLinked:Z
 
     return-void

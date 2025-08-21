@@ -55,22 +55,28 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/samsung/android/sdk/scs/ai/language/service/GenericRunnable;
 
     iget-object v1, p0, Lcom/samsung/android/sdk/scs/ai/language/Generic;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/GenericServiceExecutor;
 
     invoke-direct {v0, v1}, Lcom/samsung/android/sdk/scs/ai/language/service/GenericRunnable;-><init>(Lcom/samsung/android/sdk/scs/ai/language/service/GenericServiceExecutor;)V
 
+    .line 3
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/service/GenericRunnable;->setAppInfo(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;)V
 
+    .line 4
     invoke-virtual {v0, p2}, Lcom/samsung/android/sdk/scs/ai/language/service/GenericRunnable;->setInputText(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p3}, Lcom/samsung/android/sdk/scs/ai/language/service/GenericRunnable;->setHyperParam(Ljava/lang/String;)V
 
+    .line 6
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/language/Generic;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/GenericServiceExecutor;
 
     invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 7
     invoke-virtual {v0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;->getTask()Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0
@@ -96,10 +102,12 @@
         }
     .end annotation
 
+    .line 8
     new-instance v0, Lcom/samsung/android/sdk/scs/ai/language/service/GenericRunnable2;
 
     iget-object v1, p0, Lcom/samsung/android/sdk/scs/ai/language/Generic;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/GenericServiceExecutor;
 
+    .line 9
     invoke-virtual {p1}, Lcom/samsung/android/sdk/scs/ai/language/AppInfo;->isStreamingMode()Z
 
     move-result v2
@@ -120,18 +128,24 @@
     :goto_0
     invoke-direct {v0, v1, v2}, Lcom/samsung/android/sdk/scs/ai/language/service/GenericRunnable2;-><init>(Lcom/samsung/android/sdk/scs/ai/language/service/GenericServiceExecutor;Lcom/samsung/android/sdk/scs/base/tasks/TaskCompletionSource;)V
 
+    .line 10
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/scs/ai/language/service/GenericRunnable2;->setAppInfo(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;)V
 
+    .line 11
     invoke-virtual {v0, p2}, Lcom/samsung/android/sdk/scs/ai/language/service/GenericRunnable2;->setInputText(Ljava/lang/String;)V
 
+    .line 12
     invoke-virtual {v0, p3}, Lcom/samsung/android/sdk/scs/ai/language/service/GenericRunnable2;->setHyperParam(Ljava/lang/String;)V
 
+    .line 13
     invoke-virtual {v0, p4}, Lcom/samsung/android/sdk/scs/ai/language/service/GenericRunnable2;->setExtraPrompt(Ljava/util/Map;)V
 
+    .line 14
     iget-object p0, p0, Lcom/samsung/android/sdk/scs/ai/language/Generic;->mServiceExecutor:Lcom/samsung/android/sdk/scs/ai/language/service/GenericServiceExecutor;
 
     invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 15
     invoke-virtual {v0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;->getTask()Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0
@@ -155,6 +169,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, p1, p2}, Lcom/samsung/android/sdk/scs/ai/language/Generic;->generic(Lcom/samsung/android/sdk/scs/ai/language/AppInfo;Ljava/lang/String;Ljava/lang/String;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
     move-result-object p0

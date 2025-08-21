@@ -45,8 +45,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 2
     new-instance p1, Ljava/util/EnumMap;
 
     const-class p2, Lcom/sec/android/app/camera/interfaces/MenuLayerManager$MenuId;
@@ -55,6 +57,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/menu/MenuLayerView;->mMenus:Ljava/util/EnumMap;
 
+    .line 3
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,8 +90,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 5
     new-instance p1, Ljava/util/EnumMap;
 
     const-class p2, Lcom/sec/android/app/camera/interfaces/MenuLayerManager$MenuId;
@@ -97,6 +102,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/menu/MenuLayerView;->mMenus:Ljava/util/EnumMap;
 
+    .line 6
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -463,6 +469,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/sec/android/app/camera/layer/menu/MenuLayerView;->hideMenu(Lcom/sec/android/app/camera/interfaces/MenuLayerManager$MenuId;Landroid/animation/Animator;)V
 
     return-void
@@ -471,6 +478,7 @@
 .method public hideMenu(Lcom/sec/android/app/camera/interfaces/MenuLayerManager$MenuId;Landroid/animation/Animator;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/menu/MenuLayerView;->mHandler:Lcom/sec/android/app/camera/layer/menu/MenuLayerView$MenuHandler;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/menu/MenuLayerView$MenuHandler;->hideMenu(Lcom/sec/android/app/camera/interfaces/MenuLayerManager$MenuId;)V
@@ -604,6 +612,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/menu/MenuLayerContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/menu/MenuLayerView;->setPresenter(Lcom/sec/android/app/camera/layer/menu/MenuLayerContract$Presenter;)V
@@ -614,6 +623,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/layer/menu/MenuLayerContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/menu/MenuLayerView;->mPresenter:Lcom/sec/android/app/camera/layer/menu/MenuLayerContract$Presenter;
 
     return-void

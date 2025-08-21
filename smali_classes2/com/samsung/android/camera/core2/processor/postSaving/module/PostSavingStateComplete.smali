@@ -101,6 +101,7 @@
         }
     .end annotation
 
+    .line 1
     const/4 p0, 0x0
 
     return p0
@@ -122,6 +123,7 @@
         }
     .end annotation
 
+    .line 2
     const/4 p0, 0x0
 
     return p0

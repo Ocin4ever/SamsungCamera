@@ -141,8 +141,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -155,14 +157,17 @@
 .method public constructor <init>(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;)V
     .locals 6
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/motion/widget/KeyFrames;->mFramesMap:Ljava/util/HashMap;
 
+    .line 5
     :try_start_0
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
@@ -188,6 +193,7 @@
     :cond_0
     const-string v0, "KeyFrameSet"
 
+    .line 6
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -200,11 +206,13 @@
 
     return-void
 
+    .line 7
     :cond_1
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 8
     sget-object v2, Landroidx/constraintlayout/motion/widget/KeyFrames;->sKeyMakers:Ljava/util/HashMap;
 
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -216,6 +224,7 @@
 
     if-eqz v2, :cond_3
 
+    .line 9
     :try_start_1
     sget-object v2, Landroidx/constraintlayout/motion/widget/KeyFrames;->sKeyMakers:Ljava/util/HashMap;
 
@@ -231,6 +240,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 10
     invoke-virtual {v2, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -239,6 +249,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 11
     :try_start_2
     invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
@@ -246,6 +257,7 @@
 
     invoke-virtual {v0, p1, v1}, Landroidx/constraintlayout/motion/widget/Key;->load(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 12
     invoke-virtual {p0, v0}, Landroidx/constraintlayout/motion/widget/KeyFrames;->addKey(Landroidx/constraintlayout/motion/widget/Key;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -257,6 +269,7 @@
 
     goto :goto_1
 
+    .line 13
     :cond_2
     :try_start_3
     new-instance v2, Ljava/lang/NullPointerException;
@@ -300,6 +313,7 @@
 
     const-string v3, "unable to create "
 
+    .line 14
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_2
@@ -310,6 +324,7 @@
     :cond_3
     const-string v2, "CustomAttribute"
 
+    .line 15
     invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
@@ -318,10 +333,12 @@
 
     if-eqz v1, :cond_5
 
+    .line 16
     iget-object v0, v1, Landroidx/constraintlayout/motion/widget/Key;->mCustomConstraints:Ljava/util/HashMap;
 
     if-eqz v0, :cond_5
 
+    .line 17
     invoke-static {p1, p2, v0}, Landroidx/constraintlayout/widget/ConstraintAttribute;->parse(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Ljava/util/HashMap;)V
 
     goto :goto_3
@@ -329,6 +346,7 @@
     :cond_4
     const-string v2, "CustomMethod"
 
+    .line 18
     invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -337,12 +355,15 @@
 
     if-eqz v1, :cond_5
 
+    .line 19
     iget-object v0, v1, Landroidx/constraintlayout/motion/widget/Key;->mCustomConstraints:Ljava/util/HashMap;
 
     if-eqz v0, :cond_5
 
+    .line 20
     invoke-static {p1, p2, v0}, Landroidx/constraintlayout/widget/ConstraintAttribute;->parse(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Ljava/util/HashMap;)V
 
+    .line 21
     :cond_5
     :goto_3
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -357,6 +378,7 @@
     :catch_2
     move-exception p0
 
+    .line 22
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_4
@@ -364,6 +386,7 @@
     :catch_3
     move-exception p0
 
+    .line 23
     invoke-virtual {p0}, Lorg/xmlpull/v1/XmlPullParserException;->printStackTrace()V
 
     :cond_6

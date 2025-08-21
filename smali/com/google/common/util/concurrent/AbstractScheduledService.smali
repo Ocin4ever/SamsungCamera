@@ -95,6 +95,7 @@
 .method public final awaitRunning()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractScheduledService;->delegate:Lcom/google/common/util/concurrent/AbstractService;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractService;->awaitRunning()V
@@ -105,6 +106,7 @@
 .method public final awaitRunning(JLjava/util/concurrent/TimeUnit;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractScheduledService;->delegate:Lcom/google/common/util/concurrent/AbstractService;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/common/util/concurrent/AbstractService;->awaitRunning(JLjava/util/concurrent/TimeUnit;)V
@@ -115,6 +117,7 @@
 .method public final awaitTerminated()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractScheduledService;->delegate:Lcom/google/common/util/concurrent/AbstractService;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractService;->awaitTerminated()V
@@ -125,6 +128,7 @@
 .method public final awaitTerminated(JLjava/util/concurrent/TimeUnit;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractScheduledService;->delegate:Lcom/google/common/util/concurrent/AbstractService;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/common/util/concurrent/AbstractService;->awaitTerminated(JLjava/util/concurrent/TimeUnit;)V

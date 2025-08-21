@@ -64,6 +64,7 @@
 .method public constructor <init>()V
     .locals 16
 
+    .line 1
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -104,32 +105,46 @@
 .method public constructor <init>(ILandroid/view/SurfaceControlViewHost$SurfacePackage;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;ZLjava/lang/String;Landroid/os/Bundle;Ljava/lang/String;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput p1, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->revision:I
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->surfacePackage:Landroid/view/SurfaceControlViewHost$SurfacePackage;
 
+    .line 5
     iput-object p3, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->itemId:Ljava/lang/String;
 
+    .line 6
     iput-object p4, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->dataId:Ljava/lang/String;
 
+    .line 7
     iput-object p5, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->viewId:Ljava/lang/Integer;
 
+    .line 8
     iput-object p6, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->width:Ljava/lang/Integer;
 
+    .line 9
     iput-object p7, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->height:Ljava/lang/Integer;
 
+    .line 10
     iput-object p8, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->actionId:Ljava/lang/Integer;
 
+    .line 11
     iput-object p9, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->cause:Ljava/lang/String;
 
+    .line 12
     iput-boolean p10, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->isValid:Z
 
+    .line 13
     iput-object p11, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->errorMessage:Ljava/lang/String;
 
+    .line 14
     iput-object p12, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->extras:Landroid/os/Bundle;
 
+    .line 15
     iput-object p13, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;->actionUrl:Ljava/lang/String;
 
     return-void
@@ -322,6 +337,7 @@
 
     move-object/from16 p13, v3
 
+    .line 16
     invoke-direct/range {p0 .. p13}, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;-><init>(ILandroid/view/SurfaceControlViewHost$SurfacePackage;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;ZLjava/lang/String;Landroid/os/Bundle;Ljava/lang/String;)V
 
     return-void
@@ -336,10 +352,12 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 17
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
+    .line 18
     const-class v1, Landroid/view/SurfaceControlViewHost$SurfacePackage;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -354,14 +372,17 @@
 
     check-cast v4, Landroid/view/SurfaceControlViewHost$SurfacePackage;
 
+    .line 19
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
+    .line 20
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v6
 
+    .line 21
     sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -387,6 +408,7 @@
     :cond_0
     move-object v7, v8
 
+    .line 22
     :goto_0
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -409,6 +431,7 @@
     :cond_1
     move-object v9, v8
 
+    .line 23
     :goto_1
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -431,6 +454,7 @@
     :cond_2
     move-object v10, v8
 
+    .line 24
     :goto_2
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -451,11 +475,13 @@
     :cond_3
     move-object v1, v8
 
+    .line 25
     :goto_3
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v11
 
+    .line 26
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v2
@@ -472,10 +498,12 @@
     :goto_4
     move v12, v2
 
+    .line 27
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v13
 
+    .line 28
     const-class v2, Landroid/os/Bundle;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -486,6 +514,7 @@
 
     move-result-object v14
 
+    .line 29
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v15
@@ -498,6 +527,7 @@
 
     move-object v10, v1
 
+    .line 30
     invoke-direct/range {v2 .. v15}, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SuggestionViewResponse;-><init>(ILandroid/view/SurfaceControlViewHost$SurfacePackage;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;ZLjava/lang/String;Landroid/os/Bundle;Ljava/lang/String;)V
 
     return-void

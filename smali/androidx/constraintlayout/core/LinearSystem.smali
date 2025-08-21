@@ -431,6 +431,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, v0}, Landroidx/constraintlayout/core/LinearSystem;->addSingleError(Landroidx/constraintlayout/core/ArrayRow;II)V
 
     return-void
@@ -1902,6 +1903,7 @@
 .method public addEquality(Landroidx/constraintlayout/core/SolverVariable;Landroidx/constraintlayout/core/SolverVariable;II)Landroidx/constraintlayout/core/ArrayRow;
     .locals 3
 
+    .line 1
     sget-boolean v0, Landroidx/constraintlayout/core/LinearSystem;->USE_BASIC_SYNONYMS:Z
 
     const/16 v1, 0x8
@@ -1920,6 +1922,7 @@
 
     if-ne v0, v2, :cond_0
 
+    .line 2
     iget p2, p2, Landroidx/constraintlayout/core/SolverVariable;->computedValue:F
 
     int-to-float p3, p3
@@ -1932,17 +1935,21 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroidx/constraintlayout/core/LinearSystem;->createRow()Landroidx/constraintlayout/core/ArrayRow;
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v0, p1, p2, p3}, Landroidx/constraintlayout/core/ArrayRow;->createRowEquals(Landroidx/constraintlayout/core/SolverVariable;Landroidx/constraintlayout/core/SolverVariable;I)Landroidx/constraintlayout/core/ArrayRow;
 
     if-eq p4, v1, :cond_1
 
+    .line 5
     invoke-virtual {v0, p0, p4}, Landroidx/constraintlayout/core/ArrayRow;->addError(Landroidx/constraintlayout/core/LinearSystem;I)Landroidx/constraintlayout/core/ArrayRow;
 
+    .line 6
     :cond_1
     invoke-virtual {p0, v0}, Landroidx/constraintlayout/core/LinearSystem;->addConstraint(Landroidx/constraintlayout/core/ArrayRow;)V
 
@@ -1952,6 +1959,7 @@
 .method public addEquality(Landroidx/constraintlayout/core/SolverVariable;I)V
     .locals 5
 
+    .line 7
     sget-boolean v0, Landroidx/constraintlayout/core/LinearSystem;->USE_BASIC_SYNONYMS:Z
 
     const/4 v1, -0x1
@@ -1966,10 +1974,12 @@
 
     int-to-float p2, p2
 
+    .line 8
     invoke-virtual {p1, p0, p2}, Landroidx/constraintlayout/core/SolverVariable;->setFinalValue(Landroidx/constraintlayout/core/LinearSystem;F)V
 
     const/4 v0, 0x0
 
+    .line 9
     :goto_0
     iget v1, p0, Landroidx/constraintlayout/core/LinearSystem;->mVariablesID:I
 
@@ -1977,6 +1987,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 10
     iget-object v1, p0, Landroidx/constraintlayout/core/LinearSystem;->mCache:Landroidx/constraintlayout/core/Cache;
 
     iget-object v1, v1, Landroidx/constraintlayout/core/Cache;->mIndexedVariables:[Landroidx/constraintlayout/core/SolverVariable;
@@ -1985,6 +1996,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 11
     iget-boolean v3, v1, Landroidx/constraintlayout/core/SolverVariable;->isSynonym:Z
 
     if-eqz v3, :cond_0
@@ -1995,6 +2007,7 @@
 
     if-ne v3, v4, :cond_0
 
+    .line 12
     iget v3, v1, Landroidx/constraintlayout/core/SolverVariable;->synonymDelta:F
 
     add-float/2addr v3, p2
@@ -2009,25 +2022,30 @@
     :cond_1
     return-void
 
+    .line 13
     :cond_2
     iget v0, p1, Landroidx/constraintlayout/core/SolverVariable;->definitionId:I
 
     if-eq v0, v1, :cond_5
 
+    .line 14
     iget-object v1, p0, Landroidx/constraintlayout/core/LinearSystem;->mRows:[Landroidx/constraintlayout/core/ArrayRow;
 
     aget-object v0, v1, v0
 
+    .line 15
     iget-boolean v1, v0, Landroidx/constraintlayout/core/ArrayRow;->isSimpleDefinition:Z
 
     if-eqz v1, :cond_3
 
     int-to-float p0, p2
 
+    .line 16
     iput p0, v0, Landroidx/constraintlayout/core/ArrayRow;->constantValue:F
 
     goto :goto_1
 
+    .line 17
     :cond_3
     iget-object v1, v0, Landroidx/constraintlayout/core/ArrayRow;->variables:Landroidx/constraintlayout/core/ArrayRow$ArrayRowVariables;
 
@@ -2037,32 +2055,40 @@
 
     if-nez v1, :cond_4
 
+    .line 18
     iput-boolean v2, v0, Landroidx/constraintlayout/core/ArrayRow;->isSimpleDefinition:Z
 
     int-to-float p0, p2
 
+    .line 19
     iput p0, v0, Landroidx/constraintlayout/core/ArrayRow;->constantValue:F
 
     goto :goto_1
 
+    .line 20
     :cond_4
     invoke-virtual {p0}, Landroidx/constraintlayout/core/LinearSystem;->createRow()Landroidx/constraintlayout/core/ArrayRow;
 
     move-result-object v0
 
+    .line 21
     invoke-virtual {v0, p1, p2}, Landroidx/constraintlayout/core/ArrayRow;->createRowEquals(Landroidx/constraintlayout/core/SolverVariable;I)Landroidx/constraintlayout/core/ArrayRow;
 
+    .line 22
     invoke-virtual {p0, v0}, Landroidx/constraintlayout/core/LinearSystem;->addConstraint(Landroidx/constraintlayout/core/ArrayRow;)V
 
     goto :goto_1
 
+    .line 23
     :cond_5
     invoke-virtual {p0}, Landroidx/constraintlayout/core/LinearSystem;->createRow()Landroidx/constraintlayout/core/ArrayRow;
 
     move-result-object v0
 
+    .line 24
     invoke-virtual {v0, p1, p2}, Landroidx/constraintlayout/core/ArrayRow;->createRowDefinition(Landroidx/constraintlayout/core/SolverVariable;I)Landroidx/constraintlayout/core/ArrayRow;
 
+    .line 25
     invoke-virtual {p0, v0}, Landroidx/constraintlayout/core/LinearSystem;->addConstraint(Landroidx/constraintlayout/core/ArrayRow;)V
 
     :goto_1
@@ -2233,10 +2259,12 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p0, p3, v0}, Landroidx/constraintlayout/core/LinearSystem;->createErrorVariable(ILjava/lang/String;)Landroidx/constraintlayout/core/SolverVariable;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p1, p0, p2}, Landroidx/constraintlayout/core/ArrayRow;->addSingleError(Landroidx/constraintlayout/core/SolverVariable;I)Landroidx/constraintlayout/core/ArrayRow;
 
     return-void

@@ -172,8 +172,10 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;Landroid/view/View;I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/databinding/BaseObservable;-><init>()V
 
+    .line 2
     new-instance v0, Landroidx/databinding/ViewDataBinding$7;
 
     invoke-direct {v0, p0}, Landroidx/databinding/ViewDataBinding$7;-><init>(Landroidx/databinding/ViewDataBinding;)V
@@ -182,34 +184,43 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Landroidx/databinding/ViewDataBinding;->mPendingRebind:Z
 
+    .line 4
     iput-boolean v0, p0, Landroidx/databinding/ViewDataBinding;->mRebindHalted:Z
 
+    .line 5
     iput-object p1, p0, Landroidx/databinding/ViewDataBinding;->mBindingComponent:Landroidx/databinding/DataBindingComponent;
 
+    .line 6
     new-array p1, p3, [Landroidx/databinding/WeakListener;
 
     iput-object p1, p0, Landroidx/databinding/ViewDataBinding;->mLocalFieldObservers:[Landroidx/databinding/WeakListener;
 
+    .line 7
     iput-object p2, p0, Landroidx/databinding/ViewDataBinding;->mRoot:Landroid/view/View;
 
+    .line 8
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
+    .line 9
     sget-boolean p1, Landroidx/databinding/ViewDataBinding;->USE_CHOREOGRAPHER:Z
 
     if-eqz p1, :cond_0
 
+    .line 10
     invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/databinding/ViewDataBinding;->mChoreographer:Landroid/view/Choreographer;
 
+    .line 11
     new-instance p1, Landroidx/databinding/ViewDataBinding$8;
 
     invoke-direct {p1, p0}, Landroidx/databinding/ViewDataBinding$8;-><init>(Landroidx/databinding/ViewDataBinding;)V
@@ -221,8 +232,10 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 12
     iput-object p1, p0, Landroidx/databinding/ViewDataBinding;->mFrameCallback:Landroid/view/Choreographer$FrameCallback;
 
+    .line 13
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -236,6 +249,7 @@
     :goto_0
     return-void
 
+    .line 14
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -249,6 +263,7 @@
 .method public constructor <init>(Ljava/lang/Object;Landroid/view/View;I)V
     .locals 0
 
+    .line 15
     invoke-static {p1}, Landroidx/databinding/ViewDataBinding;->checkAndCastToBindingComponent(Ljava/lang/Object;)Landroidx/databinding/DataBindingComponent;
 
     move-result-object p1
@@ -695,12 +710,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 5
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 6
     :cond_0
     aget-byte p0, p0, p1
 
@@ -720,12 +737,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 9
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 10
     :cond_0
     aget-char p0, p0, p1
 
@@ -745,12 +764,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 17
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 18
     :cond_0
     aget-wide p0, p0, p1
 
@@ -770,12 +791,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 15
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 16
     :cond_0
     aget p0, p0, p1
 
@@ -795,12 +818,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 11
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 12
     :cond_0
     aget p0, p0, p1
 
@@ -820,12 +845,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 13
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 14
     :cond_0
     aget-wide p0, p0, p1
 
@@ -852,12 +879,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 1
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     aget-object p0, p0, p1
 
@@ -877,12 +906,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 7
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 8
     :cond_0
     aget-short p0, p0, p1
 
@@ -902,12 +933,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 3
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 4
     :cond_0
     aget-boolean p0, p0, p1
 
@@ -929,6 +962,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {p0, p1}, Landroid/util/SparseIntArray;->get(I)I
 
@@ -952,6 +986,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     invoke-virtual {p0, p1}, Landroid/util/SparseLongArray;->get(I)J
 
@@ -987,6 +1022,7 @@
     :cond_0
     int-to-long v0, p1
 
+    .line 4
     invoke-virtual {p0, v0, v1}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
 
     move-result-object p0
@@ -1018,6 +1054,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1053,6 +1090,7 @@
     :cond_0
     int-to-long v0, p1
 
+    .line 5
     invoke-virtual {p0, v0, v1}, Landroidx/collection/LongSparseArray;->get(J)Ljava/lang/Object;
 
     move-result-object p0
@@ -1082,6 +1120,7 @@
 
     if-ltz p1, :cond_1
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -1090,6 +1129,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1113,6 +1153,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p0, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
 
@@ -1205,6 +1246,7 @@
 
     move-object/from16 v8, p4
 
+    .line 6
     invoke-static/range {p1 .. p1}, Landroidx/databinding/ViewDataBinding;->getBinding(Landroid/view/View;)Landroidx/databinding/ViewDataBinding;
 
     move-result-object v1
@@ -1213,11 +1255,13 @@
 
     return-void
 
+    .line 7
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 8
     instance-of v2, v1, Ljava/lang/String;
 
     if-eqz v2, :cond_1
@@ -1240,6 +1284,7 @@
 
     if-eqz v1, :cond_5
 
+    .line 9
     invoke-virtual {v1, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v3
@@ -1248,6 +1293,7 @@
 
     const/16 v3, 0x5f
 
+    .line 10
     invoke-virtual {v1, v3}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v3
@@ -1256,20 +1302,24 @@
 
     add-int/2addr v3, v11
 
+    .line 11
     invoke-static {v1, v3}, Landroidx/databinding/ViewDataBinding;->isNumeric(Ljava/lang/String;I)Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
+    .line 12
     invoke-static {v1, v3}, Landroidx/databinding/ViewDataBinding;->parseTagInt(Ljava/lang/String;I)I
 
     move-result v1
 
+    .line 13
     aget-object v3, p2, v1
 
     if-nez v3, :cond_2
 
+    .line 14
     aput-object v0, p2, v1
 
     :cond_2
@@ -1297,22 +1347,26 @@
 
     const-string v3, "binding_"
 
+    .line 15
     invoke-virtual {v1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_8
 
+    .line 16
     sget v3, Landroidx/databinding/ViewDataBinding;->BINDING_NUMBER_START:I
 
     invoke-static {v1, v3}, Landroidx/databinding/ViewDataBinding;->parseTagInt(Ljava/lang/String;I)I
 
     move-result v1
 
+    .line 17
     aget-object v3, p2, v1
 
     if-nez v3, :cond_6
 
+    .line 18
     aput-object v0, p2, v1
 
     :cond_6
@@ -1335,6 +1389,7 @@
     :goto_2
     if-nez v3, :cond_9
 
+    .line 19
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getId()I
 
     move-result v1
@@ -1343,6 +1398,7 @@
 
     if-eqz v8, :cond_9
 
+    .line 20
     invoke-virtual {v8, v1, v2}, Landroid/util/SparseIntArray;->get(II)I
 
     move-result v1
@@ -1353,17 +1409,21 @@
 
     if-nez v2, :cond_9
 
+    .line 21
     aput-object v0, p2, v1
 
+    .line 22
     :cond_9
     instance-of v1, v0, Landroid/view/ViewGroup;
 
     if-eqz v1, :cond_e
 
+    .line 23
     move-object v13, v0
 
     check-cast v13, Landroid/view/ViewGroup;
 
+    .line 24
     invoke-virtual {v13}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v14
@@ -1375,12 +1435,14 @@
     :goto_3
     if-ge v0, v14, :cond_e
 
+    .line 25
     invoke-virtual {v13, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
     if-ltz v12, :cond_c
 
+    .line 26
     invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v3
@@ -1389,6 +1451,7 @@
 
     if-eqz v3, :cond_c
 
+    .line 27
     invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v3
@@ -1397,12 +1460,14 @@
 
     const-string v4, "_0"
 
+    .line 28
     invoke-virtual {v3, v4}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_c
 
+    .line 29
     invoke-virtual {v3, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v4
@@ -1417,6 +1482,7 @@
 
     if-lez v4, :cond_c
 
+    .line 30
     invoke-static {v3, v1, v7, v12}, Landroidx/databinding/ViewDataBinding;->findIncludeIndex(Ljava/lang/String;ILandroidx/databinding/ViewDataBinding$IncludedLayouts;I)I
 
     move-result v3
@@ -1425,24 +1491,28 @@
 
     add-int/lit8 v1, v3, 0x1
 
+    .line 31
     iget-object v4, v7, Landroidx/databinding/ViewDataBinding$IncludedLayouts;->indexes:[[I
 
     aget-object v4, v4, v12
 
     aget v4, v4, v3
 
+    .line 32
     iget-object v5, v7, Landroidx/databinding/ViewDataBinding$IncludedLayouts;->layoutIds:[[I
 
     aget-object v5, v5, v12
 
     aget v3, v5, v3
 
+    .line 33
     invoke-static {v13, v0}, Landroidx/databinding/ViewDataBinding;->findLastMatching(Landroid/view/ViewGroup;I)I
 
     move-result v5
 
     if-ne v5, v0, :cond_a
 
+    .line 34
     invoke-static {v6, v2, v3}, Landroidx/databinding/DataBindingUtil;->bind(Landroidx/databinding/DataBindingComponent;Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
 
     move-result-object v3
@@ -1462,6 +1532,7 @@
 
     add-int/2addr v5, v11
 
+    .line 35
     new-array v15, v5, [Landroid/view/View;
 
     const/4 v10, 0x0
@@ -1471,6 +1542,7 @@
 
     add-int v11, v0, v10
 
+    .line 36
     invoke-virtual {v13, v11}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v11
@@ -1483,6 +1555,7 @@
 
     goto :goto_4
 
+    .line 37
     :cond_b
     invoke-static {v6, v15, v3}, Landroidx/databinding/DataBindingUtil;->bind(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
 
@@ -1524,6 +1597,7 @@
 
     move-object/from16 v4, p4
 
+    .line 38
     invoke-static/range {v0 .. v5}, Landroidx/databinding/ViewDataBinding;->mapBindings(Landroidx/databinding/DataBindingComponent;Landroid/view/View;[Ljava/lang/Object;Landroidx/databinding/ViewDataBinding$IncludedLayouts;Landroid/util/SparseIntArray;Z)V
 
     :cond_d
@@ -1548,6 +1622,7 @@
 .method public static mapBindings(Landroidx/databinding/DataBindingComponent;Landroid/view/View;ILandroidx/databinding/ViewDataBinding$IncludedLayouts;Landroid/util/SparseIntArray;)[Ljava/lang/Object;
     .locals 6
 
+    .line 1
     new-array p2, p2, [Ljava/lang/Object;
 
     const/4 v5, 0x1
@@ -1562,6 +1637,7 @@
 
     move-object v4, p4
 
+    .line 2
     invoke-static/range {v0 .. v5}, Landroidx/databinding/ViewDataBinding;->mapBindings(Landroidx/databinding/DataBindingComponent;Landroid/view/View;[Ljava/lang/Object;Landroidx/databinding/ViewDataBinding$IncludedLayouts;Landroid/util/SparseIntArray;Z)V
 
     return-object p2
@@ -1570,17 +1646,20 @@
 .method public static mapBindings(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;ILandroidx/databinding/ViewDataBinding$IncludedLayouts;Landroid/util/SparseIntArray;)[Ljava/lang/Object;
     .locals 7
 
+    .line 3
     new-array p2, p2, [Ljava/lang/Object;
 
     const/4 v0, 0x0
 
     move v6, v0
 
+    .line 4
     :goto_0
     array-length v0, p1
 
     if-ge v6, v0, :cond_0
 
+    .line 5
     aget-object v1, p1, v6
 
     const/4 v5, 0x1
@@ -1606,6 +1685,7 @@
 .method public static parse(Ljava/lang/String;B)B
     .locals 0
 
+    .line 2
     :try_start_0
     invoke-static {p0}, Ljava/lang/Byte;->parseByte(Ljava/lang/String;)B
 
@@ -1624,6 +1704,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 8
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -1635,6 +1716,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 9
     invoke-virtual {p0, p1}, Ljava/lang/String;->charAt(I)C
 
     move-result p0
@@ -1649,6 +1731,7 @@
 .method public static parse(Ljava/lang/String;D)D
     .locals 0
 
+    .line 7
     :try_start_0
     invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
@@ -1665,6 +1748,7 @@
 .method public static parse(Ljava/lang/String;F)F
     .locals 0
 
+    .line 6
     :try_start_0
     invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
@@ -1681,6 +1765,7 @@
 .method public static parse(Ljava/lang/String;I)I
     .locals 0
 
+    .line 4
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1697,6 +1782,7 @@
 .method public static parse(Ljava/lang/String;J)J
     .locals 0
 
+    .line 5
     :try_start_0
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -1713,6 +1799,7 @@
 .method public static parse(Ljava/lang/String;S)S
     .locals 0
 
+    .line 3
     :try_start_0
     invoke-static {p0}, Ljava/lang/Short;->parseShort(Ljava/lang/String;)S
 
@@ -1733,6 +1820,7 @@
 
     return p1
 
+    .line 1
     :cond_0
     invoke-static {p0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
@@ -1807,6 +1895,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Byte;->byteValue()B
 
@@ -1825,6 +1914,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Character;->charValue()C
 
@@ -1843,6 +1933,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Double;->doubleValue()D
 
@@ -1861,6 +1952,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
 
@@ -1879,6 +1971,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -1897,6 +1990,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
@@ -1915,6 +2009,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Short;->shortValue()S
 
@@ -1933,6 +2028,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1978,6 +2074,7 @@
 
     if-ltz p1, :cond_1
 
+    .line 23
     invoke-virtual {p0}, Landroid/util/LongSparseArray;->size()I
 
     move-result v0
@@ -1989,6 +2086,7 @@
     :cond_0
     int-to-long v0, p1
 
+    .line 24
     invoke-virtual {p0, v0, v1, p2}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
     :cond_1
@@ -2012,6 +2110,7 @@
 
     if-ltz p1, :cond_1
 
+    .line 21
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
     move-result v0
@@ -2020,6 +2119,7 @@
 
     goto :goto_0
 
+    .line 22
     :cond_0
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -2035,6 +2135,7 @@
 
     if-ltz p1, :cond_1
 
+    .line 27
     invoke-virtual {p0}, Landroid/util/SparseBooleanArray;->size()I
 
     move-result v0
@@ -2043,6 +2144,7 @@
 
     goto :goto_0
 
+    .line 28
     :cond_0
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
@@ -2058,6 +2160,7 @@
 
     if-ltz p1, :cond_1
 
+    .line 29
     invoke-virtual {p0}, Landroid/util/SparseIntArray;->size()I
 
     move-result v0
@@ -2066,6 +2169,7 @@
 
     goto :goto_0
 
+    .line 30
     :cond_0
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -2081,6 +2185,7 @@
 
     if-ltz p1, :cond_1
 
+    .line 31
     invoke-virtual {p0}, Landroid/util/SparseLongArray;->size()I
 
     move-result v0
@@ -2089,6 +2194,7 @@
 
     goto :goto_0
 
+    .line 32
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Landroid/util/SparseLongArray;->put(IJ)V
 
@@ -2113,6 +2219,7 @@
 
     if-ltz p1, :cond_1
 
+    .line 25
     invoke-virtual {p0}, Landroidx/collection/LongSparseArray;->size()I
 
     move-result v0
@@ -2124,6 +2231,7 @@
     :cond_0
     int-to-long v0, p1
 
+    .line 26
     invoke-virtual {p0, v0, v1, p2}, Landroidx/collection/LongSparseArray;->put(JLjava/lang/Object;)V
 
     :cond_1
@@ -2147,6 +2255,7 @@
 
     if-ltz p1, :cond_1
 
+    .line 19
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -2155,6 +2264,7 @@
 
     goto :goto_0
 
+    .line 20
     :cond_0
     invoke-interface {p0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
@@ -2181,6 +2291,7 @@
 
     return-void
 
+    .line 33
     :cond_0
     invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2194,12 +2305,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 5
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 6
     :cond_0
     aput-byte p2, p0, p1
 
@@ -2215,12 +2328,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 9
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 10
     :cond_0
     aput-char p2, p0, p1
 
@@ -2236,12 +2351,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 17
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 18
     :cond_0
     aput-wide p2, p0, p1
 
@@ -2257,12 +2374,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 15
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 16
     :cond_0
     aput p2, p0, p1
 
@@ -2278,12 +2397,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 11
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 12
     :cond_0
     aput p2, p0, p1
 
@@ -2299,12 +2420,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 13
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 14
     :cond_0
     aput-wide p2, p0, p1
 
@@ -2327,12 +2450,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 1
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     aput-object p2, p0, p1
 
@@ -2348,12 +2473,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 7
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 8
     :cond_0
     aput-short p2, p0, p1
 
@@ -2369,12 +2496,14 @@
 
     if-ltz p1, :cond_1
 
+    .line 3
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 4
     :cond_0
     aput-boolean p2, p0, p1
 
@@ -2803,6 +2932,7 @@
 .method public setRootTag(Landroid/view/View;)V
     .locals 1
 
+    .line 1
     sget v0, Landroidx/databinding/library/R$id;->dataBinding:I
 
     invoke-virtual {p1, v0, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -2813,6 +2943,7 @@
 .method public setRootTag([Landroid/view/View;)V
     .locals 4
 
+    .line 2
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -2822,6 +2953,7 @@
 
     aget-object v2, p1, v1
 
+    .line 3
     sget v3, Landroidx/databinding/library/R$id;->dataBinding:I
 
     invoke-virtual {v2, v3, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
@@ -2925,6 +3057,7 @@
 .method public updateRegistration(ILandroidx/databinding/Observable;)Z
     .locals 1
 
+    .line 7
     sget-object v0, Landroidx/databinding/ViewDataBinding;->CREATE_PROPERTY_LISTENER:Landroidx/databinding/CreateWeakListener;
 
     invoke-virtual {p0, p1, p2, v0}, Landroidx/databinding/ViewDataBinding;->updateRegistration(ILjava/lang/Object;Landroidx/databinding/CreateWeakListener;)Z
@@ -2937,6 +3070,7 @@
 .method public updateRegistration(ILandroidx/databinding/ObservableList;)Z
     .locals 1
 
+    .line 8
     sget-object v0, Landroidx/databinding/ViewDataBinding;->CREATE_LIST_LISTENER:Landroidx/databinding/CreateWeakListener;
 
     invoke-virtual {p0, p1, p2, v0}, Landroidx/databinding/ViewDataBinding;->updateRegistration(ILjava/lang/Object;Landroidx/databinding/CreateWeakListener;)Z
@@ -2949,6 +3083,7 @@
 .method public updateRegistration(ILandroidx/databinding/ObservableMap;)Z
     .locals 1
 
+    .line 9
     sget-object v0, Landroidx/databinding/ViewDataBinding;->CREATE_MAP_LISTENER:Landroidx/databinding/CreateWeakListener;
 
     invoke-virtual {p0, p1, p2, v0}, Landroidx/databinding/ViewDataBinding;->updateRegistration(ILjava/lang/Object;Landroidx/databinding/CreateWeakListener;)Z
@@ -2963,12 +3098,14 @@
 
     if-nez p2, :cond_0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding;->unregisterFrom(I)Z
 
     move-result p0
 
     return p0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/databinding/ViewDataBinding;->mLocalFieldObservers:[Landroidx/databinding/WeakListener;
 
@@ -2978,10 +3115,12 @@
 
     if-nez v0, :cond_1
 
+    .line 3
     invoke-virtual {p0, p1, p2, p3}, Landroidx/databinding/ViewDataBinding;->registerTo(ILjava/lang/Object;Landroidx/databinding/CreateWeakListener;)V
 
     return v1
 
+    .line 4
     :cond_1
     invoke-virtual {v0}, Landroidx/databinding/WeakListener;->getTarget()Ljava/lang/Object;
 
@@ -2993,9 +3132,11 @@
 
     return p0
 
+    .line 5
     :cond_2
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding;->unregisterFrom(I)Z
 
+    .line 6
     invoke-virtual {p0, p1, p2, p3}, Landroidx/databinding/ViewDataBinding;->registerTo(ILjava/lang/Object;Landroidx/databinding/CreateWeakListener;)V
 
     return v1

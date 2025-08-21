@@ -145,6 +145,7 @@
 
     new-array p0, p0, [B
 
+    .line 13
     :goto_0
     invoke-virtual {p1, p0}, Ljava/io/InputStream;->read([B)I
 
@@ -156,6 +157,7 @@
 
     const/4 v1, 0x0
 
+    .line 14
     invoke-virtual {p2, p0, v1, v0}, Ljava/io/OutputStream;->write([BII)V
 
     goto :goto_0
@@ -169,6 +171,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p1, p2}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
@@ -177,11 +180,13 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 2
     :try_start_1
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 3
     new-instance p3, Ljava/io/FileOutputStream;
 
     invoke-direct {p3, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -189,6 +194,7 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 4
     :try_start_2
     invoke-direct {p0, p1, p3}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelLoaderForLocalAssetFile;->copyFile(Ljava/io/InputStream;Ljava/io/OutputStream;)V
     :try_end_2
@@ -197,11 +203,13 @@
 
     if-eqz p1, :cond_0
 
+    .line 5
     :try_start_3
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
 
+    .line 6
     :catch_0
     :cond_0
     :try_start_4
@@ -260,6 +268,7 @@
     :try_start_5
     const-string p1, "LoaderForLocalAssetFile"
 
+    .line 7
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -280,6 +289,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 8
     :try_start_6
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_6
@@ -289,6 +299,7 @@
     :cond_1
     if-eqz p3, :cond_2
 
+    .line 9
     :try_start_7
     invoke-virtual {p3}, Ljava/io/OutputStream;->close()V
     :try_end_7
@@ -306,6 +317,7 @@
     :goto_3
     if-eqz v0, :cond_3
 
+    .line 10
     :try_start_8
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_8
@@ -315,11 +327,13 @@
     :cond_3
     if-eqz p3, :cond_4
 
+    .line 11
     :try_start_9
     invoke-virtual {p3}, Ljava/io/OutputStream;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_8
 
+    .line 12
     :catch_8
     :cond_4
     throw p0

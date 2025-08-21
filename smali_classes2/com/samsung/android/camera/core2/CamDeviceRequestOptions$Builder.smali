@@ -30,8 +30,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
@@ -40,8 +42,10 @@
 
     const/4 v0, 0x0
 
+    .line 4
     iput-boolean v0, p0, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions$Builder;->b:Z
 
+    .line 5
     const-class v1, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions$PictureRequestType;
 
     invoke-static {v1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -50,8 +54,10 @@
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions$Builder;->c:Ljava/util/EnumSet;
 
+    .line 6
     iput-boolean v0, p0, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions$Builder;->d:Z
 
+    .line 7
     iput-boolean v0, p0, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions$Builder;->e:Z
 
     return-void
@@ -60,6 +66,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/n;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions$Builder;-><init>()V
 
     return-void

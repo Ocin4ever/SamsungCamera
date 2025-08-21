@@ -814,6 +814,7 @@
 .method public getEndLine()I
     .locals 2
 
+    .line 5
     iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
     const/high16 v1, -0x80000000
@@ -822,9 +823,11 @@
 
     return v0
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->calculateCachedEnd()V
 
+    .line 7
     iget p0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
     return p0
@@ -833,6 +836,7 @@
 .method public getEndLine(I)I
     .locals 2
 
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
     const/high16 v1, -0x80000000
@@ -841,6 +845,7 @@
 
     return v0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
@@ -852,9 +857,11 @@
 
     return p1
 
+    .line 3
     :cond_1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->calculateCachedEnd()V
 
+    .line 4
     iget p0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
     return p0
@@ -1008,6 +1015,7 @@
 .method public getStartLine()I
     .locals 2
 
+    .line 5
     iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
     const/high16 v1, -0x80000000
@@ -1016,9 +1024,11 @@
 
     return v0
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->calculateCachedStart()V
 
+    .line 7
     iget p0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
     return p0
@@ -1027,6 +1037,7 @@
 .method public getStartLine(I)I
     .locals 2
 
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
     const/high16 v1, -0x80000000
@@ -1035,6 +1046,7 @@
 
     return v0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
@@ -1046,9 +1058,11 @@
 
     return p1
 
+    .line 3
     :cond_1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->calculateCachedStart()V
 
+    .line 4
     iget p0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
     return p0

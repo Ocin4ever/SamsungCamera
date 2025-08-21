@@ -107,60 +107,74 @@
 .method private constructor <init>()V
     .locals 3
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
     new-array v1, v0, [I
 
+    .line 4
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->wdrSensitivity:[I
 
     new-array v1, v0, [J
 
+    .line 5
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->wdrExposureTime:[J
 
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 6
     iput v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->zoomRatio:F
 
     const-wide/16 v1, -0x1
 
+    .line 7
     iput-wide v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->sceneDetectionInfo:J
 
     const/high16 v1, -0x40800000    # -1.0f
 
+    .line 8
     iput v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->noiseIndex:F
 
     new-array v1, v0, [F
 
+    .line 9
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->blackLevel:[F
 
     new-array v1, v0, [F
 
+    .line 10
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->colorCorrectionGains:[F
 
     new-array v1, v0, [D
 
+    .line 11
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->colorCorrectionTransform:[D
 
     new-array v1, v0, [I
 
+    .line 12
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->rawSensorInfo:[I
 
     new-array v1, v0, [I
 
+    .line 13
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->lensShadingMapInfo:[I
 
     new-array v1, v0, [F
 
+    .line 14
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->lensShadingMap:[F
 
     new-array v1, v0, [I
 
+    .line 15
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->sunDetectionInfo:[I
 
     new-array v0, v0, [I
 
+    .line 16
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->specialSceneAe:[I
 
     return-void
@@ -169,70 +183,87 @@
 .method private constructor <init>(Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;)V
     .locals 3
 
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
     new-array v1, v0, [I
 
+    .line 18
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->wdrSensitivity:[I
 
     new-array v1, v0, [J
 
+    .line 19
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->wdrExposureTime:[J
 
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 20
     iput v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->zoomRatio:F
 
     const-wide/16 v1, -0x1
 
+    .line 21
     iput-wide v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->sceneDetectionInfo:J
 
     const/high16 v1, -0x40800000    # -1.0f
 
+    .line 22
     iput v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->noiseIndex:F
 
     new-array v1, v0, [F
 
+    .line 23
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->blackLevel:[F
 
     new-array v1, v0, [F
 
+    .line 24
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->colorCorrectionGains:[F
 
     new-array v1, v0, [D
 
+    .line 25
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->colorCorrectionTransform:[D
 
     new-array v1, v0, [I
 
+    .line 26
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->rawSensorInfo:[I
 
     new-array v1, v0, [I
 
+    .line 27
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->lensShadingMapInfo:[I
 
     new-array v1, v0, [F
 
+    .line 28
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->lensShadingMap:[F
 
     new-array v1, v0, [I
 
+    .line 29
     iput-object v1, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->sunDetectionInfo:[I
 
     new-array v0, v0, [I
 
+    .line 30
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->specialSceneAe:[I
 
+    .line 31
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->liveHdrMode:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->liveHdrMode:I
 
+    .line 32
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->sensitivity:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->sensitivity:I
 
+    .line 33
     iget-object v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->wdrSensitivity:[I
 
     invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
@@ -243,14 +274,17 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->wdrSensitivity:[I
 
+    .line 34
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->brightnessValue:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->brightnessValue:I
 
+    .line 35
     iget-wide v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->exposureTime:J
 
     iput-wide v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->exposureTime:J
 
+    .line 36
     iget-object v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->wdrExposureTime:[J
 
     invoke-virtual {v0}, [J->clone()Ljava/lang/Object;
@@ -261,46 +295,57 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->wdrExposureTime:[J
 
+    .line 37
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->multiFrameEv:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->multiFrameEv:I
 
+    .line 38
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->exposureCompensation:F
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->exposureCompensation:F
 
+    .line 39
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->zoomRatio:F
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->zoomRatio:F
 
+    .line 40
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->gyroState:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->gyroState:I
 
+    .line 41
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->jpegOrientation:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->jpegOrientation:I
 
+    .line 42
     iget-object v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->cameraId:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->cameraId:Ljava/lang/String;
 
+    .line 43
     iget-object v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->sensorName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->sensorName:Ljava/lang/String;
 
+    .line 44
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->faceToneWeight:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->faceToneWeight:I
 
+    .line 45
     iget-wide v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->sceneDetectionInfo:J
 
     iput-wide v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->sceneDetectionInfo:J
 
+    .line 46
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->noiseIndex:F
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->noiseIndex:F
 
+    .line 47
     iget-object v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->blackLevel:[F
 
     invoke-virtual {v0}, [F->clone()Ljava/lang/Object;
@@ -311,14 +356,17 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->blackLevel:[F
 
+    .line 48
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->captureTotalGain:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->captureTotalGain:I
 
+    .line 49
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->drcRatio:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->drcRatio:I
 
+    .line 50
     iget-object v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->colorCorrectionGains:[F
 
     invoke-virtual {v0}, [F->clone()Ljava/lang/Object;
@@ -329,6 +377,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->colorCorrectionGains:[F
 
+    .line 51
     iget-object v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->colorCorrectionTransform:[D
 
     invoke-virtual {v0}, [D->clone()Ljava/lang/Object;
@@ -339,22 +388,27 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->colorCorrectionTransform:[D
 
+    .line 52
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->colorTemperature:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->colorTemperature:I
 
+    .line 53
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->rowStride:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->rowStride:I
 
+    .line 54
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->heightSlice:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->heightSlice:I
 
+    .line 55
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->colorFilterArrangement:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->colorFilterArrangement:I
 
+    .line 56
     iget-object v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->rawSensorInfo:[I
 
     invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
@@ -365,6 +419,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->rawSensorInfo:[I
 
+    .line 57
     iget-object v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->lensShadingMapInfo:[I
 
     invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
@@ -375,6 +430,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->lensShadingMapInfo:[I
 
+    .line 58
     iget-object v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->lensShadingMap:[F
 
     invoke-virtual {v0}, [F->clone()Ljava/lang/Object;
@@ -385,22 +441,27 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->lensShadingMap:[F
 
+    .line 59
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->captureType:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->captureType:I
 
+    .line 60
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->processType:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->processType:I
 
+    .line 61
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->captureEv:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->captureEv:I
 
+    .line 62
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->lensFocusDistance:F
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->lensFocusDistance:F
 
+    .line 63
     new-instance v0, Landroid/graphics/Rect;
 
     iget-object v1, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->cropRegion:Landroid/graphics/Rect;
@@ -409,10 +470,12 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->cropRegion:Landroid/graphics/Rect;
 
+    .line 64
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->cameraType:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->cameraType:I
 
+    .line 65
     iget-object v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->sunDetectionInfo:[I
 
     invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
@@ -423,14 +486,17 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->sunDetectionInfo:[I
 
+    .line 66
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->postRawSensitivityBoost:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->postRawSensitivityBoost:I
 
+    .line 67
     iget v0, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->personalPresetIndex:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->personalPresetIndex:I
 
+    .line 68
     iget-object p1, p1, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;->specialSceneAe:[I
 
     invoke-virtual {p1}, [I->clone()Ljava/lang/Object;
@@ -447,6 +513,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;Lcom/samsung/android/camera/core2/container/d2;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;-><init>(Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;)V
 
     return-void
@@ -455,6 +522,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/container/d2;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/camera/core2/container/ExtraCaptureInfo;-><init>()V
 
     return-void

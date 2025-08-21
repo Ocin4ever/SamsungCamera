@@ -19,6 +19,7 @@
 
     const/16 v0, 0x8
 
+    .line 1
     invoke-direct {p0, v0}, Landroidx/collection/CircularIntArray;-><init>(I)V
 
     return-void
@@ -27,6 +28,7 @@
 .method public constructor <init>(I)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
@@ -37,6 +39,7 @@
 
     if-gt p1, v1, :cond_1
 
+    .line 3
     invoke-static {p1}, Ljava/lang/Integer;->bitCount(I)I
 
     move-result v1
@@ -45,6 +48,7 @@
 
     add-int/lit8 p1, p1, -0x1
 
+    .line 4
     invoke-static {p1}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result p1
@@ -54,14 +58,17 @@
     :cond_0
     add-int/lit8 v0, p1, -0x1
 
+    .line 5
     iput v0, p0, Landroidx/collection/CircularIntArray;->mCapacityBitmask:I
 
+    .line 6
     new-array p1, p1, [I
 
     iput-object p1, p0, Landroidx/collection/CircularIntArray;->mElements:[I
 
     return-void
 
+    .line 7
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -71,6 +78,7 @@
 
     throw p0
 
+    .line 8
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

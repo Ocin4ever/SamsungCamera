@@ -60,6 +60,7 @@
 .method public bridge synthetic computeNext()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap$1;->computeNext()Ljava/util/Map$Entry;
 
     move-result-object p0
@@ -77,6 +78,7 @@
         }
     .end annotation
 
+    .line 2
     iget v0, p0, Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap$1;->index:I
 
     :goto_0
@@ -90,6 +92,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap$1;->this$0:Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap;
 
     invoke-virtual {v1, v0}, Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap;->getValue(I)Ljava/lang/Object;
@@ -98,6 +101,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget-object v1, p0, Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap$1;->this$0:Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap;
 
     iget p0, p0, Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap$1;->index:I
@@ -112,11 +116,13 @@
 
     return-object p0
 
+    .line 5
     :cond_0
     iget v0, p0, Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap$1;->index:I
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractIterator;->endOfData()Ljava/lang/Object;
 

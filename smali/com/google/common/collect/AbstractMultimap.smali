@@ -413,6 +413,7 @@
         }
     .end annotation
 
+    .line 7
     invoke-interface {p1}, Lcom/google/common/collect/Multimap;->entries()Ljava/util/Collection;
 
     move-result-object p1
@@ -436,6 +437,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 8
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -470,8 +472,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     instance-of v0, p2, Ljava/util/Collection;
 
     const/4 v1, 0x1
@@ -480,8 +484,10 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     check-cast p2, Ljava/util/Collection;
 
+    .line 4
     invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
@@ -506,11 +512,13 @@
     :goto_0
     return v1
 
+    .line 5
     :cond_1
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
 
+    .line 6
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0

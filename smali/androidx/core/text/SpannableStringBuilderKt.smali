@@ -184,12 +184,15 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v0
 
+    .line 5
     invoke-interface {p2, p0}, Lq6/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p2
@@ -227,12 +230,15 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v0
 
+    .line 2
     invoke-interface {p2, p0}, Lq6/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     array-length p2, p1
 
     const/4 v1, 0x0

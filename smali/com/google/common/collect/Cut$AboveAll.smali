@@ -80,6 +80,7 @@
         }
     .end annotation
 
+    .line 1
     if-ne p1, p0, :cond_0
 
     const/4 p0, 0x0
@@ -96,6 +97,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/Cut;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Cut$AboveAll;->compareTo(Lcom/google/common/collect/Cut;)I

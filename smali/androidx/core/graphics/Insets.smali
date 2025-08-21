@@ -185,10 +185,12 @@
 
     if-nez p3, :cond_0
 
+    .line 1
     sget-object p0, Landroidx/core/graphics/Insets;->NONE:Landroidx/core/graphics/Insets;
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Landroidx/core/graphics/Insets;
 
@@ -200,6 +202,7 @@
 .method public static of(Landroid/graphics/Rect;)Landroidx/core/graphics/Insets;
     .locals 3
 
+    .line 3
     iget v0, p0, Landroid/graphics/Rect;->left:I
 
     iget v1, p0, Landroid/graphics/Rect;->top:I

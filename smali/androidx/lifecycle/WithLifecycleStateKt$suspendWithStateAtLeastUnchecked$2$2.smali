@@ -54,6 +54,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Landroidx/lifecycle/WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$2$2;->invoke(Ljava/lang/Throwable;)V
@@ -66,6 +67,7 @@
 .method public final invoke(Ljava/lang/Throwable;)V
     .locals 3
 
+    .line 2
     iget-object p1, p0, Landroidx/lifecycle/WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$2$2;->$lifecycleDispatcher:Lx6/d0;
 
     sget-object v0, Li6/h;->a:Li6/h;
@@ -76,6 +78,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p1, p0, Landroidx/lifecycle/WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$2$2;->$lifecycleDispatcher:Lx6/d0;
 
     new-instance v1, Landroidx/lifecycle/WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$2$2$1;
@@ -90,6 +93,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p1, p0, Landroidx/lifecycle/WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$2$2;->$this_suspendWithStateAtLeastUnchecked:Landroidx/lifecycle/Lifecycle;
 

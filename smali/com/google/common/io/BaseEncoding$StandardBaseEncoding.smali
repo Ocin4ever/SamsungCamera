@@ -28,8 +28,10 @@
 .method public constructor <init>(Lcom/google/common/io/BaseEncoding$Alphabet;Ljava/lang/Character;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/io/BaseEncoding;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -40,6 +42,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 4
     invoke-virtual {p2}, Ljava/lang/Character;->charValue()C
 
     move-result v0
@@ -64,8 +67,10 @@
     :goto_1
     const-string v0, "Padding character %s was already in alphabet"
 
+    .line 5
     invoke-static {p1, v0, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 6
     iput-object p2, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;->paddingChar:Ljava/lang/Character;
 
     return-void
@@ -74,6 +79,7 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Character;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/io/BaseEncoding$Alphabet;
 
     invoke-virtual {p2}, Ljava/lang/String;->toCharArray()[C

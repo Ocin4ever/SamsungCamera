@@ -3080,19 +3080,23 @@
 .method public static getSelectableBackDualRecordingV2ResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 8
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackDualRecordingV2UpdateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackDualRecordingV2Resolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     if-nez v1, :cond_2
 
+    .line 3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     invoke-static {}, Lcom/sec/android/app/camera/interfaces/Resolution;->values()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v2
@@ -3110,12 +3114,14 @@
 
     const-string v7, "dual_recording"
 
+    .line 5
     invoke-static {v7, v6}, Lcom/sec/android/app/camera/util/CameraResolution;->isSupportedBackCamcorderResolutionFeature(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
+    .line 6
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -3123,9 +3129,11 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-static {v1}, Lcom/sec/android/app/camera/util/CameraResolution;->sortResolutionList(Ljava/util/ArrayList;)V
 
+    .line 8
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -3134,6 +3142,7 @@
 
     sput-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackDualRecordingV2Resolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
+    .line 9
     :goto_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -3141,6 +3150,7 @@
 
     if-ge v4, v2, :cond_2
 
+    .line 10
     sget-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackDualRecordingV2Resolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3155,6 +3165,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_2
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackDualRecordingV2Resolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -3165,6 +3176,7 @@
     :catchall_0
     move-exception v1
 
+    .line 12
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3175,6 +3187,7 @@
 .method public static getSelectableBackDualRecordingV2ResolutionList(Lcom/sec/android/app/camera/interfaces/AspectRatio;)[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 2
 
+    .line 13
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getSelectableBackDualRecordingV2ResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v0
@@ -3207,19 +3220,23 @@
 .method public static getSelectableBackProVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 8
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackProVideoUpdateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackProVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     if-nez v1, :cond_3
 
+    .line 3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getBackProVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v2
@@ -3235,12 +3252,14 @@
 
     aget-object v6, v2, v5
 
+    .line 5
     invoke-static {v6}, Lcom/sec/android/app/camera/util/CameraResolution;->isHighResolution(Lcom/sec/android/app/camera/interfaces/Resolution;)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
+    .line 6
     sget-object v7, Ly2/b;->s1:Ly2/b;
 
     invoke-static {v7}, Ly2/d;->e(Ly2/b;)Z
@@ -3257,6 +3276,7 @@
 
     if-eqz v7, :cond_1
 
+    .line 7
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -3264,12 +3284,14 @@
     :cond_0
     const-string v7, "pro_video"
 
+    .line 8
     invoke-static {v7, v6}, Lcom/sec/android/app/camera/util/CameraResolution;->isSelectableBackCamcorderResolution(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
 
     move-result v7
 
     if-eqz v7, :cond_1
 
+    .line 9
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
@@ -3278,9 +3300,11 @@
 
     goto :goto_0
 
+    .line 10
     :cond_2
     invoke-static {v1}, Lcom/sec/android/app/camera/util/CameraResolution;->sortResolutionList(Ljava/util/ArrayList;)V
 
+    .line 11
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -3289,6 +3313,7 @@
 
     sput-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackProVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
+    .line 12
     :goto_2
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -3296,6 +3321,7 @@
 
     if-ge v4, v2, :cond_3
 
+    .line 13
     sget-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackProVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3310,6 +3336,7 @@
 
     goto :goto_2
 
+    .line 14
     :cond_3
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackProVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -3320,6 +3347,7 @@
     :catchall_0
     move-exception v1
 
+    .line 15
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3330,6 +3358,7 @@
 .method public static getSelectableBackProVideoResolutionList(Lcom/sec/android/app/camera/interfaces/AspectRatio;)[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 2
 
+    .line 16
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getSelectableBackProVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v0
@@ -3362,19 +3391,23 @@
 .method public static getSelectableBackSlowMotionResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 8
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackSlowMotionUpdateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackSlowMotionResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     if-nez v1, :cond_2
 
+    .line 3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     invoke-static {}, Lcom/sec/android/app/camera/interfaces/Resolution;->values()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v2
@@ -3392,12 +3425,14 @@
 
     const-string v7, "slow_motion"
 
+    .line 5
     invoke-static {v7, v6}, Lcom/sec/android/app/camera/util/CameraResolution;->isSelectableBackCamcorderResolution(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
+    .line 6
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -3405,9 +3440,11 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-static {v1}, Lcom/sec/android/app/camera/util/CameraResolution;->sortResolutionList(Ljava/util/ArrayList;)V
 
+    .line 8
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -3416,6 +3453,7 @@
 
     sput-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackSlowMotionResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
+    .line 9
     :goto_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -3423,6 +3461,7 @@
 
     if-ge v4, v2, :cond_2
 
+    .line 10
     sget-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackSlowMotionResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3437,6 +3476,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_2
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackSlowMotionResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -3447,6 +3487,7 @@
     :catchall_0
     move-exception v1
 
+    .line 12
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3457,6 +3498,7 @@
 .method public static getSelectableBackSlowMotionResolutionList(Lcom/sec/android/app/camera/interfaces/AspectRatio;)[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 2
 
+    .line 13
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getSelectableBackSlowMotionResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v0
@@ -3489,19 +3531,23 @@
 .method public static getSelectableBackSuperSteadyVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 8
 
+    .line 2
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackSuperSteadyVideoUpdateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackSuperSteadyVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     if-nez v1, :cond_2
 
+    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getBackVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v2
@@ -3519,6 +3565,7 @@
 
     const-string v7, "video"
 
+    .line 6
     invoke-static {v7, v6}, Lcom/sec/android/app/camera/util/CameraResolution;->isSelectableBackCamcorderResolution(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
 
     move-result v7
@@ -3531,6 +3578,7 @@
 
     if-eqz v7, :cond_0
 
+    .line 7
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -3538,9 +3586,11 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-static {v1}, Lcom/sec/android/app/camera/util/CameraResolution;->sortResolutionList(Ljava/util/ArrayList;)V
 
+    .line 9
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -3549,6 +3599,7 @@
 
     sput-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackSuperSteadyVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
+    .line 10
     :goto_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -3556,6 +3607,7 @@
 
     if-ge v4, v2, :cond_2
 
+    .line 11
     sget-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackSuperSteadyVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3570,6 +3622,7 @@
 
     goto :goto_1
 
+    .line 12
     :cond_2
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackSuperSteadyVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -3580,6 +3633,7 @@
     :catchall_0
     move-exception v1
 
+    .line 13
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3590,6 +3644,7 @@
 .method public static getSelectableBackSuperSteadyVideoResolutionList(Lcom/sec/android/app/camera/interfaces/AspectRatio;)[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getSelectableBackSuperSteadyVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v0
@@ -3622,23 +3677,28 @@
 .method public static getSelectableBackVideoAutoFramingResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 6
 
+    .line 2
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackVideoAutoFramingUpdateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackVideoAutoFramingResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     if-nez v1, :cond_1
 
+    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Resolution;->RESOLUTION_1920X1080:Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 6
     sget-object v2, Ly2/b;->y2:Ly2/b;
 
     invoke-static {v2}, Ly2/d;->e(Ly2/b;)Z
@@ -3647,15 +3707,18 @@
 
     if-eqz v2, :cond_0
 
+    .line 7
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Resolution;->RESOLUTION_3840X2160:Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 8
     :cond_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
+    .line 9
     new-array v3, v2, [Lcom/sec/android/app/camera/interfaces/Resolution;
 
     sput-object v3, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackVideoAutoFramingResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
@@ -3665,6 +3728,7 @@
     :goto_0
     if-ge v3, v2, :cond_1
 
+    .line 10
     sget-object v4, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackVideoAutoFramingResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3679,6 +3743,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_1
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackVideoAutoFramingResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -3689,6 +3754,7 @@
     :catchall_0
     move-exception v1
 
+    .line 12
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3699,6 +3765,7 @@
 .method public static getSelectableBackVideoAutoFramingResolutionList(Lcom/sec/android/app/camera/interfaces/AspectRatio;)[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getSelectableBackVideoAutoFramingResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v0
@@ -3731,19 +3798,23 @@
 .method public static getSelectableBackVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 8
 
+    .line 2
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackVideoUpdateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     if-nez v1, :cond_2
 
+    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getBackVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v2
@@ -3761,6 +3832,7 @@
 
     const-string v7, "video"
 
+    .line 6
     invoke-static {v7, v6}, Lcom/sec/android/app/camera/util/CameraResolution;->isSelectableBackCamcorderResolution(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
 
     move-result v7
@@ -3773,6 +3845,7 @@
 
     if-eqz v7, :cond_0
 
+    .line 7
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -3780,9 +3853,11 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-static {v1}, Lcom/sec/android/app/camera/util/CameraResolution;->sortResolutionList(Ljava/util/ArrayList;)V
 
+    .line 9
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -3791,6 +3866,7 @@
 
     sput-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
+    .line 10
     :goto_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -3798,6 +3874,7 @@
 
     if-ge v4, v2, :cond_2
 
+    .line 11
     sget-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3812,6 +3889,7 @@
 
     goto :goto_1
 
+    .line 12
     :cond_2
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableBackVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -3822,6 +3900,7 @@
     :catchall_0
     move-exception v1
 
+    .line 13
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3832,6 +3911,7 @@
 .method public static getSelectableBackVideoResolutionList(Lcom/sec/android/app/camera/interfaces/AspectRatio;)[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getSelectableBackVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v0
@@ -3864,19 +3944,23 @@
 .method public static getSelectableFrontDualRecordingV2ResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 8
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontDualRecordingV2UpdateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontDualRecordingV2Resolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     if-nez v1, :cond_2
 
+    .line 3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     invoke-static {}, Lcom/sec/android/app/camera/interfaces/Resolution;->values()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v2
@@ -3894,12 +3978,14 @@
 
     const-string v7, "dual_recording"
 
+    .line 5
     invoke-static {v7, v6}, Lcom/sec/android/app/camera/util/CameraResolution;->isSupportedFrontCamcorderResolutionFeature(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
+    .line 6
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -3907,9 +3993,11 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-static {v1}, Lcom/sec/android/app/camera/util/CameraResolution;->sortResolutionList(Ljava/util/ArrayList;)V
 
+    .line 8
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -3918,6 +4006,7 @@
 
     sput-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontDualRecordingV2Resolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
+    .line 9
     :goto_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -3925,6 +4014,7 @@
 
     if-ge v4, v2, :cond_2
 
+    .line 10
     sget-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontDualRecordingV2Resolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3939,6 +4029,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_2
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontDualRecordingV2Resolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -3949,6 +4040,7 @@
     :catchall_0
     move-exception v1
 
+    .line 12
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3959,6 +4051,7 @@
 .method public static getSelectableFrontDualRecordingV2ResolutionList(Lcom/sec/android/app/camera/interfaces/AspectRatio;)[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 2
 
+    .line 13
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getSelectableFrontDualRecordingV2ResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v0
@@ -3991,19 +4084,23 @@
 .method public static getSelectableFrontProVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 8
 
+    .line 2
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontProVideoUpdateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontProVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     if-nez v1, :cond_2
 
+    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getFrontProVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v2
@@ -4021,12 +4118,14 @@
 
     const-string v7, "pro_video"
 
+    .line 6
     invoke-static {v7, v6}, Lcom/sec/android/app/camera/util/CameraResolution;->isSelectableFrontCamcorderResolution(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
+    .line 7
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -4034,9 +4133,11 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-static {v1}, Lcom/sec/android/app/camera/util/CameraResolution;->sortResolutionList(Ljava/util/ArrayList;)V
 
+    .line 9
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -4045,6 +4146,7 @@
 
     sput-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontProVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
+    .line 10
     :goto_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -4052,6 +4154,7 @@
 
     if-ge v4, v2, :cond_2
 
+    .line 11
     sget-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontProVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4066,6 +4169,7 @@
 
     goto :goto_1
 
+    .line 12
     :cond_2
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontProVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -4076,6 +4180,7 @@
     :catchall_0
     move-exception v1
 
+    .line 13
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -4086,6 +4191,7 @@
 .method public static getSelectableFrontProVideoResolutionList(Lcom/sec/android/app/camera/interfaces/AspectRatio;)[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getSelectableFrontProVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v0
@@ -4118,19 +4224,23 @@
 .method public static getSelectableFrontSlowMotionResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 8
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontSlowMotionUpdateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontSlowMotionResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     if-nez v1, :cond_2
 
+    .line 3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     invoke-static {}, Lcom/sec/android/app/camera/interfaces/Resolution;->values()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v2
@@ -4148,12 +4258,14 @@
 
     const-string v7, "slow_motion"
 
+    .line 5
     invoke-static {v7, v6}, Lcom/sec/android/app/camera/util/CameraResolution;->isSelectableFrontCamcorderResolution(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
+    .line 6
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -4161,9 +4273,11 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-static {v1}, Lcom/sec/android/app/camera/util/CameraResolution;->sortResolutionList(Ljava/util/ArrayList;)V
 
+    .line 8
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -4172,6 +4286,7 @@
 
     sput-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontSlowMotionResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
+    .line 9
     :goto_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -4179,6 +4294,7 @@
 
     if-ge v4, v2, :cond_2
 
+    .line 10
     sget-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontSlowMotionResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4193,6 +4309,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_2
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontSlowMotionResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -4203,6 +4320,7 @@
     :catchall_0
     move-exception v1
 
+    .line 12
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -4213,6 +4331,7 @@
 .method public static getSelectableFrontSlowMotionResolutionList(Lcom/sec/android/app/camera/interfaces/AspectRatio;)[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 2
 
+    .line 13
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getSelectableFrontSlowMotionResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v0
@@ -4245,23 +4364,28 @@
 .method public static getSelectableFrontVideoAutoFramingResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 6
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontVideoAutoFramingUpdateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontVideoAutoFramingResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     if-nez v1, :cond_1
 
+    .line 3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Resolution;->RESOLUTION_1920X1080:Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 5
     sget-object v2, Ly2/b;->y2:Ly2/b;
 
     invoke-static {v2}, Ly2/d;->e(Ly2/b;)Z
@@ -4270,15 +4394,18 @@
 
     if-eqz v2, :cond_0
 
+    .line 6
     sget-object v2, Lcom/sec/android/app/camera/interfaces/Resolution;->RESOLUTION_3840X2160:Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 7
     :cond_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
+    .line 8
     new-array v3, v2, [Lcom/sec/android/app/camera/interfaces/Resolution;
 
     sput-object v3, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontVideoAutoFramingResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
@@ -4288,6 +4415,7 @@
     :goto_0
     if-ge v3, v2, :cond_1
 
+    .line 9
     sget-object v4, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontVideoAutoFramingResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4302,6 +4430,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontVideoAutoFramingResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -4312,6 +4441,7 @@
     :catchall_0
     move-exception v1
 
+    .line 11
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -4322,6 +4452,7 @@
 .method public static getSelectableFrontVideoAutoFramingResolutionList(Lcom/sec/android/app/camera/interfaces/AspectRatio;)[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 2
 
+    .line 12
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getSelectableFrontVideoAutoFramingResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v0
@@ -4354,19 +4485,23 @@
 .method public static getSelectableFrontVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 8
 
+    .line 2
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontVideoUpdateLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     if-nez v1, :cond_2
 
+    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getFrontVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v2
@@ -4384,12 +4519,14 @@
 
     const-string v7, "video"
 
+    .line 6
     invoke-static {v7, v6}, Lcom/sec/android/app/camera/util/CameraResolution;->isSelectableFrontCamcorderResolution(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
+    .line 7
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -4397,9 +4534,11 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-static {v1}, Lcom/sec/android/app/camera/util/CameraResolution;->sortResolutionList(Ljava/util/ArrayList;)V
 
+    .line 9
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -4408,6 +4547,7 @@
 
     sput-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
+    .line 10
     :goto_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -4415,6 +4555,7 @@
 
     if-ge v4, v2, :cond_2
 
+    .line 11
     sget-object v2, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4429,6 +4570,7 @@
 
     goto :goto_1
 
+    .line 12
     :cond_2
     sget-object v1, Lcom/sec/android/app/camera/util/CameraResolution;->mSelectableFrontVideoResolutions:[Lcom/sec/android/app/camera/interfaces/Resolution;
 
@@ -4439,6 +4581,7 @@
     :catchall_0
     move-exception v1
 
+    .line 13
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -4449,6 +4592,7 @@
 .method public static getSelectableFrontVideoResolutionList(Lcom/sec/android/app/camera/interfaces/AspectRatio;)[Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/sec/android/app/camera/util/CameraResolution;->getSelectableFrontVideoResolutionList()[Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object v0
@@ -5488,6 +5632,7 @@
 .method public static getWideAngleResolution(Lcom/sec/android/app/camera/interfaces/AspectRatio;)Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 3
 
+    .line 3
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mWideResolutionMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -5511,6 +5656,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 4
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -5527,6 +5673,7 @@
 
     if-ne v2, p0, :cond_0
 
+    .line 5
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -5539,6 +5686,7 @@
 
     return-object p0
 
+    .line 6
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -5568,6 +5716,7 @@
 .method public static getWideAngleResolution(Lcom/sec/android/app/camera/interfaces/Resolution;)Lcom/sec/android/app/camera/interfaces/Resolution;
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution;->mWideResolutionMap:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/interfaces/Resolution;->getString()Ljava/lang/String;
@@ -5596,6 +5745,7 @@
 
     if-nez v1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/interfaces/Resolution;->getString()Ljava/lang/String;
 
     move-result-object p0
@@ -9188,6 +9338,7 @@
 .method public static isHighResolution(I)Z
     .locals 0
 
+    .line 2
     invoke-static {p0}, Lcom/sec/android/app/camera/interfaces/Resolution;->getResolution(I)Lcom/sec/android/app/camera/interfaces/Resolution;
 
     move-result-object p0
@@ -9202,6 +9353,7 @@
 .method public static isHighResolution(Lcom/sec/android/app/camera/interfaces/Resolution;)Z
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/util/CameraResolution$1;->$SwitchMap$com$sec$android$app$camera$interfaces$Resolution:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
@@ -9559,6 +9711,7 @@
 
     const-string v0, "video"
 
+    .line 1
     invoke-static {v0, p0}, Lcom/sec/android/app/camera/util/CameraResolution;->isSupportedBackCamcorderResolutionFeature(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
 
     move-result p0
@@ -9569,6 +9722,7 @@
 .method public static isSupportedBackCamcorderResolutionFeature(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
     .locals 1
 
+    .line 2
     invoke-static {p1}, Lcom/sec/android/app/camera/util/CameraResolution;->getBackCamcorderFeature(Lcom/sec/android/app/camera/interfaces/Resolution;)Ljava/util/Map;
 
     move-result-object p1
@@ -9582,6 +9736,7 @@
     :cond_0
     const-string v0, "supported-mode"
 
+    .line 3
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -9594,6 +9749,7 @@
 
     return p0
 
+    .line 4
     :cond_1
     invoke-static {p0, p1}, Lcom/sec/android/app/camera/util/CameraResolution;->isSupportedModeName(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -9679,6 +9835,7 @@
 
     const-string v0, "video"
 
+    .line 1
     invoke-static {v0, p0}, Lcom/sec/android/app/camera/util/CameraResolution;->isSupportedFrontCamcorderResolutionFeature(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
 
     move-result p0
@@ -9689,6 +9846,7 @@
 .method public static isSupportedFrontCamcorderResolutionFeature(Ljava/lang/String;Lcom/sec/android/app/camera/interfaces/Resolution;)Z
     .locals 1
 
+    .line 2
     invoke-static {p1}, Lcom/sec/android/app/camera/util/CameraResolution;->getFrontCamcorderFeature(Lcom/sec/android/app/camera/interfaces/Resolution;)Ljava/util/Map;
 
     move-result-object p1
@@ -9702,6 +9860,7 @@
     :cond_0
     const-string v0, "supported-mode"
 
+    .line 3
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -9714,6 +9873,7 @@
 
     return p0
 
+    .line 4
     :cond_1
     invoke-static {p0, p1}, Lcom/sec/android/app/camera/util/CameraResolution;->isSupportedModeName(Ljava/lang/String;Ljava/lang/String;)Z
 

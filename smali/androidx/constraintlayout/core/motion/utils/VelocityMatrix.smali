@@ -199,6 +199,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {p1, p2}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->getSlope(F)F
 
     move-result p1
@@ -214,12 +215,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-virtual {p1, p2}, Landroidx/constraintlayout/core/motion/utils/SplineSet;->getSlope(F)F
 
     move-result v0
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/utils/VelocityMatrix;->mDRotate:F
 
+    .line 2
     invoke-virtual {p1, p2}, Landroidx/constraintlayout/core/motion/utils/SplineSet;->get(F)F
 
     move-result p1
@@ -235,6 +238,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {p1, p3}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->getSlope(F)F
 
     move-result p1
@@ -244,6 +248,7 @@
     :cond_0
     if-eqz p2, :cond_1
 
+    .line 4
     invoke-virtual {p2, p3}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->getSlope(F)F
 
     move-result p1
@@ -259,6 +264,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-virtual {p1, p3}, Landroidx/constraintlayout/core/motion/utils/SplineSet;->getSlope(F)F
 
     move-result p1
@@ -268,6 +274,7 @@
     :cond_0
     if-eqz p2, :cond_1
 
+    .line 2
     invoke-virtual {p2, p3}, Landroidx/constraintlayout/core/motion/utils/SplineSet;->getSlope(F)F
 
     move-result p1
@@ -283,6 +290,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {p1, p3}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->getSlope(F)F
 
     move-result p1
@@ -292,6 +300,7 @@
     :cond_0
     if-eqz p2, :cond_1
 
+    .line 4
     invoke-virtual {p2, p3}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->getSlope(F)F
 
     move-result p1
@@ -307,6 +316,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-virtual {p1, p3}, Landroidx/constraintlayout/core/motion/utils/SplineSet;->getSlope(F)F
 
     move-result p1
@@ -316,6 +326,7 @@
     :cond_0
     if-eqz p2, :cond_1
 
+    .line 2
     invoke-virtual {p2, p3}, Landroidx/constraintlayout/core/motion/utils/SplineSet;->getSlope(F)F
 
     move-result p1

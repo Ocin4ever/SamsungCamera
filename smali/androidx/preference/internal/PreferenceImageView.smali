@@ -15,6 +15,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/preference/internal/PreferenceImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -25,6 +26,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, p2, v0}, Landroidx/preference/internal/PreferenceImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -33,14 +35,18 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 3
 
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const v0, 0x7fffffff
 
+    .line 4
     iput v0, p0, Landroidx/preference/internal/PreferenceImageView;->mMaxWidth:I
 
+    .line 5
     iput v0, p0, Landroidx/preference/internal/PreferenceImageView;->mMaxHeight:I
 
+    .line 6
     sget-object v1, Landroidx/preference/R$styleable;->PreferenceImageView:[I
 
     const/4 v2, 0x0
@@ -49,6 +55,7 @@
 
     move-result-object p1
 
+    .line 7
     sget p2, Landroidx/preference/R$styleable;->PreferenceImageView_maxWidth:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -57,6 +64,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/internal/PreferenceImageView;->setMaxWidth(I)V
 
+    .line 8
     sget p2, Landroidx/preference/R$styleable;->PreferenceImageView_maxHeight:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -65,6 +73,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/internal/PreferenceImageView;->setMaxHeight(I)V
 
+    .line 9
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void

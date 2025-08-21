@@ -233,6 +233,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
@@ -254,10 +255,12 @@
         }
     .end annotation
 
+    .line 2
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 3
     new-instance v0, Ljava/util/ArrayDeque;
 
     check-cast p0, Ljava/util/Collection;
@@ -266,11 +269,13 @@
 
     return-object v0
 
+    .line 4
     :cond_0
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
+    .line 5
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->addAll(Ljava/util/Collection;Ljava/lang/Iterable;)Z
 
     return-object v0
@@ -288,6 +293,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
@@ -309,10 +315,12 @@
         }
     .end annotation
 
+    .line 2
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 3
     new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     check-cast p0, Ljava/util/Collection;
@@ -321,11 +329,13 @@
 
     return-object v0
 
+    .line 4
     :cond_0
     new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
 
+    .line 5
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->addAll(Ljava/util/Collection;Ljava/lang/Iterable;)Z
 
     return-object v0
@@ -343,6 +353,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/LinkedBlockingDeque;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingDeque;-><init>()V
@@ -362,6 +373,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/LinkedBlockingDeque;
 
     invoke-direct {v0, p0}, Ljava/util/concurrent/LinkedBlockingDeque;-><init>(I)V
@@ -383,10 +395,12 @@
         }
     .end annotation
 
+    .line 3
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 4
     new-instance v0, Ljava/util/concurrent/LinkedBlockingDeque;
 
     check-cast p0, Ljava/util/Collection;
@@ -395,11 +409,13 @@
 
     return-object v0
 
+    .line 5
     :cond_0
     new-instance v0, Ljava/util/concurrent/LinkedBlockingDeque;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingDeque;-><init>()V
 
+    .line 6
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->addAll(Ljava/util/Collection;Ljava/lang/Iterable;)Z
 
     return-object v0
@@ -417,6 +433,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
@@ -436,6 +453,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0, p0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
@@ -457,10 +475,12 @@
         }
     .end annotation
 
+    .line 3
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 4
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     check-cast p0, Ljava/util/Collection;
@@ -469,11 +489,13 @@
 
     return-object v0
 
+    .line 5
     :cond_0
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
+    .line 6
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->addAll(Ljava/util/Collection;Ljava/lang/Iterable;)Z
 
     return-object v0
@@ -491,6 +513,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/PriorityBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/PriorityBlockingQueue;-><init>()V
@@ -512,10 +535,12 @@
         }
     .end annotation
 
+    .line 2
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 3
     new-instance v0, Ljava/util/concurrent/PriorityBlockingQueue;
 
     check-cast p0, Ljava/util/Collection;
@@ -524,11 +549,13 @@
 
     return-object v0
 
+    .line 4
     :cond_0
     new-instance v0, Ljava/util/concurrent/PriorityBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/PriorityBlockingQueue;-><init>()V
 
+    .line 5
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->addAll(Ljava/util/Collection;Ljava/lang/Iterable;)Z
 
     return-object v0
@@ -546,6 +573,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/PriorityQueue;
 
     invoke-direct {v0}, Ljava/util/PriorityQueue;-><init>()V
@@ -567,10 +595,12 @@
         }
     .end annotation
 
+    .line 2
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 3
     new-instance v0, Ljava/util/PriorityQueue;
 
     check-cast p0, Ljava/util/Collection;
@@ -579,11 +609,13 @@
 
     return-object v0
 
+    .line 4
     :cond_0
     new-instance v0, Ljava/util/PriorityQueue;
 
     invoke-direct {v0}, Ljava/util/PriorityQueue;-><init>()V
 
+    .line 5
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->addAll(Ljava/util/Collection;Ljava/lang/Iterable;)Z
 
     return-object v0

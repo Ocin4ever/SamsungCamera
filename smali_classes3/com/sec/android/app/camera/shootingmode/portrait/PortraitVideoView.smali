@@ -272,12 +272,14 @@
 .method private refreshGuidePosition(Z)V
     .locals 7
 
+    .line 14
     iget v0, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeView;->mOrientation:I
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 15
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->mGuideAnimator:Landroid/animation/ValueAnimator;
 
@@ -299,6 +301,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 16
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->getGuideText()Landroid/widget/TextView;
 
     move-result-object v0
@@ -307,6 +310,7 @@
 
     move-result v0
 
+    .line 17
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -353,6 +357,7 @@
 
     if-ne v2, v5, :cond_3
 
+    .line 18
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -367,6 +372,7 @@
 
     goto :goto_2
 
+    .line 19
     :cond_3
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
@@ -405,6 +411,7 @@
 
     add-float v5, v1, v2
 
+    .line 20
     invoke-static {v0, v5}, Lcom/sec/android/app/camera/util/Util;->floatEquals(FF)Z
 
     move-result v5
@@ -432,18 +439,21 @@
 
     aput v2, v5, v3
 
+    .line 21
     invoke-static {v5}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->mGuideAnimator:Landroid/animation/ValueAnimator;
 
+    .line 22
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 23
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->mGuideAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -460,6 +470,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
+    .line 24
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->mGuideAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v0, Lcom/sec/android/app/camera/shootingmode/portrait/t0;
@@ -468,6 +479,7 @@
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
+    .line 25
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->mGuideAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
@@ -973,6 +985,7 @@
 .method public refreshGuidePosition()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->mGuideAnimator:Landroid/animation/ValueAnimator;
 
     invoke-static {v0}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
@@ -993,14 +1006,17 @@
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 2
     iget v0, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeView;->mOrientation:I
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-super {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitBaseView;->refreshGuidePosition()V
 
     return-void
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->getGuideText()Landroid/widget/TextView;
 
@@ -1010,6 +1026,7 @@
 
     invoke-virtual {v0, v1, v1}, Landroid/view/View;->measure(II)V
 
+    .line 5
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->getGuideText()Landroid/widget/TextView;
 
     move-result-object v0
@@ -1022,6 +1039,7 @@
 
     int-to-float v0, v0
 
+    .line 6
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->mViewBinding:Lp4/a7;
 
     iget-object v1, v1, Lp4/a7;->m:Landroidx/constraintlayout/widget/Guideline;
@@ -1056,6 +1074,7 @@
 
     add-float/2addr v1, v0
 
+    .line 7
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->getGuideTextViewLandscapeTranslateXOffset()F
 
     move-result v0
@@ -1066,6 +1085,7 @@
 
     sub-float/2addr v0, v2
 
+    .line 8
     iget v2, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeView;->mOrientation:I
 
     const/16 v3, -0x5a
@@ -1074,6 +1094,7 @@
 
     if-ne v2, v3, :cond_1
 
+    .line 9
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -1084,6 +1105,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
@@ -1116,18 +1138,21 @@
     :goto_0
     add-float/2addr v0, v2
 
+    .line 11
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->getGuideText()Landroid/widget/TextView;
 
     move-result-object v2
 
     invoke-virtual {v2, v0}, Landroid/view/View;->setTranslationX(F)V
 
+    .line 12
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->getGuideText()Landroid/widget/TextView;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
+    .line 13
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitVideoView;->getGuideText()Landroid/widget/TextView;
 
     move-result-object v0

@@ -130,12 +130,14 @@
 .method public addAll(Lcom/google/common/primitives/ImmutableLongArray;)Lcom/google/common/primitives/ImmutableLongArray$Builder;
     .locals 5
 
+    .line 11
     invoke-virtual {p1}, Lcom/google/common/primitives/ImmutableLongArray;->length()I
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/google/common/primitives/ImmutableLongArray$Builder;->ensureRoomFor(I)V
 
+    .line 12
     invoke-static {p1}, Lcom/google/common/primitives/ImmutableLongArray;->access$000(Lcom/google/common/primitives/ImmutableLongArray;)[J
 
     move-result-object v0
@@ -154,6 +156,7 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 13
     iget v0, p0, Lcom/google/common/primitives/ImmutableLongArray$Builder;->count:I
 
     invoke-virtual {p1}, Lcom/google/common/primitives/ImmutableLongArray;->length()I
@@ -179,10 +182,12 @@
         }
     .end annotation
 
+    .line 4
     instance-of v0, p1, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 5
     check-cast p1, Ljava/util/Collection;
 
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/ImmutableLongArray$Builder;->addAll(Ljava/util/Collection;)Lcom/google/common/primitives/ImmutableLongArray$Builder;
@@ -191,6 +196,7 @@
 
     return-object p0
 
+    .line 6
     :cond_0
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -209,6 +215,7 @@
 
     check-cast v0, Ljava/lang/Long;
 
+    .line 7
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -233,12 +240,14 @@
         }
     .end annotation
 
+    .line 8
     invoke-interface {p1}, Ljava/util/Collection;->size()I
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/google/common/primitives/ImmutableLongArray$Builder;->ensureRoomFor(I)V
 
+    .line 9
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -256,6 +265,7 @@
 
     check-cast v0, Ljava/lang/Long;
 
+    .line 10
     iget-object v1, p0, Lcom/google/common/primitives/ImmutableLongArray$Builder;->array:[J
 
     iget v2, p0, Lcom/google/common/primitives/ImmutableLongArray$Builder;->count:I
@@ -279,10 +289,12 @@
 .method public addAll([J)Lcom/google/common/primitives/ImmutableLongArray$Builder;
     .locals 4
 
+    .line 1
     array-length v0, p1
 
     invoke-direct {p0, v0}, Lcom/google/common/primitives/ImmutableLongArray$Builder;->ensureRoomFor(I)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/primitives/ImmutableLongArray$Builder;->array:[J
 
     iget v1, p0, Lcom/google/common/primitives/ImmutableLongArray$Builder;->count:I
@@ -293,6 +305,7 @@
 
     invoke-static {p1, v3, v0, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 3
     iget v0, p0, Lcom/google/common/primitives/ImmutableLongArray$Builder;->count:I
 
     array-length p1, p1

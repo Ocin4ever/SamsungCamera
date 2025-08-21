@@ -100,10 +100,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractMap;-><init>()V
 
     const/4 v0, 0x3
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/common/collect/CompactHashMap;->init(I)V
 
     return-void
@@ -112,8 +114,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/util/AbstractMap;-><init>()V
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/common/collect/CompactHashMap;->init(I)V
 
     return-void

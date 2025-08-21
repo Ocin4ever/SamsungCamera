@@ -46,6 +46,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback$onActionItemClicked$2;->invoke()V
 
     sget-object p0, Lf6/p;->a:Lf6/p;
@@ -56,6 +57,7 @@
 .method public final invoke()V
     .locals 3
 
+    .line 2
     sget-object v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/ClipboardUtil;->INSTANCE:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/ClipboardUtil;
 
     iget-object v1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback$onActionItemClicked$2;->this$0:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback;
@@ -72,6 +74,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/ClipboardUtil;->copyClipboard(Landroid/content/Context;Ljava/lang/String;)V
 
+    .line 3
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback$onActionItemClicked$2;->this$0:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback;
 
     invoke-static {p0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback;->access$getListener$p(Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback;)Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/ActionModeListener;

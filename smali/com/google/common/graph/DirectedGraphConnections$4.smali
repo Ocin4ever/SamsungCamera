@@ -53,6 +53,7 @@
         }
     .end annotation
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/common/graph/DirectedGraphConnections$4;->val$resultWithDoubleSelfLoop:Ljava/util/Iterator;
 
@@ -62,6 +63,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/graph/DirectedGraphConnections$4;->val$resultWithDoubleSelfLoop:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -70,6 +72,7 @@
 
     check-cast v0, Lcom/google/common/graph/EndpointPair;
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object v1
@@ -84,6 +87,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     iget-object v1, p0, Lcom/google/common/graph/DirectedGraphConnections$4;->val$alreadySeenSelfLoop:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x1
@@ -97,6 +101,7 @@
     :cond_1
     return-object v0
 
+    .line 6
     :cond_2
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractIterator;->endOfData()Ljava/lang/Object;
 
@@ -110,6 +115,7 @@
 .method public bridge synthetic computeNext()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/DirectedGraphConnections$4;->computeNext()Lcom/google/common/graph/EndpointPair;
 
     move-result-object p0

@@ -86,8 +86,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/portrait/PortraitContract$View;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
+    .line 2
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -98,26 +100,33 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mHandler:Landroid/os/Handler;
 
+    .line 3
     sget-object p1, Lcom/sec/android/app/camera/util/BokehUtil$BokehCallbackState;->NONE:Lcom/sec/android/app/camera/util/BokehUtil$BokehCallbackState;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mRequestedBokehState:Lcom/sec/android/app/camera/util/BokehUtil$BokehCallbackState;
 
+    .line 4
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mCurrentShowingBokehState:Lcom/sec/android/app/camera/util/BokehUtil$BokehCallbackState;
 
     const/4 p1, 0x0
 
+    .line 5
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mIsGuideTimerExpired:Z
 
+    .line 6
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mIsGuideSuccess:Z
 
+    .line 7
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mIsNightCapturing:Z
 
+    .line 8
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->initializeVisibilityChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mVisibilityChangeConsumerMap:Ljava/util/EnumMap;
 
+    .line 9
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/portrait/d0;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/portrait/d0;-><init>(Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;)V
@@ -130,8 +139,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/portrait/PortraitContract$View;I)V
     .locals 0
 
+    .line 10
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
+    .line 11
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -142,26 +153,33 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mHandler:Landroid/os/Handler;
 
+    .line 12
     sget-object p1, Lcom/sec/android/app/camera/util/BokehUtil$BokehCallbackState;->NONE:Lcom/sec/android/app/camera/util/BokehUtil$BokehCallbackState;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mRequestedBokehState:Lcom/sec/android/app/camera/util/BokehUtil$BokehCallbackState;
 
+    .line 13
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mCurrentShowingBokehState:Lcom/sec/android/app/camera/util/BokehUtil$BokehCallbackState;
 
     const/4 p1, 0x0
 
+    .line 14
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mIsGuideTimerExpired:Z
 
+    .line 15
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mIsGuideSuccess:Z
 
+    .line 16
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mIsNightCapturing:Z
 
+    .line 17
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->initializeVisibilityChangeConsumerMap()Ljava/util/EnumMap;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;->mVisibilityChangeConsumerMap:Ljava/util/EnumMap;
 
+    .line 18
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/portrait/d0;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/portrait/d0;-><init>(Lcom/sec/android/app/camera/shootingmode/portrait/PortraitPresenter;)V

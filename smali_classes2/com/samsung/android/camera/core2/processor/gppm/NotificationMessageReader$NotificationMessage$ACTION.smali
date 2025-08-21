@@ -189,6 +189,7 @@
 .method private static valueOf(I)Lcom/samsung/android/camera/core2/processor/gppm/NotificationMessageReader$NotificationMessage$ACTION;
     .locals 2
 
+    .line 2
     invoke-static {}, Lcom/samsung/android/camera/core2/processor/gppm/NotificationMessageReader$NotificationMessage$ACTION;->values()[Lcom/samsung/android/camera/core2/processor/gppm/NotificationMessageReader$NotificationMessage$ACTION;
 
     move-result-object v0
@@ -209,12 +210,14 @@
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0}, Ljava/util/Optional;->isPresent()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -223,6 +226,7 @@
 
     return-object p0
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -236,6 +240,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/samsung/android/camera/core2/processor/gppm/NotificationMessageReader$NotificationMessage$ACTION;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/samsung/android/camera/core2/processor/gppm/NotificationMessageReader$NotificationMessage$ACTION;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;

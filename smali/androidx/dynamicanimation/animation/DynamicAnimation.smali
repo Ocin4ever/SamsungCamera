@@ -233,38 +233,48 @@
 .method public constructor <init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
 
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
+    .line 3
     iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
     const/4 v1, 0x0
 
+    .line 4
     iput-boolean v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mStartValueIsSet:Z
 
+    .line 5
     iput-boolean v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
 
+    .line 6
     iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
 
     neg-float v0, v0
 
+    .line 7
     iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
 
     const-wide/16 v0, 0x0
 
+    .line 8
     iput-wide v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
 
+    .line 9
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
+    .line 10
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -273,8 +283,10 @@
 
     const/4 v0, 0x0
 
+    .line 11
     iput-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mTarget:Ljava/lang/Object;
 
+    .line 12
     new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$15;
 
     const-string v1, "FloatValueHolder"
@@ -285,6 +297,7 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
+    .line 13
     iput p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
 
     return-void
@@ -302,48 +315,61 @@
         }
     .end annotation
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 15
     iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
 
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
+    .line 16
     iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
     const/4 v1, 0x0
 
+    .line 17
     iput-boolean v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mStartValueIsSet:Z
 
+    .line 18
     iput-boolean v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
 
+    .line 19
     iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
 
     neg-float v0, v0
 
+    .line 20
     iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
 
     const-wide/16 v0, 0x0
 
+    .line 21
     iput-wide v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
 
+    .line 22
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
+    .line 23
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
+    .line 24
     iput-object p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mTarget:Ljava/lang/Object;
 
+    .line 25
     iput-object p2, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mProperty:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 
+    .line 26
     sget-object p1, Landroidx/dynamicanimation/animation/DynamicAnimation;->ROTATION:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
     if-eq p2, p1, :cond_4
@@ -358,6 +384,7 @@
 
     goto :goto_1
 
+    .line 27
     :cond_0
     sget-object p1, Landroidx/dynamicanimation/animation/DynamicAnimation;->ALPHA:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
@@ -365,10 +392,12 @@
 
     if-ne p2, p1, :cond_1
 
+    .line 28
     iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
 
     goto :goto_2
 
+    .line 29
     :cond_1
     sget-object p1, Landroidx/dynamicanimation/animation/DynamicAnimation;->SCALE_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
@@ -383,10 +412,12 @@
     :cond_2
     const/high16 p1, 0x3f800000    # 1.0f
 
+    .line 30
     iput p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
 
     goto :goto_2
 
+    .line 31
     :cond_3
     :goto_0
     iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
@@ -397,6 +428,7 @@
     :goto_1
     const p1, 0x3dcccccd    # 0.1f
 
+    .line 32
     iput p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
 
     :goto_2

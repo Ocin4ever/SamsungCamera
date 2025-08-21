@@ -27,6 +27,7 @@
 .method public constructor <init>(Lcom/google/android/material/chip/b;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/material/chip/b$f;->b:Lcom/google/android/material/chip/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public synthetic constructor <init>(Lcom/google/android/material/chip/b;Lcom/google/android/material/chip/b$a;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/android/material/chip/b$f;-><init>(Lcom/google/android/material/chip/b;)V
 
     return-void

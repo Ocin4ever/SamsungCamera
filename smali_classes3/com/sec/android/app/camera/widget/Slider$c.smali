@@ -22,6 +22,7 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/widget/Slider;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/Slider$c;->a:Lcom/sec/android/app/camera/widget/Slider;
 
     invoke-direct {p0}, Landroidx/core/view/AccessibilityDelegateCompat;-><init>()V
@@ -32,6 +33,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/widget/Slider;Le5/c0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/widget/Slider$c;-><init>(Lcom/sec/android/app/camera/widget/Slider;)V
 
     return-void

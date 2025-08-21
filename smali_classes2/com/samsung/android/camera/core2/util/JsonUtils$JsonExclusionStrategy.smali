@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,6 +30,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/util/v1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/camera/core2/util/JsonUtils$JsonExclusionStrategy;-><init>()V
 
     return-void

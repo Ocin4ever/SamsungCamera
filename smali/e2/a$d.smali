@@ -30,12 +30,14 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, v0}, Le2/a$b;-><init>(Le2/a$a;)V
 
     const/4 v0, 0x0
 
     new-array v1, v0, [Ljava/lang/Class;
 
+    .line 3
     const-class v2, Ljava/lang/Class;
 
     const-string v3, "isRecord"
@@ -50,12 +52,14 @@
 
     new-array v3, v0, [Ljava/lang/Class;
 
+    .line 4
     invoke-virtual {v2, v1, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
     iput-object v1, p0, Le2/a$d;->b:Ljava/lang/reflect/Method;
 
+    .line 5
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
 
     move-result-object v1
@@ -68,6 +72,7 @@
 
     new-array v3, v0, [Ljava/lang/Class;
 
+    .line 6
     invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
@@ -78,6 +83,7 @@
 
     new-array v0, v0, [Ljava/lang/Class;
 
+    .line 7
     invoke-virtual {v1, v2, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
@@ -90,6 +96,7 @@
 .method public synthetic constructor <init>(Le2/a$a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Le2/a$d;-><init>()V
 
     return-void

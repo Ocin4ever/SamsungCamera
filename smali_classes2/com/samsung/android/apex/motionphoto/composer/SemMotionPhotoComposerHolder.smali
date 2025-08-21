@@ -378,6 +378,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -430,12 +431,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object v1, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
     const-wide/16 v1, -0x1
 
+    .line 3
     :try_start_0
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->getManager()Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder$Manager;
 
@@ -459,6 +462,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->mComposer:Lcom/samsung/android/apex/motionphoto/composer/RemoteComposer;
 
@@ -469,6 +473,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -480,8 +485,10 @@
     :try_start_1
     const-string p1, "composer in error state"
 
+    .line 6
     invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->getManager()Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder$Manager;
 
     move-result-object p1
@@ -497,6 +504,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 8
     :goto_1
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -512,6 +520,7 @@
     :catch_0
     move-exception p1
 
+    .line 9
     :try_start_2
     sget-object p2, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->TAG:Ljava/lang/String;
 
@@ -535,23 +544,27 @@
 
     invoke-static {p2, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 10
     invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_1
 
+    .line 11
     :goto_2
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 12
     throw p1
 .end method
 
 .method public prepareStore(IJLandroid/location/Location;)J
     .locals 6
 
+    .line 13
     sget-object v0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -604,12 +617,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 14
     iget-object v1, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
     const-wide/16 v1, -0x1
 
+    .line 15
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->mComposer:Lcom/samsung/android/apex/motionphoto/composer/RemoteComposer;
 
@@ -635,16 +650,20 @@
     :cond_1
     const-string p1, "composer in error state"
 
+    .line 16
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 17
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
     const-string p2, "id"
 
+    .line 18
     invoke-virtual {p1, p2, v1, v2}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
 
+    .line 19
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->getManager()Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder$Manager;
 
     move-result-object p2
@@ -656,6 +675,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 20
     :goto_0
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -663,6 +683,7 @@
 
     return-wide v1
 
+    .line 21
     :cond_2
     :try_start_1
     iget-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->mComposer:Lcom/samsung/android/apex/motionphoto/composer/RemoteComposer;
@@ -674,6 +695,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 22
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -688,6 +710,7 @@
     :catch_0
     move-exception p1
 
+    .line 23
     :try_start_2
     sget-object p2, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->TAG:Ljava/lang/String;
 
@@ -715,11 +738,13 @@
 
     goto :goto_0
 
+    .line 24
     :goto_1
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 25
     throw p1
 .end method
 

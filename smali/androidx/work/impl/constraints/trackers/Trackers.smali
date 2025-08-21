@@ -41,6 +41,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/impl/utils/taskexecutor/TaskExecutor;)V
     .locals 10
 
+    .line 1
     const-string v0, "context"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
@@ -85,6 +86,7 @@
         }
     .end annotation
 
+    .line 2
     const-string v0, "context"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
@@ -135,6 +137,7 @@
         }
     .end annotation
 
+    .line 3
     const-string v0, "context"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
@@ -191,6 +194,7 @@
         }
     .end annotation
 
+    .line 4
     const-string v0, "context"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
@@ -278,14 +282,19 @@
 
     invoke-static {p6, p1}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     iput-object p3, p0, Landroidx/work/impl/constraints/trackers/Trackers;->batteryChargingTracker:Landroidx/work/impl/constraints/trackers/ConstraintTracker;
 
+    .line 7
     iput-object p4, p0, Landroidx/work/impl/constraints/trackers/Trackers;->batteryNotLowTracker:Landroidx/work/impl/constraints/trackers/BatteryNotLowTracker;
 
+    .line 8
     iput-object p5, p0, Landroidx/work/impl/constraints/trackers/Trackers;->networkStateTracker:Landroidx/work/impl/constraints/trackers/ConstraintTracker;
 
+    .line 9
     iput-object p6, p0, Landroidx/work/impl/constraints/trackers/Trackers;->storageNotLowTracker:Landroidx/work/impl/constraints/trackers/ConstraintTracker;
 
     return-void
@@ -300,6 +309,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 10
     new-instance v0, Landroidx/work/impl/constraints/trackers/BatteryChargingTracker;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -322,6 +332,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 11
     new-instance v0, Landroidx/work/impl/constraints/trackers/BatteryNotLowTracker;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -344,6 +355,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 12
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -366,6 +378,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 13
     new-instance v0, Landroidx/work/impl/constraints/trackers/StorageNotLowTracker;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -390,6 +403,7 @@
 
     move-object v2, p2
 
+    .line 14
     invoke-direct/range {v0 .. v6}, Landroidx/work/impl/constraints/trackers/Trackers;-><init>(Landroid/content/Context;Landroidx/work/impl/utils/taskexecutor/TaskExecutor;Landroidx/work/impl/constraints/trackers/ConstraintTracker;Landroidx/work/impl/constraints/trackers/BatteryNotLowTracker;Landroidx/work/impl/constraints/trackers/ConstraintTracker;Landroidx/work/impl/constraints/trackers/ConstraintTracker;)V
 
     return-void

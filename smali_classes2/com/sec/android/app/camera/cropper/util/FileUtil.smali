@@ -113,13 +113,16 @@
 
     const-string v0, "FileUtil"
 
+    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
+    .line 3
     :try_start_0
     invoke-static {p0, p1}, Lcom/google/common/io/Files;->copy(Ljava/io/File;Ljava/io/File;)V
 
+    .line 4
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -151,6 +154,7 @@
     :catch_0
     move-exception p0
 
+    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -179,6 +183,7 @@
 .method public static copy(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -244,6 +249,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -270,6 +276,7 @@
 .method public static delete(Ljava/lang/String;)Z
     .locals 1
 
+    .line 2
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -474,6 +481,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, v0}, Lcom/sec/android/app/camera/cropper/util/FileUtil;->getExtension(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object p0
@@ -490,6 +498,7 @@
 
     const-string v1, "."
 
+    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v1
@@ -506,6 +515,7 @@
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
+    .line 3
     :goto_0
     invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
@@ -935,26 +945,31 @@
 .method public static move(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
 
+    .line 2
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 3
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p0}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 6
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -967,6 +982,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 7
     invoke-virtual {v0, p0}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result p0
@@ -982,6 +998,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 1
     invoke-static {p0, p1}, Lcom/sec/android/app/camera/cropper/util/FileUtil;->copy(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p1

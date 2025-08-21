@@ -18,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     return-void
@@ -26,6 +27,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/io/FileBackedOutputStream$1;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/io/FileBackedOutputStream$MemoryOutput;-><init>()V
 
     return-void

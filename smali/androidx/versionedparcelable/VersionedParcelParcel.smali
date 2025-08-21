@@ -31,6 +31,7 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 8
 
+    .line 1
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -85,8 +86,10 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p5, p6, p7}, Landroidx/versionedparcelable/VersionedParcel;-><init>(Landroidx/collection/ArrayMap;Landroidx/collection/ArrayMap;Landroidx/collection/ArrayMap;)V
 
+    .line 3
     new-instance p5, Landroid/util/SparseIntArray;
 
     invoke-direct {p5}, Landroid/util/SparseIntArray;-><init>()V
@@ -95,18 +98,25 @@
 
     const/4 p5, -0x1
 
+    .line 4
     iput p5, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mCurrentField:I
 
+    .line 5
     iput p5, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mFieldId:I
 
+    .line 6
     iput-object p1, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mParcel:Landroid/os/Parcel;
 
+    .line 7
     iput p2, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mOffset:I
 
+    .line 8
     iput p3, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mEnd:I
 
+    .line 9
     iput p2, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mNextRead:I
 
+    .line 10
     iput-object p4, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mPrefix:Ljava/lang/String;
 
     return-void
@@ -515,18 +525,21 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget-object v0, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mParcel:Landroid/os/Parcel;
 
     array-length v1, p1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 2
     iget-object p0, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mParcel:Landroid/os/Parcel;
 
@@ -543,18 +556,21 @@
 
     if-eqz p1, :cond_0
 
+    .line 4
     iget-object v0, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mParcel:Landroid/os/Parcel;
 
     array-length v1, p1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     iget-object p0, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mParcel:Landroid/os/Parcel;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/os/Parcel;->writeByteArray([BII)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iget-object p0, p0, Landroidx/versionedparcelable/VersionedParcelParcel;->mParcel:Landroid/os/Parcel;
 

@@ -57,6 +57,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/Graphs$TransposedGraph$1$1;->this$1:Lcom/google/common/graph/Graphs$TransposedGraph$1;
 
     iget-object p0, p0, Lcom/google/common/graph/Graphs$TransposedGraph$1;->this$0:Lcom/google/common/graph/Graphs$TransposedGraph;
@@ -83,6 +84,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/graph/EndpointPair;
 
     invoke-virtual {p0, p1}, Lcom/google/common/graph/Graphs$TransposedGraph$1$1;->apply(Lcom/google/common/graph/EndpointPair;)Lcom/google/common/graph/EndpointPair;

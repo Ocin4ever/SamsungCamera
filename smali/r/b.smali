@@ -39,6 +39,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,8 +48,10 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;FLr/b$a;IFFIIFZ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-virtual/range {p0 .. p11}, Lr/b;->a(Ljava/lang/String;Ljava/lang/String;FLr/b$a;IFFIIFZ)V
 
     return-void

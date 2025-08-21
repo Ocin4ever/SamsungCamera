@@ -262,14 +262,18 @@
         }
     .end annotation
 
+    .line 5
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 7
     new-instance v0, Lcom/google/common/io/LineReader;
 
     invoke-direct {v0, p0}, Lcom/google/common/io/LineReader;-><init>(Ljava/lang/Readable;)V
 
+    .line 8
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/io/LineReader;->readLine()Ljava/lang/String;
 
@@ -277,12 +281,14 @@
 
     if-eqz p0, :cond_1
 
+    .line 9
     invoke-interface {p1, p0}, Lcom/google/common/io/LineProcessor;->processLine(Ljava/lang/String;)Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
+    .line 10
     :cond_1
     invoke-interface {p1}, Lcom/google/common/io/LineProcessor;->getResult()Ljava/lang/Object;
 
@@ -304,14 +310,17 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     new-instance v1, Lcom/google/common/io/LineReader;
 
     invoke-direct {v1, p0}, Lcom/google/common/io/LineReader;-><init>(Ljava/lang/Readable;)V
 
+    .line 3
     :goto_0
     invoke-virtual {v1}, Lcom/google/common/io/LineReader;->readLine()Ljava/lang/String;
 
@@ -319,6 +328,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0

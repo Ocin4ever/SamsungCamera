@@ -24,14 +24,17 @@
 .method public constructor <init>(Lo/u;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lo/a$b;->a:Ljava/util/List;
 
+    .line 4
     iput-object p1, p0, Lo/a$b;->b:Lo/u;
 
     return-void
@@ -40,6 +43,7 @@
 .method public synthetic constructor <init>(Lo/u;Lo/a$a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lo/a$b;-><init>(Lo/u;)V
 
     return-void

@@ -23,20 +23,24 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x2000
 
     new-array v0, v0, [B
 
+    .line 2
     iput-object v0, p0, Lh7/i;->a:[B
 
     const/4 v0, 0x1
 
+    .line 3
     iput-boolean v0, p0, Lh7/i;->e:Z
 
     const/4 v0, 0x0
 
+    .line 4
     iput-boolean v0, p0, Lh7/i;->d:Z
 
     return-void
@@ -45,16 +49,22 @@
 .method public constructor <init>([BIIZZ)V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     iput-object p1, p0, Lh7/i;->a:[B
 
+    .line 7
     iput p2, p0, Lh7/i;->b:I
 
+    .line 8
     iput p3, p0, Lh7/i;->c:I
 
+    .line 9
     iput-boolean p4, p0, Lh7/i;->d:Z
 
+    .line 10
     iput-boolean p5, p0, Lh7/i;->e:Z
 
     return-void

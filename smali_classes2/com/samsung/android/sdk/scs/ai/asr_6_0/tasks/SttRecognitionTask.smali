@@ -116,6 +116,7 @@
 .method private parseError(ILjava/lang/String;)Landroid/os/Bundle;
     .locals 1
 
+    .line 4
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -130,16 +131,19 @@
 .method private parseError(ILjava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 0
 
+    .line 1
     new-instance p0, Landroid/os/Bundle;
 
     invoke-direct {p0}, Landroid/os/Bundle;-><init>()V
 
     const-string p3, "error_code"
 
+    .line 2
     invoke-virtual {p0, p3, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "error_message"
 
+    .line 3
     invoke-virtual {p0, p1, p2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object p0

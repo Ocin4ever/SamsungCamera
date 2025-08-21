@@ -115,16 +115,19 @@
 .method public getDisplays()[Landroid/view/Display;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/core/hardware/display/DisplayManagerCompat;->mContext:Landroid/content/Context;
 
     const-string v0, "display"
 
+    .line 2
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/hardware/display/DisplayManager;
 
+    .line 3
     invoke-static {p0}, Landroidx/core/hardware/display/DisplayManagerCompat$Api17Impl;->getDisplays(Landroid/hardware/display/DisplayManager;)[Landroid/view/Display;
 
     move-result-object p0
@@ -135,16 +138,19 @@
 .method public getDisplays(Ljava/lang/String;)[Landroid/view/Display;
     .locals 0
 
+    .line 4
     iget-object p0, p0, Landroidx/core/hardware/display/DisplayManagerCompat;->mContext:Landroid/content/Context;
 
     const-string p1, "display"
 
+    .line 5
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/hardware/display/DisplayManager;
 
+    .line 6
     invoke-static {p0}, Landroidx/core/hardware/display/DisplayManagerCompat$Api17Impl;->getDisplays(Landroid/hardware/display/DisplayManager;)[Landroid/view/Display;
 
     move-result-object p0

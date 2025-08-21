@@ -48,6 +48,7 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -64,18 +65,23 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Landroidx/lifecycle/ComputableLiveData;->executor:Ljava/util/concurrent/Executor;
 
+    .line 4
     new-instance p1, Landroidx/lifecycle/ComputableLiveData$_liveData$1;
 
     invoke-direct {p1, p0}, Landroidx/lifecycle/ComputableLiveData$_liveData$1;-><init>(Landroidx/lifecycle/ComputableLiveData;)V
 
     iput-object p1, p0, Landroidx/lifecycle/ComputableLiveData;->_liveData:Landroidx/lifecycle/LiveData;
 
+    .line 5
     iput-object p1, p0, Landroidx/lifecycle/ComputableLiveData;->liveData:Landroidx/lifecycle/LiveData;
 
+    .line 6
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v0, 0x1
@@ -84,6 +90,7 @@
 
     iput-object p1, p0, Landroidx/lifecycle/ComputableLiveData;->invalid:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 7
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v0, 0x0
@@ -92,12 +99,14 @@
 
     iput-object p1, p0, Landroidx/lifecycle/ComputableLiveData;->computing:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 8
     new-instance p1, Landroidx/lifecycle/a;
 
     invoke-direct {p1, p0}, Landroidx/lifecycle/a;-><init>(Landroidx/lifecycle/ComputableLiveData;)V
 
     iput-object p1, p0, Landroidx/lifecycle/ComputableLiveData;->refreshRunnable:Ljava/lang/Runnable;
 
+    .line 9
     new-instance p1, Landroidx/lifecycle/b;
 
     invoke-direct {p1, p0}, Landroidx/lifecycle/b;-><init>(Landroidx/lifecycle/ComputableLiveData;)V
@@ -114,6 +123,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 10
     invoke-static {}, Landroidx/arch/core/executor/ArchTaskExecutor;->getIOThreadExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p1
@@ -122,6 +132,7 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 11
     :cond_0
     invoke-direct {p0, p1}, Landroidx/lifecycle/ComputableLiveData;-><init>(Ljava/util/concurrent/Executor;)V
 

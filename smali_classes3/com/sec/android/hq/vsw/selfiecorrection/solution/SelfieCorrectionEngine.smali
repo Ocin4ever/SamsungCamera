@@ -107,16 +107,19 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 17
     sget-object v0, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionEngine;->_TAG:Ljava/lang/String;
 
     const-string v1, "RunFaceUndistortionWithPadding()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 18
     invoke-static/range {p1 .. p9}, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionSupport;->getParamArrayWithPadding(IIIIILandroid/graphics/Rect;Landroid/graphics/Rect;[Landroid/hardware/camera2/params/Face;I)[I
 
     move-result-object p1
 
+    .line 19
     invoke-static {p0, p1}, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionEngine;->RunFaceUndistortionNativeWithPadding([B[I)I
 
     return-void
@@ -137,6 +140,7 @@
 
     if-ge v10, v1, :cond_1
 
+    .line 1
     sget-object v10, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionEngine;->_TAG:Ljava/lang/String;
 
     const-string v1, "RunFaceUndistortionWithPadding() - Front 80\' Selfie Correction"
@@ -161,6 +165,7 @@
 
     move-object/from16 v8, p9
 
+    .line 2
     invoke-static/range {v1 .. v9}, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionSupport;->getParamArrayWithPadding(IIIIILandroid/graphics/Rect;Landroid/graphics/Rect;[Landroid/hardware/camera2/params/Face;I)[I
 
     move-result-object v1
@@ -169,19 +174,23 @@
 
     const-string v0, "RunFaceUndistortionWithPadding() - Wrong Face Rects, Return NULL array"
 
+    .line 3
     invoke-static {v10, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v0, "RunFaceUndistortionWithPadding() - Return Original Input Image"
 
+    .line 4
     invoke-static {v10, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
+    .line 5
     :cond_0
     invoke-static {v0, v1}, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionEngine;->RunFaceUndistortionNativeWithPadding([B[I)I
 
     goto :goto_1
 
+    .line 6
     :cond_1
     sget-object v1, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionEngine;->_TAG:Ljava/lang/String;
 
@@ -193,14 +202,18 @@
 
     mul-int/lit8 v1, v1, 0x3
 
+    .line 7
     div-int/lit8 v14, v1, 0x2
 
+    .line 8
     new-array v15, v14, [B
 
+    .line 9
     sget-object v1, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionEngine;->appContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->init(Landroid/content/Context;)V
 
+    .line 10
     iget v5, v7, Landroid/graphics/Rect;->right:I
 
     iget v6, v7, Landroid/graphics/Rect;->bottom:I
@@ -233,6 +246,7 @@
 
     if-eqz v13, :cond_2
 
+    .line 11
     array-length v3, v13
 
     invoke-static {v13, v3, v1}, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->setFaceInfo([Landroid/hardware/camera2/params/Face;II)V
@@ -242,17 +256,22 @@
     :cond_2
     const/4 v3, 0x0
 
+    .line 12
     invoke-static {v3, v2, v1}, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->setFaceInfo([Landroid/hardware/camera2/params/Face;II)V
 
     :goto_0
     const/4 v1, -0x1
 
+    .line 13
     invoke-static {v0, v15, v1}, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->DistortionCorrection([B[BI)J
 
+    .line 14
     invoke-static {}, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->release()V
 
+    .line 15
     invoke-static {v15, v2, v0, v2, v14}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 16
     :goto_1
     sget-object v0, Lcom/sec/android/hq/vsw/selfiecorrection/solution/SelfieCorrectionEngine;->_TAG:Ljava/lang/String;
 

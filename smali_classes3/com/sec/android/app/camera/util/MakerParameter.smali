@@ -1314,6 +1314,7 @@
 .method public static getCompositionGuideMode(Z)I
     .locals 0
 
+    .line 1
     return p0
 .end method
 
@@ -1324,6 +1325,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     sget-object p0, Lcom/samsung/android/camera/core2/PrivateMetadata$CompositionGuideMode;->c:Lcom/samsung/android/camera/core2/PrivateMetadata$CompositionGuideMode;
 
     goto :goto_0
@@ -1333,6 +1335,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     sget-object p0, Lcom/samsung/android/camera/core2/PrivateMetadata$CompositionGuideMode;->b:Lcom/samsung/android/camera/core2/PrivateMetadata$CompositionGuideMode;
 

@@ -48,10 +48,12 @@
 .method private constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
+    .line 3
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
 
     move-result-object v1
@@ -64,6 +66,7 @@
 
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslSwitchBar$SavedState;->checked:Z
 
+    .line 5
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
 
     move-result-object p1
@@ -82,6 +85,7 @@
 .method public synthetic constructor <init>(Landroid/os/Parcel;Landroidx/appcompat/widget/SeslSwitchBar$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/SeslSwitchBar$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -90,6 +94,7 @@
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void

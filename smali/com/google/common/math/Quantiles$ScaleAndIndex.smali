@@ -24,12 +24,16 @@
 .method private constructor <init>(II)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-static {p2, p1}, Lcom/google/common/math/Quantiles;->access$300(II)V
 
+    .line 4
     iput p1, p0, Lcom/google/common/math/Quantiles$ScaleAndIndex;->scale:I
 
+    .line 5
     iput p2, p0, Lcom/google/common/math/Quantiles$ScaleAndIndex;->index:I
 
     return-void
@@ -38,6 +42,7 @@
 .method public synthetic constructor <init>(IILcom/google/common/math/Quantiles$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/math/Quantiles$ScaleAndIndex;-><init>(II)V
 
     return-void
@@ -57,6 +62,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/primitives/Doubles;->toArray(Ljava/util/Collection;)[D
 
     move-result-object p1
@@ -71,6 +77,7 @@
 .method public varargs compute([D)D
     .locals 0
 
+    .line 2
     invoke-virtual {p1}, [D->clone()Ljava/lang/Object;
 
     move-result-object p1
@@ -87,6 +94,7 @@
 .method public varargs compute([I)D
     .locals 0
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/math/Quantiles;->access$500([I)[D
 
     move-result-object p1
@@ -101,6 +109,7 @@
 .method public varargs compute([J)D
     .locals 0
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/math/Quantiles;->access$400([J)[D
 
     move-result-object p1

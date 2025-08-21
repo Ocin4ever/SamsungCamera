@@ -634,6 +634,7 @@
 
     move-object v4, p4
 
+    .line 1
     invoke-direct/range {v0 .. v5}, Lcom/google/ar/core/Session$a;-><init>(Ljava/lang/String;IILjava/lang/Class;Ljava/lang/String;)V
 
     return-void
@@ -653,12 +654,16 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 3
     iput p3, p0, Lcom/google/ar/core/Session$a;->j:I
 
+    .line 4
     iput-object p4, p0, Lcom/google/ar/core/Session$a;->k:Ljava/lang/Class;
 
+    .line 5
     iput-object p5, p0, Lcom/google/ar/core/Session$a;->l:Ljava/lang/String;
 
     return-void

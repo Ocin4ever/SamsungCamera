@@ -30,16 +30,21 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/samsung/android/sdk/ocr/OCRType;Lcom/samsung/android/sdk/ocr/OCRLanguage;)V
     .locals 5
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->mRecognizerSupporter:Lcom/samsung/android/sdk/ocr/RecognizerSupporter;
 
+    .line 4
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->mRecognizerProvider:Lcom/samsung/android/sdk/ocr/RecognizerProvider;
 
+    .line 5
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->mCurrentRecognizer:Lcom/samsung/android/sdk/ocr/IOCRecognizer;
 
+    .line 6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -48,12 +53,15 @@
 
     const-string v3, "RecognizerInternal"
 
+    .line 7
     invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 8
     new-instance v2, Lcom/samsung/android/sdk/ocr/RecognizerParams;
 
     invoke-direct {v2, p1, p2, p3}, Lcom/samsung/android/sdk/ocr/RecognizerParams;-><init>(Landroid/content/Context;Lcom/samsung/android/sdk/ocr/OCRType;Lcom/samsung/android/sdk/ocr/OCRLanguage;)V
 
+    .line 9
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,6 +84,7 @@
 
     invoke-static {v3, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 10
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,12 +103,14 @@
 
     invoke-static {v3, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 11
     new-instance p3, Lcom/samsung/android/sdk/ocr/RecognizerSupporter;
 
     invoke-direct {p3, p1}, Lcom/samsung/android/sdk/ocr/RecognizerSupporter;-><init>(Landroid/content/Context;)V
 
     iput-object p3, p0, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->mRecognizerSupporter:Lcom/samsung/android/sdk/ocr/RecognizerSupporter;
 
+    .line 12
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,6 +131,7 @@
 
     invoke-static {v3, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 13
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -140,12 +152,15 @@
 
     invoke-static {v3, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 14
     iget-object p1, p0, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->mRecognizerSupporter:Lcom/samsung/android/sdk/ocr/RecognizerSupporter;
 
     invoke-virtual {p1, p2}, Lcom/samsung/android/sdk/ocr/RecognizerSupporter;->checkRecognizerSupportedType(Lcom/samsung/android/sdk/ocr/OCRType;)V
 
+    .line 15
     invoke-virtual {p0, v2}, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->createRecognizerProvider(Lcom/samsung/android/sdk/ocr/RecognizerParams;)V
 
+    .line 16
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p0
@@ -158,6 +173,7 @@
 
     const/4 p3, 0x0
 
+    .line 17
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
@@ -178,6 +194,7 @@
 .method public constructor <init>(Lcom/samsung/android/sdk/ocr/RecognizerParams;)V
     .locals 2
 
+    .line 1
     iget-object v0, p1, Lcom/samsung/android/sdk/ocr/RecognizerParams;->context:Landroid/content/Context;
 
     iget-object v1, p1, Lcom/samsung/android/sdk/ocr/RecognizerParams;->ocrType:Lcom/samsung/android/sdk/ocr/OCRType;
@@ -446,6 +463,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 3
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -480,6 +498,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     invoke-static {p1, p3}, Lcom/samsung/android/sdk/ocr/RecognizerAPIChecker;->isValidParameter(Landroid/graphics/Bitmap;[Landroid/graphics/Point;)Z
 
     move-result v0
@@ -488,15 +507,18 @@
 
     return v2
 
+    .line 5
     :cond_0
     new-instance v0, Lcom/samsung/android/sdk/ocr/OCRResult;
 
     invoke-direct {v0}, Lcom/samsung/android/sdk/ocr/OCRResult;-><init>()V
 
+    .line 6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
+    .line 7
     iget-object p0, p0, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->mRecognizerProvider:Lcom/samsung/android/sdk/ocr/RecognizerProvider;
 
     invoke-virtual {v0}, Lcom/samsung/android/sdk/ocr/OCRResult;->getProcessInfo()Lcom/samsung/android/sdk/ocr/OCRResult$ProcessInfo;
@@ -511,10 +533,12 @@
 
     const-string p0, "There is no recognizer created."
 
+    .line 8
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
+    .line 9
     :cond_1
     invoke-interface {p0, p1, p2, p3}, Lcom/samsung/android/sdk/ocr/IOCRecognizer;->detectBlock(Landroid/graphics/Bitmap;Landroid/graphics/Point;[Landroid/graphics/Point;)Z
 
@@ -524,8 +548,10 @@
 
     const-string p1, "There is no detected block or OCR Processing Fail"
 
+    .line 10
     invoke-static {v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 11
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -535,6 +561,7 @@
 
     sub-long/2addr p1, v4
 
+    .line 12
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -555,6 +582,7 @@
 .method public detectBlock(Landroid/graphics/Bitmap;[Landroid/graphics/Point;)Z
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/graphics/Point;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -571,6 +599,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/Point;-><init>(II)V
 
+    .line 2
     invoke-virtual {p0, p1, v0, p2}, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->detectBlock(Landroid/graphics/Bitmap;Landroid/graphics/Point;[Landroid/graphics/Point;)Z
 
     move-result p0
@@ -609,6 +638,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->hasText(Landroid/graphics/Bitmap;Z)Z
 
     move-result p0
@@ -623,6 +653,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -657,6 +688,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -675,6 +707,7 @@
 
     if-eqz p2, :cond_2
 
+    .line 4
     iget-object p2, p0, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->mRecognizerProvider:Lcom/samsung/android/sdk/ocr/RecognizerProvider;
 
     invoke-virtual {p2, p1}, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->isPrinted(Landroid/graphics/Bitmap;)Z
@@ -685,6 +718,7 @@
 
     const-string p0, "Step 1. hasText() true because isPrinted(bitmap) is true"
 
+    .line 5
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -692,8 +726,10 @@
     :cond_0
     const-string p2, "Step 1. hasText() undefined because isPrinted(bitmap) is false"
 
+    .line 6
     invoke-static {v1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     iget-object p0, p0, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->mRecognizerProvider:Lcom/samsung/android/sdk/ocr/RecognizerProvider;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->isHandwritten(Landroid/graphics/Bitmap;)Z
@@ -704,6 +740,7 @@
 
     const-string p0, "Step 2. hasText() true because isHandwritten(bitmap) is true"
 
+    .line 8
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -711,10 +748,12 @@
     :cond_1
     const-string p0, "Step 2. hasText() false because isHandwritten(bitmap) is false"
 
+    .line 9
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
+    .line 10
     :cond_2
     iget-object p2, p0, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->mRecognizerProvider:Lcom/samsung/android/sdk/ocr/RecognizerProvider;
 
@@ -726,6 +765,7 @@
 
     const-string p0, "Step 1. hasText() true because isHandwritten(bitmap) is true"
 
+    .line 11
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -733,8 +773,10 @@
     :cond_3
     const-string p2, "Step 1. hasText() undefined because isHandwritten(bitmap) is false"
 
+    .line 12
     invoke-static {v1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 13
     iget-object p0, p0, Lcom/samsung/android/sdk/ocr/RecognizerInternal;->mRecognizerProvider:Lcom/samsung/android/sdk/ocr/RecognizerProvider;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->isPrinted(Landroid/graphics/Bitmap;)Z
@@ -745,6 +787,7 @@
 
     const-string p0, "Step 2. hasText() true because isPrinted(bitmap) is true"
 
+    .line 14
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v3
@@ -752,6 +795,7 @@
     :cond_4
     const-string p0, "Step 2. hasText() false because isPrinted(bitmap) is false"
 
+    .line 15
     invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2

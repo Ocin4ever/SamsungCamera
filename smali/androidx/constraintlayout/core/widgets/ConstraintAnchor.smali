@@ -171,6 +171,7 @@
 
     const/4 v1, 0x0
 
+    .line 10
     invoke-virtual {p0, p1, p2, v0, v1}, Landroidx/constraintlayout/core/widgets/ConstraintAnchor;->connect(Landroidx/constraintlayout/core/widgets/ConstraintAnchor;IIZ)Z
 
     move-result p0
@@ -185,6 +186,7 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/core/widgets/ConstraintAnchor;->reset()V
 
     return v0
@@ -192,6 +194,7 @@
     :cond_0
     if-nez p4, :cond_1
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/widgets/ConstraintAnchor;->isValidConnection(Landroidx/constraintlayout/core/widgets/ConstraintAnchor;)Z
 
     move-result p4
@@ -202,19 +205,23 @@
 
     return p0
 
+    .line 3
     :cond_1
     iput-object p1, p0, Landroidx/constraintlayout/core/widgets/ConstraintAnchor;->mTarget:Landroidx/constraintlayout/core/widgets/ConstraintAnchor;
 
+    .line 4
     iget-object p4, p1, Landroidx/constraintlayout/core/widgets/ConstraintAnchor;->mDependents:Ljava/util/HashSet;
 
     if-nez p4, :cond_2
 
+    .line 5
     new-instance p4, Ljava/util/HashSet;
 
     invoke-direct {p4}, Ljava/util/HashSet;-><init>()V
 
     iput-object p4, p1, Landroidx/constraintlayout/core/widgets/ConstraintAnchor;->mDependents:Ljava/util/HashSet;
 
+    .line 6
     :cond_2
     iget-object p1, p0, Landroidx/constraintlayout/core/widgets/ConstraintAnchor;->mTarget:Landroidx/constraintlayout/core/widgets/ConstraintAnchor;
 
@@ -222,11 +229,14 @@
 
     if-eqz p1, :cond_3
 
+    .line 7
     invoke-virtual {p1, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 8
     :cond_3
     iput p2, p0, Landroidx/constraintlayout/core/widgets/ConstraintAnchor;->mMargin:I
 
+    .line 9
     iput p3, p0, Landroidx/constraintlayout/core/widgets/ConstraintAnchor;->mGoneMargin:I
 
     return v0
@@ -652,10 +662,12 @@
 .method public isConnectionAllowed(Landroidx/constraintlayout/core/widgets/ConstraintWidget;)Z
     .locals 2
 
+    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 3
     invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/core/widgets/ConstraintAnchor;->isConnectionToMe(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/util/HashSet;)Z
 
     move-result v0
@@ -666,6 +678,7 @@
 
     return v1
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/constraintlayout/core/widgets/ConstraintAnchor;->getOwner()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
@@ -681,6 +694,7 @@
 
     return v0
 
+    .line 5
     :cond_1
     invoke-virtual {p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->getParent()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
@@ -697,6 +711,7 @@
 .method public isConnectionAllowed(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Landroidx/constraintlayout/core/widgets/ConstraintAnchor;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/widgets/ConstraintAnchor;->isConnectionAllowed(Landroidx/constraintlayout/core/widgets/ConstraintWidget;)Z
 
     move-result p0

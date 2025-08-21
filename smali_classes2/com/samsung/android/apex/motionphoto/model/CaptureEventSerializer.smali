@@ -65,14 +65,17 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-interface {p1}, Lkotlinx/serialization/encoding/Decoder;->decodeInt()I
 
     move-result p0
 
+    .line 3
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/model/CaptureEvent;->values()[Lcom/samsung/android/apex/motionphoto/model/CaptureEvent;
 
     move-result-object p1
 
+    .line 4
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -84,6 +87,7 @@
 
     aget-object v3, p1, v2
 
+    .line 5
     invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
 
     move-result v4
@@ -107,6 +111,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_2
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -120,6 +125,7 @@
 .method public bridge synthetic deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/samsung/android/apex/motionphoto/model/CaptureEventSerializer;->deserialize(Lkotlinx/serialization/encoding/Decoder;)Lcom/samsung/android/apex/motionphoto/model/CaptureEvent;
 
     move-result-object p0
@@ -146,6 +152,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
     move-result p0
@@ -158,6 +165,7 @@
 .method public bridge synthetic serialize(Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p2, Lcom/samsung/android/apex/motionphoto/model/CaptureEvent;
 
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/apex/motionphoto/model/CaptureEventSerializer;->serialize(Lkotlinx/serialization/encoding/Encoder;Lcom/samsung/android/apex/motionphoto/model/CaptureEvent;)V

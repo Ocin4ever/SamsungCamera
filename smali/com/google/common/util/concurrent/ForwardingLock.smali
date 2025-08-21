@@ -66,6 +66,7 @@
 .method public tryLock()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingLock;->delegate()Ljava/util/concurrent/locks/Lock;
 
     move-result-object p0
@@ -80,6 +81,7 @@
 .method public tryLock(JLjava/util/concurrent/TimeUnit;)Z
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingLock;->delegate()Ljava/util/concurrent/locks/Lock;
 
     move-result-object p0

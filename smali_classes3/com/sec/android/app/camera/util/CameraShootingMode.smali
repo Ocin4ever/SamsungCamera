@@ -795,6 +795,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, v0}, Lcom/sec/android/app/camera/util/CameraShootingMode;->getDefaultOrder(ZLjava/lang/Boolean;)Ljava/lang/String;
 
     move-result-object p0
@@ -805,10 +806,12 @@
 .method private static getDefaultOrder(ZLjava/lang/Boolean;)Ljava/lang/String;
     .locals 3
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 3
     sget-object v1, Ly2/i;->v0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -819,6 +822,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 4
     sget-object v1, Ly2/i;->E0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -829,6 +833,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 5
     sget-object v1, Ly2/i;->A0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -839,6 +844,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 6
     sget-object v1, Ly2/i;->w0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -849,6 +855,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 7
     sget-object v1, Ly2/i;->z0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -859,6 +866,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 8
     sget-object v1, Ly2/i;->I0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -869,6 +877,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 9
     sget-object v1, Ly2/i;->y0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -879,6 +888,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 10
     sget-object v1, Ly2/i;->t0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -889,6 +899,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 11
     sget-object v1, Ly2/i;->u0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -899,6 +910,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 12
     sget-object v1, Ly2/i;->K0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -909,6 +921,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 13
     sget-object v1, Ly2/i;->J0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -919,6 +932,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 14
     sget-object v1, Ly2/i;->x0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -929,6 +943,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 15
     sget-object v1, Ly2/i;->F0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -939,6 +954,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 16
     sget-object v1, Ly2/i;->H0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -949,6 +965,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 17
     sget-object v1, Ly2/i;->D0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -959,6 +976,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 18
     sget-object v1, Ly2/i;->C0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -969,6 +987,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 19
     sget-object v1, Ly2/i;->B0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -979,6 +998,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 20
     sget-object v1, Ly2/i;->L0:Ly2/i;
 
     invoke-static {v1}, Ly2/d;->d(Ly2/i;)Ljava/util/Map;
@@ -989,6 +1009,7 @@
 
     invoke-static {v0, v1, v2, p0, p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->addString(Ljava/lang/StringBuilder;Ljava/util/Map;Lcom/sec/android/app/camera/interfaces/CommandId;ZLjava/lang/Boolean;)V
 
+    .line 21
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -2469,6 +2490,7 @@
 .method public static isMoreMode(Landroid/content/Context;I)Z
     .locals 0
 
+    .line 15
     invoke-static {p1}, Lcom/sec/android/app/camera/util/CameraShootingMode;->getCommandId(I)Lcom/sec/android/app/camera/interfaces/CommandId;
 
     move-result-object p1
@@ -2483,10 +2505,12 @@
 .method public static isMoreMode(Landroid/content/Context;Lcom/sec/android/app/camera/interfaces/CommandId;)Z
     .locals 5
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/util/CameraShootingMode;->mShootingModeMapLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraShootingMode;->mShortcutInfoMap:Ljava/util/EnumMap;
 
@@ -2512,22 +2536,26 @@
 
     check-cast v2, Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;
 
+    .line 3
     invoke-static {v2}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;->a(Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;)Lcom/sec/android/app/camera/util/CameraShootingMode$ShootingModeInfo;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
+    .line 4
     invoke-virtual {v3}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShootingModeInfo;->getCommandId()Lcom/sec/android/app/camera/interfaces/CommandId;
 
     move-result-object v3
 
     if-ne v3, p1, :cond_1
 
+    .line 5
     invoke-static {v2}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;->b(Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;)Lcom/sec/android/app/camera/interfaces/CommandId;
 
     move-result-object p1
 
+    .line 6
     :cond_1
     invoke-static {v2}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;->c(Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;)Lcom/sec/android/app/camera/util/CameraShootingMode$ShootingModeInfo;
 
@@ -2535,23 +2563,27 @@
 
     if-eqz v3, :cond_0
 
+    .line 7
     invoke-virtual {v3}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShootingModeInfo;->getCommandId()Lcom/sec/android/app/camera/interfaces/CommandId;
 
     move-result-object v3
 
     if-ne v3, p1, :cond_0
 
+    .line 8
     invoke-static {v2}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;->b(Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;)Lcom/sec/android/app/camera/interfaces/CommandId;
 
     move-result-object p1
 
     goto :goto_0
 
+    .line 9
     :cond_2
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-static {p0}, Lcom/sec/android/app/camera/util/CameraShootingMode;->getMoreOrderString(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
@@ -2562,6 +2594,7 @@
 
     move-result-object p0
 
+    .line 11
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -2575,10 +2608,12 @@
 
     const-string v4, ":"
 
+    .line 12
     invoke-virtual {v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
+    .line 13
     aget-object v3, v3, v1
 
     invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
@@ -2606,6 +2641,7 @@
     :catchall_0
     move-exception p0
 
+    .line 14
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2617,6 +2653,7 @@
 .method public static isSupported(IZ)Z
     .locals 0
 
+    .line 4
     :try_start_0
     invoke-static {p0}, Lcom/sec/android/app/camera/util/CameraShootingMode;->getCommandId(I)Lcom/sec/android/app/camera/interfaces/CommandId;
 
@@ -2639,10 +2676,12 @@
 .method public static isSupported(Lcom/sec/android/app/camera/interfaces/CommandId;Z)Z
     .locals 4
 
+    .line 5
     sget-object v0, Lcom/sec/android/app/camera/util/CameraShootingMode;->mShootingModeMapLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 6
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/CameraShootingMode;->mShortcutInfoMap:Ljava/util/EnumMap;
 
@@ -2667,12 +2706,14 @@
 
     check-cast v2, Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;
 
+    .line 7
     invoke-static {v2}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;->a(Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;)Lcom/sec/android/app/camera/util/CameraShootingMode$ShootingModeInfo;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
+    .line 8
     invoke-virtual {v3}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShootingModeInfo;->getCommandId()Lcom/sec/android/app/camera/interfaces/CommandId;
 
     move-result-object v3
@@ -2681,6 +2722,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 9
     invoke-virtual {v2}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;->isFrontFacingSupported()Z
 
     move-result p0
@@ -2689,6 +2731,7 @@
 
     return p0
 
+    .line 10
     :cond_1
     invoke-virtual {v2}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;->isBackFacingSupported()Z
 
@@ -2698,6 +2741,7 @@
 
     return p0
 
+    .line 11
     :cond_2
     invoke-static {v2}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;->c(Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;)Lcom/sec/android/app/camera/util/CameraShootingMode$ShootingModeInfo;
 
@@ -2705,6 +2749,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 12
     invoke-virtual {v3}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShootingModeInfo;->getCommandId()Lcom/sec/android/app/camera/interfaces/CommandId;
 
     move-result-object v3
@@ -2713,6 +2758,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 13
     invoke-virtual {v2}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;->isFrontFacingSupported()Z
 
     move-result p0
@@ -2721,6 +2767,7 @@
 
     return p0
 
+    .line 14
     :cond_3
     invoke-virtual {v2}, Lcom/sec/android/app/camera/util/CameraShootingMode$ShortcutInfo;->isBackFacingSupported()Z
 
@@ -2730,6 +2777,7 @@
 
     return p0
 
+    .line 15
     :cond_4
     monitor-exit v0
 
@@ -2740,6 +2788,7 @@
     :catchall_0
     move-exception p0
 
+    .line 16
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2752,10 +2801,12 @@
 
     const-string v0, ","
 
+    .line 17
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 18
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -2769,10 +2820,12 @@
 
     const-string v4, ":"
 
+    .line 19
     invoke-virtual {v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
+    .line 20
     array-length v4, v3
 
     if-eqz v4, :cond_3
@@ -2792,6 +2845,7 @@
     :cond_0
     const/4 v4, 0x3
 
+    .line 21
     aget-object v4, v3, v4
 
     invoke-static {v4}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
@@ -2804,6 +2858,7 @@
 
     aget-object v4, v3, v5
 
+    .line 22
     invoke-static {v4}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v4
@@ -2828,6 +2883,7 @@
     :cond_2
     move v4, v1
 
+    .line 23
     :goto_1
     aget-object v3, v3, v1
 
@@ -2864,6 +2920,7 @@
 
     const-string p1, "front"
 
+    .line 1
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -2875,6 +2932,7 @@
     :cond_0
     const-string p1, "back"
 
+    .line 2
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -2886,6 +2944,7 @@
     :cond_1
     const-string p1, "enable"
 
+    .line 3
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

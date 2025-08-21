@@ -69,6 +69,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Iterators$3;->next()Ljava/util/Iterator;
 
     move-result-object p0
@@ -84,12 +85,14 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/Iterators$3;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/Iterators$3;->val$elements:[Ljava/util/Iterator;
 
     iget v1, p0, Lcom/google/common/collect/Iterators$3;->index:I
@@ -100,6 +103,7 @@
 
     check-cast v0, Ljava/util/Iterator;
 
+    .line 4
     iget-object v1, p0, Lcom/google/common/collect/Iterators$3;->val$elements:[Ljava/util/Iterator;
 
     iget v2, p0, Lcom/google/common/collect/Iterators$3;->index:I
@@ -110,10 +114,12 @@
 
     add-int/lit8 v2, v2, 0x1
 
+    .line 5
     iput v2, p0, Lcom/google/common/collect/Iterators$3;->index:I
 
     return-object v0
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 

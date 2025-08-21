@@ -44,8 +44,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/loader/content/AsyncTaskLoader;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance p1, Landroidx/loader/content/Loader$ForceLoadContentObserver;
 
     invoke-direct {p1, p0}, Landroidx/loader/content/Loader$ForceLoadContentObserver;-><init>(Landroidx/loader/content/Loader;)V
@@ -58,22 +60,29 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/loader/content/AsyncTaskLoader;-><init>(Landroid/content/Context;)V
 
+    .line 4
     new-instance p1, Landroidx/loader/content/Loader$ForceLoadContentObserver;
 
     invoke-direct {p1, p0}, Landroidx/loader/content/Loader$ForceLoadContentObserver;-><init>(Landroidx/loader/content/Loader;)V
 
     iput-object p1, p0, Landroidx/loader/content/CursorLoader;->mObserver:Landroidx/loader/content/Loader$ForceLoadContentObserver;
 
+    .line 5
     iput-object p2, p0, Landroidx/loader/content/CursorLoader;->mUri:Landroid/net/Uri;
 
+    .line 6
     iput-object p3, p0, Landroidx/loader/content/CursorLoader;->mProjection:[Ljava/lang/String;
 
+    .line 7
     iput-object p4, p0, Landroidx/loader/content/CursorLoader;->mSelection:Ljava/lang/String;
 
+    .line 8
     iput-object p5, p0, Landroidx/loader/content/CursorLoader;->mSelectionArgs:[Ljava/lang/String;
 
+    .line 9
     iput-object p6, p0, Landroidx/loader/content/CursorLoader;->mSortOrder:Ljava/lang/String;
 
     return-void
@@ -113,6 +122,7 @@
 .method public deliverResult(Landroid/database/Cursor;)V
     .locals 2
 
+    .line 2
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->isReset()Z
 
     move-result v0
@@ -121,22 +131,27 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     :cond_0
     return-void
 
+    .line 4
     :cond_1
     iget-object v0, p0, Landroidx/loader/content/CursorLoader;->mCursor:Landroid/database/Cursor;
 
+    .line 5
     iput-object p1, p0, Landroidx/loader/content/CursorLoader;->mCursor:Landroid/database/Cursor;
 
+    .line 6
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->isStarted()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
+    .line 7
     invoke-super {p0, p1}, Landroidx/loader/content/Loader;->deliverResult(Ljava/lang/Object;)V
 
     :cond_2
@@ -144,12 +159,14 @@
 
     if-eq v0, p1, :cond_3
 
+    .line 8
     invoke-interface {v0}, Landroid/database/Cursor;->isClosed()Z
 
     move-result p0
 
     if-nez p0, :cond_3
 
+    .line 9
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     :cond_3
@@ -159,6 +176,7 @@
 .method public bridge synthetic deliverResult(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/database/Cursor;
 
     invoke-virtual {p0, p1}, Landroidx/loader/content/CursorLoader;->deliverResult(Landroid/database/Cursor;)V
@@ -287,8 +305,10 @@
 .method public loadInBackground()Landroid/database/Cursor;
     .locals 9
 
+    .line 2
     monitor-enter p0
 
+    .line 3
     :try_start_0
     invoke-virtual {p0}, Landroidx/loader/content/AsyncTaskLoader;->isLoadInBackgroundCanceled()Z
 
@@ -296,18 +316,21 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     new-instance v0, Landroidx/core/os/CancellationSignal;
 
     invoke-direct {v0}, Landroidx/core/os/CancellationSignal;-><init>()V
 
     iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Landroidx/core/os/CancellationSignal;
 
+    .line 5
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
     const/4 v0, 0x0
 
+    .line 6
     :try_start_1
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->getContext()Landroid/content/Context;
 
@@ -337,9 +360,11 @@
 
     if-eqz v1, :cond_0
 
+    .line 7
     :try_start_2
     invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
 
+    .line 8
     iget-object v2, p0, Landroidx/loader/content/CursorLoader;->mObserver:Landroidx/loader/content/Loader$ForceLoadContentObserver;
 
     invoke-interface {v1, v2}, Landroid/database/Cursor;->registerContentObserver(Landroid/database/ContentObserver;)V
@@ -352,20 +377,25 @@
     :catch_0
     move-exception v2
 
+    .line 9
     :try_start_3
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
+    .line 10
     throw v2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 11
     :cond_0
     :goto_0
     monitor-enter p0
 
+    .line 12
     :try_start_4
     iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Landroidx/core/os/CancellationSignal;
 
+    .line 13
     monitor-exit p0
 
     return-object v1
@@ -382,11 +412,14 @@
     :catchall_1
     move-exception v1
 
+    .line 14
     monitor-enter p0
 
+    .line 15
     :try_start_5
     iput-object v0, p0, Landroidx/loader/content/CursorLoader;->mCancellationSignal:Landroidx/core/os/CancellationSignal;
 
+    .line 16
     monitor-exit p0
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
@@ -403,6 +436,7 @@
 
     throw v0
 
+    .line 17
     :cond_1
     :try_start_7
     new-instance v0, Landroidx/core/os/OperationCanceledException;
@@ -414,6 +448,7 @@
     :catchall_3
     move-exception v0
 
+    .line 18
     monitor-exit p0
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
@@ -424,6 +459,7 @@
 .method public bridge synthetic loadInBackground()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/loader/content/CursorLoader;->loadInBackground()Landroid/database/Cursor;
 
     move-result-object p0
@@ -436,12 +472,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-interface {p1}, Landroid/database/Cursor;->isClosed()Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
+    .line 3
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     :cond_0
@@ -451,6 +489,7 @@
 .method public bridge synthetic onCanceled(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/database/Cursor;
 
     invoke-virtual {p0, p1}, Landroidx/loader/content/CursorLoader;->onCanceled(Landroid/database/Cursor;)V

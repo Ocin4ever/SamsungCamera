@@ -1010,6 +1010,7 @@
 
     const/high16 v0, 0x3f000000    # 0.5f
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Landroidx/core/widget/SeslEdgeEffect;->onPull(FF)V
 
     return-void
@@ -1018,6 +1019,7 @@
 .method public onPull(FF)V
     .locals 6
 
+    .line 2
     iget v0, p0, Landroidx/core/widget/SeslEdgeEffect;->mPullDistance:F
 
     const/4 v1, 0x0
@@ -1028,27 +1030,33 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Landroidx/core/widget/SeslEdgeEffect;->mOnReleaseCalled:Z
 
+    .line 4
     invoke-direct {p0}, Landroidx/core/widget/SeslEdgeEffect;->isEdgeEffectRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 5
     iget v0, p0, Landroidx/core/widget/SeslEdgeEffect;->mPullDistance:F
 
     add-float/2addr v0, p1
 
     iput v0, p0, Landroidx/core/widget/SeslEdgeEffect;->mPullDistance:F
 
+    .line 6
     :cond_0
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v2
 
+    .line 7
     iput p2, p0, Landroidx/core/widget/SeslEdgeEffect;->mTargetDisplacement:F
 
+    .line 8
     iget p2, p0, Landroidx/core/widget/SeslEdgeEffect;->mState:I
 
     const/4 v0, 0x4
@@ -1074,6 +1082,7 @@
 
     if-eq p2, v0, :cond_2
 
+    .line 9
     iget p2, p0, Landroidx/core/widget/SeslEdgeEffect;->mGlowScaleY:F
 
     invoke-static {v1, p2}, Ljava/lang/Math;->max(FF)F
@@ -1082,6 +1091,7 @@
 
     iput p2, p0, Landroidx/core/widget/SeslEdgeEffect;->mGlowScaleY:F
 
+    .line 10
     :cond_2
     invoke-direct {p0}, Landroidx/core/widget/SeslEdgeEffect;->isEdgeEffectRunning()Z
 
@@ -1101,6 +1111,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_3
     iget-object p2, p0, Landroidx/core/widget/SeslEdgeEffect;->mHostView:Landroid/view/View;
 
@@ -1108,6 +1119,7 @@
 
     const/16 p2, 0x1c
 
+    .line 12
     invoke-static {p2}, Landroidx/reflect/view/SeslHapticFeedbackConstantsReflector;->semGetVibrationIndex(I)I
 
     move-result p2
@@ -1116,19 +1128,24 @@
 
     if-eq p2, v1, :cond_4
 
+    .line 13
     iget-object v1, p0, Landroidx/core/widget/SeslEdgeEffect;->mHostView:Landroid/view/View;
 
     invoke-virtual {v1, p2}, Landroid/view/View;->performHapticFeedback(I)Z
 
+    .line 14
     :cond_4
     iput v0, p0, Landroidx/core/widget/SeslEdgeEffect;->mState:I
 
+    .line 15
     iput-wide v2, p0, Landroidx/core/widget/SeslEdgeEffect;->mStartTime:J
 
     const/high16 p2, 0x43270000    # 167.0f
 
+    .line 16
     iput p2, p0, Landroidx/core/widget/SeslEdgeEffect;->mDuration:F
 
+    .line 17
     iget p2, p0, Landroidx/core/widget/SeslEdgeEffect;->mPullDistance:F
 
     add-float/2addr p2, p1

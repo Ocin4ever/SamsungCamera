@@ -68,6 +68,7 @@
 .method public addListener(Landroidx/databinding/ObservableMap;)V
     .locals 0
 
+    .line 2
     invoke-interface {p1, p0}, Landroidx/databinding/ObservableMap;->addOnMapChangedCallback(Landroidx/databinding/ObservableMap$OnMapChangedCallback;)V
 
     return-void
@@ -76,6 +77,7 @@
 .method public bridge synthetic addListener(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/databinding/ObservableMap;
 
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding$WeakMapListener;->addListener(Landroidx/databinding/ObservableMap;)V
@@ -137,6 +139,7 @@
 .method public removeListener(Landroidx/databinding/ObservableMap;)V
     .locals 0
 
+    .line 2
     invoke-interface {p1, p0}, Landroidx/databinding/ObservableMap;->removeOnMapChangedCallback(Landroidx/databinding/ObservableMap$OnMapChangedCallback;)V
 
     return-void
@@ -145,6 +148,7 @@
 .method public bridge synthetic removeListener(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/databinding/ObservableMap;
 
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding$WeakMapListener;->removeListener(Landroidx/databinding/ObservableMap;)V

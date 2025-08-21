@@ -37,6 +37,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, v0}, Lcom/google/common/graph/EndpointPairIterator;-><init>(Lcom/google/common/graph/BaseGraph;Lcom/google/common/graph/EndpointPairIterator$1;)V
 
     return-void
@@ -45,6 +46,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/graph/BaseGraph;Lcom/google/common/graph/EndpointPairIterator$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/graph/EndpointPairIterator$Directed;-><init>(Lcom/google/common/graph/BaseGraph;)V
 
     return-void
@@ -62,6 +64,7 @@
         }
     .end annotation
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/common/graph/EndpointPairIterator;->successorIterator:Ljava/util/Iterator;
 
@@ -71,6 +74,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/graph/EndpointPairIterator;->node:Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -87,6 +91,7 @@
 
     return-object p0
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPairIterator;->advance()Z
 
@@ -94,6 +99,7 @@
 
     if-nez v0, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractIterator;->endOfData()Ljava/lang/Object;
 
     move-result-object p0
@@ -106,6 +112,7 @@
 .method public bridge synthetic computeNext()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPairIterator$Directed;->computeNext()Lcom/google/common/graph/EndpointPair;
 
     move-result-object p0

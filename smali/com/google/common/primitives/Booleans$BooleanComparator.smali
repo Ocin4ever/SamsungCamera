@@ -155,6 +155,7 @@
 .method public compare(Ljava/lang/Boolean;Ljava/lang/Boolean;)I
     .locals 1
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
@@ -170,6 +171,7 @@
     :cond_0
     move p1, v0
 
+    .line 3
     :goto_0
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -188,6 +190,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Boolean;
 
     check-cast p2, Ljava/lang/Boolean;

@@ -49,6 +49,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     const-string p0, "<anonymous parameter 0>"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->f(Ljava/lang/Object;Ljava/lang/String;)V
@@ -65,6 +66,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroidx/collection/LruCacheKt$lruCache$1;->invoke(Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result p0

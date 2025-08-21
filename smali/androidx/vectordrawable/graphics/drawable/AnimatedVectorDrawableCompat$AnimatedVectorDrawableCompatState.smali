@@ -197,6 +197,7 @@
 .method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "No constant state support for SDK < 24."
@@ -209,6 +210,7 @@
 .method public newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "No constant state support for SDK < 24."

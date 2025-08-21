@@ -46,6 +46,7 @@
 
     const-string v1, "VM"
 
+    .line 1
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->i(ILjava/lang/String;)V
 
     const-class v0, Landroidx/lifecycle/ViewModel;
@@ -99,6 +100,7 @@
 
     const-string v1, "VM"
 
+    .line 2
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->i(ILjava/lang/String;)V
 
     const-class v0, Landroidx/lifecycle/ViewModel;
@@ -141,12 +143,14 @@
     :cond_0
     const-string p2, "<this>"
 
+    .line 1
     invoke-static {p0, p2}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x4
 
     const-string p3, "VM"
 
+    .line 2
     invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->i(ILjava/lang/String;)V
 
     const-class p2, Landroidx/lifecycle/ViewModel;
@@ -198,12 +202,14 @@
     :cond_1
     const-string p3, "<this>"
 
+    .line 3
     invoke-static {p0, p3}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p3, 0x4
 
     const-string p4, "VM"
 
+    .line 4
     invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->i(ILjava/lang/String;)V
 
     const-class p3, Landroidx/lifecycle/ViewModel;
@@ -249,6 +255,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Landroidx/fragment/app/FragmentViewModelLazyKt$createViewModelLazy$1;
 
     invoke-direct {v0, p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$createViewModelLazy$1;-><init>(Landroidx/fragment/app/Fragment;)V
@@ -295,10 +302,12 @@
 
     if-nez p4, :cond_0
 
+    .line 2
     new-instance p4, Landroidx/fragment/app/FragmentViewModelLazyKt$createViewModelLazy$factoryPromise$1;
 
     invoke-direct {p4, p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$createViewModelLazy$factoryPromise$1;-><init>(Landroidx/fragment/app/Fragment;)V
 
+    .line 3
     :cond_0
     new-instance p0, Landroidx/lifecycle/ViewModelLazy;
 
@@ -316,6 +325,7 @@
 
     const/4 p3, 0x0
 
+    .line 1
     :cond_0
     invoke-static {p0, p1, p2, p3}, Landroidx/fragment/app/FragmentViewModelLazyKt;->createViewModelLazy(Landroidx/fragment/app/Fragment;Lu6/c;Lq6/a;Lq6/a;)Lf6/d;
 
@@ -331,6 +341,7 @@
 
     if-eqz p6, :cond_0
 
+    .line 2
     new-instance p3, Landroidx/fragment/app/FragmentViewModelLazyKt$createViewModelLazy$2;
 
     invoke-direct {p3, p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$createViewModelLazy$2;-><init>(Landroidx/fragment/app/Fragment;)V
@@ -342,6 +353,7 @@
 
     const/4 p4, 0x0
 
+    .line 3
     :cond_1
     invoke-static {p0, p1, p2, p3, p4}, Landroidx/fragment/app/FragmentViewModelLazyKt;->createViewModelLazy(Landroidx/fragment/app/Fragment;Lu6/c;Lq6/a;Lq6/a;Lq6/a;)Lf6/d;
 
@@ -373,6 +385,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     sget-object v0, Lf6/f;->c:Lf6/f;
 
     new-instance v1, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$owner$2;
@@ -387,6 +400,7 @@
 
     const-string v1, "VM"
 
+    .line 2
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->i(ILjava/lang/String;)V
 
     const-class v0, Landroidx/lifecycle/ViewModel;
@@ -441,6 +455,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     sget-object v0, Lf6/f;->c:Lf6/f;
 
     new-instance v1, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$owner$4;
@@ -455,6 +470,7 @@
 
     const-string v1, "VM"
 
+    .line 4
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->i(ILjava/lang/String;)V
 
     const-class v0, Landroidx/lifecycle/ViewModel;
@@ -492,6 +508,7 @@
 
     if-eqz p4, :cond_0
 
+    .line 1
     new-instance p1, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$1;
 
     invoke-direct {p1, p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$1;-><init>(Landroidx/fragment/app/Fragment;)V
@@ -506,12 +523,14 @@
     :cond_1
     const-string p3, "<this>"
 
+    .line 2
     invoke-static {p0, p3}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p3, "ownerProducer"
 
     invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     sget-object p3, Lf6/f;->c:Lf6/f;
 
     new-instance p4, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$owner$2;
@@ -526,6 +545,7 @@
 
     const-string p4, "VM"
 
+    .line 4
     invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->i(ILjava/lang/String;)V
 
     const-class p3, Landroidx/lifecycle/ViewModel;
@@ -563,6 +583,7 @@
 
     if-eqz p5, :cond_0
 
+    .line 5
     new-instance p1, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$5;
 
     invoke-direct {p1, p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$5;-><init>(Landroidx/fragment/app/Fragment;)V
@@ -588,12 +609,14 @@
     :cond_2
     const-string p4, "<this>"
 
+    .line 6
     invoke-static {p0, p4}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p4, "ownerProducer"
 
     invoke-static {p1, p4}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 7
     sget-object p4, Lf6/f;->c:Lf6/f;
 
     new-instance v0, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$owner$4;
@@ -606,6 +629,7 @@
 
     const-string p4, "VM"
 
+    .line 8
     invoke-static {p5, p4}, Lkotlin/jvm/internal/m;->i(ILjava/lang/String;)V
 
     const-class p4, Landroidx/lifecycle/ViewModel;

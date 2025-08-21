@@ -11,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
 
     return-void
@@ -19,8 +20,10 @@
 .method public constructor <init>(FFFFFF)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
 
+    .line 2
     invoke-virtual/range {p0 .. p6}, Lcom/samsung/android/livetranslation/geometry/AffineTransform;->convert(FFFFFF)V
 
     return-void
@@ -29,10 +32,12 @@
 .method public constructor <init>([F)V
     .locals 8
 
+    .line 3
     invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 4
     aget v2, p1, v0
 
     const/4 v0, 0x1

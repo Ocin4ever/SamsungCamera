@@ -28,6 +28,7 @@
 .method private constructor <init>(Lco/polarr/mgcsc/v2/apis/PolarrMGC;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lco/polarr/mgcsc/v2/apis/PolarrMGC$b;->d:Lco/polarr/mgcsc/v2/apis/PolarrMGC;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,6 +47,7 @@
 .method public synthetic constructor <init>(Lco/polarr/mgcsc/v2/apis/PolarrMGC;Lco/polarr/mgcsc/v2/apis/PolarrMGC$a;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lco/polarr/mgcsc/v2/apis/PolarrMGC$b;-><init>(Lco/polarr/mgcsc/v2/apis/PolarrMGC;)V
 
     return-void

@@ -17,6 +17,7 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lk2/v;->h:Lk2/v;
 
     invoke-direct {p0, v0}, Lk2/u;-><init>(Lk2/v;)V
@@ -29,16 +30,20 @@
 
     aput-object p1, v1, v2
 
+    .line 2
     iput-object v1, p0, Lk2/d0;->b:[Ljava/lang/String;
 
     new-array p1, v0, [Ljava/lang/String;
 
     aput-object p2, p1, v2
 
+    .line 3
     iput-object p1, p0, Lk2/d0;->c:[Ljava/lang/String;
 
+    .line 4
     iput-object p3, p0, Lk2/d0;->d:Ljava/lang/String;
 
+    .line 5
     iput-object p4, p0, Lk2/d0;->e:Ljava/lang/String;
 
     return-void
@@ -47,16 +52,21 @@
 .method public constructor <init>([Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 6
     sget-object v0, Lk2/v;->h:Lk2/v;
 
     invoke-direct {p0, v0}, Lk2/u;-><init>(Lk2/v;)V
 
+    .line 7
     iput-object p1, p0, Lk2/d0;->b:[Ljava/lang/String;
 
+    .line 8
     iput-object p2, p0, Lk2/d0;->c:[Ljava/lang/String;
 
+    .line 9
     iput-object p3, p0, Lk2/d0;->d:Ljava/lang/String;
 
+    .line 10
     iput-object p4, p0, Lk2/d0;->e:Ljava/lang/String;
 
     return-void

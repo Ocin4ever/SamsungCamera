@@ -880,10 +880,12 @@
 
     const-string p0, "sendSaLog : returned because eventId is null"
 
+    .line 44
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 45
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -913,6 +915,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 46
     invoke-static {}, Lu3/i;->b()Lu3/i;
 
     move-result-object v0
@@ -923,10 +926,12 @@
 
     sget-object v2, Lcom/sec/android/app/camera/logging/SaLogUtil;->mScreenId:Ljava/lang/String;
 
+    .line 47
     invoke-virtual {v1, v2}, Lu3/e;->j(Ljava/lang/String;)Lu3/e;
 
     move-result-object v1
 
+    .line 48
     invoke-virtual {p0}, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->getId()Ljava/lang/String;
 
     move-result-object p0
@@ -935,10 +940,12 @@
 
     move-result-object p0
 
+    .line 49
     invoke-virtual {p0}, Lu3/e;->a()Ljava/util/Map;
 
     move-result-object p0
 
+    .line 50
     invoke-virtual {v0, p0}, Lu3/i;->g(Ljava/util/Map;)I
 
     return-void
@@ -953,10 +960,12 @@
 
     const-string p0, "sendSaLog : returned because eventId is null"
 
+    .line 27
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 28
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -992,6 +1001,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 29
     invoke-static {}, Lu3/i;->b()Lu3/i;
 
     move-result-object v0
@@ -1002,10 +1012,12 @@
 
     sget-object v2, Lcom/sec/android/app/camera/logging/SaLogUtil;->mScreenId:Ljava/lang/String;
 
+    .line 30
     invoke-virtual {v1, v2}, Lu3/e;->j(Ljava/lang/String;)Lu3/e;
 
     move-result-object v1
 
+    .line 31
     invoke-virtual {p0}, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->getId()Ljava/lang/String;
 
     move-result-object p0
@@ -1014,14 +1026,17 @@
 
     move-result-object p0
 
+    .line 32
     invoke-virtual {p0, p1, p2}, Lu3/e;->i(J)Lu3/e;
 
     move-result-object p0
 
+    .line 33
     invoke-virtual {p0}, Lu3/e;->a()Ljava/util/Map;
 
     move-result-object p0
 
+    .line 34
     invoke-virtual {v0, p0}, Lu3/i;->g(Ljava/util/Map;)I
 
     return-void
@@ -1038,6 +1053,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1077,18 +1093,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "det"
 
+    .line 3
     invoke-virtual {p3}, Lcom/sec/android/app/camera/interfaces/SaLogDetail;->getId()Ljava/lang/String;
 
     move-result-object p3
 
     invoke-interface {v0, v1, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-static {}, Lu3/i;->b()Lu3/i;
 
     move-result-object p3
@@ -1099,10 +1118,12 @@
 
     sget-object v2, Lcom/sec/android/app/camera/logging/SaLogUtil;->mScreenId:Ljava/lang/String;
 
+    .line 5
     invoke-virtual {v1, v2}, Lu3/e;->j(Ljava/lang/String;)Lu3/e;
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {p0}, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->getId()Ljava/lang/String;
 
     move-result-object p0
@@ -1111,18 +1132,22 @@
 
     move-result-object p0
 
+    .line 7
     invoke-virtual {p0, v0}, Lu3/e;->f(Ljava/util/Map;)Lu3/e;
 
     move-result-object p0
 
+    .line 8
     invoke-virtual {p0, p1, p2}, Lu3/e;->i(J)Lu3/e;
 
     move-result-object p0
 
+    .line 9
     invoke-virtual {p0}, Lu3/e;->a()Ljava/util/Map;
 
     move-result-object p0
 
+    .line 10
     invoke-virtual {p3, p0}, Lu3/i;->g(Ljava/util/Map;)I
 
     return-void
@@ -1131,6 +1156,7 @@
     :goto_0
     const-string p0, "sendSaLog : returned because it is invalid id"
 
+    .line 11
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1145,10 +1171,12 @@
 
     const-string p1, "sendSaLog : returned because detail is null"
 
+    .line 24
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 25
     :cond_0
     invoke-virtual {p1}, Lcom/sec/android/app/camera/interfaces/SaLogDetail;->getId()Ljava/lang/String;
 
@@ -1168,10 +1196,12 @@
 
     const-string p1, "sendSaLog : returned because detail is null"
 
+    .line 22
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 23
     :cond_0
     invoke-virtual {p1}, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->getId()Ljava/lang/String;
 
@@ -1191,10 +1221,12 @@
 
     const-string p0, "sendSaLog : returned because eventId is null"
 
+    .line 12
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 13
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1230,14 +1262,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 14
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "det"
 
+    .line 15
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 16
     invoke-static {}, Lu3/i;->b()Lu3/i;
 
     move-result-object p1
@@ -1248,10 +1283,12 @@
 
     sget-object v2, Lcom/sec/android/app/camera/logging/SaLogUtil;->mScreenId:Ljava/lang/String;
 
+    .line 17
     invoke-virtual {v1, v2}, Lu3/e;->j(Ljava/lang/String;)Lu3/e;
 
     move-result-object v1
 
+    .line 18
     invoke-virtual {p0}, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->getId()Ljava/lang/String;
 
     move-result-object p0
@@ -1260,14 +1297,17 @@
 
     move-result-object p0
 
+    .line 19
     invoke-virtual {p0, v0}, Lu3/e;->f(Ljava/util/Map;)Lu3/e;
 
     move-result-object p0
 
+    .line 20
     invoke-virtual {p0}, Lu3/e;->a()Ljava/util/Map;
 
     move-result-object p0
 
+    .line 21
     invoke-virtual {p1, p0}, Lu3/i;->g(Ljava/util/Map;)I
 
     return-void
@@ -1292,15 +1332,18 @@
 
     const-string p0, "sendSaLog : returned because eventId is null"
 
+    .line 35
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 36
     :cond_0
     invoke-static {p1}, Lcom/sec/android/app/camera/logging/SaLogUtil;->getDimension(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p1
 
+    .line 37
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1335,6 +1378,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 38
     invoke-static {}, Lu3/i;->b()Lu3/i;
 
     move-result-object v0
@@ -1345,10 +1389,12 @@
 
     sget-object v2, Lcom/sec/android/app/camera/logging/SaLogUtil;->mScreenId:Ljava/lang/String;
 
+    .line 39
     invoke-virtual {v1, v2}, Lu3/e;->j(Ljava/lang/String;)Lu3/e;
 
     move-result-object v1
 
+    .line 40
     invoke-virtual {p0}, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->getId()Ljava/lang/String;
 
     move-result-object p0
@@ -1357,14 +1403,17 @@
 
     move-result-object p0
 
+    .line 41
     invoke-virtual {p0, p1}, Lu3/e;->f(Ljava/util/Map;)Lu3/e;
 
     move-result-object p0
 
+    .line 42
     invoke-virtual {p0}, Lu3/e;->a()Ljava/util/Map;
 
     move-result-object p0
 
+    .line 43
     invoke-virtual {v0, p0}, Lu3/i;->g(Ljava/util/Map;)I
 
     return-void
@@ -1375,6 +1424,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 26
     sget-object p1, Lcom/sec/android/app/camera/interfaces/SaLogDetail;->TRUE:Lcom/sec/android/app/camera/interfaces/SaLogDetail;
 
     goto :goto_0

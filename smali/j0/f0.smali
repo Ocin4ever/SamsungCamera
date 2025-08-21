@@ -41,6 +41,7 @@
 .method public constructor <init>(ILandroid/accounts/Account;ILcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lk0/a;-><init>()V
 
     iput p1, p0, Lj0/f0;->a:I
@@ -59,6 +60,7 @@
 
     const/4 v0, 0x2
 
+    .line 2
     invoke-direct {p0, v0, p1, p2, p3}, Lj0/f0;-><init>(ILandroid/accounts/Account;ILcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)V
 
     return-void

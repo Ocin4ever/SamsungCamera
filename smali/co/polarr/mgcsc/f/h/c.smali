@@ -48,6 +48,7 @@
 .method public static synthetic a(Landroid/graphics/Rect;)D
     .locals 2
 
+    .line 1
     invoke-static {p0}, Lco/polarr/mgcsc/f/h/c;->b(Landroid/graphics/Rect;)D
 
     move-result-wide v0
@@ -58,6 +59,7 @@
 .method private static a(Lco/polarr/mgcsc/entities/CropWindow;Lco/polarr/mgcsc/entities/CropWindow;)D
     .locals 3
 
+    .line 2
     iget v0, p0, Lco/polarr/mgcsc/entities/CropWindow;->left:I
 
     iget v1, p0, Lco/polarr/mgcsc/entities/CropWindow;->right:I
@@ -112,6 +114,7 @@
 .method private static a(Landroid/graphics/Rect;Landroid/graphics/Rect;)F
     .locals 4
 
+    .line 3
     iget v0, p0, Landroid/graphics/Rect;->top:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I
@@ -182,6 +185,7 @@
 .method public static synthetic a(Landroid/graphics/Rect;Ljava/util/List;)F
     .locals 0
 
+    .line 4
     invoke-static {p0, p1}, Lco/polarr/mgcsc/f/h/c;->b(Landroid/graphics/Rect;Ljava/util/List;)F
 
     move-result p0
@@ -192,6 +196,7 @@
 .method private static a(IIIILandroid/graphics/Rect;)Lco/polarr/mgcsc/entities/CropWindow;
     .locals 22
 
+    .line 5
     move/from16 v7, p0
 
     move/from16 v8, p1
@@ -561,6 +566,7 @@
         }
     .end annotation
 
+    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -838,6 +844,7 @@
         }
     .end annotation
 
+    .line 7
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -900,6 +907,7 @@
         }
     .end annotation
 
+    .line 8
     move/from16 v7, p0
 
     move/from16 v8, p1
@@ -1491,6 +1499,7 @@
         }
     .end annotation
 
+    .line 9
     move/from16 v7, p0
 
     move/from16 v8, p1
@@ -2447,6 +2456,7 @@
         }
     .end annotation
 
+    .line 10
     move-object/from16 v0, p0
 
     move/from16 v1, p3
@@ -2724,6 +2734,7 @@
         }
     .end annotation
 
+    .line 11
     move-object/from16 v0, p0
 
     move/from16 v7, p1
@@ -3325,6 +3336,7 @@
         }
     .end annotation
 
+    .line 12
     move/from16 v0, p1
 
     move/from16 v1, p2
@@ -3851,6 +3863,7 @@
         }
     .end annotation
 
+    .line 13
     move-object/from16 v0, p0
 
     invoke-interface/range {p0 .. p0}, Ljava/util/List;->isEmpty()Z
@@ -4321,6 +4334,7 @@
         }
     .end annotation
 
+    .line 14
     move-object/from16 v0, p0
 
     move/from16 v7, p1
@@ -5540,6 +5554,7 @@
         }
     .end annotation
 
+    .line 15
     const/16 v8, 0x8
 
     const/4 v9, 0x0
@@ -5586,6 +5601,7 @@
         }
     .end annotation
 
+    .line 16
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -5717,6 +5733,7 @@
 .method private static a(Landroid/graphics/Rect;IIIIII)V
     .locals 1
 
+    .line 17
     iget v0, p0, Landroid/graphics/Rect;->left:I
 
     sub-int/2addr v0, p3
@@ -5765,6 +5782,7 @@
 .method public static a(Lco/polarr/mgcsc/entities/CropWindow;FII)V
     .locals 7
 
+    .line 18
     iget v0, p0, Lco/polarr/mgcsc/entities/CropWindow;->right:I
 
     iget v1, p0, Lco/polarr/mgcsc/entities/CropWindow;->left:I
@@ -5926,6 +5944,7 @@
 .method private static a(Lco/polarr/mgcsc/entities/CropWindow;II)V
     .locals 3
 
+    .line 19
     iget v0, p0, Lco/polarr/mgcsc/entities/CropWindow;->top:I
 
     const/4 v1, 0x0
@@ -5998,6 +6017,7 @@
         }
     .end annotation
 
+    .line 20
     new-instance v0, Lco/polarr/mgcsc/f/h/c$e;
 
     invoke-direct {v0}, Lco/polarr/mgcsc/f/h/c$e;-><init>()V
@@ -6018,6 +6038,7 @@
         }
     .end annotation
 
+    .line 21
     move/from16 v0, p1
 
     move/from16 v1, p2
@@ -6179,6 +6200,7 @@
         }
     .end annotation
 
+    .line 22
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -6284,6 +6306,7 @@
         }
     .end annotation
 
+    .line 23
     move-object/from16 v0, p0
 
     move/from16 v1, p2
@@ -6515,6 +6538,7 @@
 .method private static a(Lco/polarr/mgcsc/entities/CropWindow;Landroid/graphics/Rect;)Z
     .locals 2
 
+    .line 24
     iget v0, p0, Lco/polarr/mgcsc/entities/CropWindow;->left:I
 
     iget v1, p1, Landroid/graphics/Rect;->left:I
@@ -6562,6 +6586,7 @@
         }
     .end annotation
 
+    .line 25
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -6634,6 +6659,7 @@
 .method private static b(Landroid/graphics/Rect;)D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -6652,6 +6678,7 @@
 .method public static synthetic b(Lco/polarr/mgcsc/entities/CropWindow;II)D
     .locals 0
 
+    .line 2
     invoke-static {p0, p1, p2}, Lco/polarr/mgcsc/f/h/c;->c(Lco/polarr/mgcsc/entities/CropWindow;II)D
 
     move-result-wide p0
@@ -6671,6 +6698,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -6786,6 +6814,7 @@
 .method private static b(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
     .locals 4
 
+    .line 4
     iget v0, p0, Landroid/graphics/Rect;->top:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I
@@ -6845,6 +6874,7 @@
 .method private static b(Lco/polarr/mgcsc/entities/CropWindow;Landroid/graphics/Rect;)Z
     .locals 4
 
+    .line 5
     iget v0, p0, Lco/polarr/mgcsc/entities/CropWindow;->top:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I

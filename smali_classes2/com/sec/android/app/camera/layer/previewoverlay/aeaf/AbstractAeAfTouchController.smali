@@ -123,6 +123,7 @@
 .method public getTransformedFocusArea(Landroid/graphics/Point;)Landroid/graphics/Point;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AbstractAeAfTouchController;->mFocusSize:Landroid/util/Size;
 
     invoke-virtual {p0, p1, v0}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AbstractAeAfTouchController;->getTransformedFocusArea(Landroid/graphics/Point;Landroid/util/Size;)Landroid/graphics/Point;
@@ -135,18 +136,21 @@
 .method public getTransformedFocusArea(Landroid/graphics/Point;Landroid/util/Size;)Landroid/graphics/Point;
     .locals 4
 
+    .line 2
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
     move-result v0
 
     div-int/lit8 v0, v0, 0x2
 
+    .line 3
     invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
 
     move-result p2
 
     div-int/lit8 p2, p2, 0x2
 
+    .line 4
     iget v1, p1, Landroid/graphics/Point;->x:I
 
     iget-object v2, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AbstractAeAfTouchController;->mTouchBoundary:Landroid/graphics/Rect;
@@ -163,6 +167,7 @@
 
     move-result v0
 
+    .line 5
     iget p1, p1, Landroid/graphics/Point;->y:I
 
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AbstractAeAfTouchController;->mTouchBoundary:Landroid/graphics/Rect;
@@ -179,6 +184,7 @@
 
     move-result p0
 
+    .line 6
     invoke-static {v0, p0}, Lcom/sec/android/app/camera/util/factory/PointFactory;->create(II)Landroid/graphics/Point;
 
     move-result-object p0

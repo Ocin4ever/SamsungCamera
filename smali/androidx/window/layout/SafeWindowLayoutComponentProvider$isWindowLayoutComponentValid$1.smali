@@ -46,6 +46,7 @@
 .method public final invoke()Ljava/lang/Boolean;
     .locals 6
 
+    .line 2
     sget-object v0, Landroidx/window/layout/SafeWindowLayoutComponentProvider;->INSTANCE:Landroidx/window/layout/SafeWindowLayoutComponentProvider;
 
     iget-object p0, p0, Landroidx/window/layout/SafeWindowLayoutComponentProvider$isWindowLayoutComponentValid$1;->$classLoader:Ljava/lang/ClassLoader;
@@ -58,6 +59,7 @@
 
     new-array v1, v1, [Ljava/lang/Class;
 
+    .line 3
     const-class v2, Landroid/app/Activity;
 
     const/4 v3, 0x0
@@ -72,6 +74,7 @@
 
     const-string v5, "addWindowLayoutInfoListener"
 
+    .line 4
     invoke-virtual {p0, v5, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -82,12 +85,14 @@
 
     const-string v4, "removeWindowLayoutInfoListener"
 
+    .line 5
     invoke-virtual {p0, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p0
 
     const-string v4, "addListenerMethod"
 
+    .line 6
     invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, v1}, Landroidx/window/layout/SafeWindowLayoutComponentProvider;->access$isPublic(Landroidx/window/layout/SafeWindowLayoutComponentProvider;Ljava/lang/reflect/Method;)Z
@@ -119,6 +124,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/window/layout/SafeWindowLayoutComponentProvider$isWindowLayoutComponentValid$1;->invoke()Ljava/lang/Boolean;
 
     move-result-object p0

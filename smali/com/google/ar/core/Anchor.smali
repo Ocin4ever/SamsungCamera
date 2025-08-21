@@ -21,14 +21,17 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Lcom/google/ar/core/Anchor;->session:Lcom/google/ar/core/Session;
 
     const-wide/16 v0, 0x0
 
+    .line 6
     iput-wide v0, p0, Lcom/google/ar/core/Anchor;->nativeHandle:J
 
     return-void
@@ -37,10 +40,13 @@
 .method public constructor <init>(JLcom/google/ar/core/Session;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p3, p0, Lcom/google/ar/core/Anchor;->session:Lcom/google/ar/core/Session;
 
+    .line 3
     iput-wide p1, p0, Lcom/google/ar/core/Anchor;->nativeHandle:J
 
     return-void

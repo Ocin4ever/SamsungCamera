@@ -24,10 +24,13 @@
 .method private constructor <init>(Landroid/graphics/SurfaceTexture;I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/MultiCameraEffectController$SurfaceTextureInfo;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
+    .line 4
     iput p2, p0, Lcom/sec/android/app/camera/engine/MultiCameraEffectController$SurfaceTextureInfo;->mSurfaceId:I
 
     return-void
@@ -36,6 +39,7 @@
 .method public synthetic constructor <init>(Landroid/graphics/SurfaceTexture;ILcom/sec/android/app/camera/engine/j3;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/engine/MultiCameraEffectController$SurfaceTextureInfo;-><init>(Landroid/graphics/SurfaceTexture;I)V
 
     return-void

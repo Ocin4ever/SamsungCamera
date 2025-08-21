@@ -153,56 +153,70 @@
 .method private constructor <init>(Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iget-wide v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->a:D
 
     iput-wide v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->jsonVersion:D
 
+    .line 4
     iget-object v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->b:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->cameraId:Ljava/lang/String;
 
+    .line 5
     iget v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->c:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->dsMode:I
 
+    .line 6
     iget v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->d:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->dsExtraInfo:I
 
+    .line 7
     iget v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->e:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->recoveryDataId:I
 
+    .line 8
     iget-object v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->f:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->secMpUri:Ljava/lang/String;
 
+    .line 9
     iget-object v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->g:Lcom/samsung/android/camera/core2/jsonData/component/ImageFileData;
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->draftImageFileData:Lcom/samsung/android/camera/core2/jsonData/component/ImageFileData;
 
+    .line 10
     iget-object v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->h:Lcom/samsung/android/camera/core2/jsonData/component/ImageFileData;
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->resultImageFileData:Lcom/samsung/android/camera/core2/jsonData/component/ImageFileData;
 
+    .line 11
     iget-boolean v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->i:Z
 
     iput-boolean v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->isRecoveryMergeDsMode:Z
 
+    .line 12
     iget-boolean v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->j:Z
 
     iput-boolean v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->isPendingRequestDsMode:Z
 
+    .line 13
     iget v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->k:I
 
     iput v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->recoveryMergeInputCount:I
 
+    .line 14
     iget-wide v0, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->l:J
 
     iput-wide v0, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->bootingTime:J
 
+    .line 15
     iget-object p1, p1, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;->m:Lcom/samsung/android/camera/core2/jsonData/component/ExtraBundleData;
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;->extraBundleData:Lcom/samsung/android/camera/core2/jsonData/component/ExtraBundleData;
@@ -213,6 +227,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;Lt2/a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData;-><init>(Lcom/samsung/android/camera/core2/jsonData/PostProcessRecoveryData$Builder;)V
 
     return-void

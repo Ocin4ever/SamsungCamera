@@ -597,6 +597,7 @@
 .method public detectBlock([BIILcom/samsung/android/ocr/MOCRConstants$MOCRPxlFmt;Landroid/graphics/Point;[Landroid/graphics/Point;)I
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Use run API when using Engine Type MOCR"
@@ -609,6 +610,7 @@
 .method public detectBlock([BIILcom/samsung/android/ocr/MOCRConstants$MOCRPxlFmt;[Landroid/graphics/Point;)I
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Use run API when using Engine Type MOCR"
@@ -621,6 +623,7 @@
 .method public detectBlock_ARGB(Lcom/samsung/android/ocr/MOCRImage;Landroid/graphics/Point;[Landroid/graphics/Point;)I
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Use run API when using Engine Type MOCR"
@@ -633,6 +636,7 @@
 .method public detectBlock_ARGB(Lcom/samsung/android/ocr/MOCRImage;[Landroid/graphics/Point;)I
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Use run API when using Engine Type MOCR"
@@ -867,6 +871,7 @@
 .method public init()I
     .locals 1
 
+    .line 7
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Initialize without lang not supported for MOCR engine type"
@@ -879,12 +884,14 @@
 .method public init(I)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/samsung/ocr/SecMOCR;->d(I)[I
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/samsung/ocr/SecMOCR;->g([I)I
 
     move-result p0
@@ -894,6 +901,7 @@
     :cond_0
     const/4 p0, -0x1
 
+    .line 3
     :goto_0
     invoke-static {p0}, Lk4/a;->a(I)I
 
@@ -905,6 +913,7 @@
 .method public init(Ljava/lang/String;)I
     .locals 0
 
+    .line 8
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Initialize without lang not supported for MOCR engine type"
@@ -917,12 +926,14 @@
 .method public init(Ljava/lang/String;I)I
     .locals 0
 
+    .line 4
     invoke-virtual {p0, p2}, Lcom/samsung/ocr/SecMOCR;->d(I)[I
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
+    .line 5
     invoke-virtual {p0, p1, p2}, Lcom/samsung/ocr/SecMOCR;->f(Ljava/lang/String;[I)I
 
     move-result p0
@@ -932,6 +943,7 @@
     :cond_0
     const/4 p0, -0x1
 
+    .line 6
     :goto_0
     invoke-static {p0}, Lk4/a;->a(I)I
 
@@ -943,6 +955,7 @@
 .method public recognizeBlock([BIILcom/samsung/android/ocr/MOCRConstants$MOCRPxlFmt;Landroid/graphics/Point;Lcom/samsung/android/ocr/MOCRResult$Page;)I
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Use run API when using Engine Type MOCR"
@@ -955,6 +968,7 @@
 .method public recognizeBlock([BIILcom/samsung/android/ocr/MOCRConstants$MOCRPxlFmt;Lcom/samsung/android/ocr/MOCRResult$Page;)I
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Use run API when using Engine Type MOCR"
@@ -967,6 +981,7 @@
 .method public recognizeBlock_ARGB(Lcom/samsung/android/ocr/MOCRImage;Landroid/graphics/Point;Lcom/samsung/android/ocr/MOCRResult$Page;)I
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Use run API when using Engine Type MOCR"
@@ -979,6 +994,7 @@
 .method public recognizeBlock_ARGB(Lcom/samsung/android/ocr/MOCRImage;Lcom/samsung/android/ocr/MOCRResult$Page;)I
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Use run API when using Engine Type MOCR"

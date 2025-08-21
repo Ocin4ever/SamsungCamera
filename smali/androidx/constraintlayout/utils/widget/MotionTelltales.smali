@@ -27,8 +27,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/utils/widget/MockView;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -39,8 +41,10 @@
 
     new-array v0, v0, [F
 
+    .line 3
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->velocity:[F
 
+    .line 4
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -49,18 +53,22 @@
 
     const/4 v0, 0x0
 
+    .line 5
     iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->mVelocityMode:I
 
     const v0, -0xff01
 
+    .line 6
     iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->mTailColor:I
 
     const/high16 v0, 0x3e800000    # 0.25f
 
+    .line 7
     iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->mTailScale:F
 
     const/4 v0, 0x0
 
+    .line 8
     invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/utils/widget/MotionTelltales;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -69,8 +77,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 9
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/utils/widget/MockView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 10
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -81,8 +91,10 @@
 
     new-array v0, v0, [F
 
+    .line 11
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->velocity:[F
 
+    .line 12
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -91,16 +103,20 @@
 
     const/4 v0, 0x0
 
+    .line 13
     iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->mVelocityMode:I
 
     const v0, -0xff01
 
+    .line 14
     iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->mTailColor:I
 
     const/high16 v0, 0x3e800000    # 0.25f
 
+    .line 15
     iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->mTailScale:F
 
+    .line 16
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/utils/widget/MotionTelltales;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -109,8 +125,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 17
     invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/utils/widget/MockView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 18
     new-instance p3, Landroid/graphics/Paint;
 
     invoke-direct {p3}, Landroid/graphics/Paint;-><init>()V
@@ -121,8 +139,10 @@
 
     new-array p3, p3, [F
 
+    .line 19
     iput-object p3, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->velocity:[F
 
+    .line 20
     new-instance p3, Landroid/graphics/Matrix;
 
     invoke-direct {p3}, Landroid/graphics/Matrix;-><init>()V
@@ -131,16 +151,20 @@
 
     const/4 p3, 0x0
 
+    .line 21
     iput p3, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->mVelocityMode:I
 
     const p3, -0xff01
 
+    .line 22
     iput p3, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->mTailColor:I
 
     const/high16 p3, 0x3e800000    # 0.25f
 
+    .line 23
     iput p3, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->mTailScale:F
 
+    .line 24
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/utils/widget/MotionTelltales;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void

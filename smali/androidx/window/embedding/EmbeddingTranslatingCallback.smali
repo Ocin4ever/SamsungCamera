@@ -51,6 +51,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Landroidx/window/embedding/EmbeddingTranslatingCallback;->accept(Ljava/util/List;)V
@@ -74,6 +75,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Landroidx/window/embedding/EmbeddingTranslatingCallback;->callback:Landroidx/window/embedding/EmbeddingInterfaceCompat$EmbeddingCallbackInterface;
 
     iget-object p0, p0, Landroidx/window/embedding/EmbeddingTranslatingCallback;->adapter:Landroidx/window/embedding/EmbeddingAdapter;

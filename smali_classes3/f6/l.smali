@@ -23,10 +23,13 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lf6/l;->a:Lq6/a;
 
+    .line 3
     sget-object p1, Lf6/n;->a:Lf6/n;
 
     iput-object p1, p0, Lf6/l;->b:Ljava/lang/Object;
@@ -35,6 +38,7 @@
 
     move-object p2, p0
 
+    .line 4
     :cond_0
     iput-object p2, p0, Lf6/l;->c:Ljava/lang/Object;
 
@@ -50,6 +54,7 @@
 
     const/4 p2, 0x0
 
+    .line 5
     :cond_0
     invoke-direct {p0, p1, p2}, Lf6/l;-><init>(Lq6/a;Ljava/lang/Object;)V
 

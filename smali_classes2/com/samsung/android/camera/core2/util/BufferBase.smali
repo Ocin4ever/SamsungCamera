@@ -71,8 +71,10 @@
 
     const-string v0, "parcelFileDescriptor"
 
+    .line 27
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 28
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
@@ -86,6 +88,7 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 29
     :try_start_1
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
@@ -93,11 +96,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
+    .line 30
     :try_start_2
     invoke-static {}, Ljava/time/Instant;->now()Ljava/time/Instant;
 
     move-result-object v1
 
+    .line 31
     sget-object v2, Lcom/samsung/android/camera/core2/util/BufferBase;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -122,6 +127,7 @@
 
     invoke-static {v2, v3}, Lcom/samsung/android/camera/core2/util/CLog;->j(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 32
     :goto_0
     iget-object v2, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
@@ -131,12 +137,14 @@
 
     if-eqz v2, :cond_0
 
+    .line 33
     iget-object v2, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1, v2}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
 
     goto :goto_0
 
+    .line 34
     :cond_0
     invoke-static {}, Ljava/time/Instant;->now()Ljava/time/Instant;
 
@@ -156,6 +164,7 @@
 
     if-ltz p0, :cond_1
 
+    .line 35
     sget-object p0, Lcom/samsung/android/camera/core2/util/BufferBase;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -180,6 +189,7 @@
 
     goto :goto_1
 
+    .line 36
     :cond_1
     sget-object p0, Lcom/samsung/android/camera/core2/util/BufferBase;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
@@ -192,6 +202,7 @@
     :goto_1
     if-eqz p1, :cond_2
 
+    .line 37
     :try_start_3
     invoke-virtual {p1}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
     :try_end_3
@@ -212,6 +223,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 38
     :try_start_5
     invoke-virtual {p1}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
     :try_end_5
@@ -257,6 +269,7 @@
     :catch_0
     move-exception p0
 
+    .line 39
     new-instance p1, Lcom/samsung/android/camera/core2/exception/InvalidOperationException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -280,6 +293,7 @@
     :catch_1
     move-exception p0
 
+    .line 40
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -304,6 +318,7 @@
 .method public get(Lcom/samsung/android/camera/core2/util/BufferBase;)V
     .locals 0
 
+    .line 12
     iget-object p1, p1, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/camera/core2/util/BufferBase;->get(Ljava/nio/ByteBuffer;)V
@@ -316,8 +331,10 @@
 
     const-string v0, "dst file"
 
+    .line 13
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 14
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
@@ -327,6 +344,7 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 15
     :try_start_1
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
@@ -334,11 +352,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
+    .line 16
     :try_start_2
     invoke-static {}, Ljava/time/Instant;->now()Ljava/time/Instant;
 
     move-result-object v2
 
+    .line 17
     sget-object v3, Lcom/samsung/android/camera/core2/util/BufferBase;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -373,6 +393,7 @@
 
     invoke-static {v3, p1}, Lcom/samsung/android/camera/core2/util/CLog;->j(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 18
     :goto_0
     iget-object p1, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
@@ -382,12 +403,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 19
     iget-object p1, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1, p1}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
 
     goto :goto_0
 
+    .line 20
     :cond_0
     invoke-static {}, Ljava/time/Instant;->now()Ljava/time/Instant;
 
@@ -407,6 +430,7 @@
 
     if-ltz v2, :cond_1
 
+    .line 21
     sget-object v2, Lcom/samsung/android/camera/core2/util/BufferBase;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -431,6 +455,7 @@
 
     goto :goto_1
 
+    .line 22
     :cond_1
     sget-object p0, Lcom/samsung/android/camera/core2/util/BufferBase;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
@@ -443,6 +468,7 @@
     :goto_1
     if-eqz v1, :cond_2
 
+    .line 23
     :try_start_3
     invoke-virtual {v1}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
     :try_end_3
@@ -463,6 +489,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 24
     :try_start_5
     invoke-virtual {v1}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
     :try_end_5
@@ -508,6 +535,7 @@
     :catch_0
     move-exception p0
 
+    .line 25
     new-instance p1, Lcom/samsung/android/camera/core2/exception/InvalidOperationException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -531,6 +559,7 @@
     :catch_1
     move-exception p0
 
+    .line 26
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -557,14 +586,17 @@
 
     const-string v0, "dst byte buffer"
 
+    .line 3
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->hasArray()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 5
     iget-object p0, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
@@ -587,6 +619,7 @@
 
     invoke-virtual {p0, v0, v1, v2}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
+    .line 6
     invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
     move-result p0
@@ -595,6 +628,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
@@ -603,6 +637,7 @@
 
     move-result v0
 
+    .line 8
     iget-object v1, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/Buffer;->position()I
@@ -617,10 +652,12 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
+    .line 9
     iget-object v1, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
+    .line 10
     iget-object p0, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
@@ -631,6 +668,7 @@
     :goto_0
     return-void
 
+    .line 11
     :catch_0
     new-instance p0, Ljava/nio/BufferUnderflowException;
 
@@ -644,8 +682,10 @@
 
     const-string v0, "dst byte array"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
@@ -656,6 +696,7 @@
 .method public limit()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/Buffer;->limit()I
@@ -668,6 +709,7 @@
 .method public limit(I)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
@@ -678,6 +720,7 @@
 .method public position()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
@@ -690,6 +733,7 @@
 .method public position(I)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
@@ -702,8 +746,10 @@
 
     const-string v0, "src image"
 
+    .line 7
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 8
     invoke-virtual {p1}, Landroid/media/Image;->getFormat()I
 
     move-result v0
@@ -726,6 +772,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -757,6 +804,7 @@
 
     throw p0
 
+    .line 10
     :cond_1
     invoke-virtual {p1}, Landroid/media/Image;->getWidth()I
 
@@ -776,12 +824,14 @@
 
     goto :goto_1
 
+    .line 11
     :cond_2
     :goto_0
     invoke-static {p1}, Lcom/samsung/android/camera/core2/util/NativeUtils;->getJpegSizefromImage(Landroid/media/Image;)I
 
     move-result v0
 
+    .line 12
     :goto_1
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
@@ -790,10 +840,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 13
     iget-object p1, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
+    .line 14
     iget-object p0, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
@@ -803,6 +855,7 @@
     :catch_0
     move-exception p0
 
+    .line 15
     new-instance p1, Lcom/samsung/android/camera/core2/exception/InvalidOperationException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -829,8 +882,10 @@
 
     const-string v0, "src direct buffer"
 
+    .line 5
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 6
     iget-object p0, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     iget-object p1, p1, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
@@ -845,8 +900,10 @@
 
     const-string v0, "src file"
 
+    .line 16
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 17
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -856,6 +913,7 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 18
     :try_start_1
     invoke-virtual {v0}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
@@ -863,11 +921,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
+    .line 19
     :try_start_2
     invoke-static {}, Ljava/time/Instant;->now()Ljava/time/Instant;
 
     move-result-object v1
 
+    .line 20
     sget-object v2, Lcom/samsung/android/camera/core2/util/BufferBase;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -892,6 +952,7 @@
 
     invoke-static {v2, v3}, Lcom/samsung/android/camera/core2/util/CLog;->j(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 21
     iget-object v2, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1, v2}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;)I
@@ -901,6 +962,7 @@
     :goto_0
     if-lez v2, :cond_0
 
+    .line 22
     iget-object v2, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1, v2}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;)I
@@ -909,6 +971,7 @@
 
     goto :goto_0
 
+    .line 23
     :cond_0
     invoke-static {}, Ljava/time/Instant;->now()Ljava/time/Instant;
 
@@ -928,6 +991,7 @@
 
     if-ltz p0, :cond_1
 
+    .line 24
     sget-object p0, Lcom/samsung/android/camera/core2/util/BufferBase;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -952,6 +1016,7 @@
 
     goto :goto_1
 
+    .line 25
     :cond_1
     sget-object p0, Lcom/samsung/android/camera/core2/util/BufferBase;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
@@ -961,6 +1026,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 26
     :goto_1
     :try_start_3
     invoke-virtual {p1}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
@@ -981,6 +1047,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 27
     :try_start_5
     invoke-virtual {p1}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
     :try_end_5
@@ -1026,6 +1093,7 @@
     :catch_0
     move-exception p0
 
+    .line 28
     new-instance p1, Lcom/samsung/android/camera/core2/exception/InvalidOperationException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1049,6 +1117,7 @@
     :catch_1
     move-exception p0
 
+    .line 29
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1075,8 +1144,10 @@
 
     const-string v0, "src byte buffer"
 
+    .line 3
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 4
     iget-object p0, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
@@ -1089,8 +1160,10 @@
 
     const-string v0, "src byte array"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/samsung/android/camera/core2/util/BufferBase;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;

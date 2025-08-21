@@ -56,6 +56,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     check-cast p1, Landroid/transition/Transition;
 
     invoke-virtual {p0, p1}, Landroidx/core/transition/TransitionKt$addListener$5;->invoke(Landroid/transition/Transition;)V
@@ -68,6 +69,7 @@
 .method public final invoke(Landroid/transition/Transition;)V
     .locals 0
 
+    .line 1
     const-string p0, "it"
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V

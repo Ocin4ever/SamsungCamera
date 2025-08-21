@@ -31,16 +31,19 @@
 .method public constructor <init>(Lz4/k;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lz4/k$a;->d:Lz4/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
+    .line 3
     iput-boolean p1, p0, Lz4/k$a;->b:Z
 
     const-string p1, ""
 
+    .line 4
     iput-object p1, p0, Lz4/k$a;->c:Ljava/lang/String;
 
     return-void
@@ -49,6 +52,7 @@
 .method public synthetic constructor <init>(Lz4/k;Lz4/j;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lz4/k$a;-><init>(Lz4/k;)V
 
     return-void

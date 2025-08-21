@@ -94,6 +94,7 @@
 
     if-eq v3, v2, :cond_0
 
+    .line 1
     sget-object v2, Lcom/samsung/android/apex/motionphoto/model/MPStoreData$$serializer;->INSTANCE:Lcom/samsung/android/apex/motionphoto/model/MPStoreData$$serializer;
 
     invoke-virtual {v2}, Lcom/samsung/android/apex/motionphoto/model/MPStoreData$$serializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -141,6 +142,7 @@
 
     if-nez v1, :cond_1
 
+    .line 2
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v1
@@ -150,6 +152,7 @@
     :cond_1
     move-object/from16 v1, p14
 
+    .line 3
     :goto_0
     iput-object v1, v0, Lcom/samsung/android/apex/motionphoto/model/MPStoreData;->captureEvents:Ljava/util/List;
 
@@ -171,6 +174,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 16
     new-instance v14, Lcom/samsung/android/apex/motionphoto/model/RectSurrogate;
 
     invoke-direct {v14, v0}, Lcom/samsung/android/apex/motionphoto/model/RectSurrogate;-><init>(Landroid/graphics/Rect;)V
@@ -227,24 +231,34 @@
 
     invoke-static {p13, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/MPStoreData;->id:J
 
+    .line 6
     iput p3, p0, Lcom/samsung/android/apex/motionphoto/model/MPStoreData;->token:I
 
+    .line 7
     iput-object p4, p0, Lcom/samsung/android/apex/motionphoto/model/MPStoreData;->path:Ljava/lang/String;
 
+    .line 8
     iput-wide p5, p0, Lcom/samsung/android/apex/motionphoto/model/MPStoreData;->timestamp:J
 
+    .line 9
     iput-wide p7, p0, Lcom/samsung/android/apex/motionphoto/model/MPStoreData;->latitude:J
 
+    .line 10
     iput-wide p9, p0, Lcom/samsung/android/apex/motionphoto/model/MPStoreData;->longitude:J
 
+    .line 11
     iput p11, p0, Lcom/samsung/android/apex/motionphoto/model/MPStoreData;->rotation:I
 
+    .line 12
     iput-object p12, p0, Lcom/samsung/android/apex/motionphoto/model/MPStoreData;->effectRect:Lcom/samsung/android/apex/motionphoto/model/RectSurrogate;
 
+    .line 13
     iput-object p13, p0, Lcom/samsung/android/apex/motionphoto/model/MPStoreData;->captureEvents:Ljava/util/List;
 
     return-void
@@ -259,6 +273,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 14
     invoke-static {}, Lg6/o;->g()Ljava/util/List;
 
     move-result-object v0
@@ -289,6 +304,7 @@
 
     move-object/from16 v13, p12
 
+    .line 15
     invoke-direct/range {v1 .. v14}, Lcom/samsung/android/apex/motionphoto/model/MPStoreData;-><init>(JILjava/lang/String;JJJILcom/samsung/android/apex/motionphoto/model/RectSurrogate;Ljava/util/List;)V
 
     return-void

@@ -42,19 +42,23 @@
 .method public bind(Landroidx/sqlite/db/SupportSQLiteStatement;Landroidx/work/impl/model/SystemIdInfo;)V
     .locals 2
 
+    .line 2
     iget-object p0, p2, Landroidx/work/impl/model/SystemIdInfo;->workSpecId:Ljava/lang/String;
 
     const/4 v0, 0x1
 
     if-nez p0, :cond_0
 
+    .line 3
     invoke-interface {p1, v0}, Landroidx/sqlite/db/SupportSQLiteProgram;->bindNull(I)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-interface {p1, v0, p0}, Landroidx/sqlite/db/SupportSQLiteProgram;->bindString(ILjava/lang/String;)V
 
+    .line 5
     :goto_0
     invoke-virtual {p2}, Landroidx/work/impl/model/SystemIdInfo;->getGeneration()I
 
@@ -66,6 +70,7 @@
 
     invoke-interface {p1, p0, v0, v1}, Landroidx/sqlite/db/SupportSQLiteProgram;->bindLong(IJ)V
 
+    .line 6
     iget p0, p2, Landroidx/work/impl/model/SystemIdInfo;->systemId:I
 
     int-to-long v0, p0
@@ -80,6 +85,7 @@
 .method public bridge synthetic bind(Landroidx/sqlite/db/SupportSQLiteStatement;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p2, Landroidx/work/impl/model/SystemIdInfo;
 
     invoke-virtual {p0, p1, p2}, Landroidx/work/impl/model/SystemIdInfoDao_Impl$1;->bind(Landroidx/sqlite/db/SupportSQLiteStatement;Landroidx/work/impl/model/SystemIdInfo;)V

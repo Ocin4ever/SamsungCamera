@@ -644,6 +644,7 @@
 
     const/16 v0, 0x22
 
+    .line 1
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;->getDefaultBufferingMode()Lcom/samsung/android/apex/motionphoto/composer/BufferChannel$Mode;
 
     move-result-object v1
@@ -658,6 +659,7 @@
 .method public static of(III)Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;
     .locals 1
 
+    .line 2
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;->getDefaultBufferingMode()Lcom/samsung/android/apex/motionphoto/composer/BufferChannel$Mode;
 
     move-result-object v0
@@ -672,6 +674,7 @@
 .method public static of(IIILcom/samsung/android/apex/motionphoto/composer/BufferChannel$Mode;)Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;
     .locals 2
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -708,20 +711,25 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     new-instance v0, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;
 
     invoke-direct {v0}, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;-><init>()V
 
+    .line 6
     iput p0, v0, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;->width:I
 
+    .line 7
     iput p1, v0, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;->height:I
 
+    .line 8
     invoke-static {p3}, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel$Mode;->access$000(Lcom/samsung/android/apex/motionphoto/composer/BufferChannel$Mode;)I
 
     move-result p0
 
     iput p0, v0, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;->capacity:I
 
+    .line 9
     new-instance p0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {p0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
@@ -734,8 +742,10 @@
 
     const/16 p0, 0x11
 
+    .line 10
     iput p0, v0, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;->format:I
 
+    .line 11
     new-instance p0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-virtual {p3}, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel$Mode;->getCapacity()I
@@ -753,8 +763,10 @@
 
     if-ne p2, p0, :cond_1
 
+    .line 12
     iput p0, v0, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;->format:I
 
+    .line 13
     new-instance p0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-virtual {p3}, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel$Mode;->getCapacity()I
@@ -767,9 +779,11 @@
 
     goto :goto_0
 
+    .line 14
     :cond_1
     iput p2, v0, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;->format:I
 
+    .line 15
     new-instance p0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-virtual {p3}, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel$Mode;->getCapacity()I
@@ -780,6 +794,7 @@
 
     iput-object p0, v0, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;->hwBufferQueue:Ljava/util/concurrent/BlockingQueue;
 
+    .line 16
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -807,6 +822,7 @@
 
     const/16 v0, 0x22
 
+    .line 3
     invoke-static {p0, p1, v0, p2}, Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;->of(IIILcom/samsung/android/apex/motionphoto/composer/BufferChannel$Mode;)Lcom/samsung/android/apex/motionphoto/composer/BufferChannel;
 
     move-result-object p0

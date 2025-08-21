@@ -145,6 +145,7 @@
 .method public onChanged(II)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mBatchingListUpdateCallback:Landroidx/recyclerview/widget/BatchingListUpdateCallback;
 
     const/4 v0, 0x0
@@ -157,6 +158,7 @@
 .method public onChanged(IILjava/lang/Object;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/recyclerview/widget/SortedList$BatchedCallback;->mBatchingListUpdateCallback:Landroidx/recyclerview/widget/BatchingListUpdateCallback;
 
     invoke-virtual {p0, p1, p2, p3}, Landroidx/recyclerview/widget/BatchingListUpdateCallback;->onChanged(IILjava/lang/Object;)V

@@ -161,6 +161,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/WrappingExecutorService;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/WrappingExecutorService;->wrapTasks(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
@@ -193,6 +194,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/util/concurrent/WrappingExecutorService;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/WrappingExecutorService;->wrapTasks(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
@@ -220,6 +222,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/WrappingExecutorService;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/WrappingExecutorService;->wrapTasks(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
@@ -249,6 +252,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/util/concurrent/WrappingExecutorService;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/WrappingExecutorService;->wrapTasks(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
@@ -328,6 +332,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/util/concurrent/WrappingExecutorService;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/WrappingExecutorService;->wrapTask(Ljava/lang/Runnable;)Ljava/lang/Runnable;
@@ -359,6 +364,7 @@
         }
     .end annotation
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/util/concurrent/WrappingExecutorService;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/WrappingExecutorService;->wrapTask(Ljava/lang/Runnable;)Ljava/lang/Runnable;
@@ -386,6 +392,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/WrappingExecutorService;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -410,6 +417,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p1, v0}, Ljava/util/concurrent/Executors;->callable(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Callable;
 
     move-result-object p1
@@ -418,6 +426,7 @@
 
     move-result-object p0
 
+    .line 2
     new-instance p1, Lcom/google/common/util/concurrent/p;
 
     invoke-direct {p1, p0}, Lcom/google/common/util/concurrent/p;-><init>(Ljava/util/concurrent/Callable;)V

@@ -44,6 +44,7 @@
 .method public constructor <init>([I)V
     .locals 2
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -56,12 +57,16 @@
 .method public constructor <init>([III)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/primitives/Ints$IntArrayAsList;->array:[I
 
+    .line 4
     iput p2, p0, Lcom/google/common/primitives/Ints$IntArrayAsList;->start:I
 
+    .line 5
     iput p3, p0, Lcom/google/common/primitives/Ints$IntArrayAsList;->end:I
 
     return-void
@@ -182,12 +187,14 @@
 .method public get(I)Ljava/lang/Integer;
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/primitives/Ints$IntArrayAsList;->size()I
 
     move-result v0
 
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/primitives/Ints$IntArrayAsList;->array:[I
 
     iget p0, p0, Lcom/google/common/primitives/Ints$IntArrayAsList;->start:I
@@ -206,6 +213,7 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/Ints$IntArrayAsList;->get(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -330,12 +338,14 @@
 .method public set(ILjava/lang/Integer;)Ljava/lang/Integer;
     .locals 2
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/primitives/Ints$IntArrayAsList;->size()I
 
     move-result v0
 
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/primitives/Ints$IntArrayAsList;->array:[I
 
     iget p0, p0, Lcom/google/common/primitives/Ints$IntArrayAsList;->start:I
@@ -346,6 +356,7 @@
 
     add-int/2addr p0, p1
 
+    .line 4
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -358,6 +369,7 @@
 
     aput p1, v0, p0
 
+    .line 5
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -368,6 +380,7 @@
 .method public bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p2, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/primitives/Ints$IntArrayAsList;->set(ILjava/lang/Integer;)Ljava/lang/Integer;

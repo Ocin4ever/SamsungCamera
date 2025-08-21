@@ -61,6 +61,7 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     const-string v0, "POLARR_SDK"
 
     const/4 v1, 0x0
@@ -73,6 +74,7 @@
 .method public constructor <init>(I)V
     .locals 2
 
+    .line 2
     const-string v0, "POLARR_SDK"
 
     const/4 v1, 0x0
@@ -87,6 +89,7 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p2, 0x3
@@ -136,6 +139,7 @@
 .method public varargs a(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
+    .line 1
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lco/polarr/mgcsc/utils/d;->a(I)Z
@@ -159,6 +163,7 @@
 .method public a(I)Z
     .locals 0
 
+    .line 2
     iget p0, p0, Lco/polarr/mgcsc/utils/d;->d:I
 
     if-lt p1, p0, :cond_0
@@ -177,6 +182,7 @@
 .method public b(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lco/polarr/mgcsc/utils/d;->d:I
 
     return-void
@@ -185,6 +191,7 @@
 .method public varargs b(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
+    .line 2
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lco/polarr/mgcsc/utils/d;->a(I)Z

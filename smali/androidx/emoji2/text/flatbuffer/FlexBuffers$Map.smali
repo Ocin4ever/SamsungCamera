@@ -112,6 +112,7 @@
 .method public get(Ljava/lang/String;)Landroidx/emoji2/text/flatbuffer/FlexBuffers$Reference;
     .locals 1
 
+    .line 1
     sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -128,14 +129,17 @@
 .method public get([B)Landroidx/emoji2/text/flatbuffer/FlexBuffers$Reference;
     .locals 2
 
+    .line 2
     invoke-virtual {p0}, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Map;->keys()Landroidx/emoji2/text/flatbuffer/FlexBuffers$KeyVector;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0}, Landroidx/emoji2/text/flatbuffer/FlexBuffers$KeyVector;->size()I
 
     move-result v1
 
+    .line 4
     invoke-direct {p0, v0, p1}, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Map;->binarySearch(Landroidx/emoji2/text/flatbuffer/FlexBuffers$KeyVector;[B)I
 
     move-result p1
@@ -144,12 +148,14 @@
 
     if-ge p1, v1, :cond_0
 
+    .line 5
     invoke-virtual {p0, p1}, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Vector;->get(I)Landroidx/emoji2/text/flatbuffer/FlexBuffers$Reference;
 
     move-result-object p0
 
     return-object p0
 
+    .line 6
     :cond_0
     invoke-static {}, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Reference;->access$600()Landroidx/emoji2/text/flatbuffer/FlexBuffers$Reference;
 

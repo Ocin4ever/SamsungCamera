@@ -49,25 +49,30 @@
 .method public append(C)Ljava/lang/Appendable;
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/common/io/BaseEncoding$4;->charsUntilSeparator:I
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/io/BaseEncoding$4;->val$delegate:Ljava/lang/Appendable;
 
     iget-object v1, p0, Lcom/google/common/io/BaseEncoding$4;->val$separator:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
+    .line 3
     iget v0, p0, Lcom/google/common/io/BaseEncoding$4;->val$afterEveryChars:I
 
     iput v0, p0, Lcom/google/common/io/BaseEncoding$4;->charsUntilSeparator:I
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/common/io/BaseEncoding$4;->val$delegate:Ljava/lang/Appendable;
 
     invoke-interface {v0, p1}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
 
+    .line 5
     iget p1, p0, Lcom/google/common/io/BaseEncoding$4;->charsUntilSeparator:I
 
     add-int/lit8 p1, p1, -0x1
@@ -80,6 +85,7 @@
 .method public append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
     .locals 0
 
+    .line 7
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -90,6 +96,7 @@
 .method public append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
     .locals 0
 
+    .line 6
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

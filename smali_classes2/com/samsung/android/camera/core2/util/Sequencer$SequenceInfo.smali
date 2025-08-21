@@ -28,14 +28,19 @@
 .method public constructor <init>(Ljava/lang/String;JLcom/samsung/android/camera/core2/util/Sequencer$SequenceBundle;Lcom/samsung/android/camera/core2/util/Sequencer$Step;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/util/Sequencer$SequenceInfo;->a:Ljava/lang/String;
 
+    .line 4
     iput-wide p2, p0, Lcom/samsung/android/camera/core2/util/Sequencer$SequenceInfo;->b:J
 
+    .line 5
     iput-object p4, p0, Lcom/samsung/android/camera/core2/util/Sequencer$SequenceInfo;->c:Lcom/samsung/android/camera/core2/util/Sequencer$SequenceBundle;
 
+    .line 6
     iput-object p5, p0, Lcom/samsung/android/camera/core2/util/Sequencer$SequenceInfo;->d:Lcom/samsung/android/camera/core2/util/Sequencer$Step;
 
     return-void
@@ -44,6 +49,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;JLcom/samsung/android/camera/core2/util/Sequencer$SequenceBundle;Lcom/samsung/android/camera/core2/util/Sequencer$Step;Lcom/samsung/android/camera/core2/util/v3;)V
     .locals 0
 
+    .line 1
     invoke-direct/range {p0 .. p5}, Lcom/samsung/android/camera/core2/util/Sequencer$SequenceInfo;-><init>(Ljava/lang/String;JLcom/samsung/android/camera/core2/util/Sequencer$SequenceBundle;Lcom/samsung/android/camera/core2/util/Sequencer$Step;)V
 
     return-void

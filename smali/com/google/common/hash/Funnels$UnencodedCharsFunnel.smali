@@ -119,6 +119,7 @@
 .method public funnel(Ljava/lang/CharSequence;Lcom/google/common/hash/PrimitiveSink;)V
     .locals 0
 
+    .line 2
     invoke-interface {p2, p1}, Lcom/google/common/hash/PrimitiveSink;->putUnencodedChars(Ljava/lang/CharSequence;)Lcom/google/common/hash/PrimitiveSink;
 
     return-void
@@ -127,6 +128,7 @@
 .method public bridge synthetic funnel(Ljava/lang/Object;Lcom/google/common/hash/PrimitiveSink;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/CharSequence;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/hash/Funnels$UnencodedCharsFunnel;->funnel(Ljava/lang/CharSequence;Lcom/google/common/hash/PrimitiveSink;)V

@@ -18,6 +18,7 @@
 
     const/16 v0, 0xa
 
+    .line 1
     invoke-direct {p0, v0}, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;-><init>(I)V
 
     return-void
@@ -26,6 +27,7 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 2
     new-array p1, p1, [B
 
     invoke-direct {p0, p1}, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;-><init>([B)V
@@ -36,12 +38,15 @@
 .method public constructor <init>([B)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     iput-object p1, p0, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->buffer:[B
 
     const/4 p1, 0x0
 
+    .line 5
     iput p1, p0, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->writePos:I
 
     return-void
@@ -50,10 +55,13 @@
 .method public constructor <init>([BI)V
     .locals 0
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 7
     iput-object p1, p0, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->buffer:[B
 
+    .line 8
     iput p2, p0, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->writePos:I
 
     return-void
@@ -324,10 +332,12 @@
 .method public put(B)V
     .locals 1
 
+    .line 3
     iget v0, p0, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->writePos:I
 
     invoke-virtual {p0, v0, p1}, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->set(IB)V
 
+    .line 4
     iget p1, p0, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->writePos:I
 
     add-int/lit8 p1, p1, 0x1
@@ -340,10 +350,12 @@
 .method public put([BII)V
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->writePos:I
 
     invoke-virtual {p0, v0, p1, p2, p3}, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->set(I[BII)V
 
+    .line 2
     iget p1, p0, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->writePos:I
 
     add-int/2addr p1, p3
@@ -483,8 +495,10 @@
 
     add-int/lit8 v0, p1, 0x1
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->requestCapacity(I)Z
 
+    .line 2
     iget-object p0, p0, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->buffer:[B
 
     aput-byte p2, p0, p1
@@ -499,8 +513,10 @@
 
     add-int/2addr v0, p1
 
+    .line 3
     invoke-virtual {p0, v0}, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->requestCapacity(I)Z
 
+    .line 4
     iget-object p0, p0, Landroidx/emoji2/text/flatbuffer/ArrayReadWriteBuf;->buffer:[B
 
     invoke-static {p2, p3, p0, p1, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V

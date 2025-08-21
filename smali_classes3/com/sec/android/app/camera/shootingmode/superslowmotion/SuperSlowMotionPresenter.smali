@@ -144,8 +144,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionContract$View;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
+    .line 2
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getApplicationContext()Landroid/content/Context;
@@ -164,6 +166,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->PROGRESS_CIRCLE_STEP:I
 
+    .line 3
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getApplicationContext()Landroid/content/Context;
@@ -184,38 +187,54 @@
 
     const/4 p1, 0x0
 
+    .line 4
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsBackgroundRecording:Z
 
+    .line 5
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsSuperSlowMotionRecording:Z
 
+    .line 6
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsTouchDisabled:Z
 
+    .line 7
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsSuperSlowDisabled:Z
 
+    .line 8
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsMotionDetectionAvailable:Z
 
+    .line 9
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsMotionDetectionNotAvailable:Z
 
+    .line 10
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mMotionDetectEnabled:Z
 
+    .line 11
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mNeedStopBackgroundRecording:Z
 
+    .line 12
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsLowLightWarningToastDisplayed:Z
 
+    .line 13
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsAutoRecordingGuideAvailable:Z
 
+    .line 14
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsSteadyGuideHighlighted:Z
 
+    .line 15
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsNeedToShowToastPopup:Z
 
+    .line 16
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mLastToastPopupStyleResourceId:I
 
     const/16 p2, 0x4b0
 
+    .line 17
     iput p2, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mStableCheckTime:I
 
+    .line 18
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mLastBrightnessValue:I
 
+    .line 19
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter$MainHandler;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter$MainHandler;-><init>(Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;)V
@@ -224,6 +243,7 @@
 
     const-wide/16 p1, 0x0
 
+    .line 20
     iput-wide p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mCurrentRecordingTime:J
 
     return-void
@@ -232,8 +252,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionContract$View;I)V
     .locals 0
 
+    .line 21
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;I)V
 
+    .line 22
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getApplicationContext()Landroid/content/Context;
@@ -252,6 +274,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->PROGRESS_CIRCLE_STEP:I
 
+    .line 23
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getApplicationContext()Landroid/content/Context;
@@ -272,38 +295,54 @@
 
     const/4 p1, 0x0
 
+    .line 24
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsBackgroundRecording:Z
 
+    .line 25
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsSuperSlowMotionRecording:Z
 
+    .line 26
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsTouchDisabled:Z
 
+    .line 27
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsSuperSlowDisabled:Z
 
+    .line 28
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsMotionDetectionAvailable:Z
 
+    .line 29
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsMotionDetectionNotAvailable:Z
 
+    .line 30
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mMotionDetectEnabled:Z
 
+    .line 31
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mNeedStopBackgroundRecording:Z
 
+    .line 32
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsLowLightWarningToastDisplayed:Z
 
+    .line 33
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsAutoRecordingGuideAvailable:Z
 
+    .line 34
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsSteadyGuideHighlighted:Z
 
+    .line 35
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mIsNeedToShowToastPopup:Z
 
+    .line 36
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mLastToastPopupStyleResourceId:I
 
     const/16 p2, 0x4b0
 
+    .line 37
     iput p2, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mStableCheckTime:I
 
+    .line 38
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mLastBrightnessValue:I
 
+    .line 39
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter$MainHandler;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter$MainHandler;-><init>(Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;)V
@@ -312,6 +351,7 @@
 
     const-wide/16 p1, 0x0
 
+    .line 40
     iput-wide p1, p0, Lcom/sec/android/app/camera/shootingmode/superslowmotion/SuperSlowMotionPresenter;->mCurrentRecordingTime:J
 
     return-void

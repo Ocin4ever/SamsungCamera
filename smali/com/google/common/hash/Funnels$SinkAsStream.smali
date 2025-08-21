@@ -76,6 +76,7 @@
 .method public write(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/hash/Funnels$SinkAsStream;->sink:Lcom/google/common/hash/PrimitiveSink;
 
     int-to-byte p1, p1
@@ -88,6 +89,7 @@
 .method public write([B)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/hash/Funnels$SinkAsStream;->sink:Lcom/google/common/hash/PrimitiveSink;
 
     invoke-interface {p0, p1}, Lcom/google/common/hash/PrimitiveSink;->putBytes([B)Lcom/google/common/hash/PrimitiveSink;
@@ -98,6 +100,7 @@
 .method public write([BII)V
     .locals 0
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/hash/Funnels$SinkAsStream;->sink:Lcom/google/common/hash/PrimitiveSink;
 
     invoke-interface {p0, p1, p2, p3}, Lcom/google/common/hash/PrimitiveSink;->putBytes([BII)Lcom/google/common/hash/PrimitiveSink;

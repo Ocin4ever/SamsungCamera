@@ -35,6 +35,7 @@
 .method public static obtainStyledAttributes(Landroid/content/Context;I[I)Landroidx/appcompat/widget/TintTypedArray;
     .locals 1
 
+    .line 4
     new-instance v0, Landroidx/appcompat/widget/TintTypedArray;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
@@ -49,6 +50,7 @@
 .method public static obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroidx/appcompat/widget/TintTypedArray;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/appcompat/widget/TintTypedArray;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -63,8 +65,10 @@
 .method public static obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/TintTypedArray;
     .locals 1
 
+    .line 2
     new-instance v0, Landroidx/appcompat/widget/TintTypedArray;
 
+    .line 3
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
@@ -384,6 +388,7 @@
 .method public getLayoutDimension(II)I
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/TintTypedArray;->mWrapped:Landroid/content/res/TypedArray;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
@@ -396,6 +401,7 @@
 .method public getLayoutDimension(ILjava/lang/String;)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/TintTypedArray;->mWrapped:Landroid/content/res/TypedArray;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/res/TypedArray;->getLayoutDimension(ILjava/lang/String;)I

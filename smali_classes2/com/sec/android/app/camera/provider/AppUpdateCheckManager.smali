@@ -393,8 +393,10 @@
 
     const-string v1, "start"
 
+    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/sec/android/app/camera/provider/CallStateManager;->isMobileDataEnabled(Landroid/content/Context;)Z
@@ -413,11 +415,13 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     iget-object v1, p0, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->mContext:Landroid/content/Context;
 
     const-string v2, "com.sec.android.app.camera"
@@ -428,6 +432,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 5
     iget-object v1, p0, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->mContext:Landroid/content/Context;
 
     const-string v2, "com.samsung.android.app.galaxyraw"
@@ -438,6 +443,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 6
     iget-object v1, p0, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->mContext:Landroid/content/Context;
 
     const-string v2, "com.samsung.android.visionintelligence"
@@ -448,6 +454,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 7
     iget-object v1, p0, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->mContext:Landroid/content/Context;
 
     const-string v2, "com.samsung.android.arzone"
@@ -460,12 +467,14 @@
 
     const/4 v1, 0x0
 
+    .line 8
     invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v2
 
     invoke-interface {v0, v2}, Ljava/util/Collection;->removeAll(Ljava/util/Collection;)Z
 
+    .line 9
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v2
@@ -474,11 +483,13 @@
 
     return-void
 
+    .line 10
     :cond_1
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
+    .line 11
     iget-object v3, p0, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->mContext:Landroid/content/Context;
 
     new-instance v4, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;
@@ -491,6 +502,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 12
     iget-object v3, p0, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->mContext:Landroid/content/Context;
 
     new-instance v4, Lcom/sec/android/app/camera/service/DeviceIdCallbackService;
@@ -505,12 +517,14 @@
 
     invoke-interface {v2, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 13
     invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v1
 
     invoke-interface {v2, v1}, Ljava/util/Collection;->removeAll(Ljava/util/Collection;)Z
 
+    .line 14
     invoke-direct {p0, v2, v0}, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->startUpdateCheckTask(Ljava/util/Collection;Ljava/util/Collection;)V
 
     return-void
@@ -519,6 +533,7 @@
 .method public start(Ljava/lang/String;)V
     .locals 4
 
+    .line 15
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -537,6 +552,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 16
     iget-object v0, p0, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/sec/android/app/camera/provider/CallStateManager;->isMobileDataEnabled(Landroid/content/Context;)Z
@@ -555,11 +571,13 @@
 
     return-void
 
+    .line 17
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 18
     iget-object v1, p0, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->mContext:Landroid/content/Context;
 
     invoke-static {v1, p1}, Lcom/sec/android/app/camera/provider/AppUpdateCheckTask;->create(Landroid/content/Context;Ljava/lang/String;)Lcom/sec/android/app/camera/provider/AppUpdateCheckTask;
@@ -568,10 +586,12 @@
 
     invoke-interface {v0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 19
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 20
     iget-object v1, p0, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->mContext:Landroid/content/Context;
 
     new-instance v2, Lcom/sec/android/app/camera/service/SamsungAccountCallbackService;
@@ -584,6 +604,7 @@
 
     invoke-interface {p1, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 21
     iget-object v1, p0, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->mContext:Landroid/content/Context;
 
     new-instance v2, Lcom/sec/android/app/camera/service/DeviceIdCallbackService;
@@ -600,12 +621,14 @@
 
     const/4 v1, 0x0
 
+    .line 22
     invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v1
 
     invoke-interface {p1, v1}, Ljava/util/Collection;->removeAll(Ljava/util/Collection;)Z
 
+    .line 23
     invoke-direct {p0, p1, v0}, Lcom/sec/android/app/camera/provider/AppUpdateCheckManager;->startUpdateCheckTask(Ljava/util/Collection;Ljava/util/Collection;)V
 
     return-void

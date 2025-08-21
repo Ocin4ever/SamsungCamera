@@ -59,6 +59,7 @@
 .method public final invoke()Landroidx/lifecycle/ViewModelStore;
     .locals 1
 
+    .line 2
     iget-object p0, p0, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$6;->$owner$delegate:Lf6/d;
 
     invoke-static {p0}, Landroidx/fragment/app/FragmentViewModelLazyKt;->access$viewModels$lambda-1(Lf6/d;)Landroidx/lifecycle/ViewModelStoreOwner;
@@ -79,6 +80,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$6;->invoke()Landroidx/lifecycle/ViewModelStore;
 
     move-result-object p0

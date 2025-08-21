@@ -18,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Landroidx/work/Operation$State;-><init>()V
 
     return-void
@@ -26,6 +27,7 @@
 .method public synthetic constructor <init>(Landroidx/work/Operation$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/work/Operation$State$SUCCESS;-><init>()V
 
     return-void

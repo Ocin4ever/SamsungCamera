@@ -36,6 +36,7 @@
 .method public frameworkGet(Landroid/view/View;)Ljava/lang/Boolean;
     .locals 0
 
+    .line 2
     invoke-static {p1}, Landroidx/core/view/ViewCompat$Api28Impl;->isScreenReaderFocusable(Landroid/view/View;)Z
 
     move-result p0
@@ -50,6 +51,7 @@
 .method public bridge synthetic frameworkGet(Landroid/view/View;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/core/view/ViewCompat$1;->frameworkGet(Landroid/view/View;)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -60,6 +62,7 @@
 .method public frameworkSet(Landroid/view/View;Ljava/lang/Boolean;)V
     .locals 0
 
+    .line 2
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
@@ -72,6 +75,7 @@
 .method public bridge synthetic frameworkSet(Landroid/view/View;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p2, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1, p2}, Landroidx/core/view/ViewCompat$1;->frameworkSet(Landroid/view/View;Ljava/lang/Boolean;)V
@@ -82,6 +86,7 @@
 .method public shouldUpdate(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroidx/core/view/ViewCompat$AccessibilityViewProperty;->booleanNullToFalseEquals(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z
 
     move-result p0
@@ -94,6 +99,7 @@
 .method public bridge synthetic shouldUpdate(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Boolean;
 
     check-cast p2, Ljava/lang/Boolean;

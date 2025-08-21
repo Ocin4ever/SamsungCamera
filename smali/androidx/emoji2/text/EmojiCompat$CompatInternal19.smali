@@ -67,6 +67,7 @@
 .method public hasEmojiGlyph(Ljava/lang/CharSequence;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/emoji2/text/EmojiCompat$CompatInternal19;->mProcessor:Landroidx/emoji2/text/EmojiProcessor;
 
     invoke-virtual {p0, p1}, Landroidx/emoji2/text/EmojiProcessor;->getEmojiMatch(Ljava/lang/CharSequence;)I
@@ -89,6 +90,7 @@
 .method public hasEmojiGlyph(Ljava/lang/CharSequence;I)Z
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/emoji2/text/EmojiCompat$CompatInternal19;->mProcessor:Landroidx/emoji2/text/EmojiProcessor;
 
     invoke-virtual {p0, p1, p2}, Landroidx/emoji2/text/EmojiProcessor;->getEmojiMatch(Ljava/lang/CharSequence;I)I

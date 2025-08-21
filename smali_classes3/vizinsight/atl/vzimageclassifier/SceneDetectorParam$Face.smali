@@ -32,22 +32,29 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Face;->bounds:Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Rectangle;
 
     const/4 v1, 0x0
 
+    .line 3
     iput v1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Face;->score:I
 
+    .line 4
     iput v1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Face;->id:I
 
+    .line 5
     iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Face;->leftEye:Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Point;
 
+    .line 6
     iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Face;->rightEye:Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Point;
 
+    .line 7
     iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Face;->mouth:Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Point;
 
     return-void
@@ -56,18 +63,25 @@
 .method public constructor <init>(Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Rectangle;IILvizinsight/atl/vzimageclassifier/SceneDetectorParam$Point;Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Point;Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Point;)V
     .locals 0
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 9
     iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Face;->bounds:Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Rectangle;
 
+    .line 10
     iput p2, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Face;->score:I
 
+    .line 11
     iput p3, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Face;->id:I
 
+    .line 12
     iput-object p4, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Face;->leftEye:Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Point;
 
+    .line 13
     iput-object p5, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Face;->rightEye:Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Point;
 
+    .line 14
     iput-object p6, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Face;->mouth:Lvizinsight/atl/vzimageclassifier/SceneDetectorParam$Point;
 
     return-void

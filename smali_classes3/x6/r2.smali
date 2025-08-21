@@ -13,6 +13,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-direct {p0, p1, v0}, Lx6/r2;-><init>(Ljava/lang/String;Lx6/r1;)V
 
     return-void
@@ -21,8 +22,10 @@
 .method public constructor <init>(Ljava/lang/String;Lx6/r1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
+    .line 2
     iput-object p2, p0, Lx6/r2;->a:Lx6/r1;
 
     return-void

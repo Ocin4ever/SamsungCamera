@@ -1413,6 +1413,7 @@
 .method public static updateWidget(Landroid/content/Context;I)V
     .locals 1
 
+    .line 1
     invoke-static {p0}, Lcom/sec/android/app/camera/util/WidgetInfoUpdater;->getInstance(Landroid/content/Context;)Lcom/sec/android/app/camera/util/WidgetInfoUpdater;
 
     move-result-object v0
@@ -1425,6 +1426,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/sec/android/app/camera/setting/launcherwidget/WidgetUtil$ThumbnailData;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -1437,6 +1439,7 @@
 .method private static updateWidget(Landroid/content/Context;ILandroid/graphics/Bitmap;)V
     .locals 13
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1455,10 +1458,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     invoke-static {p0}, Landroid/appwidget/AppWidgetManager;->getInstance(Landroid/content/Context;)Landroid/appwidget/AppWidgetManager;
 
     move-result-object v0
 
+    .line 5
     new-instance v1, Landroid/widget/RemoteViews;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -1471,6 +1476,7 @@
 
     invoke-direct {v1, v2, v3}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
+    .line 6
     invoke-static {p0, p1}, Lcom/sec/android/app/camera/setting/launcherwidget/WidgetUtil;->getPendingIntent(Landroid/content/Context;I)Landroid/app/PendingIntent;
 
     move-result-object v2
@@ -1479,6 +1485,7 @@
 
     invoke-virtual {v1, v3, v2}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
+    .line 7
     invoke-static {p0}, Lcom/sec/android/app/camera/util/WidgetInfoUpdater;->getInstance(Landroid/content/Context;)Lcom/sec/android/app/camera/util/WidgetInfoUpdater;
 
     move-result-object v2
@@ -1517,10 +1524,13 @@
 
     if-nez p2, :cond_0
 
+    .line 8
     invoke-virtual {v1, v3, v8}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
 
+    .line 9
     invoke-virtual {v1, v11, v12, v7}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
+    .line 10
     invoke-static {p0}, Lcom/sec/android/app/camera/setting/launcherwidget/WidgetUtil;->getEmptyImageResId(Landroid/content/Context;)I
 
     move-result p2
@@ -1529,17 +1539,21 @@
 
     goto :goto_0
 
+    .line 11
     :cond_0
     invoke-virtual {v1, v3, p2}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
 
     const p2, 0x7f080720
 
+    .line 12
     invoke-virtual {v1, v11, v12, p2}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
     const p2, 0x7f080724
 
+    .line 13
     invoke-virtual {v1, v3, v12, p2}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
+    .line 14
     :goto_0
     invoke-static {p0}, Lcom/sec/android/app/camera/util/WidgetInfoUpdater;->getInstance(Landroid/content/Context;)Lcom/sec/android/app/camera/util/WidgetInfoUpdater;
 
@@ -1549,6 +1563,7 @@
 
     move-result-object p2
 
+    .line 15
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -1571,6 +1586,7 @@
     :goto_1
     invoke-virtual {v1, v6, v2}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
+    .line 16
     invoke-static {p0}, Lcom/sec/android/app/camera/util/WidgetInfoUpdater;->getInstance(Landroid/content/Context;)Lcom/sec/android/app/camera/util/WidgetInfoUpdater;
 
     move-result-object v2
@@ -1579,6 +1595,7 @@
 
     move-result v2
 
+    .line 17
     invoke-static {p0}, Lcom/sec/android/app/camera/util/WidgetInfoUpdater;->getInstance(Landroid/content/Context;)Lcom/sec/android/app/camera/util/WidgetInfoUpdater;
 
     move-result-object v6
@@ -1587,12 +1604,15 @@
 
     move-result v6
 
+    .line 18
     invoke-static {p0, v6, v2}, Lcom/sec/android/app/camera/setting/launcherwidget/WidgetUtil;->getModeNameWithFacing(Landroid/content/Context;II)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 19
     invoke-virtual {v1, v5, v2}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
+    .line 20
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -1607,6 +1627,7 @@
 
     move-result-object p2
 
+    .line 21
     :cond_2
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1638,17 +1659,21 @@
 
     goto :goto_2
 
+    .line 22
     :cond_3
     invoke-virtual {v1, v3, v8}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
 
+    .line 23
     invoke-virtual {v1, v11, v12, v7}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
+    .line 24
     invoke-static {p0}, Lcom/sec/android/app/camera/setting/launcherwidget/WidgetUtil;->getEmptyImageResId(Landroid/content/Context;)I
 
     move-result p2
 
     invoke-virtual {v1, v3, v12, p2}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
+    .line 25
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -1659,6 +1684,7 @@
 
     invoke-virtual {v1, v6, p2}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
+    .line 26
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -1671,6 +1697,7 @@
 
     invoke-virtual {v1, v5, p2}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
+    .line 27
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1703,6 +1730,7 @@
 
     invoke-virtual {v1, v3, p0}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
 
+    .line 28
     :goto_2
     invoke-virtual {v0, p1, v1}, Landroid/appwidget/AppWidgetManager;->updateAppWidget(ILandroid/widget/RemoteViews;)V
 

@@ -31,8 +31,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/local/parameter/SemCameraParameter$Key;->a:Ljava/lang/String;
 
     return-void
@@ -41,6 +43,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;Lu2/b;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/local/parameter/SemCameraParameter$Key;-><init>(Ljava/lang/String;)V
 
     return-void

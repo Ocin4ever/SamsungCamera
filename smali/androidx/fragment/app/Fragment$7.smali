@@ -47,6 +47,7 @@
 .method public apply(Ljava/lang/Void;)Landroidx/activity/result/ActivityResultRegistry;
     .locals 1
 
+    .line 2
     iget-object p0, p0, Landroidx/fragment/app/Fragment$7;->this$0:Landroidx/fragment/app/Fragment;
 
     iget-object p1, p0, Landroidx/fragment/app/Fragment;->mHost:Landroidx/fragment/app/FragmentHostCallback;
@@ -55,6 +56,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p1, Landroidx/activity/result/ActivityResultRegistryOwner;
 
     invoke-interface {p1}, Landroidx/activity/result/ActivityResultRegistryOwner;->getActivityResultRegistry()Landroidx/activity/result/ActivityResultRegistry;
@@ -63,6 +65,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -78,6 +81,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment$7;->apply(Ljava/lang/Void;)Landroidx/activity/result/ActivityResultRegistry;

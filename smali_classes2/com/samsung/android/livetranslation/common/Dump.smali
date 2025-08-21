@@ -40,9 +40,9 @@
 
 .field private static final TAG:Ljava/lang/String; = "Dump"
 
-.field private static TEXT_SIZE:I
+.field private static TEXT_SIZE:I = 0x0
 
-.field private static isScaledImage:Z
+.field private static isScaledImage:Z = false
 
 .field private static originalImage:Landroid/graphics/Bitmap;
 

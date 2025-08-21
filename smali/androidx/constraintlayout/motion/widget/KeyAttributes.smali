@@ -961,6 +961,7 @@
 .method public clone()Landroidx/constraintlayout/motion/widget/Key;
     .locals 1
 
+    .line 2
     new-instance v0, Landroidx/constraintlayout/motion/widget/KeyAttributes;
 
     invoke-direct {v0}, Landroidx/constraintlayout/motion/widget/KeyAttributes;-><init>()V
@@ -975,6 +976,7 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/motion/widget/KeyAttributes;->clone()Landroidx/constraintlayout/motion/widget/Key;
 
     move-result-object p0

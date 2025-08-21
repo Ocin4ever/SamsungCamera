@@ -27,20 +27,24 @@
 
     if-eqz p1, :cond_1
 
+    .line 10
     invoke-virtual {p0}, Landroid/widget/AbsSpinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v0
 
+    .line 11
     instance-of v1, v0, Landroidx/databinding/adapters/ObservableListAdapter;
 
     if-eqz v1, :cond_0
 
+    .line 12
     check-cast v0, Landroidx/databinding/adapters/ObservableListAdapter;
 
     invoke-virtual {v0, p1}, Landroidx/databinding/adapters/ObservableListAdapter;->setList(Ljava/util/List;)V
 
     goto :goto_0
 
+    .line 13
     :cond_0
     new-instance v0, Landroidx/databinding/adapters/ObservableListAdapter;
 
@@ -67,6 +71,7 @@
     :cond_1
     const/4 p1, 0x0
 
+    .line 14
     invoke-virtual {p0, p1}, Landroid/widget/AbsSpinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
     :goto_0
@@ -87,6 +92,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     invoke-virtual {p0}, Landroid/widget/AbsSpinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v0
@@ -95,6 +101,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 2
     invoke-interface {v0}, Landroid/widget/Adapter;->getCount()I
 
     move-result v2
@@ -107,11 +114,13 @@
 
     move v3, v2
 
+    .line 3
     :goto_0
     array-length v4, p1
 
     if-ge v3, v4, :cond_1
 
+    .line 4
     aget-object v4, p1, v3
 
     invoke-interface {v0, v3}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
@@ -138,8 +147,10 @@
     :goto_1
     if-eqz v1, :cond_4
 
+    .line 5
     new-instance v0, Landroid/widget/ArrayAdapter;
 
+    .line 6
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -150,8 +161,10 @@
 
     const p1, 0x1090009
 
+    .line 7
     invoke-virtual {v0, p1}, Landroid/widget/ArrayAdapter;->setDropDownViewResource(I)V
 
+    .line 8
     invoke-virtual {p0, v0}, Landroid/widget/AbsSpinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
     goto :goto_2
@@ -159,6 +172,7 @@
     :cond_3
     const/4 p1, 0x0
 
+    .line 9
     invoke-virtual {p0, p1}, Landroid/widget/AbsSpinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
     :cond_4

@@ -95,6 +95,7 @@
 .method bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Synchronized$SynchronizedSortedMap;->delegate()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -105,6 +106,7 @@
 .method bridge synthetic delegate()Ljava/util/Map;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/Synchronized$SynchronizedSortedMap;->delegate()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -122,6 +124,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-super {p0}, Lcom/google/common/collect/Synchronized$SynchronizedMap;->delegate()Ljava/util/Map;
 
     move-result-object p0

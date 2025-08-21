@@ -171,17 +171,20 @@
 .method public awaitHealthy()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
     iget-object v1, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->awaitHealthGuard:Lcom/google/common/util/concurrent/Monitor$Guard;
 
     invoke-virtual {v0, v1}, Lcom/google/common/util/concurrent/Monitor;->enterWhenUninterruptibly(Lcom/google/common/util/concurrent/Monitor$Guard;)V
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->checkHealthy()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/Monitor;->leave()V
@@ -195,16 +198,19 @@
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/Monitor;->leave()V
 
+    .line 4
     throw v0
 .end method
 
 .method public awaitHealthy(JLjava/util/concurrent/TimeUnit;)V
     .locals 2
 
+    .line 5
     iget-object v0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/Monitor;->enter()V
 
+    .line 6
     :try_start_0
     iget-object v0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
@@ -216,16 +222,19 @@
 
     if-eqz p1, :cond_0
 
+    .line 7
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->checkHealthy()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     iget-object p0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/Monitor;->leave()V
 
     return-void
 
+    .line 9
     :cond_0
     :try_start_1
     new-instance p1, Ljava/util/concurrent/TimeoutException;
@@ -236,6 +245,7 @@
 
     sget-object v0, Lcom/google/common/util/concurrent/Service$State;->STARTING:Lcom/google/common/util/concurrent/Service$State;
 
+    .line 10
     invoke-static {p3, v0}, Lcom/google/common/collect/ImmutableSet;->of(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p3
@@ -281,22 +291,26 @@
     :catchall_0
     move-exception p1
 
+    .line 11
     iget-object p0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/Monitor;->leave()V
 
+    .line 12
     throw p1
 .end method
 
 .method public awaitStopped()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
     iget-object v1, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->stoppedGuard:Lcom/google/common/util/concurrent/Monitor$Guard;
 
     invoke-virtual {v0, v1}, Lcom/google/common/util/concurrent/Monitor;->enterWhenUninterruptibly(Lcom/google/common/util/concurrent/Monitor$Guard;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/Monitor;->leave()V
@@ -307,10 +321,12 @@
 .method public awaitStopped(JLjava/util/concurrent/TimeUnit;)V
     .locals 2
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/Monitor;->enter()V
 
+    .line 4
     :try_start_0
     iget-object v0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
@@ -324,12 +340,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 5
     iget-object p0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/Monitor;->leave()V
 
     return-void
 
+    .line 6
     :cond_0
     :try_start_1
     new-instance p1, Ljava/util/concurrent/TimeoutException;
@@ -340,6 +358,7 @@
 
     sget-object v0, Lcom/google/common/util/concurrent/Service$State;->FAILED:Lcom/google/common/util/concurrent/Service$State;
 
+    .line 7
     invoke-static {p3, v0}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object p3
@@ -389,10 +408,12 @@
     :catchall_0
     move-exception p1
 
+    .line 8
     iget-object p0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/Monitor;->leave()V
 
+    .line 9
     throw p1
 .end method
 

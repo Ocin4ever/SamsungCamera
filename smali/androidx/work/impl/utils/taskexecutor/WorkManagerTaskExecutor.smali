@@ -66,6 +66,7 @@
 .method public getSerialTaskExecutor()Landroidx/work/impl/utils/SerialExecutorImpl;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/work/impl/utils/taskexecutor/WorkManagerTaskExecutor;->mBackgroundExecutor:Landroidx/work/impl/utils/SerialExecutorImpl;
 
     return-object p0
@@ -74,6 +75,7 @@
 .method public bridge synthetic getSerialTaskExecutor()Landroidx/work/impl/utils/taskexecutor/SerialExecutor;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/work/impl/utils/taskexecutor/WorkManagerTaskExecutor;->getSerialTaskExecutor()Landroidx/work/impl/utils/SerialExecutorImpl;
 
     move-result-object p0

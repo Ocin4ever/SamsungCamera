@@ -57,6 +57,7 @@
 
     const/16 v0, 0x11
 
+    .line 1
     invoke-interface {p0, p3, p1, p2, v0}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
     return-void
@@ -77,6 +78,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p1}, Lt6/d;->h()Ljava/lang/Integer;
 
     move-result-object v0

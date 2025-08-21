@@ -257,6 +257,7 @@
 .method public bridge synthetic setDuration(J)Landroid/animation/Animator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Ly/a;->setDuration(J)Landroid/animation/ValueAnimator;
 
     move-result-object p0
@@ -267,6 +268,7 @@
 .method public setDuration(J)Landroid/animation/ValueAnimator;
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "LottieAnimator does not support setDuration."

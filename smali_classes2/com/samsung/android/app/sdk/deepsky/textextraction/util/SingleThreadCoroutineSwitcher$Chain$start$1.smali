@@ -120,6 +120,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Lx6/h0;
 
     check-cast p2, Li6/d;
@@ -143,6 +144,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/app/sdk/deepsky/textextraction/util/SingleThreadCoroutineSwitcher$Chain$start$1;->create(Ljava/lang/Object;Li6/d;)Li6/d;
 
     move-result-object p0

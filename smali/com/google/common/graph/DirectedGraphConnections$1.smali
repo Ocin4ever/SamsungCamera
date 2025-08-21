@@ -64,6 +64,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/graph/DirectedGraphConnections$1;->this$0:Lcom/google/common/graph/DirectedGraphConnections;
 
     invoke-static {v0}, Lcom/google/common/graph/DirectedGraphConnections;->access$000(Lcom/google/common/graph/DirectedGraphConnections;)Ljava/util/List;
@@ -74,10 +75,12 @@
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
+    .line 4
     new-instance v2, Lcom/google/common/graph/DirectedGraphConnections$1$1;
 
     invoke-direct {v2, p0, v0, v1}, Lcom/google/common/graph/DirectedGraphConnections$1$1;-><init>(Lcom/google/common/graph/DirectedGraphConnections$1;Ljava/util/Iterator;Ljava/util/Set;)V
@@ -88,6 +91,7 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/DirectedGraphConnections$1;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object p0

@@ -56,6 +56,7 @@
 .method public onSuccess(Ljava/io/Closeable;)V
     .locals 1
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/util/concurrent/ClosingFuture$1;->val$closingFuture:Lcom/google/common/util/concurrent/ClosingFuture;
 
     invoke-static {v0}, Lcom/google/common/util/concurrent/ClosingFuture;->access$200(Lcom/google/common/util/concurrent/ClosingFuture;)Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
@@ -76,6 +77,7 @@
 .method public bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/io/Closeable;
 
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/ClosingFuture$1;->onSuccess(Ljava/io/Closeable;)V

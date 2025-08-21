@@ -32,24 +32,29 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/samsung/android/sdk/scs/base/utils/Preconditions;->checkNotMainThread()V
 
     const-string v0, "Task must not be null"
 
+    .line 2
     invoke-static {p0, v0}, Lcom/samsung/android/sdk/scs/base/utils/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-virtual {p0}, Lcom/samsung/android/sdk/scs/base/tasks/Task;->isComplete()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-static {p0}, Lcom/samsung/android/sdk/scs/base/tasks/Tasks;->completeTask(Lcom/samsung/android/sdk/scs/base/tasks/Task;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 5
     :cond_0
     new-instance v0, Lcom/samsung/android/sdk/scs/base/tasks/Tasks$TaskCountDown;
 
@@ -57,12 +62,15 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/sdk/scs/base/tasks/Tasks$TaskCountDown;-><init>(Lcom/samsung/android/sdk/scs/base/tasks/a;)V
 
+    .line 6
     sget-object v1, Lcom/samsung/android/sdk/scs/base/tasks/TaskExecutors;->EXECUTOR:Ljava/util/concurrent/Executor;
 
     invoke-virtual {p0, v1, v0}, Lcom/samsung/android/sdk/scs/base/tasks/Task;->addOnCompleteListener(Ljava/util/concurrent/Executor;Lcom/samsung/android/sdk/scs/base/tasks/OnCompleteListener;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
+    .line 7
     invoke-virtual {v0}, Lcom/samsung/android/sdk/scs/base/tasks/Tasks$TaskCountDown;->await()V
 
+    .line 8
     invoke-static {p0}, Lcom/samsung/android/sdk/scs/base/tasks/Tasks;->completeTask(Lcom/samsung/android/sdk/scs/base/tasks/Task;)Ljava/lang/Object;
 
     move-result-object p0
@@ -84,28 +92,34 @@
         }
     .end annotation
 
+    .line 9
     invoke-static {}, Lcom/samsung/android/sdk/scs/base/utils/Preconditions;->checkNotMainThread()V
 
     const-string v0, "Task must not be null"
 
+    .line 10
     invoke-static {p0, v0}, Lcom/samsung/android/sdk/scs/base/utils/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "TimeUnit must not be null"
 
+    .line 11
     invoke-static {p3, v0}, Lcom/samsung/android/sdk/scs/base/utils/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 12
     invoke-virtual {p0}, Lcom/samsung/android/sdk/scs/base/tasks/Task;->isComplete()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 13
     invoke-static {p0}, Lcom/samsung/android/sdk/scs/base/tasks/Tasks;->completeTask(Lcom/samsung/android/sdk/scs/base/tasks/Task;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 14
     :cond_0
     new-instance v0, Lcom/samsung/android/sdk/scs/base/tasks/Tasks$TaskCountDown;
 
@@ -113,22 +127,26 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/sdk/scs/base/tasks/Tasks$TaskCountDown;-><init>(Lcom/samsung/android/sdk/scs/base/tasks/a;)V
 
+    .line 15
     sget-object v1, Lcom/samsung/android/sdk/scs/base/tasks/TaskExecutors;->EXECUTOR:Ljava/util/concurrent/Executor;
 
     invoke-virtual {p0, v1, v0}, Lcom/samsung/android/sdk/scs/base/tasks/Task;->addOnCompleteListener(Ljava/util/concurrent/Executor;Lcom/samsung/android/sdk/scs/base/tasks/OnCompleteListener;)Lcom/samsung/android/sdk/scs/base/tasks/Task;
 
+    .line 16
     invoke-virtual {v0, p1, p2, p3}, Lcom/samsung/android/sdk/scs/base/tasks/Tasks$TaskCountDown;->await(JLjava/util/concurrent/TimeUnit;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
+    .line 17
     invoke-static {p0}, Lcom/samsung/android/sdk/scs/base/tasks/Tasks;->completeTask(Lcom/samsung/android/sdk/scs/base/tasks/Task;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 18
     :cond_1
     new-instance p0, Ljava/util/concurrent/TimeoutException;
 

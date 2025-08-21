@@ -66,6 +66,7 @@
 .method public getNext()Lcom/google/common/collect/MapMakerInternalMap$DummyInternalEntry;
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -76,6 +77,7 @@
 .method public bridge synthetic getNext()Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap$DummyInternalEntry;->getNext()Lcom/google/common/collect/MapMakerInternalMap$DummyInternalEntry;
 
     move-result-object p0

@@ -224,10 +224,13 @@
         }
     .end annotation
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     new-instance v0, Lcom/google/common/util/concurrent/d;
 
     invoke-direct {v0, p1, p0}, Lcom/google/common/util/concurrent/d;-><init>(Lcom/google/common/base/Supplier;Ljava/lang/Runnable;)V
@@ -252,10 +255,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     new-instance v0, Lcom/google/common/util/concurrent/e;
 
     invoke-direct {v0, p1, p0}, Lcom/google/common/util/concurrent/e;-><init>(Lcom/google/common/base/Supplier;Ljava/util/concurrent/Callable;)V

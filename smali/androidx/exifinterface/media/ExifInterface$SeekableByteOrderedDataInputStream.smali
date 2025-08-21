@@ -18,14 +18,17 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;-><init>(Ljava/io/InputStream;)V
 
+    .line 4
     invoke-virtual {p1}, Ljava/io/InputStream;->markSupported()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 5
     iget-object p0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mDataInputStream:Ljava/io/DataInputStream;
 
     const p1, 0x7fffffff
@@ -34,6 +37,7 @@
 
     return-void
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -47,8 +51,10 @@
 .method public constructor <init>([B)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;-><init>([B)V
 
+    .line 2
     iget-object p0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mDataInputStream:Ljava/io/DataInputStream;
 
     const p1, 0x7fffffff

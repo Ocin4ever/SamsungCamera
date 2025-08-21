@@ -78,6 +78,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0, v0, v0}, Landroidx/work/impl/background/systemalarm/SystemAlarmDispatcher;-><init>(Landroid/content/Context;Landroidx/work/impl/Processor;Landroidx/work/impl/WorkManagerImpl;Landroidx/work/impl/WorkLauncher;)V
 
     return-void
@@ -86,14 +87,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/impl/Processor;Landroidx/work/impl/WorkManagerImpl;Landroidx/work/impl/WorkLauncher;)V
     .locals 3
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/work/impl/background/systemalarm/SystemAlarmDispatcher;->mContext:Landroid/content/Context;
 
+    .line 4
     new-instance v1, Landroidx/work/impl/StartStopTokens;
 
     invoke-direct {v1}, Landroidx/work/impl/StartStopTokens;-><init>()V
@@ -104,6 +108,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-static {p1}, Landroidx/work/impl/WorkManagerImpl;->getInstance(Landroid/content/Context;)Landroidx/work/impl/WorkManagerImpl;
 
@@ -112,8 +117,10 @@
     :goto_0
     iput-object p3, p0, Landroidx/work/impl/background/systemalarm/SystemAlarmDispatcher;->mWorkManager:Landroidx/work/impl/WorkManagerImpl;
 
+    .line 6
     new-instance p1, Landroidx/work/impl/background/systemalarm/CommandHandler;
 
+    .line 7
     invoke-virtual {p3}, Landroidx/work/impl/WorkManagerImpl;->getConfiguration()Landroidx/work/Configuration;
 
     move-result-object v1
@@ -128,6 +135,7 @@
 
     iput-object p1, p0, Landroidx/work/impl/background/systemalarm/SystemAlarmDispatcher;->mCommandHandler:Landroidx/work/impl/background/systemalarm/CommandHandler;
 
+    .line 8
     new-instance p1, Landroidx/work/impl/utils/WorkTimer;
 
     invoke-virtual {p3}, Landroidx/work/impl/WorkManagerImpl;->getConfiguration()Landroidx/work/Configuration;
@@ -146,6 +154,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_1
     invoke-virtual {p3}, Landroidx/work/impl/WorkManagerImpl;->getProcessor()Landroidx/work/impl/Processor;
 
@@ -154,6 +163,7 @@
     :goto_1
     iput-object p2, p0, Landroidx/work/impl/background/systemalarm/SystemAlarmDispatcher;->mProcessor:Landroidx/work/impl/Processor;
 
+    .line 10
     invoke-virtual {p3}, Landroidx/work/impl/WorkManagerImpl;->getWorkTaskExecutor()Landroidx/work/impl/utils/taskexecutor/TaskExecutor;
 
     move-result-object p1
@@ -164,6 +174,7 @@
 
     goto :goto_2
 
+    .line 11
     :cond_2
     new-instance p4, Landroidx/work/impl/WorkLauncherImpl;
 
@@ -172,8 +183,10 @@
     :goto_2
     iput-object p4, p0, Landroidx/work/impl/background/systemalarm/SystemAlarmDispatcher;->mWorkLauncher:Landroidx/work/impl/WorkLauncher;
 
+    .line 12
     invoke-virtual {p2, p0}, Landroidx/work/impl/Processor;->addExecutionListener(Landroidx/work/impl/ExecutionListener;)V
 
+    .line 13
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -182,6 +195,7 @@
 
     const/4 p1, 0x0
 
+    .line 14
     iput-object p1, p0, Landroidx/work/impl/background/systemalarm/SystemAlarmDispatcher;->mCurrentIntent:Landroid/content/Intent;
 
     return-void

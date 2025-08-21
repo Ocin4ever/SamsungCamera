@@ -50,10 +50,12 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p2, p0, Lcom/samsung/android/app/sdk/deepsky/common/ContentProviderCallerImpl;->tag:Ljava/lang/String;
 
+    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -72,6 +74,7 @@
 
     const-string p2, ""
 
+    .line 3
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/app/sdk/deepsky/common/ContentProviderCallerImpl;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -89,6 +92,7 @@
 
     const-string v2, "uri"
 
+    .line 2
     invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "method"
@@ -99,6 +103,7 @@
 
     invoke-static {p3, v2}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/app/sdk/deepsky/common/ContentProviderCallerImpl;->applicationContext:Landroid/content/Context;
 
@@ -106,12 +111,14 @@
 
     move-result-object v2
 
+    .line 4
     invoke-virtual {v2, p1}, Landroid/content/ContentResolver;->acquireUnstableContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 5
     iget-object v2, p0, Lcom/samsung/android/app/sdk/deepsky/common/ContentProviderCallerImpl;->tag:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/samsung/android/app/sdk/deepsky/common/ContentProviderCallerImpl;->applicationContext:Landroid/content/Context;
@@ -140,12 +147,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     iget-object v2, p0, Lcom/samsung/android/app/sdk/deepsky/common/ContentProviderCallerImpl;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 7
     invoke-virtual {p1, p2, v2, p3}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object p0
@@ -157,6 +166,7 @@
     :catch_0
     move-exception p1
 
+    .line 8
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/common/ContentProviderCallerImpl;->tag:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -198,6 +208,7 @@
 
     const-string v0, "content://com.samsung.android.app.deepsky.DeepSkyQuery.provider"
 
+    .line 1
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

@@ -27,6 +27,7 @@
 
     const/4 v1, 0x0
 
+    .line 4
     invoke-virtual {p0, v0, v1}, Landroidx/emoji2/text/flatbuffer/Struct;->__reset(ILjava/nio/ByteBuffer;)V
 
     return-void
@@ -35,10 +36,12 @@
 .method public __reset(ILjava/nio/ByteBuffer;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Landroidx/emoji2/text/flatbuffer/Struct;->bb:Ljava/nio/ByteBuffer;
 
     if-eqz p2, :cond_0
 
+    .line 2
     iput p1, p0, Landroidx/emoji2/text/flatbuffer/Struct;->bb_pos:I
 
     goto :goto_0
@@ -46,6 +49,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Landroidx/emoji2/text/flatbuffer/Struct;->bb_pos:I
 
     :goto_0

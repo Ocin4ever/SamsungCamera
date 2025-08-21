@@ -57,8 +57,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 2
     new-instance p1, Ljava/util/EnumMap;
 
     const-class p2, Lcom/sec/android/app/camera/layer/LayerManagerView$LayerId;
@@ -69,10 +71,13 @@
 
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Lcom/sec/android/app/camera/layer/LayerManagerView;->mOrientation:I
 
+    .line 4
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/LayerManagerView;->mPostInitialized:Z
 
+    .line 5
     iput p1, p0, Lcom/sec/android/app/camera/layer/LayerManagerView;->mPointerCount:I
 
     return-void
@@ -81,8 +86,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 6
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 7
     new-instance p1, Ljava/util/EnumMap;
 
     const-class p2, Lcom/sec/android/app/camera/layer/LayerManagerView$LayerId;
@@ -93,10 +100,13 @@
 
     const/4 p1, 0x0
 
+    .line 8
     iput p1, p0, Lcom/sec/android/app/camera/layer/LayerManagerView;->mOrientation:I
 
+    .line 9
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/LayerManagerView;->mPostInitialized:Z
 
+    .line 10
     iput p1, p0, Lcom/sec/android/app/camera/layer/LayerManagerView;->mPointerCount:I
 
     return-void
@@ -1811,6 +1821,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/LayerManagerContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/LayerManagerView;->setPresenter(Lcom/sec/android/app/camera/layer/LayerManagerContract$Presenter;)V
@@ -1821,6 +1832,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/layer/LayerManagerContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/LayerManagerView;->mPresenter:Lcom/sec/android/app/camera/layer/LayerManagerContract$Presenter;
 
     return-void

@@ -50,6 +50,7 @@
 .method public bridge synthetic createEntries()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/FilteredEntrySetMultimap;->createEntries()Ljava/util/Set;
 
     move-result-object p0
@@ -68,6 +69,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/FilteredEntrySetMultimap;->unfiltered()Lcom/google/common/collect/SetMultimap;
 
     move-result-object v0
@@ -90,6 +92,7 @@
 .method public bridge synthetic entries()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/FilteredEntrySetMultimap;->entries()Ljava/util/Set;
 
     move-result-object p0
@@ -108,6 +111,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->entries()Ljava/util/Collection;
 
     move-result-object p0
@@ -124,6 +128,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/FilteredEntrySetMultimap;->get(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -145,6 +150,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0, p1}, Lcom/google/common/collect/FilteredEntryMultimap;->get(Ljava/lang/Object;)Ljava/util/Collection;
 
     move-result-object p0
@@ -157,6 +163,7 @@
 .method public bridge synthetic removeAll(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/FilteredEntrySetMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -176,6 +183,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0, p1}, Lcom/google/common/collect/FilteredEntryMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/Collection;
 
     move-result-object p0
@@ -192,6 +200,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/FilteredEntrySetMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p0
@@ -215,6 +224,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/Collection;
 
     move-result-object p0
@@ -227,6 +237,7 @@
 .method public bridge synthetic unfiltered()Lcom/google/common/collect/Multimap;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/FilteredEntrySetMultimap;->unfiltered()Lcom/google/common/collect/SetMultimap;
 
     move-result-object p0
@@ -244,6 +255,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap;->unfiltered:Lcom/google/common/collect/Multimap;
 
     check-cast p0, Lcom/google/common/collect/SetMultimap;

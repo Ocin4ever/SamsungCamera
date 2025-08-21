@@ -18,6 +18,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 4
     sget-object v2, Le7/l;->g:Le7/i;
 
     invoke-direct {p0, v0, v1, v2}, Le7/h;-><init>(JLe7/i;)V
@@ -28,10 +29,13 @@
 .method public constructor <init>(JLe7/i;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Le7/h;->a:J
 
+    .line 3
     iput-object p3, p0, Le7/h;->b:Le7/i;
 
     return-void

@@ -35,6 +35,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, p1, v0}, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase;->getMatchingIds(Ljava/util/regex/Matcher;Lcom/samsung/android/ocr/MOCRResult$Line;I)[I
 
     move-result-object p0
@@ -49,16 +50,19 @@
 
     if-nez p2, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->start()I
 
     move-result p2
 
+    .line 3
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->end()I
 
     move-result p0
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
@@ -66,6 +70,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 5
     invoke-virtual {p1}, Lcom/samsung/android/ocr/MOCRResult$Line;->getText()Ljava/lang/String;
 
     move-result-object p2
@@ -74,6 +79,7 @@
 
     move-result p2
 
+    .line 6
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -84,6 +90,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -105,6 +112,7 @@
 
     move v3, v2
 
+    .line 8
     :goto_1
     iget v4, p1, Lcom/samsung/android/ocr/MOCRResult$Line;->wordCount:I
 
@@ -112,10 +120,12 @@
 
     if-ge v2, v4, :cond_4
 
+    .line 9
     iget-object v4, p1, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
     aget-object v4, v4, v2
 
+    .line 10
     iget v4, v4, Lcom/samsung/android/ocr/MOCRResult$Word;->charCount:I
 
     add-int v6, v4, v3
@@ -143,15 +153,18 @@
     :goto_2
     move v6, v2
 
+    .line 11
     :goto_3
     iget v7, p1, Lcom/samsung/android/ocr/MOCRResult$Line;->wordCount:I
 
     if-ge v6, v7, :cond_6
 
+    .line 12
     iget-object v7, p1, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
     aget-object v7, v7, v6
 
+    .line 13
     iget v7, v7, Lcom/samsung/android/ocr/MOCRResult$Word;->charCount:I
 
     add-int v8, v7, v3
@@ -178,6 +191,7 @@
     :cond_6
     move p1, v0
 
+    .line 14
     :goto_4
     sget-object v3, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase;->TAG:Ljava/lang/String;
 
@@ -241,6 +255,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, p1, p2, v0}, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase;->joinWords(Lcom/samsung/android/ocr/MOCRResult$Line;IILcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;)V
 
     return-void
@@ -257,6 +272,7 @@
 
     move-object/from16 v3, p3
 
+    .line 2
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
@@ -268,6 +284,7 @@
     :goto_0
     if-ge v6, v1, :cond_0
 
+    .line 3
     iget-object v7, v0, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
     aget-object v7, v7, v6
@@ -278,6 +295,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v6, v0, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
@@ -296,6 +314,7 @@
     :cond_1
     move v6, v5
 
+    .line 5
     :goto_1
     new-instance v8, Lcom/samsung/android/ocr/MOCRResult$Word;
 
@@ -305,20 +324,25 @@
 
     new-array v9, v9, [Landroid/graphics/Point;
 
+    .line 6
     iput-object v9, v8, Lcom/samsung/android/ocr/MOCRResult$Word;->wRect:[Landroid/graphics/Point;
 
+    .line 7
     iget-object v10, v0, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
     aget-object v11, v10, v1
 
+    .line 8
     aget-object v10, v10, v2
 
+    .line 9
     iget-object v11, v11, Lcom/samsung/android/ocr/MOCRResult$Word;->wRect:[Landroid/graphics/Point;
 
     aget-object v12, v11, v5
 
     aput-object v12, v9, v5
 
+    .line 10
     iget-object v10, v10, Lcom/samsung/android/ocr/MOCRResult$Word;->wRect:[Landroid/graphics/Point;
 
     aget-object v12, v10, v7
@@ -327,20 +351,24 @@
 
     const/4 v12, 0x2
 
+    .line 11
     aget-object v10, v10, v12
 
     aput-object v10, v9, v12
 
     const/4 v10, 0x3
 
+    .line 12
     aget-object v11, v11, v10
 
     aput-object v11, v9, v10
 
+    .line 13
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
+    .line 14
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -352,20 +380,24 @@
     :goto_2
     if-gt v12, v2, :cond_3
 
+    .line 15
     iget-object v13, v0, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
     aget-object v13, v13, v12
 
+    .line 16
     iget-object v14, v13, Lcom/samsung/android/ocr/MOCRResult$Word;->wordText:Ljava/lang/String;
 
     invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 17
     iget v14, v13, Lcom/samsung/android/ocr/MOCRResult$Word;->conf:F
 
     add-float/2addr v11, v14
 
     if-eqz v6, :cond_2
 
+    .line 18
     iget-object v13, v13, Lcom/samsung/android/ocr/MOCRResult$Word;->chars:[Lcom/samsung/android/ocr/MOCRResult$Char;
 
     invoke-static {v13}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -379,6 +411,7 @@
 
     goto :goto_2
 
+    .line 19
     :cond_3
     sget-object v12, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;->REPLACE_COMMA_IN_PHONE_NUMBER:Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;
 
@@ -388,6 +421,7 @@
 
     if-ne v3, v12, :cond_5
 
+    .line 20
     invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
 
     move-result v12
@@ -397,6 +431,7 @@
 
     if-eqz v12, :cond_4
 
+    .line 21
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->length()I
 
     move-result v15
@@ -405,10 +440,12 @@
 
     if-eq v12, v15, :cond_4
 
+    .line 22
     invoke-virtual {v10, v12, v14}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
     if-eqz v6, :cond_4
 
+    .line 23
     invoke-interface {v9, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v15
@@ -420,12 +457,14 @@
     :cond_4
     add-int/lit8 v12, v12, 0x1
 
+    .line 24
     invoke-virtual {v10, v13, v12}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;I)I
 
     move-result v12
 
     goto :goto_3
 
+    .line 25
     :cond_5
     sget-object v12, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;->REPLACE_SQUARE_BRACKET_IN_PHONE_NUMBER:Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;
 
@@ -435,6 +474,7 @@
 
     const-string v12, "]"
 
+    .line 26
     invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
 
     move-result v12
@@ -443,10 +483,12 @@
 
     const/16 v5, 0x29
 
+    .line 27
     invoke-virtual {v10, v12, v5}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
     if-eqz v6, :cond_6
 
+    .line 28
     invoke-interface {v9, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v12
@@ -455,21 +497,25 @@
 
     iput v5, v12, Lcom/samsung/android/ocr/MOCRResult$Char;->unicode:I
 
+    .line 29
     :cond_6
     sget-object v5, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;->REPLACE_COMMA_IN_EMAIL_OR_URL:Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;
 
     if-ne v3, v5, :cond_7
 
+    .line 30
     invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
 
     move-result v5
 
     if-eq v5, v15, :cond_7
 
+    .line 31
     invoke-virtual {v10, v5, v14}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
     if-eqz v6, :cond_7
 
+    .line 32
     invoke-interface {v9, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -478,6 +524,7 @@
 
     iput v14, v5, Lcom/samsung/android/ocr/MOCRResult$Char;->unicode:I
 
+    .line 33
     :cond_7
     sget-object v5, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;->REPLACE_DOUBLE_IN_EMAIL:Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;
 
@@ -485,55 +532,67 @@
 
     if-ne v3, v5, :cond_8
 
+    .line 34
     invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
 
     move-result v5
 
     if-eq v5, v15, :cond_8
 
+    .line 35
     invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
     if-eqz v6, :cond_8
 
+    .line 36
     invoke-interface {v9, v5}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
+    .line 37
     :cond_8
     sget-object v5, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;->REPLACE_DOUBLE_IN_URL:Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;
 
     if-ne v3, v5, :cond_a
 
+    .line 38
     invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
 
     move-result v5
 
     if-eq v5, v15, :cond_9
 
+    .line 39
     invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
     if-eqz v6, :cond_9
 
+    .line 40
     invoke-interface {v9, v5}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     :cond_9
     const-string v5, "::"
 
+    .line 41
     invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
 
     move-result v5
 
     if-eq v5, v15, :cond_a
 
+    .line 42
     invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
     if-eqz v6, :cond_a
 
+    .line 43
     invoke-interface {v9, v5}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
+    .line 44
     :cond_a
     sget-object v5, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;->REPLACE_COMMA_MULTIPLE_IN_URL:Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;
 
     if-ne v3, v5, :cond_c
 
+    .line 45
     invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
 
     move-result v5
@@ -543,6 +602,7 @@
 
     if-eqz v5, :cond_b
 
+    .line 46
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->length()I
 
     move-result v12
@@ -551,10 +611,12 @@
 
     if-eq v5, v12, :cond_b
 
+    .line 47
     invoke-virtual {v10, v5, v14}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
     if-eqz v6, :cond_b
 
+    .line 48
     invoke-interface {v9, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v12
@@ -566,12 +628,14 @@
     :cond_b
     add-int/lit8 v5, v5, 0x1
 
+    .line 49
     invoke-virtual {v10, v13, v5}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;I)I
 
     move-result v5
 
     goto :goto_4
 
+    .line 50
     :cond_c
     sget-object v5, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;->REPLACE_O_IN_DATETIME:Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;
 
@@ -579,6 +643,7 @@
 
     const-string v3, "O"
 
+    .line 51
     invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
 
     move-result v5
@@ -590,6 +655,7 @@
 
     if-eqz v5, :cond_d
 
+    .line 52
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->length()I
 
     move-result v13
@@ -598,10 +664,12 @@
 
     if-eq v5, v13, :cond_d
 
+    .line 53
     invoke-virtual {v10, v5, v12}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
     if-eqz v6, :cond_d
 
+    .line 54
     invoke-interface {v9, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v13
@@ -613,6 +681,7 @@
     :cond_d
     add-int/lit8 v5, v5, 0x1
 
+    .line 55
     invoke-virtual {v10, v3, v5}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;I)I
 
     move-result v5
@@ -622,6 +691,7 @@
     :cond_e
     const-string v3, "o"
 
+    .line 56
     invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
 
     move-result v5
@@ -629,10 +699,12 @@
     :goto_6
     if-ltz v5, :cond_10
 
+    .line 57
     invoke-virtual {v10, v5, v12}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
     if-eqz v6, :cond_f
 
+    .line 58
     invoke-interface {v9, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v13
@@ -644,12 +716,14 @@
     :cond_f
     add-int/lit8 v5, v5, 0x1
 
+    .line 59
     invoke-virtual {v10, v3, v5}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;I)I
 
     move-result v5
 
     goto :goto_6
 
+    .line 60
     :cond_10
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -665,6 +739,7 @@
 
     div-float/2addr v11, v1
 
+    .line 61
     iput v11, v8, Lcom/samsung/android/ocr/MOCRResult$Word;->conf:F
 
     if-eqz v6, :cond_11
@@ -673,6 +748,7 @@
 
     new-array v3, v1, [Lcom/samsung/android/ocr/MOCRResult$Char;
 
+    .line 62
     invoke-interface {v9, v3}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
@@ -681,6 +757,7 @@
 
     iput-object v1, v8, Lcom/samsung/android/ocr/MOCRResult$Word;->chars:[Lcom/samsung/android/ocr/MOCRResult$Char;
 
+    .line 63
     array-length v1, v1
 
     iput v1, v8, Lcom/samsung/android/ocr/MOCRResult$Word;->charCount:I
@@ -690,24 +767,29 @@
     :cond_11
     const/4 v1, 0x0
 
+    .line 64
     iput-object v1, v8, Lcom/samsung/android/ocr/MOCRResult$Word;->chars:[Lcom/samsung/android/ocr/MOCRResult$Char;
 
+    .line 65
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v1
 
     iput v1, v8, Lcom/samsung/android/ocr/MOCRResult$Word;->charCount:I
 
+    .line 66
     :goto_7
     invoke-interface {v4, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v1, v2, 0x1
 
+    .line 67
     :goto_8
     iget v2, v0, Lcom/samsung/android/ocr/MOCRResult$Line;->wordCount:I
 
     if-ge v1, v2, :cond_12
 
+    .line 68
     iget-object v2, v0, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
     aget-object v2, v2, v1
@@ -723,6 +805,7 @@
 
     new-array v1, v1, [Lcom/samsung/android/ocr/MOCRResult$Word;
 
+    .line 69
     invoke-interface {v4, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
@@ -731,6 +814,7 @@
 
     iput-object v1, v0, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
+    .line 70
     array-length v1, v1
 
     iput v1, v0, Lcom/samsung/android/ocr/MOCRResult$Line;->wordCount:I
@@ -743,6 +827,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, p1, p2, v0}, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase;->replaceCharInWord(Lcom/samsung/android/ocr/MOCRResult$Line;ILcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;Ljava/lang/String;)V
 
     return-void
@@ -751,6 +836,7 @@
 .method public static replaceCharInWord(Lcom/samsung/android/ocr/MOCRResult$Line;ILcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;Ljava/lang/String;)V
     .locals 6
 
+    .line 2
     iget-object v0, p0, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
     aget-object v0, v0, p1
@@ -766,6 +852,7 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -773,6 +860,7 @@
 
     invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 4
     sget-object v0, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;->REPLACE_SUPERSCRIPT_2_IN_UNITS:Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;
 
     const/4 v3, -0x1
@@ -781,6 +869,7 @@
 
     if-eqz p3, :cond_1
 
+    .line 5
     invoke-virtual {p3}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -790,6 +879,7 @@
     :cond_1
     const-string p3, "2"
 
+    .line 6
     :cond_2
     invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->lastIndexOf(Ljava/lang/String;)I
 
@@ -799,8 +889,10 @@
 
     const/16 v0, 0xb2
 
+    .line 7
     invoke-virtual {v2, p3, v0}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
+    .line 8
     iget-object v4, p0, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
     aget-object v4, v4, p1
@@ -813,6 +905,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 9
     iget-object v4, p0, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
     aget-object v4, v4, p1
@@ -823,6 +916,7 @@
 
     iput v0, p3, Lcom/samsung/android/ocr/MOCRResult$Char;->unicode:I
 
+    .line 10
     :cond_3
     sget-object p3, Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;->REPLACE_SUPERSCRIPT_3_IN_UNITS:Lcom/samsung/android/ocr/stride/postocr/entity/CorrectionBase$RegexActions;
 
@@ -830,6 +924,7 @@
 
     const-string p2, "3"
 
+    .line 11
     invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->lastIndexOf(Ljava/lang/String;)I
 
     move-result p2
@@ -838,8 +933,10 @@
 
     const/16 p3, 0xb3
 
+    .line 12
     invoke-virtual {v2, p2, p3}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
+    .line 13
     iget-object v0, p0, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
     aget-object v0, v0, p1
@@ -852,6 +949,7 @@
 
     if-eqz v1, :cond_4
 
+    .line 14
     iget-object p0, p0, Lcom/samsung/android/ocr/MOCRResult$Line;->words:[Lcom/samsung/android/ocr/MOCRResult$Word;
 
     aget-object p0, p0, p1

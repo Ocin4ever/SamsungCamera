@@ -130,6 +130,7 @@
 .method public static copy(Ljava/io/File;Ljava/io/File;)V
     .locals 2
 
+    .line 2
     invoke-virtual {p0, p1}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -140,6 +141,7 @@
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/io/Files;->asByteSource(Ljava/io/File;)Lcom/google/common/io/ByteSource;
 
     move-result-object p0
@@ -160,6 +162,7 @@
 .method public static copy(Ljava/io/File;Ljava/io/OutputStream;)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/io/Files;->asByteSource(Ljava/io/File;)Lcom/google/common/io/ByteSource;
 
     move-result-object p0
@@ -174,6 +177,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 4
     invoke-static {p0, p1}, Lcom/google/common/io/Files;->asCharSource(Ljava/io/File;Ljava/nio/charset/Charset;)Lcom/google/common/io/CharSource;
 
     move-result-object p0
@@ -591,8 +595,10 @@
 .method public static map(Ljava/io/File;)Ljava/nio/MappedByteBuffer;
     .locals 1
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     sget-object v0, Ljava/nio/channels/FileChannel$MapMode;->READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
 
     invoke-static {p0, v0}, Lcom/google/common/io/Files;->map(Ljava/io/File;Ljava/nio/channels/FileChannel$MapMode;)Ljava/nio/MappedByteBuffer;
@@ -607,6 +613,7 @@
 
     const-wide/16 v0, -0x1
 
+    .line 3
     invoke-static {p0, p1, v0, v1}, Lcom/google/common/io/Files;->mapInternal(Ljava/io/File;Ljava/nio/channels/FileChannel$MapMode;J)Ljava/nio/MappedByteBuffer;
 
     move-result-object p0
@@ -633,8 +640,10 @@
     :goto_0
     const-string v1, "size (%s) may not be negative"
 
+    .line 4
     invoke-static {v0, v1, p2, p3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
 
+    .line 5
     invoke-static {p0, p1, p2, p3}, Lcom/google/common/io/Files;->mapInternal(Ljava/io/File;Ljava/nio/channels/FileChannel$MapMode;J)Ljava/nio/MappedByteBuffer;
 
     move-result-object p0
@@ -945,6 +954,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 3
     invoke-static {p0, p1}, Lcom/google/common/io/Files;->asCharSource(Ljava/io/File;Ljava/nio/charset/Charset;)Lcom/google/common/io/CharSource;
 
     move-result-object p0
@@ -970,6 +980,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/io/Files;->asCharSource(Ljava/io/File;Ljava/nio/charset/Charset;)Lcom/google/common/io/CharSource;
 
     move-result-object p0
@@ -978,6 +989,7 @@
 
     invoke-direct {p1}, Lcom/google/common/io/Files$1;-><init>()V
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/io/CharSource;->readLines(Lcom/google/common/io/LineProcessor;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1289,6 +1301,7 @@
 
     new-array v0, v0, [Lcom/google/common/io/FileWriteMode;
 
+    .line 2
     invoke-static {p1, p2, v0}, Lcom/google/common/io/Files;->asCharSink(Ljava/io/File;Ljava/nio/charset/Charset;[Lcom/google/common/io/FileWriteMode;)Lcom/google/common/io/CharSink;
 
     move-result-object p1
@@ -1305,6 +1318,7 @@
 
     new-array v0, v0, [Lcom/google/common/io/FileWriteMode;
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/common/io/Files;->asByteSink(Ljava/io/File;[Lcom/google/common/io/FileWriteMode;)Lcom/google/common/io/ByteSink;
 
     move-result-object p1

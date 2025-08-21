@@ -66,6 +66,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -76,6 +77,7 @@
 .method public bridge synthetic delegate()Ljava/util/Collection;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -96,6 +98,7 @@
 .method public bridge synthetic delegate()Ljava/util/Set;
     .locals 0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -106,6 +109,7 @@
 .method public bridge synthetic delegate()Ljava/util/SortedSet;
     .locals 0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -534,6 +538,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ForwardingNavigableSet;->tailSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -567,6 +572,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p0, p1, v0, p2, v1}, Lcom/google/common/collect/ForwardingNavigableSet;->subSet(Ljava/lang/Object;ZLjava/lang/Object;Z)Ljava/util/NavigableSet;
 
     move-result-object p0

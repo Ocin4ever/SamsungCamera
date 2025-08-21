@@ -37,6 +37,7 @@
 .method public get(Landroid/view/View;)Landroid/graphics/Rect;
     .locals 0
 
+    .line 2
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->getClipBounds(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object p0
@@ -47,6 +48,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroidx/transition/ViewUtils$2;->get(Landroid/view/View;)Landroid/graphics/Rect;
@@ -59,6 +61,7 @@
 .method public set(Landroid/view/View;Landroid/graphics/Rect;)V
     .locals 0
 
+    .line 2
     invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->setClipBounds(Landroid/view/View;Landroid/graphics/Rect;)V
 
     return-void
@@ -67,6 +70,7 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     check-cast p2, Landroid/graphics/Rect;

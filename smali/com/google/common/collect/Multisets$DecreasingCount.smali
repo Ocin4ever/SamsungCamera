@@ -65,6 +65,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p2}, Lcom/google/common/collect/Multiset$Entry;->getCount()I
 
     move-result p0
@@ -81,6 +82,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/collect/Multiset$Entry;
 
     check-cast p2, Lcom/google/common/collect/Multiset$Entry;

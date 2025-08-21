@@ -602,6 +602,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, v0}, Landroidx/print/PrintHelper;->printBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
 
     return-void
@@ -614,49 +615,59 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/print/PrintHelper;->mContext:Landroid/content/Context;
 
     const-string v1, "print"
 
+    .line 3
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/print/PrintManager;
 
+    .line 4
     invoke-static {p2}, Landroidx/print/PrintHelper;->isPortrait(Landroid/graphics/Bitmap;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 5
     sget-object v1, Landroid/print/PrintAttributes$MediaSize;->UNKNOWN_PORTRAIT:Landroid/print/PrintAttributes$MediaSize;
 
     goto :goto_0
 
+    .line 6
     :cond_1
     sget-object v1, Landroid/print/PrintAttributes$MediaSize;->UNKNOWN_LANDSCAPE:Landroid/print/PrintAttributes$MediaSize;
 
+    .line 7
     :goto_0
     new-instance v2, Landroid/print/PrintAttributes$Builder;
 
     invoke-direct {v2}, Landroid/print/PrintAttributes$Builder;-><init>()V
 
+    .line 8
     invoke-virtual {v2, v1}, Landroid/print/PrintAttributes$Builder;->setMediaSize(Landroid/print/PrintAttributes$MediaSize;)Landroid/print/PrintAttributes$Builder;
 
     move-result-object v1
 
     iget v2, p0, Landroidx/print/PrintHelper;->mColorMode:I
 
+    .line 9
     invoke-virtual {v1, v2}, Landroid/print/PrintAttributes$Builder;->setColorMode(I)Landroid/print/PrintAttributes$Builder;
 
     move-result-object v1
 
+    .line 10
     invoke-virtual {v1}, Landroid/print/PrintAttributes$Builder;->build()Landroid/print/PrintAttributes;
 
     move-result-object v1
 
+    .line 11
     new-instance v8, Landroidx/print/PrintHelper$PrintBitmapAdapter;
 
     iget v5, p0, Landroidx/print/PrintHelper;->mScaleMode:I
@@ -683,6 +694,7 @@
 
     const/4 v0, 0x0
 
+    .line 12
     invoke-virtual {p0, p1, p2, v0}, Landroidx/print/PrintHelper;->printBitmap(Ljava/lang/String;Landroid/net/Uri;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
 
     return-void
@@ -691,6 +703,7 @@
 .method public printBitmap(Ljava/lang/String;Landroid/net/Uri;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
     .locals 7
 
+    .line 13
     new-instance v6, Landroidx/print/PrintHelper$PrintUriAdapter;
 
     iget v5, p0, Landroidx/print/PrintHelper;->mScaleMode:I
@@ -707,24 +720,29 @@
 
     invoke-direct/range {v0 .. v5}, Landroidx/print/PrintHelper$PrintUriAdapter;-><init>(Landroidx/print/PrintHelper;Ljava/lang/String;Landroid/net/Uri;Landroidx/print/PrintHelper$OnPrintFinishCallback;I)V
 
+    .line 14
     iget-object p2, p0, Landroidx/print/PrintHelper;->mContext:Landroid/content/Context;
 
     const-string p3, "print"
 
+    .line 15
     invoke-virtual {p2, p3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Landroid/print/PrintManager;
 
+    .line 16
     new-instance p3, Landroid/print/PrintAttributes$Builder;
 
     invoke-direct {p3}, Landroid/print/PrintAttributes$Builder;-><init>()V
 
+    .line 17
     iget v0, p0, Landroidx/print/PrintHelper;->mColorMode:I
 
     invoke-virtual {p3, v0}, Landroid/print/PrintAttributes$Builder;->setColorMode(I)Landroid/print/PrintAttributes$Builder;
 
+    .line 18
     iget p0, p0, Landroidx/print/PrintHelper;->mOrientation:I
 
     const/4 v0, 0x1
@@ -740,24 +758,28 @@
 
     if-ne p0, v0, :cond_2
 
+    .line 19
     sget-object p0, Landroid/print/PrintAttributes$MediaSize;->UNKNOWN_PORTRAIT:Landroid/print/PrintAttributes$MediaSize;
 
     invoke-virtual {p3, p0}, Landroid/print/PrintAttributes$Builder;->setMediaSize(Landroid/print/PrintAttributes$MediaSize;)Landroid/print/PrintAttributes$Builder;
 
     goto :goto_1
 
+    .line 20
     :cond_1
     :goto_0
     sget-object p0, Landroid/print/PrintAttributes$MediaSize;->UNKNOWN_LANDSCAPE:Landroid/print/PrintAttributes$MediaSize;
 
     invoke-virtual {p3, p0}, Landroid/print/PrintAttributes$Builder;->setMediaSize(Landroid/print/PrintAttributes$MediaSize;)Landroid/print/PrintAttributes$Builder;
 
+    .line 21
     :cond_2
     :goto_1
     invoke-virtual {p3}, Landroid/print/PrintAttributes$Builder;->build()Landroid/print/PrintAttributes;
 
     move-result-object p0
 
+    .line 22
     invoke-virtual {p2, p1, v6, p0}, Landroid/print/PrintManager;->print(Ljava/lang/String;Landroid/print/PrintDocumentAdapter;Landroid/print/PrintAttributes;)Landroid/print/PrintJob;
 
     return-void

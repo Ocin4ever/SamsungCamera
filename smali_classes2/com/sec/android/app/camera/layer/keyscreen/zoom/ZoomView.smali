@@ -130,12 +130,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 2
     sget-object p1, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;->NOT_SUPPORT:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mCurrentZoomCategory:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
+    .line 3
     const-class p1, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;
 
     invoke-static {p1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -144,20 +147,24 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mSupportUiSet:Ljava/util/EnumSet;
 
+    .line 4
     sget-object p1, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;->NORMAL:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomPositionType:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;
 
+    .line 5
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mButtonList:Ljava/util/List;
 
+    .line 6
     sget-object p1, Lcom/sec/android/app/camera/interfaces/CommandId;->EMPTY:Lcom/sec/android/app/camera/interfaces/CommandId;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mCurrentLensButtonCommandId:Lcom/sec/android/app/camera/interfaces/CommandId;
 
+    .line 7
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -168,6 +175,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mMainHandler:Landroid/os/Handler;
 
+    .line 8
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView$ScrollEventHandler;
 
     const/4 p2, 0x0
@@ -176,42 +184,49 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mScrollEventHandler:Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView$ScrollEventHandler;
 
+    .line 9
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView$ZoomLensListEventListener;
 
     invoke-direct {p1, p0, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView$ZoomLensListEventListener;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;Lcom/sec/android/app/camera/layer/keyscreen/zoom/j0;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomLensListEventListener:Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView$ZoomLensListEventListener;
 
+    .line 10
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mListenerList:Ljava/util/ArrayList;
 
+    .line 11
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/j;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/j;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomTextHideRunnable:Ljava/lang/Runnable;
 
+    .line 12
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/k;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/k;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomAreaReductionRunnable:Ljava/lang/Runnable;
 
+    .line 13
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/l;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/l;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mSmoothZoomTransitionAnimationEndRunnable:Ljava/lang/Runnable;
 
+    .line 14
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/m;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/m;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomShortcutSelectionListener:Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomShortcutListAdapter$ZoomShortcutSelectionListener;
 
+    .line 15
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->makeZoomCurveHandler()V
 
     return-void
@@ -220,12 +235,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 16
     invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 17
     sget-object p1, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;->NOT_SUPPORT:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mCurrentZoomCategory:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;
 
+    .line 18
     const-class p1, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;
 
     invoke-static {p1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -234,20 +252,24 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mSupportUiSet:Ljava/util/EnumSet;
 
+    .line 19
     sget-object p1, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;->NORMAL:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomPositionType:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;
 
+    .line 20
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mButtonList:Ljava/util/List;
 
+    .line 21
     sget-object p1, Lcom/sec/android/app/camera/interfaces/CommandId;->EMPTY:Lcom/sec/android/app/camera/interfaces/CommandId;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mCurrentLensButtonCommandId:Lcom/sec/android/app/camera/interfaces/CommandId;
 
+    .line 22
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -258,6 +280,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mMainHandler:Landroid/os/Handler;
 
+    .line 23
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView$ScrollEventHandler;
 
     const/4 p2, 0x0
@@ -266,42 +289,49 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mScrollEventHandler:Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView$ScrollEventHandler;
 
+    .line 24
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView$ZoomLensListEventListener;
 
     invoke-direct {p1, p0, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView$ZoomLensListEventListener;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;Lcom/sec/android/app/camera/layer/keyscreen/zoom/j0;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomLensListEventListener:Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView$ZoomLensListEventListener;
 
+    .line 25
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mListenerList:Ljava/util/ArrayList;
 
+    .line 26
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/j;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/j;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomTextHideRunnable:Ljava/lang/Runnable;
 
+    .line 27
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/k;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/k;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomAreaReductionRunnable:Ljava/lang/Runnable;
 
+    .line 28
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/l;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/l;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mSmoothZoomTransitionAnimationEndRunnable:Ljava/lang/Runnable;
 
+    .line 29
     new-instance p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/m;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/m;-><init>(Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomShortcutSelectionListener:Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomShortcutListAdapter$ZoomShortcutSelectionListener;
 
+    .line 30
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->makeZoomCurveHandler()V
 
     return-void
@@ -753,6 +783,7 @@
 .method private extendArea(Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;)V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomShortcutShowAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->isAnimatorRunning(Landroid/animation/Animator;)Z
@@ -771,17 +802,21 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->cancelAnimation()V
 
+    .line 4
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mMainHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomTextHideRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
+    .line 5
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->removeZoomAreaHideMessage()V
 
+    .line 6
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomContract$Presenter;
 
     invoke-interface {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomContract$Presenter;->onZoomAreaExtendRequested(Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;)V
@@ -808,6 +843,7 @@
 .method private getBaselineByType()F
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomPositionType:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;
 
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->getBaselineByType(Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;)F
@@ -820,6 +856,7 @@
 .method private getBaselineByType(Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;)F
     .locals 2
 
+    .line 2
     sget-object v0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView$8;->$SwitchMap$com$sec$android$app$camera$interfaces$ZoomManager$ZoomPositionType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -836,6 +873,7 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 3
     sget-object p0, Ly2/g;->c:Ly2/g;
 
     invoke-static {p0}, Ly2/d;->a(Ly2/g;)F
@@ -844,6 +882,7 @@
 
     return p0
 
+    .line 4
     :cond_0
     sget-object p1, Ly2/g;->c:Ly2/g;
 
@@ -873,6 +912,7 @@
 
     return p1
 
+    .line 5
     :cond_1
     sget-object p0, Ly2/g;->e:Ly2/g;
 
@@ -2837,12 +2877,14 @@
 .method private refreshBaseline(ILjava/lang/Runnable;)V
     .locals 3
 
+    .line 2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->isSliderShowing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomContract$Presenter;
 
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->getBaselineByType()F
@@ -2865,6 +2907,7 @@
 
     return-void
 
+    .line 4
     :cond_0
     iget-boolean v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mIsZoomLensListTouching:Z
 
@@ -2883,6 +2926,7 @@
 
     move-result v0
 
+    .line 5
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2904,6 +2948,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     iget-object v1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomContract$Presenter;
 
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->getBaselineSliderOffset()F
@@ -3253,6 +3298,7 @@
 .method private updateShortcutButton()V
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;->SLIDER:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;
 
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->isSupportView(Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;)Z
@@ -3263,6 +3309,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mViewBinding:Lp4/p0;
 
@@ -3276,6 +3323,7 @@
 
     return-void
 
+    .line 3
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mViewBinding:Lp4/p0;
 
@@ -3291,6 +3339,7 @@
 
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
     iget-object v2, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mViewBinding:Lp4/p0;
 
@@ -3302,6 +3351,7 @@
 
     if-ge v1, v2, :cond_2
 
+    .line 5
     iget-object v2, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mViewBinding:Lp4/p0;
 
     iget-object v2, v2, Lp4/p0;->c:Lcom/sec/android/app/camera/layer/keyscreen/zoom/widget/ZoomShortcutListView;
@@ -3337,6 +3387,7 @@
 .method private updateShortcutButton(I)V
     .locals 1
 
+    .line 6
     sget-object v0, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;->SLIDER:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;
 
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->isSupportView(Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;)Z
@@ -3347,6 +3398,7 @@
 
     return-void
 
+    .line 7
     :cond_0
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mViewBinding:Lp4/p0;
 
@@ -3558,6 +3610,7 @@
 .method public extendArea()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomPositionType:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;
 
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->extendArea(Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;)V
@@ -3605,10 +3658,12 @@
 .method public getLensButtonVisibleRect()Landroid/graphics/Rect;
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/sec/android/app/camera/util/factory/RectFactory;->create()Landroid/graphics/Rect;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mSupportUiSet:Ljava/util/EnumSet;
 
     sget-object v2, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;->LENS:Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;
@@ -3619,6 +3674,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mViewBinding:Lp4/p0;
 
     iget-object v1, v1, Lp4/p0;->h:Landroid/widget/RelativeLayout;
@@ -3629,6 +3685,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mViewBinding:Lp4/p0;
 
     iget-object p0, p0, Lp4/p0;->f:Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;
@@ -3642,6 +3699,7 @@
 .method public getLensButtonVisibleRect(Lcom/sec/android/app/camera/interfaces/CommandId;)Landroid/graphics/Rect;
     .locals 0
 
+    .line 5
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mViewBinding:Lp4/p0;
 
     iget-object p0, p0, Lp4/p0;->f:Lcom/sec/android/app/camera/layer/keyscreen/zoom/lenslist/ZoomLensListView;
@@ -4771,6 +4829,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-direct {p0, v0, v1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->refreshBaseline(ILjava/lang/Runnable;)V
 
     return-void
@@ -4901,6 +4960,7 @@
         }
     .end annotation
 
+    .line 7
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->createLensDataHolder()Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomLensDataHolder;
 
     move-result-object v4
@@ -4936,10 +4996,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mIsGuideLineUpdated:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mViewBinding:Lp4/p0;
 
     iget-object v0, v0, Lp4/p0;->a:Landroidx/constraintlayout/widget/Guideline;
@@ -4950,6 +5012,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/Guideline;->setGuidelinePercent(F)V
 
+    .line 3
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mViewBinding:Lp4/p0;
 
     iget-object v0, v0, Lp4/p0;->b:Landroidx/constraintlayout/widget/Guideline;
@@ -4962,13 +5025,16 @@
 
     const/4 v0, 0x1
 
+    .line 4
     iput-boolean v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mIsGuideLineUpdated:Z
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomConditionChecker:Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomConditionChecker;
 
     invoke-virtual {v0, p5}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomConditionChecker;->setZoomAvailabilityChecker(Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomAvailabilityChecker;)V
 
+    .line 6
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomContract$Presenter;
 
     check-cast p4, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomLensDataList;
@@ -5395,6 +5461,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->setPresenter(Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomContract$Presenter;)V
@@ -5405,6 +5472,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomContract$Presenter;
 
     return-void
@@ -5914,6 +5982,7 @@
 .method public startZoomTransition(I)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomContract$Presenter;
 
     invoke-interface {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomContract$Presenter;->onStartZoomTransitionRequested(I)V
@@ -5924,6 +5993,7 @@
 .method public startZoomTransition(II)V
     .locals 2
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5960,33 +6030,39 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->isZoomTransitionAnimationAvailable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 5
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mZoomCurveData:Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomCurveData;
 
     invoke-virtual {v0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomCurveData;->getZoomCurveDataList(II)Ljava/util/ArrayList;
 
     move-result-object v0
 
+    .line 6
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->isSmoothZoomAvailable(Ljava/util/ArrayList;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 7
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->startSmoothZoomTransitionAnimation(Ljava/util/ArrayList;)V
 
     goto :goto_0
 
+    .line 8
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->startSimpleZoomTransitionAnimation(II)V
 
     goto :goto_0
 
+    .line 9
     :cond_1
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->setZoomValue(I)V
 
@@ -5997,6 +6073,7 @@
 .method public startZoomTransition(Lcom/sec/android/app/camera/interfaces/CommandId;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomContract$Presenter;
 
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/ZoomView;->getZoomValue(Lcom/sec/android/app/camera/interfaces/CommandId;)I

@@ -54,6 +54,7 @@
 .method public compareTo(Lcom/sec/android/app/camera/util/debug/DebugUtil$ComparableMemoryInfo;)I
     .locals 0
 
+    .line 2
     iget p1, p1, Lcom/sec/android/app/camera/util/debug/DebugUtil$ComparableMemoryInfo;->mTotalPss:I
 
     iget p0, p0, Lcom/sec/android/app/camera/util/debug/DebugUtil$ComparableMemoryInfo;->mTotalPss:I
@@ -80,6 +81,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/util/debug/DebugUtil$ComparableMemoryInfo;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/util/debug/DebugUtil$ComparableMemoryInfo;->compareTo(Lcom/sec/android/app/camera/util/debug/DebugUtil$ComparableMemoryInfo;)I

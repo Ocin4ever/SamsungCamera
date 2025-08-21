@@ -24,12 +24,15 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/samsung/android/sdk/ocr/OCRType;Lcom/samsung/android/sdk/ocr/OCRLanguage;)V
     .locals 3
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/Recognizer;->instance:Lcom/samsung/android/sdk/ocr/IRecognizer;
 
+    .line 4
     sget-object v0, Lcom/samsung/android/sdk/ocr/Recognizer$1;->$SwitchMap$com$samsung$android$sdk$ocr$RecognizerVersion:[I
 
     invoke-static {p1}, Lcom/samsung/android/sdk/ocr/Recognizer;->selectRecognizerVersion(Landroid/content/Context;)Lcom/samsung/android/sdk/ocr/RecognizerVersion;
@@ -62,6 +65,7 @@
 
     const-string p0, "Undefined Recognizer Version"
 
+    .line 5
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -69,8 +73,10 @@
     :cond_0
     const-string v0, "OCR Recognizer is initialized as RecognizerProxy with version: 3.3.231214"
 
+    .line 6
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     new-instance v0, Lcom/samsung/android/sdk/ocr/RecognizerProxy;
 
     invoke-direct {v0, p1, p2, p3}, Lcom/samsung/android/sdk/ocr/RecognizerProxy;-><init>(Landroid/content/Context;Lcom/samsung/android/sdk/ocr/OCRType;Lcom/samsung/android/sdk/ocr/OCRLanguage;)V
@@ -82,8 +88,10 @@
     :cond_1
     const-string v0, "OCR Recognizer is initialized as RecognizerInternal with version: 3.3.231214"
 
+    .line 8
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 9
     new-instance v0, Lcom/samsung/android/sdk/ocr/RecognizerInternal;
 
     invoke-direct {v0, p1, p2, p3}, Lcom/samsung/android/sdk/ocr/RecognizerInternal;-><init>(Landroid/content/Context;Lcom/samsung/android/sdk/ocr/OCRType;Lcom/samsung/android/sdk/ocr/OCRLanguage;)V
@@ -95,8 +103,10 @@
     :cond_2
     const-string v0, "OCR Recognizer is initialized as RecognizerInternal_OneUI411 with version: 3.3.231214"
 
+    .line 10
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 11
     new-instance v0, Lcom/samsung/android/sdk/ocr/RecognizerInternal_OneUI411;
 
     invoke-direct {v0, p1, p2, p3}, Lcom/samsung/android/sdk/ocr/RecognizerInternal_OneUI411;-><init>(Landroid/content/Context;Lcom/samsung/android/sdk/ocr/OCRType;Lcom/samsung/android/sdk/ocr/OCRLanguage;)V
@@ -108,8 +118,10 @@
     :cond_3
     const-string v0, "OCR Recognizer is initialized as RecognizerInternal_OneUI41 with version: 3.3.231214"
 
+    .line 12
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 13
     new-instance v0, Lcom/samsung/android/sdk/ocr/RecognizerInternal_OneUI41;
 
     invoke-direct {v0, p1, p2, p3}, Lcom/samsung/android/sdk/ocr/RecognizerInternal_OneUI41;-><init>(Landroid/content/Context;Lcom/samsung/android/sdk/ocr/OCRType;Lcom/samsung/android/sdk/ocr/OCRLanguage;)V
@@ -123,6 +135,7 @@
 .method public constructor <init>(Lcom/samsung/android/sdk/ocr/RecognizerParams;)V
     .locals 2
 
+    .line 1
     iget-object v0, p1, Lcom/samsung/android/sdk/ocr/RecognizerParams;->context:Landroid/content/Context;
 
     iget-object v1, p1, Lcom/samsung/android/sdk/ocr/RecognizerParams;->ocrType:Lcom/samsung/android/sdk/ocr/OCRType;
@@ -604,6 +617,7 @@
 
     const-string v0, "detectBlock"
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/samsung/android/sdk/ocr/Recognizer;->checkInstanceNull(Ljava/lang/String;)Z
 
     move-result v0
@@ -614,6 +628,7 @@
 
     return p0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/sdk/ocr/Recognizer;->instance:Lcom/samsung/android/sdk/ocr/IRecognizer;
 
@@ -629,6 +644,7 @@
 
     const-string v0, "detectBlock"
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/samsung/android/sdk/ocr/Recognizer;->checkInstanceNull(Ljava/lang/String;)Z
 
     move-result v0
@@ -639,6 +655,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/sdk/ocr/Recognizer;->instance:Lcom/samsung/android/sdk/ocr/IRecognizer;
 
@@ -687,6 +704,7 @@
 
     const-string v0, "hasText"
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/samsung/android/sdk/ocr/Recognizer;->checkInstanceNull(Ljava/lang/String;)Z
 
     move-result v0
@@ -697,6 +715,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/sdk/ocr/Recognizer;->instance:Lcom/samsung/android/sdk/ocr/IRecognizer;
 
@@ -712,6 +731,7 @@
 
     const-string v0, "hasText"
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/samsung/android/sdk/ocr/Recognizer;->checkInstanceNull(Ljava/lang/String;)Z
 
     move-result v0
@@ -722,6 +742,7 @@
 
     return p0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/sdk/ocr/Recognizer;->instance:Lcom/samsung/android/sdk/ocr/IRecognizer;
 

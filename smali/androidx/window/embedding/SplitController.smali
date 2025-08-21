@@ -14,11 +14,11 @@
 # static fields
 .field public static final Companion:Landroidx/window/embedding/SplitController$Companion;
 
-.field private static volatile globalInstance:Landroidx/window/embedding/SplitController;
+.field private static volatile globalInstance:Landroidx/window/embedding/SplitController; = null
 
 .field private static final globalLock:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field public static final sDebug:Z
+.field public static final sDebug:Z = false
 
 
 # instance fields
@@ -60,8 +60,10 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     sget-object v0, Landroidx/window/embedding/ExtensionEmbeddingBackend;->Companion:Landroidx/window/embedding/ExtensionEmbeddingBackend$Companion;
 
     invoke-virtual {v0}, Landroidx/window/embedding/ExtensionEmbeddingBackend$Companion;->getInstance()Landroidx/window/embedding/ExtensionEmbeddingBackend;
@@ -70,6 +72,7 @@
 
     iput-object v0, p0, Landroidx/window/embedding/SplitController;->embeddingBackend:Landroidx/window/embedding/EmbeddingBackend;
 
+    .line 4
     invoke-static {}, Lg6/i0;->d()Ljava/util/Set;
 
     move-result-object v0
@@ -82,6 +85,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/window/embedding/SplitController;-><init>()V
 
     return-void

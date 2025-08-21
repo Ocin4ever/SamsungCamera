@@ -25,6 +25,7 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/setting/CameraSettingDialog;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/setting/CameraSettingDialog$OnNegativeButtonClickListener;->this$0:Lcom/sec/android/app/camera/setting/CameraSettingDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,6 +36,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/setting/CameraSettingDialog;Lcom/sec/android/app/camera/setting/p1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/CameraSettingDialog$OnNegativeButtonClickListener;-><init>(Lcom/sec/android/app/camera/setting/CameraSettingDialog;)V
 
     return-void

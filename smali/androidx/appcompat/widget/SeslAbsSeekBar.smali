@@ -182,8 +182,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/SeslProgressBar;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
@@ -192,76 +194,102 @@
 
     const/4 p1, 0x0
 
+    .line 3
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mThumbTintList:Landroid/content/res/ColorStateList;
 
+    .line 4
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mThumbTintMode:Landroid/graphics/PorterDuff$Mode;
 
     const/4 v0, 0x0
 
+    .line 5
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasThumbTint:Z
 
+    .line 6
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasThumbTintMode:Z
 
+    .line 7
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mTickMarkTintList:Landroid/content/res/ColorStateList;
 
+    .line 8
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mTickMarkTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 9
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasTickMarkTint:Z
 
+    .line 10
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasTickMarkTintMode:Z
 
     const/4 p1, 0x1
 
+    .line 11
     iput-boolean p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsUserSeekable:Z
 
+    .line 12
     iput p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mKeyProgressIncrement:I
 
+    .line 13
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mUserGestureExclusionRects:Ljava/util/List;
 
+    .line 14
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mGestureExclusionRects:Ljava/util/List;
 
+    .line 15
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mThumbRect:Landroid/graphics/Rect;
 
+    .line 16
     iput v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHoveringLevel:I
 
     const/4 p1, -0x1
 
+    .line 17
     iput p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mOverlapPoint:I
 
+    .line 18
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mAllowedSeekBarAnimation:Z
 
+    .line 19
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mUseMuteAnimation:Z
 
+    .line 20
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsFirstSetProgress:Z
 
+    .line 21
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsDraggingForSliding:Z
 
+    .line 22
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mLargeFont:Z
 
+    .line 23
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsTouchDisabled:Z
 
+    .line 24
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mSetDualColorMode:Z
 
+    .line 25
     iput v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mPreviousHoverPopupType:I
 
+    .line 26
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsSetModeCalled:Z
 
+    .line 27
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsSeamless:Z
 
     const/4 p1, 0x0
 
+    .line 28
     iput p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mLevelDrawPadding:F
 
     return-void
@@ -270,8 +298,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 29
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/SeslProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 30
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
@@ -280,76 +310,102 @@
 
     const/4 p1, 0x0
 
+    .line 31
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mThumbTintList:Landroid/content/res/ColorStateList;
 
+    .line 32
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mThumbTintMode:Landroid/graphics/PorterDuff$Mode;
 
     const/4 p2, 0x0
 
+    .line 33
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasThumbTint:Z
 
+    .line 34
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasThumbTintMode:Z
 
+    .line 35
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mTickMarkTintList:Landroid/content/res/ColorStateList;
 
+    .line 36
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mTickMarkTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 37
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasTickMarkTint:Z
 
+    .line 38
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasTickMarkTintMode:Z
 
     const/4 p1, 0x1
 
+    .line 39
     iput-boolean p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsUserSeekable:Z
 
+    .line 40
     iput p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mKeyProgressIncrement:I
 
+    .line 41
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mUserGestureExclusionRects:Ljava/util/List;
 
+    .line 42
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mGestureExclusionRects:Ljava/util/List;
 
+    .line 43
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mThumbRect:Landroid/graphics/Rect;
 
+    .line 44
     iput p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHoveringLevel:I
 
     const/4 p1, -0x1
 
+    .line 45
     iput p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mOverlapPoint:I
 
+    .line 46
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mAllowedSeekBarAnimation:Z
 
+    .line 47
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mUseMuteAnimation:Z
 
+    .line 48
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsFirstSetProgress:Z
 
+    .line 49
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsDraggingForSliding:Z
 
+    .line 50
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mLargeFont:Z
 
+    .line 51
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsTouchDisabled:Z
 
+    .line 52
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mSetDualColorMode:Z
 
+    .line 53
     iput p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mPreviousHoverPopupType:I
 
+    .line 54
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsSetModeCalled:Z
 
+    .line 55
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsSeamless:Z
 
     const/4 p1, 0x0
 
+    .line 56
     iput p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mLevelDrawPadding:F
 
     return-void
@@ -360,6 +416,7 @@
 
     const/4 v0, 0x0
 
+    .line 57
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/appcompat/widget/SeslAbsSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -368,8 +425,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 11
 
+    .line 58
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/appcompat/widget/SeslProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 59
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -378,78 +437,105 @@
 
     const/4 v0, 0x0
 
+    .line 60
     iput-object v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mThumbTintList:Landroid/content/res/ColorStateList;
 
+    .line 61
     iput-object v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mThumbTintMode:Landroid/graphics/PorterDuff$Mode;
 
     const/4 v1, 0x0
 
+    .line 62
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasThumbTint:Z
 
+    .line 63
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasThumbTintMode:Z
 
+    .line 64
     iput-object v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mTickMarkTintList:Landroid/content/res/ColorStateList;
 
+    .line 65
     iput-object v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mTickMarkTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 66
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasTickMarkTint:Z
 
+    .line 67
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasTickMarkTintMode:Z
 
     const/4 v0, 0x1
 
+    .line 68
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsUserSeekable:Z
 
+    .line 69
     iput v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mKeyProgressIncrement:I
 
+    .line 70
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v2
 
     iput-object v2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mUserGestureExclusionRects:Ljava/util/List;
 
+    .line 71
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mGestureExclusionRects:Ljava/util/List;
 
+    .line 72
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mThumbRect:Landroid/graphics/Rect;
 
+    .line 73
     iput v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHoveringLevel:I
 
     const/4 v2, -0x1
 
+    .line 74
     iput v2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mOverlapPoint:I
 
+    .line 75
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mAllowedSeekBarAnimation:Z
 
+    .line 76
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mUseMuteAnimation:Z
 
+    .line 77
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsFirstSetProgress:Z
 
+    .line 78
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsDraggingForSliding:Z
 
+    .line 79
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mLargeFont:Z
 
+    .line 80
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsTouchDisabled:Z
 
+    .line 81
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mSetDualColorMode:Z
 
+    .line 82
     iput v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mPreviousHoverPopupType:I
 
+    .line 83
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsSetModeCalled:Z
 
+    .line 84
     iput-boolean v1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsSeamless:Z
 
     const/4 v3, 0x0
 
+    .line 85
     iput v3, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mLevelDrawPadding:F
 
+    .line 86
     sget-object v6, Landroidx/appcompat/R$styleable;->AppCompatSeekBar:[I
 
     invoke-virtual {p1, p2, v6, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
@@ -468,21 +554,26 @@
 
     move v10, p4
 
+    .line 87
     :try_start_0
     invoke-virtual/range {v4 .. v10}, Landroid/view/View;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
+    .line 88
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
+    .line 89
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_android_thumb:I
 
     invoke-virtual {v3, p4}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p4
 
+    .line 90
     invoke-virtual {p0, p4}, Landroidx/appcompat/widget/SeslAbsSeekBar;->setThumb(Landroid/graphics/drawable/Drawable;)V
 
+    .line 91
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_android_thumbTintMode:I
 
     invoke-virtual {v3, p4}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -491,6 +582,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 92
     invoke-virtual {v3, p4, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result p4
@@ -503,8 +595,10 @@
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mThumbTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 93
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasThumbTintMode:Z
 
+    .line 94
     :cond_0
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_android_thumbTint:I
 
@@ -514,14 +608,17 @@
 
     if-eqz v4, :cond_1
 
+    .line 95
     invoke-virtual {v3, p4}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object p4
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mThumbTintList:Landroid/content/res/ColorStateList;
 
+    .line 96
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasThumbTint:Z
 
+    .line 97
     :cond_1
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_tickMark:I
 
@@ -529,8 +626,10 @@
 
     move-result-object p4
 
+    .line 98
     invoke-virtual {p0, p4}, Landroidx/appcompat/widget/SeslAbsSeekBar;->setTickMark(Landroid/graphics/drawable/Drawable;)V
 
+    .line 99
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_tickMarkTintMode:I
 
     invoke-virtual {v3, p4}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -539,6 +638,7 @@
 
     if-eqz v4, :cond_2
 
+    .line 100
     invoke-virtual {v3, p4, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result p4
@@ -551,8 +651,10 @@
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mTickMarkTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 101
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasTickMarkTintMode:Z
 
+    .line 102
     :cond_2
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_tickMarkTint:I
 
@@ -562,14 +664,17 @@
 
     if-eqz v2, :cond_3
 
+    .line 103
     invoke-virtual {v3, p4}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object p4
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mTickMarkTintList:Landroid/content/res/ColorStateList;
 
+    .line 104
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mHasTickMarkTint:Z
 
+    .line 105
     :cond_3
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_android_splitTrack:I
 
@@ -579,10 +684,12 @@
 
     iput-boolean p4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mSplitTrack:Z
 
+    .line 106
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_seslTrackMinWidth:I
 
     sget v2, Landroidx/appcompat/R$dimen;->sesl_seekbar_track_height:I
 
+    .line 107
     invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v2
@@ -591,16 +698,19 @@
 
     move-result v2
 
+    .line 108
     invoke-virtual {v3, p4, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
     iput v2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mTrackMinWidth:I
 
+    .line 109
     sget v2, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_seslTrackMaxWidth:I
 
     sget v4, Landroidx/appcompat/R$dimen;->sesl_seekbar_track_height_expand:I
 
+    .line 110
     invoke-virtual {p3, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v4
@@ -609,14 +719,17 @@
 
     move-result v4
 
+    .line 111
     invoke-virtual {v3, v2, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v4
 
     iput v4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mTrackMaxWidth:I
 
+    .line 112
     sget v4, Landroidx/appcompat/R$dimen;->sesl_seekbar_mode_expand_track_height:I
 
+    .line 113
     invoke-virtual {p3, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v4
@@ -625,14 +738,17 @@
 
     move-result v4
 
+    .line 114
     invoke-virtual {v3, p4, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p4
 
     iput p4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mModeExpandTrackMinWidth:I
 
+    .line 115
     sget p4, Landroidx/appcompat/R$dimen;->sesl_seekbar_mode_expand_track_height_expand:I
 
+    .line 116
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p4
@@ -641,16 +757,19 @@
 
     move-result p4
 
+    .line 117
     invoke-virtual {v3, v2, p4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p4
 
     iput p4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mModeExpandTrackMaxWidth:I
 
+    .line 118
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_seslThumbRadius:I
 
     sget v2, Landroidx/appcompat/R$dimen;->sesl_seekbar_thumb_radius:I
 
+    .line 119
     invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v2
@@ -659,14 +778,17 @@
 
     move-result v2
 
+    .line 120
     invoke-virtual {v3, p4, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
     iput v2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mThumbRadius:I
 
+    .line 121
     sget v2, Landroidx/appcompat/R$dimen;->sesl_seekbar_mode_expand_thumb_radius:I
 
+    .line 122
     invoke-virtual {p3, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v2
@@ -675,24 +797,30 @@
 
     move-result v2
 
+    .line 123
     invoke-virtual {v3, p4, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p4
 
     iput p4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mModeExpandThumbRadius:I
 
+    .line 124
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_android_thumbOffset:I
 
+    .line 125
     invoke-virtual {p0}, Landroidx/appcompat/widget/SeslAbsSeekBar;->getThumbOffset()I
 
     move-result v2
 
+    .line 126
     invoke-virtual {v3, p4, v2}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
     move-result p4
 
+    .line 127
     invoke-virtual {p0, p4}, Landroidx/appcompat/widget/SeslAbsSeekBar;->setThumbOffset(I)V
 
+    .line 128
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_seslSeekBarMode:I
 
     invoke-virtual {v3, p4}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -701,12 +829,14 @@
 
     if-eqz v2, :cond_4
 
+    .line 129
     invoke-virtual {v3, p4, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result p4
 
     iput p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mCurrentMode:I
 
+    .line 130
     :cond_4
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatSeekBar_useDisabledAlpha:I
 
@@ -716,6 +846,7 @@
 
     if-eqz p4, :cond_5
 
+    .line 131
     sget-object p4, Landroidx/appcompat/R$styleable;->AppCompatTheme:[I
 
     invoke-virtual {p1, p2, p4, v1, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
@@ -724,6 +855,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 132
     :try_start_1
     sget p4, Landroidx/appcompat/R$styleable;->AppCompatTheme_android_disabledAlpha:I
 
@@ -737,6 +869,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 133
     :try_start_2
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -747,18 +880,23 @@
 
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 134
     throw p0
 
     :cond_5
     const/high16 p2, 0x3f800000    # 1.0f
 
+    .line 135
     iput p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mDisabledAlpha:F
 
+    .line 136
     :goto_0
     invoke-direct {p0}, Landroidx/appcompat/widget/SeslAbsSeekBar;->applyThumbTint()V
 
+    .line 137
     invoke-direct {p0}, Landroidx/appcompat/widget/SeslAbsSeekBar;->applyTickMarkTint()V
 
+    .line 138
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object p2
@@ -769,12 +907,14 @@
 
     iput p2, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mScaledTouchSlop:I
 
+    .line 139
     invoke-static {p1}, Landroidx/appcompat/util/SeslMisc;->isLightTheme(Landroid/content/Context;)Z
 
     move-result p1
 
     iput-boolean p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsLightTheme:Z
 
+    .line 140
     sget p1, Landroidx/appcompat/R$color;->sesl_seekbar_control_color_default:I
 
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getColor(I)I
@@ -787,6 +927,7 @@
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mDefaultNormalProgressColor:Landroid/content/res/ColorStateList;
 
+    .line 141
     sget p1, Landroidx/appcompat/R$color;->sesl_seekbar_control_color_secondary:I
 
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getColor(I)I
@@ -799,6 +940,7 @@
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mDefaultSecondaryProgressColor:Landroid/content/res/ColorStateList;
 
+    .line 142
     sget p1, Landroidx/appcompat/R$color;->sesl_seekbar_control_color_activated:I
 
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getColor(I)I
@@ -811,17 +953,21 @@
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mDefaultActivatedProgressColor:Landroid/content/res/ColorStateList;
 
+    .line 143
     iget-boolean p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsLightTheme:Z
 
     if-eqz p1, :cond_6
 
+    .line 144
     sget p1, Landroidx/appcompat/R$color;->sesl_seekbar_overlap_color_default_light:I
 
     goto :goto_1
 
+    .line 145
     :cond_6
     sget p1, Landroidx/appcompat/R$color;->sesl_seekbar_overlap_color_default_dark:I
 
+    .line 146
     :goto_1
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -833,17 +979,21 @@
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mOverlapNormalProgressColor:Landroid/content/res/ColorStateList;
 
+    .line 147
     iget-boolean p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsLightTheme:Z
 
     if-eqz p1, :cond_7
 
+    .line 148
     sget p1, Landroidx/appcompat/R$color;->sesl_seekbar_overlap_color_activated_light:I
 
     goto :goto_2
 
+    .line 149
     :cond_7
     sget p1, Landroidx/appcompat/R$color;->sesl_seekbar_overlap_color_activated_dark:I
 
+    .line 150
     :goto_2
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -855,6 +1005,7 @@
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mOverlapActivatedProgressColor:Landroid/content/res/ColorStateList;
 
+    .line 151
     invoke-virtual {p0}, Landroidx/appcompat/widget/SeslAbsSeekBar;->getThumbTintList()Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -885,25 +1036,31 @@
 
     new-array p1, p1, [I
 
+    .line 152
     sget p4, Landroidx/appcompat/R$color;->sesl_thumb_control_color_activated:I
 
+    .line 153
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p4
 
     aput p4, p1, v1
 
+    .line 154
     iget-boolean p4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mIsLightTheme:Z
 
     if-eqz p4, :cond_8
 
+    .line 155
     sget p4, Landroidx/appcompat/R$color;->sesl_seekbar_disable_color_activated_light:I
 
     goto :goto_3
 
+    .line 156
     :cond_8
     sget p4, Landroidx/appcompat/R$color;->sesl_seekbar_disable_color_activated_dark:I
 
+    .line 157
     :goto_3
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -911,12 +1068,14 @@
 
     aput p4, p1, v0
 
+    .line 158
     new-instance p4, Landroid/content/res/ColorStateList;
 
     invoke-direct {p4, p2, p1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslAbsSeekBar;->mDefaultActivatedThumbColor:Landroid/content/res/ColorStateList;
 
+    .line 159
     :cond_9
     sget p1, Landroidx/appcompat/R$bool;->sesl_seekbar_sliding_animation:I
 
@@ -928,22 +1087,27 @@
 
     if-eqz p1, :cond_a
 
+    .line 160
     invoke-direct {p0}, Landroidx/appcompat/widget/SeslAbsSeekBar;->initMuteAnimation()V
 
+    .line 161
     :cond_a
     iget p1, p0, Landroidx/appcompat/widget/SeslProgressBar;->mCurrentMode:I
 
     if-eqz p1, :cond_b
 
+    .line 162
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/SeslAbsSeekBar;->setMode(I)V
 
     goto :goto_4
 
+    .line 163
     :cond_b
     invoke-direct {p0}, Landroidx/appcompat/widget/SeslAbsSeekBar;->initializeExpandMode()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 164
     :goto_4
     invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -954,6 +1118,7 @@
 
     invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 165
     throw p0
 .end method
 

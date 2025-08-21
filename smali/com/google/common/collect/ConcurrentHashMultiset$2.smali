@@ -75,6 +75,7 @@
         }
     .end annotation
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/common/collect/ConcurrentHashMultiset$2;->mapEntries:Ljava/util/Iterator;
 
@@ -84,6 +85,7 @@
 
     if-nez v0, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractIterator;->endOfData()Ljava/lang/Object;
 
     move-result-object p0
@@ -92,6 +94,7 @@
 
     return-object p0
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/common/collect/ConcurrentHashMultiset$2;->mapEntries:Ljava/util/Iterator;
 
@@ -101,6 +104,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 5
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -113,6 +117,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 6
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -127,6 +132,7 @@
 .method public bridge synthetic computeNext()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ConcurrentHashMultiset$2;->computeNext()Lcom/google/common/collect/Multiset$Entry;
 
     move-result-object p0

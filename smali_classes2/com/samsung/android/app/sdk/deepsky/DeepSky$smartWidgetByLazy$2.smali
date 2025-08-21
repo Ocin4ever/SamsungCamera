@@ -46,8 +46,10 @@
 .method public final invoke()Lcom/samsung/android/app/sdk/deepsky/smartwidget/SmartWidgetImpl;
     .locals 3
 
+    .line 2
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/smartwidget/SmartWidgetImpl;
 
+    .line 3
     sget-object v1, Lcom/samsung/android/app/sdk/deepsky/common/Injector;->INSTANCE:Lcom/samsung/android/app/sdk/deepsky/common/Injector;
 
     iget-object v2, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$smartWidgetByLazy$2;->$appContext:Landroid/content/Context;
@@ -56,14 +58,17 @@
 
     move-result-object v2
 
+    .line 4
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$smartWidgetByLazy$2;->$appContext:Landroid/content/Context;
 
     invoke-virtual {v1, p0}, Lcom/samsung/android/app/sdk/deepsky/common/Injector;->shareSystemDatasource$deepsky_sdk_smartsuggestion_1_0_8_release(Landroid/content/Context;)Lcom/samsung/android/app/sdk/deepsky/common/SystemDataSource;
 
     move-result-object p0
 
+    .line 5
     invoke-direct {v0, v2, p0}, Lcom/samsung/android/app/sdk/deepsky/smartwidget/SmartWidgetImpl;-><init>(Lcom/samsung/android/app/sdk/deepsky/common/ContentProviderCaller;Lcom/samsung/android/app/sdk/deepsky/common/SystemDataSource;)V
 
+    .line 6
     invoke-virtual {v0}, Lcom/samsung/android/app/sdk/deepsky/smartwidget/SmartWidgetImpl;->checkIfAccessAllowed()Z
 
     move-result p0
@@ -82,6 +87,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$smartWidgetByLazy$2;->invoke()Lcom/samsung/android/app/sdk/deepsky/smartwidget/SmartWidgetImpl;
 
     move-result-object p0

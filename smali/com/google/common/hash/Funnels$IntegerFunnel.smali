@@ -119,6 +119,7 @@
 .method public funnel(Ljava/lang/Integer;Lcom/google/common/hash/PrimitiveSink;)V
     .locals 0
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -131,6 +132,7 @@
 .method public bridge synthetic funnel(Ljava/lang/Object;Lcom/google/common/hash/PrimitiveSink;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/hash/Funnels$IntegerFunnel;->funnel(Ljava/lang/Integer;Lcom/google/common/hash/PrimitiveSink;)V

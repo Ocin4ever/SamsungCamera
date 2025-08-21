@@ -59,12 +59,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p1, Lcom/google/common/graph/AbstractGraphBuilder;->nodeOrder:Lcom/google/common/graph/ElementOrder;
 
     iget-object v1, p1, Lcom/google/common/graph/AbstractGraphBuilder;->expectedNodeCount:Lcom/google/common/base/Optional;
 
     const/16 v2, 0xa
 
+    .line 2
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -79,12 +81,14 @@
 
     move-result v1
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/google/common/graph/ElementOrder;->createMap(I)Ljava/util/Map;
 
     move-result-object v0
 
     const-wide/16 v1, 0x0
 
+    .line 4
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/google/common/graph/StandardValueGraph;-><init>(Lcom/google/common/graph/AbstractGraphBuilder;Ljava/util/Map;J)V
 
     return-void
@@ -104,16 +108,20 @@
         }
     .end annotation
 
+    .line 5
     invoke-direct {p0}, Lcom/google/common/graph/AbstractValueGraph;-><init>()V
 
+    .line 6
     iget-boolean v0, p1, Lcom/google/common/graph/AbstractGraphBuilder;->directed:Z
 
     iput-boolean v0, p0, Lcom/google/common/graph/StandardValueGraph;->isDirected:Z
 
+    .line 7
     iget-boolean v0, p1, Lcom/google/common/graph/AbstractGraphBuilder;->allowsSelfLoops:Z
 
     iput-boolean v0, p0, Lcom/google/common/graph/StandardValueGraph;->allowsSelfLoops:Z
 
+    .line 8
     iget-object p1, p1, Lcom/google/common/graph/AbstractGraphBuilder;->nodeOrder:Lcom/google/common/graph/ElementOrder;
 
     invoke-virtual {p1}, Lcom/google/common/graph/ElementOrder;->cast()Lcom/google/common/graph/ElementOrder;
@@ -122,16 +130,19 @@
 
     iput-object p1, p0, Lcom/google/common/graph/StandardValueGraph;->nodeOrder:Lcom/google/common/graph/ElementOrder;
 
+    .line 9
     instance-of p1, p2, Ljava/util/TreeMap;
 
     if-eqz p1, :cond_0
 
+    .line 10
     new-instance p1, Lcom/google/common/graph/MapRetrievalCache;
 
     invoke-direct {p1, p2}, Lcom/google/common/graph/MapRetrievalCache;-><init>(Ljava/util/Map;)V
 
     goto :goto_0
 
+    .line 11
     :cond_0
     new-instance p1, Lcom/google/common/graph/MapIteratorCache;
 
@@ -140,6 +151,7 @@
     :goto_0
     iput-object p1, p0, Lcom/google/common/graph/StandardValueGraph;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
+    .line 12
     invoke-static {p3, p4}, Lcom/google/common/graph/Graphs;->checkNonNegative(J)J
 
     move-result-wide p1
@@ -350,8 +362,10 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/graph/AbstractBaseGraph;->validateEndpoints(Lcom/google/common/graph/EndpointPair;)V
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object v0
@@ -375,6 +389,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -400,14 +415,17 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/common/graph/AbstractBaseGraph;->isOrderingCompatible(Lcom/google/common/graph/EndpointPair;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object v0
@@ -441,6 +459,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -523,6 +542,7 @@
 .method public bridge synthetic predecessors(Ljava/lang/Object;)Ljava/lang/Iterable;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/graph/StandardValueGraph;->predecessors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -540,6 +560,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/graph/StandardValueGraph;->checkedConnections(Ljava/lang/Object;)Lcom/google/common/graph/GraphConnections;
 
     move-result-object p0
@@ -554,6 +575,7 @@
 .method public bridge synthetic successors(Ljava/lang/Object;)Ljava/lang/Iterable;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/graph/StandardValueGraph;->successors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -571,6 +593,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/graph/StandardValueGraph;->checkedConnections(Ljava/lang/Object;)Lcom/google/common/graph/GraphConnections;
 
     move-result-object p0

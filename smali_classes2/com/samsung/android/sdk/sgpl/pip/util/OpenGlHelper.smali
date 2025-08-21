@@ -205,6 +205,7 @@
 
     aput p0, v1, v2
 
+    .line 1
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
     return-void
@@ -217,6 +218,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v0, p0, v1}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
     return-void
@@ -461,6 +463,7 @@
 
     const/4 v2, 0x0
 
+    .line 13
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
     aget v3, v1, v2
@@ -473,10 +476,12 @@
 
     const-string v0, "Could not create new opengl texture object"
 
+    .line 14
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p0, "loadTexture: error -1 "
 
+    .line 15
     invoke-static {v4, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -484,10 +489,12 @@
     :cond_0
     const/16 v5, 0xde1
 
+    .line 16
     invoke-static {v5, v3}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
     const-string v3, "glBindTexture error"
 
+    .line 17
     invoke-static {v3}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->checkGLError(Ljava/lang/String;)I
 
     move-result v3
@@ -496,8 +503,10 @@
 
     const-string p0, "loadTexture: error0 "
 
+    .line 18
     invoke-static {v4, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 19
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
     return v2
@@ -507,24 +516,29 @@
 
     const/16 v6, 0x2601
 
+    .line 20
     invoke-static {v5, v3, v6}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v3, 0x2800
 
+    .line 21
     invoke-static {v5, v3, v6}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v3, 0x2802
 
     const v6, 0x47012f00    # 33071.0f
 
+    .line 22
     invoke-static {v5, v3, v6}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v3, 0x2803
 
+    .line 23
     invoke-static {v5, v3, v6}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const-string v3, "glTexParameter error"
 
+    .line 24
     invoke-static {v3}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->checkGLError(Ljava/lang/String;)I
 
     move-result v3
@@ -533,17 +547,21 @@
 
     const-string p0, "loadTexture: error1 "
 
+    .line 25
     invoke-static {v4, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 26
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
     return v2
 
+    .line 27
     :cond_2
     invoke-static {v5, v2, p0, v2}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
 
     const-string p0, "texImage2D error"
 
+    .line 28
     invoke-static {p0}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->checkGLError(Ljava/lang/String;)I
 
     move-result p0
@@ -552,17 +570,22 @@
 
     const-string p0, "loadTexture: error2 "
 
+    .line 29
     invoke-static {v4, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 30
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
     return v2
 
+    .line 31
     :cond_3
     invoke-static {v5}, Landroid/opengl/GLES20;->glGenerateMipmap(I)V
 
+    .line 32
     invoke-static {v5, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 33
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -589,6 +612,7 @@
 .method public static loadTexture(Ljava/lang/String;IILandroid/graphics/Rect;)I
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/media/ExifInterface;
 
     invoke-direct {v0, p0}, Landroid/media/ExifInterface;-><init>(Ljava/lang/String;)V
@@ -597,20 +621,24 @@
 
     const/4 v2, 0x1
 
+    .line 2
     invoke-virtual {v0, v1, v2}, Landroid/media/ExifInterface;->getAttributeInt(Ljava/lang/String;I)I
 
     move-result v0
 
+    .line 3
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
+    .line 4
     invoke-static {p0, p1, p2, v0}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->getOptimalSamplingSize(Ljava/lang/String;III)I
 
     move-result p1
 
     iput p1, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
+    .line 5
     invoke-static {p0, v1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -623,31 +651,38 @@
 
     const-string p2, "Could not decode bitmap. error."
 
+    .line 6
     invoke-static {p0, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return p1
 
+    .line 7
     :cond_0
     iput p1, p3, Landroid/graphics/Rect;->left:I
 
+    .line 8
     iput p1, p3, Landroid/graphics/Rect;->top:I
 
+    .line 9
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p1
 
     iput p1, p3, Landroid/graphics/Rect;->right:I
 
+    .line 10
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p1
 
     iput p1, p3, Landroid/graphics/Rect;->bottom:I
 
+    .line 11
     invoke-static {p0}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->loadTexture(Landroid/graphics/Bitmap;)I
 
     move-result p1
 
+    .line 12
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
     return p1

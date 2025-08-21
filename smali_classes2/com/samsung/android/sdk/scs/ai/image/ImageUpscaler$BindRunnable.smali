@@ -26,6 +26,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;-><init>()V
 
     return-void
@@ -34,6 +35,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/sdk/scs/ai/image/a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/sdk/scs/ai/image/ImageUpscaler$BindRunnable;-><init>()V
 
     return-void

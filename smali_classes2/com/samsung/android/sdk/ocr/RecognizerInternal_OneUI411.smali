@@ -11,12 +11,14 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/samsung/android/sdk/ocr/OCRType;Lcom/samsung/android/sdk/ocr/OCRLanguage;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/sdk/ocr/RecognizerInternal;-><init>(Landroid/content/Context;Lcom/samsung/android/sdk/ocr/OCRType;Lcom/samsung/android/sdk/ocr/OCRLanguage;)V
 
     const-string p0, "RecognizerInternal_OneUI411"
 
     const-string p1, "OCR Recognizer(Internal_OneUI411) is initialized with version: 3.3.231214"
 
+    .line 4
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -25,12 +27,14 @@
 .method public constructor <init>(Lcom/samsung/android/sdk/ocr/RecognizerParams;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/ocr/RecognizerInternal;-><init>(Lcom/samsung/android/sdk/ocr/RecognizerParams;)V
 
     const-string p0, "RecognizerInternal_OneUI411"
 
     const-string p1, "OCR Recognizer(Internal_OneUI411) is initialized with version: 3.3.231214"
 
+    .line 2
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
     return-void
@@ -17,6 +18,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
     return-void

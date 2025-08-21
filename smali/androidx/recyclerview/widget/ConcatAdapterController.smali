@@ -569,6 +569,7 @@
 
     if-ltz p1, :cond_6
 
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapterController;->mWrappers:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -577,12 +578,14 @@
 
     if-gt p1, v0, :cond_6
 
+    .line 3
     invoke-virtual {p0}, Landroidx/recyclerview/widget/ConcatAdapterController;->hasStableIds()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->hasStableIds()Z
 
     move-result v0
@@ -593,6 +596,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->hasStableIds()Z
 
@@ -604,8 +608,10 @@
 
     const-string v1, "Stable ids in the adapter will be ignored as the ConcatAdapter is configured not to have stable ids"
 
+    .line 6
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     :cond_1
     :goto_0
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/ConcatAdapterController;->findWrapperFor(Landroidx/recyclerview/widget/RecyclerView$Adapter;)Landroidx/recyclerview/widget/NestedAdapterWrapper;
@@ -618,6 +624,7 @@
 
     return p0
 
+    .line 8
     :cond_2
     new-instance v0, Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
@@ -625,16 +632,19 @@
 
     iget-object v2, p0, Landroidx/recyclerview/widget/ConcatAdapterController;->mStableIdStorage:Landroidx/recyclerview/widget/StableIdStorage;
 
+    .line 9
     invoke-interface {v2}, Landroidx/recyclerview/widget/StableIdStorage;->createStableIdLookup()Landroidx/recyclerview/widget/StableIdStorage$StableIdLookup;
 
     move-result-object v2
 
     invoke-direct {v0, p2, p0, v1, v2}, Landroidx/recyclerview/widget/NestedAdapterWrapper;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Landroidx/recyclerview/widget/NestedAdapterWrapper$Callback;Landroidx/recyclerview/widget/ViewTypeStorage;Landroidx/recyclerview/widget/StableIdStorage$StableIdLookup;)V
 
+    .line 10
     iget-object v1, p0, Landroidx/recyclerview/widget/ConcatAdapterController;->mWrappers:Ljava/util/List;
 
     invoke-interface {v1, p1, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 11
     iget-object p1, p0, Landroidx/recyclerview/widget/ConcatAdapterController;->mAttachedRecyclerViews:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -655,6 +665,7 @@
 
     check-cast v1, Ljava/lang/ref/WeakReference;
 
+    .line 12
     invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
@@ -663,10 +674,12 @@
 
     if-eqz v1, :cond_3
 
+    .line 13
     invoke-virtual {p2, v1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
     goto :goto_1
 
+    .line 14
     :cond_4
     invoke-virtual {v0}, Landroidx/recyclerview/widget/NestedAdapterWrapper;->getCachedItemCount()I
 
@@ -674,18 +687,23 @@
 
     if-lez p1, :cond_5
 
+    .line 15
     iget-object p1, p0, Landroidx/recyclerview/widget/ConcatAdapterController;->mConcatAdapter:Landroidx/recyclerview/widget/ConcatAdapter;
 
+    .line 16
     invoke-direct {p0, v0}, Landroidx/recyclerview/widget/ConcatAdapterController;->countItemsBefore(Landroidx/recyclerview/widget/NestedAdapterWrapper;)I
 
     move-result p2
 
+    .line 17
     invoke-virtual {v0}, Landroidx/recyclerview/widget/NestedAdapterWrapper;->getCachedItemCount()I
 
     move-result v0
 
+    .line 18
     invoke-virtual {p1, p2, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRangeInserted(II)V
 
+    .line 19
     :cond_5
     invoke-direct {p0}, Landroidx/recyclerview/widget/ConcatAdapterController;->calculateAndUpdateStateRestorationPolicy()V
 
@@ -693,6 +711,7 @@
 
     return p0
 
+    .line 20
     :cond_6
     new-instance p2, Ljava/lang/IndexOutOfBoundsException;
 
@@ -706,6 +725,7 @@
 
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapterController;->mWrappers:Ljava/util/List;
 
+    .line 21
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -738,6 +758,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapterController;->mWrappers:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1360,10 +1381,12 @@
 .method public onItemRangeChanged(Landroidx/recyclerview/widget/NestedAdapterWrapper;II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ConcatAdapterController;->countItemsBefore(Landroidx/recyclerview/widget/NestedAdapterWrapper;)I
 
     move-result p1
 
+    .line 2
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapterController;->mConcatAdapter:Landroidx/recyclerview/widget/ConcatAdapter;
 
     add-int/2addr p2, p1
@@ -1376,10 +1399,12 @@
 .method public onItemRangeChanged(Landroidx/recyclerview/widget/NestedAdapterWrapper;IILjava/lang/Object;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ConcatAdapterController;->countItemsBefore(Landroidx/recyclerview/widget/NestedAdapterWrapper;)I
 
     move-result p1
 
+    .line 4
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapterController;->mConcatAdapter:Landroidx/recyclerview/widget/ConcatAdapter;
 
     add-int/2addr p2, p1

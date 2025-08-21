@@ -272,6 +272,7 @@
 .method public bridge synthetic processBackgroundPreviewInternal(Ljava/lang/Object;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
     .locals 0
 
+    .line 1
     check-cast p1, [B
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/SrcbEventFinderNode;->processBackgroundPreviewInternal([BLcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
@@ -282,10 +283,12 @@
 .method public processBackgroundPreviewInternal([BLcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
     .locals 11
 
+    .line 2
     iget-boolean p3, p0, Lcom/samsung/android/camera/core2/node/SrcbEventFinderNode;->mInitialized:Z
 
     if-eqz p3, :cond_0
 
+    .line 3
     :try_start_0
     iget p3, p0, Lcom/samsung/android/camera/core2/node/SrcbEventFinderNode;->mDeviceOrientation:I
 
@@ -305,6 +308,7 @@
 
     move-result v8
 
+    .line 4
     new-instance p3, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;
 
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->s()J
@@ -315,6 +319,7 @@
 
     div-long/2addr v0, v2
 
+    .line 5
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->r()Lcom/samsung/android/camera/core2/util/StrideInfo;
 
     move-result-object v2
@@ -323,6 +328,7 @@
 
     move-result v2
 
+    .line 6
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->r()Lcom/samsung/android/camera/core2/util/StrideInfo;
 
     move-result-object p2
@@ -333,6 +339,7 @@
 
     invoke-direct {p3, v0, v1, v2, p2}, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;-><init>(JII)V
 
+    .line 7
     sget-object p2, Lcom/samsung/android/camera/core2/node/SrcbEventFinderNode;->SRIB_EVENT_FINDER_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const-string v0, "processBackgroundPreviewInternal: PreviewSize(%s), ExtraPreviewInfo(%s), mJpegOrientation(%d)"
@@ -351,6 +358,7 @@
 
     aput-object v2, v1, v3
 
+    .line 8
     invoke-virtual {p3}, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -367,8 +375,10 @@
 
     aput-object v2, v1, v3
 
+    .line 9
     invoke-static {p2, v0, v1}, Lcom/samsung/android/camera/core2/util/CLog;->s(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 10
     iget-object v2, p0, Lcom/samsung/android/camera/core2/node/SrcbEventFinderNode;->mEventFinder:Lcom/samsung/srcb/highlight/a;
 
     iget-object p2, p0, Lcom/samsung/android/camera/core2/node/SrcbEventFinderNode;->mPreviewSize:Landroid/util/Size;
@@ -400,6 +410,7 @@
     :catch_0
     move-exception p0
 
+    .line 11
     sget-object p1, Lcom/samsung/android/camera/core2/node/SrcbEventFinderNode;->SRIB_EVENT_FINDER_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance p2, Ljava/lang/StringBuilder;

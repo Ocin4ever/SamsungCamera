@@ -8,11 +8,11 @@
 
 .field public static final b:Ljava/lang/Object;
 
-.field public static c:Lj0/d1;
+.field public static c:Lj0/d1; = null
 
-.field public static d:Landroid/os/HandlerThread;
+.field public static d:Landroid/os/HandlerThread; = null
 
-.field public static e:Z
+.field public static e:Z = false
 
 
 # direct methods

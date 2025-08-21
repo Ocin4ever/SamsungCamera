@@ -253,6 +253,7 @@
 .method public toLocationRequest()Landroid/location/LocationRequest;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Landroidx/core/location/LocationRequestCompat$Api31Impl;->toLocationRequest(Landroidx/core/location/LocationRequestCompat;)Landroid/location/LocationRequest;
 
     move-result-object p0
@@ -263,6 +264,7 @@
 .method public toLocationRequest(Ljava/lang/String;)Landroid/location/LocationRequest;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/core/location/LocationRequestCompat;->toLocationRequest()Landroid/location/LocationRequest;
 
     move-result-object p0

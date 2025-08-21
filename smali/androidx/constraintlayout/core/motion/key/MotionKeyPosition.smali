@@ -310,6 +310,7 @@
 .method public clone()Landroidx/constraintlayout/core/motion/key/MotionKey;
     .locals 1
 
+    .line 2
     new-instance v0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;
 
     invoke-direct {v0}, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;-><init>()V
@@ -324,6 +325,7 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->clone()Landroidx/constraintlayout/core/motion/key/MotionKey;
 
     move-result-object p0
@@ -849,22 +851,26 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 5
     invoke-super {p0, p1, p2}, Landroidx/constraintlayout/core/motion/key/MotionKey;->setValue(IF)Z
 
     move-result p0
 
     return p0
 
+    .line 6
     :pswitch_0
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentY:F
 
     goto :goto_0
 
+    .line 7
     :pswitch_1
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentX:F
 
     goto :goto_0
 
+    .line 8
     :pswitch_2
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentWidth:F
 
@@ -872,11 +878,13 @@
 
     goto :goto_0
 
+    .line 9
     :pswitch_3
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentHeight:F
 
     goto :goto_0
 
+    .line 10
     :pswitch_4
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentWidth:F
 
@@ -910,22 +918,26 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/constraintlayout/core/motion/key/MotionKey;->setValue(II)Z
 
     move-result p0
 
     return p0
 
+    .line 2
     :cond_0
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPositionType:I
 
     goto :goto_0
 
+    .line 3
     :cond_1
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCurveFit:I
 
     goto :goto_0
 
+    .line 4
     :cond_2
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
@@ -942,12 +954,14 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 11
     invoke-super {p0, p1, p2}, Landroidx/constraintlayout/core/motion/key/MotionKey;->setValue(ILjava/lang/String;)Z
 
     move-result p0
 
     return p0
 
+    .line 12
     :cond_0
     invoke-virtual {p2}, Ljava/lang/String;->toString()Ljava/lang/String;
 

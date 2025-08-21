@@ -217,12 +217,14 @@
 .method public readSystemState()Ljava/lang/Boolean;
     .locals 3
 
+    .line 2
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.BATTERY_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/work/impl/constraints/trackers/ConstraintTracker;->getAppContext()Landroid/content/Context;
 
     move-result-object v1
@@ -235,6 +237,7 @@
 
     if-nez v0, :cond_0
 
+    .line 4
     invoke-static {}, Landroidx/work/Logger;->get()Landroidx/work/Logger;
 
     move-result-object p0
@@ -247,10 +250,12 @@
 
     invoke-virtual {p0, v0, v1}, Landroidx/work/Logger;->error(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object p0
 
+    .line 6
     :cond_0
     invoke-direct {p0, v0}, Landroidx/work/impl/constraints/trackers/BatteryChargingTracker;->isBatteryChangedIntentCharging(Landroid/content/Intent;)Z
 
@@ -266,6 +271,7 @@
 .method public bridge synthetic readSystemState()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/work/impl/constraints/trackers/BatteryChargingTracker;->readSystemState()Ljava/lang/Boolean;
 
     move-result-object p0

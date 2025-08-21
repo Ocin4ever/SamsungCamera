@@ -52,6 +52,7 @@
 .method public bridge synthetic minus(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/math/BigInteger;
 
     check-cast p2, Ljava/math/BigInteger;
@@ -66,6 +67,7 @@
 .method public minus(Ljava/math/BigInteger;Ljava/math/BigInteger;)Ljava/math/BigInteger;
     .locals 0
 
+    .line 2
     invoke-virtual {p1, p2}, Ljava/math/BigInteger;->subtract(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
     move-result-object p0
@@ -76,6 +78,7 @@
 .method public bridge synthetic roundToDoubleArbitrarily(Ljava/lang/Number;)D
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/math/BigInteger;
 
     invoke-virtual {p0, p1}, Lcom/google/common/math/BigIntegerMath$BigIntegerToDoubleRounder;->roundToDoubleArbitrarily(Ljava/math/BigInteger;)D
@@ -88,6 +91,7 @@
 .method public roundToDoubleArbitrarily(Ljava/math/BigInteger;)D
     .locals 0
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/math/DoubleUtils;->bigToDouble(Ljava/math/BigInteger;)D
 
     move-result-wide p0
@@ -98,6 +102,7 @@
 .method public bridge synthetic sign(Ljava/lang/Number;)I
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/math/BigInteger;
 
     invoke-virtual {p0, p1}, Lcom/google/common/math/BigIntegerMath$BigIntegerToDoubleRounder;->sign(Ljava/math/BigInteger;)I
@@ -110,6 +115,7 @@
 .method public sign(Ljava/math/BigInteger;)I
     .locals 0
 
+    .line 2
     invoke-virtual {p1}, Ljava/math/BigInteger;->signum()I
 
     move-result p0
@@ -120,6 +126,7 @@
 .method public bridge synthetic toX(DLjava/math/RoundingMode;)Ljava/lang/Number;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/common/math/BigIntegerMath$BigIntegerToDoubleRounder;->toX(DLjava/math/RoundingMode;)Ljava/math/BigInteger;
 
     move-result-object p0
@@ -130,6 +137,7 @@
 .method public toX(DLjava/math/RoundingMode;)Ljava/math/BigInteger;
     .locals 0
 
+    .line 2
     invoke-static {p1, p2, p3}, Lcom/google/common/math/DoubleMath;->roundToBigInteger(DLjava/math/RoundingMode;)Ljava/math/BigInteger;
 
     move-result-object p0

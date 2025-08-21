@@ -40,6 +40,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/sdk/ocr/OCRResult;
     .locals 0
 
+    .line 2
     new-instance p0, Lcom/samsung/android/sdk/ocr/OCRResult;
 
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/ocr/OCRResult;-><init>(Landroid/os/Parcel;)V
@@ -50,6 +51,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/samsung/android/sdk/ocr/OCRResult$1;->createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/sdk/ocr/OCRResult;
 
     move-result-object p0
@@ -60,6 +62,7 @@
 .method public newArray(I)[Lcom/samsung/android/sdk/ocr/OCRResult;
     .locals 0
 
+    .line 2
     new-array p0, p1, [Lcom/samsung/android/sdk/ocr/OCRResult;
 
     return-object p0
@@ -68,6 +71,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/samsung/android/sdk/ocr/OCRResult$1;->newArray(I)[Lcom/samsung/android/sdk/ocr/OCRResult;
 
     move-result-object p0

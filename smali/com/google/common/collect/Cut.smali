@@ -167,6 +167,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/Cut;->belowAll()Lcom/google/common/collect/Cut;
 
     move-result-object v0
@@ -177,6 +178,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     invoke-static {}, Lcom/google/common/collect/Cut;->aboveAll()Lcom/google/common/collect/Cut;
 
@@ -188,6 +190,7 @@
 
     return p0
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/common/collect/Cut;->endpoint:Ljava/lang/Comparable;
 
@@ -201,6 +204,7 @@
 
     return v0
 
+    .line 5
     :cond_2
     instance-of p0, p0, Lcom/google/common/collect/Cut$AboveValue;
 
@@ -216,6 +220,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/collect/Cut;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Cut;->compareTo(Lcom/google/common/collect/Cut;)I

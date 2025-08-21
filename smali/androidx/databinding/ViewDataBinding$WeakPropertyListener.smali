@@ -68,6 +68,7 @@
 .method public addListener(Landroidx/databinding/Observable;)V
     .locals 0
 
+    .line 2
     invoke-interface {p1, p0}, Landroidx/databinding/Observable;->addOnPropertyChangedCallback(Landroidx/databinding/Observable$OnPropertyChangedCallback;)V
 
     return-void
@@ -76,6 +77,7 @@
 .method public bridge synthetic addListener(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/databinding/Observable;
 
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding$WeakPropertyListener;->addListener(Landroidx/databinding/Observable;)V
@@ -138,6 +140,7 @@
 .method public removeListener(Landroidx/databinding/Observable;)V
     .locals 0
 
+    .line 2
     invoke-interface {p1, p0}, Landroidx/databinding/Observable;->removeOnPropertyChangedCallback(Landroidx/databinding/Observable$OnPropertyChangedCallback;)V
 
     return-void
@@ -146,6 +149,7 @@
 .method public bridge synthetic removeListener(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/databinding/Observable;
 
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding$WeakPropertyListener;->removeListener(Landroidx/databinding/Observable;)V

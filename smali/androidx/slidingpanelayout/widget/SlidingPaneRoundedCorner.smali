@@ -317,10 +317,12 @@
 .method public drawRoundedCorner(Landroid/graphics/Canvas;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/slidingpanelayout/widget/SlidingPaneRoundedCorner;->mRoundedCornerBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->getClipBounds(Landroid/graphics/Rect;)Z
 
+    .line 2
     invoke-direct {p0, p1}, Landroidx/slidingpanelayout/widget/SlidingPaneRoundedCorner;->drawRoundedCornerInternal(Landroid/graphics/Canvas;)V
 
     return-void
@@ -329,6 +331,7 @@
 .method public drawRoundedCorner(Landroid/view/View;Landroid/graphics/Canvas;)V
     .locals 7
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/slidingpanelayout/widget/SlidingPaneRoundedCorner;->isLayoutRtlSupport(Landroid/view/View;)Z
 
     move-result v0
@@ -337,6 +340,7 @@
 
     const/4 v0, 0x1
 
+    .line 4
     iput v0, p0, Landroidx/slidingpanelayout/widget/SlidingPaneRoundedCorner;->mRoundedCornerMode:I
 
     goto :goto_0
@@ -344,8 +348,10 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 5
     iput v0, p0, Landroidx/slidingpanelayout/widget/SlidingPaneRoundedCorner;->mRoundedCornerMode:I
 
+    .line 6
     :goto_0
     invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
@@ -357,6 +363,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 7
     invoke-virtual {p1}, Landroid/view/View;->getX()F
 
     move-result v0
@@ -365,6 +372,7 @@
 
     move-result v0
 
+    .line 8
     invoke-virtual {p1}, Landroid/view/View;->getY()F
 
     move-result v1
@@ -375,20 +383,24 @@
 
     goto :goto_1
 
+    .line 9
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v0
 
+    .line 10
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v1
 
+    .line 11
     :goto_1
     iget v2, p0, Landroidx/slidingpanelayout/widget/SlidingPaneRoundedCorner;->mMarginTop:I
 
     add-int/2addr v2, v1
 
+    .line 12
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v3
@@ -399,6 +411,7 @@
 
     add-int/2addr v3, v4
 
+    .line 13
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v4
@@ -409,10 +422,12 @@
 
     sub-int/2addr v1, v4
 
+    .line 14
     iget-object v4, p0, Landroidx/slidingpanelayout/widget/SlidingPaneRoundedCorner;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {p2, v4}, Landroid/graphics/Canvas;->getClipBounds(Landroid/graphics/Rect;)Z
 
+    .line 15
     iget-object v4, p0, Landroidx/slidingpanelayout/widget/SlidingPaneRoundedCorner;->mTmpRect:Landroid/graphics/Rect;
 
     iget v5, v4, Landroid/graphics/Rect;->left:I
@@ -431,14 +446,17 @@
 
     iput p1, v4, Landroid/graphics/Rect;->right:I
 
+    .line 16
     iget-object p1, p0, Landroidx/slidingpanelayout/widget/SlidingPaneRoundedCorner;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {p2, p1}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;)Z
 
+    .line 17
     iget-object p1, p0, Landroidx/slidingpanelayout/widget/SlidingPaneRoundedCorner;->mRoundedCornerBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0, v2, v3, v1}, Landroid/graphics/Rect;->set(IIII)V
 
+    .line 18
     invoke-direct {p0, p2}, Landroidx/slidingpanelayout/widget/SlidingPaneRoundedCorner;->drawRoundedCornerInternal(Landroid/graphics/Canvas;)V
 
     return-void

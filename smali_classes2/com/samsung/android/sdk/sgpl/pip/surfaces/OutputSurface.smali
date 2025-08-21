@@ -38,14 +38,17 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/sdk/sgpl/pip/surfaces/OutputSurface;->mFrameSyncObject:Ljava/lang/Object;
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/sgpl/pip/surfaces/OutputSurface;->setup(I)V
 
     return-void
@@ -54,14 +57,17 @@
 .method public constructor <init>(IIIIIII)V
     .locals 1
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/sdk/sgpl/pip/surfaces/OutputSurface;->mFrameSyncObject:Ljava/lang/Object;
 
+    .line 6
     invoke-direct/range {p0 .. p7}, Lcom/samsung/android/sdk/sgpl/pip/surfaces/OutputSurface;->setup(IIIIIII)V
 
     return-void
@@ -319,14 +325,17 @@
 .method private setup(I)V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;
 
     invoke-direct {v0}, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/sdk/sgpl/pip/surfaces/OutputSurface;->mTextureRenderer:Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;
 
+    .line 2
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->prepare(I)I
 
+    .line 3
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -351,6 +360,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     new-instance p1, Landroid/graphics/SurfaceTexture;
 
     iget-object v0, p0, Lcom/samsung/android/sdk/sgpl/pip/surfaces/OutputSurface;->mTextureRenderer:Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;
@@ -363,8 +373,10 @@
 
     iput-object p1, p0, Lcom/samsung/android/sdk/sgpl/pip/surfaces/OutputSurface;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
+    .line 5
     invoke-virtual {p1, p0}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
+    .line 6
     new-instance p1, Landroid/view/Surface;
 
     iget-object v0, p0, Lcom/samsung/android/sdk/sgpl/pip/surfaces/OutputSurface;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
@@ -381,6 +393,7 @@
 
     move-object v0, p0
 
+    .line 7
     new-instance v1, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;
 
     invoke-direct {v1}, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;-><init>()V
@@ -405,8 +418,10 @@
 
     move/from16 v8, p7
 
+    .line 8
     invoke-virtual/range {v1 .. v10}, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->prepare(IIIIIIIII)I
 
+    .line 9
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -431,6 +446,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 10
     new-instance v1, Landroid/graphics/SurfaceTexture;
 
     iget-object v2, v0, Lcom/samsung/android/sdk/sgpl/pip/surfaces/OutputSurface;->mTextureRenderer:Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;
@@ -443,8 +459,10 @@
 
     iput-object v1, v0, Lcom/samsung/android/sdk/sgpl/pip/surfaces/OutputSurface;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
+    .line 11
     invoke-virtual {v1, p0}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
+    .line 12
     new-instance v1, Landroid/view/Surface;
 
     iget-object v2, v0, Lcom/samsung/android/sdk/sgpl/pip/surfaces/OutputSurface;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;

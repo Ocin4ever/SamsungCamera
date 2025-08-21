@@ -26,12 +26,14 @@
 .method private constructor <init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor$ScaleListener;->this$0:Lcom/samsung/android/camera/effect/SecEffectProcessor;
 
     invoke-direct {p0}, Landroid/view/ScaleGestureDetector$SimpleOnScaleGestureListener;-><init>()V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
+    .line 2
     iput p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor$ScaleListener;->mScaleFactor:F
 
     return-void
@@ -40,6 +42,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor$1;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/effect/SecEffectProcessor$ScaleListener;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;)V
 
     return-void

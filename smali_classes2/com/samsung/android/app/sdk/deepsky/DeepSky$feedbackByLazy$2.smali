@@ -46,6 +46,7 @@
 .method public final invoke()Lcom/samsung/android/app/sdk/deepsky/feedback/FeedbackRequest;
     .locals 1
 
+    .line 2
     sget-object v0, Lcom/samsung/android/app/sdk/deepsky/feedback/FeedbackRequest;->Companion:Lcom/samsung/android/app/sdk/deepsky/feedback/FeedbackRequest$Companion;
 
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$feedbackByLazy$2;->$appContext:Landroid/content/Context;
@@ -60,6 +61,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$feedbackByLazy$2;->invoke()Lcom/samsung/android/app/sdk/deepsky/feedback/FeedbackRequest;
 
     move-result-object p0

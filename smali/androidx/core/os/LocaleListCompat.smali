@@ -339,6 +339,7 @@
 .method public static wrap(Landroid/os/LocaleList;)Landroidx/core/os/LocaleListCompat;
     .locals 2
 
+    .line 2
     new-instance v0, Landroidx/core/os/LocaleListCompat;
 
     new-instance v1, Landroidx/core/os/LocaleListPlatformWrapper;
@@ -355,6 +356,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     check-cast p0, Landroid/os/LocaleList;
 
     invoke-static {p0}, Landroidx/core/os/LocaleListCompat;->wrap(Landroid/os/LocaleList;)Landroidx/core/os/LocaleListCompat;

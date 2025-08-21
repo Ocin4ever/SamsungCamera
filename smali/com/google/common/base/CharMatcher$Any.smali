@@ -90,6 +90,7 @@
 .method public indexIn(Ljava/lang/CharSequence;)I
     .locals 0
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result p0
@@ -110,10 +111,12 @@
 .method public indexIn(Ljava/lang/CharSequence;I)I
     .locals 0
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result p0
 
+    .line 3
     invoke-static {p2, p0}, Lcom/google/common/base/Preconditions;->checkPositionIndex(II)I
 
     if-ne p2, p0, :cond_0
@@ -205,14 +208,17 @@
 .method public replaceFrom(Ljava/lang/CharSequence;C)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result p0
 
     new-array p0, p0, [C
 
+    .line 2
     invoke-static {p0, p2}, Ljava/util/Arrays;->fill([CC)V
 
+    .line 3
     new-instance p1, Ljava/lang/String;
 
     invoke-direct {p1, p0}, Ljava/lang/String;-><init>([C)V
@@ -223,6 +229,7 @@
 .method public replaceFrom(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 2
 
+    .line 4
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
@@ -239,6 +246,7 @@
 
     const/4 v0, 0x0
 
+    .line 5
     :goto_0
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -246,12 +254,14 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 6
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

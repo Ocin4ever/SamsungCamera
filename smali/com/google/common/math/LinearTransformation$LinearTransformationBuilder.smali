@@ -24,10 +24,13 @@
 .method private constructor <init>(DD)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-wide p1, p0, Lcom/google/common/math/LinearTransformation$LinearTransformationBuilder;->x1:D
 
+    .line 4
     iput-wide p3, p0, Lcom/google/common/math/LinearTransformation$LinearTransformationBuilder;->y1:D
 
     return-void
@@ -36,6 +39,7 @@
 .method public synthetic constructor <init>(DDLcom/google/common/math/LinearTransformation$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/common/math/LinearTransformation$LinearTransformationBuilder;-><init>(DD)V
 
     return-void

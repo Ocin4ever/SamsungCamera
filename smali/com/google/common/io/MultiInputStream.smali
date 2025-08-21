@@ -144,6 +144,7 @@
 .method public read()I
     .locals 2
 
+    .line 1
     :goto_0
     iget-object v0, p0, Lcom/google/common/io/MultiInputStream;->in:Ljava/io/InputStream;
 
@@ -151,6 +152,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
 
     move-result v0
@@ -159,6 +161,7 @@
 
     return v0
 
+    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/google/common/io/MultiInputStream;->advance()V
 
@@ -171,8 +174,10 @@
 .method public read([BII)I
     .locals 2
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     :goto_0
     iget-object v0, p0, Lcom/google/common/io/MultiInputStream;->in:Ljava/io/InputStream;
 
@@ -180,6 +185,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 6
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
 
     move-result v0
@@ -188,6 +194,7 @@
 
     return v0
 
+    .line 7
     :cond_0
     invoke-direct {p0}, Lcom/google/common/io/MultiInputStream;->advance()V
 

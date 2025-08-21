@@ -35,6 +35,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-static {p1}, Landroidx/startup/AppInitializer;->getInstance(Landroid/content/Context;)Landroidx/startup/AppInitializer;
 
     move-result-object p0
@@ -43,6 +44,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     const-class v0, Landroidx/lifecycle/ProcessLifecycleInitializer;
 
     invoke-virtual {p0, v0}, Landroidx/startup/AppInitializer;->isEagerlyInitialized(Ljava/lang/Class;)Z
@@ -51,18 +53,22 @@
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-static {p1}, Landroidx/lifecycle/LifecycleDispatcher;->init(Landroid/content/Context;)V
 
+    .line 5
     sget-object p0, Landroidx/lifecycle/ProcessLifecycleOwner;->Companion:Landroidx/lifecycle/ProcessLifecycleOwner$Companion;
 
     invoke-virtual {p0, p1}, Landroidx/lifecycle/ProcessLifecycleOwner$Companion;->init$lifecycle_process_release(Landroid/content/Context;)V
 
+    .line 6
     invoke-virtual {p0}, Landroidx/lifecycle/ProcessLifecycleOwner$Companion;->get()Landroidx/lifecycle/LifecycleOwner;
 
     move-result-object p0
 
     return-object p0
 
+    .line 7
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -80,6 +86,7 @@
 .method public bridge synthetic create(Landroid/content/Context;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/lifecycle/ProcessLifecycleInitializer;->create(Landroid/content/Context;)Landroidx/lifecycle/LifecycleOwner;
 
     move-result-object p0

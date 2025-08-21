@@ -35,8 +35,10 @@
 .method public varargs constructor <init>(Landroidx/room/RoomDatabase;Landroidx/room/RoomSQLiteQuery;ZZ[Ljava/lang/String;)V
     .locals 2
 
+    .line 4
     invoke-direct {p0}, Landroidx/paging/PositionalDataSource;-><init>()V
 
+    .line 5
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -45,12 +47,16 @@
 
     iput-object v0, p0, Landroidx/room/paging/LimitOffsetDataSource;->mRegisteredObserver:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 6
     iput-object p1, p0, Landroidx/room/paging/LimitOffsetDataSource;->mDb:Landroidx/room/RoomDatabase;
 
+    .line 7
     iput-object p2, p0, Landroidx/room/paging/LimitOffsetDataSource;->mSourceQuery:Landroidx/room/RoomSQLiteQuery;
 
+    .line 8
     iput-boolean p3, p0, Landroidx/room/paging/LimitOffsetDataSource;->mInTransaction:Z
 
+    .line 9
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,6 +81,7 @@
 
     iput-object p1, p0, Landroidx/room/paging/LimitOffsetDataSource;->mCountQuery:Ljava/lang/String;
 
+    .line 10
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,6 +106,7 @@
 
     iput-object p1, p0, Landroidx/room/paging/LimitOffsetDataSource;->mLimitOffsetQuery:Ljava/lang/String;
 
+    .line 11
     new-instance p1, Landroidx/room/paging/LimitOffsetDataSource$1;
 
     invoke-direct {p1, p0, p5}, Landroidx/room/paging/LimitOffsetDataSource$1;-><init>(Landroidx/room/paging/LimitOffsetDataSource;[Ljava/lang/String;)V
@@ -107,6 +115,7 @@
 
     if-eqz p4, :cond_0
 
+    .line 12
     invoke-direct {p0}, Landroidx/room/paging/LimitOffsetDataSource;->registerObserverIfNecessary()V
 
     :cond_0
@@ -128,6 +137,7 @@
 
     move-object v5, p4
 
+    .line 3
     invoke-direct/range {v0 .. v5}, Landroidx/room/paging/LimitOffsetDataSource;-><init>(Landroidx/room/RoomDatabase;Landroidx/room/RoomSQLiteQuery;ZZ[Ljava/lang/String;)V
 
     return-void
@@ -136,6 +146,7 @@
 .method public varargs constructor <init>(Landroidx/room/RoomDatabase;Landroidx/sqlite/db/SupportSQLiteQuery;ZZ[Ljava/lang/String;)V
     .locals 6
 
+    .line 2
     invoke-static {p2}, Landroidx/room/RoomSQLiteQuery;->copyFrom(Landroidx/sqlite/db/SupportSQLiteQuery;)Landroidx/room/RoomSQLiteQuery;
 
     move-result-object v2
@@ -158,6 +169,7 @@
 .method public varargs constructor <init>(Landroidx/room/RoomDatabase;Landroidx/sqlite/db/SupportSQLiteQuery;Z[Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-static {p2}, Landroidx/room/RoomSQLiteQuery;->copyFrom(Landroidx/sqlite/db/SupportSQLiteQuery;)Landroidx/room/RoomSQLiteQuery;
 
     move-result-object p2
@@ -470,20 +482,24 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/room/paging/LimitOffsetDataSource;->getSQLiteQuery(II)Landroidx/room/RoomSQLiteQuery;
 
     move-result-object p1
 
+    .line 3
     iget-boolean p2, p0, Landroidx/room/paging/LimitOffsetDataSource;->mInTransaction:Z
 
     if-eqz p2, :cond_2
 
+    .line 4
     iget-object p2, p0, Landroidx/room/paging/LimitOffsetDataSource;->mDb:Landroidx/room/RoomDatabase;
 
     invoke-virtual {p2}, Landroidx/room/RoomDatabase;->beginTransaction()V
 
     const/4 p2, 0x0
 
+    .line 5
     :try_start_0
     iget-object v0, p0, Landroidx/room/paging/LimitOffsetDataSource;->mDb:Landroidx/room/RoomDatabase;
 
@@ -491,10 +507,12 @@
 
     move-result-object p2
 
+    .line 6
     invoke-virtual {p0, p2}, Landroidx/room/paging/LimitOffsetDataSource;->convertRows(Landroid/database/Cursor;)Ljava/util/List;
 
     move-result-object v0
 
+    .line 7
     iget-object v1, p0, Landroidx/room/paging/LimitOffsetDataSource;->mDb:Landroidx/room/RoomDatabase;
 
     invoke-virtual {v1}, Landroidx/room/RoomDatabase;->setTransactionSuccessful()V
@@ -503,13 +521,16 @@
 
     if-eqz p2, :cond_0
 
+    .line 8
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
+    .line 9
     :cond_0
     iget-object p0, p0, Landroidx/room/paging/LimitOffsetDataSource;->mDb:Landroidx/room/RoomDatabase;
 
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->endTransaction()V
 
+    .line 10
     invoke-virtual {p1}, Landroidx/room/RoomSQLiteQuery;->release()V
 
     return-object v0
@@ -519,17 +540,22 @@
 
     if-eqz p2, :cond_1
 
+    .line 11
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
+    .line 12
     :cond_1
     iget-object p0, p0, Landroidx/room/paging/LimitOffsetDataSource;->mDb:Landroidx/room/RoomDatabase;
 
     invoke-virtual {p0}, Landroidx/room/RoomDatabase;->endTransaction()V
 
+    .line 13
     invoke-virtual {p1}, Landroidx/room/RoomSQLiteQuery;->release()V
 
+    .line 14
     throw v0
 
+    .line 15
     :cond_2
     iget-object p2, p0, Landroidx/room/paging/LimitOffsetDataSource;->mDb:Landroidx/room/RoomDatabase;
 
@@ -537,6 +563,7 @@
 
     move-result-object p2
 
+    .line 16
     :try_start_1
     invoke-virtual {p0, p2}, Landroidx/room/paging/LimitOffsetDataSource;->convertRows(Landroid/database/Cursor;)Ljava/util/List;
 
@@ -544,8 +571,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 17
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
+    .line 18
     invoke-virtual {p1}, Landroidx/room/RoomSQLiteQuery;->release()V
 
     return-object p0
@@ -553,10 +582,13 @@
     :catchall_1
     move-exception p0
 
+    .line 19
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
+    .line 20
     invoke-virtual {p1}, Landroidx/room/RoomSQLiteQuery;->release()V
 
+    .line 21
     throw p0
 .end method
 
@@ -571,6 +603,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p1, Landroidx/paging/PositionalDataSource$LoadRangeParams;->startPosition:I
 
     iget p1, p1, Landroidx/paging/PositionalDataSource$LoadRangeParams;->loadSize:I

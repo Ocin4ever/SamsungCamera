@@ -203,6 +203,7 @@
 .method private getTimerMode(Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;)Lcom/sec/android/app/camera/interfaces/Engine$ShutterTimerManager$TimerMode;
     .locals 3
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/engine/CommonEngine;->getCameraContext()Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -213,6 +214,7 @@
 
     move-result-object v0
 
+    .line 3
     sget-object v1, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl$1;->$SwitchMap$com$sec$android$app$camera$interfaces$CameraContext$InputType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -243,6 +245,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-direct {p0}, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->getWearableDeviceTimerMode()Lcom/sec/android/app/camera/interfaces/Engine$ShutterTimerManager$TimerMode;
 
@@ -250,6 +253,7 @@
 
     return-object p0
 
+    .line 5
     :cond_1
     sget-object p1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->WATCH_TIMER_SYNC:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
@@ -259,12 +263,14 @@
 
     if-ne p1, v1, :cond_3
 
+    .line 6
     invoke-direct {p0}, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->getWearableDeviceTimerMode()Lcom/sec/android/app/camera/interfaces/Engine$ShutterTimerManager$TimerMode;
 
     move-result-object p0
 
     return-object p0
 
+    .line 7
     :cond_2
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->getCameraFacing()I
 
@@ -272,6 +278,7 @@
 
     if-ne p0, v1, :cond_3
 
+    .line 8
     sget-object p0, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->mTimerModeArray:Landroid/util/SparseArray;
 
     sget-object p1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->TIMER:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
@@ -290,6 +297,7 @@
 
     return-object p0
 
+    .line 9
     :cond_3
     :goto_0
     sget-object p0, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->mTimerModeArray:Landroid/util/SparseArray;
@@ -310,6 +318,7 @@
 
     return-object p0
 
+    .line 10
     :cond_4
     sget-object p0, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->mTimerModeArray:Landroid/util/SparseArray;
 
@@ -1026,6 +1035,7 @@
 .method public getTimerMode()Lcom/sec/android/app/camera/interfaces/Engine$ShutterTimerManager$TimerMode;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->mTimerMode:Lcom/sec/android/app/camera/interfaces/Engine$ShutterTimerManager$TimerMode;
 
     return-object p0
@@ -1034,6 +1044,7 @@
 .method public handleShutterTimer(Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;)Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->isTimerRunning()Z
 
     move-result v0
@@ -1046,15 +1057,18 @@
 
     const-string p1, "handleShutterTimer : Returned because shutter timer is already running."
 
+    .line 2
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
+    .line 3
     :cond_0
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->getTimerMode(Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;)Lcom/sec/android/app/camera/interfaces/Engine$ShutterTimerManager$TimerMode;
 
     move-result-object p1
 
+    .line 4
     sget-object v0, Lcom/sec/android/app/camera/interfaces/Engine$ShutterTimerManager$TimerMode;->TIMER_OFF:Lcom/sec/android/app/camera/interfaces/Engine$ShutterTimerManager$TimerMode;
 
     if-ne p1, v0, :cond_1
@@ -1063,19 +1077,23 @@
 
     return p0
 
+    .line 5
     :cond_1
     sget-object v0, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl$TimerState;->REQUESTED:Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl$TimerState;
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->mTimerState:Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl$TimerState;
 
+    .line 6
     invoke-direct {p0}, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->isIntervalCaptureAvailable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 7
     iput-boolean v1, p0, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->mIsIntervalCaptureEnabled:Z
 
+    .line 8
     :cond_2
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
@@ -1093,6 +1111,7 @@
 .method public handleShutterTimer(Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;Lcom/sec/android/app/camera/interfaces/Engine$CaptureType;)Z
     .locals 2
 
+    .line 9
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->isTimerSupported(Lcom/sec/android/app/camera/interfaces/Engine$CaptureType;)Z
 
     move-result v0
@@ -1103,6 +1122,7 @@
 
     return v1
 
+    .line 10
     :cond_0
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->handleShutterTimer(Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;)Z
 
@@ -1117,12 +1137,16 @@
 
     const-string v1, "handleShutterTimer : Shutter timer is started."
 
+    .line 11
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 12
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->mInputType:Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;
 
+    .line 13
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->mCaptureType:Lcom/sec/android/app/camera/interfaces/Engine$CaptureType;
 
+    .line 14
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/engine/CommonEngine;->getCameraContext()Lcom/sec/android/app/camera/interfaces/CameraContext;

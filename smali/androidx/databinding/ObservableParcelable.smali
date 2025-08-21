@@ -49,6 +49,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Landroidx/databinding/ObservableField;-><init>()V
 
     return-void
@@ -62,6 +63,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/databinding/ObservableField;-><init>(Ljava/lang/Object;)V
 
     return-void

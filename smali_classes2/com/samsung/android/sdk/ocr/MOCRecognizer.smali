@@ -350,14 +350,17 @@
 
     const-string v1, "MOCRecgonzier"
 
+    .line 3
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v0, "Input point is not used in MOCR::detectBlock_ARGB_bmp"
 
+    .line 4
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
+    .line 5
     :try_start_0
     iget-object p0, p0, Lcom/samsung/android/sdk/ocr/MOCRecognizer;->mocr:Lcom/samsung/android/ocr/MOCR;
 
@@ -367,6 +370,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -398,6 +402,7 @@
     :try_start_1
     const-string p0, "MOCRecognizer::detectBlock_ARGB_bmp() MOCR(detect_ARGB_bmp) does not Support"
 
+    .line 7
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -409,6 +414,7 @@
 .method public detectBlock(Landroid/graphics/Bitmap;[Landroid/graphics/Point;)Z
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/graphics/Point;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -425,6 +431,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/Point;-><init>(II)V
 
+    .line 2
     invoke-virtual {p0, p1, v0, p2}, Lcom/samsung/android/sdk/ocr/MOCRecognizer;->detectBlock(Landroid/graphics/Bitmap;Landroid/graphics/Point;[Landroid/graphics/Point;)Z
 
     move-result p0

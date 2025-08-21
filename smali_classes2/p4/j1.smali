@@ -115,6 +115,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/j1;->q:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/j1;->r:Landroid/util/SparseIntArray;
@@ -145,6 +146,7 @@
 
     const/16 v4, 0xd
 
+    .line 2
     aget-object v4, p3, v4
 
     check-cast v4, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;
@@ -253,14 +255,17 @@
 
     move-object/from16 v2, p0
 
+    .line 3
     iput-wide v0, v2, Lp4/j1;->p:J
 
+    .line 4
     iget-object v0, v2, Lp4/i1;->g:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {v0, v2}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
     const/4 v0, 0x0
 
+    .line 5
     aget-object v0, p3, v0
 
     check-cast v0, Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerView;
@@ -269,20 +274,25 @@
 
     const/4 v1, 0x0
 
+    .line 6
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 7
     iget-object v0, v2, Lp4/i1;->h:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {v0, v2}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 8
     iget-object v0, v2, Lp4/i1;->i:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {v0, v2}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
     move-object/from16 v0, p2
 
+    .line 9
     invoke-virtual {v2, v0}, Landroidx/databinding/ViewDataBinding;->setRootTag(Landroid/view/View;)V
 
+    .line 10
     invoke-virtual/range {p0 .. p0}, Lp4/j1;->invalidateAll()V
 
     return-void

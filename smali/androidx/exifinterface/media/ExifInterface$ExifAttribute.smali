@@ -32,14 +32,19 @@
 .method public constructor <init>(IIJ[B)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput p1, p0, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;->format:I
 
+    .line 4
     iput p2, p0, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;->numberOfComponents:I
 
+    .line 5
     iput-wide p3, p0, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;->bytesOffset:J
 
+    .line 6
     iput-object p5, p0, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;->bytes:[B
 
     return-void
@@ -58,6 +63,7 @@
 
     move-object v5, p3
 
+    .line 1
     invoke-direct/range {v0 .. v5}, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;-><init>(IIJ[B)V
 
     return-void
@@ -137,6 +143,7 @@
 
     aput-wide p0, v0, v1
 
+    .line 6
     invoke-static {v0, p2}, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;->createDouble([DLjava/nio/ByteOrder;)Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
 
     move-result-object p0
@@ -147,6 +154,7 @@
 .method public static createDouble([DLjava/nio/ByteOrder;)Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
     .locals 5
 
+    .line 1
     sget-object v0, Landroidx/exifinterface/media/ExifInterface;->IFD_FORMAT_BYTES_PER_FORMAT:[I
 
     const/16 v1, 0xc
@@ -163,8 +171,10 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 3
     array-length p1, p0
 
     const/4 v2, 0x0
@@ -174,12 +184,14 @@
 
     aget-wide v3, p0, v2
 
+    .line 4
     invoke-virtual {v0, v3, v4}, Ljava/nio/ByteBuffer;->putDouble(D)Ljava/nio/ByteBuffer;
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance p1, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
 
@@ -205,6 +217,7 @@
 
     aput p0, v0, v1
 
+    .line 6
     invoke-static {v0, p1}, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;->createSLong([ILjava/nio/ByteOrder;)Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
 
     move-result-object p0
@@ -215,6 +228,7 @@
 .method public static createSLong([ILjava/nio/ByteOrder;)Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
     .locals 4
 
+    .line 1
     sget-object v0, Landroidx/exifinterface/media/ExifInterface;->IFD_FORMAT_BYTES_PER_FORMAT:[I
 
     const/16 v1, 0x9
@@ -231,8 +245,10 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 3
     array-length p1, p0
 
     const/4 v2, 0x0
@@ -242,12 +258,14 @@
 
     aget v3, p0, v2
 
+    .line 4
     invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance p1, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
 
@@ -273,6 +291,7 @@
 
     aput-object p0, v0, v1
 
+    .line 7
     invoke-static {v0, p1}, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;->createSRational([Landroidx/exifinterface/media/ExifInterface$Rational;Ljava/nio/ByteOrder;)Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
 
     move-result-object p0
@@ -283,6 +302,7 @@
 .method public static createSRational([Landroidx/exifinterface/media/ExifInterface$Rational;Ljava/nio/ByteOrder;)Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
     .locals 6
 
+    .line 1
     sget-object v0, Landroidx/exifinterface/media/ExifInterface;->IFD_FORMAT_BYTES_PER_FORMAT:[I
 
     const/16 v1, 0xa
@@ -299,8 +319,10 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 3
     array-length p1, p0
 
     const/4 v2, 0x0
@@ -310,12 +332,14 @@
 
     aget-object v3, p0, v2
 
+    .line 4
     iget-wide v4, v3, Landroidx/exifinterface/media/ExifInterface$Rational;->numerator:J
 
     long-to-int v4, v4
 
     invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
+    .line 5
     iget-wide v3, v3, Landroidx/exifinterface/media/ExifInterface$Rational;->denominator:J
 
     long-to-int v3, v3
@@ -326,6 +350,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance p1, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
 
@@ -385,6 +410,7 @@
 
     aput-wide p0, v0, v1
 
+    .line 6
     invoke-static {v0, p2}, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;->createULong([JLjava/nio/ByteOrder;)Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
 
     move-result-object p0
@@ -395,6 +421,7 @@
 .method public static createULong([JLjava/nio/ByteOrder;)Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
     .locals 5
 
+    .line 1
     sget-object v0, Landroidx/exifinterface/media/ExifInterface;->IFD_FORMAT_BYTES_PER_FORMAT:[I
 
     const/4 v1, 0x4
@@ -411,8 +438,10 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 3
     array-length p1, p0
 
     const/4 v2, 0x0
@@ -424,12 +453,14 @@
 
     long-to-int v3, v3
 
+    .line 4
     invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance p1, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
 
@@ -455,6 +486,7 @@
 
     aput-object p0, v0, v1
 
+    .line 7
     invoke-static {v0, p1}, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;->createURational([Landroidx/exifinterface/media/ExifInterface$Rational;Ljava/nio/ByteOrder;)Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
 
     move-result-object p0
@@ -465,6 +497,7 @@
 .method public static createURational([Landroidx/exifinterface/media/ExifInterface$Rational;Ljava/nio/ByteOrder;)Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
     .locals 6
 
+    .line 1
     sget-object v0, Landroidx/exifinterface/media/ExifInterface;->IFD_FORMAT_BYTES_PER_FORMAT:[I
 
     const/4 v1, 0x5
@@ -481,8 +514,10 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 3
     array-length p1, p0
 
     const/4 v2, 0x0
@@ -492,12 +527,14 @@
 
     aget-object v3, p0, v2
 
+    .line 4
     iget-wide v4, v3, Landroidx/exifinterface/media/ExifInterface$Rational;->numerator:J
 
     long-to-int v4, v4
 
     invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
+    .line 5
     iget-wide v3, v3, Landroidx/exifinterface/media/ExifInterface$Rational;->denominator:J
 
     long-to-int v3, v3
@@ -508,6 +545,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance p1, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
 
@@ -533,6 +571,7 @@
 
     aput p0, v0, v1
 
+    .line 6
     invoke-static {v0, p1}, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;->createUShort([ILjava/nio/ByteOrder;)Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
 
     move-result-object p0
@@ -543,6 +582,7 @@
 .method public static createUShort([ILjava/nio/ByteOrder;)Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
     .locals 4
 
+    .line 1
     sget-object v0, Landroidx/exifinterface/media/ExifInterface;->IFD_FORMAT_BYTES_PER_FORMAT:[I
 
     const/4 v1, 0x3
@@ -559,8 +599,10 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 3
     array-length p1, p0
 
     const/4 v2, 0x0
@@ -572,12 +614,14 @@
 
     int-to-short v3, v3
 
+    .line 4
     invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance p1, Landroidx/exifinterface/media/ExifInterface$ExifAttribute;
 

@@ -195,14 +195,18 @@
 .method public rethrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/io/Closer;->thrown:Ljava/lang/Throwable;
 
+    .line 3
     const-class p0, Ljava/io/IOException;
 
     invoke-static {p1, p0}, Lcom/google/common/base/Throwables;->propagateIfPossible(Ljava/lang/Throwable;Ljava/lang/Class;)V
 
+    .line 4
     new-instance p0, Ljava/lang/RuntimeException;
 
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -227,16 +231,21 @@
         }
     .end annotation
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     iput-object p1, p0, Lcom/google/common/io/Closer;->thrown:Ljava/lang/Throwable;
 
+    .line 7
     const-class p0, Ljava/io/IOException;
 
     invoke-static {p1, p0}, Lcom/google/common/base/Throwables;->propagateIfPossible(Ljava/lang/Throwable;Ljava/lang/Class;)V
 
+    .line 8
     invoke-static {p1, p2}, Lcom/google/common/base/Throwables;->propagateIfPossible(Ljava/lang/Throwable;Ljava/lang/Class;)V
 
+    .line 9
     new-instance p0, Ljava/lang/RuntimeException;
 
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -265,16 +274,21 @@
         }
     .end annotation
 
+    .line 10
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 11
     iput-object p1, p0, Lcom/google/common/io/Closer;->thrown:Ljava/lang/Throwable;
 
+    .line 12
     const-class p0, Ljava/io/IOException;
 
     invoke-static {p1, p0}, Lcom/google/common/base/Throwables;->propagateIfPossible(Ljava/lang/Throwable;Ljava/lang/Class;)V
 
+    .line 13
     invoke-static {p1, p2, p3}, Lcom/google/common/base/Throwables;->propagateIfPossible(Ljava/lang/Throwable;Ljava/lang/Class;Ljava/lang/Class;)V
 
+    .line 14
     new-instance p0, Ljava/lang/RuntimeException;
 
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

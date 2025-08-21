@@ -36,6 +36,7 @@
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p2, [F
 
     check-cast p3, [F
@@ -50,10 +51,12 @@
 .method public evaluate(F[F[F)[F
     .locals 3
 
+    .line 2
     iget-object p0, p0, Landroidx/transition/FloatArrayEvaluator;->mArray:[F
 
     if-nez p0, :cond_0
 
+    .line 3
     array-length p0, p2
 
     new-array p0, p0, [F
@@ -61,13 +64,16 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 4
     :goto_0
     array-length v1, p0
 
     if-ge v0, v1, :cond_1
 
+    .line 5
     aget v1, p2, v0
 
+    .line 6
     aget v2, p3, v0
 
     sub-float/2addr v2, v1
@@ -76,6 +82,7 @@
 
     add-float/2addr v1, v2
 
+    .line 7
     aput v1, p0, v0
 
     add-int/lit8 v0, v0, 0x1

@@ -33,10 +33,12 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/shootingmode/pro/widget/Histogram;->init(Landroid/util/AttributeSet;)V
 
     return-void
@@ -45,8 +47,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 4
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/shootingmode/pro/widget/Histogram;->init(Landroid/util/AttributeSet;)V
 
     return-void

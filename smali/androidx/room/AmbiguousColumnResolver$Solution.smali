@@ -124,6 +124,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget v0, p0, Landroidx/room/AmbiguousColumnResolver$Solution;->overlaps:I
 
     iget v1, p1, Landroidx/room/AmbiguousColumnResolver$Solution;->overlaps:I
@@ -136,6 +137,7 @@
 
     return v0
 
+    .line 3
     :cond_0
     iget p0, p0, Landroidx/room/AmbiguousColumnResolver$Solution;->coverageOffset:I
 
@@ -151,6 +153,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/room/AmbiguousColumnResolver$Solution;
 
     invoke-virtual {p0, p1}, Landroidx/room/AmbiguousColumnResolver$Solution;->compareTo(Landroidx/room/AmbiguousColumnResolver$Solution;)I

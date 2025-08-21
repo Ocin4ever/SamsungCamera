@@ -39,10 +39,13 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0, p3, p4, p5, p6}, Landroidx/window/embedding/SplitRule;-><init>(IIFI)V
 
+    .line 3
     iput-object p2, p0, Landroidx/window/embedding/SplitPlaceholderRule;->placeholderIntent:Landroid/content/Intent;
 
+    .line 4
     invoke-static {p1}, Lg6/w;->W(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p1
@@ -115,6 +118,7 @@
 
     move-object v4, p2
 
+    .line 1
     invoke-direct/range {v2 .. v8}, Landroidx/window/embedding/SplitPlaceholderRule;-><init>(Ljava/util/Set;Landroid/content/Intent;IIFI)V
 
     return-void

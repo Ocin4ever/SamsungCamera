@@ -63,6 +63,7 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Lists$Partition;->get(I)Ljava/util/List;
 
     move-result-object p0
@@ -80,18 +81,21 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$Partition;->size()I
 
     move-result v0
 
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
 
+    .line 3
     iget v0, p0, Lcom/google/common/collect/Lists$Partition;->size:I
 
     mul-int/2addr p1, v0
 
     add-int/2addr v0, p1
 
+    .line 4
     iget-object v1, p0, Lcom/google/common/collect/Lists$Partition;->list:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -102,6 +106,7 @@
 
     move-result v0
 
+    .line 5
     iget-object p0, p0, Lcom/google/common/collect/Lists$Partition;->list:Ljava/util/List;
 
     invoke-interface {p0, p1, v0}, Ljava/util/List;->subList(II)Ljava/util/List;

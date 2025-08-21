@@ -88,6 +88,7 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 9
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result v0
@@ -113,6 +114,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_0
     invoke-direct {p0, p1, p2, p3, v1}, Landroidx/room/util/TableInfo$Index;-><init>(Ljava/lang/String;ZLjava/util/List;Ljava/util/List;)V
 
@@ -147,16 +149,22 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/room/util/TableInfo$Index;->name:Ljava/lang/String;
 
+    .line 3
     iput-boolean p2, p0, Landroidx/room/util/TableInfo$Index;->unique:Z
 
+    .line 4
     iput-object p3, p0, Landroidx/room/util/TableInfo$Index;->columns:Ljava/util/List;
 
+    .line 5
     iput-object p4, p0, Landroidx/room/util/TableInfo$Index;->orders:Ljava/util/List;
 
+    .line 6
     check-cast p4, Ljava/util/Collection;
 
     invoke-interface {p4}, Ljava/util/Collection;->isEmpty()Z
@@ -165,6 +173,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 7
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result p1
@@ -190,6 +199,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     check-cast p4, Ljava/util/List;
 

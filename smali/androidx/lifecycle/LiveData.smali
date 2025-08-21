@@ -76,14 +76,17 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 10
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroidx/lifecycle/LiveData;->mDataLock:Ljava/lang/Object;
 
+    .line 11
     new-instance v0, Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-direct {v0}, Landroidx/arch/core/internal/SafeIterableMap;-><init>()V
@@ -92,22 +95,27 @@
 
     const/4 v0, 0x0
 
+    .line 12
     iput v0, p0, Landroidx/lifecycle/LiveData;->mActiveCount:I
 
+    .line 13
     sget-object v0, Landroidx/lifecycle/LiveData;->NOT_SET:Ljava/lang/Object;
 
     iput-object v0, p0, Landroidx/lifecycle/LiveData;->mPendingData:Ljava/lang/Object;
 
+    .line 14
     new-instance v1, Landroidx/lifecycle/LiveData$1;
 
     invoke-direct {v1, p0}, Landroidx/lifecycle/LiveData$1;-><init>(Landroidx/lifecycle/LiveData;)V
 
     iput-object v1, p0, Landroidx/lifecycle/LiveData;->mPostValueRunnable:Ljava/lang/Runnable;
 
+    .line 15
     iput-object v0, p0, Landroidx/lifecycle/LiveData;->mData:Ljava/lang/Object;
 
     const/4 v0, -0x1
 
+    .line 16
     iput v0, p0, Landroidx/lifecycle/LiveData;->mVersion:I
 
     return-void
@@ -121,14 +129,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroidx/lifecycle/LiveData;->mDataLock:Ljava/lang/Object;
 
+    .line 3
     new-instance v0, Landroidx/arch/core/internal/SafeIterableMap;
 
     invoke-direct {v0}, Landroidx/arch/core/internal/SafeIterableMap;-><init>()V
@@ -137,20 +148,25 @@
 
     const/4 v0, 0x0
 
+    .line 4
     iput v0, p0, Landroidx/lifecycle/LiveData;->mActiveCount:I
 
+    .line 5
     sget-object v1, Landroidx/lifecycle/LiveData;->NOT_SET:Ljava/lang/Object;
 
     iput-object v1, p0, Landroidx/lifecycle/LiveData;->mPendingData:Ljava/lang/Object;
 
+    .line 6
     new-instance v1, Landroidx/lifecycle/LiveData$1;
 
     invoke-direct {v1, p0}, Landroidx/lifecycle/LiveData$1;-><init>(Landroidx/lifecycle/LiveData;)V
 
     iput-object v1, p0, Landroidx/lifecycle/LiveData;->mPostValueRunnable:Ljava/lang/Runnable;
 
+    .line 7
     iput-object p1, p0, Landroidx/lifecycle/LiveData;->mData:Ljava/lang/Object;
 
+    .line 8
     iput v0, p0, Landroidx/lifecycle/LiveData;->mVersion:I
 
     return-void

@@ -36,24 +36,28 @@
 .method public compare(DD)Lcom/google/common/collect/ComparisonChain;
     .locals 0
 
+    .line 1
     return-object p0
 .end method
 
 .method public compare(FF)Lcom/google/common/collect/ComparisonChain;
     .locals 0
 
+    .line 2
     return-object p0
 .end method
 
 .method public compare(II)Lcom/google/common/collect/ComparisonChain;
     .locals 0
 
+    .line 3
     return-object p0
 .end method
 
 .method public compare(JJ)Lcom/google/common/collect/ComparisonChain;
     .locals 0
 
+    .line 4
     return-object p0
 .end method
 
@@ -70,6 +74,7 @@
         }
     .end annotation
 
+    .line 5
     return-object p0
 .end method
 
@@ -94,6 +99,7 @@
         }
     .end annotation
 
+    .line 6
     return-object p0
 .end method
 

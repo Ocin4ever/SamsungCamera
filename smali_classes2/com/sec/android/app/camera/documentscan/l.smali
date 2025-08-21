@@ -25,26 +25,31 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Landroidx/lifecycle/ViewModel;-><init>()V
 
+    .line 3
     new-instance v0, Landroidx/lifecycle/MutableLiveData;
 
     invoke-direct {v0}, Landroidx/lifecycle/MutableLiveData;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/documentscan/l;->a:Landroidx/lifecycle/MutableLiveData;
 
+    .line 4
     new-instance v0, Landroidx/lifecycle/MutableLiveData;
 
     invoke-direct {v0}, Landroidx/lifecycle/MutableLiveData;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/documentscan/l;->b:Landroidx/lifecycle/MutableLiveData;
 
+    .line 5
     new-instance v0, Landroidx/lifecycle/MutableLiveData;
 
     invoke-direct {v0}, Landroidx/lifecycle/MutableLiveData;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/documentscan/l;->c:Landroidx/lifecycle/MutableLiveData;
 
+    .line 6
     new-instance v0, Landroidx/lifecycle/MutableLiveData;
 
     invoke-direct {v0}, Landroidx/lifecycle/MutableLiveData;-><init>()V
@@ -57,6 +62,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/documentscan/m;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/sec/android/app/camera/documentscan/l;-><init>()V
 
     return-void

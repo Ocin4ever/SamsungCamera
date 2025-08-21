@@ -77,20 +77,24 @@
 
     const-string v0, "ScsApi@UnitConverter"
 
+    .line 1
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v1
 
+    .line 2
     new-instance v2, Lp3/b;
 
     invoke-direct {v2, p0, p1}, Lp3/b;-><init>(Lcom/samsung/android/sdk/scs/ai/text/unit/UnitConverter;Ljava/lang/String;)V
 
+    .line 3
     invoke-interface {v1, v2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
+    .line 4
     :try_start_0
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -106,6 +110,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
     move-object p1, v2
@@ -120,6 +125,7 @@
     :catch_0
     move-exception p0
 
+    .line 6
     :try_start_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -143,6 +149,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 7
     :goto_0
     invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
@@ -153,9 +160,11 @@
 
     const/4 v3, 0x1
 
+    .line 8
     :try_start_2
     invoke-interface {p0, v3}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
+    .line 9
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,9 +192,11 @@
     :goto_1
     return-object p1
 
+    .line 10
     :goto_2
     invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
+    .line 11
     throw p0
 .end method
 
@@ -194,10 +205,12 @@
 
     const-string v0, "ScsApi@UnitConverter"
 
+    .line 12
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v1
 
+    .line 13
     new-instance v8, Lp3/a;
 
     move-object v2, v8
@@ -214,12 +227,14 @@
 
     invoke-direct/range {v2 .. v7}, Lp3/a;-><init>(Lcom/samsung/android/sdk/scs/ai/text/unit/UnitConverter;Ljava/math/BigDecimal;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 14
     invoke-interface {v1, v8}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
+    .line 15
     :try_start_0
     sget-object p2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -235,6 +250,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 16
     invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
     move-object p1, p2
@@ -249,6 +265,7 @@
     :catch_0
     move-exception p0
 
+    .line 17
     :try_start_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -272,6 +289,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 18
     :goto_0
     invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
@@ -282,9 +300,11 @@
 
     const/4 p3, 0x1
 
+    .line 19
     :try_start_2
     invoke-interface {p0, p3}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
+    .line 20
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -312,9 +332,11 @@
     :goto_1
     return-object p1
 
+    .line 21
     :goto_2
     invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
+    .line 22
     throw p0
 .end method
 

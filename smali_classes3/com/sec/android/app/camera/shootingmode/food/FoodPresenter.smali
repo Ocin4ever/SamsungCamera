@@ -61,8 +61,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/food/FoodContract$View;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
+    .line 2
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/food/a;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/food/a;-><init>(Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;)V
@@ -71,24 +73,32 @@
 
     const/4 p1, 0x0
 
+    .line 3
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mPreviewRect:Landroid/graphics/Rect;
 
+    .line 4
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mAeAfManager:Lcom/sec/android/app/camera/interfaces/AeAfManager;
 
     const/4 p1, 0x0
 
+    .line 5
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mFoodRectMinSize:F
 
     const/4 p1, 0x0
 
+    .line 6
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mIsEffectGuideKeepRequired:Z
 
+    .line 7
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mIsFoodDetectAnimationRequired:Z
 
+    .line 8
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mIsMultiTouched:Z
 
+    .line 9
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mIsShownHelpGuide:Z
 
+    .line 10
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter$1;-><init>(Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;)V
@@ -101,8 +111,10 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/food/FoodContract$View;I)V
     .locals 0
 
+    .line 11
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
+    .line 12
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/food/a;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/food/a;-><init>(Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;)V
@@ -111,24 +123,32 @@
 
     const/4 p1, 0x0
 
+    .line 13
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mPreviewRect:Landroid/graphics/Rect;
 
+    .line 14
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mAeAfManager:Lcom/sec/android/app/camera/interfaces/AeAfManager;
 
     const/4 p1, 0x0
 
+    .line 15
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mFoodRectMinSize:F
 
     const/4 p1, 0x0
 
+    .line 16
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mIsEffectGuideKeepRequired:Z
 
+    .line 17
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mIsFoodDetectAnimationRequired:Z
 
+    .line 18
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mIsMultiTouched:Z
 
+    .line 19
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;->mIsShownHelpGuide:Z
 
+    .line 20
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter$1;-><init>(Lcom/sec/android/app/camera/shootingmode/food/FoodPresenter;)V

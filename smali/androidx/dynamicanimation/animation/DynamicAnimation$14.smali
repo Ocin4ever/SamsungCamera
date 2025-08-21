@@ -30,6 +30,7 @@
 .method public getValue(Landroid/view/View;)F
     .locals 0
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
 
     move-result p0
@@ -42,6 +43,7 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$14;->getValue(Landroid/view/View;)F
@@ -56,6 +58,7 @@
 
     float-to-int p0, p2
 
+    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->setScrollY(I)V
 
     return-void
@@ -64,6 +67,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$14;->setValue(Landroid/view/View;F)V

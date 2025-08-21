@@ -57,6 +57,7 @@
 .method public static getExitingExecutorService(Ljava/util/concurrent/ThreadPoolExecutor;)Ljava/util/concurrent/ExecutorService;
     .locals 1
 
+    .line 2
     new-instance v0, Lcom/google/common/util/concurrent/MoreExecutors$Application;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/MoreExecutors$Application;-><init>()V
@@ -71,6 +72,7 @@
 .method public static getExitingExecutorService(Ljava/util/concurrent/ThreadPoolExecutor;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ExecutorService;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/MoreExecutors$Application;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/MoreExecutors$Application;-><init>()V
@@ -85,6 +87,7 @@
 .method public static getExitingScheduledExecutorService(Ljava/util/concurrent/ScheduledThreadPoolExecutor;)Ljava/util/concurrent/ScheduledExecutorService;
     .locals 1
 
+    .line 3
     new-instance v0, Lcom/google/common/util/concurrent/MoreExecutors$Application;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/MoreExecutors$Application;-><init>()V
@@ -99,10 +102,12 @@
 .method public static getExitingScheduledExecutorService(Ljava/util/concurrent/ScheduledThreadPoolExecutor;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledExecutorService;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/MoreExecutors$Application;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/MoreExecutors$Application;-><init>()V
 
+    .line 2
     invoke-virtual {v0, p0, p1, p2, p3}, Lcom/google/common/util/concurrent/MoreExecutors$Application;->getExitingScheduledExecutorService(Ljava/util/concurrent/ScheduledThreadPoolExecutor;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object p0
@@ -456,19 +461,23 @@
 .method public static listeningDecorator(Ljava/util/concurrent/ExecutorService;)Lcom/google/common/util/concurrent/ListeningExecutorService;
     .locals 1
 
+    .line 1
     instance-of v0, p0, Lcom/google/common/util/concurrent/ListeningExecutorService;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lcom/google/common/util/concurrent/ListeningExecutorService;
 
     goto :goto_1
 
+    .line 3
     :cond_0
     instance-of v0, p0, Ljava/util/concurrent/ScheduledExecutorService;
 
     if-eqz v0, :cond_1
 
+    .line 4
     new-instance v0, Lcom/google/common/util/concurrent/MoreExecutors$ScheduledListeningDecorator;
 
     check-cast p0, Ljava/util/concurrent/ScheduledExecutorService;
@@ -477,6 +486,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     new-instance v0, Lcom/google/common/util/concurrent/MoreExecutors$ListeningDecorator;
 
@@ -492,14 +502,17 @@
 .method public static listeningDecorator(Ljava/util/concurrent/ScheduledExecutorService;)Lcom/google/common/util/concurrent/ListeningScheduledExecutorService;
     .locals 1
 
+    .line 6
     instance-of v0, p0, Lcom/google/common/util/concurrent/ListeningScheduledExecutorService;
 
     if-eqz v0, :cond_0
 
+    .line 7
     check-cast p0, Lcom/google/common/util/concurrent/ListeningScheduledExecutorService;
 
     goto :goto_0
 
+    .line 8
     :cond_0
     new-instance v0, Lcom/google/common/util/concurrent/MoreExecutors$ScheduledListeningDecorator;
 
@@ -695,10 +708,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     new-instance v0, Lcom/google/common/util/concurrent/MoreExecutors$2;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/util/concurrent/MoreExecutors$2;-><init>(Ljava/util/concurrent/Executor;Lcom/google/common/base/Supplier;)V
@@ -719,10 +735,13 @@
         }
     .end annotation
 
+    .line 4
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     new-instance v0, Lcom/google/common/util/concurrent/MoreExecutors$3;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/util/concurrent/MoreExecutors$3;-><init>(Ljava/util/concurrent/ExecutorService;Lcom/google/common/base/Supplier;)V
@@ -743,10 +762,13 @@
         }
     .end annotation
 
+    .line 7
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 8
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 9
     new-instance v0, Lcom/google/common/util/concurrent/MoreExecutors$4;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/util/concurrent/MoreExecutors$4;-><init>(Ljava/util/concurrent/ScheduledExecutorService;Lcom/google/common/base/Supplier;)V

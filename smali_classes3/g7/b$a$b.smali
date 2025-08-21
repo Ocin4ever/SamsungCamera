@@ -43,6 +43,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lg7/b$a$b;->invoke(Ljava/lang/Throwable;)V
@@ -55,10 +56,12 @@
 .method public final invoke(Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 2
     invoke-static {}, Lg7/b;->l()Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     move-result-object p1
 
+    .line 3
     iget-object v0, p0, Lg7/b$a$b;->a:Lg7/b;
 
     iget-object v1, p0, Lg7/b$a$b;->b:Lg7/b$a;
@@ -67,6 +70,7 @@
 
     invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 4
     iget-object p1, p0, Lg7/b$a$b;->a:Lg7/b;
 
     iget-object p0, p0, Lg7/b$a$b;->b:Lg7/b$a;

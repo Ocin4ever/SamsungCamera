@@ -45,40 +45,48 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
+    .line 10
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
+    .line 11
     iput-boolean p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPendingSpanCountChange:Z
 
     const/4 p1, -0x1
 
+    .line 12
     iput p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
+    .line 13
     new-instance p1, Landroid/util/SparseIntArray;
 
     invoke-direct {p1}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanSizeCache:Landroid/util/SparseIntArray;
 
+    .line 14
     new-instance p1, Landroid/util/SparseIntArray;
 
     invoke-direct {p1}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanIndexCache:Landroid/util/SparseIntArray;
 
+    .line 15
     new-instance p1, Landroidx/recyclerview/widget/GridLayoutManager$DefaultSpanSizeLookup;
 
     invoke-direct {p1}, Landroidx/recyclerview/widget/GridLayoutManager$DefaultSpanSizeLookup;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
+    .line 16
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mDecorInsets:Landroid/graphics/Rect;
 
+    .line 17
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/GridLayoutManager;->setSpanCount(I)V
 
     return-void
@@ -87,40 +95,48 @@
 .method public constructor <init>(Landroid/content/Context;IIZ)V
     .locals 0
 
+    .line 18
     invoke-direct {p0, p1, p3, p4}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
 
     const/4 p1, 0x0
 
+    .line 19
     iput-boolean p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPendingSpanCountChange:Z
 
     const/4 p1, -0x1
 
+    .line 20
     iput p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
+    .line 21
     new-instance p1, Landroid/util/SparseIntArray;
 
     invoke-direct {p1}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanSizeCache:Landroid/util/SparseIntArray;
 
+    .line 22
     new-instance p1, Landroid/util/SparseIntArray;
 
     invoke-direct {p1}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanIndexCache:Landroid/util/SparseIntArray;
 
+    .line 23
     new-instance p1, Landroidx/recyclerview/widget/GridLayoutManager$DefaultSpanSizeLookup;
 
     invoke-direct {p1}, Landroidx/recyclerview/widget/GridLayoutManager$DefaultSpanSizeLookup;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
+    .line 24
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mDecorInsets:Landroid/graphics/Rect;
 
+    .line 25
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/GridLayoutManager;->setSpanCount(I)V
 
     return-void
@@ -129,44 +145,53 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPendingSpanCountChange:Z
 
     const/4 v0, -0x1
 
+    .line 3
     iput v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
 
+    .line 4
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanSizeCache:Landroid/util/SparseIntArray;
 
+    .line 5
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mPreLayoutSpanIndexCache:Landroid/util/SparseIntArray;
 
+    .line 6
     new-instance v0, Landroidx/recyclerview/widget/GridLayoutManager$DefaultSpanSizeLookup;
 
     invoke-direct {v0}, Landroidx/recyclerview/widget/GridLayoutManager$DefaultSpanSizeLookup;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanSizeLookup:Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;
 
+    .line 7
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mDecorInsets:Landroid/graphics/Rect;
 
+    .line 8
     invoke-static {p1, p2, p3, p4}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getProperties(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroidx/recyclerview/widget/RecyclerView$LayoutManager$Properties;
 
     move-result-object p1
 
+    .line 9
     iget p1, p1, Landroidx/recyclerview/widget/RecyclerView$LayoutManager$Properties;->spanCount:I
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/GridLayoutManager;->setSpanCount(I)V
@@ -286,6 +311,7 @@
 .method private calculateItemBorders(I)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mCachedBorders:[I
 
     iget v1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->mSpanCount:I
@@ -306,6 +332,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     array-length v1, p0
 
     add-int/lit8 v2, p1, 0x1
@@ -323,15 +350,19 @@
     :cond_0
     add-int/lit8 p0, p1, 0x1
 
+    .line 3
     new-array p0, p0, [I
 
     :cond_1
     const/4 v1, 0x0
 
+    .line 4
     aput v1, p0, v1
 
+    .line 5
     div-int v2, p2, p1
 
+    .line 6
     rem-int/2addr p2, p1
 
     move v3, v1
@@ -359,6 +390,7 @@
     :goto_1
     add-int/2addr v3, v4
 
+    .line 7
     aput v3, p0, v0
 
     add-int/lit8 v0, v0, 0x1
@@ -1580,6 +1612,7 @@
 .method public generateLayoutParams(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
     .locals 0
 
+    .line 1
     new-instance p0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -1590,10 +1623,12 @@
 .method public generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
     .locals 0
 
+    .line 2
     instance-of p0, p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
     if-eqz p0, :cond_0
 
+    .line 3
     new-instance p0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
@@ -1602,6 +1637,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance p0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;
 

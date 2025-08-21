@@ -2003,6 +2003,7 @@
 .method private notifySpecificState(Ljava/lang/String;)V
     .locals 3
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -2070,10 +2071,12 @@
 
     const-string p1, "notifySpecificState : invalid state key!"
 
+    .line 4
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
+    .line 5
     :pswitch_0
     iget-object v0, p0, Lcom/sec/android/app/camera/watch/AbstractRemoteController;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -2097,6 +2100,7 @@
 
     goto :goto_2
 
+    .line 6
     :pswitch_1
     iget-object v0, p0, Lcom/sec/android/app/camera/watch/AbstractRemoteController;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
 
@@ -2116,6 +2120,7 @@
 
     goto :goto_2
 
+    .line 7
     :pswitch_2
     iget-object v0, p0, Lcom/sec/android/app/camera/watch/AbstractRemoteController;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
 
@@ -2219,6 +2224,7 @@
 .method private notifyThumbnailUpdated()V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/watch/AbstractRemoteController;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getBackgroundHandler()Landroid/os/Handler;
@@ -3464,6 +3470,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/watch/AbstractRemoteController;->isNotifyAvailable(Z)Z
 
     move-result v0
@@ -3472,6 +3479,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/sec/android/app/camera/watch/AbstractRemoteController;->mCameraControlService:Lcom/sec/android/app/camera/watch/CameraControlService;
 
@@ -3483,6 +3491,7 @@
 .method public notifyThumbnailUpdated(Landroid/graphics/Bitmap;IZ)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/watch/AbstractRemoteController;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getBackgroundHandler()Landroid/os/Handler;

@@ -131,6 +131,7 @@
 .method private final startActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
     .locals 4
 
+    .line 9
     iget-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;->teView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -141,6 +142,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 10
     iget-object v2, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;->teView:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->isAttachedToWindow()Z
@@ -151,6 +153,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;->teView:Landroid/view/View;
@@ -166,6 +169,7 @@
 
     goto :goto_0
 
+    .line 12
     :catch_0
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;->TAG:Ljava/lang/String;
 
@@ -179,6 +183,7 @@
 
     goto :goto_1
 
+    .line 13
     :catch_1
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;->teView:Landroid/view/View;
 
@@ -268,6 +273,7 @@
 
     invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v6, v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;->textActionModeCallback:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback;
 
     move/from16 v7, p8
@@ -276,20 +282,27 @@
 
     invoke-virtual/range {v6 .. v11}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback;->startActionMode(ZLjava/util/ArrayList;Landroid/graphics/Rect;Landroid/graphics/Rect;Z)V
 
+    .line 2
     iput-object v1, v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;->languageTag:Ljava/lang/String;
 
+    .line 3
     iput-object v3, v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;->leftTextFromSelectedText:Ljava/lang/String;
 
+    .line 4
     iput-object v4, v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;->rightTextFromSelectedText:Ljava/lang/String;
 
+    .line 5
     iget-object v5, v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;->textClassificationHelper:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextClassificationHelper;
 
     invoke-virtual {v5, v3, v4, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextClassificationHelper;->setSelectedTextInformation(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 6
     iget-object v1, v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;->textClassificationHelper:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextClassificationHelper;
 
+    .line 7
     iget-object v3, v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;->textActionModeCallback:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextActionModeCallback;
 
+    .line 8
     new-instance v4, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper$startActionMode$1;
 
     invoke-direct {v4, p0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper$startActionMode$1;-><init>(Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextExtractionActionModeHelper;)V

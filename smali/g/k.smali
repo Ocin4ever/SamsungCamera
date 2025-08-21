@@ -13,16 +13,19 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lg/j;->h:Lg/j;
 
     invoke-direct {p0, v0}, Lg/e;-><init>(Lg/j;)V
 
+    .line 2
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lg/k;->e:Ljava/util/List;
 
+    .line 3
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
@@ -35,16 +38,19 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 4
     sget-object v0, Lg/j;->h:Lg/j;
 
     invoke-direct {p0, v0}, Lg/e;-><init>(Lg/j;)V
 
+    .line 5
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lg/k;->e:Ljava/util/List;
 
+    .line 6
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0, p1}, Ljava/util/LinkedHashMap;-><init>(I)V

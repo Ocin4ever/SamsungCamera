@@ -36,6 +36,7 @@
 .method public frameworkGet(Landroid/view/View;)Ljava/lang/CharSequence;
     .locals 0
 
+    .line 2
     invoke-static {p1}, Landroidx/core/view/ViewCompat$Api30Impl;->getStateDescription(Landroid/view/View;)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -46,6 +47,7 @@
 .method public bridge synthetic frameworkGet(Landroid/view/View;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/core/view/ViewCompat$3;->frameworkGet(Landroid/view/View;)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -56,6 +58,7 @@
 .method public frameworkSet(Landroid/view/View;Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 2
     invoke-static {p1, p2}, Landroidx/core/view/ViewCompat$Api30Impl;->setStateDescription(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     return-void
@@ -64,6 +67,7 @@
 .method public bridge synthetic frameworkSet(Landroid/view/View;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p2, Ljava/lang/CharSequence;
 
     invoke-virtual {p0, p1, p2}, Landroidx/core/view/ViewCompat$3;->frameworkSet(Landroid/view/View;Ljava/lang/CharSequence;)V
@@ -74,6 +78,7 @@
 .method public shouldUpdate(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
     .locals 0
 
+    .line 2
     invoke-static {p1, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -86,6 +91,7 @@
 .method public bridge synthetic shouldUpdate(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/CharSequence;
 
     check-cast p2, Ljava/lang/CharSequence;

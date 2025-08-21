@@ -57,6 +57,7 @@
         }
     .end annotation
 
+    .line 2
     move v7, p1
 
     move v8, p2
@@ -471,6 +472,7 @@
         }
     .end annotation
 
+    .line 3
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v1, 0x3
@@ -552,6 +554,7 @@
         }
     .end annotation
 
+    .line 4
     if-nez p2, :cond_0
 
     return-void
@@ -615,6 +618,7 @@
         }
     .end annotation
 
+    .line 5
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -657,6 +661,7 @@
 .method public a()Lco/polarr/mgcsc/f/h/l;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lco/polarr/mgcsc/v2/apis/PolarrSmartCrop;->b:Lco/polarr/mgcsc/f/h/l;
 
     return-object p0
@@ -1284,6 +1289,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lco/polarr/mgcsc/v2/apis/PolarrSmartCrop;->a:Ljava/lang/Object;
 
     monitor-enter v0
@@ -1568,6 +1574,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v0, "getTopScoreCrops:"
@@ -2037,6 +2044,7 @@
 .method public init(Landroid/content/Context;)Z
     .locals 1
 
+    .line 1
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lco/polarr/mgcsc/v2/apis/PolarrSmartCrop;->init(Landroid/content/Context;Z)Z
@@ -2049,6 +2057,7 @@
 .method public init(Landroid/content/Context;Z)Z
     .locals 1
 
+    .line 2
     const-string v0, "/system/saiv/best_composition_db/SmartCrop.polarr.db"
 
     invoke-virtual {p0, p1, v0, p2}, Lco/polarr/mgcsc/v2/apis/PolarrSmartCrop;->poInit(Landroid/content/Context;Ljava/lang/String;Z)Z

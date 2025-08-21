@@ -207,6 +207,7 @@
 
     return-object p0
 
+    .line 1
     :pswitch_0
     new-instance p0, Landroidx/constraintlayout/core/state/f;
 
@@ -214,6 +215,7 @@
 
     return-object p0
 
+    .line 2
     :pswitch_1
     new-instance p0, Landroidx/constraintlayout/core/state/g;
 
@@ -221,6 +223,7 @@
 
     return-object p0
 
+    .line 3
     :pswitch_2
     new-instance p0, Landroidx/constraintlayout/core/state/h;
 
@@ -228,6 +231,7 @@
 
     return-object p0
 
+    .line 4
     :pswitch_3
     new-instance p0, Landroidx/constraintlayout/core/state/e;
 
@@ -235,6 +239,7 @@
 
     return-object p0
 
+    .line 5
     :pswitch_4
     new-instance p0, Landroidx/constraintlayout/core/state/d;
 
@@ -242,6 +247,7 @@
 
     return-object p0
 
+    .line 6
     :pswitch_5
     new-instance p0, Landroidx/constraintlayout/core/state/c;
 
@@ -249,6 +255,7 @@
 
     return-object p0
 
+    .line 7
     :pswitch_6
     new-instance p0, Landroidx/constraintlayout/core/state/b;
 
@@ -256,6 +263,7 @@
 
     return-object p0
 
+    .line 8
     :pswitch_7
     new-instance p0, Landroidx/constraintlayout/core/state/a;
 
@@ -281,6 +289,7 @@
 .method private getWidgetState(Ljava/lang/String;)Landroidx/constraintlayout/core/state/Transition$WidgetState;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Transition;->state:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -295,6 +304,7 @@
 .method private getWidgetState(Ljava/lang/String;Landroidx/constraintlayout/core/widgets/ConstraintWidget;I)Landroidx/constraintlayout/core/state/Transition$WidgetState;
     .locals 3
 
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/core/state/Transition;->state:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -305,22 +315,26 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance v0, Landroidx/constraintlayout/core/state/Transition$WidgetState;
 
     invoke-direct {v0}, Landroidx/constraintlayout/core/state/Transition$WidgetState;-><init>()V
 
+    .line 4
     iget-object v1, p0, Landroidx/constraintlayout/core/state/Transition;->mBundle:Landroidx/constraintlayout/core/motion/utils/TypedBundle;
 
     iget-object v2, v0, Landroidx/constraintlayout/core/state/Transition$WidgetState;->motionControl:Landroidx/constraintlayout/core/motion/Motion;
 
     invoke-virtual {v1, v2}, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->applyDelta(Landroidx/constraintlayout/core/motion/utils/TypedValues;)V
 
+    .line 5
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Transition;->state:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p2, :cond_0
 
+    .line 6
     invoke-virtual {v0, p2, p3}, Landroidx/constraintlayout/core/state/Transition$WidgetState;->update(Landroidx/constraintlayout/core/widgets/ConstraintWidget;I)V
 
     :cond_0
@@ -568,6 +582,7 @@
 .method public addKeyPosition(Ljava/lang/String;IIFF)V
     .locals 8
 
+    .line 2
     new-instance v0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;
 
     invoke-direct {v0}, Landroidx/constraintlayout/core/motion/utils/TypedBundle;-><init>()V
@@ -576,30 +591,36 @@
 
     const/4 v2, 0x2
 
+    .line 3
     invoke-virtual {v0, v1, v2}, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->add(II)V
 
     const/16 v1, 0x64
 
+    .line 4
     invoke-virtual {v0, v1, p2}, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->add(II)V
 
     const/16 v1, 0x1fa
 
+    .line 5
     invoke-virtual {v0, v1, p4}, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->add(IF)V
 
     const/16 v1, 0x1fb
 
+    .line 6
     invoke-virtual {v0, v1, p5}, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->add(IF)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
+    .line 7
     invoke-direct {p0, p1, v1, v2}, Landroidx/constraintlayout/core/state/Transition;->getWidgetState(Ljava/lang/String;Landroidx/constraintlayout/core/widgets/ConstraintWidget;I)Landroidx/constraintlayout/core/state/Transition$WidgetState;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroidx/constraintlayout/core/state/Transition$WidgetState;->setKeyPosition(Landroidx/constraintlayout/core/motion/utils/TypedBundle;)V
 
+    .line 8
     new-instance v0, Landroidx/constraintlayout/core/state/Transition$KeyPosition;
 
     move-object v2, v0
@@ -616,6 +637,7 @@
 
     invoke-direct/range {v2 .. v7}, Landroidx/constraintlayout/core/state/Transition$KeyPosition;-><init>(Ljava/lang/String;IIFF)V
 
+    .line 9
     iget-object p3, p0, Landroidx/constraintlayout/core/state/Transition;->keyPositions:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -630,10 +652,12 @@
 
     if-nez p3, :cond_0
 
+    .line 10
     new-instance p3, Ljava/util/HashMap;
 
     invoke-direct {p3}, Ljava/util/HashMap;-><init>()V
 
+    .line 11
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Transition;->keyPositions:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -642,6 +666,7 @@
 
     invoke-virtual {p0, p2, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 12
     :cond_0
     invoke-virtual {p3, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -655,6 +680,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0, v1}, Landroidx/constraintlayout/core/state/Transition;->getWidgetState(Ljava/lang/String;Landroidx/constraintlayout/core/widgets/ConstraintWidget;I)Landroidx/constraintlayout/core/state/Transition$WidgetState;
 
     move-result-object p0
@@ -844,6 +870,7 @@
 .method public getEnd(Landroidx/constraintlayout/core/widgets/ConstraintWidget;)Landroidx/constraintlayout/core/state/WidgetFrame;
     .locals 2
 
+    .line 3
     iget-object p1, p1, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->stringId:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -862,6 +889,7 @@
 .method public getEnd(Ljava/lang/String;)Landroidx/constraintlayout/core/state/WidgetFrame;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Transition;->state:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -876,6 +904,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Transition$WidgetState;->end:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -893,6 +922,7 @@
 .method public getInterpolated(Landroidx/constraintlayout/core/widgets/ConstraintWidget;)Landroidx/constraintlayout/core/state/WidgetFrame;
     .locals 2
 
+    .line 3
     iget-object p1, p1, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->stringId:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -911,6 +941,7 @@
 .method public getInterpolated(Ljava/lang/String;)Landroidx/constraintlayout/core/state/WidgetFrame;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Transition;->state:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -925,6 +956,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Transition$WidgetState;->interpolated:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -934,6 +966,7 @@
 .method public getInterpolator()Landroidx/constraintlayout/core/state/Interpolator;
     .locals 1
 
+    .line 9
     iget v0, p0, Landroidx/constraintlayout/core/state/Transition;->mDefaultInterpolator:I
 
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Transition;->mDefaultInterpolatorString:Ljava/lang/String;
@@ -1057,6 +1090,7 @@
 .method public getStart(Landroidx/constraintlayout/core/widgets/ConstraintWidget;)Landroidx/constraintlayout/core/state/WidgetFrame;
     .locals 2
 
+    .line 3
     iget-object p1, p1, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->stringId:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -1075,6 +1109,7 @@
 .method public getStart(Ljava/lang/String;)Landroidx/constraintlayout/core/state/WidgetFrame;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Transition;->state:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1089,6 +1124,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Transition$WidgetState;->start:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -1203,6 +1239,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 3
     iput p2, p0, Landroidx/constraintlayout/core/state/Transition;->mStagger:F
 
     :cond_0
@@ -1214,6 +1251,7 @@
 .method public setValue(II)Z
     .locals 0
 
+    .line 1
     const/4 p0, 0x0
 
     return p0
@@ -1226,6 +1264,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 4
     iput-object p2, p0, Landroidx/constraintlayout/core/state/Transition;->mDefaultInterpolatorString:Ljava/lang/String;
 
     invoke-static {p2}, Landroidx/constraintlayout/core/motion/utils/Easing;->getInterpolator(Ljava/lang/String;)Landroidx/constraintlayout/core/motion/utils/Easing;
@@ -1243,6 +1282,7 @@
 .method public setValue(IZ)Z
     .locals 0
 
+    .line 2
     const/4 p0, 0x0
 
     return p0

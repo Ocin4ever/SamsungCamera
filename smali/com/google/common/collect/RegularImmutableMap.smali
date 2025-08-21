@@ -112,6 +112,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, p1, v0}, Lcom/google/common/collect/RegularImmutableMap;->create(I[Ljava/lang/Object;Lcom/google/common/collect/ImmutableMap$Builder;)Lcom/google/common/collect/RegularImmutableMap;
 
     move-result-object p0
@@ -138,6 +139,7 @@
 
     if-nez p0, :cond_0
 
+    .line 2
     sget-object p0, Lcom/google/common/collect/RegularImmutableMap;->EMPTY:Lcom/google/common/collect/ImmutableMap;
 
     check-cast p0, Lcom/google/common/collect/RegularImmutableMap;
@@ -151,16 +153,20 @@
 
     if-ne p0, v1, :cond_1
 
+    .line 3
     aget-object p0, p1, v0
 
+    .line 4
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     aget-object p2, p1, v1
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-static {p0, p2}, Lcom/google/common/collect/CollectPreconditions;->checkEntryNotNull(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 6
     new-instance p0, Lcom/google/common/collect/RegularImmutableMap;
 
     const/4 p2, 0x0
@@ -169,6 +175,7 @@
 
     return-object p0
 
+    .line 7
     :cond_1
     array-length v2, p1
 
@@ -176,32 +183,40 @@
 
     invoke-static {p0, v2}, Lcom/google/common/base/Preconditions;->checkPositionIndex(II)I
 
+    .line 8
     invoke-static {p0}, Lcom/google/common/collect/ImmutableSet;->chooseTableSize(I)I
 
     move-result v2
 
+    .line 9
     invoke-static {p1, p0, v2, v0}, Lcom/google/common/collect/RegularImmutableMap;->createHashTable([Ljava/lang/Object;III)Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 10
     instance-of v3, v2, [Ljava/lang/Object;
 
     if-eqz v3, :cond_3
 
+    .line 11
     check-cast v2, [Ljava/lang/Object;
 
     const/4 p0, 0x2
 
+    .line 12
     aget-object p0, v2, p0
 
     check-cast p0, Lcom/google/common/collect/ImmutableMap$Builder$DuplicateKey;
 
     if-eqz p2, :cond_2
 
+    .line 13
     iput-object p0, p2, Lcom/google/common/collect/ImmutableMap$Builder;->duplicateKey:Lcom/google/common/collect/ImmutableMap$Builder$DuplicateKey;
 
+    .line 14
     aget-object p0, v2, v0
 
+    .line 15
     aget-object p2, v2, v1
 
     check-cast p2, Ljava/lang/Integer;
@@ -212,6 +227,7 @@
 
     mul-int/lit8 v0, p2, 0x2
 
+    .line 16
     invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object p1
@@ -222,6 +238,7 @@
 
     goto :goto_0
 
+    .line 17
     :cond_2
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap$Builder$DuplicateKey;->exception()Ljava/lang/IllegalArgumentException;
 
@@ -229,6 +246,7 @@
 
     throw p0
 
+    .line 18
     :cond_3
     :goto_0
     new-instance p2, Lcom/google/common/collect/RegularImmutableMap;
@@ -691,6 +709,7 @@
 
     if-ne p2, v1, :cond_2
 
+    .line 2
     aget-object p0, p1, p3
 
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -703,6 +722,7 @@
 
     xor-int/lit8 p0, p3, 0x1
 
+    .line 3
     aget-object v0, p1, p0
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -715,19 +735,23 @@
 
     return-object v0
 
+    .line 4
     :cond_3
     instance-of p2, p0, [B
 
     if-eqz p2, :cond_6
 
+    .line 5
     move-object p2, p0
 
     check-cast p2, [B
 
+    .line 6
     array-length p0, p2
 
     add-int/lit8 p3, p0, -0x1
 
+    .line 7
     invoke-virtual {p4}, Ljava/lang/Object;->hashCode()I
 
     move-result p0
@@ -739,6 +763,7 @@
     :goto_0
     and-int/2addr p0, p3
 
+    .line 8
     aget-byte v2, p2, p0
 
     const/16 v3, 0xff
@@ -749,6 +774,7 @@
 
     return-object v0
 
+    .line 9
     :cond_4
     aget-object v3, p1, v2
 
@@ -760,6 +786,7 @@
 
     xor-int/lit8 p0, v2, 0x1
 
+    .line 10
     aget-object p0, p1, p0
 
     return-object p0
@@ -769,19 +796,23 @@
 
     goto :goto_0
 
+    .line 11
     :cond_6
     instance-of p2, p0, [S
 
     if-eqz p2, :cond_9
 
+    .line 12
     move-object p2, p0
 
     check-cast p2, [S
 
+    .line 13
     array-length p0, p2
 
     add-int/lit8 p3, p0, -0x1
 
+    .line 14
     invoke-virtual {p4}, Ljava/lang/Object;->hashCode()I
 
     move-result p0
@@ -793,6 +824,7 @@
     :goto_1
     and-int/2addr p0, p3
 
+    .line 15
     aget-short v2, p2, p0
 
     const v3, 0xffff
@@ -803,6 +835,7 @@
 
     return-object v0
 
+    .line 16
     :cond_7
     aget-object v3, p1, v2
 
@@ -814,6 +847,7 @@
 
     xor-int/lit8 p0, v2, 0x1
 
+    .line 17
     aget-object p0, p1, p0
 
     return-object p0
@@ -823,13 +857,16 @@
 
     goto :goto_1
 
+    .line 18
     :cond_9
     check-cast p0, [I
 
+    .line 19
     array-length p2, p0
 
     sub-int/2addr p2, v1
 
+    .line 20
     invoke-virtual {p4}, Ljava/lang/Object;->hashCode()I
 
     move-result p3
@@ -841,6 +878,7 @@
     :goto_2
     and-int/2addr p3, p2
 
+    .line 21
     aget v2, p0, p3
 
     const/4 v3, -0x1
@@ -849,6 +887,7 @@
 
     return-object v0
 
+    .line 22
     :cond_a
     aget-object v3, p1, v2
 
@@ -860,6 +899,7 @@
 
     xor-int/lit8 p0, v2, 0x1
 
+    .line 23
     aget-object p0, p1, p0
 
     return-object p0
@@ -956,6 +996,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/RegularImmutableMap;->hashTable:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/google/common/collect/RegularImmutableMap;->alternatingKeysAndValues:[Ljava/lang/Object;

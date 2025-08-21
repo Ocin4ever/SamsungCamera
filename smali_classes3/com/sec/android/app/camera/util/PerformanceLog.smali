@@ -188,6 +188,7 @@
 .method public static log(Ljava/lang/String;)V
     .locals 3
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -222,6 +223,7 @@
 .method public static log(Ljava/lang/String;IZ)V
     .locals 1
 
+    .line 4
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -236,6 +238,7 @@
 .method public static log(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,6 +267,7 @@
 
     const-string p1, "CameraPerformance"
 
+    .line 2
     invoke-static {p1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -274,6 +278,7 @@
 
     const-string v0, ""
 
+    .line 30
     invoke-static {p0, p1, p2, v0}, Lcom/sec/android/app/camera/util/PerformanceLog;->log(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
     return-void
@@ -282,6 +287,7 @@
 .method public static log(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
     .locals 5
 
+    .line 5
     sget-object v0, Lcom/sec/android/app/camera/util/PerformanceLog;->mLoggingDurationMap:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
@@ -300,10 +306,12 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/PerformanceLog;->mLoggingDurationMap:Ljava/util/HashMap;
 
+    .line 6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
+    .line 7
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -320,6 +328,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 8
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -338,6 +347,7 @@
 
     move-result-object p0
 
+    .line 9
     sget-object p2, Lcom/sec/android/app/camera/util/PerformanceLog;->mLoggingDurationMap:Ljava/util/HashMap;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -348,6 +358,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_0
     sget-object p2, Lcom/sec/android/app/camera/util/PerformanceLog;->mLoggingDurationMap:Ljava/util/HashMap;
 
@@ -357,6 +368,7 @@
 
     check-cast p2, Ljava/lang/Long;
 
+    .line 11
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -377,12 +389,14 @@
 
     if-eqz p2, :cond_1
 
+    .line 12
     invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v3
 
     sub-long/2addr v0, v3
 
+    .line 13
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -401,6 +415,7 @@
 
     move-result-object p0
 
+    .line 14
     sget-object p2, Lcom/sec/android/app/camera/util/PerformanceLog;->mLoggingDurationMap:Ljava/util/HashMap;
 
     invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -409,12 +424,14 @@
     :goto_0
     const-string p1, ""
 
+    .line 15
     invoke-virtual {p1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
+    .line 16
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -434,6 +451,7 @@
     :cond_2
     const-string p1, "CameraPerformance"
 
+    .line 17
     invoke-static {p1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -444,6 +462,7 @@
 
     const-string v0, ""
 
+    .line 18
     invoke-static {p0, p1, v0}, Lcom/sec/android/app/camera/util/PerformanceLog;->log(Ljava/lang/String;ZLjava/lang/String;)V
 
     return-void
@@ -452,6 +471,7 @@
 .method public static log(Ljava/lang/String;ZLjava/lang/String;)V
     .locals 6
 
+    .line 19
     sget-object v0, Lcom/sec/android/app/camera/util/PerformanceLog;->mLoggingDurationMap:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
@@ -470,6 +490,7 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/PerformanceLog;->mLoggingDurationMap:Ljava/util/HashMap;
 
+    .line 20
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -478,6 +499,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 21
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -498,6 +520,7 @@
 
     goto :goto_0
 
+    .line 22
     :cond_0
     sget-object p1, Lcom/sec/android/app/camera/util/PerformanceLog;->mLoggingDurationMap:Ljava/util/HashMap;
 
@@ -507,6 +530,7 @@
 
     check-cast p1, Ljava/lang/Long;
 
+    .line 23
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -527,12 +551,14 @@
 
     if-eqz p1, :cond_1
 
+    .line 24
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
 
     sub-long v4, v0, v4
 
+    .line 25
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -559,12 +585,14 @@
     :goto_0
     const-string v2, ""
 
+    .line 26
     invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
+    .line 27
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -584,8 +612,10 @@
     :cond_2
     const-string p2, "CameraPerformance"
 
+    .line 28
     invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 29
     sget-object p1, Lcom/sec/android/app/camera/util/PerformanceLog;->mLoggingDurationMap:Ljava/util/HashMap;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;

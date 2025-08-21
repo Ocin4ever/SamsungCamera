@@ -327,6 +327,7 @@
 .method public bridge synthetic add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$Builder;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     move-result-object p0
@@ -337,6 +338,7 @@
 .method public bridge synthetic add([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$Builder;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->add([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     move-result-object p0
@@ -347,6 +349,7 @@
 .method public bridge synthetic add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMultiset$Builder;
     .locals 0
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     move-result-object p0
@@ -357,6 +360,7 @@
 .method public bridge synthetic add([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMultiset$Builder;
     .locals 0
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->add([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     move-result-object p0
@@ -376,6 +380,7 @@
 
     const/4 v0, 0x1
 
+    .line 5
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->addCopies(Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     move-result-object p0
@@ -393,6 +398,7 @@
         }
     .end annotation
 
+    .line 6
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -402,6 +408,7 @@
 
     aget-object v2, p1, v1
 
+    .line 7
     invoke-virtual {p0, v2}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     add-int/lit8 v1, v1, 0x1
@@ -415,6 +422,7 @@
 .method public bridge synthetic addAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableCollection$Builder;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->addAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     move-result-object p0
@@ -425,6 +433,7 @@
 .method public bridge synthetic addAll(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableCollection$Builder;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->addAll(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     move-result-object p0
@@ -435,6 +444,7 @@
 .method public bridge synthetic addAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableMultiset$Builder;
     .locals 0
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->addAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     move-result-object p0
@@ -445,6 +455,7 @@
 .method public bridge synthetic addAll(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableMultiset$Builder;
     .locals 0
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->addAll(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     move-result-object p0
@@ -464,10 +475,12 @@
         }
     .end annotation
 
+    .line 5
     instance-of v0, p1, Lcom/google/common/collect/Multiset;
 
     if-eqz v0, :cond_0
 
+    .line 6
     check-cast p1, Lcom/google/common/collect/Multiset;
 
     invoke-interface {p1}, Lcom/google/common/collect/Multiset;->entrySet()Ljava/util/Set;
@@ -491,6 +504,7 @@
 
     check-cast v0, Lcom/google/common/collect/Multiset$Entry;
 
+    .line 7
     invoke-interface {v0}, Lcom/google/common/collect/Multiset$Entry;->getElement()Ljava/lang/Object;
 
     move-result-object v1
@@ -503,6 +517,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -519,6 +534,7 @@
 
     move-result-object v0
 
+    .line 9
     invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     goto :goto_1
@@ -539,6 +555,7 @@
         }
     .end annotation
 
+    .line 10
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -546,6 +563,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 11
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -561,6 +579,7 @@
 .method public bridge synthetic addCopies(Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableMultiset$Builder;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->addCopies(Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     move-result-object p0
@@ -578,31 +597,37 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "occurrences"
 
+    .line 3
     invoke-static {p2, v0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
     if-nez p2, :cond_0
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->maintenance()V
 
+    .line 5
     iget-object v0, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->elements:[Ljava/lang/Object;
 
     iget v1, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->length:I
 
     aput-object p1, v0, v1
 
+    .line 6
     iget-object p1, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->counts:[I
 
     aput p2, p1, v1
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 7
     iput v1, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->length:I
 
     return-object p0
@@ -611,6 +636,7 @@
 .method public bridge synthetic build()Lcom/google/common/collect/ImmutableCollection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->build()Lcom/google/common/collect/ImmutableSortedMultiset;
 
     move-result-object p0
@@ -621,6 +647,7 @@
 .method public bridge synthetic build()Lcom/google/common/collect/ImmutableMultiset;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->build()Lcom/google/common/collect/ImmutableSortedMultiset;
 
     move-result-object p0
@@ -638,12 +665,15 @@
         }
     .end annotation
 
+    .line 3
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->dedupAndCoalesceAndDeleteEmpty()V
 
+    .line 4
     iget v0, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->length:I
 
     if-nez v0, :cond_0
 
+    .line 5
     iget-object p0, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->comparator:Ljava/util/Comparator;
 
     invoke-static {p0}, Lcom/google/common/collect/ImmutableSortedMultiset;->emptyMultiset(Ljava/util/Comparator;)Lcom/google/common/collect/ImmutableSortedMultiset;
@@ -652,17 +682,20 @@
 
     return-object p0
 
+    .line 6
     :cond_0
     iget-object v1, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->comparator:Ljava/util/Comparator;
 
     iget-object v2, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->elements:[Ljava/lang/Object;
 
+    .line 7
     invoke-static {v1, v0, v2}, Lcom/google/common/collect/ImmutableSortedSet;->construct(Ljava/util/Comparator;I[Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSortedSet;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/common/collect/RegularImmutableSortedSet;
 
+    .line 8
     iget v1, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->length:I
 
     const/4 v2, 0x1
@@ -675,6 +708,7 @@
 
     move v4, v3
 
+    .line 9
     :goto_0
     iget v5, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->length:I
 
@@ -682,6 +716,7 @@
 
     add-int/lit8 v5, v4, 0x1
 
+    .line 10
     aget-wide v6, v1, v4
 
     iget-object v8, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->counts:[I
@@ -698,9 +733,11 @@
 
     goto :goto_0
 
+    .line 11
     :cond_1
     iput-boolean v2, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->forceCopyElements:Z
 
+    .line 12
     new-instance v2, Lcom/google/common/collect/RegularImmutableSortedMultiset;
 
     iget p0, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->length:I
@@ -713,6 +750,7 @@
 .method public bridge synthetic setCount(Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableMultiset$Builder;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->setCount(Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableSortedMultiset$Builder;
 
     move-result-object p0
@@ -730,20 +768,25 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "count"
 
+    .line 3
     invoke-static {p2, v0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
+    .line 4
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->maintenance()V
 
+    .line 5
     iget-object v0, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->elements:[Ljava/lang/Object;
 
     iget v1, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->length:I
 
     aput-object p1, v0, v1
 
+    .line 6
     iget-object p1, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->counts:[I
 
     not-int p2, p2
@@ -752,6 +795,7 @@
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 7
     iput v1, p0, Lcom/google/common/collect/ImmutableSortedMultiset$Builder;->length:I
 
     return-object p0

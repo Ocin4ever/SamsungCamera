@@ -51,6 +51,7 @@
 .method private a(Landroid/graphics/PointF;)F
     .locals 0
 
+    .line 1
     sget-object p0, Lco/polarr/mgcsc/e/d;->a:Landroid/graphics/PointF;
 
     invoke-static {p1, p0}, Lco/polarr/mgcsc/utils/c;->a(Landroid/graphics/PointF;Landroid/graphics/PointF;)F
@@ -63,6 +64,7 @@
 .method private a(Lco/polarr/mgcsc/entities/FaceDetected;)Landroid/graphics/PointF;
     .locals 1
 
+    .line 3
     new-instance p0, Landroid/graphics/PointF;
 
     iget-object v0, p1, Lco/polarr/mgcsc/entities/FaceDetected;->rect:Landroid/graphics/RectF;
@@ -85,6 +87,7 @@
 .method private b(Lco/polarr/mgcsc/entities/FaceDetected;)Z
     .locals 2
 
+    .line 2
     invoke-direct {p0, p1}, Lco/polarr/mgcsc/e/d;->a(Lco/polarr/mgcsc/entities/FaceDetected;)Landroid/graphics/PointF;
 
     move-result-object p0
@@ -133,6 +136,7 @@
 .method public a()Landroid/graphics/PointF;
     .locals 4
 
+    .line 2
     iget-object v0, p0, Lco/polarr/mgcsc/e/d;->b:Landroid/graphics/PointF;
 
     new-instance v1, Landroid/graphics/PointF;
@@ -167,6 +171,7 @@
         }
     .end annotation
 
+    .line 4
     if-eqz p1, :cond_3
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
@@ -237,6 +242,7 @@
         }
     .end annotation
 
+    .line 5
     iget-object v0, p0, Lco/polarr/mgcsc/e/d;->c:Lco/polarr/mgcsc/entities/FaceDetected;
 
     const/4 v1, 0x0
@@ -317,5 +323,6 @@
 .method public b()V
     .locals 0
 
+    .line 1
     return-void
 .end method

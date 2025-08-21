@@ -241,6 +241,7 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -253,14 +254,17 @@
 .method public constructor <init>(Ljava/io/FileDescriptor;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/SEFParser;->fd:Ljava/io/FileDescriptor;
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/samsung/android/apex/motionphoto/composer/utils/SEFParser;->parse(Ljava/io/FileDescriptor;)V
 
+    .line 4
     :cond_0
     new-instance p1, Ljava/util/ArrayList;
 
@@ -268,6 +272,7 @@
 
     iput-object p1, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/SEFParser;->dataInfos:Ljava/util/List;
 
+    .line 5
     new-instance p1, Ljava/util/LinkedHashMap;
 
     invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
@@ -286,6 +291,7 @@
 
     const/4 p1, 0x0
 
+    .line 6
     :cond_0
     invoke-direct {p0, p1}, Lcom/samsung/android/apex/motionphoto/composer/utils/SEFParser;-><init>(Ljava/io/FileDescriptor;)V
 

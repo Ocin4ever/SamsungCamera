@@ -82,6 +82,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/cache/CacheLoader$FunctionToCacheLoader;
 
     invoke-direct {v0, p0}, Lcom/google/common/cache/CacheLoader$FunctionToCacheLoader;-><init>(Lcom/google/common/base/Function;)V
@@ -104,6 +105,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/cache/CacheLoader$SupplierToCacheLoader;
 
     invoke-direct {v0, p0}, Lcom/google/common/cache/CacheLoader$SupplierToCacheLoader;-><init>(Lcom/google/common/base/Supplier;)V

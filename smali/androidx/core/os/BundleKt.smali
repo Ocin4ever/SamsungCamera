@@ -7,6 +7,7 @@
 .method public static final bundleOf()Landroid/os/Bundle;
     .locals 2
 
+    .line 47
     new-instance v0, Landroid/os/Bundle;
 
     const/4 v1, 0x0
@@ -31,12 +32,14 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     array-length v1, p0
 
     invoke-direct {v0, v1}, Landroid/os/Bundle;-><init>(I)V
 
+    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -60,10 +63,12 @@
 
     const/4 v3, 0x0
 
+    .line 3
     invoke-virtual {v0, v4, v3}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
+    .line 4
     :cond_0
     instance-of v5, v3, Ljava/lang/Boolean;
 
@@ -79,6 +84,7 @@
 
     goto/16 :goto_1
 
+    .line 5
     :cond_1
     instance-of v5, v3, Ljava/lang/Byte;
 
@@ -94,6 +100,7 @@
 
     goto/16 :goto_1
 
+    .line 6
     :cond_2
     instance-of v5, v3, Ljava/lang/Character;
 
@@ -109,6 +116,7 @@
 
     goto/16 :goto_1
 
+    .line 7
     :cond_3
     instance-of v5, v3, Ljava/lang/Double;
 
@@ -124,6 +132,7 @@
 
     goto/16 :goto_1
 
+    .line 8
     :cond_4
     instance-of v5, v3, Ljava/lang/Float;
 
@@ -139,6 +148,7 @@
 
     goto/16 :goto_1
 
+    .line 9
     :cond_5
     instance-of v5, v3, Ljava/lang/Integer;
 
@@ -154,6 +164,7 @@
 
     goto/16 :goto_1
 
+    .line 10
     :cond_6
     instance-of v5, v3, Ljava/lang/Long;
 
@@ -169,6 +180,7 @@
 
     goto/16 :goto_1
 
+    .line 11
     :cond_7
     instance-of v5, v3, Ljava/lang/Short;
 
@@ -184,6 +196,7 @@
 
     goto/16 :goto_1
 
+    .line 12
     :cond_8
     instance-of v5, v3, Landroid/os/Bundle;
 
@@ -195,6 +208,7 @@
 
     goto/16 :goto_1
 
+    .line 13
     :cond_9
     instance-of v5, v3, Ljava/lang/CharSequence;
 
@@ -206,6 +220,7 @@
 
     goto/16 :goto_1
 
+    .line 14
     :cond_a
     instance-of v5, v3, Landroid/os/Parcelable;
 
@@ -217,6 +232,7 @@
 
     goto/16 :goto_1
 
+    .line 15
     :cond_b
     instance-of v5, v3, [Z
 
@@ -228,6 +244,7 @@
 
     goto/16 :goto_1
 
+    .line 16
     :cond_c
     instance-of v5, v3, [B
 
@@ -239,6 +256,7 @@
 
     goto/16 :goto_1
 
+    .line 17
     :cond_d
     instance-of v5, v3, [C
 
@@ -250,6 +268,7 @@
 
     goto/16 :goto_1
 
+    .line 18
     :cond_e
     instance-of v5, v3, [D
 
@@ -261,6 +280,7 @@
 
     goto/16 :goto_1
 
+    .line 19
     :cond_f
     instance-of v5, v3, [F
 
@@ -272,6 +292,7 @@
 
     goto/16 :goto_1
 
+    .line 20
     :cond_10
     instance-of v5, v3, [I
 
@@ -283,6 +304,7 @@
 
     goto/16 :goto_1
 
+    .line 21
     :cond_11
     instance-of v5, v3, [J
 
@@ -294,6 +316,7 @@
 
     goto/16 :goto_1
 
+    .line 22
     :cond_12
     instance-of v5, v3, [S
 
@@ -305,6 +328,7 @@
 
     goto/16 :goto_1
 
+    .line 23
     :cond_13
     instance-of v5, v3, [Ljava/lang/Object;
 
@@ -314,6 +338,7 @@
 
     if-eqz v5, :cond_18
 
+    .line 24
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v5
@@ -324,8 +349,10 @@
 
     invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/Object;)V
 
+    .line 25
     const-class v8, Landroid/os/Parcelable;
 
+    .line 26
     invoke-virtual {v8, v5}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v8
@@ -334,6 +361,7 @@
 
     const-string v5, "null cannot be cast to non-null type kotlin.Array<android.os.Parcelable>"
 
+    .line 27
     invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, [Landroid/os/Parcelable;
@@ -345,6 +373,7 @@
     :cond_14
     const-class v8, Ljava/lang/String;
 
+    .line 28
     invoke-virtual {v8, v5}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v8
@@ -353,6 +382,7 @@
 
     const-string v5, "null cannot be cast to non-null type kotlin.Array<kotlin.String>"
 
+    .line 29
     invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, [Ljava/lang/String;
@@ -364,6 +394,7 @@
     :cond_15
     const-class v8, Ljava/lang/CharSequence;
 
+    .line 30
     invoke-virtual {v8, v5}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v8
@@ -372,6 +403,7 @@
 
     const-string v5, "null cannot be cast to non-null type kotlin.Array<kotlin.CharSequence>"
 
+    .line 31
     invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, [Ljava/lang/CharSequence;
@@ -383,25 +415,30 @@
     :cond_16
     const-class v8, Ljava/io/Serializable;
 
+    .line 32
     invoke-virtual {v8, v5}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v8
 
     if-eqz v8, :cond_17
 
+    .line 33
     check-cast v3, Ljava/io/Serializable;
 
     invoke-virtual {v0, v4, v3}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
     goto :goto_1
 
+    .line 34
     :cond_17
     invoke-virtual {v5}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 35
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
+    .line 36
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -422,10 +459,12 @@
 
     move-result-object p0
 
+    .line 37
     invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 38
     :cond_18
     instance-of v5, v3, Ljava/io/Serializable;
 
@@ -437,33 +476,39 @@
 
     goto :goto_1
 
+    .line 39
     :cond_19
     instance-of v5, v3, Landroid/os/IBinder;
 
     if-eqz v5, :cond_1a
 
+    .line 40
     check-cast v3, Landroid/os/IBinder;
 
     invoke-static {v0, v4, v3}, Landroidx/core/os/BundleApi18ImplKt;->putBinder(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
 
     goto :goto_1
 
+    .line 41
     :cond_1a
     instance-of v5, v3, Landroid/util/Size;
 
     if-eqz v5, :cond_1b
 
+    .line 42
     check-cast v3, Landroid/util/Size;
 
     invoke-static {v0, v4, v3}, Landroidx/core/os/BundleApi21ImplKt;->putSize(Landroid/os/Bundle;Ljava/lang/String;Landroid/util/Size;)V
 
     goto :goto_1
 
+    .line 43
     :cond_1b
     instance-of v5, v3, Landroid/util/SizeF;
 
     if-eqz v5, :cond_1c
 
+    .line 44
     check-cast v3, Landroid/util/SizeF;
 
     invoke-static {v0, v4, v3}, Landroidx/core/os/BundleApi21ImplKt;->putSizeF(Landroid/os/Bundle;Ljava/lang/String;Landroid/util/SizeF;)V
@@ -473,6 +518,7 @@
 
     goto/16 :goto_0
 
+    .line 45
     :cond_1c
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -482,6 +528,7 @@
 
     move-result-object p0
 
+    .line 46
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;

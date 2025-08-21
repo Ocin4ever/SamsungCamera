@@ -46,6 +46,7 @@
 .method public final invoke()Landroidx/fragment/app/Fragment;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$5;->$this_viewModels:Landroidx/fragment/app/Fragment;
 
     return-object p0
@@ -54,6 +55,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$5;->invoke()Landroidx/fragment/app/Fragment;
 
     move-result-object p0

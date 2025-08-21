@@ -179,6 +179,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
     move-result v0
@@ -217,6 +218,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p2, p0, p1}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result p2
@@ -242,6 +244,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
     move-result v0
@@ -280,6 +283,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p2, p0, p1}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result p2

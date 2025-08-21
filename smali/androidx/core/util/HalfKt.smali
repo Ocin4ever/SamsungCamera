@@ -9,6 +9,7 @@
 
     double-to-float p0, p0
 
+    .line 4
     invoke-static {p0}, Landroid/util/Half;->valueOf(F)Landroid/util/Half;
 
     move-result-object p0
@@ -23,6 +24,7 @@
 .method public static final toHalf(F)Landroid/util/Half;
     .locals 1
 
+    .line 2
     invoke-static {p0}, Landroid/util/Half;->valueOf(F)Landroid/util/Half;
 
     move-result-object p0
@@ -41,6 +43,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     invoke-static {p0}, Landroid/util/Half;->valueOf(Ljava/lang/String;)Landroid/util/Half;
 
     move-result-object p0
@@ -55,6 +58,7 @@
 .method public static final toHalf(S)Landroid/util/Half;
     .locals 1
 
+    .line 1
     invoke-static {p0}, Landroid/util/Half;->valueOf(S)Landroid/util/Half;
 
     move-result-object p0

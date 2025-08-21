@@ -56,6 +56,7 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/collect/ImmutableMap$Builder;-><init>(I)V
 
     return-void
@@ -64,18 +65,22 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     mul-int/lit8 p1, p1, 0x2
 
+    .line 3
     new-array p1, p1, [Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->alternatingKeysAndValues:[Ljava/lang/Object;
 
     const/4 p1, 0x0
 
+    .line 4
     iput p1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
 
+    .line 5
     iput-boolean p1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->entriesUsed:Z
 
     return-void
@@ -93,12 +98,14 @@
 
     if-eqz p1, :cond_1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ImmutableMap$Builder;->duplicateKey:Lcom/google/common/collect/ImmutableMap$Builder$DuplicateKey;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap$Builder$DuplicateKey;->exception()Ljava/lang/IllegalArgumentException;
 
@@ -106,25 +113,30 @@
 
     throw p0
 
+    .line 3
     :cond_1
     :goto_0
     iget v0, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
 
+    .line 4
     iget-object v1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->valueComparator:Ljava/util/Comparator;
 
     const/4 v2, 0x1
 
     if-nez v1, :cond_2
 
+    .line 5
     iget-object v1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->alternatingKeysAndValues:[Ljava/lang/Object;
 
     goto :goto_1
 
+    .line 6
     :cond_2
     iget-boolean v1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->entriesUsed:Z
 
     if-eqz v1, :cond_3
 
+    .line 7
     iget-object v1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->alternatingKeysAndValues:[Ljava/lang/Object;
 
     mul-int/lit8 v3, v0, 0x2
@@ -135,17 +147,20 @@
 
     iput-object v1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->alternatingKeysAndValues:[Ljava/lang/Object;
 
+    .line 8
     :cond_3
     iget-object v1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->alternatingKeysAndValues:[Ljava/lang/Object;
 
     if-nez p1, :cond_4
 
+    .line 9
     iget v3, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
 
     invoke-direct {p0, v1, v3}, Lcom/google/common/collect/ImmutableMap$Builder;->lastEntryForEachKey([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 10
     array-length v3, v1
 
     iget-object v4, p0, Lcom/google/common/collect/ImmutableMap$Builder;->alternatingKeysAndValues:[Ljava/lang/Object;
@@ -154,30 +169,36 @@
 
     if-ge v3, v4, :cond_4
 
+    .line 11
     array-length v0, v1
 
     ushr-int/2addr v0, v2
 
+    .line 12
     :cond_4
     iget-object v3, p0, Lcom/google/common/collect/ImmutableMap$Builder;->valueComparator:Ljava/util/Comparator;
 
     invoke-static {v1, v0, v3}, Lcom/google/common/collect/ImmutableMap$Builder;->sortEntries([Ljava/lang/Object;ILjava/util/Comparator;)V
 
+    .line 13
     :goto_1
     iput-boolean v2, p0, Lcom/google/common/collect/ImmutableMap$Builder;->entriesUsed:Z
 
+    .line 14
     invoke-static {v0, v1, p0}, Lcom/google/common/collect/RegularImmutableMap;->create(I[Ljava/lang/Object;Lcom/google/common/collect/ImmutableMap$Builder;)Lcom/google/common/collect/RegularImmutableMap;
 
     move-result-object v0
 
     if-eqz p1, :cond_6
 
+    .line 15
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMap$Builder;->duplicateKey:Lcom/google/common/collect/ImmutableMap$Builder$DuplicateKey;
 
     if-nez p0, :cond_5
 
     goto :goto_2
 
+    .line 16
     :cond_5
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap$Builder$DuplicateKey;->exception()Ljava/lang/IllegalArgumentException;
 
@@ -427,6 +448,7 @@
         }
     .end annotation
 
+    .line 17
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap$Builder;->buildOrThrow()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -572,14 +594,17 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
 
     add-int/lit8 v0, v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/google/common/collect/ImmutableMap$Builder;->ensureCapacity(I)V
 
+    .line 2
     invoke-static {p1, p2}, Lcom/google/common/collect/CollectPreconditions;->checkEntryNotNull(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/ImmutableMap$Builder;->alternatingKeysAndValues:[Ljava/lang/Object;
 
     iget v1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
@@ -592,10 +617,12 @@
 
     add-int/lit8 p1, p1, 0x1
 
+    .line 4
     aput-object p2, v0, p1
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 5
     iput v1, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
 
     return-object p0
@@ -613,6 +640,7 @@
         }
     .end annotation
 
+    .line 6
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -642,10 +670,12 @@
         }
     .end annotation
 
+    .line 2
     instance-of v0, p1, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget v0, p0, Lcom/google/common/collect/ImmutableMap$Builder;->size:I
 
     move-object v1, p1
@@ -660,6 +690,7 @@
 
     invoke-direct {p0, v0}, Lcom/google/common/collect/ImmutableMap$Builder;->ensureCapacity(I)V
 
+    .line 4
     :cond_0
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -678,6 +709,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 5
     invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/util/Map$Entry;)Lcom/google/common/collect/ImmutableMap$Builder;
 
     goto :goto_0
@@ -698,6 +730,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1

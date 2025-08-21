@@ -38,14 +38,17 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/portrait/widget/k;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/portrait/widget/k;-><init>(Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehLighting;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehLighting;->mHideSeekBarRunnable:Ljava/lang/Runnable;
 
+    .line 3
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehLighting;->initialize()V
 
     return-void
@@ -54,14 +57,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 5
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/portrait/widget/k;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/portrait/widget/k;-><init>(Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehLighting;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehLighting;->mHideSeekBarRunnable:Ljava/lang/Runnable;
 
+    .line 6
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehLighting;->initialize()V
 
     return-void
@@ -70,14 +76,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 7
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 8
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/portrait/widget/k;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/portrait/widget/k;-><init>(Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehLighting;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehLighting;->mHideSeekBarRunnable:Ljava/lang/Runnable;
 
+    .line 9
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/portrait/widget/BokehLighting;->initialize()V
 
     return-void

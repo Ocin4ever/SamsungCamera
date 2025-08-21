@@ -35,6 +35,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/b0;->j:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/b0;->k:Landroid/util/SparseIntArray;
@@ -59,6 +60,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     aget-object v2, v13, v0
 
     const/4 v3, 0x0
@@ -135,44 +137,55 @@
 
     const-wide/16 v0, -0x1
 
+    .line 3
     iput-wide v0, v12, Lp4/b0;->i:J
 
+    .line 4
     iget-object v0, v12, Lp4/a0;->a:Lcom/sec/android/app/camera/layer/keyscreen/centerbutton/CenterButtonView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 5
     iget-object v0, v12, Lp4/a0;->b:Landroidx/constraintlayout/widget/Guideline;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 6
     iget-object v0, v12, Lp4/a0;->c:Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/LeftButtonView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 7
     iget-object v0, v12, Lp4/a0;->d:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 8
     iget-object v0, v12, Lp4/a0;->e:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {v0, p0}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 9
     iget-object v0, v12, Lp4/a0;->f:Lcom/sec/android/app/camera/layer/keyscreen/sidebutton/RightButtonView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 10
     iget-object v0, v12, Lp4/a0;->g:Lcom/sec/android/app/camera/widget/ShutterProgressWheel;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 11
     iget-object v0, v12, Lp4/a0;->h:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 12
     invoke-virtual {p0, v13}, Landroidx/databinding/ViewDataBinding;->setRootTag([Landroid/view/View;)V
 
+    .line 13
     invoke-virtual {p0}, Lp4/b0;->invalidateAll()V
 
     return-void

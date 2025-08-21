@@ -24,32 +24,41 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/samsung/android/sdk/ocr/OCRType;Lcom/samsung/android/sdk/ocr/OCRLanguage;)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     sget-object v0, Lcom/samsung/android/sdk/ocr/OCRType;->OCR_ALL:Lcom/samsung/android/sdk/ocr/OCRType;
 
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->mOCRType:Lcom/samsung/android/sdk/ocr/OCRType;
 
+    .line 4
     sget-object v0, Lcom/samsung/android/sdk/ocr/OCRLanguage;->AUTO:Lcom/samsung/android/sdk/ocr/OCRLanguage;
 
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->mOCRLanguage:Lcom/samsung/android/sdk/ocr/OCRLanguage;
 
     const-string v0, ""
 
+    .line 5
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->mUUID:Ljava/lang/String;
 
     const-string v0, "OCR RecognizerProxy(Service) is initialized with version: 3.3.231214"
 
     const-string v1, "RecognizerProxy"
 
+    .line 6
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     invoke-static {}, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->checkThread()V
 
+    .line 8
     iput-object p2, p0, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->mOCRType:Lcom/samsung/android/sdk/ocr/OCRType;
 
+    .line 9
     iput-object p3, p0, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->mOCRLanguage:Lcom/samsung/android/sdk/ocr/OCRLanguage;
 
+    .line 10
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,6 +95,7 @@
 
     iput-object p2, p0, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->mUUID:Ljava/lang/String;
 
+    .line 11
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,21 +114,25 @@
 
     invoke-static {v1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 12
     new-instance p2, Lcom/samsung/android/sdk/ocr/service/OCRServiceCreator;
 
     invoke-direct {p2, p1}, Lcom/samsung/android/sdk/ocr/service/OCRServiceCreator;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->mOCRServiceCreator:Lcom/samsung/android/sdk/ocr/service/OCRServiceCreator;
 
+    .line 13
     invoke-direct {p0}, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->getConnectedService()Lcom/samsung/android/sdk/ocr/service/IOCRService;
 
     move-result-object p1
 
+    .line 14
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->getDefaultBundle()Landroid/os/Bundle;
 
     move-result-object p0
 
+    .line 15
     invoke-interface {p1, p0}, Lcom/samsung/android/sdk/ocr/service/IOCRService;->initialize(Landroid/os/Bundle;)Z
 
     move-result p0
@@ -130,8 +144,10 @@
     :cond_0
     const-string p0, "cannot initialize service"
 
+    .line 16
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 17
     new-instance p0, Lcom/samsung/android/sdk/ocr/OCRException$UnsupportedRecognizerException;
 
     const-string p1, "Cannot initialize OCR Service"
@@ -145,6 +161,7 @@
     :catch_0
     move-exception p0
 
+    .line 18
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     :goto_0
@@ -154,6 +171,7 @@
 .method public constructor <init>(Lcom/samsung/android/sdk/ocr/RecognizerParams;)V
     .locals 2
 
+    .line 1
     iget-object v0, p1, Lcom/samsung/android/sdk/ocr/RecognizerParams;->context:Landroid/content/Context;
 
     iget-object v1, p1, Lcom/samsung/android/sdk/ocr/RecognizerParams;->ocrType:Lcom/samsung/android/sdk/ocr/OCRType;
@@ -488,6 +506,7 @@
 .method public detectBlock(Landroid/graphics/Bitmap;Landroid/graphics/Point;[Landroid/graphics/Point;)Z
     .locals 2
 
+    .line 3
     invoke-static {p1, p3}, Lcom/samsung/android/sdk/ocr/RecognizerAPIChecker;->isValidParameter(Landroid/graphics/Bitmap;[Landroid/graphics/Point;)Z
 
     move-result v0
@@ -498,22 +517,27 @@
 
     return v1
 
+    .line 4
     :cond_0
     invoke-direct {p0}, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->connectOCRService()Lcom/samsung/android/sdk/ocr/service/IOCRService;
 
     move-result-object v0
 
+    .line 5
     :try_start_0
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->getBitmapBundle(Landroid/graphics/Bitmap;)Landroid/os/Bundle;
 
     move-result-object p0
 
+    .line 6
     invoke-static {p0, p2}, Lcom/samsung/android/sdk/ocr/service/OCRServiceBundleUtils;->putInputPointInBundle(Landroid/os/Bundle;Landroid/graphics/Point;)V
 
+    .line 7
     invoke-interface {v0, p0}, Lcom/samsung/android/sdk/ocr/service/IOCRService;->detectBlock(Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object p0
 
+    .line 8
     invoke-static {p0, p3}, Lcom/samsung/android/sdk/ocr/service/OCRServiceBundleUtils;->getResultFromBundle(Landroid/os/Bundle;[Landroid/graphics/Point;)Z
 
     move-result v1
@@ -525,6 +549,7 @@
     :catch_0
     move-exception p0
 
+    .line 9
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     :goto_0
@@ -534,6 +559,7 @@
 .method public detectBlock(Landroid/graphics/Bitmap;[Landroid/graphics/Point;)Z
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/graphics/Point;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -550,6 +576,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/Point;-><init>(II)V
 
+    .line 2
     invoke-virtual {p0, p1, v0, p2}, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->detectBlock(Landroid/graphics/Bitmap;Landroid/graphics/Point;[Landroid/graphics/Point;)Z
 
     move-result p0
@@ -608,6 +635,7 @@
 .method public hasText(Landroid/graphics/Bitmap;)Z
     .locals 2
 
+    .line 1
     invoke-static {p1}, Lcom/samsung/android/sdk/ocr/RecognizerAPIChecker;->isValidParameter(Landroid/graphics/Bitmap;)Z
 
     move-result v0
@@ -618,11 +646,13 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->connectOCRService()Lcom/samsung/android/sdk/ocr/service/IOCRService;
 
     move-result-object v0
 
+    .line 3
     :try_start_0
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->getBitmapBundle(Landroid/graphics/Bitmap;)Landroid/os/Bundle;
 
@@ -639,6 +669,7 @@
     :catch_0
     move-exception p0
 
+    .line 4
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     :goto_0
@@ -648,6 +679,7 @@
 .method public hasText(Landroid/graphics/Bitmap;Z)Z
     .locals 2
 
+    .line 5
     invoke-static {p1}, Lcom/samsung/android/sdk/ocr/RecognizerAPIChecker;->isValidParameter(Landroid/graphics/Bitmap;)Z
 
     move-result v0
@@ -658,11 +690,13 @@
 
     return v1
 
+    .line 6
     :cond_0
     invoke-direct {p0}, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->connectOCRService()Lcom/samsung/android/sdk/ocr/service/IOCRService;
 
     move-result-object v0
 
+    .line 7
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/sdk/ocr/RecognizerProxy;->getBundleForHasTextSpecialCase(Landroid/graphics/Bitmap;Z)Landroid/os/Bundle;
 
@@ -679,6 +713,7 @@
     :catch_0
     move-exception p0
 
+    .line 8
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     :goto_0

@@ -78,6 +78,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/reflect/Invokable$ConstructorInvokable;
 
     invoke-direct {v0, p0}, Lcom/google/common/reflect/Invokable$ConstructorInvokable;-><init>(Ljava/lang/reflect/Constructor;)V
@@ -99,6 +100,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/reflect/Invokable$MethodInvokable;
 
     invoke-direct {v0, p0}, Lcom/google/common/reflect/Invokable$MethodInvokable;-><init>(Ljava/lang/reflect/Method;)V
@@ -678,6 +680,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getReturnType()Lcom/google/common/reflect/TypeToken;
 
     move-result-object v0
@@ -690,9 +693,11 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getReturnType()Lcom/google/common/reflect/TypeToken;
 
     move-result-object p0
@@ -754,6 +759,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/reflect/TypeToken;->of(Ljava/lang/Class;)Lcom/google/common/reflect/TypeToken;
 
     move-result-object p1

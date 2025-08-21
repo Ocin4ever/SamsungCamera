@@ -26,18 +26,22 @@
 .method public constructor <init>(Ljava/lang/Iterable;)V
     .locals 4
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
+    .line 5
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
+    .line 6
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     if-eqz p1, :cond_2
 
+    .line 7
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -55,10 +59,12 @@
 
     check-cast v2, Ljava/lang/Throwable;
 
+    .line 8
     instance-of v3, v2, Lv5/a;
 
     if-eqz v3, :cond_0
 
+    .line 9
     check-cast v2, Lv5/a;
 
     invoke-virtual {v2}, Lv5/a;->b()Ljava/util/List;
@@ -72,10 +78,12 @@
     :cond_0
     if-eqz v2, :cond_1
 
+    .line 10
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 11
     :cond_1
     new-instance v2, Ljava/lang/NullPointerException;
 
@@ -87,6 +95,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_2
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -96,6 +105,7 @@
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 13
     :cond_3
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
 
@@ -103,14 +113,17 @@
 
     if-nez p1, :cond_4
 
+    .line 14
     invoke-interface {v1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
+    .line 15
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Lv5/a;->a:Ljava/util/List;
 
+    .line 16
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -133,6 +146,7 @@
 
     return-void
 
+    .line 17
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -148,12 +162,14 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string v0, "exceptions was null"
 
     invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
+    .line 2
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -165,6 +181,7 @@
 
     move-result-object p1
 
+    .line 3
     :goto_0
     invoke-direct {p0, p1}, Lv5/a;-><init>(Ljava/lang/Iterable;)V
 
@@ -549,6 +566,7 @@
 .method public printStackTrace()V
     .locals 1
 
+    .line 1
     sget-object v0, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     invoke-virtual {p0, v0}, Lv5/a;->printStackTrace(Ljava/io/PrintStream;)V
@@ -559,6 +577,7 @@
 .method public printStackTrace(Ljava/io/PrintStream;)V
     .locals 1
 
+    .line 2
     new-instance v0, Lv5/a$c;
 
     invoke-direct {v0, p1}, Lv5/a$c;-><init>(Ljava/io/PrintStream;)V
@@ -571,6 +590,7 @@
 .method public printStackTrace(Ljava/io/PrintWriter;)V
     .locals 1
 
+    .line 3
     new-instance v0, Lv5/a$d;
 
     invoke-direct {v0, p1}, Lv5/a$d;-><init>(Ljava/io/PrintWriter;)V

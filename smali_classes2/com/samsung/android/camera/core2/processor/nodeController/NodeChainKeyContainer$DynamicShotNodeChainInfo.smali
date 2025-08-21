@@ -44,6 +44,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainKeyContainer$DynamicShotNodeChainInfo;-><init>(Lcom/samsung/android/camera/core2/node/NodeChain$Key;Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureGroup;)V
 
     return-void
@@ -63,10 +64,13 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainKeyContainer$DynamicShotNodeChainInfo;->nodeChainKey:Lcom/samsung/android/camera/core2/node/NodeChain$Key;
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainKeyContainer$DynamicShotNodeChainInfo;->nodeFeatureGroup:Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureGroup;
 
     return-void

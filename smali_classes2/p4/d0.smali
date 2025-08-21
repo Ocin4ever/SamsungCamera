@@ -71,6 +71,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/d0;->m:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/d0;->n:Landroid/util/SparseIntArray;
@@ -95,6 +96,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     aget-object v2, v14, v0
 
     const/4 v3, 0x0
@@ -195,30 +197,37 @@
 
     const-wide/16 v0, -0x1
 
+    .line 3
     iput-wide v0, v15, Lp4/d0;->l:J
 
+    .line 4
     iget-object v0, v15, Lp4/c0;->b:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 5
     iget-object v0, v15, Lp4/c0;->e:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 6
     iget-object v0, v15, Lp4/c0;->h:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 7
     iget-object v0, v15, Lp4/c0;->k:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     move-object/from16 v0, p2
 
+    .line 8
     invoke-virtual {v15, v0}, Landroidx/databinding/ViewDataBinding;->setRootTag([Landroid/view/View;)V
 
+    .line 9
     invoke-virtual/range {p0 .. p0}, Lp4/d0;->invalidateAll()V
 
     return-void

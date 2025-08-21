@@ -170,6 +170,7 @@
     :try_start_0
     const-string v1, "rw"
 
+    .line 18
     invoke-virtual {p0, p1, v1}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p0
@@ -181,12 +182,14 @@
     :try_start_1
     const-string p1, "Parcel file descriptor is null, return."
 
+    .line 19
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz p0, :cond_0
 
+    .line 20
     :try_start_2
     invoke-virtual {p0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_2
@@ -195,6 +198,7 @@
     :cond_0
     return-void
 
+    .line 21
     :cond_1
     :try_start_3
     invoke-virtual {p0}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -205,10 +209,12 @@
 
     const-string p1, "File descriptor is null, return."
 
+    .line 22
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 23
     :try_start_4
     invoke-virtual {p0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_4
@@ -216,12 +222,14 @@
 
     return-void
 
+    .line 24
     :cond_2
     :try_start_5
     new-instance v1, Landroidx/exifinterface/media/ExifInterface;
 
     invoke-direct {v1, p1}, Landroidx/exifinterface/media/ExifInterface;-><init>(Ljava/io/FileDescriptor;)V
 
+    .line 25
     sget-object p1, Lcom/sec/android/app/camera/cropper/util/ExifUtil;->exifTagList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -241,6 +249,7 @@
 
     check-cast v2, Ljava/lang/String;
 
+    .line 26
     invoke-virtual {p2, v2}, Landroidx/exifinterface/media/ExifInterface;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -249,6 +258,7 @@
 
     goto :goto_0
 
+    .line 27
     :cond_3
     invoke-virtual {p3}, Landroid/util/Size;->getWidth()I
 
@@ -258,6 +268,7 @@
 
     move-result-object p1
 
+    .line 28
     invoke-virtual {p3}, Landroid/util/Size;->getHeight()I
 
     move-result p2
@@ -268,22 +279,27 @@
 
     const-string p3, "ImageWidth"
 
+    .line 29
     invoke-virtual {v1, p3, p1}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p3, "ImageLength"
 
+    .line 30
     invoke-virtual {v1, p3, p2}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p3, "PixelXDimension"
 
+    .line 31
     invoke-virtual {v1, p3, p1}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "PixelYDimension"
 
+    .line 32
     invoke-virtual {v1, p1, p2}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "Orientation"
 
+    .line 33
     invoke-static {p4}, Lcom/sec/android/app/camera/cropper/util/ExifUtil;->convertToExifOrientation(I)I
 
     move-result p2
@@ -294,10 +310,12 @@
 
     invoke-virtual {v1, p1, p2}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 34
     invoke-virtual {v1}, Landroidx/exifinterface/media/ExifInterface;->saveAttributes()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
+    .line 35
     :try_start_6
     invoke-virtual {p0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_6
@@ -310,6 +328,7 @@
 
     if-eqz p0, :cond_4
 
+    .line 36
     :try_start_7
     invoke-virtual {p0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_7
@@ -332,6 +351,7 @@
     :catch_0
     move-exception p0
 
+    .line 37
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -359,11 +379,13 @@
 .method public static addExif(Ljava/lang/String;Landroidx/exifinterface/media/ExifInterface;Landroid/util/Size;IJ)V
     .locals 3
 
+    .line 1
     :try_start_0
     new-instance v0, Landroidx/exifinterface/media/ExifInterface;
 
     invoke-direct {v0, p0}, Landroidx/exifinterface/media/ExifInterface;-><init>(Ljava/lang/String;)V
 
+    .line 2
     sget-object p0, Lcom/sec/android/app/camera/cropper/util/ExifUtil;->exifTagList:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -383,6 +405,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p1, v1}, Landroidx/exifinterface/media/ExifInterface;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -391,6 +414,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
@@ -400,6 +424,7 @@
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
 
     move-result p1
@@ -410,22 +435,27 @@
 
     const-string p2, "ImageWidth"
 
+    .line 6
     invoke-virtual {v0, p2, p0}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "ImageLength"
 
+    .line 7
     invoke-virtual {v0, p2, p1}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "PixelXDimension"
 
+    .line 8
     invoke-virtual {v0, p2, p0}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p0, "PixelYDimension"
 
+    .line 9
     invoke-virtual {v0, p0, p1}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p0, "Orientation"
 
+    .line 10
     invoke-static {p3}, Lcom/sec/android/app/camera/cropper/util/ExifUtil;->convertToExifOrientation(I)I
 
     move-result p1
@@ -436,12 +466,14 @@
 
     invoke-virtual {v0, p0, p1}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 11
     invoke-static {p4, p5}, Lcom/sec/android/app/camera/cropper/util/ExifUtil;->convertToExifDateFormat(J)Ljava/lang/String;
 
     move-result-object p0
 
     const-string p1, "OffsetTime"
 
+    .line 12
     invoke-static {}, Lcom/sec/android/app/camera/cropper/util/ExifUtil;->getTimeZone()Ljava/lang/String;
 
     move-result-object p2
@@ -450,16 +482,20 @@
 
     const-string p1, "DateTime"
 
+    .line 13
     invoke-virtual {v0, p1, p0}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "DateTimeOriginal"
 
+    .line 14
     invoke-virtual {v0, p1, p0}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "DateTimeDigitized"
 
+    .line 15
     invoke-virtual {v0, p1, p0}, Landroidx/exifinterface/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 16
     invoke-virtual {v0}, Landroidx/exifinterface/media/ExifInterface;->saveAttributes()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -469,6 +505,7 @@
     :catch_0
     move-exception p0
 
+    .line 17
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

@@ -31,20 +31,24 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/MockView;->mPaintDiagonals:Landroid/graphics/Paint;
 
+    .line 3
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/MockView;->mPaintText:Landroid/graphics/Paint;
 
+    .line 4
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -53,14 +57,18 @@
 
     const/4 v0, 0x1
 
+    .line 5
     iput-boolean v0, p0, Landroidx/constraintlayout/utils/widget/MockView;->mDrawDiagonals:Z
 
+    .line 6
     iput-boolean v0, p0, Landroidx/constraintlayout/utils/widget/MockView;->mDrawLabel:Z
 
     const/4 v0, 0x0
 
+    .line 7
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/MockView;->mText:Ljava/lang/String;
 
+    .line 8
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
@@ -71,6 +79,7 @@
 
     const/16 v2, 0xff
 
+    .line 9
     invoke-static {v2, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v1
@@ -79,6 +88,7 @@
 
     const/16 v1, 0xc8
 
+    .line 10
     invoke-static {v2, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v1
@@ -87,6 +97,7 @@
 
     const/16 v1, 0x32
 
+    .line 11
     invoke-static {v2, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v1
@@ -95,8 +106,10 @@
 
     const/4 v1, 0x4
 
+    .line 12
     iput v1, p0, Landroidx/constraintlayout/utils/widget/MockView;->mMargin:I
 
+    .line 13
     invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/utils/widget/MockView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -105,20 +118,24 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
+    .line 14
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 15
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/MockView;->mPaintDiagonals:Landroid/graphics/Paint;
 
+    .line 16
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/MockView;->mPaintText:Landroid/graphics/Paint;
 
+    .line 17
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -127,14 +144,18 @@
 
     const/4 v0, 0x1
 
+    .line 18
     iput-boolean v0, p0, Landroidx/constraintlayout/utils/widget/MockView;->mDrawDiagonals:Z
 
+    .line 19
     iput-boolean v0, p0, Landroidx/constraintlayout/utils/widget/MockView;->mDrawLabel:Z
 
     const/4 v0, 0x0
 
+    .line 20
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/MockView;->mText:Ljava/lang/String;
 
+    .line 21
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -145,6 +166,7 @@
 
     const/16 v1, 0xff
 
+    .line 22
     invoke-static {v1, v0, v0, v0}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v0
@@ -153,6 +175,7 @@
 
     const/16 v0, 0xc8
 
+    .line 23
     invoke-static {v1, v0, v0, v0}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v0
@@ -161,6 +184,7 @@
 
     const/16 v0, 0x32
 
+    .line 24
     invoke-static {v1, v0, v0, v0}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v0
@@ -169,8 +193,10 @@
 
     const/4 v0, 0x4
 
+    .line 25
     iput v0, p0, Landroidx/constraintlayout/utils/widget/MockView;->mMargin:I
 
+    .line 26
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/utils/widget/MockView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -179,20 +205,24 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
 
+    .line 27
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 28
     new-instance p3, Landroid/graphics/Paint;
 
     invoke-direct {p3}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p3, p0, Landroidx/constraintlayout/utils/widget/MockView;->mPaintDiagonals:Landroid/graphics/Paint;
 
+    .line 29
     new-instance p3, Landroid/graphics/Paint;
 
     invoke-direct {p3}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p3, p0, Landroidx/constraintlayout/utils/widget/MockView;->mPaintText:Landroid/graphics/Paint;
 
+    .line 30
     new-instance p3, Landroid/graphics/Paint;
 
     invoke-direct {p3}, Landroid/graphics/Paint;-><init>()V
@@ -201,14 +231,18 @@
 
     const/4 p3, 0x1
 
+    .line 31
     iput-boolean p3, p0, Landroidx/constraintlayout/utils/widget/MockView;->mDrawDiagonals:Z
 
+    .line 32
     iput-boolean p3, p0, Landroidx/constraintlayout/utils/widget/MockView;->mDrawLabel:Z
 
     const/4 p3, 0x0
 
+    .line 33
     iput-object p3, p0, Landroidx/constraintlayout/utils/widget/MockView;->mText:Ljava/lang/String;
 
+    .line 34
     new-instance p3, Landroid/graphics/Rect;
 
     invoke-direct {p3}, Landroid/graphics/Rect;-><init>()V
@@ -219,6 +253,7 @@
 
     const/16 v0, 0xff
 
+    .line 35
     invoke-static {v0, p3, p3, p3}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result p3
@@ -227,6 +262,7 @@
 
     const/16 p3, 0xc8
 
+    .line 36
     invoke-static {v0, p3, p3, p3}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result p3
@@ -235,6 +271,7 @@
 
     const/16 p3, 0x32
 
+    .line 37
     invoke-static {v0, p3, p3, p3}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result p3
@@ -243,8 +280,10 @@
 
     const/4 p3, 0x4
 
+    .line 38
     iput p3, p0, Landroidx/constraintlayout/utils/widget/MockView;->mMargin:I
 
+    .line 39
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/utils/widget/MockView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void

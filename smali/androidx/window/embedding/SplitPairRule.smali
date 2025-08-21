@@ -37,14 +37,19 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0, p5, p6, p7, p8}, Landroidx/window/embedding/SplitRule;-><init>(IIFI)V
 
+    .line 3
     iput-boolean p2, p0, Landroidx/window/embedding/SplitPairRule;->finishPrimaryWithSecondary:Z
 
+    .line 4
     iput-boolean p3, p0, Landroidx/window/embedding/SplitPairRule;->finishSecondaryWithPrimary:Z
 
+    .line 5
     iput-boolean p4, p0, Landroidx/window/embedding/SplitPairRule;->clearTop:Z
 
+    .line 6
     invoke-static {p1}, Lg6/w;->W(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p1
@@ -161,6 +166,7 @@
 
     move/from16 p10, v0
 
+    .line 1
     invoke-direct/range {p2 .. p10}, Landroidx/window/embedding/SplitPairRule;-><init>(Ljava/util/Set;ZZZIIFI)V
 
     return-void

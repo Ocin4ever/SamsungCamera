@@ -44,8 +44,10 @@
 .method private constructor <init>(FFFFFFF)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/ar/core/Quaternion;
 
     invoke-direct {v0, p4, p5, p6, p7}, Lcom/google/ar/core/Quaternion;-><init>(FFFF)V
@@ -68,6 +70,7 @@
 
     aput p3, p4, p1
 
+    .line 3
     iput-object p4, p0, Lcom/google/ar/core/Pose;->translation:[F
 
     return-void
@@ -76,10 +79,13 @@
 .method private constructor <init>([FLcom/google/ar/core/Quaternion;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     iput-object p1, p0, Lcom/google/ar/core/Pose;->translation:[F
 
+    .line 7
     iput-object p2, p0, Lcom/google/ar/core/Pose;->quaternion:Lcom/google/ar/core/Quaternion;
 
     return-void
@@ -90,6 +96,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     aget v2, p1, v0
 
     const/4 v1, 0x1
@@ -190,6 +197,7 @@
 .method public static makeRotation(FFFF)Lcom/google/ar/core/Pose;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/ar/core/Pose;
 
     sget-object v1, Lcom/google/ar/core/Pose;->IDENTITY:Lcom/google/ar/core/Pose;
@@ -210,6 +218,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     aget v0, p0, v0
 
     const/4 v1, 0x1
@@ -234,6 +243,7 @@
 .method public static makeTranslation(FFF)Lcom/google/ar/core/Pose;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/ar/core/Pose;
 
     const/4 v1, 0x3
@@ -266,6 +276,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     aget v0, p0, v0
 
     const/4 v1, 0x1
@@ -388,6 +399,7 @@
 .method public getRotationQuaternion([FI)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/ar/core/Pose;->quaternion:Lcom/google/ar/core/Quaternion;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/ar/core/Quaternion;->a([FI)V
@@ -404,6 +416,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p0, v0, v1}, Lcom/google/ar/core/Pose;->getRotationQuaternion([FI)V
 
     return-object v0
@@ -412,18 +425,22 @@
 .method public getTransformedAxis(IF[FI)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/ar/core/Pose;->quaternion:Lcom/google/ar/core/Quaternion;
 
     const/4 v0, 0x3
 
     new-array v0, v0, [F
 
+    .line 2
     fill-array-data v0, :array_0
 
+    .line 3
     aput p2, v0, p1
 
     const/4 p1, 0x0
 
+    .line 4
     invoke-static {p0, v0, p1, p3, p4}, Lcom/google/ar/core/Quaternion;->a(Lcom/google/ar/core/Quaternion;[FI[FI)V
 
     return-void
@@ -447,6 +464,7 @@
 
     const/4 v1, 0x0
 
+    .line 5
     invoke-virtual {p0, p1, p2, v0, v1}, Lcom/google/ar/core/Pose;->getTransformedAxis(IF[FI)V
 
     return-object v0
@@ -455,6 +473,7 @@
 .method public getTranslation([FI)V
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/ar/core/Pose;->translation:[F
 
     const/4 v0, 0x0
@@ -475,6 +494,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p0, v0, v1}, Lcom/google/ar/core/Pose;->getTranslation([FI)V
 
     return-object v0
@@ -621,6 +641,7 @@
 .method public rotateVector([FI[FI)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/ar/core/Pose;->quaternion:Lcom/google/ar/core/Quaternion;
 
     invoke-static {p0, p1, p2, p3, p4}, Lcom/google/ar/core/Quaternion;->a(Lcom/google/ar/core/Quaternion;[FI[FI)V
@@ -637,6 +658,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p0, p1, v1, v0, v1}, Lcom/google/ar/core/Pose;->rotateVector([FI[FI)V
 
     return-object v0
@@ -817,6 +839,7 @@
 .method public transformPoint([FI[FI)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/ar/core/Pose;->rotateVector([FI[FI)V
 
     const/4 p1, 0x0
@@ -828,6 +851,7 @@
 
     add-int p2, p1, p4
 
+    .line 2
     aget v0, p3, p2
 
     iget-object v1, p0, Lcom/google/ar/core/Pose;->translation:[F
@@ -855,6 +879,7 @@
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, v1, v0, v1}, Lcom/google/ar/core/Pose;->transformPoint([FI[FI)V
 
     return-object v0

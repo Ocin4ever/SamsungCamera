@@ -64,6 +64,7 @@
 .method public final invoke()Landroidx/lifecycle/viewmodel/CreationExtras;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/activity/ActivityViewModelLazyKt$viewModels$4;->$extrasProducer:Lq6/a;
 
     if-eqz v0, :cond_0
@@ -94,6 +95,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$4;->invoke()Landroidx/lifecycle/viewmodel/CreationExtras;
 
     move-result-object p0

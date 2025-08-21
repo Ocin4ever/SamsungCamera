@@ -93,6 +93,7 @@
 .method public static __indirect(ILjava/nio/ByteBuffer;)I
     .locals 0
 
+    .line 2
     invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result p1
@@ -105,6 +106,7 @@
 .method public static __offset(IILjava/nio/ByteBuffer;)I
     .locals 1
 
+    .line 2
     invoke-virtual {p2}, Ljava/nio/Buffer;->capacity()I
 
     move-result v0
@@ -113,6 +115,7 @@
 
     add-int/2addr p0, v0
 
+    .line 3
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result p1
@@ -131,18 +134,21 @@
 .method public static __string(ILjava/nio/ByteBuffer;Landroidx/emoji2/text/flatbuffer/Utf8;)Ljava/lang/String;
     .locals 1
 
+    .line 2
     invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result v0
 
     add-int/2addr p0, v0
 
+    .line 3
     invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result v0
 
     add-int/lit8 p0, p0, 0x4
 
+    .line 4
     invoke-virtual {p2, p1, p0, v0}, Landroidx/emoji2/text/flatbuffer/Utf8;->decodeUtf8(Ljava/nio/ByteBuffer;II)Ljava/lang/String;
 
     move-result-object p0
@@ -153,6 +159,7 @@
 .method public static __union(Landroidx/emoji2/text/flatbuffer/Table;ILjava/nio/ByteBuffer;)Landroidx/emoji2/text/flatbuffer/Table;
     .locals 0
 
+    .line 2
     invoke-static {p1, p2}, Landroidx/emoji2/text/flatbuffer/Table;->__indirect(ILjava/nio/ByteBuffer;)I
 
     move-result p1
@@ -165,22 +172,26 @@
 .method public static compareStrings(IILjava/nio/ByteBuffer;)I
     .locals 8
 
+    .line 1
     invoke-virtual {p2, p0}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result v0
 
     add-int/2addr p0, v0
 
+    .line 2
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result v0
 
     add-int/2addr p1, v0
 
+    .line 3
     invoke-virtual {p2, p0}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result v0
 
+    .line 4
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result v1
@@ -189,6 +200,7 @@
 
     add-int/lit8 p1, p1, 0x4
 
+    .line 5
     invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v2
@@ -200,6 +212,7 @@
 
     add-int v4, v3, p0
 
+    .line 6
     invoke-virtual {p2, v4}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v5
@@ -212,6 +225,7 @@
 
     if-eq v5, v7, :cond_0
 
+    .line 7
     invoke-virtual {p2, v4}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result p0
@@ -238,20 +252,24 @@
 .method public static compareStrings(I[BLjava/nio/ByteBuffer;)I
     .locals 7
 
+    .line 8
     invoke-virtual {p2, p0}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result v0
 
     add-int/2addr p0, v0
 
+    .line 9
     invoke-virtual {p2, p0}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result v0
 
+    .line 10
     array-length v1, p1
 
     add-int/lit8 p0, p0, 0x4
 
+    .line 11
     invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v2
@@ -263,6 +281,7 @@
 
     add-int v4, v3, p0
 
+    .line 12
     invoke-virtual {p2, v4}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v5
@@ -271,6 +290,7 @@
 
     if-eq v5, v6, :cond_0
 
+    .line 13
     invoke-virtual {p2, v4}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result p0
@@ -297,6 +317,7 @@
 .method public __indirect(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/emoji2/text/flatbuffer/Table;->bb:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->getInt(I)I
@@ -311,6 +332,7 @@
 .method public __offset(I)I
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/emoji2/text/flatbuffer/Table;->vtable_size:I
 
     if-ge p1, v0, :cond_0
@@ -341,6 +363,7 @@
 
     const/4 v1, 0x0
 
+    .line 8
     invoke-virtual {p0, v0, v1}, Landroidx/emoji2/text/flatbuffer/Table;->__reset(ILjava/nio/ByteBuffer;)V
 
     return-void
@@ -349,12 +372,15 @@
 .method public __reset(ILjava/nio/ByteBuffer;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Landroidx/emoji2/text/flatbuffer/Table;->bb:Ljava/nio/ByteBuffer;
 
     if-eqz p2, :cond_0
 
+    .line 2
     iput p1, p0, Landroidx/emoji2/text/flatbuffer/Table;->bb_pos:I
 
+    .line 3
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result p2
@@ -363,6 +389,7 @@
 
     iput p1, p0, Landroidx/emoji2/text/flatbuffer/Table;->vtable_start:I
 
+    .line 4
     iget-object p2, p0, Landroidx/emoji2/text/flatbuffer/Table;->bb:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->getShort(I)S
@@ -376,10 +403,13 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 5
     iput p1, p0, Landroidx/emoji2/text/flatbuffer/Table;->bb_pos:I
 
+    .line 6
     iput p1, p0, Landroidx/emoji2/text/flatbuffer/Table;->vtable_start:I
 
+    .line 7
     iput p1, p0, Landroidx/emoji2/text/flatbuffer/Table;->vtable_size:I
 
     :goto_0
@@ -389,6 +419,7 @@
 .method public __string(I)Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/emoji2/text/flatbuffer/Table;->bb:Ljava/nio/ByteBuffer;
 
     iget-object p0, p0, Landroidx/emoji2/text/flatbuffer/Table;->utf8:Landroidx/emoji2/text/flatbuffer/Utf8;
@@ -403,6 +434,7 @@
 .method public __union(Landroidx/emoji2/text/flatbuffer/Table;I)Landroidx/emoji2/text/flatbuffer/Table;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/emoji2/text/flatbuffer/Table;->bb:Ljava/nio/ByteBuffer;
 
     invoke-static {p1, p2, p0}, Landroidx/emoji2/text/flatbuffer/Table;->__union(Landroidx/emoji2/text/flatbuffer/Table;ILjava/nio/ByteBuffer;)Landroidx/emoji2/text/flatbuffer/Table;

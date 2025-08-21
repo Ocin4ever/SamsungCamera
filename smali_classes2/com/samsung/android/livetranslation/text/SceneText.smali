@@ -1562,46 +1562,56 @@
 .method public clone()Lcom/samsung/android/livetranslation/text/SceneText;
     .locals 6
 
+    .line 2
     new-instance v0, Lcom/samsung/android/livetranslation/text/SceneText;
 
     invoke-direct {v0}, Lcom/samsung/android/livetranslation/text/SceneText;-><init>()V
 
+    .line 3
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mType:Lcom/samsung/android/livetranslation/text/SceneText$SceneTextType;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setType(Lcom/samsung/android/livetranslation/text/SceneText$SceneTextType;)V
 
+    .line 4
     iget v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mDeviceOrientation:I
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setDeviceOrientation(I)V
 
+    .line 5
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mLangs:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setLanguages(Ljava/util/ArrayList;)V
 
+    .line 6
     iget-boolean v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mVerticalType:Z
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setVerticalType(Z)V
 
+    .line 7
     iget v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mGoogleBlockIdx:I
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setGoogleBlockIdx(I)V
 
+    .line 8
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mOrient:Lcom/samsung/android/livetranslation/text/SceneText$TextOrientation;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setOrient(Lcom/samsung/android/livetranslation/text/SceneText$TextOrientation;)V
 
+    .line 9
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mPoly:[Landroid/graphics/Point;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_1
 
+    .line 10
     array-length v1, v1
 
     new-array v1, v1, [Landroid/graphics/Point;
 
     move v3, v2
 
+    .line 11
     :goto_0
     iget-object v4, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mPoly:[Landroid/graphics/Point;
 
@@ -1609,6 +1619,7 @@
 
     if-ge v3, v4, :cond_0
 
+    .line 12
     new-instance v4, Landroid/graphics/Point;
 
     iget-object v5, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mPoly:[Landroid/graphics/Point;
@@ -1623,20 +1634,24 @@
 
     goto :goto_0
 
+    .line 13
     :cond_0
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setPoly([Landroid/graphics/Point;)V
 
+    .line 14
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mTrackedPoly:[Landroid/graphics/Point;
 
     if-eqz v1, :cond_3
 
+    .line 15
     array-length v1, v1
 
     new-array v1, v1, [Landroid/graphics/Point;
 
     move v3, v2
 
+    .line 16
     :goto_1
     iget-object v4, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mTrackedPoly:[Landroid/graphics/Point;
 
@@ -1644,6 +1659,7 @@
 
     if-ge v3, v4, :cond_2
 
+    .line 17
     new-instance v4, Landroid/graphics/Point;
 
     iget-object v5, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mTrackedPoly:[Landroid/graphics/Point;
@@ -1658,28 +1674,34 @@
 
     goto :goto_1
 
+    .line 18
     :cond_2
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setTrackedPoly([Landroid/graphics/Point;)V
 
+    .line 19
     :cond_3
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mValue:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setValue(Ljava/lang/String;)V
 
+    .line 20
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mTrsLang:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setTrsLanguage(Ljava/lang/String;)V
 
+    .line 21
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mTrsPoly:[Landroid/graphics/Point;
 
     if-eqz v1, :cond_5
 
+    .line 22
     array-length v1, v1
 
     new-array v1, v1, [Landroid/graphics/Point;
 
     move v3, v2
 
+    .line 23
     :goto_2
     iget-object v4, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mTrsPoly:[Landroid/graphics/Point;
 
@@ -1687,6 +1709,7 @@
 
     if-ge v3, v4, :cond_4
 
+    .line 24
     new-instance v4, Landroid/graphics/Point;
 
     iget-object v5, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mTrsPoly:[Landroid/graphics/Point;
@@ -1701,28 +1724,34 @@
 
     goto :goto_2
 
+    .line 25
     :cond_4
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setTrsPoly([Landroid/graphics/Point;)V
 
+    .line 26
     :cond_5
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mTrsValue:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setTrsValue(Ljava/lang/String;)V
 
+    .line 27
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mTrsTextMask:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/livetranslation/text/SceneText;->setTrsTextMask(Landroid/graphics/Bitmap;)V
 
+    .line 28
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mComponents:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     if-eqz v1, :cond_6
 
+    .line 29
     new-instance v1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v1, v0, Lcom/samsung/android/livetranslation/text/SceneText;->mComponents:Ljava/util/concurrent/CopyOnWriteArrayList;
 
+    .line 30
     :goto_3
     iget-object v1, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mComponents:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -1732,6 +1761,7 @@
 
     if-ge v2, v1, :cond_6
 
+    .line 31
     iget-object v1, v0, Lcom/samsung/android/livetranslation/text/SceneText;->mComponents:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     iget-object v3, p0, Lcom/samsung/android/livetranslation/text/SceneText;->mComponents:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -1759,6 +1789,7 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/livetranslation/text/SceneText;->clone()Lcom/samsung/android/livetranslation/text/SceneText;
 
     move-result-object p0

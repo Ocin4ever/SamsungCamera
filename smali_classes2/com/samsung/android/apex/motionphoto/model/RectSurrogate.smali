@@ -47,14 +47,19 @@
 .method public constructor <init>(IIII)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/samsung/android/apex/motionphoto/model/RectSurrogate;->left:I
 
+    .line 3
     iput p2, p0, Lcom/samsung/android/apex/motionphoto/model/RectSurrogate;->top:I
 
+    .line 4
     iput p3, p0, Lcom/samsung/android/apex/motionphoto/model/RectSurrogate;->right:I
 
+    .line 5
     iput p4, p0, Lcom/samsung/android/apex/motionphoto/model/RectSurrogate;->bottom:I
 
     return-void
@@ -69,6 +74,7 @@
 
     if-eq v0, p6, :cond_0
 
+    .line 6
     sget-object p6, Lcom/samsung/android/apex/motionphoto/model/RectSurrogate$$serializer;->INSTANCE:Lcom/samsung/android/apex/motionphoto/model/RectSurrogate$$serializer;
 
     invoke-virtual {p6}, Lcom/samsung/android/apex/motionphoto/model/RectSurrogate$$serializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
@@ -98,6 +104,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 7
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I

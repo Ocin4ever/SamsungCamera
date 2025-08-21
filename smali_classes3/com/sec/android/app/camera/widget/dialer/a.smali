@@ -538,6 +538,7 @@
 .method public final setLevelText(I)V
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -554,6 +555,7 @@
 .method public final setLevelText(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/widget/dialer/a;->getDisplayLevelText()Landroid/widget/TextView;
 
     move-result-object p0

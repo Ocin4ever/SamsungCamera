@@ -102,6 +102,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -125,12 +126,14 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -145,6 +148,7 @@
 
     move-wide v4, v2
 
+    .line 4
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -152,6 +156,7 @@
 
     if-eqz v6, :cond_1
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v6
@@ -164,6 +169,7 @@
 
     add-long/2addr v4, v2
 
+    .line 6
     invoke-static {v6, v7}, Lcom/google/common/primitives/Doubles;->isFinite(D)Z
 
     move-result v8
@@ -186,6 +192,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-static {v0, v1, v6, v7}, Lcom/google/common/math/StatsAccumulator;->calculateNewMeanNonFinite(DD)D
 
@@ -200,6 +207,7 @@
 .method public static varargs meanOf([D)D
     .locals 7
 
+    .line 8
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -218,15 +226,19 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 9
     aget-wide v0, p0, v1
 
+    .line 10
     :goto_1
     array-length v3, p0
 
     if-ge v2, v3, :cond_2
 
+    .line 11
     aget-wide v3, p0, v2
 
+    .line 12
     invoke-static {v3, v4}, Lcom/google/common/primitives/Doubles;->isFinite(D)Z
 
     move-result v5
@@ -251,6 +263,7 @@
 
     goto :goto_2
 
+    .line 13
     :cond_1
     invoke-static {v0, v1, v3, v4}, Lcom/google/common/math/StatsAccumulator;->calculateNewMeanNonFinite(DD)D
 
@@ -268,6 +281,7 @@
 .method public static varargs meanOf([I)D
     .locals 7
 
+    .line 14
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -286,19 +300,23 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 15
     aget v0, p0, v1
 
     int-to-double v0, v0
 
+    .line 16
     :goto_1
     array-length v3, p0
 
     if-ge v2, v3, :cond_2
 
+    .line 17
     aget v3, p0, v2
 
     int-to-double v3, v3
 
+    .line 18
     invoke-static {v3, v4}, Lcom/google/common/primitives/Doubles;->isFinite(D)Z
 
     move-result v5
@@ -323,6 +341,7 @@
 
     goto :goto_2
 
+    .line 19
     :cond_1
     invoke-static {v0, v1, v3, v4}, Lcom/google/common/math/StatsAccumulator;->calculateNewMeanNonFinite(DD)D
 
@@ -340,6 +359,7 @@
 .method public static varargs meanOf([J)D
     .locals 7
 
+    .line 20
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -358,19 +378,23 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 21
     aget-wide v0, p0, v1
 
     long-to-double v0, v0
 
+    .line 22
     :goto_1
     array-length v3, p0
 
     if-ge v2, v3, :cond_2
 
+    .line 23
     aget-wide v3, p0, v2
 
     long-to-double v3, v3
 
+    .line 24
     invoke-static {v3, v4}, Lcom/google/common/primitives/Doubles;->isFinite(D)Z
 
     move-result v5
@@ -395,6 +419,7 @@
 
     goto :goto_2
 
+    .line 25
     :cond_1
     invoke-static {v0, v1, v3, v4}, Lcom/google/common/math/StatsAccumulator;->calculateNewMeanNonFinite(DD)D
 
@@ -422,12 +447,15 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/math/StatsAccumulator;
 
     invoke-direct {v0}, Lcom/google/common/math/StatsAccumulator;-><init>()V
 
+    .line 2
     invoke-virtual {v0, p0}, Lcom/google/common/math/StatsAccumulator;->addAll(Ljava/lang/Iterable;)V
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/common/math/StatsAccumulator;->snapshot()Lcom/google/common/math/Stats;
 
     move-result-object p0
@@ -448,12 +476,15 @@
         }
     .end annotation
 
+    .line 4
     new-instance v0, Lcom/google/common/math/StatsAccumulator;
 
     invoke-direct {v0}, Lcom/google/common/math/StatsAccumulator;-><init>()V
 
+    .line 5
     invoke-virtual {v0, p0}, Lcom/google/common/math/StatsAccumulator;->addAll(Ljava/util/Iterator;)V
 
+    .line 6
     invoke-virtual {v0}, Lcom/google/common/math/StatsAccumulator;->snapshot()Lcom/google/common/math/Stats;
 
     move-result-object p0
@@ -464,12 +495,15 @@
 .method public static varargs of([D)Lcom/google/common/math/Stats;
     .locals 1
 
+    .line 7
     new-instance v0, Lcom/google/common/math/StatsAccumulator;
 
     invoke-direct {v0}, Lcom/google/common/math/StatsAccumulator;-><init>()V
 
+    .line 8
     invoke-virtual {v0, p0}, Lcom/google/common/math/StatsAccumulator;->addAll([D)V
 
+    .line 9
     invoke-virtual {v0}, Lcom/google/common/math/StatsAccumulator;->snapshot()Lcom/google/common/math/Stats;
 
     move-result-object p0
@@ -480,12 +514,15 @@
 .method public static varargs of([I)Lcom/google/common/math/Stats;
     .locals 1
 
+    .line 10
     new-instance v0, Lcom/google/common/math/StatsAccumulator;
 
     invoke-direct {v0}, Lcom/google/common/math/StatsAccumulator;-><init>()V
 
+    .line 11
     invoke-virtual {v0, p0}, Lcom/google/common/math/StatsAccumulator;->addAll([I)V
 
+    .line 12
     invoke-virtual {v0}, Lcom/google/common/math/StatsAccumulator;->snapshot()Lcom/google/common/math/Stats;
 
     move-result-object p0
@@ -496,12 +533,15 @@
 .method public static varargs of([J)Lcom/google/common/math/Stats;
     .locals 1
 
+    .line 13
     new-instance v0, Lcom/google/common/math/StatsAccumulator;
 
     invoke-direct {v0}, Lcom/google/common/math/StatsAccumulator;-><init>()V
 
+    .line 14
     invoke-virtual {v0, p0}, Lcom/google/common/math/StatsAccumulator;->addAll([J)V
 
+    .line 15
     invoke-virtual {v0}, Lcom/google/common/math/StatsAccumulator;->snapshot()Lcom/google/common/math/Stats;
 
     move-result-object p0

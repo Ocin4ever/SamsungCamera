@@ -85,22 +85,27 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 8
     iput v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$WordInfo;->label:I
 
+    .line 9
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$WordInfo;->charInfo:Ljava/util/List;
 
+    .line 10
     sget-object v1, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$CharInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
 
+    .line 11
     const-class v0, Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -122,6 +127,7 @@
     :cond_0
     iput-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$WordInfo;->rect:Landroid/graphics/Rect;
 
+    .line 12
     sget-object v0, Landroid/graphics/Point;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
@@ -139,12 +145,14 @@
     :cond_1
     iput-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$WordInfo;->poly:[Landroid/graphics/Point;
 
+    .line 13
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$WordInfo;->label:I
 
+    .line 14
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
@@ -187,20 +195,26 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$WordInfo;->charInfo:Ljava/util/List;
 
+    .line 3
     iput-object p2, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$WordInfo;->rect:Landroid/graphics/Rect;
 
+    .line 4
     iput-object p3, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$WordInfo;->poly:[Landroid/graphics/Point;
 
     const/4 p1, -0x1
 
+    .line 5
     iput p1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$WordInfo;->label:I
 
     const-string p1, ""
 
+    .line 6
     iput-object p1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult$WordInfo;->wordString:Ljava/lang/String;
 
     return-void

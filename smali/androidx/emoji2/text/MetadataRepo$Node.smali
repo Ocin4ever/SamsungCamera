@@ -34,6 +34,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-direct {p0, v0}, Landroidx/emoji2/text/MetadataRepo$Node;-><init>(I)V
 
     return-void
@@ -42,8 +43,10 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0, p1}, Landroid/util/SparseArray;-><init>(I)V

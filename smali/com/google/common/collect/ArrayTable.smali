@@ -119,24 +119,30 @@
         }
     .end annotation
 
+    .line 12
     invoke-direct {p0}, Lcom/google/common/collect/AbstractTable;-><init>()V
 
+    .line 13
     iget-object v0, p1, Lcom/google/common/collect/ArrayTable;->rowList:Lcom/google/common/collect/ImmutableList;
 
     iput-object v0, p0, Lcom/google/common/collect/ArrayTable;->rowList:Lcom/google/common/collect/ImmutableList;
 
+    .line 14
     iget-object v1, p1, Lcom/google/common/collect/ArrayTable;->columnList:Lcom/google/common/collect/ImmutableList;
 
     iput-object v1, p0, Lcom/google/common/collect/ArrayTable;->columnList:Lcom/google/common/collect/ImmutableList;
 
+    .line 15
     iget-object v2, p1, Lcom/google/common/collect/ArrayTable;->rowKeyToIndex:Lcom/google/common/collect/ImmutableMap;
 
     iput-object v2, p0, Lcom/google/common/collect/ArrayTable;->rowKeyToIndex:Lcom/google/common/collect/ImmutableMap;
 
+    .line 16
     iget-object v2, p1, Lcom/google/common/collect/ArrayTable;->columnKeyToIndex:Lcom/google/common/collect/ImmutableMap;
 
     iput-object v2, p0, Lcom/google/common/collect/ArrayTable;->columnKeyToIndex:Lcom/google/common/collect/ImmutableMap;
 
+    .line 17
     invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
@@ -165,10 +171,12 @@
 
     check-cast v0, [[Ljava/lang/Object;
 
+    .line 18
     iput-object v0, p0, Lcom/google/common/collect/ArrayTable;->array:[[Ljava/lang/Object;
 
     move v2, v1
 
+    .line 19
     :goto_0
     iget-object v3, p0, Lcom/google/common/collect/ArrayTable;->rowList:Lcom/google/common/collect/ImmutableList;
 
@@ -178,6 +186,7 @@
 
     if-ge v2, v3, :cond_0
 
+    .line 20
     iget-object v3, p1, Lcom/google/common/collect/ArrayTable;->array:[[Ljava/lang/Object;
 
     aget-object v3, v3, v2
@@ -206,6 +215,7 @@
         }
     .end annotation
 
+    .line 10
     invoke-interface {p1}, Lcom/google/common/collect/Table;->rowKeySet()Ljava/util/Set;
 
     move-result-object v0
@@ -216,6 +226,7 @@
 
     invoke-direct {p0, v0, v1}, Lcom/google/common/collect/ArrayTable;-><init>(Ljava/lang/Iterable;Ljava/lang/Iterable;)V
 
+    .line 11
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ArrayTable;->putAll(Lcom/google/common/collect/Table;)V
 
     return-void
@@ -233,20 +244,24 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/AbstractTable;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/common/collect/ArrayTable;->rowList:Lcom/google/common/collect/ImmutableList;
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/google/common/collect/ArrayTable;->columnList:Lcom/google/common/collect/ImmutableList;
 
+    .line 4
     invoke-virtual {p1}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v0
@@ -271,18 +286,21 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/collect/Maps;->indexMap(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/collect/ArrayTable;->rowKeyToIndex:Lcom/google/common/collect/ImmutableMap;
 
+    .line 6
     invoke-static {p2}, Lcom/google/common/collect/Maps;->indexMap(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/collect/ArrayTable;->columnKeyToIndex:Lcom/google/common/collect/ImmutableMap;
 
+    .line 7
     invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
 
     move-result p1
@@ -307,8 +325,10 @@
 
     check-cast p1, [[Ljava/lang/Object;
 
+    .line 8
     iput-object p1, p0, Lcom/google/common/collect/ArrayTable;->array:[[Ljava/lang/Object;
 
+    .line 9
     invoke-virtual {p0}, Lcom/google/common/collect/ArrayTable;->eraseAll()V
 
     return-void
@@ -384,10 +404,12 @@
         }
     .end annotation
 
+    .line 2
     instance-of v0, p0, Lcom/google/common/collect/ArrayTable;
 
     if-eqz v0, :cond_0
 
+    .line 3
     new-instance v0, Lcom/google/common/collect/ArrayTable;
 
     check-cast p0, Lcom/google/common/collect/ArrayTable;
@@ -396,6 +418,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance v0, Lcom/google/common/collect/ArrayTable;
 
@@ -425,6 +448,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ArrayTable;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/ArrayTable;-><init>(Ljava/lang/Iterable;Ljava/lang/Iterable;)V
@@ -632,6 +656,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/ArrayTable;->columnKeyToIndex:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->keySet()Lcom/google/common/collect/ImmutableSet;
@@ -644,6 +669,7 @@
 .method public bridge synthetic columnKeySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ArrayTable;->columnKeySet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -1147,6 +1173,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/ArrayTable;->rowKeyToIndex:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->keySet()Lcom/google/common/collect/ImmutableSet;
@@ -1159,6 +1186,7 @@
 .method public bridge synthetic rowKeySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ArrayTable;->rowKeySet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0

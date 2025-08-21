@@ -68,6 +68,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/HashBasedTable;
 
     new-instance v1, Ljava/util/LinkedHashMap;
@@ -103,12 +104,15 @@
 
     const-string v0, "expectedCellsPerRow"
 
+    .line 2
     invoke-static {p1, v0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/collect/Maps;->newLinkedHashMapWithExpectedSize(I)Ljava/util/LinkedHashMap;
 
     move-result-object p0
 
+    .line 4
     new-instance v0, Lcom/google/common/collect/HashBasedTable;
 
     new-instance v1, Lcom/google/common/collect/HashBasedTable$Factory;
@@ -138,10 +142,12 @@
         }
     .end annotation
 
+    .line 5
     invoke-static {}, Lcom/google/common/collect/HashBasedTable;->create()Lcom/google/common/collect/HashBasedTable;
 
     move-result-object v0
 
+    .line 6
     invoke-virtual {v0, p0}, Lcom/google/common/collect/HashBasedTable;->putAll(Lcom/google/common/collect/Table;)V
 
     return-object v0

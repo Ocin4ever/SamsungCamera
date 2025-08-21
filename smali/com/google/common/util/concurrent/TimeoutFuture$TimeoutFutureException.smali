@@ -18,6 +18,7 @@
 .method private constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -26,6 +27,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;Lcom/google/common/util/concurrent/TimeoutFuture$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/TimeoutFuture$TimeoutFutureException;-><init>(Ljava/lang/String;)V
 
     return-void

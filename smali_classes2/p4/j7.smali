@@ -23,6 +23,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/j7;->f:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/j7;->g:Landroid/util/SparseIntArray;
@@ -43,6 +44,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     aget-object v3, p2, v0
 
     const/4 v4, 0x0
@@ -85,28 +87,35 @@
 
     const-wide/16 v0, -0x1
 
+    .line 3
     iput-wide v0, p0, Lp4/j7;->e:J
 
+    .line 4
     iget-object p1, p0, Lp4/i7;->a:Lcom/sec/android/app/camera/widget/StrokedTextView;
 
     const/4 p3, 0x0
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 5
     iget-object p1, p0, Lp4/i7;->b:Landroid/widget/ImageView;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 6
     iget-object p1, p0, Lp4/i7;->c:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 7
     iget-object p1, p0, Lp4/i7;->d:Lcom/sec/android/app/camera/shootingmode/pro/widget/ProHorizontalScrollView;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 8
     invoke-virtual {p0, p2}, Landroidx/databinding/ViewDataBinding;->setRootTag([Landroid/view/View;)V
 
+    .line 9
     invoke-virtual {p0}, Lp4/j7;->invalidateAll()V
 
     return-void

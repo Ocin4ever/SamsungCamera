@@ -78,6 +78,7 @@
 .method public bridge synthetic distance(Ljava/lang/Comparable;Ljava/lang/Comparable;)J
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Long;
 
     check-cast p2, Ljava/lang/Long;
@@ -92,6 +93,7 @@
 .method public distance(Ljava/lang/Long;Ljava/lang/Long;)J
     .locals 6
 
+    .line 2
     invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -102,6 +104,7 @@
 
     sub-long/2addr v0, v2
 
+    .line 3
     invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v2
@@ -124,6 +127,7 @@
 
     return-wide p0
 
+    .line 4
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
 
@@ -152,6 +156,7 @@
 .method public bridge synthetic maxValue()Ljava/lang/Comparable;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/DiscreteDomain$LongDomain;->maxValue()Ljava/lang/Long;
 
     move-result-object p0
@@ -164,6 +169,7 @@
 
     const-wide v0, 0x7fffffffffffffffL
 
+    .line 2
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
@@ -174,6 +180,7 @@
 .method public bridge synthetic minValue()Ljava/lang/Comparable;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/DiscreteDomain$LongDomain;->minValue()Ljava/lang/Long;
 
     move-result-object p0
@@ -186,6 +193,7 @@
 
     const-wide/high16 v0, -0x8000000000000000L
 
+    .line 2
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
@@ -196,6 +204,7 @@
 .method public bridge synthetic next(Ljava/lang/Comparable;)Ljava/lang/Comparable;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/DiscreteDomain$LongDomain;->next(Ljava/lang/Long;)Ljava/lang/Long;
@@ -208,6 +217,7 @@
 .method public next(Ljava/lang/Long;)Ljava/lang/Long;
     .locals 2
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide p0
@@ -227,6 +237,7 @@
 
     add-long/2addr p0, v0
 
+    .line 3
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
@@ -238,6 +249,7 @@
 .method public bridge synthetic offset(Ljava/lang/Comparable;J)Ljava/lang/Comparable;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/common/collect/DiscreteDomain$LongDomain;->offset(Ljava/lang/Long;J)Ljava/lang/Long;
@@ -252,8 +264,10 @@
 
     const-string p0, "distance"
 
+    .line 2
     invoke-static {p2, p3, p0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(JLjava/lang/String;)J
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -266,6 +280,7 @@
 
     if-gez p0, :cond_1
 
+    .line 4
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide p0
@@ -286,6 +301,7 @@
 
     invoke-static {p0, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 5
     :cond_1
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -297,6 +313,7 @@
 .method public bridge synthetic previous(Ljava/lang/Comparable;)Ljava/lang/Comparable;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/DiscreteDomain$LongDomain;->previous(Ljava/lang/Long;)Ljava/lang/Long;
@@ -309,6 +326,7 @@
 .method public previous(Ljava/lang/Long;)Ljava/lang/Long;
     .locals 2
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide p0
@@ -328,6 +346,7 @@
 
     sub-long/2addr p0, v0
 
+    .line 3
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0

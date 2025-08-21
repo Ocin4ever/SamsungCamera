@@ -163,6 +163,7 @@
 .method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 
+    .line 1
     new-instance v0, Landroidx/appcompat/graphics/drawable/StateListDrawableCompat;
 
     const/4 v1, 0x0
@@ -175,6 +176,7 @@
 .method public newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
+    .line 2
     new-instance v0, Landroidx/appcompat/graphics/drawable/StateListDrawableCompat;
 
     invoke-direct {v0, p0, p1}, Landroidx/appcompat/graphics/drawable/StateListDrawableCompat;-><init>(Landroidx/appcompat/graphics/drawable/StateListDrawableCompat$StateListState;Landroid/content/res/Resources;)V

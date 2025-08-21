@@ -58,6 +58,7 @@
 .method public apply(Ljava/lang/Character;)Z
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/base/CharMatcher$ForPredicate;->predicate:Lcom/google/common/base/Predicate;
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -74,6 +75,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Character;
 
     invoke-virtual {p0, p1}, Lcom/google/common/base/CharMatcher$ForPredicate;->apply(Ljava/lang/Character;)Z

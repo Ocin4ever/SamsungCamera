@@ -570,6 +570,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Character;->charValue()C
 
     move-result p1
@@ -586,6 +587,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     check-cast p1, Ljava/lang/Character;
 
     invoke-virtual {p0, p1}, Lcom/google/common/base/CharMatcher;->apply(Ljava/lang/Character;)Z
@@ -721,6 +723,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/google/common/base/CharMatcher;->indexIn(Ljava/lang/CharSequence;I)I
 
     move-result p0
@@ -731,15 +734,18 @@
 .method public indexIn(Ljava/lang/CharSequence;I)I
     .locals 2
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
+    .line 3
     invoke-static {p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndex(II)I
 
     :goto_0
     if-ge p2, v0, :cond_1
 
+    .line 4
     invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v1
@@ -1064,10 +1070,12 @@
 .method public replaceFrom(Ljava/lang/CharSequence;C)Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/base/CharMatcher;->indexIn(Ljava/lang/CharSequence;)I
 
     move-result v0
@@ -1078,21 +1086,25 @@
 
     return-object p1
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object p1
 
+    .line 4
     aput-char p2, p1, v0
 
     :cond_1
     :goto_0
     add-int/lit8 v0, v0, 0x1
 
+    .line 5
     array-length v1, p1
 
     if-ge v0, v1, :cond_2
 
+    .line 6
     aget-char v1, p1, v0
 
     invoke-virtual {p0, v1}, Lcom/google/common/base/CharMatcher;->matches(C)Z
@@ -1101,10 +1113,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 7
     aput-char p2, p1, v0
 
     goto :goto_0
 
+    .line 8
     :cond_2
     new-instance p0, Ljava/lang/String;
 
@@ -1116,12 +1130,14 @@
 .method public replaceFrom(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 7
 
+    .line 9
     invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 10
     invoke-virtual {p0, p1}, Lcom/google/common/base/CharMatcher;->removeFrom(Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p0
@@ -1135,6 +1151,7 @@
 
     if-ne v0, v2, :cond_1
 
+    .line 11
     invoke-interface {p2, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result p2
@@ -1145,11 +1162,13 @@
 
     return-object p0
 
+    .line 12
     :cond_1
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 13
     invoke-virtual {p0, p1}, Lcom/google/common/base/CharMatcher;->indexIn(Ljava/lang/CharSequence;)I
 
     move-result v0
@@ -1160,11 +1179,13 @@
 
     return-object p1
 
+    .line 14
     :cond_2
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v4
 
+    .line 15
     new-instance v5, Ljava/lang/StringBuilder;
 
     mul-int/lit8 v6, v4, 0x3
@@ -1175,21 +1196,26 @@
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 16
     :cond_3
     invoke-virtual {v5, p1, v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
+    .line 17
     invoke-virtual {v5, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v0, 0x1
 
+    .line 18
     invoke-virtual {p0, p1, v1}, Lcom/google/common/base/CharMatcher;->indexIn(Ljava/lang/CharSequence;I)I
 
     move-result v0
 
     if-ne v0, v3, :cond_3
 
+    .line 19
     invoke-virtual {v5, p1, v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
+    .line 20
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

@@ -91,8 +91,10 @@
         }
     .end annotation
 
+    .line 1
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 2
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object v0
@@ -101,6 +103,7 @@
 
     move-result-object v3
 
+    .line 3
     invoke-interface {p2}, Li6/d;->getContext()Li6/g;
 
     move-result-object v0
@@ -111,6 +114,7 @@
 
     if-nez v2, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
@@ -119,6 +123,7 @@
 
     if-eq v0, v4, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
@@ -135,6 +140,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance p0, Landroidx/lifecycle/LifecycleDestroyedException;
 
@@ -142,6 +148,7 @@
 
     throw p0
 
+    .line 7
     :cond_1
     new-instance v4, Landroidx/lifecycle/WithLifecycleStateKt$withStateAtLeastUnchecked$2;
 
@@ -174,12 +181,15 @@
         }
     .end annotation
 
+    .line 8
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
+    .line 9
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 10
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object p0
@@ -188,6 +198,7 @@
 
     move-result-object v3
 
+    .line 11
     invoke-interface {p2}, Li6/d;->getContext()Li6/g;
 
     move-result-object p0
@@ -198,6 +209,7 @@
 
     if-nez v2, :cond_1
 
+    .line 12
     invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object p0
@@ -206,6 +218,7 @@
 
     if-eq p0, v4, :cond_0
 
+    .line 13
     invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object p0
@@ -222,6 +235,7 @@
 
     goto :goto_0
 
+    .line 14
     :cond_0
     new-instance p0, Landroidx/lifecycle/LifecycleDestroyedException;
 
@@ -229,6 +243,7 @@
 
     throw p0
 
+    .line 15
     :cond_1
     new-instance v4, Landroidx/lifecycle/WithLifecycleStateKt$withStateAtLeastUnchecked$2;
 
@@ -259,8 +274,10 @@
         }
     .end annotation
 
+    .line 1
     sget-object p0, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 2
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object p0
@@ -269,6 +286,7 @@
 
     const/4 p0, 0x3
 
+    .line 3
     invoke-static {p0}, Lkotlin/jvm/internal/l;->c(I)V
 
     const/4 p0, 0x0
@@ -291,10 +309,13 @@
         }
     .end annotation
 
+    .line 4
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
+    .line 5
     sget-object p0, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 6
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object p0
@@ -303,6 +324,7 @@
 
     const/4 p0, 0x3
 
+    .line 7
     invoke-static {p0}, Lkotlin/jvm/internal/l;->c(I)V
 
     const/4 p0, 0x0
@@ -325,8 +347,10 @@
         }
     .end annotation
 
+    .line 1
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 2
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object v0
@@ -335,6 +359,7 @@
 
     move-result-object v3
 
+    .line 3
     invoke-interface {p2}, Li6/d;->getContext()Li6/g;
 
     move-result-object v0
@@ -345,6 +370,7 @@
 
     if-nez v2, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
@@ -353,6 +379,7 @@
 
     if-eq v0, v4, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
@@ -369,6 +396,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance p0, Landroidx/lifecycle/LifecycleDestroyedException;
 
@@ -376,6 +404,7 @@
 
     throw p0
 
+    .line 7
     :cond_1
     new-instance v4, Landroidx/lifecycle/WithLifecycleStateKt$withStateAtLeastUnchecked$2;
 
@@ -408,12 +437,15 @@
         }
     .end annotation
 
+    .line 8
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
+    .line 9
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 10
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object p0
@@ -422,6 +454,7 @@
 
     move-result-object v3
 
+    .line 11
     invoke-interface {p2}, Li6/d;->getContext()Li6/g;
 
     move-result-object p0
@@ -432,6 +465,7 @@
 
     if-nez v2, :cond_1
 
+    .line 12
     invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object p0
@@ -440,6 +474,7 @@
 
     if-eq p0, v4, :cond_0
 
+    .line 13
     invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object p0
@@ -456,6 +491,7 @@
 
     goto :goto_0
 
+    .line 14
     :cond_0
     new-instance p0, Landroidx/lifecycle/LifecycleDestroyedException;
 
@@ -463,6 +499,7 @@
 
     throw p0
 
+    .line 15
     :cond_1
     new-instance v4, Landroidx/lifecycle/WithLifecycleStateKt$withStateAtLeastUnchecked$2;
 
@@ -493,8 +530,10 @@
         }
     .end annotation
 
+    .line 1
     sget-object p0, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 2
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object p0
@@ -503,6 +542,7 @@
 
     const/4 p0, 0x3
 
+    .line 3
     invoke-static {p0}, Lkotlin/jvm/internal/l;->c(I)V
 
     const/4 p0, 0x0
@@ -525,10 +565,13 @@
         }
     .end annotation
 
+    .line 4
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
+    .line 5
     sget-object p0, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 6
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object p0
@@ -537,6 +580,7 @@
 
     const/4 p0, 0x3
 
+    .line 7
     invoke-static {p0}, Lkotlin/jvm/internal/l;->c(I)V
 
     const/4 p0, 0x0
@@ -559,8 +603,10 @@
         }
     .end annotation
 
+    .line 1
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 2
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object v0
@@ -569,6 +615,7 @@
 
     move-result-object v3
 
+    .line 3
     invoke-interface {p2}, Li6/d;->getContext()Li6/g;
 
     move-result-object v0
@@ -579,6 +626,7 @@
 
     if-nez v2, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
@@ -587,6 +635,7 @@
 
     if-eq v0, v4, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
@@ -603,6 +652,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance p0, Landroidx/lifecycle/LifecycleDestroyedException;
 
@@ -610,6 +660,7 @@
 
     throw p0
 
+    .line 7
     :cond_1
     new-instance v4, Landroidx/lifecycle/WithLifecycleStateKt$withStateAtLeastUnchecked$2;
 
@@ -642,12 +693,15 @@
         }
     .end annotation
 
+    .line 8
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
+    .line 9
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 10
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object p0
@@ -656,6 +710,7 @@
 
     move-result-object v3
 
+    .line 11
     invoke-interface {p2}, Li6/d;->getContext()Li6/g;
 
     move-result-object p0
@@ -666,6 +721,7 @@
 
     if-nez v2, :cond_1
 
+    .line 12
     invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object p0
@@ -674,6 +730,7 @@
 
     if-eq p0, v4, :cond_0
 
+    .line 13
     invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object p0
@@ -690,6 +747,7 @@
 
     goto :goto_0
 
+    .line 14
     :cond_0
     new-instance p0, Landroidx/lifecycle/LifecycleDestroyedException;
 
@@ -697,6 +755,7 @@
 
     throw p0
 
+    .line 15
     :cond_1
     new-instance v4, Landroidx/lifecycle/WithLifecycleStateKt$withStateAtLeastUnchecked$2;
 
@@ -727,8 +786,10 @@
         }
     .end annotation
 
+    .line 1
     sget-object p0, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 2
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object p0
@@ -737,6 +798,7 @@
 
     const/4 p0, 0x3
 
+    .line 3
     invoke-static {p0}, Lkotlin/jvm/internal/l;->c(I)V
 
     const/4 p0, 0x0
@@ -759,10 +821,13 @@
         }
     .end annotation
 
+    .line 4
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
+    .line 5
     sget-object p0, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
 
+    .line 6
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object p0
@@ -771,6 +836,7 @@
 
     const/4 p0, 0x3
 
+    .line 7
     invoke-static {p0}, Lkotlin/jvm/internal/l;->c(I)V
 
     const/4 p0, 0x0
@@ -794,6 +860,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-virtual {p1, v0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
@@ -812,6 +879,7 @@
     :goto_0
     if-eqz v0, :cond_3
 
+    .line 2
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object v0
@@ -820,6 +888,7 @@
 
     move-result-object v4
 
+    .line 3
     invoke-interface {p3}, Li6/d;->getContext()Li6/g;
 
     move-result-object v0
@@ -830,6 +899,7 @@
 
     if-nez v3, :cond_2
 
+    .line 4
     invoke-virtual {p0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
@@ -838,6 +908,7 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
@@ -854,6 +925,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
     new-instance p0, Landroidx/lifecycle/LifecycleDestroyedException;
 
@@ -861,6 +933,7 @@
 
     throw p0
 
+    .line 7
     :cond_2
     new-instance v5, Landroidx/lifecycle/WithLifecycleStateKt$withStateAtLeastUnchecked$2;
 
@@ -879,6 +952,7 @@
     :goto_1
     return-object p0
 
+    .line 8
     :cond_3
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -894,6 +968,7 @@
 
     move-result-object p0
 
+    .line 9
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -921,10 +996,12 @@
         }
     .end annotation
 
+    .line 10
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
+    .line 11
     sget-object p0, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-virtual {p1, p0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
@@ -943,6 +1020,7 @@
     :goto_0
     if-eqz p0, :cond_3
 
+    .line 12
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
     move-result-object p0
@@ -951,6 +1029,7 @@
 
     move-result-object v3
 
+    .line 13
     invoke-interface {p3}, Li6/d;->getContext()Li6/g;
 
     move-result-object p0
@@ -961,6 +1040,7 @@
 
     if-nez v2, :cond_2
 
+    .line 14
     invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object p0
@@ -969,6 +1049,7 @@
 
     if-eq p0, v1, :cond_1
 
+    .line 15
     invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object p0
@@ -985,6 +1066,7 @@
 
     goto :goto_1
 
+    .line 16
     :cond_1
     new-instance p0, Landroidx/lifecycle/LifecycleDestroyedException;
 
@@ -992,6 +1074,7 @@
 
     throw p0
 
+    .line 17
     :cond_2
     new-instance v4, Landroidx/lifecycle/WithLifecycleStateKt$withStateAtLeastUnchecked$2;
 
@@ -1008,6 +1091,7 @@
     :goto_1
     return-object p0
 
+    .line 18
     :cond_3
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1023,6 +1107,7 @@
 
     move-result-object p0
 
+    .line 19
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1050,6 +1135,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object p0, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-virtual {p1, p0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
@@ -1068,6 +1154,7 @@
     :goto_0
     if-nez p0, :cond_1
 
+    .line 2
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1082,6 +1169,7 @@
 
     move-result-object p0
 
+    .line 3
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1092,6 +1180,7 @@
 
     throw p1
 
+    .line 4
     :cond_1
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
@@ -1101,6 +1190,7 @@
 
     const/4 p0, 0x3
 
+    .line 5
     invoke-static {p0}, Lkotlin/jvm/internal/l;->c(I)V
 
     const/4 p0, 0x0
@@ -1124,8 +1214,10 @@
         }
     .end annotation
 
+    .line 6
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
+    .line 7
     sget-object p0, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-virtual {p1, p0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
@@ -1144,6 +1236,7 @@
     :goto_0
     if-nez p0, :cond_1
 
+    .line 8
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1158,6 +1251,7 @@
 
     move-result-object p0
 
+    .line 9
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1168,6 +1262,7 @@
 
     throw p1
 
+    .line 10
     :cond_1
     invoke-static {}, Lx6/v0;->c()Lx6/d2;
 
@@ -1177,6 +1272,7 @@
 
     const/4 p0, 0x3
 
+    .line 11
     invoke-static {p0}, Lkotlin/jvm/internal/l;->c(I)V
 
     const/4 p0, 0x0

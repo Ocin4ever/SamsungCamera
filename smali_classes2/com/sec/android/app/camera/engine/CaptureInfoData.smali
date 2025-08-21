@@ -54,90 +54,106 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mPreCaptureCondition:Z
 
+    .line 4
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->e(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mInputType:Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;
 
+    .line 5
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->b(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)Lcom/sec/android/app/camera/interfaces/Engine$CaptureType;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mCaptureType:Lcom/sec/android/app/camera/interfaces/Engine$CaptureType;
 
+    .line 6
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->n(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)Lcom/sec/android/app/camera/interfaces/InternalEngine$TakePictureType;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mTakePictureType:Lcom/sec/android/app/camera/interfaces/InternalEngine$TakePictureType;
 
+    .line 7
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->a(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mBrightnessValue:I
 
+    .line 8
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->c(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)Lcom/samsung/android/camera/core2/container/DynamicShotInfo;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mDynamicShotInfo:Lcom/samsung/android/camera/core2/container/DynamicShotInfo;
 
+    .line 9
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->d(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mEstimatedCaptureDuration:I
 
+    .line 10
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->h(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mIsMotionPhotoEnabled:Z
 
+    .line 11
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->f(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mIsFocusEnhancerEnabled:Z
 
+    .line 12
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->g(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mIsHighMagnificationZoom:Z
 
+    .line 13
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->i(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mLightCondition:I
 
+    .line 14
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->j(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)Landroid/location/Location;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mLocation:Landroid/location/Location;
 
+    .line 15
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->k(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mOrientation:I
 
+    .line 16
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->l(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)Lcom/sec/android/app/camera/interfaces/InternalEngine$ScreenFlashType;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CaptureInfoData;->mScreenFlashType:Lcom/sec/android/app/camera/interfaces/InternalEngine$ScreenFlashType;
 
+    .line 17
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;->m(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)J
 
     move-result-wide v0
@@ -150,6 +166,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;Lcom/sec/android/app/camera/engine/r2;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/engine/CaptureInfoData;-><init>(Lcom/sec/android/app/camera/engine/CaptureInfoData$Builder;)V
 
     return-void

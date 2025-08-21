@@ -54,8 +54,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Landroid/graphics/Point;
 
+    .line 3
     iget v1, p1, Landroid/graphics/Point;->x:I
 
     int-to-float v1, v1
@@ -78,6 +80,7 @@
 
     float-to-int v1, v1
 
+    .line 4
     iget p1, p1, Landroid/graphics/Point;->y:I
 
     int-to-float p1, p1
@@ -94,6 +97,7 @@
 
     float-to-int p0, p1
 
+    .line 5
     invoke-direct {v0, v1, p0}, Landroid/graphics/Point;-><init>(II)V
 
     return-object v0
@@ -102,6 +106,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/graphics/Point;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/DrawUtil$fixDimensions$1;->invoke(Landroid/graphics/Point;)Landroid/graphics/Point;

@@ -26,12 +26,16 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Ly2/a;Ly2/a;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/sec/android/app/camera/setting/repository/CustomizableSettings$SupportedKeyInfo;->mKey:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
+    .line 4
     iput-object p2, p0, Lcom/sec/android/app/camera/setting/repository/CustomizableSettings$SupportedKeyInfo;->mSinceVersion:Ly2/a;
 
+    .line 5
     iput-object p3, p0, Lcom/sec/android/app/camera/setting/repository/CustomizableSettings$SupportedKeyInfo;->mRemovedVersion:Ly2/a;
 
     return-void
@@ -40,6 +44,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Ly2/a;Ly2/a;Lcom/sec/android/app/camera/setting/repository/jk;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/setting/repository/CustomizableSettings$SupportedKeyInfo;-><init>(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Ly2/a;Ly2/a;)V
 
     return-void

@@ -46,18 +46,23 @@
 .method public final invoke()Lcom/samsung/android/app/sdk/deepsky/nedgesuggestion/NudgeSuggestionImpl;
     .locals 2
 
+    .line 2
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/nedgesuggestion/NudgeSuggestionImpl;
 
+    .line 3
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$nudgeSuggestionByLazy$2;->$appContext:Landroid/content/Context;
 
+    .line 4
     sget-object v1, Lcom/samsung/android/app/sdk/deepsky/common/Injector;->INSTANCE:Lcom/samsung/android/app/sdk/deepsky/common/Injector;
 
     invoke-virtual {v1, p0}, Lcom/samsung/android/app/sdk/deepsky/common/Injector;->provideAppSearch$deepsky_sdk_smartsuggestion_1_0_8_release(Landroid/content/Context;)Lcom/samsung/android/app/sdk/deepsky/common/AppSearch;
 
     move-result-object v1
 
+    .line 5
     invoke-direct {v0, p0, v1}, Lcom/samsung/android/app/sdk/deepsky/nedgesuggestion/NudgeSuggestionImpl;-><init>(Landroid/content/Context;Lcom/samsung/android/app/sdk/deepsky/common/AppSearch;)V
 
+    .line 6
     invoke-virtual {v0}, Lcom/samsung/android/app/sdk/deepsky/nedgesuggestion/NudgeSuggestionImpl;->checkIfAccessAllowed()Z
 
     move-result p0
@@ -76,6 +81,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$nudgeSuggestionByLazy$2;->invoke()Lcom/samsung/android/app/sdk/deepsky/nedgesuggestion/NudgeSuggestionImpl;
 
     move-result-object p0

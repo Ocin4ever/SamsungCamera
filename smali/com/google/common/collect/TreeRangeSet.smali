@@ -90,8 +90,10 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/collect/AbstractRangeSet;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/collect/TreeRangeSet;->rangesByLowerBound:Ljava/util/NavigableMap;
 
     return-void
@@ -100,6 +102,7 @@
 .method public synthetic constructor <init>(Ljava/util/NavigableMap;Lcom/google/common/collect/TreeRangeSet$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/TreeRangeSet;-><init>(Ljava/util/NavigableMap;)V
 
     return-void
@@ -127,6 +130,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/TreeRangeSet;
 
     new-instance v1, Ljava/util/TreeMap;
@@ -152,10 +156,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/TreeRangeSet;->create()Lcom/google/common/collect/TreeRangeSet;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0, p0}, Lcom/google/common/collect/TreeRangeSet;->addAll(Lcom/google/common/collect/RangeSet;)V
 
     return-object v0
@@ -176,10 +182,12 @@
         }
     .end annotation
 
+    .line 4
     invoke-static {}, Lcom/google/common/collect/TreeRangeSet;->create()Lcom/google/common/collect/TreeRangeSet;
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {v0, p0}, Lcom/google/common/collect/TreeRangeSet;->addAll(Ljava/lang/Iterable;)V
 
     return-object v0
@@ -379,6 +387,7 @@
 .method public bridge synthetic addAll(Lcom/google/common/collect/RangeSet;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractRangeSet;->addAll(Lcom/google/common/collect/RangeSet;)V
 
     return-void
@@ -387,6 +396,7 @@
 .method public bridge synthetic addAll(Ljava/lang/Iterable;)V
     .locals 0
 
+    .line 2
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractRangeSet;->addAll(Ljava/lang/Iterable;)V
 
     return-void
@@ -548,6 +558,7 @@
 .method public bridge synthetic enclosesAll(Lcom/google/common/collect/RangeSet;)Z
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractRangeSet;->enclosesAll(Lcom/google/common/collect/RangeSet;)Z
 
     move-result p0
@@ -558,6 +569,7 @@
 .method public bridge synthetic enclosesAll(Ljava/lang/Iterable;)Z
     .locals 0
 
+    .line 2
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractRangeSet;->enclosesAll(Ljava/lang/Iterable;)Z
 
     move-result p0
@@ -883,6 +895,7 @@
 .method public bridge synthetic removeAll(Lcom/google/common/collect/RangeSet;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractRangeSet;->removeAll(Lcom/google/common/collect/RangeSet;)V
 
     return-void
@@ -891,6 +904,7 @@
 .method public bridge synthetic removeAll(Ljava/lang/Iterable;)V
     .locals 0
 
+    .line 2
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractRangeSet;->removeAll(Ljava/lang/Iterable;)V
 
     return-void

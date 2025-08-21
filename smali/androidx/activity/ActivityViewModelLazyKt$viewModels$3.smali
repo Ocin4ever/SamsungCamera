@@ -46,6 +46,7 @@
 .method public final invoke()Landroidx/lifecycle/ViewModelStore;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/activity/ActivityViewModelLazyKt$viewModels$3;->$this_viewModels:Landroidx/activity/ComponentActivity;
 
     invoke-virtual {p0}, Landroidx/activity/ComponentActivity;->getViewModelStore()Landroidx/lifecycle/ViewModelStore;
@@ -62,6 +63,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$3;->invoke()Landroidx/lifecycle/ViewModelStore;
 
     move-result-object p0

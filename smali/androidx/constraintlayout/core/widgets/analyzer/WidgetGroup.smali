@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static final DEBUG:Z
+.field private static final DEBUG:Z = false
 
 .field static count:I
 
@@ -140,10 +140,12 @@
 .method private measureWrap(ILandroidx/constraintlayout/core/widgets/ConstraintWidget;)I
     .locals 1
 
+    .line 1
     invoke-virtual {p2, p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->getDimensionBehaviour(I)Landroidx/constraintlayout/core/widgets/ConstraintWidget$DimensionBehaviour;
 
     move-result-object p0
 
+    .line 2
     sget-object v0, Landroidx/constraintlayout/core/widgets/ConstraintWidget$DimensionBehaviour;->WRAP_CONTENT:Landroidx/constraintlayout/core/widgets/ConstraintWidget$DimensionBehaviour;
 
     if-eq p0, v0, :cond_1
@@ -167,12 +169,14 @@
     :goto_0
     if-nez p1, :cond_2
 
+    .line 3
     invoke-virtual {p2}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->getWidth()I
 
     move-result p0
 
     goto :goto_1
 
+    .line 4
     :cond_2
     invoke-virtual {p2}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->getHeight()I
 
@@ -555,6 +559,7 @@
 .method public measureWrap(Landroidx/constraintlayout/core/LinearSystem;I)I
     .locals 1
 
+    .line 5
     iget-object v0, p0, Landroidx/constraintlayout/core/widgets/analyzer/WidgetGroup;->widgets:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -567,6 +572,7 @@
 
     return p0
 
+    .line 6
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/core/widgets/analyzer/WidgetGroup;->widgets:Ljava/util/ArrayList;
 

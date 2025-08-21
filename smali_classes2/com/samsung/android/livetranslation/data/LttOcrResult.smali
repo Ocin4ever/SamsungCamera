@@ -67,14 +67,17 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 8
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/livetranslation/data/LttOcrResult;->blockInfoList:Ljava/util/List;
 
+    .line 9
     sget-object p0, Lcom/samsung/android/livetranslation/data/LttOcrResult$BlockInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0, p0}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
@@ -93,10 +96,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/livetranslation/data/LttOcrResult;->blockInfoList:Ljava/util/List;
 
+    .line 3
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -120,10 +126,13 @@
         }
     .end annotation
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     iput-object p1, p0, Lcom/samsung/android/livetranslation/data/LttOcrResult;->blockInfoList:Ljava/util/List;
 
+    .line 6
     iput-object p2, p0, Lcom/samsung/android/livetranslation/data/LttOcrResult;->languageTagList:Ljava/util/List;
 
     return-void

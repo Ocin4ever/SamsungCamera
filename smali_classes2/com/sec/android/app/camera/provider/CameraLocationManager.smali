@@ -997,12 +997,14 @@
 
     const/4 v0, -0x1
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/provider/CameraLocationManager;->startLocationRequest(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/provider/CameraLocationManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p0}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getApplicationContext()Landroid/content/Context;
@@ -1022,6 +1024,7 @@
 .method public startLocationRequest(I)Z
     .locals 4
 
+    .line 3
     iget-object v0, p0, Lcom/sec/android/app/camera/provider/CameraLocationManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getCameraSettings()Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -1073,11 +1076,13 @@
 
     goto :goto_2
 
+    .line 4
     :cond_3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/provider/CameraLocationManager;->isNetworkLocationProviderEnabled()Z
 
     move-result p1
 
+    .line 5
     :goto_2
     sget-object v2, Ly2/b;->f:Ly2/b;
 
@@ -1113,6 +1118,7 @@
     :goto_4
     if-nez p1, :cond_7
 
+    .line 6
     iget-object p1, p0, Lcom/sec/android/app/camera/provider/CameraLocationManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getCameraDialogManager()Lcom/sec/android/app/camera/interfaces/CameraDialogManager;
@@ -1129,6 +1135,7 @@
 
     if-eqz v2, :cond_6
 
+    .line 7
     iget-object p0, p0, Lcom/sec/android/app/camera/provider/CameraLocationManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getCameraDialogManager()Lcom/sec/android/app/camera/interfaces/CameraDialogManager;
@@ -1139,6 +1146,7 @@
 
     goto :goto_5
 
+    .line 8
     :cond_6
     iget-object p1, p0, Lcom/sec/android/app/camera/provider/CameraLocationManager;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
@@ -1153,6 +1161,7 @@
     :goto_5
     return v1
 
+    .line 9
     :cond_7
     invoke-direct {p0}, Lcom/sec/android/app/camera/provider/CameraLocationManager;->startHandler()V
 

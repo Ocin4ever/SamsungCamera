@@ -8,7 +8,7 @@
 
 .field private static final TAG:Ljava/lang/String; = "SmartScanRectifyWrapper"
 
-.field private static mIsInitialized:Z
+.field private static mIsInitialized:Z = false
 
 
 # direct methods

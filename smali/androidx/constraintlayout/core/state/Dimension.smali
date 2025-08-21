@@ -89,34 +89,43 @@
 .method private constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x2
 
+    .line 2
     iput v0, p0, Landroidx/constraintlayout/core/state/Dimension;->WRAP_CONTENT:I
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Landroidx/constraintlayout/core/state/Dimension;->mMin:I
 
     const v1, 0x7fffffff
 
+    .line 4
     iput v1, p0, Landroidx/constraintlayout/core/state/Dimension;->mMax:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 5
     iput v1, p0, Landroidx/constraintlayout/core/state/Dimension;->mPercent:F
 
+    .line 6
     iput v0, p0, Landroidx/constraintlayout/core/state/Dimension;->mValue:I
 
     const/4 v1, 0x0
 
+    .line 7
     iput-object v1, p0, Landroidx/constraintlayout/core/state/Dimension;->mRatioString:Ljava/lang/String;
 
+    .line 8
     sget-object v1, Landroidx/constraintlayout/core/state/Dimension;->WRAP_DIMENSION:Ljava/lang/Object;
 
     iput-object v1, p0, Landroidx/constraintlayout/core/state/Dimension;->mInitialValue:Ljava/lang/Object;
 
+    .line 9
     iput-boolean v0, p0, Landroidx/constraintlayout/core/state/Dimension;->mIsSuggested:Z
 
     return-void
@@ -125,32 +134,41 @@
 .method private constructor <init>(Ljava/lang/Object;)V
     .locals 2
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x2
 
+    .line 11
     iput v0, p0, Landroidx/constraintlayout/core/state/Dimension;->WRAP_CONTENT:I
 
     const/4 v0, 0x0
 
+    .line 12
     iput v0, p0, Landroidx/constraintlayout/core/state/Dimension;->mMin:I
 
     const v1, 0x7fffffff
 
+    .line 13
     iput v1, p0, Landroidx/constraintlayout/core/state/Dimension;->mMax:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 14
     iput v1, p0, Landroidx/constraintlayout/core/state/Dimension;->mPercent:F
 
+    .line 15
     iput v0, p0, Landroidx/constraintlayout/core/state/Dimension;->mValue:I
 
     const/4 v1, 0x0
 
+    .line 16
     iput-object v1, p0, Landroidx/constraintlayout/core/state/Dimension;->mRatioString:Ljava/lang/String;
 
+    .line 17
     iput-boolean v0, p0, Landroidx/constraintlayout/core/state/Dimension;->mIsSuggested:Z
 
+    .line 18
     iput-object p1, p0, Landroidx/constraintlayout/core/state/Dimension;->mInitialValue:Ljava/lang/Object;
 
     return-void
@@ -159,12 +177,14 @@
 .method public static Fixed(I)Landroidx/constraintlayout/core/state/Dimension;
     .locals 2
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/state/Dimension;
 
     sget-object v1, Landroidx/constraintlayout/core/state/Dimension;->FIXED_DIMENSION:Ljava/lang/Object;
 
     invoke-direct {v0, v1}, Landroidx/constraintlayout/core/state/Dimension;-><init>(Ljava/lang/Object;)V
 
+    .line 2
     invoke-virtual {v0, p0}, Landroidx/constraintlayout/core/state/Dimension;->fixed(I)Landroidx/constraintlayout/core/state/Dimension;
 
     return-object v0
@@ -173,12 +193,14 @@
 .method public static Fixed(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/Dimension;
     .locals 2
 
+    .line 3
     new-instance v0, Landroidx/constraintlayout/core/state/Dimension;
 
     sget-object v1, Landroidx/constraintlayout/core/state/Dimension;->FIXED_DIMENSION:Ljava/lang/Object;
 
     invoke-direct {v0, v1}, Landroidx/constraintlayout/core/state/Dimension;-><init>(Ljava/lang/Object;)V
 
+    .line 4
     invoke-virtual {v0, p0}, Landroidx/constraintlayout/core/state/Dimension;->fixed(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/Dimension;
 
     return-object v0
@@ -239,10 +261,12 @@
 .method public static Suggested(I)Landroidx/constraintlayout/core/state/Dimension;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/state/Dimension;
 
     invoke-direct {v0}, Landroidx/constraintlayout/core/state/Dimension;-><init>()V
 
+    .line 2
     invoke-virtual {v0, p0}, Landroidx/constraintlayout/core/state/Dimension;->suggested(I)Landroidx/constraintlayout/core/state/Dimension;
 
     return-object v0
@@ -251,10 +275,12 @@
 .method public static Suggested(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/Dimension;
     .locals 1
 
+    .line 3
     new-instance v0, Landroidx/constraintlayout/core/state/Dimension;
 
     invoke-direct {v0}, Landroidx/constraintlayout/core/state/Dimension;-><init>()V
 
+    .line 4
     invoke-virtual {v0, p0}, Landroidx/constraintlayout/core/state/Dimension;->suggested(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/Dimension;
 
     return-object v0
@@ -504,8 +530,10 @@
 
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Landroidx/constraintlayout/core/state/Dimension;->mInitialValue:Ljava/lang/Object;
 
+    .line 6
     iput p1, p0, Landroidx/constraintlayout/core/state/Dimension;->mValue:I
 
     return-object p0
@@ -514,12 +542,15 @@
 .method public fixed(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/Dimension;
     .locals 1
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/state/Dimension;->mInitialValue:Ljava/lang/Object;
 
+    .line 2
     instance-of v0, p1, Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -530,6 +561,7 @@
 
     const/4 p1, 0x0
 
+    .line 4
     iput-object p1, p0, Landroidx/constraintlayout/core/state/Dimension;->mInitialValue:Ljava/lang/Object;
 
     :cond_0
@@ -547,10 +579,12 @@
 .method public max(I)Landroidx/constraintlayout/core/state/Dimension;
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/state/Dimension;->mMax:I
 
     if-ltz v0, :cond_0
 
+    .line 2
     iput p1, p0, Landroidx/constraintlayout/core/state/Dimension;->mMax:I
 
     :cond_0
@@ -560,6 +594,7 @@
 .method public max(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/Dimension;
     .locals 1
 
+    .line 3
     sget-object v0, Landroidx/constraintlayout/core/state/Dimension;->WRAP_DIMENSION:Ljava/lang/Object;
 
     if-ne p1, v0, :cond_0
@@ -568,10 +603,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 4
     iput-object v0, p0, Landroidx/constraintlayout/core/state/Dimension;->mInitialValue:Ljava/lang/Object;
 
     const p1, 0x7fffffff
 
+    .line 5
     iput p1, p0, Landroidx/constraintlayout/core/state/Dimension;->mMax:I
 
     :cond_0
@@ -583,6 +620,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/Dimension;->mMin:I
 
     :cond_0
@@ -592,12 +630,14 @@
 .method public min(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/Dimension;
     .locals 1
 
+    .line 2
     sget-object v0, Landroidx/constraintlayout/core/state/Dimension;->WRAP_DIMENSION:Ljava/lang/Object;
 
     if-ne p1, v0, :cond_0
 
     const/4 p1, -0x2
 
+    .line 3
     iput p1, p0, Landroidx/constraintlayout/core/state/Dimension;->mMin:I
 
     :cond_0
@@ -641,10 +681,12 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Landroidx/constraintlayout/core/state/Dimension;->mIsSuggested:Z
 
     if-ltz p1, :cond_0
 
+    .line 2
     iput p1, p0, Landroidx/constraintlayout/core/state/Dimension;->mMax:I
 
     :cond_0
@@ -654,10 +696,12 @@
 .method public suggested(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/Dimension;
     .locals 0
 
+    .line 3
     iput-object p1, p0, Landroidx/constraintlayout/core/state/Dimension;->mInitialValue:Ljava/lang/Object;
 
     const/4 p1, 0x1
 
+    .line 4
     iput-boolean p1, p0, Landroidx/constraintlayout/core/state/Dimension;->mIsSuggested:Z
 
     return-object p0

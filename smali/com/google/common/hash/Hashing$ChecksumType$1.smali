@@ -30,6 +30,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/hash/Hashing$ChecksumType$1;->get()Ljava/util/zip/Checksum;
 
     move-result-object p0
@@ -40,6 +41,7 @@
 .method public get()Ljava/util/zip/Checksum;
     .locals 0
 
+    .line 2
     new-instance p0, Ljava/util/zip/CRC32;
 
     invoke-direct {p0}, Ljava/util/zip/CRC32;-><init>()V

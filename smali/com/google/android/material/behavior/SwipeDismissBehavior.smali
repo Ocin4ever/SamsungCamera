@@ -98,6 +98,7 @@
 .method public static clamp(FFF)F
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->max(FF)F
 
     move-result p0
@@ -112,6 +113,7 @@
 .method public static clamp(III)I
     .locals 0
 
+    .line 2
     invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p0

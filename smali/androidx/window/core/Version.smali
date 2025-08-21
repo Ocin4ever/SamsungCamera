@@ -93,16 +93,22 @@
 .method private constructor <init>(IIILjava/lang/String;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput p1, p0, Landroidx/window/core/Version;->major:I
 
+    .line 4
     iput p2, p0, Landroidx/window/core/Version;->minor:I
 
+    .line 5
     iput p3, p0, Landroidx/window/core/Version;->patch:I
 
+    .line 6
     iput-object p4, p0, Landroidx/window/core/Version;->description:Ljava/lang/String;
 
+    .line 7
     new-instance p1, Landroidx/window/core/Version$bigInteger$2;
 
     invoke-direct {p1, p0}, Landroidx/window/core/Version$bigInteger$2;-><init>(Landroidx/window/core/Version;)V
@@ -119,6 +125,7 @@
 .method public synthetic constructor <init>(IIILjava/lang/String;Lkotlin/jvm/internal/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/window/core/Version;-><init>(IIILjava/lang/String;)V
 
     return-void
@@ -195,6 +202,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0}, Landroidx/window/core/Version;->getBigInteger()Ljava/math/BigInteger;
 
     move-result-object p0
@@ -213,6 +221,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/window/core/Version;
 
     invoke-virtual {p0, p1}, Landroidx/window/core/Version;->compareTo(Landroidx/window/core/Version;)I

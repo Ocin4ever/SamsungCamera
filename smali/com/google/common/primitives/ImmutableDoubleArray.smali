@@ -50,6 +50,7 @@
 .method private constructor <init>([D)V
     .locals 2
 
+    .line 2
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -62,12 +63,16 @@
 .method private constructor <init>([DII)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     iput-object p1, p0, Lcom/google/common/primitives/ImmutableDoubleArray;->array:[D
 
+    .line 5
     iput p2, p0, Lcom/google/common/primitives/ImmutableDoubleArray;->start:I
 
+    .line 6
     iput p3, p0, Lcom/google/common/primitives/ImmutableDoubleArray;->end:I
 
     return-void
@@ -76,6 +81,7 @@
 .method public synthetic constructor <init>([DIILcom/google/common/primitives/ImmutableDoubleArray$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/primitives/ImmutableDoubleArray;-><init>([DII)V
 
     return-void
@@ -144,6 +150,7 @@
 .method public static builder()Lcom/google/common/primitives/ImmutableDoubleArray$Builder;
     .locals 2
 
+    .line 3
     new-instance v0, Lcom/google/common/primitives/ImmutableDoubleArray$Builder;
 
     const/16 v1, 0xa
@@ -168,8 +175,10 @@
     :goto_0
     const-string v1, "Invalid initialCapacity: %s"
 
+    .line 1
     invoke-static {v0, v1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
+    .line 2
     new-instance v0, Lcom/google/common/primitives/ImmutableDoubleArray$Builder;
 
     invoke-direct {v0, p0}, Lcom/google/common/primitives/ImmutableDoubleArray$Builder;-><init>(I)V
@@ -189,10 +198,12 @@
         }
     .end annotation
 
+    .line 5
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 6
     check-cast p0, Ljava/util/Collection;
 
     invoke-static {p0}, Lcom/google/common/primitives/ImmutableDoubleArray;->copyOf(Ljava/util/Collection;)Lcom/google/common/primitives/ImmutableDoubleArray;
@@ -201,6 +212,7 @@
 
     return-object p0
 
+    .line 7
     :cond_0
     invoke-static {}, Lcom/google/common/primitives/ImmutableDoubleArray;->builder()Lcom/google/common/primitives/ImmutableDoubleArray$Builder;
 
@@ -229,6 +241,7 @@
         }
     .end annotation
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
@@ -257,14 +270,17 @@
 .method public static copyOf([D)Lcom/google/common/primitives/ImmutableDoubleArray;
     .locals 2
 
+    .line 1
     array-length v0, p0
 
     if-nez v0, :cond_0
 
+    .line 2
     sget-object p0, Lcom/google/common/primitives/ImmutableDoubleArray;->EMPTY:Lcom/google/common/primitives/ImmutableDoubleArray;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/primitives/ImmutableDoubleArray;
 
@@ -315,6 +331,7 @@
 .method public static of()Lcom/google/common/primitives/ImmutableDoubleArray;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/primitives/ImmutableDoubleArray;->EMPTY:Lcom/google/common/primitives/ImmutableDoubleArray;
 
     return-object v0
@@ -323,6 +340,7 @@
 .method public static of(D)Lcom/google/common/primitives/ImmutableDoubleArray;
     .locals 3
 
+    .line 2
     new-instance v0, Lcom/google/common/primitives/ImmutableDoubleArray;
 
     const/4 v1, 0x1
@@ -341,6 +359,7 @@
 .method public static of(DD)Lcom/google/common/primitives/ImmutableDoubleArray;
     .locals 3
 
+    .line 3
     new-instance v0, Lcom/google/common/primitives/ImmutableDoubleArray;
 
     const/4 v1, 0x2
@@ -363,6 +382,7 @@
 .method public static of(DDD)Lcom/google/common/primitives/ImmutableDoubleArray;
     .locals 3
 
+    .line 4
     new-instance v0, Lcom/google/common/primitives/ImmutableDoubleArray;
 
     const/4 v1, 0x3
@@ -389,6 +409,7 @@
 .method public static of(DDDD)Lcom/google/common/primitives/ImmutableDoubleArray;
     .locals 3
 
+    .line 5
     new-instance v0, Lcom/google/common/primitives/ImmutableDoubleArray;
 
     const/4 v1, 0x4
@@ -419,6 +440,7 @@
 .method public static of(DDDDD)Lcom/google/common/primitives/ImmutableDoubleArray;
     .locals 3
 
+    .line 6
     new-instance v0, Lcom/google/common/primitives/ImmutableDoubleArray;
 
     const/4 v1, 0x5
@@ -453,6 +475,7 @@
 .method public static of(DDDDDD)Lcom/google/common/primitives/ImmutableDoubleArray;
     .locals 3
 
+    .line 7
     new-instance v0, Lcom/google/common/primitives/ImmutableDoubleArray;
 
     const/4 v1, 0x6
@@ -491,6 +514,7 @@
 .method public static varargs of(D[D)Lcom/google/common/primitives/ImmutableDoubleArray;
     .locals 4
 
+    .line 8
     array-length v0, p2
 
     const v1, 0x7ffffffe
@@ -513,18 +537,22 @@
 
     invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 9
     array-length v0, p2
 
     add-int/2addr v0, v2
 
     new-array v0, v0, [D
 
+    .line 10
     aput-wide p0, v0, v3
 
+    .line 11
     array-length p0, p2
 
     invoke-static {p2, v3, v0, v2, p0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 12
     new-instance p0, Lcom/google/common/primitives/ImmutableDoubleArray;
 
     invoke-direct {p0, v0}, Lcom/google/common/primitives/ImmutableDoubleArray;-><init>([D)V

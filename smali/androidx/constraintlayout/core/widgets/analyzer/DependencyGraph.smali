@@ -2832,18 +2832,22 @@
 .method public buildGraph()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->mRuns:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->buildGraph(Ljava/util/ArrayList;)V
 
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->mGroups:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     const/4 v0, 0x0
 
+    .line 3
     sput v0, Landroidx/constraintlayout/core/widgets/analyzer/RunGroup;->index:I
 
+    .line 4
     iget-object v1, p0, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->container:Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;
 
     iget-object v1, v1, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->horizontalRun:Landroidx/constraintlayout/core/widgets/analyzer/HorizontalWidgetRun;
@@ -2852,6 +2856,7 @@
 
     invoke-direct {p0, v1, v0, v2}, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->findGroup(Landroidx/constraintlayout/core/widgets/analyzer/WidgetRun;ILjava/util/ArrayList;)V
 
+    .line 5
     iget-object v1, p0, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->container:Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;
 
     iget-object v1, v1, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->verticalRun:Landroidx/constraintlayout/core/widgets/analyzer/VerticalWidgetRun;
@@ -2862,6 +2867,7 @@
 
     invoke-direct {p0, v1, v2, v3}, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->findGroup(Landroidx/constraintlayout/core/widgets/analyzer/WidgetRun;ILjava/util/ArrayList;)V
 
+    .line 6
     iput-boolean v0, p0, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->mNeedBuildGraph:Z
 
     return-void
@@ -2878,32 +2884,38 @@
         }
     .end annotation
 
+    .line 7
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
+    .line 8
     iget-object v0, p0, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->mContainer:Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;
 
     iget-object v0, v0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->horizontalRun:Landroidx/constraintlayout/core/widgets/analyzer/HorizontalWidgetRun;
 
     invoke-virtual {v0}, Landroidx/constraintlayout/core/widgets/analyzer/HorizontalWidgetRun;->clear()V
 
+    .line 9
     iget-object v0, p0, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->mContainer:Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;
 
     iget-object v0, v0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->verticalRun:Landroidx/constraintlayout/core/widgets/analyzer/VerticalWidgetRun;
 
     invoke-virtual {v0}, Landroidx/constraintlayout/core/widgets/analyzer/VerticalWidgetRun;->clear()V
 
+    .line 10
     iget-object v0, p0, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->mContainer:Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;
 
     iget-object v0, v0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->horizontalRun:Landroidx/constraintlayout/core/widgets/analyzer/HorizontalWidgetRun;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 11
     iget-object v0, p0, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->mContainer:Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;
 
     iget-object v0, v0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->verticalRun:Landroidx/constraintlayout/core/widgets/analyzer/VerticalWidgetRun;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 12
     iget-object v0, p0, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->mContainer:Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;
 
     iget-object v0, v0, Landroidx/constraintlayout/core/widgets/WidgetContainer;->mChildren:Ljava/util/ArrayList;
@@ -2928,10 +2940,12 @@
 
     check-cast v2, Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
+    .line 13
     instance-of v3, v2, Landroidx/constraintlayout/core/widgets/Guideline;
 
     if-eqz v3, :cond_1
 
+    .line 14
     new-instance v3, Landroidx/constraintlayout/core/widgets/analyzer/GuidelineReference;
 
     invoke-direct {v3, v2}, Landroidx/constraintlayout/core/widgets/analyzer/GuidelineReference;-><init>(Landroidx/constraintlayout/core/widgets/ConstraintWidget;)V
@@ -2940,6 +2954,7 @@
 
     goto :goto_0
 
+    .line 15
     :cond_1
     invoke-virtual {v2}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->isInHorizontalChain()Z
 
@@ -2947,10 +2962,12 @@
 
     if-eqz v3, :cond_4
 
+    .line 16
     iget-object v3, v2, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->horizontalChainRun:Landroidx/constraintlayout/core/widgets/analyzer/ChainRun;
 
     if-nez v3, :cond_2
 
+    .line 17
     new-instance v3, Landroidx/constraintlayout/core/widgets/analyzer/ChainRun;
 
     const/4 v4, 0x0
@@ -2962,10 +2979,12 @@
     :cond_2
     if-nez v1, :cond_3
 
+    .line 18
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
+    .line 19
     :cond_3
     iget-object v3, v2, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->horizontalChainRun:Landroidx/constraintlayout/core/widgets/analyzer/ChainRun;
 
@@ -2973,11 +2992,13 @@
 
     goto :goto_1
 
+    .line 20
     :cond_4
     iget-object v3, v2, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->horizontalRun:Landroidx/constraintlayout/core/widgets/analyzer/HorizontalWidgetRun;
 
     invoke-virtual {p1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 21
     :goto_1
     invoke-virtual {v2}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->isInVerticalChain()Z
 
@@ -2985,10 +3006,12 @@
 
     if-eqz v3, :cond_7
 
+    .line 22
     iget-object v3, v2, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->verticalChainRun:Landroidx/constraintlayout/core/widgets/analyzer/ChainRun;
 
     if-nez v3, :cond_5
 
+    .line 23
     new-instance v3, Landroidx/constraintlayout/core/widgets/analyzer/ChainRun;
 
     const/4 v4, 0x1
@@ -3000,10 +3023,12 @@
     :cond_5
     if-nez v1, :cond_6
 
+    .line 24
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
+    .line 25
     :cond_6
     iget-object v3, v2, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->verticalChainRun:Landroidx/constraintlayout/core/widgets/analyzer/ChainRun;
 
@@ -3011,16 +3036,19 @@
 
     goto :goto_2
 
+    .line 26
     :cond_7
     iget-object v3, v2, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->verticalRun:Landroidx/constraintlayout/core/widgets/analyzer/VerticalWidgetRun;
 
     invoke-virtual {p1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 27
     :goto_2
     instance-of v3, v2, Landroidx/constraintlayout/core/widgets/HelperWidget;
 
     if-eqz v3, :cond_0
 
+    .line 28
     new-instance v3, Landroidx/constraintlayout/core/widgets/analyzer/HelperReferences;
 
     invoke-direct {v3, v2}, Landroidx/constraintlayout/core/widgets/analyzer/HelperReferences;-><init>(Landroidx/constraintlayout/core/widgets/ConstraintWidget;)V
@@ -3032,8 +3060,10 @@
     :cond_8
     if-eqz v1, :cond_9
 
+    .line 29
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
+    .line 30
     :cond_9
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -3052,10 +3082,12 @@
 
     check-cast v1, Landroidx/constraintlayout/core/widgets/analyzer/WidgetRun;
 
+    .line 31
     invoke-virtual {v1}, Landroidx/constraintlayout/core/widgets/analyzer/WidgetRun;->clear()V
 
     goto :goto_3
 
+    .line 32
     :cond_a
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -3074,6 +3106,7 @@
 
     check-cast v0, Landroidx/constraintlayout/core/widgets/analyzer/WidgetRun;
 
+    .line 33
     iget-object v1, v0, Landroidx/constraintlayout/core/widgets/analyzer/WidgetRun;->widget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v2, p0, Landroidx/constraintlayout/core/widgets/analyzer/DependencyGraph;->mContainer:Landroidx/constraintlayout/core/widgets/ConstraintWidgetContainer;
@@ -3082,6 +3115,7 @@
 
     goto :goto_4
 
+    .line 34
     :cond_b
     invoke-virtual {v0}, Landroidx/constraintlayout/core/widgets/analyzer/WidgetRun;->apply()V
 

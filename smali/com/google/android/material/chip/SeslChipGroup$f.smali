@@ -152,6 +152,7 @@
 .method public bridge synthetic clone()Landroid/animation/Animator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/material/chip/SeslChipGroup$f;->a()Lcom/google/android/material/chip/SeslChipGroup$f;
 
     move-result-object p0
@@ -162,6 +163,7 @@
 .method public bridge synthetic clone()Landroid/animation/ValueAnimator;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/material/chip/SeslChipGroup$f;->a()Lcom/google/android/material/chip/SeslChipGroup$f;
 
     move-result-object p0
@@ -172,6 +174,7 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/material/chip/SeslChipGroup$f;->a()Lcom/google/android/material/chip/SeslChipGroup$f;
 
     move-result-object p0

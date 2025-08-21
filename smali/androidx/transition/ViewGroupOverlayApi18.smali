@@ -30,6 +30,7 @@
 .method public add(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/transition/ViewGroupOverlayApi18;->mViewGroupOverlay:Landroid/view/ViewGroupOverlay;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewOverlay;->add(Landroid/graphics/drawable/Drawable;)V
@@ -40,6 +41,7 @@
 .method public add(Landroid/view/View;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/transition/ViewGroupOverlayApi18;->mViewGroupOverlay:Landroid/view/ViewGroupOverlay;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroupOverlay;->add(Landroid/view/View;)V
@@ -50,6 +52,7 @@
 .method public remove(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/transition/ViewGroupOverlayApi18;->mViewGroupOverlay:Landroid/view/ViewGroupOverlay;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewOverlay;->remove(Landroid/graphics/drawable/Drawable;)V
@@ -60,6 +63,7 @@
 .method public remove(Landroid/view/View;)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/transition/ViewGroupOverlayApi18;->mViewGroupOverlay:Landroid/view/ViewGroupOverlay;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroupOverlay;->remove(Landroid/view/View;)V

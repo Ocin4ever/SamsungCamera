@@ -20,6 +20,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 1
     sget v0, Ly0/a;->c:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -30,6 +31,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
 
+    .line 2
     sget v0, Ly0/k;->f:I
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -40,12 +42,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 6
 
+    .line 3
     invoke-direct {p0, p1, p2, p3, p4}, Lo1/e;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
+    .line 5
     sget-object v2, Ly0/l;->H:[I
 
     const/4 v0, 0x0
@@ -60,39 +65,49 @@
 
     move v4, p4
 
+    .line 6
     invoke-static/range {v0 .. v5}, Lm1/q;->j(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/TintTypedArray;
 
     move-result-object p2
 
+    .line 7
     sget p3, Ly0/l;->I:I
 
     const/4 p4, 0x1
 
+    .line 8
     invoke-virtual {p2, p3, p4}, Landroidx/appcompat/widget/TintTypedArray;->getBoolean(IZ)Z
 
     move-result p3
 
+    .line 9
     invoke-virtual {p0, p3}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->setItemHorizontalTranslationEnabled(Z)V
 
+    .line 10
     invoke-virtual {p2}, Landroidx/appcompat/widget/TintTypedArray;->recycle()V
 
+    .line 11
     invoke-virtual {p0}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->l()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
+    .line 12
     invoke-virtual {p0, p1}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->h(Landroid/content/Context;)V
 
+    .line 13
     :cond_0
     invoke-virtual {p0}, Lo1/e;->getMenuView()Landroidx/appcompat/view/menu/MenuView;
 
     move-result-object p1
 
+    .line 14
     instance-of p2, p1, Lo1/c;
 
     if-eqz p2, :cond_2
 
+    .line 15
     check-cast p1, Lo1/c;
 
     invoke-virtual {p1}, Lo1/c;->getViewType()I
@@ -103,6 +118,7 @@
 
     if-eq p2, p3, :cond_1
 
+    .line 16
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -115,6 +131,7 @@
 
     goto :goto_0
 
+    .line 17
     :cond_1
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
@@ -126,6 +143,7 @@
 
     move-result p2
 
+    .line 18
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
@@ -136,6 +154,7 @@
 
     move-result p3
 
+    .line 19
     invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result p4
@@ -146,9 +165,11 @@
 
     invoke-virtual {p0, p3, p4, p3, v0}, Landroid/view/View;->setPadding(IIII)V
 
+    .line 20
     :goto_0
     invoke-virtual {p1, p2}, Landroid/view/View;->setMinimumHeight(I)V
 
+    .line 21
     invoke-virtual {p0, p2}, Landroid/view/View;->setMinimumHeight(I)V
 
     :cond_2

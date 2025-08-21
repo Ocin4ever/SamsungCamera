@@ -509,8 +509,10 @@
 
     if-eqz p1, :cond_0
 
+    .line 5
     check-cast p1, Landroidx/transition/Transition;
 
+    .line 6
     new-instance v0, Landroidx/transition/FragmentTransitionSupport$6;
 
     invoke-direct {v0, p0, p2}, Landroidx/transition/FragmentTransitionSupport$6;-><init>(Landroidx/transition/FragmentTransitionSupport;Landroid/graphics/Rect;)V
@@ -526,14 +528,18 @@
 
     if-eqz p2, :cond_0
 
+    .line 1
     check-cast p1, Landroidx/transition/Transition;
 
+    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
+    .line 3
     invoke-virtual {p0, p2, v0}, Landroidx/fragment/app/FragmentTransitionImpl;->getBoundsOnScreen(Landroid/view/View;Landroid/graphics/Rect;)V
 
+    .line 4
     new-instance p2, Landroidx/transition/FragmentTransitionSupport$1;
 
     invoke-direct {p2, p0, v0}, Landroidx/transition/FragmentTransitionSupport$1;-><init>(Landroidx/transition/FragmentTransitionSupport;Landroid/graphics/Rect;)V

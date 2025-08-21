@@ -223,10 +223,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;->mIsBackgroundRequired:Z
 
     return-void
@@ -240,8 +242,10 @@
         }
     .end annotation
 
+    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 4
     iput-boolean p3, p0, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomCategory;->mIsBackgroundRequired:Z
 
     return-void

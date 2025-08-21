@@ -70,6 +70,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget v0, p0, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->id:I
 
     iget v1, p1, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->id:I
@@ -78,6 +79,7 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     iget p0, p0, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->sequence:I
 
     iget p1, p1, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->sequence:I
@@ -91,6 +93,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;
 
     invoke-virtual {p0, p1}, Landroidx/room/util/TableInfo$ForeignKeyWithSequence;->compareTo(Landroidx/room/util/TableInfo$ForeignKeyWithSequence;)I

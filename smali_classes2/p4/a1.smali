@@ -83,6 +83,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/a1;->l:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/a1;->m:Landroid/util/SparseIntArray;
@@ -105,6 +106,7 @@
 
     const/4 v3, 0x0
 
+    .line 2
     new-instance v4, Landroidx/databinding/ViewStubProxy;
 
     const/16 v0, 0x9
@@ -207,42 +209,52 @@
 
     const-wide/16 v0, -0x1
 
+    .line 3
     iput-wide v0, v14, Lp4/a1;->k:J
 
+    .line 4
     iget-object v0, v14, Lp4/z0;->a:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {v0, p0}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 5
     iget-object v0, v14, Lp4/z0;->c:Lcom/sec/android/app/camera/layer/LayerManagerView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 6
     iget-object v0, v14, Lp4/z0;->d:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {v0, p0}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 7
     iget-object v0, v14, Lp4/z0;->e:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {v0, p0}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 8
     iget-object v0, v14, Lp4/z0;->g:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {v0, p0}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 9
     iget-object v0, v14, Lp4/z0;->h:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {v0, p0}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 10
     iget-object v0, v14, Lp4/z0;->i:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {v0, p0}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
     move-object/from16 v0, p2
 
+    .line 11
     invoke-virtual {p0, v0}, Landroidx/databinding/ViewDataBinding;->setRootTag(Landroid/view/View;)V
 
+    .line 12
     invoke-virtual {p0}, Lp4/a1;->invalidateAll()V
 
     return-void

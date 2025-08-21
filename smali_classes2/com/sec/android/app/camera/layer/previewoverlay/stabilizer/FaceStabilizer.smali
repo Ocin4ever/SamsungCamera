@@ -93,6 +93,7 @@
 .method public update(Landroid/graphics/RectF;)Landroid/graphics/RectF;
     .locals 5
 
+    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/stabilizer/FaceStabilizer;->mLeft:Lcom/sec/android/app/camera/layer/previewoverlay/stabilizer/KalmanFilter;
@@ -115,6 +116,7 @@
 
     iget v4, p1, Landroid/graphics/RectF;->right:F
 
+    .line 3
     invoke-virtual {v3, v4}, Lcom/sec/android/app/camera/layer/previewoverlay/stabilizer/KalmanFilter;->update(F)F
 
     move-result v3
@@ -135,6 +137,7 @@
 .method public bridge synthetic update(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/graphics/RectF;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/previewoverlay/stabilizer/FaceStabilizer;->update(Landroid/graphics/RectF;)Landroid/graphics/RectF;

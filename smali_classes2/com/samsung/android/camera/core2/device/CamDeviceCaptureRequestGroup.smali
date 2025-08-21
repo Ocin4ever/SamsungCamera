@@ -93,10 +93,13 @@
 .method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceCaptureRequestGroup;->a:Ljava/util/List;
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/camera/core2/device/CamDeviceCaptureRequestGroup;->b:Ljava/util/List;
 
     return-void
@@ -105,6 +108,7 @@
 .method public synthetic constructor <init>(Ljava/util/List;Ljava/util/List;Lcom/samsung/android/camera/core2/device/g0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/core2/device/CamDeviceCaptureRequestGroup;-><init>(Ljava/util/List;Ljava/util/List;)V
 
     return-void

@@ -48,6 +48,7 @@
 
     const/4 v0, 0x0
 
+    .line 14
     invoke-direct {p0, p1, v0}, Landroidx/preference/SeekBarPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -56,6 +57,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 13
     sget v0, Landroidx/preference/R$attr;->seekBarPreferenceStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/preference/SeekBarPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -68,6 +70,7 @@
 
     const/4 v0, 0x0
 
+    .line 12
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/preference/SeekBarPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -76,26 +79,31 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 2
     new-instance v0, Landroidx/preference/SeekBarPreference$1;
 
     invoke-direct {v0, p0}, Landroidx/preference/SeekBarPreference$1;-><init>(Landroidx/preference/SeekBarPreference;)V
 
     iput-object v0, p0, Landroidx/preference/SeekBarPreference;->mSeekBarChangeListener:Landroidx/appcompat/widget/SeslSeekBar$OnSeekBarChangeListener;
 
+    .line 3
     new-instance v0, Landroidx/preference/SeekBarPreference$2;
 
     invoke-direct {v0, p0}, Landroidx/preference/SeekBarPreference$2;-><init>(Landroidx/preference/SeekBarPreference;)V
 
     iput-object v0, p0, Landroidx/preference/SeekBarPreference;->mSeekBarKeyListener:Landroid/view/View$OnKeyListener;
 
+    .line 4
     sget-object v0, Landroidx/preference/R$styleable;->SeekBarPreference:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 5
     sget p2, Landroidx/preference/R$styleable;->SeekBarPreference_min:I
 
     const/4 p3, 0x0
@@ -106,6 +114,7 @@
 
     iput p2, p0, Landroidx/preference/SeekBarPreference;->mMin:I
 
+    .line 6
     sget p2, Landroidx/preference/R$styleable;->SeekBarPreference_android_max:I
 
     const/16 p4, 0x64
@@ -116,6 +125,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/SeekBarPreference;->setMax(I)V
 
+    .line 7
     sget p2, Landroidx/preference/R$styleable;->SeekBarPreference_seekBarIncrement:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -124,6 +134,7 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/SeekBarPreference;->setSeekBarIncrement(I)V
 
+    .line 8
     sget p2, Landroidx/preference/R$styleable;->SeekBarPreference_adjustable:I
 
     const/4 p4, 0x1
@@ -134,6 +145,7 @@
 
     iput-boolean p2, p0, Landroidx/preference/SeekBarPreference;->mAdjustable:Z
 
+    .line 9
     sget p2, Landroidx/preference/R$styleable;->SeekBarPreference_showSeekBarValue:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -142,6 +154,7 @@
 
     iput-boolean p2, p0, Landroidx/preference/SeekBarPreference;->mShowSeekBarValue:Z
 
+    .line 10
     sget p2, Landroidx/preference/R$styleable;->SeekBarPreference_updatesContinuously:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -150,6 +163,7 @@
 
     iput-boolean p2, p0, Landroidx/preference/SeekBarPreference;->mUpdatesContinuously:Z
 
+    .line 11
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void

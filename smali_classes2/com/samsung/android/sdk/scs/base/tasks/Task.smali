@@ -37,6 +37,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "addOnCompleteListener is not implemented"
@@ -59,6 +60,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "addOnCompleteListener is not implemented"

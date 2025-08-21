@@ -95,6 +95,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p1}, Landroidx/work/impl/constraints/NetworkState;->isConnected()Z
 
     move-result p0
@@ -125,6 +126,7 @@
 .method public bridge synthetic isConstrained(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/work/impl/constraints/NetworkState;
 
     invoke-virtual {p0, p1}, Landroidx/work/impl/constraints/controllers/NetworkUnmeteredController;->isConstrained(Landroidx/work/impl/constraints/NetworkState;)Z

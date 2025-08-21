@@ -112,12 +112,14 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Landroidx/databinding/ViewDataBinding$LiveDataListener;->getLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p1, v0, p0}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
 
     :cond_0
@@ -127,6 +129,7 @@
 .method public bridge synthetic addListener(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/lifecycle/LiveData;
 
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding$LiveDataListener;->addListener(Landroidx/lifecycle/LiveData;)V
@@ -187,6 +190,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p1, p0}, Landroidx/lifecycle/LiveData;->removeObserver(Landroidx/lifecycle/Observer;)V
 
     return-void
@@ -195,6 +199,7 @@
 .method public bridge synthetic removeListener(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/lifecycle/LiveData;
 
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding$LiveDataListener;->removeListener(Landroidx/lifecycle/LiveData;)V

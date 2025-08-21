@@ -46,8 +46,10 @@
 .method public final invoke()Lcom/samsung/android/app/sdk/deepsky/donation/DonationImpl;
     .locals 2
 
+    .line 2
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/donation/DonationImpl;
 
+    .line 3
     sget-object v1, Lcom/samsung/android/app/sdk/deepsky/common/Injector;->INSTANCE:Lcom/samsung/android/app/sdk/deepsky/common/Injector;
 
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$donationByLazy$2;->$appContext:Landroid/content/Context;
@@ -56,8 +58,10 @@
 
     move-result-object p0
 
+    .line 4
     invoke-direct {v0, p0}, Lcom/samsung/android/app/sdk/deepsky/donation/DonationImpl;-><init>(Lcom/samsung/android/app/sdk/deepsky/common/ContentProviderCaller;)V
 
+    .line 5
     invoke-virtual {v0}, Lcom/samsung/android/app/sdk/deepsky/donation/DonationImpl;->checkIfAccessAllowed()Z
 
     move-result p0
@@ -76,6 +80,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$donationByLazy$2;->invoke()Lcom/samsung/android/app/sdk/deepsky/donation/DonationImpl;
 
     move-result-object p0

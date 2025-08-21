@@ -911,6 +911,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Landroidx/work/impl/Processor;->startWork(Landroidx/work/impl/StartStopToken;Landroidx/work/WorkerParameters$RuntimeExtras;)Z
 
     move-result p0
@@ -921,18 +922,22 @@
 .method public startWork(Landroidx/work/impl/StartStopToken;Landroidx/work/WorkerParameters$RuntimeExtras;)Z
     .locals 12
 
+    .line 2
     invoke-virtual {p1}, Landroidx/work/impl/StartStopToken;->getId()Landroidx/work/impl/model/WorkGenerationalId;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0}, Landroidx/work/impl/model/WorkGenerationalId;->getWorkSpecId()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 4
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     iget-object v2, p0, Landroidx/work/impl/Processor;->mWorkDatabase:Landroidx/work/impl/WorkDatabase;
 
     new-instance v3, Landroidx/work/impl/a;
@@ -951,6 +956,7 @@
 
     if-nez v8, :cond_0
 
+    .line 6
     invoke-static {}, Landroidx/work/Logger;->get()Landroidx/work/Logger;
 
     move-result-object p1
@@ -973,15 +979,18 @@
 
     invoke-virtual {p1, p2, v1}, Landroidx/work/Logger;->warning(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 7
     invoke-direct {p0, v0, v2}, Landroidx/work/impl/Processor;->runOnExecuted(Landroidx/work/impl/model/WorkGenerationalId;Z)V
 
     return v2
 
+    .line 8
     :cond_0
     iget-object v10, p0, Landroidx/work/impl/Processor;->mLock:Ljava/lang/Object;
 
     monitor-enter v10
 
+    .line 9
     :try_start_0
     invoke-virtual {p0, v1}, Landroidx/work/impl/Processor;->isEnqueued(Ljava/lang/String;)Z
 
@@ -989,6 +998,7 @@
 
     if-eqz v3, :cond_2
 
+    .line 10
     iget-object p2, p0, Landroidx/work/impl/Processor;->mWorkRuns:Ljava/util/Map;
 
     invoke-interface {p2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -997,6 +1007,7 @@
 
     check-cast p2, Ljava/util/Set;
 
+    .line 11
     invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1007,6 +1018,7 @@
 
     check-cast v1, Landroidx/work/impl/StartStopToken;
 
+    .line 12
     invoke-virtual {v1}, Landroidx/work/impl/StartStopToken;->getId()Landroidx/work/impl/model/WorkGenerationalId;
 
     move-result-object v1
@@ -1015,14 +1027,17 @@
 
     move-result v1
 
+    .line 13
     invoke-virtual {v0}, Landroidx/work/impl/model/WorkGenerationalId;->getGeneration()I
 
     move-result v3
 
     if-ne v1, v3, :cond_1
 
+    .line 14
     invoke-interface {p2, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 15
     invoke-static {}, Landroidx/work/Logger;->get()Landroidx/work/Logger;
 
     move-result-object p0
@@ -1051,14 +1066,17 @@
 
     goto :goto_0
 
+    .line 16
     :cond_1
     invoke-direct {p0, v0, v2}, Landroidx/work/impl/Processor;->runOnExecuted(Landroidx/work/impl/model/WorkGenerationalId;Z)V
 
+    .line 17
     :goto_0
     monitor-exit v10
 
     return v2
 
+    .line 18
     :cond_2
     invoke-virtual {v8}, Landroidx/work/impl/model/WorkSpec;->getGeneration()I
 
@@ -1070,12 +1088,15 @@
 
     if-eq v3, v4, :cond_3
 
+    .line 19
     invoke-direct {p0, v0, v2}, Landroidx/work/impl/Processor;->runOnExecuted(Landroidx/work/impl/model/WorkGenerationalId;Z)V
 
+    .line 20
     monitor-exit v10
 
     return v2
 
+    .line 21
     :cond_3
     new-instance v11, Landroidx/work/impl/WorkerWrapper$Builder;
 
@@ -1093,48 +1114,60 @@
 
     invoke-direct/range {v2 .. v9}, Landroidx/work/impl/WorkerWrapper$Builder;-><init>(Landroid/content/Context;Landroidx/work/Configuration;Landroidx/work/impl/utils/taskexecutor/TaskExecutor;Landroidx/work/impl/foreground/ForegroundProcessor;Landroidx/work/impl/WorkDatabase;Landroidx/work/impl/model/WorkSpec;Ljava/util/List;)V
 
+    .line 22
     invoke-virtual {v11, p2}, Landroidx/work/impl/WorkerWrapper$Builder;->withRuntimeExtras(Landroidx/work/WorkerParameters$RuntimeExtras;)Landroidx/work/impl/WorkerWrapper$Builder;
 
     move-result-object p2
 
+    .line 23
     invoke-virtual {p2}, Landroidx/work/impl/WorkerWrapper$Builder;->build()Landroidx/work/impl/WorkerWrapper;
 
     move-result-object p2
 
+    .line 24
     invoke-virtual {p2}, Landroidx/work/impl/WorkerWrapper;->getFuture()Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object v2
 
+    .line 25
     new-instance v3, Landroidx/work/impl/b;
 
     invoke-direct {v3, p0, v2, p2}, Landroidx/work/impl/b;-><init>(Landroidx/work/impl/Processor;Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/work/impl/WorkerWrapper;)V
 
     iget-object v4, p0, Landroidx/work/impl/Processor;->mWorkTaskExecutor:Landroidx/work/impl/utils/taskexecutor/TaskExecutor;
 
+    .line 26
     invoke-interface {v4}, Landroidx/work/impl/utils/taskexecutor/TaskExecutor;->getMainThreadExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v4
 
+    .line 27
     invoke-interface {v2, v3, v4}, Lcom/google/common/util/concurrent/ListenableFuture;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
+    .line 28
     iget-object v2, p0, Landroidx/work/impl/Processor;->mEnqueuedWorkMap:Ljava/util/Map;
 
     invoke-interface {v2, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 29
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
+    .line 30
     invoke-virtual {v2, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 31
     iget-object p1, p0, Landroidx/work/impl/Processor;->mWorkRuns:Ljava/util/Map;
 
     invoke-interface {p1, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 32
     monitor-exit v10
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 33
     iget-object p1, p0, Landroidx/work/impl/Processor;->mWorkTaskExecutor:Landroidx/work/impl/utils/taskexecutor/TaskExecutor;
 
     invoke-interface {p1}, Landroidx/work/impl/utils/taskexecutor/TaskExecutor;->getSerialTaskExecutor()Landroidx/work/impl/utils/taskexecutor/SerialExecutor;
@@ -1143,6 +1176,7 @@
 
     invoke-interface {p1, p2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 34
     invoke-static {}, Landroidx/work/Logger;->get()Landroidx/work/Logger;
 
     move-result-object p1
@@ -1182,6 +1216,7 @@
     :catchall_0
     move-exception p0
 
+    .line 35
     :try_start_1
     monitor-exit v10
     :try_end_1

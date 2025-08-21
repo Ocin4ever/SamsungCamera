@@ -36,6 +36,7 @@
 .method public initialValue()Ljava/lang/Boolean;
     .locals 0
 
+    .line 2
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object p0
@@ -44,6 +45,7 @@
 .method public bridge synthetic initialValue()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$2;->initialValue()Ljava/lang/Boolean;
 
     move-result-object p0

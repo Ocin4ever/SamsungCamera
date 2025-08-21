@@ -34,6 +34,7 @@
 .method public read()I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/versionedparcelable/VersionedParcelStream$1;->this$0:Landroidx/versionedparcelable/VersionedParcelStream;
 
     iget v1, v0, Landroidx/versionedparcelable/VersionedParcelStream;->mFieldSize:I
@@ -48,6 +49,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/io/IOException;
 
@@ -55,12 +57,14 @@
 
     throw p0
 
+    .line 3
     :cond_1
     :goto_0
     invoke-super {p0}, Ljava/io/FilterInputStream;->read()I
 
     move-result v0
 
+    .line 4
     iget-object p0, p0, Landroidx/versionedparcelable/VersionedParcelStream$1;->this$0:Landroidx/versionedparcelable/VersionedParcelStream;
 
     iget v1, p0, Landroidx/versionedparcelable/VersionedParcelStream;->mCount:I
@@ -75,6 +79,7 @@
 .method public read([BII)I
     .locals 3
 
+    .line 5
     iget-object v0, p0, Landroidx/versionedparcelable/VersionedParcelStream$1;->this$0:Landroidx/versionedparcelable/VersionedParcelStream;
 
     iget v1, v0, Landroidx/versionedparcelable/VersionedParcelStream;->mFieldSize:I
@@ -89,6 +94,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/io/IOException;
 
@@ -96,6 +102,7 @@
 
     throw p0
 
+    .line 7
     :cond_1
     :goto_0
     invoke-super {p0, p1, p2, p3}, Ljava/io/FilterInputStream;->read([BII)I
@@ -104,6 +111,7 @@
 
     if-lez p1, :cond_2
 
+    .line 8
     iget-object p0, p0, Landroidx/versionedparcelable/VersionedParcelStream$1;->this$0:Landroidx/versionedparcelable/VersionedParcelStream;
 
     iget p2, p0, Landroidx/versionedparcelable/VersionedParcelStream;->mCount:I

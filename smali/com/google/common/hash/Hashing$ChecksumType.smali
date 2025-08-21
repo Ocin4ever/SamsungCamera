@@ -109,8 +109,10 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 3
     new-instance p1, Lcom/google/common/hash/ChecksumHashFunction;
 
     const/16 p2, 0x20
@@ -125,6 +127,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Lcom/google/common/hash/Hashing$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/hash/Hashing$ChecksumType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     return-void

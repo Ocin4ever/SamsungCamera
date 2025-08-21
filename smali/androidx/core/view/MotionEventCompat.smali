@@ -321,6 +321,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/MotionEvent;->getAxisValue(I)F
 
     move-result p0
@@ -333,6 +334,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroid/view/MotionEvent;->getAxisValue(II)F
 
     move-result p0

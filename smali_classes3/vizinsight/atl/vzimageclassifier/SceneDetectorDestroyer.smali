@@ -130,18 +130,23 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->isRunning:Z
 
     const-string v0, "SceneDetectorDestroyer"
 
     const-string v1, "JC Debug"
 
+    .line 2
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetector:Lvizinsight/atl/vzimageclassifier/SceneDetector;
 
+    .line 4
     iput-object p2, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorLite:Lvizinsight/atl/vzimageclassifier/SceneDetector;
 
+    .line 5
     new-instance p1, Ljava/lang/Thread;
 
     new-instance p2, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer$DestroyRunnable;
@@ -152,10 +157,12 @@
 
     iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->threadDestroy:Ljava/lang/Thread;
 
+    .line 6
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
     const-string p0, "SceneDetectorDestroyer - destroy "
 
+    .line 7
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -166,20 +173,26 @@
 
     const/4 v0, 0x1
 
+    .line 8
     iput-boolean v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->isRunning:Z
 
     const-string v0, "SceneDetectorDestroyer"
 
     const-string v1, "JC Debug"
 
+    .line 9
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 10
     iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetector:Lvizinsight/atl/vzimageclassifier/SceneDetector;
 
+    .line 11
     iput-object p2, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorLite:Lvizinsight/atl/vzimageclassifier/SceneDetector;
 
+    .line 12
     iput-object p3, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorVideo:Lvizinsight/atl/vzimageclassifier/SceneDetector;
 
+    .line 13
     new-instance p1, Ljava/lang/Thread;
 
     new-instance p2, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer$DestroyRunnable;
@@ -190,10 +203,12 @@
 
     iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->threadDestroy:Ljava/lang/Thread;
 
+    .line 14
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
     const-string p0, "SceneDetectorDestroyer - destroy "
 
+    .line 15
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

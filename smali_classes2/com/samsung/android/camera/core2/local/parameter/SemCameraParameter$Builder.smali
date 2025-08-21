@@ -22,8 +22,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
@@ -36,6 +38,7 @@
 .method public synthetic constructor <init>(Lu2/a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/camera/core2/local/parameter/SemCameraParameter$Builder;-><init>()V
 
     return-void

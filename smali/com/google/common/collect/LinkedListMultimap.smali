@@ -82,6 +82,7 @@
 
     const/16 v0, 0xc
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/collect/LinkedListMultimap;-><init>(I)V
 
     return-void
@@ -90,8 +91,10 @@
 .method private constructor <init>(I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/collect/AbstractMultimap;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/collect/Platform;->newHashMapWithExpectedSize(I)Ljava/util/Map;
 
     move-result-object p1
@@ -111,6 +114,7 @@
         }
     .end annotation
 
+    .line 4
     invoke-interface {p1}, Lcom/google/common/collect/Multimap;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -121,6 +125,7 @@
 
     invoke-direct {p0, v0}, Lcom/google/common/collect/LinkedListMultimap;-><init>(I)V
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/google/common/collect/LinkedListMultimap;->putAll(Lcom/google/common/collect/Multimap;)Z
 
     return-void
@@ -379,6 +384,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/LinkedListMultimap;
 
     invoke-direct {v0}, Lcom/google/common/collect/LinkedListMultimap;-><init>()V
@@ -400,6 +406,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/LinkedListMultimap;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/LinkedListMultimap;-><init>(I)V
@@ -423,6 +430,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Lcom/google/common/collect/LinkedListMultimap;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/LinkedListMultimap;-><init>(Lcom/google/common/collect/Multimap;)V
@@ -798,6 +806,7 @@
 .method public bridge synthetic createEntries()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/LinkedListMultimap;->createEntries()Ljava/util/List;
 
     move-result-object p0
@@ -816,6 +825,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/LinkedListMultimap$1EntriesImpl;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/LinkedListMultimap$1EntriesImpl;-><init>(Lcom/google/common/collect/LinkedListMultimap;)V
@@ -860,6 +870,7 @@
 .method public bridge synthetic createValues()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/LinkedListMultimap;->createValues()Ljava/util/List;
 
     move-result-object p0
@@ -877,6 +888,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/LinkedListMultimap$1ValuesImpl;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/LinkedListMultimap$1ValuesImpl;-><init>(Lcom/google/common/collect/LinkedListMultimap;)V
@@ -887,6 +899,7 @@
 .method public bridge synthetic entries()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/LinkedListMultimap;->entries()Ljava/util/List;
 
     move-result-object p0
@@ -905,6 +918,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->entries()Ljava/util/Collection;
 
     move-result-object p0
@@ -951,6 +965,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/LinkedListMultimap;->get(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -972,6 +987,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/LinkedListMultimap$1;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/LinkedListMultimap$1;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
@@ -1055,6 +1071,7 @@
 .method public bridge synthetic putAll(Lcom/google/common/collect/Multimap;)Z
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractMultimap;->putAll(Lcom/google/common/collect/Multimap;)Z
 
     move-result p0
@@ -1069,6 +1086,7 @@
         .end annotation
     .end param
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractMultimap;->putAll(Ljava/lang/Object;Ljava/lang/Iterable;)Z
 
     move-result p0
@@ -1089,6 +1107,7 @@
 .method public bridge synthetic removeAll(Ljava/lang/Object;)Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/LinkedListMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -1108,10 +1127,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/LinkedListMultimap;->getCopy(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/common/collect/LinkedListMultimap;->removeAllNodes(Ljava/lang/Object;)V
 
     return-object v0
@@ -1124,6 +1145,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/LinkedListMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object p0
@@ -1147,18 +1169,22 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/LinkedListMultimap;->getCopy(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Lcom/google/common/collect/LinkedListMultimap$ValueForKeyIterator;
 
     invoke-direct {v1, p0, p1}, Lcom/google/common/collect/LinkedListMultimap$ValueForKeyIterator;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
 
+    .line 4
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
+    .line 5
     :goto_0
     invoke-interface {v1}, Ljava/util/ListIterator;->hasNext()Z
 
@@ -1172,8 +1198,10 @@
 
     if-eqz p1, :cond_0
 
+    .line 6
     invoke-interface {v1}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
+    .line 7
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p1
@@ -1182,6 +1210,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     :goto_1
     invoke-interface {v1}, Ljava/util/ListIterator;->hasNext()Z
@@ -1190,12 +1219,15 @@
 
     if-eqz p1, :cond_1
 
+    .line 9
     invoke-interface {v1}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
+    .line 10
     invoke-interface {v1}, Ljava/util/ListIterator;->remove()V
 
     goto :goto_1
 
+    .line 11
     :cond_1
     :goto_2
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -1204,6 +1236,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 12
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p1
@@ -1237,6 +1270,7 @@
 .method public bridge synthetic values()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/LinkedListMultimap;->values()Ljava/util/List;
 
     move-result-object p0
@@ -1254,6 +1288,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->values()Ljava/util/Collection;
 
     move-result-object p0

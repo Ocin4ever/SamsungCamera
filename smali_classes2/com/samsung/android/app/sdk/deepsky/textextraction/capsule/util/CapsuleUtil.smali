@@ -41,6 +41,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -82,6 +83,7 @@
 
     goto/16 :goto_0
 
+    .line 2
     :cond_0
     sget p2, Lcom/samsung/android/app/sdk/deepsky/textextraction/R$drawable;->capsule_email:I
 
@@ -94,6 +96,7 @@
     :sswitch_3
     const-string v0, "unit"
 
+    .line 3
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -102,6 +105,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     sget p2, Lcom/samsung/android/app/sdk/deepsky/textextraction/R$drawable;->capsule_convert_unit:I
 
@@ -114,6 +118,7 @@
     :sswitch_4
     const-string v0, "date"
 
+    .line 5
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -122,6 +127,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_2
     sget p2, Lcom/samsung/android/app/sdk/deepsky/textextraction/R$drawable;->capsule_calendar:I
 
@@ -134,6 +140,7 @@
     :sswitch_5
     const-string v0, "url"
 
+    .line 7
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -142,6 +149,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_3
     sget p2, Lcom/samsung/android/app/sdk/deepsky/textextraction/R$drawable;->capsule_internet_web:I
 
@@ -154,6 +162,7 @@
     :sswitch_6
     const-string v0, "address"
 
+    .line 9
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -162,6 +171,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_4
     sget p2, Lcom/samsung/android/app/sdk/deepsky/textextraction/R$drawable;->capsule_location:I
 
@@ -174,6 +184,7 @@
     :sswitch_7
     const-string v0, "flight"
 
+    .line 11
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -182,6 +193,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_5
     sget p2, Lcom/samsung/android/app/sdk/deepsky/textextraction/R$drawable;->capsule_traveling:I
 
@@ -194,6 +206,7 @@
     :sswitch_8
     const-string v0, "bank_account_number"
 
+    .line 13
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -202,6 +215,7 @@
 
     goto :goto_0
 
+    .line 14
     :cond_6
     sget p2, Lcom/samsung/android/app/sdk/deepsky/textextraction/R$drawable;->capsule_bank_account_transfer:I
 
@@ -214,6 +228,7 @@
     :sswitch_9
     const-string v0, "phone_e164"
 
+    .line 15
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -222,6 +237,7 @@
 
     goto :goto_0
 
+    .line 16
     :cond_7
     sget p2, Lcom/samsung/android/app/sdk/deepsky/textextraction/R$drawable;->capsule_call_phone:I
 
@@ -231,6 +247,7 @@
 
     return-object p0
 
+    .line 17
     :goto_0
     sget-object p0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
@@ -272,6 +289,7 @@
 
     const-string v0, "phone"
 
+    .line 18
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -288,6 +306,7 @@
 
     goto :goto_0
 
+    .line 19
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/util/CapsuleUtil;->getEntityIcon(Landroid/content/Context;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -295,6 +314,7 @@
 
     return-object p0
 
+    .line 20
     :cond_1
     :goto_0
     invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
@@ -326,9 +346,11 @@
 
     goto :goto_1
 
+    .line 21
     :cond_3
     sget p2, Lcom/samsung/android/app/sdk/deepsky/textextraction/R$drawable;->capsule_add_to_contact:I
 
+    .line 22
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/util/CapsuleUtil;->getResourceUri(Landroid/content/Context;I)Landroid/net/Uri;
 
     move-result-object p0
@@ -338,6 +360,7 @@
     :cond_4
     const-string p2, "Send message"
 
+    .line 23
     invoke-virtual {p3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -346,9 +369,11 @@
 
     goto :goto_1
 
+    .line 24
     :cond_5
     sget p2, Lcom/samsung/android/app/sdk/deepsky/textextraction/R$drawable;->capsule_send_to_message:I
 
+    .line 25
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/util/CapsuleUtil;->getResourceUri(Landroid/content/Context;I)Landroid/net/Uri;
 
     move-result-object p0
@@ -358,12 +383,14 @@
     :cond_6
     const-string p2, "Call"
 
+    .line 26
     invoke-virtual {p3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-nez p2, :cond_7
 
+    .line 27
     :goto_1
     sget-object p0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
@@ -373,9 +400,11 @@
 
     return-object p0
 
+    .line 28
     :cond_7
     sget p2, Lcom/samsung/android/app/sdk/deepsky/textextraction/R$drawable;->capsule_call_phone:I
 
+    .line 29
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/util/CapsuleUtil;->getResourceUri(Landroid/content/Context;I)Landroid/net/Uri;
 
     move-result-object p0

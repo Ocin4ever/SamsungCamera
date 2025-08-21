@@ -19,6 +19,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/preference/DropDownPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -27,6 +28,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 2
     sget v0, Landroidx/preference/R$attr;->dropdownPreferenceStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/preference/DropDownPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -39,6 +41,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/preference/DropDownPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -47,22 +50,27 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/ListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 5
     new-instance p2, Landroidx/preference/DropDownPreference$1;
 
     invoke-direct {p2, p0}, Landroidx/preference/DropDownPreference$1;-><init>(Landroidx/preference/DropDownPreference;)V
 
     iput-object p2, p0, Landroidx/preference/DropDownPreference;->mItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
+    .line 6
     iput-object p1, p0, Landroidx/preference/DropDownPreference;->mContext:Landroid/content/Context;
 
+    .line 7
     invoke-virtual {p0}, Landroidx/preference/DropDownPreference;->createAdapter()Landroid/widget/ArrayAdapter;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/preference/DropDownPreference;->mAdapter:Landroid/widget/ArrayAdapter;
 
+    .line 8
     invoke-direct {p0}, Landroidx/preference/DropDownPreference;->updateEntries()V
 
     return-void

@@ -43,6 +43,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/Striped$PowerOfTwoStriped;-><init>(I)V
 
     const/high16 v0, 0x40000000    # 2.0f
@@ -63,8 +64,10 @@
     :goto_0
     const-string v0, "Stripes must be <= 2^30)"
 
+    .line 3
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 4
     iget p1, p0, Lcom/google/common/util/concurrent/Striped$PowerOfTwoStriped;->mask:I
 
     add-int/2addr p1, v2
@@ -73,6 +76,7 @@
 
     iput-object p1, p0, Lcom/google/common/util/concurrent/Striped$CompactStriped;->array:[Ljava/lang/Object;
 
+    .line 5
     :goto_1
     iget-object p1, p0, Lcom/google/common/util/concurrent/Striped$CompactStriped;->array:[Ljava/lang/Object;
 
@@ -80,6 +84,7 @@
 
     if-ge v1, v0, :cond_1
 
+    .line 6
     invoke-interface {p2}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -97,6 +102,7 @@
 .method public synthetic constructor <init>(ILcom/google/common/base/Supplier;Lcom/google/common/util/concurrent/Striped$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/util/concurrent/Striped$CompactStriped;-><init>(ILcom/google/common/base/Supplier;)V
 
     return-void

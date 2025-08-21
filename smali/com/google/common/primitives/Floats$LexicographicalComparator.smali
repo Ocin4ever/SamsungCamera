@@ -118,6 +118,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, [F
 
     check-cast p2, [F
@@ -132,6 +133,7 @@
 .method public compare([F[F)I
     .locals 3
 
+    .line 2
     array-length p0, p1
 
     array-length v0, p2
@@ -145,6 +147,7 @@
     :goto_0
     if-ge v0, p0, :cond_1
 
+    .line 3
     aget v1, p1, v0
 
     aget v2, p2, v0
@@ -162,6 +165,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     array-length p0, p1
 

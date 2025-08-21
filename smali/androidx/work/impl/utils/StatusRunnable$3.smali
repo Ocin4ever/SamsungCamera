@@ -47,6 +47,7 @@
 .method public bridge synthetic runInternal()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/work/impl/utils/StatusRunnable$3;->runInternal()Ljava/util/List;
 
     move-result-object p0
@@ -65,12 +66,14 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Landroidx/work/impl/utils/StatusRunnable$3;->val$workManager:Landroidx/work/impl/WorkManagerImpl;
 
     invoke-virtual {v0}, Landroidx/work/impl/WorkManagerImpl;->getWorkDatabase()Landroidx/work/impl/WorkDatabase;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->workSpecDao()Landroidx/work/impl/model/WorkSpecDao;
 
     move-result-object v0
@@ -81,6 +84,7 @@
 
     move-result-object p0
 
+    .line 4
     sget-object v0, Landroidx/work/impl/model/WorkSpec;->WORK_INFO_MAPPER:Landroidx/arch/core/util/Function;
 
     invoke-interface {v0, p0}, Landroidx/arch/core/util/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;

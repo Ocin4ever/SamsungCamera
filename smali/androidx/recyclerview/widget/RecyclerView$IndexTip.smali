@@ -96,18 +96,24 @@
 .method private constructor <init>(Landroidx/recyclerview/widget/RecyclerView;Landroid/content/Context;)V
     .locals 3
 
+    .line 2
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$IndexTip;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
+    .line 3
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
+    .line 4
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RecyclerView$IndexTip;->mIsNeedUpdate:Z
 
+    .line 5
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RecyclerView$IndexTip;->mIsShowing:Z
 
+    .line 6
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RecyclerView$IndexTip;->mForcedHide:Z
 
+    .line 7
     new-instance p1, Landroid/view/animation/PathInterpolator;
 
     const/4 p2, 0x0
@@ -118,6 +124,7 @@
 
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$IndexTip;->ALPHA_INTERPOLATOR:Landroid/view/animation/PathInterpolator;
 
+    .line 8
     new-instance p1, Landroid/view/animation/PathInterpolator;
 
     const v1, 0x3e6147ae    # 0.22f
@@ -128,18 +135,21 @@
 
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$IndexTip;->SCALE_INTERPOLATOR:Landroid/view/animation/PathInterpolator;
 
+    .line 9
     new-instance p1, Landroidx/recyclerview/widget/RecyclerView$IndexTip$2;
 
     invoke-direct {p1, p0}, Landroidx/recyclerview/widget/RecyclerView$IndexTip$2;-><init>(Landroidx/recyclerview/widget/RecyclerView$IndexTip;)V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$IndexTip;->mTextDelayRunnable:Ljava/lang/Runnable;
 
+    .line 10
     new-instance p1, Landroidx/recyclerview/widget/RecyclerView$IndexTip$3;
 
     invoke-direct {p1, p0}, Landroidx/recyclerview/widget/RecyclerView$IndexTip$3;-><init>(Landroidx/recyclerview/widget/RecyclerView$IndexTip;)V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$IndexTip;->mShapeDelayRunnable:Ljava/lang/Runnable;
 
+    .line 11
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$IndexTip;->init()V
 
     return-void
@@ -148,6 +158,7 @@
 .method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView;Landroid/content/Context;Landroidx/recyclerview/widget/RecyclerView$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$IndexTip;-><init>(Landroidx/recyclerview/widget/RecyclerView;Landroid/content/Context;)V
 
     return-void

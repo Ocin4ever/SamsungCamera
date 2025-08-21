@@ -25,8 +25,10 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/maker/MakerFactory$MakerConstructor;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/maker/MakerFactory$DefaultMakerBuilder;->a:Lcom/samsung/android/camera/core2/maker/MakerFactory$MakerConstructor;
 
     return-void
@@ -35,6 +37,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/maker/MakerFactory$MakerConstructor;Lcom/samsung/android/camera/core2/maker/fb;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/maker/MakerFactory$DefaultMakerBuilder;-><init>(Lcom/samsung/android/camera/core2/maker/MakerFactory$MakerConstructor;)V
 
     return-void

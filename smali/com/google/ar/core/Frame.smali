@@ -57,14 +57,17 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lcom/google/ar/core/Frame;->session:Lcom/google/ar/core/Session;
 
     const-wide/16 v0, 0x0
 
+    .line 7
     iput-wide v0, p0, Lcom/google/ar/core/Frame;->nativeHandle:J
 
     return-void
@@ -73,6 +76,7 @@
 .method public constructor <init>(Lcom/google/ar/core/Session;)V
     .locals 2
 
+    .line 1
     iget-wide v0, p1, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
 
     invoke-static {v0, v1}, Lcom/google/ar/core/Frame;->nativeCreateFrame(J)J
@@ -87,10 +91,13 @@
 .method public constructor <init>(Lcom/google/ar/core/Session;J)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/google/ar/core/Frame;->session:Lcom/google/ar/core/Session;
 
+    .line 4
     iput-wide p2, p0, Lcom/google/ar/core/Frame;->nativeHandle:J
 
     return-void
@@ -503,6 +510,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/ar/core/Frame;->session:Lcom/google/ar/core/Session;
 
     iget-wide v2, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
@@ -519,6 +527,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/ar/core/Frame;->convertNativeHitResultsToList([J)Ljava/util/List;
 
     move-result-object p0
@@ -539,6 +548,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -565,6 +575,7 @@
         }
     .end annotation
 
+    .line 4
     iget-object v0, p0, Lcom/google/ar/core/Frame;->session:Lcom/google/ar/core/Session;
 
     iget-wide v2, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
@@ -581,10 +592,12 @@
 
     move v9, p4
 
+    .line 5
     invoke-virtual/range {v1 .. v9}, Lcom/google/ar/core/Frame;->nativeHitTestRay(JJ[FI[FI)[J
 
     move-result-object p1
 
+    .line 6
     invoke-direct {p0, p1}, Lcom/google/ar/core/Frame;->convertNativeHitResultsToList([J)Ljava/util/List;
 
     move-result-object p0
@@ -607,6 +620,7 @@
 .method public transformCoordinates2d(Lcom/google/ar/core/Coordinates2d;Ljava/nio/FloatBuffer;Lcom/google/ar/core/Coordinates2d;Ljava/nio/FloatBuffer;)V
     .locals 10
 
+    .line 1
     iget-object v0, p0, Lcom/google/ar/core/Frame;->session:Lcom/google/ar/core/Session;
 
     iget-wide v2, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
@@ -631,6 +645,7 @@
 .method public transformCoordinates2d(Lcom/google/ar/core/Coordinates2d;[FLcom/google/ar/core/Coordinates2d;[F)V
     .locals 10
 
+    .line 2
     iget-object v0, p0, Lcom/google/ar/core/Frame;->session:Lcom/google/ar/core/Session;
 
     iget-wide v2, v0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J

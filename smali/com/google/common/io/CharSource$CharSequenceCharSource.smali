@@ -210,6 +210,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/io/CharSource$CharSequenceCharSource;->linesIterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -236,10 +237,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/io/CharSource$CharSequenceCharSource;->linesIterator()Ljava/util/Iterator;
 
     move-result-object p0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -247,6 +250,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -259,6 +263,7 @@
 
     if-nez v0, :cond_0
 
+    .line 5
     :cond_1
     invoke-interface {p1}, Lcom/google/common/io/LineProcessor;->getResult()Ljava/lang/Object;
 

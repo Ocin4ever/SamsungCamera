@@ -25,6 +25,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Landroidx/transition/Visibility;-><init>()V
 
     return-void
@@ -33,8 +34,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/transition/Visibility;-><init>()V
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/transition/Visibility;->setMode(I)V
 
     return-void
@@ -43,30 +46,37 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
+    .line 4
     invoke-direct {p0, p1, p2}, Landroidx/transition/Visibility;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 5
     sget-object v0, Landroidx/transition/Styleable;->FADE:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 6
     check-cast p2, Landroid/content/res/XmlResourceParser;
 
     const/4 v0, 0x0
 
+    .line 7
     invoke-virtual {p0}, Landroidx/transition/Visibility;->getMode()I
 
     move-result v1
 
     const-string v2, "fadingMode"
 
+    .line 8
     invoke-static {p1, p2, v2, v0, v1}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p2
 
+    .line 9
     invoke-virtual {p0, p2}, Landroidx/transition/Visibility;->setMode(I)V
 
+    .line 10
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void

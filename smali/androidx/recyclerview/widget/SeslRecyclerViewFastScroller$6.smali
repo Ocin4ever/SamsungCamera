@@ -36,6 +36,7 @@
 .method public get(Landroid/view/View;)Ljava/lang/Integer;
     .locals 0
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getBottom()I
 
     move-result p0
@@ -50,6 +51,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/SeslRecyclerViewFastScroller$6;->get(Landroid/view/View;)Ljava/lang/Integer;
@@ -62,6 +64,7 @@
 .method public setValue(Landroid/view/View;I)V
     .locals 0
 
+    .line 2
     invoke-virtual {p1, p2}, Landroid/view/View;->setBottom(I)V
 
     return-void
@@ -70,6 +73,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;I)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/SeslRecyclerViewFastScroller$6;->setValue(Landroid/view/View;I)V

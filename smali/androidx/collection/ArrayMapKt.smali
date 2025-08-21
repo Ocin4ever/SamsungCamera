@@ -18,6 +18,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/collection/ArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/ArrayMap;-><init>()V
@@ -45,12 +46,14 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->f(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Landroidx/collection/ArrayMap;
 
     array-length v1, p0
 
     invoke-direct {v0, v1}, Landroidx/collection/ArrayMap;-><init>(I)V
 
+    .line 3
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -60,6 +63,7 @@
 
     aget-object v3, p0, v2
 
+    .line 4
     invoke-virtual {v3}, Lf6/h;->c()Ljava/lang/Object;
 
     move-result-object v4

@@ -30,8 +30,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/samsung/android/camera/core2/processor/work/PostProcessorWork$Logic;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
+    .line 2
     invoke-static {}, Ljava/nio/file/FileSystems;->getDefault()Ljava/nio/file/FileSystem;
 
     move-result-object p1
@@ -44,6 +46,7 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/processor/work/worker/RecoveryDraftImageLegacyWorker$Logic;->mFakeDraftImageFileMatcher:Ljava/nio/file/PathMatcher;
 
+    .line 3
     new-instance p1, Ljava/util/Timer;
 
     invoke-direct {p1}, Ljava/util/Timer;-><init>()V
@@ -56,8 +59,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/core2/processor/work/PostProcessorWork$Logic;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
+    .line 5
     invoke-static {}, Ljava/nio/file/FileSystems;->getDefault()Ljava/nio/file/FileSystem;
 
     move-result-object p1
@@ -70,6 +75,7 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/processor/work/worker/RecoveryDraftImageLegacyWorker$Logic;->mFakeDraftImageFileMatcher:Ljava/nio/file/PathMatcher;
 
+    .line 6
     new-instance p1, Ljava/util/Timer;
 
     invoke-direct {p1}, Ljava/util/Timer;-><init>()V

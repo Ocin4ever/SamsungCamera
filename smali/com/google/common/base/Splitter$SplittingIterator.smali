@@ -72,6 +72,7 @@
 .method public bridge synthetic computeNext()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/base/Splitter$SplittingIterator;->computeNext()Ljava/lang/String;
 
     move-result-object p0
@@ -82,8 +83,10 @@
 .method public computeNext()Ljava/lang/String;
     .locals 6
 
+    .line 2
     iget v0, p0, Lcom/google/common/base/Splitter$SplittingIterator;->offset:I
 
+    .line 3
     :cond_0
     :goto_0
     iget v1, p0, Lcom/google/common/base/Splitter$SplittingIterator;->offset:I
@@ -92,22 +95,26 @@
 
     if-eq v1, v2, :cond_8
 
+    .line 4
     invoke-virtual {p0, v1}, Lcom/google/common/base/Splitter$SplittingIterator;->separatorStart(I)I
 
     move-result v1
 
     if-ne v1, v2, :cond_1
 
+    .line 5
     iget-object v1, p0, Lcom/google/common/base/Splitter$SplittingIterator;->toSplit:Ljava/lang/CharSequence;
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
+    .line 6
     iput v2, p0, Lcom/google/common/base/Splitter$SplittingIterator;->offset:I
 
     goto :goto_1
 
+    .line 7
     :cond_1
     invoke-virtual {p0, v1}, Lcom/google/common/base/Splitter$SplittingIterator;->separatorEnd(I)I
 
@@ -115,6 +122,7 @@
 
     iput v3, p0, Lcom/google/common/base/Splitter$SplittingIterator;->offset:I
 
+    .line 8
     :goto_1
     iget v3, p0, Lcom/google/common/base/Splitter$SplittingIterator;->offset:I
 
@@ -122,8 +130,10 @@
 
     add-int/lit8 v3, v3, 0x1
 
+    .line 9
     iput v3, p0, Lcom/google/common/base/Splitter$SplittingIterator;->offset:I
 
+    .line 10
     iget-object v1, p0, Lcom/google/common/base/Splitter$SplittingIterator;->toSplit:Ljava/lang/CharSequence;
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
@@ -132,6 +142,7 @@
 
     if-le v3, v1, :cond_0
 
+    .line 11
     iput v2, p0, Lcom/google/common/base/Splitter$SplittingIterator;->offset:I
 
     goto :goto_0
@@ -140,6 +151,7 @@
     :goto_2
     if-ge v0, v1, :cond_3
 
+    .line 12
     iget-object v3, p0, Lcom/google/common/base/Splitter$SplittingIterator;->trimmer:Lcom/google/common/base/CharMatcher;
 
     iget-object v4, p0, Lcom/google/common/base/Splitter$SplittingIterator;->toSplit:Ljava/lang/CharSequence;
@@ -162,6 +174,7 @@
     :goto_3
     if-le v1, v0, :cond_4
 
+    .line 13
     iget-object v3, p0, Lcom/google/common/base/Splitter$SplittingIterator;->trimmer:Lcom/google/common/base/CharMatcher;
 
     iget-object v4, p0, Lcom/google/common/base/Splitter$SplittingIterator;->toSplit:Ljava/lang/CharSequence;
@@ -182,6 +195,7 @@
 
     goto :goto_3
 
+    .line 14
     :cond_4
     iget-boolean v3, p0, Lcom/google/common/base/Splitter$SplittingIterator;->omitEmptyStrings:Z
 
@@ -189,10 +203,12 @@
 
     if-ne v0, v1, :cond_5
 
+    .line 15
     iget v0, p0, Lcom/google/common/base/Splitter$SplittingIterator;->offset:I
 
     goto :goto_0
 
+    .line 16
     :cond_5
     iget v3, p0, Lcom/google/common/base/Splitter$SplittingIterator;->limit:I
 
@@ -200,17 +216,20 @@
 
     if-ne v3, v4, :cond_6
 
+    .line 17
     iget-object v1, p0, Lcom/google/common/base/Splitter$SplittingIterator;->toSplit:Ljava/lang/CharSequence;
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
+    .line 18
     iput v2, p0, Lcom/google/common/base/Splitter$SplittingIterator;->offset:I
 
     :goto_4
     if-le v1, v0, :cond_7
 
+    .line 19
     iget-object v2, p0, Lcom/google/common/base/Splitter$SplittingIterator;->trimmer:Lcom/google/common/base/CharMatcher;
 
     iget-object v3, p0, Lcom/google/common/base/Splitter$SplittingIterator;->toSplit:Ljava/lang/CharSequence;
@@ -234,8 +253,10 @@
     :cond_6
     sub-int/2addr v3, v4
 
+    .line 20
     iput v3, p0, Lcom/google/common/base/Splitter$SplittingIterator;->limit:I
 
+    .line 21
     :cond_7
     iget-object p0, p0, Lcom/google/common/base/Splitter$SplittingIterator;->toSplit:Ljava/lang/CharSequence;
 
@@ -249,6 +270,7 @@
 
     return-object p0
 
+    .line 22
     :cond_8
     invoke-virtual {p0}, Lcom/google/common/base/AbstractIterator;->endOfData()Ljava/lang/Object;
 

@@ -365,6 +365,7 @@
 .method private checkStableToReset(I)V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lco/polarr/mgcsc/apis/PolarrMGC;->processingThread:Lco/polarr/mgcsc/d;
 
     if-eqz v0, :cond_0
@@ -7228,6 +7229,7 @@
 .method public checkStableToReset()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lco/polarr/mgcsc/apis/PolarrMGC;->processingThread:Lco/polarr/mgcsc/d;
 
     if-eqz v0, :cond_0
@@ -10119,6 +10121,7 @@
 .method public getCurrentBitmap(IIIIIZ[B)Landroid/graphics/Bitmap;
     .locals 6
 
+    .line 1
     move-object v0, p0
 
     move v1, p1
@@ -10141,6 +10144,7 @@
 .method public getCurrentBitmap(IIIZ[B)Landroid/graphics/Bitmap;
     .locals 12
 
+    .line 2
     new-instance v9, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v9}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -10222,6 +10226,7 @@
 .method public getCurrentScaledBitmap(IIIIIZ[BI)Landroid/graphics/Bitmap;
     .locals 7
 
+    .line 1
     move-object v0, p0
 
     move v1, p1
@@ -10246,6 +10251,7 @@
 .method public getCurrentScaledBitmap(IIIZ[BI)Landroid/graphics/Bitmap;
     .locals 13
 
+    .line 2
     new-instance v10, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v10}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -10848,6 +10854,7 @@
 .method public processing([BIIIIIZLco/polarr/mgcsc/entities/ImageParam;)Lco/polarr/mgcsc/entities/MovementSuggestion;
     .locals 7
 
+    .line 1
     move-object v0, p0
 
     move-object v1, p1
@@ -10872,6 +10879,7 @@
 .method public processing([BIIIZLco/polarr/mgcsc/entities/ImageParam;)Lco/polarr/mgcsc/entities/MovementSuggestion;
     .locals 11
 
+    .line 2
     move-object v8, p0
 
     iget-object v0, v8, Lco/polarr/mgcsc/apis/PolarrMGC;->processingThread:Lco/polarr/mgcsc/d;
@@ -10948,6 +10956,7 @@
 .method public processing([BIIIZ[Landroid/hardware/camera2/params/Face;Landroid/graphics/Rect;IIIII)Lco/polarr/mgcsc/entities/MovementSuggestion;
     .locals 16
 
+    .line 3
     move-object/from16 v14, p0
 
     iget-object v0, v14, Lco/polarr/mgcsc/apis/PolarrMGC;->processingThread:Lco/polarr/mgcsc/d;
@@ -11038,6 +11047,7 @@
 .method public processing([BIIIZ[Landroid/hardware/camera2/params/Face;Landroid/graphics/Rect;IIIIIZ)Lco/polarr/mgcsc/entities/MovementSuggestion;
     .locals 0
 
+    .line 4
     invoke-virtual/range {p0 .. p12}, Lco/polarr/mgcsc/apis/PolarrMGC;->processing([BIIIZ[Landroid/hardware/camera2/params/Face;Landroid/graphics/Rect;IIIII)Lco/polarr/mgcsc/entities/MovementSuggestion;
 
     move-result-object p0
@@ -11445,6 +11455,7 @@
 .method public setPitchThreshold(I)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lco/polarr/mgcsc/apis/PolarrMGC;->processingThread:Lco/polarr/mgcsc/d;
 
     if-eqz v0, :cond_0
@@ -11462,6 +11473,7 @@
 .method public setPitchThreshold(III)V
     .locals 0
 
+    .line 2
     iget-object p2, p0, Lco/polarr/mgcsc/apis/PolarrMGC;->processingThread:Lco/polarr/mgcsc/d;
 
     if-eqz p2, :cond_0
@@ -11542,6 +11554,7 @@
 .method public setResetImageCheckingThresholds(FF)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lco/polarr/mgcsc/apis/PolarrMGC;->processingThread:Lco/polarr/mgcsc/d;
 
     if-eqz v0, :cond_0
@@ -11559,6 +11572,7 @@
 .method public setResetImageCheckingThresholds(FFFI)V
     .locals 0
 
+    .line 2
     return-void
 .end method
 

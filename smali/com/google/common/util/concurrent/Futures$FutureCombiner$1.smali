@@ -46,6 +46,7 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/Futures$FutureCombiner$1;->call()Ljava/lang/Void;
 
     move-result-object p0
@@ -56,6 +57,7 @@
 .method public call()Ljava/lang/Void;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/Futures$FutureCombiner$1;->val$combiner:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V

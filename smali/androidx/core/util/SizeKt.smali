@@ -11,6 +11,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/util/SizeF;->getWidth()F
 
     move-result p0
@@ -25,6 +26,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/core/util/SizeFCompat;->getWidth()F
 
     move-result p0
@@ -39,6 +41,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result p0
@@ -53,6 +56,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/util/SizeF;->getHeight()F
 
     move-result p0
@@ -67,6 +71,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/core/util/SizeFCompat;->getHeight()F
 
     move-result p0
@@ -81,6 +86,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
 
     move-result p0

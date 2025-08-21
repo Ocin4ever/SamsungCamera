@@ -19,8 +19,10 @@
 .method private constructor <init>(Lcom/samsung/android/camera/core2/processor/gppm/GppmProcessingData$Builder;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/samsung/android/camera/core2/processor/gppm/GppmProcessingData$Builder;->d(Lcom/samsung/android/camera/core2/processor/gppm/GppmProcessingData$Builder;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -33,6 +35,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/processor/gppm/GppmProcessingData$Builder;Lcom/samsung/android/camera/core2/processor/gppm/e;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/processor/gppm/GppmProcessingData;-><init>(Lcom/samsung/android/camera/core2/processor/gppm/GppmProcessingData$Builder;)V
 
     return-void

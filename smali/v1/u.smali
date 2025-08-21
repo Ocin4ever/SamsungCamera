@@ -31,6 +31,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 1
     sget v0, Landroidx/appcompat/R$attr;->autoCompleteTextViewStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lv1/u;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -43,22 +44,26 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-static {p1, p2, p3, v0}, Lx1/a;->c(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
 
     move-result-object p1
 
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatAutoCompleteTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 3
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Lv1/u;->c:Landroid/graphics/Rect;
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
+    .line 5
     sget-object v3, Ly0/l;->i2:[I
 
     sget v5, Landroidx/appcompat/R$style;->Widget_AppCompat_AutoCompleteTextView:I
@@ -71,10 +76,12 @@
 
     move v4, p3
 
+    .line 6
     invoke-static/range {v1 .. v6}, Lm1/q;->i(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
+    .line 7
     sget p3, Ly0/l;->j2:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -83,6 +90,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 8
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result p3
@@ -91,23 +99,28 @@
 
     const/4 p3, 0x0
 
+    .line 9
     invoke-virtual {p0, p3}, Landroidx/appcompat/widget/AppCompatAutoCompleteTextView;->setKeyListener(Landroid/text/method/KeyListener;)V
 
+    .line 10
     :cond_0
     sget p3, Ly0/l;->l2:I
 
     sget v1, Ly0/g;->j:I
 
+    .line 11
     invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p3
 
     iput p3, p0, Lv1/u;->d:I
 
+    .line 12
     sget p3, Ly0/l;->k2:I
 
     sget v1, Ly0/c;->P:I
 
+    .line 13
     invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
     move-result p3
@@ -116,16 +129,20 @@
 
     iput p3, p0, Lv1/u;->e:F
 
+    .line 14
     sget p3, Ly0/l;->m2:I
 
+    .line 15
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p3
 
     iput p3, p0, Lv1/u;->f:I
 
+    .line 16
     sget p3, Ly0/l;->n2:I
 
+    .line 17
     invoke-static {p1, p2, p3}, Lq1/c;->a(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object p3
@@ -134,6 +151,7 @@
 
     const-string p3, "accessibility"
 
+    .line 18
     invoke-virtual {p1, p3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p3
@@ -142,6 +160,7 @@
 
     iput-object p3, p0, Lv1/u;->b:Landroid/view/accessibility/AccessibilityManager;
 
+    .line 19
     new-instance p3, Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-direct {p3, p1}, Landroidx/appcompat/widget/ListPopupWindow;-><init>(Landroid/content/Context;)V
@@ -150,26 +169,32 @@
 
     const/4 p1, 0x1
 
+    .line 20
     invoke-virtual {p3, p1}, Landroidx/appcompat/widget/ListPopupWindow;->setModal(Z)V
 
+    .line 21
     invoke-virtual {p3, p0}, Landroidx/appcompat/widget/ListPopupWindow;->setAnchorView(Landroid/view/View;)V
 
     const/4 p1, 0x2
 
+    .line 22
     invoke-virtual {p3, p1}, Landroidx/appcompat/widget/ListPopupWindow;->setInputMethodMode(I)V
 
+    .line 23
     invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object p1
 
     invoke-virtual {p3, p1}, Landroidx/appcompat/widget/ListPopupWindow;->setAdapter(Landroid/widget/ListAdapter;)V
 
+    .line 24
     new-instance p1, Lv1/u$a;
 
     invoke-direct {p1, p0}, Lv1/u$a;-><init>(Lv1/u;)V
 
     invoke-virtual {p3, p1}, Landroidx/appcompat/widget/ListPopupWindow;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
+    .line 25
     sget p1, Ly0/l;->o2:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -178,12 +203,15 @@
 
     if-eqz p3, :cond_1
 
+    .line 26
     invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p1
 
+    .line 27
     invoke-virtual {p0, p1}, Lv1/u;->setSimpleItems(I)V
 
+    .line 28
     :cond_1
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -679,6 +707,7 @@
 .method public setSimpleItems(I)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -695,6 +724,7 @@
 .method public setSimpleItems([Ljava/lang/String;)V
     .locals 3
 
+    .line 2
     new-instance v0, Lv1/u$b;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;

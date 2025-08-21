@@ -60,6 +60,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lcom/google/common/collect/RangeSet;->asRanges()Ljava/util/Set;
 
     move-result-object p1
@@ -80,6 +81,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -97,6 +99,7 @@
 
     check-cast v0, Lcom/google/common/collect/Range;
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/common/collect/AbstractRangeSet;->add(Lcom/google/common/collect/Range;)V
 
     goto :goto_0
@@ -162,6 +165,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lcom/google/common/collect/RangeSet;->asRanges()Ljava/util/Set;
 
     move-result-object p1
@@ -184,6 +188,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -201,6 +206,7 @@
 
     check-cast v0, Lcom/google/common/collect/Range;
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/common/collect/AbstractRangeSet;->encloses(Lcom/google/common/collect/Range;)Z
 
     move-result v0
@@ -341,6 +347,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lcom/google/common/collect/RangeSet;->asRanges()Ljava/util/Set;
 
     move-result-object p1
@@ -361,6 +368,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -378,6 +386,7 @@
 
     check-cast v0, Lcom/google/common/collect/Range;
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/common/collect/AbstractRangeSet;->remove(Lcom/google/common/collect/Range;)V
 
     goto :goto_0

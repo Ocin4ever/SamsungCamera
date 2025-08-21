@@ -79,20 +79,24 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Landroidx/fragment/app/Fragment;-><init>()V
 
+    .line 2
     new-instance v0, Landroidx/fragment/app/DialogFragment$1;
 
     invoke-direct {v0, p0}, Landroidx/fragment/app/DialogFragment$1;-><init>(Landroidx/fragment/app/DialogFragment;)V
 
     iput-object v0, p0, Landroidx/fragment/app/DialogFragment;->mDismissRunnable:Ljava/lang/Runnable;
 
+    .line 3
     new-instance v0, Landroidx/fragment/app/DialogFragment$2;
 
     invoke-direct {v0, p0}, Landroidx/fragment/app/DialogFragment$2;-><init>(Landroidx/fragment/app/DialogFragment;)V
 
     iput-object v0, p0, Landroidx/fragment/app/DialogFragment;->mOnCancelListener:Landroid/content/DialogInterface$OnCancelListener;
 
+    .line 4
     new-instance v0, Landroidx/fragment/app/DialogFragment$3;
 
     invoke-direct {v0, p0}, Landroidx/fragment/app/DialogFragment$3;-><init>(Landroidx/fragment/app/DialogFragment;)V
@@ -101,26 +105,33 @@
 
     const/4 v0, 0x0
 
+    .line 5
     iput v0, p0, Landroidx/fragment/app/DialogFragment;->mStyle:I
 
+    .line 6
     iput v0, p0, Landroidx/fragment/app/DialogFragment;->mTheme:I
 
     const/4 v1, 0x1
 
+    .line 7
     iput-boolean v1, p0, Landroidx/fragment/app/DialogFragment;->mCancelable:Z
 
+    .line 8
     iput-boolean v1, p0, Landroidx/fragment/app/DialogFragment;->mShowsDialog:Z
 
     const/4 v1, -0x1
 
+    .line 9
     iput v1, p0, Landroidx/fragment/app/DialogFragment;->mBackStackId:I
 
+    .line 10
     new-instance v1, Landroidx/fragment/app/DialogFragment$4;
 
     invoke-direct {v1, p0}, Landroidx/fragment/app/DialogFragment$4;-><init>(Landroidx/fragment/app/DialogFragment;)V
 
     iput-object v1, p0, Landroidx/fragment/app/DialogFragment;->mObserver:Landroidx/lifecycle/Observer;
 
+    .line 11
     iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->mDialogCreated:Z
 
     return-void
@@ -129,20 +140,24 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 12
     invoke-direct {p0, p1}, Landroidx/fragment/app/Fragment;-><init>(I)V
 
+    .line 13
     new-instance p1, Landroidx/fragment/app/DialogFragment$1;
 
     invoke-direct {p1, p0}, Landroidx/fragment/app/DialogFragment$1;-><init>(Landroidx/fragment/app/DialogFragment;)V
 
     iput-object p1, p0, Landroidx/fragment/app/DialogFragment;->mDismissRunnable:Ljava/lang/Runnable;
 
+    .line 14
     new-instance p1, Landroidx/fragment/app/DialogFragment$2;
 
     invoke-direct {p1, p0}, Landroidx/fragment/app/DialogFragment$2;-><init>(Landroidx/fragment/app/DialogFragment;)V
 
     iput-object p1, p0, Landroidx/fragment/app/DialogFragment;->mOnCancelListener:Landroid/content/DialogInterface$OnCancelListener;
 
+    .line 15
     new-instance p1, Landroidx/fragment/app/DialogFragment$3;
 
     invoke-direct {p1, p0}, Landroidx/fragment/app/DialogFragment$3;-><init>(Landroidx/fragment/app/DialogFragment;)V
@@ -151,26 +166,33 @@
 
     const/4 p1, 0x0
 
+    .line 16
     iput p1, p0, Landroidx/fragment/app/DialogFragment;->mStyle:I
 
+    .line 17
     iput p1, p0, Landroidx/fragment/app/DialogFragment;->mTheme:I
 
     const/4 v0, 0x1
 
+    .line 18
     iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->mCancelable:Z
 
+    .line 19
     iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->mShowsDialog:Z
 
     const/4 v0, -0x1
 
+    .line 20
     iput v0, p0, Landroidx/fragment/app/DialogFragment;->mBackStackId:I
 
+    .line 21
     new-instance v0, Landroidx/fragment/app/DialogFragment$4;
 
     invoke-direct {v0, p0}, Landroidx/fragment/app/DialogFragment$4;-><init>(Landroidx/fragment/app/DialogFragment;)V
 
     iput-object v0, p0, Landroidx/fragment/app/DialogFragment;->mObserver:Landroidx/lifecycle/Observer;
 
+    .line 22
     iput-boolean p1, p0, Landroidx/fragment/app/DialogFragment;->mDialogCreated:Z
 
     return-void
@@ -1287,16 +1309,21 @@
 
     const/4 v0, 0x0
 
+    .line 7
     iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->mDismissed:Z
 
     const/4 v1, 0x1
 
+    .line 8
     iput-boolean v1, p0, Landroidx/fragment/app/DialogFragment;->mShownByMe:Z
 
+    .line 9
     invoke-virtual {p1, p0, p2}, Landroidx/fragment/app/FragmentTransaction;->add(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
+    .line 10
     iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->mViewDestroyed:Z
 
+    .line 11
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     move-result p1
@@ -1311,20 +1338,26 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->mDismissed:Z
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->mShownByMe:Z
 
+    .line 3
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
+    .line 4
     invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentTransaction;->setReorderingAllowed(Z)Landroidx/fragment/app/FragmentTransaction;
 
+    .line 5
     invoke-virtual {p1, p0, p2}, Landroidx/fragment/app/FragmentTransaction;->add(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
+    .line 6
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     return-void

@@ -40,8 +40,10 @@
 .method private constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     invoke-direct {p0, p1}, Lcom/samsung/android/sivs/ai/sdkcommon/translation/LanguageDirection;->readFromParcel(Landroid/os/Parcel;)V
 
     return-void
@@ -50,6 +52,7 @@
 .method public synthetic constructor <init>(Landroid/os/Parcel;Lcom/samsung/android/sivs/ai/sdkcommon/translation/d;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/sivs/ai/sdkcommon/translation/LanguageDirection;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -58,10 +61,13 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/sivs/ai/sdkcommon/translation/LanguageDirection;->sourceLanguage:Ljava/lang/String;
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/sivs/ai/sdkcommon/translation/LanguageDirection;->targetLanguage:Ljava/lang/String;
 
     return-void

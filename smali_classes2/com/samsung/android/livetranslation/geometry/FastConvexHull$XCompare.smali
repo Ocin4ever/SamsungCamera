@@ -32,6 +32,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +41,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/livetranslation/geometry/a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/livetranslation/geometry/FastConvexHull$XCompare;-><init>()V
 
     return-void
@@ -50,6 +52,7 @@
 .method public compare(Landroid/graphics/Point;Landroid/graphics/Point;)I
     .locals 0
 
+    .line 2
     iget p0, p1, Landroid/graphics/Point;->x:I
 
     iget p1, p2, Landroid/graphics/Point;->x:I
@@ -64,6 +67,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/graphics/Point;
 
     check-cast p2, Landroid/graphics/Point;

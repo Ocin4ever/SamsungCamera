@@ -42,6 +42,7 @@
 
     move v3, p3
 
+    .line 1
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/camera/core2/util/SEFInterface$SefParam;-><init>(Ljava/lang/String;[BILjava/lang/String;I)V
 
     return-void
@@ -62,6 +63,7 @@
 
     move-object v4, p4
 
+    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/camera/core2/util/SEFInterface$SefParam;-><init>(Ljava/lang/String;[BILjava/lang/String;I)V
 
     return-void
@@ -70,16 +72,22 @@
 .method public constructor <init>(Ljava/lang/String;[BILjava/lang/String;I)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     iput-object p1, p0, Lcom/samsung/android/camera/core2/util/SEFInterface$SefParam;->sefName:Ljava/lang/String;
 
+    .line 5
     iput-object p2, p0, Lcom/samsung/android/camera/core2/util/SEFInterface$SefParam;->data:[B
 
+    .line 6
     iput p3, p0, Lcom/samsung/android/camera/core2/util/SEFInterface$SefParam;->dataType:I
 
+    .line 7
     iput-object p4, p0, Lcom/samsung/android/camera/core2/util/SEFInterface$SefParam;->dstFileName:Ljava/lang/String;
 
+    .line 8
     iput p5, p0, Lcom/samsung/android/camera/core2/util/SEFInterface$SefParam;->option:I
 
     return-void

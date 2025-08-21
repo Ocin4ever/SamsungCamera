@@ -23,16 +23,21 @@
 .method public constructor <init>(JJLandroid/graphics/Bitmap;)V
     .locals 0
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 9
     iput-wide p1, p0, Lcom/samsung/android/qrengine/FrameData;->mId:J
 
+    .line 10
     iput-wide p3, p0, Lcom/samsung/android/qrengine/FrameData;->mTimeStamp:J
 
+    .line 11
     iput-object p5, p0, Lcom/samsung/android/qrengine/FrameData;->mBitmap:Landroid/graphics/Bitmap;
 
     const/4 p1, 0x1
 
+    .line 12
     iput-boolean p1, p0, Lcom/samsung/android/qrengine/FrameData;->isBitmap:Z
 
     return-void
@@ -41,18 +46,23 @@
 .method public constructor <init>(JJ[B)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/samsung/android/qrengine/FrameData;->mId:J
 
+    .line 3
     iput-wide p3, p0, Lcom/samsung/android/qrengine/FrameData;->mTimeStamp:J
 
+    .line 4
     array-length p1, p5
 
     new-array p1, p1, [B
 
     iput-object p1, p0, Lcom/samsung/android/qrengine/FrameData;->mImageBuffer:[B
 
+    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,6 +83,7 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     iget-object p1, p0, Lcom/samsung/android/qrengine/FrameData;->mImageBuffer:[B
 
     array-length p2, p5
@@ -81,6 +92,7 @@
 
     invoke-static {p5, p3, p1, p3, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 7
     iput-boolean p3, p0, Lcom/samsung/android/qrengine/FrameData;->isBitmap:Z
 
     return-void

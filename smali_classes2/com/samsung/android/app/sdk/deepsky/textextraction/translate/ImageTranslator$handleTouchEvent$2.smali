@@ -80,6 +80,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Lf6/p;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/translate/ImageTranslator$handleTouchEvent$2;->invoke(Lf6/p;)V
@@ -92,6 +93,7 @@
 .method public final invoke(Lf6/p;)V
     .locals 6
 
+    .line 2
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
@@ -104,8 +106,10 @@
 
     const-string v3, "sec.intent.action.TRANSLATE"
 
+    .line 3
     invoke-virtual {p1, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 4
     new-instance v3, Landroid/content/ComponentName;
 
     const-string v4, "com.samsung.android.app.interpreter"
@@ -118,12 +122,14 @@
 
     const-string v3, "android.intent.extra.TEXT"
 
+    .line 5
     invoke-virtual {v0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/translate/ImageTranslateResult;->getSourceText()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 6
     iget-object v0, v1, Lkotlin/jvm/internal/z;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
@@ -132,6 +138,7 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 7
     iget-object v0, v2, Lkotlin/jvm/internal/z;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
@@ -140,6 +147,7 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 8
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/translate/ImageTranslator$handleTouchEvent$2;->this$0:Lcom/samsung/android/app/sdk/deepsky/textextraction/translate/ImageTranslator;
 
     invoke-static {p0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/translate/ImageTranslator;->access$getContext$p(Lcom/samsung/android/app/sdk/deepsky/textextraction/translate/ImageTranslator;)Landroid/content/Context;

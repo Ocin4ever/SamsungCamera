@@ -43,6 +43,7 @@
 
     const/4 v0, -0x1
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/chip/SeslExpandableContainer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -53,6 +54,7 @@
 
     const/4 v0, -0x1
 
+    .line 2
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/android/material/chip/SeslExpandableContainer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -61,20 +63,26 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     const/4 p2, 0x0
 
+    .line 4
     iput-boolean p2, p0, Lcom/google/android/material/chip/SeslExpandableContainer;->e:Z
 
     const/4 p3, 0x1
 
+    .line 5
     iput-boolean p3, p0, Lcom/google/android/material/chip/SeslExpandableContainer;->g:Z
 
+    .line 6
     iput p2, p0, Lcom/google/android/material/chip/SeslExpandableContainer;->h:I
 
+    .line 7
     iput-boolean p3, p0, Lcom/google/android/material/chip/SeslExpandableContainer;->k:Z
 
+    .line 8
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object p4
@@ -90,10 +98,12 @@
     :cond_0
     iput-boolean p2, p0, Lcom/google/android/material/chip/SeslExpandableContainer;->l:Z
 
+    .line 9
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p2
 
+    .line 10
     sget p3, Ly0/g;->u:I
 
     const/4 p4, 0x0
@@ -102,6 +112,7 @@
 
     move-result-object p2
 
+    .line 11
     sget p3, Ly0/e;->b0:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -112,8 +123,10 @@
 
     iput-object p3, p0, Lcom/google/android/material/chip/SeslExpandableContainer;->a:Landroid/widget/HorizontalScrollView;
 
+    .line 12
     invoke-virtual {p0}, Lcom/google/android/material/chip/SeslExpandableContainer;->s()V
 
+    .line 13
     sget p3, Ly0/e;->c0:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -124,6 +137,7 @@
 
     iput-object p3, p0, Lcom/google/android/material/chip/SeslExpandableContainer;->b:Landroid/widget/LinearLayout;
 
+    .line 14
     sget p3, Ly0/e;->a0:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -132,22 +146,27 @@
 
     iput-object p3, p0, Lcom/google/android/material/chip/SeslExpandableContainer;->d:Landroid/view/View;
 
+    .line 15
     invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
+    .line 16
     invoke-static {}, Landroid/view/View;->generateViewId()I
 
     move-result p2
 
     iput p2, p0, Lcom/google/android/material/chip/SeslExpandableContainer;->f:I
 
+    .line 17
     new-instance p2, Lg1/i;
 
     invoke-direct {p2, p1}, Lg1/i;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/google/android/material/chip/SeslExpandableContainer;->c:Lg1/i;
 
+    .line 18
     invoke-virtual {p0, p1}, Lcom/google/android/material/chip/SeslExpandableContainer;->k(Landroid/content/Context;)V
 
+    .line 19
     invoke-virtual {p0, p1}, Lcom/google/android/material/chip/SeslExpandableContainer;->h(Landroid/content/Context;)V
 
     return-void

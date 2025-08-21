@@ -27,10 +27,12 @@
 .method public constructor <init>(Lo1/d;Lo1/d$e;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lo1/d$d;->b:Lo1/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p2, p0, Lo1/d$d;->a:Lo1/d$e;
 
     return-void
@@ -39,6 +41,7 @@
 .method public synthetic constructor <init>(Lo1/d;Lo1/d$e;Lo1/d$a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lo1/d$d;-><init>(Lo1/d;Lo1/d$e;)V
 
     return-void

@@ -49,6 +49,7 @@
 .method public bridge synthetic deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/samsung/android/apex/motionphoto/model/CaptureEventListSerializer;->deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/util/List;
 
     move-result-object p0
@@ -73,6 +74,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     sget-object p0, Lcom/samsung/android/apex/motionphoto/model/CaptureEventSerializer;->INSTANCE:Lcom/samsung/android/apex/motionphoto/model/CaptureEventSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;
@@ -111,6 +113,7 @@
 .method public bridge synthetic serialize(Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p2, Ljava/util/List;
 
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/apex/motionphoto/model/CaptureEventListSerializer;->serialize(Lkotlinx/serialization/encoding/Encoder;Ljava/util/List;)V
@@ -139,6 +142,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     sget-object p0, Lcom/samsung/android/apex/motionphoto/model/CaptureEventSerializer;->INSTANCE:Lcom/samsung/android/apex/motionphoto/model/CaptureEventSerializer;
 
     check-cast p0, Lkotlinx/serialization/KSerializer;

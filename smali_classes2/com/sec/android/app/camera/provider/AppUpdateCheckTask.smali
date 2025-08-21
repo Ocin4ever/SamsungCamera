@@ -703,12 +703,15 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/provider/AppUpdateCheckTask;->getUpdateCheckResult(I)I
 
     move-result v0
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/provider/AppUpdateCheckTask;->processUpdateCheckResult(I)V
 
+    .line 4
     iget-object p0, p0, Lcom/sec/android/app/camera/provider/AppUpdateCheckTask;->mPackageName:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -725,6 +728,7 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/provider/AppUpdateCheckTask;->call()Landroid/util/Pair;
 
     move-result-object p0

@@ -825,39 +825,47 @@
 .method private tintDrawable(Landroid/content/Context;IZLandroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/ResourceManagerInternal;->getTintList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-static {p4}, Landroidx/appcompat/widget/DrawableUtils;->canSafelyMutateDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {p4}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object p4
 
+    .line 4
     :cond_0
     invoke-static {p4}, Landroidx/core/graphics/drawable/DrawableCompat;->wrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p4
 
+    .line 5
     invoke-static {p4, v0}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
+    .line 6
     invoke-virtual {p0, p2}, Landroidx/appcompat/widget/ResourceManagerInternal;->getTintMode(I)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
+    .line 7
     invoke-static {p4, p0}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintMode(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     goto :goto_0
 
+    .line 8
     :cond_1
     iget-object v0, p0, Landroidx/appcompat/widget/ResourceManagerInternal;->mHooks:Landroidx/appcompat/widget/ResourceManagerInternal$ResourceManagerHooks;
 
@@ -871,6 +879,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_2
     invoke-virtual {p0, p1, p2, p4}, Landroidx/appcompat/widget/ResourceManagerInternal;->tintDrawableUsingColorFilter(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
 
@@ -890,10 +899,12 @@
 .method public static tintDrawable(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/TintInfo;[I)V
     .locals 3
 
+    .line 10
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object v0
 
+    .line 11
     invoke-static {p0}, Landroidx/appcompat/widget/DrawableUtils;->canSafelyMutateDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v1
@@ -902,6 +913,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 12
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -922,10 +934,12 @@
 
     const-string p1, "Mutated drawable is not the same instance as the input."
 
+    .line 13
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 14
     :cond_1
     instance-of v1, p0, Landroid/graphics/drawable/LayerDrawable;
 
@@ -939,10 +953,13 @@
 
     new-array v1, v2, [I
 
+    .line 15
     invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
+    .line 16
     invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
+    .line 17
     :cond_2
     iget-boolean v0, p1, Landroidx/appcompat/widget/TintInfo;->mHasTintList:Z
 
@@ -954,6 +971,7 @@
 
     goto :goto_1
 
+    .line 18
     :cond_3
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->clearColorFilter()V
 
@@ -963,6 +981,7 @@
     :goto_1
     if-eqz v0, :cond_5
 
+    .line 19
     iget-object v0, p1, Landroidx/appcompat/widget/TintInfo;->mTintList:Landroid/content/res/ColorStateList;
 
     goto :goto_2
@@ -970,6 +989,7 @@
     :cond_5
     const/4 v0, 0x0
 
+    .line 20
     :goto_2
     iget-boolean v1, p1, Landroidx/appcompat/widget/TintInfo;->mHasTintMode:Z
 
@@ -982,6 +1002,7 @@
     :cond_6
     sget-object p1, Landroidx/appcompat/widget/ResourceManagerInternal;->DEFAULT_MODE:Landroid/graphics/PorterDuff$Mode;
 
+    .line 21
     :goto_3
     invoke-static {v0, p1, p2}, Landroidx/appcompat/widget/ResourceManagerInternal;->createTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;[I)Landroid/graphics/PorterDuffColorFilter;
 
@@ -1002,6 +1023,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1, p2, v0}, Landroidx/appcompat/widget/ResourceManagerInternal;->getDrawable(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
 
@@ -1026,15 +1048,18 @@
 
     monitor-enter p0
 
+    .line 2
     :try_start_0
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/ResourceManagerInternal;->checkVectorDrawableSetup(Landroid/content/Context;)V
 
+    .line 3
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/ResourceManagerInternal;->loadDrawableFromDelegates(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 4
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/ResourceManagerInternal;->createDrawableIfNeeded(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -1042,6 +1067,7 @@
     :cond_0
     if-nez v0, :cond_1
 
+    .line 5
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -1049,6 +1075,7 @@
     :cond_1
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/appcompat/widget/ResourceManagerInternal;->tintDrawable(Landroid/content/Context;IZLandroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -1056,10 +1083,12 @@
     :cond_2
     if-eqz v0, :cond_3
 
+    .line 7
     invoke-static {v0}, Landroidx/appcompat/widget/DrawableUtils;->fixDrawable(Landroid/graphics/drawable/Drawable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     :cond_3
     monitor-exit p0
 

@@ -39,20 +39,27 @@
         }
     .end annotation
 
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 11
     iput p1, p0, Lcom/samsung/android/qrengine/EngineSetting;->imageWidth:I
 
+    .line 12
     iput p2, p0, Lcom/samsung/android/qrengine/EngineSetting;->imageHeight:I
 
+    .line 13
     iput p3, p0, Lcom/samsung/android/qrengine/EngineSetting;->strideWidth:I
 
+    .line 14
     iput p4, p0, Lcom/samsung/android/qrengine/EngineSetting;->strideHeight:I
 
+    .line 15
     iput-object p5, p0, Lcom/samsung/android/qrengine/EngineSetting;->scanArea:[I
 
     if-eqz p6, :cond_0
 
+    .line 16
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1, p6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
@@ -61,6 +68,7 @@
 
     goto :goto_0
 
+    .line 17
     :cond_0
     new-instance p1, Ljava/util/ArrayList;
 
@@ -68,10 +76,12 @@
 
     iput-object p1, p0, Lcom/samsung/android/qrengine/EngineSetting;->supportedSymbologyTypes:Ljava/util/List;
 
+    .line 18
     sget-object p2, Lcom/samsung/android/qrengine/Symbology;->QR:Lcom/samsung/android/qrengine/Symbology;
 
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 19
     :goto_0
     iput-boolean p7, p0, Lcom/samsung/android/qrengine/EngineSetting;->trackingMode:Z
 
@@ -81,24 +91,30 @@
 .method public constructor <init>(Lcom/samsung/android/qrengine/EngineSetting;)V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iget v0, p1, Lcom/samsung/android/qrengine/EngineSetting;->imageWidth:I
 
     iput v0, p0, Lcom/samsung/android/qrengine/EngineSetting;->imageWidth:I
 
+    .line 3
     iget v0, p1, Lcom/samsung/android/qrengine/EngineSetting;->imageHeight:I
 
     iput v0, p0, Lcom/samsung/android/qrengine/EngineSetting;->imageHeight:I
 
+    .line 4
     iget v0, p1, Lcom/samsung/android/qrengine/EngineSetting;->strideWidth:I
 
     iput v0, p0, Lcom/samsung/android/qrengine/EngineSetting;->strideWidth:I
 
+    .line 5
     iget v0, p1, Lcom/samsung/android/qrengine/EngineSetting;->strideHeight:I
 
     iput v0, p0, Lcom/samsung/android/qrengine/EngineSetting;->strideHeight:I
 
+    .line 6
     iget-boolean v0, p1, Lcom/samsung/android/qrengine/EngineSetting;->trackingMode:Z
 
     iput-boolean v0, p0, Lcom/samsung/android/qrengine/EngineSetting;->trackingMode:Z
@@ -107,8 +123,10 @@
 
     new-array v0, v0, [I
 
+    .line 7
     iput-object v0, p0, Lcom/samsung/android/qrengine/EngineSetting;->scanArea:[I
 
+    .line 8
     iget-object v1, p1, Lcom/samsung/android/qrengine/EngineSetting;->scanArea:[I
 
     array-length v2, v1
@@ -117,6 +135,7 @@
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 9
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object p1, p1, Lcom/samsung/android/qrengine/EngineSetting;->supportedSymbologyTypes:Ljava/util/List;

@@ -85,6 +85,7 @@
 .method public static allocate(Ljava/lang/String;Landroidx/constraintlayout/core/parser/CLElement;)Landroidx/constraintlayout/core/parser/CLElement;
     .locals 3
 
+    .line 2
     new-instance v0, Landroidx/constraintlayout/core/parser/CLKey;
 
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
@@ -95,8 +96,10 @@
 
     const-wide/16 v1, 0x0
 
+    .line 3
     invoke-virtual {v0, v1, v2}, Landroidx/constraintlayout/core/parser/CLElement;->setStart(J)V
 
+    .line 4
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -107,6 +110,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/constraintlayout/core/parser/CLElement;->setEnd(J)V
 
+    .line 5
     invoke-virtual {v0, p1}, Landroidx/constraintlayout/core/parser/CLKey;->set(Landroidx/constraintlayout/core/parser/CLElement;)V
 
     return-object v0
@@ -115,6 +119,7 @@
 .method public static allocate([C)Landroidx/constraintlayout/core/parser/CLElement;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/parser/CLKey;
 
     invoke-direct {v0, p0}, Landroidx/constraintlayout/core/parser/CLKey;-><init>([C)V

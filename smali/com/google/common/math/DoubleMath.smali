@@ -309,6 +309,7 @@
 .method public static log2(D)D
     .locals 2
 
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->log(D)D
 
     move-result-wide p0
@@ -333,6 +334,7 @@
 
     if-lez v0, :cond_0
 
+    .line 2
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->isFinite(D)Z
 
     move-result v0
@@ -351,10 +353,12 @@
 
     invoke-static {v0, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 3
     invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
 
     move-result v0
 
+    .line 4
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->isNormal(D)Z
 
     move-result v3
@@ -365,6 +369,7 @@
 
     mul-double/2addr p0, v0
 
+    .line 5
     invoke-static {p0, p1, p2}, Lcom/google/common/math/DoubleMath;->log2(DLjava/math/RoundingMode;)I
 
     move-result p0
@@ -373,6 +378,7 @@
 
     return p0
 
+    .line 6
     :cond_1
     sget-object v3, Lcom/google/common/math/DoubleMath$1;->$SwitchMap$java$math$RoundingMode:[I
 
@@ -384,12 +390,14 @@
 
     packed-switch p2, :pswitch_data_0
 
+    .line 7
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
 
     throw p0
 
+    .line 8
     :pswitch_0
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->scaleNormalize(D)D
 
@@ -412,6 +420,7 @@
 
     move v1, v2
 
+    .line 9
     :cond_2
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleMath;->isPowerOfTwo(D)Z
 
@@ -424,6 +433,7 @@
 
     move v1, v2
 
+    .line 10
     :cond_3
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleMath;->isPowerOfTwo(D)Z
 
@@ -436,6 +446,7 @@
 
     goto :goto_2
 
+    .line 11
     :pswitch_3
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleMath;->isPowerOfTwo(D)Z
 
@@ -445,6 +456,7 @@
 
     goto :goto_2
 
+    .line 12
     :pswitch_4
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleMath;->isPowerOfTwo(D)Z
 
@@ -492,6 +504,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 14
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -518,6 +531,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 15
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -526,6 +540,7 @@
 
     invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 16
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -544,6 +559,7 @@
 
     move-wide v4, v2
 
+    .line 17
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -551,6 +567,7 @@
 
     if-eqz v6, :cond_0
 
+    .line 18
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v6
@@ -586,6 +603,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -606,6 +624,7 @@
 
     invoke-static {v0, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 2
     aget-wide v0, p0, v1
 
     invoke-static {v0, v1}, Lcom/google/common/math/DoubleMath;->checkFinite(D)D
@@ -616,17 +635,20 @@
 
     move-wide v5, v3
 
+    .line 3
     :goto_1
     array-length v7, p0
 
     if-ge v2, v7, :cond_1
 
+    .line 4
     aget-wide v7, p0, v2
 
     invoke-static {v7, v8}, Lcom/google/common/math/DoubleMath;->checkFinite(D)D
 
     add-long/2addr v5, v3
 
+    .line 5
     aget-wide v7, p0, v2
 
     sub-double/2addr v7, v0
@@ -650,6 +672,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 6
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -670,11 +693,13 @@
 
     const-wide/16 v2, 0x0
 
+    .line 7
     :goto_1
     array-length v0, p0
 
     if-ge v1, v0, :cond_1
 
+    .line 8
     aget v0, p0, v1
 
     int-to-long v4, v0
@@ -688,6 +713,7 @@
     :cond_1
     long-to-double v0, v2
 
+    .line 9
     array-length p0, p0
 
     int-to-double v2, p0
@@ -702,6 +728,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 10
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -722,6 +749,7 @@
 
     invoke-static {v0, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 11
     aget-wide v0, p0, v1
 
     long-to-double v0, v0
@@ -730,6 +758,7 @@
 
     move-wide v5, v3
 
+    .line 12
     :goto_1
     array-length v7, p0
 
@@ -737,6 +766,7 @@
 
     add-long/2addr v5, v3
 
+    .line 13
     aget-wide v7, p0, v2
 
     long-to-double v7, v7

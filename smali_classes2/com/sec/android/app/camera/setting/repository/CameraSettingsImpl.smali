@@ -640,6 +640,7 @@
 .method private getValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
     .locals 2
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getOverriddenSettingValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
 
     move-result v0
@@ -648,12 +649,14 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getOverriddenSettingValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->mCurrentCameraSettings:Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;
 
@@ -667,6 +670,7 @@
 .method private getValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
     .locals 1
 
+    .line 6
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getCameraFacing()I
 
     move-result v0
@@ -678,6 +682,7 @@
     :cond_0
     move-object p1, p2
 
+    .line 7
     :goto_0
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
 
@@ -689,6 +694,7 @@
 .method private getValue(Ljava/util/function/IntSupplier;Ljava/util/function/IntSupplier;)I
     .locals 0
 
+    .line 4
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getCameraFacing()I
 
     move-result p0
@@ -700,6 +706,7 @@
     :cond_0
     move-object p1, p2
 
+    .line 5
     :goto_0
     invoke-interface {p1}, Ljava/util/function/IntSupplier;->getAsInt()I
 
@@ -1807,6 +1814,7 @@
 .method private setValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->mCurrentCameraSettings:Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;
 
     invoke-virtual {p0, p1, p2}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->setValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;I)V
@@ -1817,6 +1825,7 @@
 .method private setValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;I)V
     .locals 1
 
+    .line 4
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getCameraFacing()I
 
     move-result v0
@@ -1828,6 +1837,7 @@
     :cond_0
     move-object p1, p2
 
+    .line 5
     :goto_0
     invoke-direct {p0, p1, p3}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->setValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;I)V
 
@@ -1837,6 +1847,7 @@
 .method private setValue(Ljava/util/function/IntConsumer;Ljava/util/function/IntConsumer;I)V
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getCameraFacing()I
 
     move-result p0
@@ -1848,6 +1859,7 @@
     :cond_0
     move-object p1, p2
 
+    .line 3
     :goto_0
     invoke-interface {p1, p3}, Ljava/util/function/IntConsumer;->accept(I)V
 
@@ -3083,6 +3095,7 @@
 .method public getCamcorderResolution()I
     .locals 1
 
+    .line 6
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getCameraId()I
 
     move-result v0
@@ -3097,6 +3110,7 @@
 .method public getCamcorderResolution(I)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getCameraFacing(I)I
 
     move-result v0
@@ -3107,12 +3121,14 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getFrontCamcorderResolution()I
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -3132,12 +3148,14 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw p0
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getBackCamcorderResolution()I
 
@@ -3149,6 +3167,7 @@
 .method public getCameraFacing()I
     .locals 2
 
+    .line 4
     iget v0, p0, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->mFacing:I
 
     const/high16 v1, -0x80000000
@@ -3157,6 +3176,7 @@
 
     return v0
 
+    .line 5
     :cond_0
     sget-object v0, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->FACING:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
@@ -3186,6 +3206,7 @@
 
     packed-switch p1, :pswitch_data_2
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3204,6 +3225,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
@@ -3213,6 +3235,7 @@
     :pswitch_0
     const/16 p1, 0xcd
 
+    .line 3
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/request/CameraId;->getMainCameraId(I)I
 
     move-result p1
@@ -3310,6 +3333,7 @@
 .method public getCameraResolution()I
     .locals 1
 
+    .line 5
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getCameraId()I
 
     move-result v0
@@ -3324,6 +3348,7 @@
 .method public getCameraResolution(I)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getCameraFacing(I)I
 
     move-result v0
@@ -3332,6 +3357,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getFrontCameraResolution()I
 
     move-result p0
@@ -3343,6 +3369,7 @@
 
     if-ne p1, v0, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getBackCameraResolution()I
 
     move-result p0
@@ -3361,6 +3388,7 @@
 
     return p0
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->getBackCameraResolution()I
 
@@ -6399,6 +6427,7 @@
 .method public registerDimChangedListener(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Lcom/sec/android/app/camera/interfaces/CameraSettings$DimChangedListener;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->mDimController:Lcom/sec/android/app/camera/setting/repository/DimController;
 
     invoke-virtual {p0, p1, p2}, Lcom/sec/android/app/camera/setting/repository/DimController;->registerDimChangedListener(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Lcom/sec/android/app/camera/interfaces/CameraSettings$DimChangedListener;)V
@@ -6409,6 +6438,7 @@
 .method public registerDimChangedListener(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Lcom/sec/android/app/camera/interfaces/CameraSettings$DimChangedListener;Z)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/setting/repository/CameraSettingsImpl;->mDimController:Lcom/sec/android/app/camera/setting/repository/DimController;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/sec/android/app/camera/setting/repository/DimController;->registerDimChangedListener(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Lcom/sec/android/app/camera/interfaces/CameraSettings$DimChangedListener;Z)V

@@ -36,6 +36,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Landroidx/databinding/BaseObservableField;-><init>()V
 
     return-void
@@ -49,8 +50,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroidx/databinding/BaseObservableField;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/databinding/ObservableField;->mValue:Ljava/lang/Object;
 
     return-void
@@ -59,6 +62,7 @@
 .method public varargs constructor <init>([Landroidx/databinding/Observable;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1}, Landroidx/databinding/BaseObservableField;-><init>([Landroidx/databinding/Observable;)V
 
     return-void

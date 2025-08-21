@@ -113,6 +113,7 @@
 .method public a([B)I
     .locals 11
 
+    .line 1
     iput-object p1, p0, Lco/polarr/mgcsc/f/h/i;->d:[B
 
     iget-object p1, p0, Lco/polarr/mgcsc/f/h/i;->m:Ljava/util/ArrayList;
@@ -256,6 +257,7 @@
 .method public a()V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lco/polarr/mgcsc/f/h/i;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -305,6 +307,7 @@
 .method public a(F)V
     .locals 0
 
+    .line 3
     iput p1, p0, Lco/polarr/mgcsc/f/h/i;->f:F
 
     return-void
@@ -313,6 +316,7 @@
 .method public a(I)V
     .locals 0
 
+    .line 4
     iput p1, p0, Lco/polarr/mgcsc/f/h/i;->h:I
 
     return-void
@@ -321,6 +325,7 @@
 .method public a(III)V
     .locals 1
 
+    .line 5
     new-instance v0, Landroid/util/Size;
 
     invoke-direct {v0, p1, p2}, Landroid/util/Size;-><init>(II)V
@@ -341,6 +346,7 @@
 .method public a(Landroid/graphics/PointF;)V
     .locals 2
 
+    .line 6
     iget-object v0, p0, Lco/polarr/mgcsc/f/h/i;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -404,6 +410,7 @@
 .method public a(Landroid/graphics/Point;)Z
     .locals 2
 
+    .line 7
     iget v0, p0, Lco/polarr/mgcsc/f/h/i;->i:I
 
     int-to-float v1, v0
@@ -452,6 +459,7 @@
 .method public b()Landroid/graphics/Point;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lco/polarr/mgcsc/f/h/i;->l:Landroid/graphics/Point;
 
     return-object p0
@@ -460,6 +468,7 @@
 .method public b(F)V
     .locals 0
 
+    .line 2
     iput p1, p0, Lco/polarr/mgcsc/f/h/i;->k:F
 
     return-void
@@ -468,6 +477,7 @@
 .method public b(I)V
     .locals 0
 
+    .line 3
     iput p1, p0, Lco/polarr/mgcsc/f/h/i;->e:I
 
     return-void
@@ -476,6 +486,7 @@
 .method public c()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lco/polarr/mgcsc/f/h/i;->a:Lco/polarr/cv/feature/CGSceneSimilarity;
 
     iget v1, p0, Lco/polarr/mgcsc/f/h/i;->i:I
@@ -498,6 +509,7 @@
 .method public c(I)V
     .locals 1
 
+    .line 2
     iget v0, p0, Lco/polarr/mgcsc/f/h/i;->j:I
 
     if-eq p1, v0, :cond_0

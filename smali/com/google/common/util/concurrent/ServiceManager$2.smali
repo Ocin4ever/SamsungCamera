@@ -40,6 +40,7 @@
 .method public call(Lcom/google/common/util/concurrent/ServiceManager$Listener;)V
     .locals 0
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/common/util/concurrent/ServiceManager$Listener;->stopped()V
 
     return-void
@@ -48,6 +49,7 @@
 .method public bridge synthetic call(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/util/concurrent/ServiceManager$Listener;
 
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/ServiceManager$2;->call(Lcom/google/common/util/concurrent/ServiceManager$Listener;)V

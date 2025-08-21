@@ -56,16 +56,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;->mRecordingManager:Lcom/sec/android/app/camera/interfaces/RecordingManager;
 
+    .line 3
     sget-object p1, Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;->VIEW_CLICK:Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;->mRecordingInputType:Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;
 
+    .line 4
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -76,6 +80,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;->mDimScreenHandler:Landroid/os/Handler;
 
+    .line 5
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter$2;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter$2;-><init>(Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;)V
@@ -96,16 +101,20 @@
         }
     .end annotation
 
+    .line 6
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
     const/4 p2, 0x0
 
+    .line 7
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;->mRecordingManager:Lcom/sec/android/app/camera/interfaces/RecordingManager;
 
+    .line 8
     sget-object p2, Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;->VIEW_CLICK:Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;->mRecordingInputType:Lcom/sec/android/app/camera/interfaces/CameraContext$InputType;
 
+    .line 9
     new-instance p2, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -116,12 +125,14 @@
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;->mDimScreenHandler:Landroid/os/Handler;
 
+    .line 10
     new-instance p2, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter$2;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter$2;-><init>(Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;)V
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;->mLocalBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 11
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/Engine;->getRecordingManager()Lcom/sec/android/app/camera/interfaces/RecordingManager;
 
     move-result-object p1
@@ -2765,6 +2776,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;->startRecording(Z)Z
 
     move-result p0
@@ -2775,6 +2787,7 @@
 .method public startRecording(Z)Z
     .locals 1
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getLayerManager()Lcom/sec/android/app/camera/interfaces/LayerManager;
@@ -2787,10 +2800,12 @@
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/PopupLayerManager;->hideAllPopup()V
 
+    .line 3
     sget-object v0, Lcom/sec/android/app/camera/interfaces/KeyScreenLayerManager$CenterButtonState;->STARTING:Lcom/sec/android/app/camera/interfaces/KeyScreenLayerManager$CenterButtonState;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;->setCenterButtonStateForRecording(Lcom/sec/android/app/camera/interfaces/KeyScreenLayerManager$CenterButtonState;)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->getZoomManager()Lcom/sec/android/app/camera/interfaces/ZoomManager;
 
     move-result-object v0
@@ -2799,6 +2814,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->getZoomManager()Lcom/sec/android/app/camera/interfaces/ZoomManager;
 
     move-result-object p1
@@ -2807,6 +2823,7 @@
 
     invoke-interface {p1, v0}, Lcom/sec/android/app/camera/interfaces/ZoomManager;->setZoomPositionType(Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomPositionType;)V
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->getZoomManager()Lcom/sec/android/app/camera/interfaces/ZoomManager;
 
@@ -2816,18 +2833,22 @@
 
     invoke-interface {p1, v0}, Lcom/sec/android/app/camera/interfaces/ZoomManager;->setZoomSliderMagneticEffectEnabled(Z)V
 
+    .line 7
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mView:Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;
 
     check-cast p1, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;
 
     invoke-interface {p1}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModeContract$View;->updateStartRecordingLayout()V
 
+    .line 8
     iget-object p1, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;->mRecordingManager:Lcom/sec/android/app/camera/interfaces/RecordingManager;
 
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/RecordingManager;->startVideoRecording()V
 
+    .line 9
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;->restartDimScreenTimer()V
 
+    .line 10
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractRecordingModePresenter;->showAeAfLockedIndicator()V
 
     const/4 p0, 0x1

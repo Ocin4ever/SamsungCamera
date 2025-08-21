@@ -57,6 +57,7 @@
 .method public final invoke(La7/f;Li6/d;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lb7/f$a;->create(Ljava/lang/Object;Li6/d;)Li6/d;
 
     move-result-object p0
@@ -75,6 +76,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     check-cast p1, La7/f;
 
     check-cast p2, Li6/d;

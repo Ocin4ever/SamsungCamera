@@ -53,8 +53,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/GridLayout;-><init>(Landroid/content/Context;)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -67,6 +69,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_ROWS_NORMAL_RATIO:I
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -79,6 +82,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_COLS_NORMAL_RATIO:I
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -91,6 +95,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_ROWS_SQUARE_RATIO:I
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -103,6 +108,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_COLS_SQUARE_RATIO:I
 
+    .line 6
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -115,6 +121,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_ROWS_WIDE_RATIO:I
 
+    .line 7
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -127,6 +134,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_COLS_WIDE_RATIO:I
 
+    .line 8
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -139,6 +147,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_ROWS_FULL_RATIO:I
 
+    .line 9
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -151,6 +160,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_COLS_FULL_RATIO:I
 
+    .line 10
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -163,6 +173,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_VISIBLE_COLS:I
 
+    .line 11
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -175,6 +186,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_VISIBLE_ROWS:I
 
+    .line 12
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -187,6 +199,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->SENSOR_FRAME_WIDTH:I
 
+    .line 13
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -199,6 +212,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->SENSOR_FRAME_HEIGHT:I
 
+    .line 14
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -211,6 +225,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->SENSOR_FRAME_LEFT_OFFSET:I
 
+    .line 15
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -223,6 +238,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->SENSOR_FRAME_TOP_OFFSET:I
 
+    .line 16
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -243,8 +259,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 17
     invoke-direct {p0, p1, p2}, Landroid/widget/GridLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 18
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -257,6 +275,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_ROWS_NORMAL_RATIO:I
 
+    .line 19
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -269,6 +288,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_COLS_NORMAL_RATIO:I
 
+    .line 20
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -281,6 +301,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_ROWS_SQUARE_RATIO:I
 
+    .line 21
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -293,6 +314,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_COLS_SQUARE_RATIO:I
 
+    .line 22
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -305,6 +327,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_ROWS_WIDE_RATIO:I
 
+    .line 23
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -317,6 +340,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_COLS_WIDE_RATIO:I
 
+    .line 24
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -329,6 +353,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_ROWS_FULL_RATIO:I
 
+    .line 25
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -341,6 +366,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_COLS_FULL_RATIO:I
 
+    .line 26
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -353,6 +379,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_VISIBLE_COLS:I
 
+    .line 27
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -365,6 +392,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->NUM_OF_VISIBLE_ROWS:I
 
+    .line 28
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -377,6 +405,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->SENSOR_FRAME_WIDTH:I
 
+    .line 29
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -389,6 +418,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->SENSOR_FRAME_HEIGHT:I
 
+    .line 30
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -401,6 +431,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->SENSOR_FRAME_LEFT_OFFSET:I
 
+    .line 31
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -413,6 +444,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/MultiAfView;->SENSOR_FRAME_TOP_OFFSET:I
 
+    .line 32
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1

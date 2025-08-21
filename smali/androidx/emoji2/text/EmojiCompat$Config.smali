@@ -155,6 +155,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Landroidx/emoji2/text/EmojiCompat$Config;->setUseEmojiAsDefaultStyle(ZLjava/util/List;)Landroidx/emoji2/text/EmojiCompat$Config;
 
     move-result-object p0
@@ -174,12 +175,14 @@
         }
     .end annotation
 
+    .line 2
     iput-boolean p1, p0, Landroidx/emoji2/text/EmojiCompat$Config;->mUseEmojiAsDefaultStyle:Z
 
     if-eqz p1, :cond_1
 
     if-eqz p2, :cond_1
 
+    .line 3
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result p1
@@ -188,6 +191,7 @@
 
     iput-object p1, p0, Landroidx/emoji2/text/EmojiCompat$Config;->mEmojiAsDefaultStyleExceptions:[I
 
+    .line 4
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -207,6 +211,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
+    .line 5
     iget-object v1, p0, Landroidx/emoji2/text/EmojiCompat$Config;->mEmojiAsDefaultStyleExceptions:[I
 
     add-int/lit8 v2, p2, 0x1
@@ -221,6 +226,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iget-object p1, p0, Landroidx/emoji2/text/EmojiCompat$Config;->mEmojiAsDefaultStyleExceptions:[I
 
@@ -231,6 +237,7 @@
     :cond_1
     const/4 p1, 0x0
 
+    .line 7
     iput-object p1, p0, Landroidx/emoji2/text/EmojiCompat$Config;->mEmojiAsDefaultStyleExceptions:[I
 
     :goto_1

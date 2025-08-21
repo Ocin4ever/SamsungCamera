@@ -563,17 +563,21 @@
 .method public setImageSize(II)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/samsung/android/qrengine/ScannerEngine;->barcodeInstance:Lcom/samsung/android/qrengine/QRBarcodeDecoder;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p1, p2}, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->setImageSize(II)Z
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/qrengine/ScannerEngine;->engineSetting:Lcom/samsung/android/qrengine/EngineSetting;
 
     if-eqz p0, :cond_1
 
+    .line 4
     invoke-virtual {p0, p1, p2, p1, p2}, Lcom/samsung/android/qrengine/EngineSetting;->setImageSize(IIII)V
 
     :cond_1
@@ -583,17 +587,21 @@
 .method public setImageSize(IIII)V
     .locals 1
 
+    .line 5
     iget-object v0, p0, Lcom/samsung/android/qrengine/ScannerEngine;->barcodeInstance:Lcom/samsung/android/qrengine/QRBarcodeDecoder;
 
     if-eqz v0, :cond_0
 
+    .line 6
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/samsung/android/qrengine/QRBarcodeDecoder;->setImageSize(IIII)Z
 
+    .line 7
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/qrengine/ScannerEngine;->engineSetting:Lcom/samsung/android/qrengine/EngineSetting;
 
     if-eqz p0, :cond_1
 
+    .line 8
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/samsung/android/qrengine/EngineSetting;->setImageSize(IIII)V
 
     :cond_1

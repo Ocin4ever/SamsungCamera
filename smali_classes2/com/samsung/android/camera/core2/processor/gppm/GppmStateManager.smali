@@ -425,12 +425,14 @@
 
     const-string v0, "requestPermission X"
 
+    .line 1
     sget-object v1, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const-string v2, "requestPermission E"
 
     invoke-static {v1, v2}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 2
     :try_start_0
     sget-object v2, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager;->mGppmProvider:Lcom/samsung/android/sdk/globalpostprocmgr/GPPProviderInterface;
 
@@ -444,10 +446,12 @@
 
     if-eqz v3, :cond_0
 
+    .line 3
     invoke-static {v1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
     return v4
 
+    .line 4
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -462,10 +466,12 @@
 
     const-string p0, "requestPermission : success to get permission"
 
+    .line 5
     invoke-static {v1, p0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 6
     invoke-static {v1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
     const/4 p0, 0x1
@@ -476,10 +482,12 @@
     :try_start_2
     const-string p0, "requestPermission : fail to get permission"
 
+    .line 7
     invoke-static {v1, p0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 8
     invoke-static {v1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
     return v4
@@ -491,6 +499,7 @@
 
     invoke-static {v1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 9
     throw p0
 .end method
 
@@ -499,12 +508,14 @@
 
     const-string v0, "requestPermission X"
 
+    .line 10
     sget-object v1, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const-string v2, "requestPermission E"
 
     invoke-static {v1, v2}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 11
     :try_start_0
     sget-object v2, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager;->mGppmProvider:Lcom/samsung/android/sdk/globalpostprocmgr/GPPProviderInterface;
 
@@ -518,10 +529,12 @@
 
     if-eqz v3, :cond_0
 
+    .line 12
     invoke-static {v1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
     return v4
 
+    .line 13
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -536,10 +549,12 @@
 
     const-string p0, "requestPermission : success to get permission"
 
+    .line 14
     invoke-static {v1, p0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 15
     invoke-static {v1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
     const/4 p0, 0x1
@@ -550,10 +565,12 @@
     :try_start_2
     const-string p0, "requestPermission : fail to get permission"
 
+    .line 16
     invoke-static {v1, p0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 17
     invoke-static {v1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
     return v4
@@ -565,6 +582,7 @@
 
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 18
     throw p0
 .end method
 
@@ -629,12 +647,14 @@
 
     const-string v0, "updateStateTo X"
 
+    .line 1
     sget-object v1, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const-string v2, "updateStateTo E"
 
     invoke-static {v1, v2}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 2
     :try_start_0
     sget-object v2, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager;->mGppmProvider:Lcom/samsung/android/sdk/globalpostprocmgr/GPPProviderInterface;
 
@@ -646,12 +666,14 @@
 
     if-eqz v3, :cond_0
 
+    .line 3
     invoke-static {v1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     return p0
 
+    .line 4
     :cond_0
     :try_start_1
     new-instance v3, Ljava/lang/StringBuilder;
@@ -688,10 +710,12 @@
 
     invoke-static {v1, v2}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {p1, p0}, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager$GppmState;->updateState(Landroid/content/Context;)Z
 
     move-result p0
 
+    .line 6
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -716,6 +740,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 7
     invoke-static {v1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
     return p0
@@ -727,6 +752,7 @@
 
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 8
     throw p0
 .end method
 
@@ -735,12 +761,14 @@
 
     const-string v0, "updateStateTo X"
 
+    .line 9
     sget-object v1, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const-string v2, "updateStateTo E"
 
     invoke-static {v1, v2}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 10
     :try_start_0
     sget-object v2, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager;->mGppmProvider:Lcom/samsung/android/sdk/globalpostprocmgr/GPPProviderInterface;
 
@@ -752,12 +780,14 @@
 
     if-eqz v3, :cond_0
 
+    .line 11
     invoke-static {v1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     return p0
 
+    .line 12
     :cond_0
     :try_start_1
     new-instance v3, Ljava/lang/StringBuilder;
@@ -794,10 +824,12 @@
 
     invoke-static {v1, v2}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 13
     invoke-virtual {p1, p0, p2}, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager$GppmState;->updateState(Landroid/content/Context;Landroid/os/Bundle;)Z
 
     move-result p0
 
+    .line 14
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -822,6 +854,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 15
     invoke-static {v1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
     return p0
@@ -833,6 +866,7 @@
 
     invoke-static {p1, v0}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 16
     throw p0
 .end method
 

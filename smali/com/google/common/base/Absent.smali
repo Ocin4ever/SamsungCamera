@@ -158,6 +158,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -177,12 +178,14 @@
         }
     .end annotation
 
+    .line 3
     invoke-interface {p1}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;
 
     move-result-object p0
 
     const-string p1, "use Optional.orNull() instead of a Supplier that returns null"
 
+    .line 4
     invoke-static {p0, p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -200,6 +203,7 @@
 
     const-string p0, "use Optional.orNull() instead of Optional.or(null)"
 
+    .line 1
     invoke-static {p1, p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

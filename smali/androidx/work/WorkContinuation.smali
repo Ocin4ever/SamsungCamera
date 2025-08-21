@@ -83,6 +83,7 @@
 .method public final then(Landroidx/work/OneTimeWorkRequest;)Landroidx/work/WorkContinuation;
     .locals 0
 
+    .line 1
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1

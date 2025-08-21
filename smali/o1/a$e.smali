@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Lo1/a$d;-><init>(Lo1/a$a;)V
 
     return-void
@@ -28,6 +29,7 @@
 .method public synthetic constructor <init>(Lo1/a$a;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lo1/a$e;-><init>()V
 
     return-void

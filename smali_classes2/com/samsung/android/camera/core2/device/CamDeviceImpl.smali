@@ -164,8 +164,10 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/google/ar/core/Session;Lcom/google/ar/core/SharedCamera;Lcom/samsung/android/camera/core2/CamDevice$StateCallback;Lcom/samsung/android/camera/core2/CamCapability;Landroid/os/Handler;Ljava/lang/String;)V
     .locals 4
 
+    .line 7
     invoke-direct {p0}, Lcom/samsung/android/camera/core2/CamDevice;-><init>()V
 
+    .line 8
     new-instance v0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl$CameraDeviceStateCallbacks;
 
     const/4 v1, 0x0
@@ -174,124 +176,145 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->g:Landroid/hardware/camera2/CameraDevice$StateCallback;
 
+    .line 9
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->p:Ljava/util/Map;
 
+    .line 10
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->q:Ljava/util/Map;
 
+    .line 11
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->r:Ljava/util/Map;
 
+    .line 12
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->s:Ljava/util/Map;
 
+    .line 13
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->t:Ljava/util/Map;
 
+    .line 14
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->u:Ljava/util/Map;
 
+    .line 15
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->v:Ljava/util/Map;
 
+    .line 16
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->w:Ljava/util/Map;
 
+    .line 17
     new-instance v0, Ljava/util/concurrent/ConcurrentSkipListMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentSkipListMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->x:Ljava/util/concurrent/ConcurrentNavigableMap;
 
+    .line 18
     new-instance v0, Lcom/samsung/android/camera/core2/device/CamDeviceRepeatingStateStopped;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/camera/core2/device/CamDeviceRepeatingStateStopped;-><init>(Lcom/samsung/android/camera/core2/device/CamDeviceImpl;)V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->y:Lcom/samsung/android/camera/core2/CamDeviceRepeatingState;
 
+    .line 19
     new-instance v1, Lcom/samsung/android/camera/core2/device/CamDeviceRepeatingStatePreview;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/camera/core2/device/CamDeviceRepeatingStatePreview;-><init>(Lcom/samsung/android/camera/core2/device/CamDeviceImpl;)V
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->z:Lcom/samsung/android/camera/core2/CamDeviceRepeatingState;
 
+    .line 20
     new-instance v1, Lcom/samsung/android/camera/core2/device/CamDeviceRepeatingStatePicture;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/camera/core2/device/CamDeviceRepeatingStatePicture;-><init>(Lcom/samsung/android/camera/core2/device/CamDeviceImpl;)V
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->A:Lcom/samsung/android/camera/core2/CamDeviceRepeatingState;
 
+    .line 21
     new-instance v1, Lcom/samsung/android/camera/core2/device/CamDeviceRepeatingStateRecord;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/camera/core2/device/CamDeviceRepeatingStateRecord;-><init>(Lcom/samsung/android/camera/core2/device/CamDeviceImpl;)V
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->B:Lcom/samsung/android/camera/core2/CamDeviceRepeatingState;
 
+    .line 22
     new-instance v1, Lcom/samsung/android/camera/core2/device/CamDeviceRepeatingStateBurstPicRecord;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/camera/core2/device/CamDeviceRepeatingStateBurstPicRecord;-><init>(Lcom/samsung/android/camera/core2/device/CamDeviceImpl;)V
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->C:Lcom/samsung/android/camera/core2/CamDeviceRepeatingState;
 
+    .line 23
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->D:Ljava/lang/Object;
 
+    .line 24
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->E:Ljava/util/Map;
 
+    .line 25
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->F:Ljava/util/Map;
 
+    .line 26
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->G:Ljava/util/Map;
 
+    .line 27
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->H:Ljava/util/Map;
 
+    .line 28
     sget-object v1, Lcom/samsung/android/camera/core2/CamDevice$SessionMode;->a:Lcom/samsung/android/camera/core2/CamDevice$SessionMode;
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->M:Lcom/samsung/android/camera/core2/CamDevice$SessionMode;
 
+    .line 29
     const-class v1, Lcom/samsung/android/camera/core2/CamDeviceRequestOptions$PictureRequestType;
 
     invoke-static {v1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -300,8 +323,10 @@
 
     iput-object v1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->e0:Ljava/util/EnumSet;
 
+    .line 30
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->i0:Lcom/samsung/android/camera/core2/CamDeviceRepeatingState;
 
+    .line 31
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x0
@@ -310,10 +335,12 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->j0:Ljava/util/concurrent/CountDownLatch;
 
+    .line 32
     sget-object v0, Lcom/samsung/android/camera/core2/CamDevice$CaptureState;->a:Lcom/samsung/android/camera/core2/CamDevice$CaptureState;
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->k0:Lcom/samsung/android/camera/core2/CamDevice$CaptureState;
 
+    .line 33
     new-instance v0, Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -341,38 +368,47 @@
     :try_start_0
     const-string v2, "context"
 
+    .line 34
     invoke-static {p1, v2}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v2, "callback"
 
+    .line 35
     invoke-static {p4, v2}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v2, "camCapability"
 
+    .line 36
     invoke-static {p5, v2}, Lcom/samsung/android/camera/core2/util/ConditionChecker;->m(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 37
     iput-object p1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->j:Landroid/content/Context;
 
+    .line 38
     iput-object p5, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->k:Lcom/samsung/android/camera/core2/CamCapability;
 
+    .line 39
     invoke-virtual {p5}, Lcom/samsung/android/camera/core2/CamCapability;->b()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->e:Ljava/lang/String;
 
+    .line 40
     iput-object p7, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->f:Ljava/lang/String;
 
     if-nez p6, :cond_2
 
+    .line 41
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object p5
 
     if-nez p5, :cond_1
 
+    .line 42
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object p5
@@ -381,6 +417,7 @@
 
     goto :goto_0
 
+    .line 43
     :cond_0
     new-instance p0, Lcom/samsung/android/camera/core2/exception/CamDeviceException;
 
@@ -392,12 +429,14 @@
 
     throw p0
 
+    .line 44
     :cond_1
     :goto_0
     new-instance p6, Landroid/os/Handler;
 
     invoke-direct {p6, p5}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 45
     :cond_2
     invoke-static {p4, p6}, Lcom/samsung/android/camera/core2/callback/forwarder/CamDeviceStateCallbackForwarder;->w(Lcom/samsung/android/camera/core2/CamDevice$StateCallback;Landroid/os/Handler;)Lcom/samsung/android/camera/core2/callback/forwarder/CamDeviceStateCallbackForwarder;
 
@@ -405,8 +444,10 @@
 
     iput-object p4, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->i:Lcom/samsung/android/camera/core2/CamDevice$StateCallback;
 
+    .line 46
     iput-object p2, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->l:Lcom/google/ar/core/Session;
 
+    .line 47
     iput-object p3, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->m:Lcom/google/ar/core/SharedCamera;
 
     const/4 p4, 0x1
@@ -422,15 +463,18 @@
     :cond_3
     move p2, v1
 
+    .line 48
     :goto_1
     iput-boolean p2, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->n:Z
 
+    .line 49
     new-instance p3, Lcom/samsung/android/camera/core2/device/CamDeviceHandlerManager;
 
     invoke-direct {p3, p0}, Lcom/samsung/android/camera/core2/device/CamDeviceHandlerManager;-><init>(Lcom/samsung/android/camera/core2/device/CamDeviceImpl;)V
 
     iput-object p3, p0, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;->h:Lcom/samsung/android/camera/core2/device/CamDeviceHandlerManager;
 
+    .line 50
     invoke-virtual {p3}, Lcom/samsung/android/camera/core2/device/CamDeviceHandlerManager;->startCamDeviceHandlerThreads()V
 
     const/4 p0, 0x3
@@ -443,6 +487,7 @@
 
     const/4 p1, 0x2
 
+    .line 51
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p2
@@ -451,6 +496,7 @@
 
     const-string p1, "CamDeviceImpl is created : Id %s, LastId %s, IsSupportArCore %b"
 
+    .line 52
     invoke-static {v0, p1, p0}, Lcom/samsung/android/camera/core2/util/CLog;->l(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -458,6 +504,7 @@
     :catch_0
     move-exception p0
 
+    .line 53
     new-instance p1, Lcom/samsung/android/camera/core2/exception/CamDeviceException;
 
     sget-object p2, Lcom/samsung/android/camera/core2/exception/CamDeviceException$Type;->o:Lcom/samsung/android/camera/core2/exception/CamDeviceException$Type;
@@ -470,6 +517,7 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/device/CamDeviceConfig;)V
     .locals 8
 
+    .line 1
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/device/CamDeviceConfig;->b()Landroid/content/Context;
 
     move-result-object v1
@@ -478,24 +526,29 @@
 
     const/4 v3, 0x0
 
+    .line 2
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/device/CamDeviceConfig;->e()Lcom/samsung/android/camera/core2/CamDevice$StateCallback;
 
     move-result-object v4
 
+    .line 3
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/device/CamDeviceConfig;->a()Lcom/samsung/android/camera/core2/CamCapability;
 
     move-result-object v5
 
+    .line 4
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/device/CamDeviceConfig;->c()Landroid/os/Handler;
 
     move-result-object v6
 
+    .line 5
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/device/CamDeviceConfig;->d()Ljava/lang/String;
 
     move-result-object v7
 
     move-object v0, p0
 
+    .line 6
     invoke-direct/range {v0 .. v7}, Lcom/samsung/android/camera/core2/device/CamDeviceImpl;-><init>(Landroid/content/Context;Lcom/google/ar/core/Session;Lcom/google/ar/core/SharedCamera;Lcom/samsung/android/camera/core2/CamDevice$StateCallback;Lcom/samsung/android/camera/core2/CamCapability;Landroid/os/Handler;Ljava/lang/String;)V
 
     return-void

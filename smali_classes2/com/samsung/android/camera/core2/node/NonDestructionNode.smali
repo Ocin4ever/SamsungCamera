@@ -265,20 +265,24 @@
 .method private processNonDestruction(Lcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/ExtraBundle;)Lcom/samsung/android/camera/core2/util/ImageBuffer;
     .locals 7
 
+    .line 1
     sget-object v0, Lcom/samsung/android/camera/core2/node/NonDestructionNode;->NON_DESTRUCTION_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const-string v1, "processPicture E"
 
     invoke-static {v0, v1}, Lcom/samsung/android/camera/core2/util/CLog;->j(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/util/ImageBuffer;->g()Lcom/samsung/android/camera/core2/util/ImageInfo;
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {v1}, Lcom/samsung/android/camera/core2/util/ImageInfo;->m()Lcom/samsung/android/camera/core2/util/SemImageFormat;
 
     move-result-object v2
 
+    .line 4
     invoke-virtual {v1}, Lcom/samsung/android/camera/core2/util/ImageInfo;->p()Landroid/util/Size;
 
     move-result-object v1
@@ -289,8 +293,10 @@
 
     const-string p1, "processPicture X - failed because pictureSize is null"
 
+    .line 5
     invoke-static {v0, p1}, Lcom/samsung/android/camera/core2/util/CLog;->f(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 6
     iget-object p0, p0, Lcom/samsung/android/camera/core2/node/NonDestructionNode;->mNodeCallback:Lcom/samsung/android/camera/core2/node/NonDestructionNode$NodeCallback;
 
     invoke-interface {p0, v3}, Lcom/samsung/android/camera/core2/node/NonDestructionNode$NodeCallback;->onError(I)V
@@ -299,6 +305,7 @@
 
     return-object p0
 
+    .line 7
     :cond_0
     sget-object v1, Lcom/samsung/android/camera/core2/ExtraBundle;->f:Lcom/samsung/android/camera/core2/ExtraBundle$Key;
 
@@ -312,10 +319,12 @@
 
     const-string p0, "processPicture X - failed because extra image buffer(original image) is null"
 
+    .line 8
     invoke-static {v0, p0}, Lcom/samsung/android/camera/core2/util/CLog;->t(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
     return-object p1
 
+    .line 9
     :cond_1
     sget-object v5, Lcom/samsung/android/camera/core2/node/NonDestructionNode$1;->a:[I
 
@@ -335,10 +344,12 @@
 
     const-string v2, "processPicture - failed because of unsupported format(%s)"
 
+    .line 10
     invoke-static {v0, v2, p0}, Lcom/samsung/android/camera/core2/util/CLog;->h(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 11
     :pswitch_0
     invoke-virtual {v4}, Lcom/samsung/android/camera/core2/util/ImageBuffer;->g()Lcom/samsung/android/camera/core2/util/ImageInfo;
 
@@ -352,17 +363,21 @@
 
     move-result-object v2
 
+    .line 12
     invoke-direct {p0, v4, p2, v2}, Lcom/samsung/android/camera/core2/node/NonDestructionNode;->processNonDestruction(Lcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/ExtraBundle;Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 13
     :pswitch_1
     invoke-direct {p0, p1, p2, v2}, Lcom/samsung/android/camera/core2/node/NonDestructionNode;->saveOriginalFile(Lcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/ExtraBundle;Lcom/samsung/android/camera/core2/util/SemImageFormat;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 14
     invoke-direct {p0, p1, p2, v2}, Lcom/samsung/android/camera/core2/node/NonDestructionNode;->processNonDestruction(Lcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/ExtraBundle;Ljava/lang/String;)V
 
+    .line 15
     invoke-virtual {v4}, Lcom/samsung/android/camera/core2/util/ImageBuffer;->g()Lcom/samsung/android/camera/core2/util/ImageInfo;
 
     move-result-object p0
@@ -371,15 +386,18 @@
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/camera/core2/util/ImageInfo;->x(I)V
 
+    .line 16
     invoke-virtual {v4}, Lcom/samsung/android/camera/core2/util/BufferBase;->rewind()V
 
     move-object p1, v4
 
+    .line 17
     :goto_0
     invoke-virtual {p2, v1}, Lcom/samsung/android/camera/core2/ExtraBundle;->z(Lcom/samsung/android/camera/core2/ExtraBundle$Key;)Lcom/samsung/android/camera/core2/ExtraBundle;
 
     const-string p0, "processPicture X"
 
+    .line 18
     invoke-static {v0, p0}, Lcom/samsung/android/camera/core2/util/CLog;->j(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
     return-object p1
@@ -400,10 +418,12 @@
 .method private processNonDestruction(Lcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/ExtraBundle;Ljava/lang/String;)V
     .locals 4
 
+    .line 19
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/util/BufferBase;->capacity()I
 
     move-result p1
 
+    .line 20
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -430,6 +450,7 @@
 
     move-result-object v0
 
+    .line 21
     sget-object v1, Lcom/samsung/android/camera/core2/node/NonDestructionNode;->NON_DESTRUCTION_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -450,14 +471,18 @@
 
     int-to-long v1, p1
 
+    .line 22
     invoke-direct {p0, v0, p3, v1, v2}, Lcom/samsung/android/camera/core2/node/NonDestructionNode;->insertToDB(Ljava/lang/String;Ljava/lang/String;J)V
 
+    .line 23
     invoke-direct {p0, p2, v0, p3}, Lcom/samsung/android/camera/core2/node/NonDestructionNode;->putSefDataToExtraBundle(Lcom/samsung/android/camera/core2/ExtraBundle;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 24
     sget-object p0, Lcom/samsung/android/camera/core2/ExtraBundle;->f0:Lcom/samsung/android/camera/core2/ExtraBundle$Key;
 
     invoke-virtual {p2, p0, p3}, Lcom/samsung/android/camera/core2/ExtraBundle;->v(Lcom/samsung/android/camera/core2/ExtraBundle$Key;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 25
     sget-object p0, Lcom/samsung/android/camera/core2/ExtraBundle;->t:Lcom/samsung/android/camera/core2/ExtraBundle$Key;
 
     invoke-virtual {p2, p0}, Lcom/samsung/android/camera/core2/ExtraBundle;->j(Lcom/samsung/android/camera/core2/ExtraBundle$Key;)Ljava/lang/Object;
@@ -488,6 +513,7 @@
 
     or-int/lit8 p1, p1, 0x4
 
+    .line 26
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1

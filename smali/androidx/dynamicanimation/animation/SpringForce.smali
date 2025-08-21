@@ -54,10 +54,12 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide v0, 0x4097700000000000L    # 1500.0
 
+    .line 2
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
@@ -66,16 +68,20 @@
 
     const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
 
+    .line 3
     iput-wide v0, p0, Landroidx/dynamicanimation/animation/SpringForce;->mDampingRatio:D
 
     const/4 v0, 0x0
 
+    .line 4
     iput-boolean v0, p0, Landroidx/dynamicanimation/animation/SpringForce;->mInitialized:Z
 
     const-wide v0, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
+    .line 5
     iput-wide v0, p0, Landroidx/dynamicanimation/animation/SpringForce;->mFinalPosition:D
 
+    .line 6
     new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;
 
     invoke-direct {v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;-><init>()V
@@ -88,10 +94,12 @@
 .method public constructor <init>(F)V
     .locals 2
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide v0, 0x4097700000000000L    # 1500.0
 
+    .line 8
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
@@ -100,16 +108,20 @@
 
     const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
 
+    .line 9
     iput-wide v0, p0, Landroidx/dynamicanimation/animation/SpringForce;->mDampingRatio:D
 
     const/4 v0, 0x0
 
+    .line 10
     iput-boolean v0, p0, Landroidx/dynamicanimation/animation/SpringForce;->mInitialized:Z
 
     const-wide v0, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
+    .line 11
     iput-wide v0, p0, Landroidx/dynamicanimation/animation/SpringForce;->mFinalPosition:D
 
+    .line 12
     new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;
 
     invoke-direct {v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;-><init>()V
@@ -118,6 +130,7 @@
 
     float-to-double v0, p1
 
+    .line 13
     iput-wide v0, p0, Landroidx/dynamicanimation/animation/SpringForce;->mFinalPosition:D
 
     return-void

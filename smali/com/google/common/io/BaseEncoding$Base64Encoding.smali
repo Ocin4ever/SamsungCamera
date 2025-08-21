@@ -18,8 +18,10 @@
 .method private constructor <init>(Lcom/google/common/io/BaseEncoding$Alphabet;Ljava/lang/Character;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;-><init>(Lcom/google/common/io/BaseEncoding$Alphabet;Ljava/lang/Character;)V
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/io/BaseEncoding$Alphabet;->access$000(Lcom/google/common/io/BaseEncoding$Alphabet;)[C
 
     move-result-object p0
@@ -46,6 +48,7 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Character;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/io/BaseEncoding$Alphabet;
 
     invoke-virtual {p2}, Ljava/lang/String;->toCharArray()[C

@@ -84,6 +84,7 @@
 .method public getDataBinder(Landroidx/databinding/DataBindingComponent;Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/samsung/android/sdk/scs/ai/DataBinderMapperImpl;->INTERNAL_LAYOUT_ID_LOOKUP:Landroid/util/SparseIntArray;
 
     invoke-virtual {p0, p3}, Landroid/util/SparseIntArray;->get(I)I
@@ -92,6 +93,7 @@
 
     if-lez p0, :cond_1
 
+    .line 2
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p0
@@ -100,6 +102,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -123,12 +126,14 @@
 
     if-eqz p2, :cond_2
 
+    .line 4
     array-length p1, p2
 
     if-nez p1, :cond_0
 
     goto :goto_0
 
+    .line 5
     :cond_0
     sget-object p1, Lcom/samsung/android/sdk/scs/ai/DataBinderMapperImpl;->INTERNAL_LAYOUT_ID_LOOKUP:Landroid/util/SparseIntArray;
 
@@ -140,6 +145,7 @@
 
     const/4 p1, 0x0
 
+    .line 6
     aget-object p1, p2, p1
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -150,6 +156,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     new-instance p0, Ljava/lang/RuntimeException;
 

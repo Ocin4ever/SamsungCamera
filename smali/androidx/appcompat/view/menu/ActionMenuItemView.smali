@@ -66,6 +66,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/appcompat/view/menu/ActionMenuItemView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -76,6 +77,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/view/menu/ActionMenuItemView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -84,34 +86,42 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 3
 
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 v0, 0x0
 
+    .line 4
     iput-boolean v0, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mIsChangedRelativePadding:Z
 
     const/4 v1, 0x0
 
+    .line 5
     iput v1, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mDefaultTextSize:F
 
+    .line 6
     iput-boolean v0, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mIsLastItem:Z
 
+    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
+    .line 8
     invoke-direct {p0}, Landroidx/appcompat/view/menu/ActionMenuItemView;->shouldAllowTextWithIcon()Z
 
     move-result v2
 
     iput-boolean v2, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mAllowTextWithIcon:Z
 
+    .line 9
     sget-object v2, Landroidx/appcompat/R$styleable;->ActionMenuItemView:[I
 
     invoke-virtual {p1, p2, v2, p3, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
+    .line 10
     sget p3, Landroidx/appcompat/R$styleable;->ActionMenuItemView_android_minWidth:I
 
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -120,8 +130,10 @@
 
     iput p3, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mMinWidth:I
 
+    .line 11
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object p2
@@ -138,18 +150,24 @@
 
     float-to-int p2, p2
 
+    .line 13
     iput p2, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mMaxIconSize:I
 
+    .line 14
     invoke-virtual {p0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 15
     invoke-virtual {p0, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     const/4 p2, -0x1
 
+    .line 16
     iput p2, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->mSavedPaddingLeft:I
 
+    .line 17
     invoke-virtual {p0, v0}, Landroid/view/View;->setSaveEnabled(Z)V
 
+    .line 18
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p2
@@ -162,30 +180,36 @@
 
     move-result-object p2
 
+    .line 19
     sget v2, Landroidx/appcompat/R$styleable;->AppCompatTheme_actionMenuTextAppearance:I
 
     invoke-virtual {p2, v2, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v2
 
+    .line 20
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 21
     sget-object p2, Landroidx/appcompat/R$styleable;->TextAppearance:[I
 
     invoke-virtual {p1, v2, p2}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
+    .line 22
     sget v2, Landroidx/appcompat/R$styleable;->TextAppearance_android_textSize:I
 
     invoke-virtual {p2, v2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v2
 
+    .line 23
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     if-eqz v2, :cond_0
 
+    .line 24
     iget p2, v2, Landroid/util/TypedValue;->data:I
 
     invoke-static {p2}, Landroid/util/TypedValue;->complexToFloat(I)F
@@ -197,8 +221,10 @@
     :cond_0
     const/4 p2, 0x1
 
+    .line 25
     invoke-virtual {p0, p2}, Landroidx/appcompat/widget/AppCompatTextView;->seslSetButtonShapeEnabled(Z)V
 
+    .line 26
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v2
@@ -207,14 +233,17 @@
 
     move-result-object p3
 
+    .line 27
     sget v1, Landroidx/appcompat/R$styleable;->AppCompatTheme_actionButtonStyle:I
 
     invoke-virtual {p3, v1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v1
 
+    .line 28
     invoke-virtual {p3}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 29
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p1
@@ -229,12 +258,14 @@
 
     move-result-object p1
 
+    .line 30
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
     iput-object p2, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->initBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 31
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void

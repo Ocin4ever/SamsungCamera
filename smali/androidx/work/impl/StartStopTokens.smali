@@ -80,10 +80,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Landroidx/work/impl/StartStopTokens;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object p0, p0, Landroidx/work/impl/StartStopTokens;->runs:Ljava/util/Map;
 
@@ -95,6 +97,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit v0
 
     return-object p0
@@ -114,6 +117,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 16
     invoke-static {p1}, Landroidx/work/impl/model/WorkSpecKt;->generationalId(Landroidx/work/impl/model/WorkSpec;)Landroidx/work/impl/model/WorkGenerationalId;
 
     move-result-object p1
@@ -142,17 +146,21 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 4
     iget-object v0, p0, Landroidx/work/impl/StartStopTokens;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 5
     :try_start_0
     iget-object v1, p0, Landroidx/work/impl/StartStopTokens;->runs:Ljava/util/Map;
 
+    .line 6
     new-instance v2, Ljava/util/LinkedHashMap;
 
     invoke-direct {v2}, Ljava/util/LinkedHashMap;-><init>()V
 
+    .line 7
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -175,12 +183,14 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
+    .line 8
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroidx/work/impl/model/WorkGenerationalId;
 
+    .line 9
     invoke-virtual {v4}, Landroidx/work/impl/model/WorkGenerationalId;->getWorkSpecId()Ljava/lang/String;
 
     move-result-object v4
@@ -191,6 +201,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 10
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -203,11 +214,13 @@
 
     goto :goto_0
 
+    .line 11
     :cond_1
     invoke-interface {v2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object p1
 
+    .line 12
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -225,12 +238,14 @@
 
     check-cast v1, Landroidx/work/impl/model/WorkGenerationalId;
 
+    .line 13
     iget-object v3, p0, Landroidx/work/impl/StartStopTokens;->runs:Ljava/util/Map;
 
     invoke-interface {v3, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
+    .line 14
     :cond_2
     invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -244,6 +259,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 15
     monitor-exit v0
 
     return-object p0
@@ -263,30 +279,37 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Landroidx/work/impl/StartStopTokens;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object p0, p0, Landroidx/work/impl/StartStopTokens;->runs:Ljava/util/Map;
 
+    .line 3
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
+    .line 4
     new-instance v1, Landroidx/work/impl/StartStopToken;
 
     invoke-direct {v1, p1}, Landroidx/work/impl/StartStopToken;-><init>(Landroidx/work/impl/model/WorkGenerationalId;)V
 
+    .line 5
     invoke-interface {p0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     :cond_0
     check-cast v1, Landroidx/work/impl/StartStopToken;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     monitor-exit v0
 
     return-object v1
@@ -306,6 +329,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 8
     invoke-static {p1}, Landroidx/work/impl/model/WorkSpecKt;->generationalId(Landroidx/work/impl/model/WorkSpec;)Landroidx/work/impl/model/WorkGenerationalId;
 
     move-result-object p1

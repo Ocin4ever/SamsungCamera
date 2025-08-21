@@ -72,6 +72,7 @@
 .method public next()Landroid/view/View;
     .locals 3
 
+    .line 2
     iget-object v0, p0, Landroidx/core/view/ViewGroupKt$iterator$1;->$this_iterator:Landroid/view/ViewGroup;
 
     iget v1, p0, Landroidx/core/view/ViewGroupKt$iterator$1;->index:I
@@ -99,6 +100,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/core/view/ViewGroupKt$iterator$1;->next()Landroid/view/View;
 
     move-result-object p0

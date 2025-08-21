@@ -578,6 +578,7 @@
         }
     .end annotation
 
+    .line 2
     move-object/from16 v0, p0
 
     new-instance v1, Ljava/util/ArrayList;
@@ -784,6 +785,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -1017,12 +1019,14 @@
         }
     .end annotation
 
+    .line 6
     return-void
 .end method
 
 .method public static a(Z)V
     .locals 0
 
+    .line 7
     invoke-static {p0}, Lco/polarr/mgcsc/PolarrObjectDetection;->useGPU(Z)V
 
     return-void
@@ -1043,6 +1047,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v8
@@ -1133,6 +1138,7 @@
 .method public a()V
     .locals 0
 
+    .line 4
     iget-object p0, p0, Lco/polarr/mgcsc/f/h/h;->g:Lco/polarr/mgcsc/PolarrObjectDetection;
 
     if-eqz p0, :cond_0
@@ -1146,6 +1152,7 @@
 .method public a(Landroid/content/Context;Ljava/lang/String;)V
     .locals 4
 
+    .line 5
     sget-boolean p1, Lco/polarr/mgcsc/f/h/h;->d:Z
 
     if-eqz p1, :cond_0

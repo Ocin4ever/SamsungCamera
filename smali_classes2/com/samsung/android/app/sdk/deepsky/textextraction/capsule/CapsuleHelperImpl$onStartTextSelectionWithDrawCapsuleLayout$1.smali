@@ -54,6 +54,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Lf6/p;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl$onStartTextSelectionWithDrawCapsuleLayout$1;->invoke(Lf6/p;)V
@@ -70,6 +71,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget-object p1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl$onStartTextSelectionWithDrawCapsuleLayout$1;->this$0:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl;
 
     iget-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl$onStartTextSelectionWithDrawCapsuleLayout$1;->$result:Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult;
@@ -80,6 +82,7 @@
 
     invoke-static {p1, v0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl;->access$initEntityCapsule(Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl;Ljava/util/List;)V
 
+    .line 3
     iget-object p1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl$onStartTextSelectionWithDrawCapsuleLayout$1;->this$0:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl;
 
     iget-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl$onStartTextSelectionWithDrawCapsuleLayout$1;->$result:Lcom/samsung/android/app/sdk/deepsky/textextraction/result/OcrResult;

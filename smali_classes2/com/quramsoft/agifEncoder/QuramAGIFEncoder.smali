@@ -76,6 +76,7 @@
 .method public static makeContactAGIF(Ljava/lang/String;Ljava/lang/String;I)I
     .locals 0
 
+    .line 25
     invoke-static {p0, p1, p2}, Lcom/quramsoft/agifEncoder/QuramAGIFEncoder;->nativeMakeContactImage(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result p0
@@ -86,14 +87,18 @@
 .method public static makeContactAGIF(Ljava/lang/String;Ljava/lang/String;IILandroid/graphics/Rect;)I
     .locals 8
 
+    .line 20
     iget v4, p4, Landroid/graphics/Rect;->left:I
 
+    .line 21
     iget v5, p4, Landroid/graphics/Rect;->top:I
 
+    .line 22
     invoke-virtual {p4}, Landroid/graphics/Rect;->width()I
 
     move-result v6
 
+    .line 23
     invoke-virtual {p4}, Landroid/graphics/Rect;->height()I
 
     move-result v7
@@ -106,6 +111,7 @@
 
     move v3, p3
 
+    .line 24
     invoke-static/range {v0 .. v7}, Lcom/quramsoft/agifEncoder/QuramAGIFEncoder;->nativeMakeContactResizeImageRect(Ljava/lang/String;Ljava/lang/String;IIIIII)I
 
     move-result p0
@@ -116,14 +122,18 @@
 .method public static makeContactAGIF(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Rect;)I
     .locals 6
 
+    .line 15
     iget v2, p2, Landroid/graphics/Rect;->left:I
 
+    .line 16
     iget v3, p2, Landroid/graphics/Rect;->top:I
 
+    .line 17
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result v4
 
+    .line 18
     invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
     move-result v5
@@ -132,6 +142,7 @@
 
     move-object v1, p1
 
+    .line 19
     invoke-static/range {v0 .. v5}, Lcom/quramsoft/agifEncoder/QuramAGIFEncoder;->nativeMakeContactImageRect(Ljava/lang/String;Ljava/lang/String;IIII)I
 
     move-result p0
@@ -144,10 +155,12 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, p1, p2, v0}, Lcom/quramsoft/agifEncoder/QuramAGIFEncoder;->nativeMakeContactBuffer([BIII)Ljava/io/ByteArrayOutputStream;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
@@ -158,14 +171,18 @@
 .method public static makeContactAGIF([BIIILandroid/graphics/Rect;)[B
     .locals 9
 
+    .line 9
     iget v5, p4, Landroid/graphics/Rect;->left:I
 
+    .line 10
     iget v6, p4, Landroid/graphics/Rect;->top:I
 
+    .line 11
     invoke-virtual {p4}, Landroid/graphics/Rect;->width()I
 
     move-result v7
 
+    .line 12
     invoke-virtual {p4}, Landroid/graphics/Rect;->height()I
 
     move-result v8
@@ -180,10 +197,12 @@
 
     move v4, p3
 
+    .line 13
     invoke-static/range {v0 .. v8}, Lcom/quramsoft/agifEncoder/QuramAGIFEncoder;->nativeMakeContactRectResizeBuffer([BIIIIIIII)Ljava/io/ByteArrayOutputStream;
 
     move-result-object p0
 
+    .line 14
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
@@ -194,14 +213,18 @@
 .method public static makeContactAGIF([BILandroid/graphics/Rect;)[B
     .locals 7
 
+    .line 3
     iget v3, p2, Landroid/graphics/Rect;->left:I
 
+    .line 4
     iget v4, p2, Landroid/graphics/Rect;->top:I
 
+    .line 5
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result v5
 
+    .line 6
     invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
     move-result v6
@@ -212,10 +235,12 @@
 
     move v1, p1
 
+    .line 7
     invoke-static/range {v0 .. v6}, Lcom/quramsoft/agifEncoder/QuramAGIFEncoder;->nativeMakeContactRectBuffer([BIIIIII)Ljava/io/ByteArrayOutputStream;
 
     move-result-object p0
 
+    .line 8
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0

@@ -52,16 +52,19 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p1, p2}, Landroidx/databinding/OnRebindCallback;->onBound(Landroidx/databinding/ViewDataBinding;)V
 
     goto :goto_0
 
+    .line 3
     :cond_1
     invoke-virtual {p1, p2}, Landroidx/databinding/OnRebindCallback;->onCanceled(Landroidx/databinding/ViewDataBinding;)V
 
     goto :goto_0
 
+    .line 4
     :cond_2
     invoke-virtual {p1, p2}, Landroidx/databinding/OnRebindCallback;->onPreBind(Landroidx/databinding/ViewDataBinding;)Z
 
@@ -69,6 +72,7 @@
 
     if-nez p1, :cond_3
 
+    .line 5
     invoke-static {p2, p0}, Landroidx/databinding/ViewDataBinding;->access$002(Landroidx/databinding/ViewDataBinding;Z)Z
 
     :cond_3
@@ -79,6 +83,7 @@
 .method public bridge synthetic onNotifyCallback(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/databinding/OnRebindCallback;
 
     check-cast p2, Landroidx/databinding/ViewDataBinding;

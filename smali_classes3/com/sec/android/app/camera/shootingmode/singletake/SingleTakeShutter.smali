@@ -35,18 +35,22 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;->mColorFilter:Landroid/graphics/BlendModeColorFilter;
 
+    .line 3
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter$1;-><init>(Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;->mLottieValueCallback:Lz/e;
 
+    .line 4
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;->initView()V
 
     return-void
@@ -55,18 +59,22 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
+    .line 6
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;->mColorFilter:Landroid/graphics/BlendModeColorFilter;
 
+    .line 7
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter$1;-><init>(Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;->mLottieValueCallback:Lz/e;
 
+    .line 8
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;->initView()V
 
     return-void
@@ -698,24 +706,28 @@
 .method public startShutterProgressWheel(FI)V
     .locals 3
 
+    .line 2
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;->mProgressWheelAnimatorSet:Landroid/animation/AnimatorSet;
 
+    .line 3
     new-instance v1, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v1}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 4
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;->mProgressWheelAnimatorSet:Landroid/animation/AnimatorSet;
 
     int-to-long v1, p2
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
+    .line 5
     iget-object p2, p0, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;->mProgressWheelAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;->getProgressAnimator(F)Landroid/animation/ValueAnimator;
@@ -746,6 +758,7 @@
 
     invoke-virtual {p2, p1}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
+    .line 6
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;->mProgressWheelAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p0}, Landroid/animation/AnimatorSet;->start()V
@@ -758,6 +771,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/sec/android/app/camera/shootingmode/singletake/SingleTakeShutter;->startShutterProgressWheel(FI)V
 
     return-void

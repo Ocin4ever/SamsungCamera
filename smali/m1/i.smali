@@ -34,6 +34,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/util/SparseArray;-><init>()V
 
     return-void
@@ -42,16 +43,21 @@
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 4
 
+    .line 2
     invoke-direct {p0}, Landroid/util/SparseArray;-><init>()V
 
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
+    .line 4
     new-array v1, v0, [I
 
+    .line 5
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readIntArray([I)V
 
+    .line 6
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
 
     move-result-object p1
@@ -61,6 +67,7 @@
     :goto_0
     if-ge p2, v0, :cond_0
 
+    .line 7
     aget v2, v1, p2
 
     aget-object v3, p1, p2

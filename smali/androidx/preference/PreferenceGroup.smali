@@ -60,6 +60,7 @@
 
     const/4 v0, 0x0
 
+    .line 18
     invoke-direct {p0, p1, p2, v0}, Landroidx/preference/PreferenceGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -70,6 +71,7 @@
 
     const/4 v0, 0x0
 
+    .line 17
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/preference/PreferenceGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -78,14 +80,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 3
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 2
     new-instance v0, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
     iput-object v0, p0, Landroidx/preference/PreferenceGroup;->mIdRecycleCache:Landroidx/collection/SimpleArrayMap;
 
+    .line 3
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -98,48 +103,59 @@
 
     const/4 v0, 0x1
 
+    .line 4
     iput-boolean v0, p0, Landroidx/preference/PreferenceGroup;->mOrderingAsAdded:Z
 
     const/4 v1, 0x0
 
+    .line 5
     iput v1, p0, Landroidx/preference/PreferenceGroup;->mCurrentPreferenceOrder:I
 
+    .line 6
     iput-boolean v1, p0, Landroidx/preference/PreferenceGroup;->mAttachedToHierarchy:Z
 
     const v1, 0x7fffffff
 
+    .line 7
     iput v1, p0, Landroidx/preference/PreferenceGroup;->mInitialExpandedChildrenCount:I
 
     const/4 v2, 0x0
 
+    .line 8
     iput-object v2, p0, Landroidx/preference/PreferenceGroup;->mOnExpandButtonClickListener:Landroidx/preference/PreferenceGroup$OnExpandButtonClickListener;
 
+    .line 9
     new-instance v2, Landroidx/preference/PreferenceGroup$1;
 
     invoke-direct {v2, p0}, Landroidx/preference/PreferenceGroup$1;-><init>(Landroidx/preference/PreferenceGroup;)V
 
     iput-object v2, p0, Landroidx/preference/PreferenceGroup;->mClearRecycleCacheRunnable:Ljava/lang/Runnable;
 
+    .line 10
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Landroidx/preference/PreferenceGroup;->mPreferences:Ljava/util/List;
 
+    .line 11
     sget-object v2, Landroidx/preference/R$styleable;->PreferenceGroup:[I
 
     invoke-virtual {p1, p2, v2, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 12
     sget p2, Landroidx/preference/R$styleable;->PreferenceGroup_orderingFromXml:I
 
+    .line 13
     invoke-static {p1, p2, p2, v0}, Landroidx/core/content/res/TypedArrayUtils;->getBoolean(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
     iput-boolean p2, p0, Landroidx/preference/PreferenceGroup;->mOrderingAsAdded:Z
 
+    .line 14
     sget p2, Landroidx/preference/R$styleable;->PreferenceGroup_initialExpandedChildrenCount:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -148,12 +164,14 @@
 
     if-eqz p3, :cond_0
 
+    .line 15
     invoke-static {p1, p2, p2, v1}, Landroidx/core/content/res/TypedArrayUtils;->getInt(Landroid/content/res/TypedArray;III)I
 
     move-result p2
 
     invoke-virtual {p0, p2}, Landroidx/preference/PreferenceGroup;->setInitialExpandedChildrenCount(I)V
 
+    .line 16
     :cond_0
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 

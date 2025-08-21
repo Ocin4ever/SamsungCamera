@@ -28,6 +28,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0, v0, v0}, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$FaceInfo;-><init>([Landroid/hardware/camera2/params/Face;[[I[[I)V
 
     return-void
@@ -36,12 +37,16 @@
 .method public constructor <init>([Landroid/hardware/camera2/params/Face;[[I[[I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$FaceInfo;->a:[Landroid/hardware/camera2/params/Face;
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$FaceInfo;->b:[[I
 
+    .line 5
     iput-object p3, p0, Lcom/samsung/android/camera/core2/node/singleBokeh/SingleBokehNodeBase$SingleBokehCaptureParam$FaceInfo;->c:[[I
 
     return-void

@@ -46,6 +46,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/window/core/Version$bigInteger$2;->invoke()Ljava/math/BigInteger;
 
     move-result-object p0
@@ -56,6 +57,7 @@
 .method public final invoke()Ljava/math/BigInteger;
     .locals 4
 
+    .line 2
     iget-object v0, p0, Landroidx/window/core/Version$bigInteger$2;->this$0:Landroidx/window/core/Version;
 
     invoke-virtual {v0}, Landroidx/window/core/Version;->getMajor()I
@@ -74,6 +76,7 @@
 
     move-result-object v0
 
+    .line 3
     iget-object v2, p0, Landroidx/window/core/Version$bigInteger$2;->this$0:Landroidx/window/core/Version;
 
     invoke-virtual {v2}, Landroidx/window/core/Version;->getMinor()I
@@ -90,10 +93,12 @@
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/math/BigInteger;->shiftLeft(I)Ljava/math/BigInteger;
 
     move-result-object v0
 
+    .line 5
     iget-object p0, p0, Landroidx/window/core/Version$bigInteger$2;->this$0:Landroidx/window/core/Version;
 
     invoke-virtual {p0}, Landroidx/window/core/Version;->getPatch()I

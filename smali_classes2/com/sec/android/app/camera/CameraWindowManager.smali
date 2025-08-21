@@ -230,6 +230,7 @@
 .method private isNeedRecreate(I)Z
     .locals 2
 
+    .line 4
     iget-object p0, p0, Lcom/sec/android/app/camera/CameraWindowManager;->mCameraContext:Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/Camera;->getCameraSettings()Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -905,6 +906,7 @@
 .method public isNeedRecreate(Z)Z
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraWindowManager;->mCameraContext:Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->getCameraSettings()Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -915,6 +917,7 @@
 
     move-result v0
 
+    .line 2
     iget-boolean v1, p0, Lcom/sec/android/app/camera/CameraWindowManager;->mIsNeedRecreate:Z
 
     if-nez v1, :cond_1
@@ -930,6 +933,7 @@
 
     return p0
 
+    .line 3
     :cond_1
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;

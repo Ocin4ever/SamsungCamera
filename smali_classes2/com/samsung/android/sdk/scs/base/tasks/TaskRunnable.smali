@@ -41,6 +41,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/samsung/android/sdk/scs/base/tasks/TaskCompletionSource;
 
     invoke-direct {v0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskCompletionSource;-><init>()V
@@ -60,8 +61,10 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;->mSource:Lcom/samsung/android/sdk/scs/base/tasks/TaskCompletionSource;
 
     return-void

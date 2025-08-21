@@ -46,6 +46,7 @@
 .method public bridge synthetic getGetter()Lu6/h$a;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lkotlin/jvm/internal/u;->getGetter()Lu6/j$a;
 
     const/4 p0, 0x0
@@ -56,6 +57,7 @@
 .method public getGetter()Lu6/j$a;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lkotlin/jvm/internal/w;->getReflected()Lu6/h;
 
     move-result-object p0

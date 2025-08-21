@@ -13,6 +13,7 @@
 
     const/4 v0, 0x0
 
+    .line 12
     invoke-direct {p0, p1, v0}, Landroidx/preference/SeslSwitchPreferenceScreen;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -21,6 +22,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 11
     sget v0, Landroidx/preference/R$attr;->switchPreferenceStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/preference/SeslSwitchPreferenceScreen;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -33,6 +35,7 @@
 
     const/4 v0, 0x0
 
+    .line 10
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/preference/SeslSwitchPreferenceScreen;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -41,20 +44,24 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/SwitchPreferenceCompat;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 2
     new-instance v0, Landroidx/preference/SeslSwitchPreferenceScreen$1;
 
     invoke-direct {v0, p0}, Landroidx/preference/SeslSwitchPreferenceScreen$1;-><init>(Landroidx/preference/SeslSwitchPreferenceScreen;)V
 
     iput-object v0, p0, Landroidx/preference/SeslSwitchPreferenceScreen;->mSwitchKeyListener:Landroid/view/View$OnKeyListener;
 
+    .line 3
     sget-object v0, Landroidx/preference/R$styleable;->Preference:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 4
     sget p2, Landroidx/preference/R$styleable;->Preference_android_fragment:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -65,6 +72,7 @@
 
     const-string p3, ""
 
+    .line 5
     invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -76,17 +84,21 @@
 
     const-string p3, "SwitchPreferenceScreen should getfragment property. Fragment property does not exsit in SwitchPreferenceScreen"
 
+    .line 6
     invoke-static {p2, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     :cond_1
     sget p2, Landroidx/preference/R$layout;->sesl_preference_switch_screen:I
 
     invoke-virtual {p0, p2}, Landroidx/preference/Preference;->setLayoutResource(I)V
 
+    .line 8
     sget p2, Landroidx/preference/R$layout;->sesl_switch_preference_screen_widget_divider:I
 
     invoke-virtual {p0, p2}, Landroidx/preference/Preference;->setWidgetLayoutResource(I)V
 
+    .line 9
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void

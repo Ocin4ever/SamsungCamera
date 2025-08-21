@@ -19,16 +19,22 @@
 .method public constructor <init>(Ljava/lang/Object;Lx6/k;Lq6/l;Ljava/lang/Object;Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lx6/w;->a:Ljava/lang/Object;
 
+    .line 3
     iput-object p2, p0, Lx6/w;->b:Lx6/k;
 
+    .line 4
     iput-object p3, p0, Lx6/w;->c:Lq6/l;
 
+    .line 5
     iput-object p4, p0, Lx6/w;->d:Ljava/lang/Object;
 
+    .line 6
     iput-object p5, p0, Lx6/w;->e:Ljava/lang/Throwable;
 
     return-void
@@ -91,6 +97,7 @@
 
     move-object v2, p1
 
+    .line 7
     invoke-direct/range {v1 .. v6}, Lx6/w;-><init>(Ljava/lang/Object;Lx6/k;Lq6/l;Ljava/lang/Object;Ljava/lang/Throwable;)V
 
     return-void

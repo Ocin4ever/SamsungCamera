@@ -41,6 +41,7 @@
 
     const/4 v0, 0x3
 
+    .line 1
     invoke-static {v0}, Lcom/google/common/collect/LinkedHashMultiset;->create(I)Lcom/google/common/collect/LinkedHashMultiset;
 
     move-result-object v0
@@ -60,6 +61,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/LinkedHashMultiset;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/LinkedHashMultiset;-><init>(I)V
@@ -81,6 +83,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/collect/Multisets;->inferDistinctElements(Ljava/lang/Iterable;)I
 
     move-result v0
@@ -89,6 +92,7 @@
 
     move-result-object v0
 
+    .line 4
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->addAll(Ljava/util/Collection;Ljava/lang/Iterable;)Z
 
     return-object v0

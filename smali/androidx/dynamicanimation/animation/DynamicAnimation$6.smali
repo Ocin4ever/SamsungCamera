@@ -30,6 +30,7 @@
 .method public getValue(Landroid/view/View;)F
     .locals 0
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getRotation()F
 
     move-result p0
@@ -40,6 +41,7 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$6;->getValue(Landroid/view/View;)F
@@ -52,6 +54,7 @@
 .method public setValue(Landroid/view/View;F)V
     .locals 0
 
+    .line 2
     invoke-virtual {p1, p2}, Landroid/view/View;->setRotation(F)V
 
     return-void
@@ -60,6 +63,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$6;->setValue(Landroid/view/View;F)V

@@ -239,15 +239,18 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     new-instance p1, Lcom/samsung/android/sdk/ocr/OCRResult$CharData;
 
     invoke-direct {p1}, Lcom/samsung/android/sdk/ocr/OCRResult$CharData;-><init>()V
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Lcom/samsung/android/sdk/ocr/OCRResult$CharData;->clear()V
 
+    .line 3
     :goto_0
     invoke-virtual {p0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrCharData;->getText()Ljava/lang/String;
 
@@ -255,6 +258,7 @@
 
     invoke-virtual {p1, v0}, Lcom/samsung/android/sdk/ocr/OCRResult$CharData;->setText(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrCharData;->getRect()[Landroid/graphics/Point;
 
     move-result-object p0
@@ -269,15 +273,18 @@
 
     if-nez p1, :cond_0
 
+    .line 5
     new-instance p1, Lcom/samsung/android/sdk/pen/ocr/SpenOcrCharData;
 
     invoke-direct {p1}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrCharData;-><init>()V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p1}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrCharData;->clear()V
 
+    .line 7
     :goto_0
     invoke-virtual {p0}, Lcom/samsung/android/sdk/ocr/OCRResult$CharData;->getText()Ljava/lang/String;
 
@@ -285,6 +292,7 @@
 
     invoke-virtual {p1, v0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrCharData;->setText(Ljava/lang/String;)V
 
+    .line 8
     invoke-virtual {p0}, Lcom/samsung/android/sdk/ocr/OCRResult$CharData;->getRect()[Landroid/graphics/Point;
 
     move-result-object p0
@@ -299,15 +307,18 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     new-instance p1, Lcom/samsung/android/sdk/ocr/OCRResult$LineData;
 
     invoke-direct {p1}, Lcom/samsung/android/sdk/ocr/OCRResult$LineData;-><init>()V
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Lcom/samsung/android/sdk/ocr/OCRResult$LineData;->clear()V
 
+    .line 3
     :goto_0
     invoke-virtual {p0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrLineData;->getWordDataList()Ljava/util/ArrayList;
 
@@ -332,14 +343,17 @@
 
     const/4 v2, 0x0
 
+    .line 4
     invoke-static {v1, v2}, Lcom/samsung/android/sdk/ocr/SOCRConverter;->convertWord(Lcom/samsung/android/sdk/pen/ocr/SpenOcrWordData;Lcom/samsung/android/sdk/ocr/OCRResult$WordData;)Lcom/samsung/android/sdk/ocr/OCRResult$WordData;
 
     move-result-object v1
 
+    .line 5
     invoke-virtual {p1, v1}, Lcom/samsung/android/sdk/ocr/OCRResult$LineData;->add(Lcom/samsung/android/sdk/ocr/OCRResult$WordData;)V
 
     goto :goto_1
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrLineData;->getRect()[Landroid/graphics/Point;
 
@@ -347,6 +361,7 @@
 
     invoke-virtual {p1, v0}, Lcom/samsung/android/sdk/ocr/OCRResult$LineData;->setRect([Landroid/graphics/Point;)V
 
+    .line 7
     invoke-virtual {p0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrLineData;->getAngle()F
 
     move-result p0
@@ -361,15 +376,18 @@
 
     if-nez p1, :cond_0
 
+    .line 8
     new-instance p1, Lcom/samsung/android/sdk/pen/ocr/SpenOcrLineData;
 
     invoke-direct {p1}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrLineData;-><init>()V
 
     goto :goto_0
 
+    .line 9
     :cond_0
     invoke-virtual {p1}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrLineData;->clear()V
 
+    .line 10
     :goto_0
     invoke-virtual {p0}, Lcom/samsung/android/sdk/ocr/OCRResult$LineData;->getWordDataList()Ljava/util/ArrayList;
 
@@ -394,14 +412,17 @@
 
     const/4 v2, 0x0
 
+    .line 11
     invoke-static {v1, v2}, Lcom/samsung/android/sdk/ocr/SOCRConverter;->convertWord(Lcom/samsung/android/sdk/ocr/OCRResult$WordData;Lcom/samsung/android/sdk/pen/ocr/SpenOcrWordData;)Lcom/samsung/android/sdk/pen/ocr/SpenOcrWordData;
 
     move-result-object v1
 
+    .line 12
     invoke-virtual {p1, v1}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrLineData;->add(Lcom/samsung/android/sdk/pen/ocr/SpenOcrWordData;)V
 
     goto :goto_1
 
+    .line 13
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/sdk/ocr/OCRResult$LineData;->getRect()[Landroid/graphics/Point;
 
@@ -409,6 +430,7 @@
 
     invoke-virtual {p1, v0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrLineData;->setRect([Landroid/graphics/Point;)V
 
+    .line 14
     invoke-virtual {p0}, Lcom/samsung/android/sdk/ocr/OCRResult$LineData;->getAngle()F
 
     move-result p0
@@ -475,18 +497,22 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     new-instance p1, Lcom/samsung/android/sdk/ocr/OCRResult$WordData;
 
     invoke-direct {p1}, Lcom/samsung/android/sdk/ocr/OCRResult$WordData;-><init>()V
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Lcom/samsung/android/sdk/ocr/OCRResult$WordData;->clear()V
 
+    .line 3
     :goto_0
     invoke-static {p0}, Lcom/samsung/android/sdk/ocr/SOCRConverter;->CreateCharDataForLegacyLibrary(Lcom/samsung/android/sdk/pen/ocr/SpenOcrWordData;)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrWordData;->getCharDataList()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -510,14 +536,17 @@
 
     const/4 v2, 0x0
 
+    .line 5
     invoke-static {v1, v2}, Lcom/samsung/android/sdk/ocr/SOCRConverter;->convertChar(Lcom/samsung/android/sdk/pen/ocr/SpenOcrCharData;Lcom/samsung/android/sdk/ocr/OCRResult$CharData;)Lcom/samsung/android/sdk/ocr/OCRResult$CharData;
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {p1, v1}, Lcom/samsung/android/sdk/ocr/OCRResult$WordData;->add(Lcom/samsung/android/sdk/ocr/OCRResult$CharData;)V
 
     goto :goto_1
 
+    .line 7
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrWordData;->getRect()[Landroid/graphics/Point;
 
@@ -533,15 +562,18 @@
 
     if-nez p1, :cond_0
 
+    .line 8
     new-instance p1, Lcom/samsung/android/sdk/pen/ocr/SpenOcrWordData;
 
     invoke-direct {p1}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrWordData;-><init>()V
 
     goto :goto_0
 
+    .line 9
     :cond_0
     invoke-virtual {p1}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrWordData;->clear()V
 
+    .line 10
     :goto_0
     invoke-virtual {p0}, Lcom/samsung/android/sdk/ocr/OCRResult$WordData;->getCharDataList()Ljava/util/ArrayList;
 
@@ -566,14 +598,17 @@
 
     const/4 v2, 0x0
 
+    .line 11
     invoke-static {v1, v2}, Lcom/samsung/android/sdk/ocr/SOCRConverter;->convertChar(Lcom/samsung/android/sdk/ocr/OCRResult$CharData;Lcom/samsung/android/sdk/pen/ocr/SpenOcrCharData;)Lcom/samsung/android/sdk/pen/ocr/SpenOcrCharData;
 
     move-result-object v1
 
+    .line 12
     invoke-virtual {p1, v1}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrWordData;->add(Lcom/samsung/android/sdk/pen/ocr/SpenOcrCharData;)V
 
     goto :goto_1
 
+    .line 13
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/sdk/ocr/OCRResult$WordData;->getText()Ljava/lang/String;
 
@@ -581,6 +616,7 @@
 
     invoke-virtual {p1, v0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrWordData;->setText(Ljava/lang/String;)V
 
+    .line 14
     invoke-virtual {p0}, Lcom/samsung/android/sdk/ocr/OCRResult$WordData;->getRect()[Landroid/graphics/Point;
 
     move-result-object p0

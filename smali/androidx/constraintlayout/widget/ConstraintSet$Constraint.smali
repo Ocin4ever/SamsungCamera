@@ -397,60 +397,74 @@
 .method private fillFromConstraints(ILandroidx/constraintlayout/widget/Constraints$LayoutParams;)V
     .locals 1
 
+    .line 8
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->fillFrom(ILandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;)V
 
+    .line 9
     iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
 
     iget v0, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->alpha:F
 
     iput v0, p1, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->alpha:F
 
+    .line 10
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
 
     iget p1, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->rotation:F
 
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotation:F
 
+    .line 11
     iget p1, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->rotationX:F
 
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotationX:F
 
+    .line 12
     iget p1, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->rotationY:F
 
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->rotationY:F
 
+    .line 13
     iget p1, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->scaleX:F
 
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->scaleX:F
 
+    .line 14
     iget p1, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->scaleY:F
 
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->scaleY:F
 
+    .line 15
     iget p1, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->transformPivotX:F
 
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotX:F
 
+    .line 16
     iget p1, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->transformPivotY:F
 
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->transformPivotY:F
 
+    .line 17
     iget p1, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->translationX:F
 
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationX:F
 
+    .line 18
     iget p1, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->translationY:F
 
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationY:F
 
+    .line 19
     iget p1, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->translationZ:F
 
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->translationZ:F
 
+    .line 20
     iget p1, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->elevation:F
 
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->elevation:F
 
+    .line 21
     iget-boolean p1, p2, Landroidx/constraintlayout/widget/Constraints$LayoutParams;->applyElevation:Z
 
     iput-boolean p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->applyElevation:Z
@@ -461,26 +475,32 @@
 .method private fillFromConstraints(Landroidx/constraintlayout/widget/ConstraintHelper;ILandroidx/constraintlayout/widget/Constraints$LayoutParams;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p2, p3}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->fillFromConstraints(ILandroidx/constraintlayout/widget/Constraints$LayoutParams;)V
 
+    .line 2
     instance-of p2, p1, Landroidx/constraintlayout/widget/Barrier;
 
     if-eqz p2, :cond_0
 
+    .line 3
     iget-object p2, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
 
     const/4 p3, 0x1
 
     iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHelperType:I
 
+    .line 4
     check-cast p1, Landroidx/constraintlayout/widget/Barrier;
 
+    .line 5
     invoke-virtual {p1}, Landroidx/constraintlayout/widget/Barrier;->getType()I
 
     move-result p3
 
     iput p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierDirection:I
 
+    .line 6
     iget-object p2, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
 
     invoke-virtual {p1}, Landroidx/constraintlayout/widget/ConstraintHelper;->getReferencedIds()[I
@@ -489,6 +509,7 @@
 
     iput-object p3, p2, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIds:[I
 
+    .line 7
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
 
     invoke-virtual {p1}, Landroidx/constraintlayout/widget/Barrier;->getMargin()I
@@ -881,38 +902,45 @@
 .method public clone()Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
     .locals 3
 
+    .line 2
     new-instance v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
     invoke-direct {v0}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;-><init>()V
 
+    .line 3
     iget-object v1, v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
 
     iget-object v2, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
 
     invoke-virtual {v1, v2}, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->copyFrom(Landroidx/constraintlayout/widget/ConstraintSet$Layout;)V
 
+    .line 4
     iget-object v1, v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
 
     iget-object v2, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->motion:Landroidx/constraintlayout/widget/ConstraintSet$Motion;
 
     invoke-virtual {v1, v2}, Landroidx/constraintlayout/widget/ConstraintSet$Motion;->copyFrom(Landroidx/constraintlayout/widget/ConstraintSet$Motion;)V
 
+    .line 5
     iget-object v1, v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
 
     iget-object v2, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->propertySet:Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;
 
     invoke-virtual {v1, v2}, Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;->copyFrom(Landroidx/constraintlayout/widget/ConstraintSet$PropertySet;)V
 
+    .line 6
     iget-object v1, v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
 
     iget-object v2, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->transform:Landroidx/constraintlayout/widget/ConstraintSet$Transform;
 
     invoke-virtual {v1, v2}, Landroidx/constraintlayout/widget/ConstraintSet$Transform;->copyFrom(Landroidx/constraintlayout/widget/ConstraintSet$Transform;)V
 
+    .line 7
     iget v1, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mViewId:I
 
     iput v1, v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mViewId:I
 
+    .line 8
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mDelta:Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;
 
     iput-object p0, v0, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->mDelta:Landroidx/constraintlayout/widget/ConstraintSet$Constraint$Delta;
@@ -923,6 +951,7 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->clone()Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
     move-result-object p0

@@ -106,14 +106,18 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/transition/Transition;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Landroidx/transition/ChangeTransform;->mUseOverlay:Z
 
+    .line 3
     iput-boolean v0, p0, Landroidx/transition/ChangeTransform;->mReparent:Z
 
+    .line 4
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -126,26 +130,32 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
+    .line 5
     invoke-direct {p0, p1, p2}, Landroidx/transition/Transition;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 v0, 0x1
 
+    .line 6
     iput-boolean v0, p0, Landroidx/transition/ChangeTransform;->mUseOverlay:Z
 
+    .line 7
     iput-boolean v0, p0, Landroidx/transition/ChangeTransform;->mReparent:Z
 
+    .line 8
     new-instance v1, Landroid/graphics/Matrix;
 
     invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v1, p0, Landroidx/transition/ChangeTransform;->mTempMatrix:Landroid/graphics/Matrix;
 
+    .line 9
     sget-object v1, Landroidx/transition/Styleable;->CHANGE_TRANSFORM:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 10
     check-cast p2, Lorg/xmlpull/v1/XmlPullParser;
 
     const-string v1, "reparentWithOverlay"
@@ -160,12 +170,14 @@
 
     const/4 v2, 0x0
 
+    .line 11
     invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/content/res/TypedArrayUtils;->getNamedBoolean(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IZ)Z
 
     move-result p2
 
     iput-boolean p2, p0, Landroidx/transition/ChangeTransform;->mReparent:Z
 
+    .line 12
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void

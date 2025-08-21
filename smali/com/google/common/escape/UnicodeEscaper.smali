@@ -217,14 +217,17 @@
 .method public escape(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, v1, v0}, Lcom/google/common/escape/UnicodeEscaper;->nextEscapeIndex(Ljava/lang/CharSequence;II)I
 
     move-result v1
@@ -233,6 +236,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p1, v1}, Lcom/google/common/escape/UnicodeEscaper;->escapeSlow(Ljava/lang/String;I)Ljava/lang/String;
 

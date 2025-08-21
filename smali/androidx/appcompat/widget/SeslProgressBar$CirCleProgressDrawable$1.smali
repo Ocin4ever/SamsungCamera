@@ -42,6 +42,7 @@
 .method public get(Landroidx/appcompat/widget/SeslProgressBar$CirCleProgressDrawable;)Ljava/lang/Integer;
     .locals 0
 
+    .line 2
     iget p0, p1, Landroidx/appcompat/widget/SeslProgressBar$CirCleProgressDrawable;->mProgress:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -54,6 +55,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/appcompat/widget/SeslProgressBar$CirCleProgressDrawable;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/SeslProgressBar$CirCleProgressDrawable$1;->get(Landroidx/appcompat/widget/SeslProgressBar$CirCleProgressDrawable;)Ljava/lang/Integer;
@@ -66,8 +68,10 @@
 .method public setValue(Landroidx/appcompat/widget/SeslProgressBar$CirCleProgressDrawable;I)V
     .locals 0
 
+    .line 2
     iput p2, p1, Landroidx/appcompat/widget/SeslProgressBar$CirCleProgressDrawable;->mProgress:I
 
+    .line 3
     iget-object p0, p0, Landroidx/appcompat/widget/SeslProgressBar$CirCleProgressDrawable$1;->this$1:Landroidx/appcompat/widget/SeslProgressBar$CirCleProgressDrawable;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
@@ -78,6 +82,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;I)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/appcompat/widget/SeslProgressBar$CirCleProgressDrawable;
 
     invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/SeslProgressBar$CirCleProgressDrawable$1;->setValue(Landroidx/appcompat/widget/SeslProgressBar$CirCleProgressDrawable;I)V

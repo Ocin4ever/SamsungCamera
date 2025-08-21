@@ -46,10 +46,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/sdk/ocr/OCRResult$AbsData;-><init>()V
 
     const-string v0, ""
 
+    .line 2
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult$CharData;->mText:Ljava/lang/String;
 
     return-void
@@ -58,12 +60,15 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/ocr/OCRResult$AbsData;-><init>(Landroid/os/Parcel;)V
 
     const-string v0, ""
 
+    .line 4
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult$CharData;->mText:Ljava/lang/String;
 
+    .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1

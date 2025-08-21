@@ -75,10 +75,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     new-instance v0, Landroidx/lifecycle/MediatorLiveData;
 
     invoke-direct {v0}, Landroidx/lifecycle/MediatorLiveData;-><init>()V
 
+    .line 4
     new-instance v1, Landroidx/lifecycle/Transformations$map$2;
 
     invoke-direct {v1, v0, p1}, Landroidx/lifecycle/Transformations$map$2;-><init>(Landroidx/lifecycle/MediatorLiveData;Landroidx/arch/core/util/Function;)V
@@ -118,10 +120,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Landroidx/lifecycle/MediatorLiveData;
 
     invoke-direct {v0}, Landroidx/lifecycle/MediatorLiveData;-><init>()V
 
+    .line 2
     new-instance v1, Landroidx/lifecycle/Transformations$map$1;
 
     invoke-direct {v1, v0, p1}, Landroidx/lifecycle/Transformations$map$1;-><init>(Landroidx/lifecycle/MediatorLiveData;Lq6/l;)V
@@ -146,10 +150,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     new-instance v0, Landroidx/lifecycle/MediatorLiveData;
 
     invoke-direct {v0}, Landroidx/lifecycle/MediatorLiveData;-><init>()V
 
+    .line 4
     new-instance v1, Landroidx/lifecycle/Transformations$switchMap$2;
 
     invoke-direct {v1, p1, v0}, Landroidx/lifecycle/Transformations$switchMap$2;-><init>(Landroidx/arch/core/util/Function;Landroidx/lifecycle/MediatorLiveData;)V
@@ -185,10 +191,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Landroidx/lifecycle/MediatorLiveData;
 
     invoke-direct {v0}, Landroidx/lifecycle/MediatorLiveData;-><init>()V
 
+    .line 2
     new-instance v1, Landroidx/lifecycle/Transformations$switchMap$1;
 
     invoke-direct {v1, p1, v0}, Landroidx/lifecycle/Transformations$switchMap$1;-><init>(Lq6/l;Landroidx/lifecycle/MediatorLiveData;)V

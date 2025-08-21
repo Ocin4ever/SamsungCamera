@@ -44,6 +44,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     new-instance p0, Landroidx/activity/result/IntentSenderRequest;
 
     invoke-direct {p0, p1}, Landroidx/activity/result/IntentSenderRequest;-><init>(Landroid/os/Parcel;)V
@@ -54,6 +55,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/activity/result/IntentSenderRequest$Companion$CREATOR$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/activity/result/IntentSenderRequest;
 
     move-result-object p0
@@ -64,6 +66,7 @@
 .method public newArray(I)[Landroidx/activity/result/IntentSenderRequest;
     .locals 0
 
+    .line 2
     new-array p0, p1, [Landroidx/activity/result/IntentSenderRequest;
 
     return-object p0
@@ -72,6 +75,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/activity/result/IntentSenderRequest$Companion$CREATOR$1;->newArray(I)[Landroidx/activity/result/IntentSenderRequest;
 
     move-result-object p0

@@ -52,6 +52,7 @@
 .method public find()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/JdkPattern$JdkMatcher;->matcher:Ljava/util/regex/Matcher;
 
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
@@ -64,6 +65,7 @@
 .method public find(I)Z
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/base/JdkPattern$JdkMatcher;->matcher:Ljava/util/regex/Matcher;
 
     invoke-virtual {p0, p1}, Ljava/util/regex/Matcher;->find(I)Z

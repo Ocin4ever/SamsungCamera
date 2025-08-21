@@ -28,14 +28,19 @@
 .method private constructor <init>(ILandroid/graphics/RectF;Landroid/graphics/RectF;I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput p1, p0, Lcom/sec/android/app/camera/util/DisplayCutoutUtil$DisplayCutoutAnimationInfo;->type:I
 
+    .line 4
     iput-object p2, p0, Lcom/sec/android/app/camera/util/DisplayCutoutUtil$DisplayCutoutAnimationInfo;->rect:Landroid/graphics/RectF;
 
+    .line 5
     iput-object p3, p0, Lcom/sec/android/app/camera/util/DisplayCutoutUtil$DisplayCutoutAnimationInfo;->innerRect:Landroid/graphics/RectF;
 
+    .line 6
     iput p4, p0, Lcom/sec/android/app/camera/util/DisplayCutoutUtil$DisplayCutoutAnimationInfo;->totalTimerStep:I
 
     return-void
@@ -44,6 +49,7 @@
 .method public synthetic constructor <init>(ILandroid/graphics/RectF;Landroid/graphics/RectF;ILcom/sec/android/app/camera/util/y0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/util/DisplayCutoutUtil$DisplayCutoutAnimationInfo;-><init>(ILandroid/graphics/RectF;Landroid/graphics/RectF;I)V
 
     return-void

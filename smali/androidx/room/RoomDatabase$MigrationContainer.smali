@@ -297,8 +297,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     check-cast p1, Ljava/lang/Iterable;
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -316,6 +318,7 @@
 
     check-cast v0, Landroidx/room/migration/Migration;
 
+    .line 3
     invoke-direct {p0, v0}, Landroidx/room/RoomDatabase$MigrationContainer;->addMigration(Landroidx/room/migration/Migration;)V
 
     goto :goto_0
@@ -331,6 +334,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 4
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -340,6 +344,7 @@
 
     aget-object v2, p1, v1
 
+    .line 5
     invoke-direct {p0, v2}, Landroidx/room/RoomDatabase$MigrationContainer;->addMigration(Landroidx/room/migration/Migration;)V
 
     add-int/lit8 v1, v1, 0x1

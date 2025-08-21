@@ -142,6 +142,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 4
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -167,14 +168,17 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lcom/google/common/graph/ImmutableValueGraph;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lcom/google/common/graph/ImmutableValueGraph;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/graph/ImmutableValueGraph;
 
@@ -282,6 +286,7 @@
 .method public bridge synthetic asGraph()Lcom/google/common/graph/Graph;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ImmutableValueGraph;->asGraph()Lcom/google/common/graph/ImmutableGraph;
 
     move-result-object p0
@@ -299,6 +304,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/graph/ImmutableGraph;
 
     invoke-direct {v0, p0}, Lcom/google/common/graph/ImmutableGraph;-><init>(Lcom/google/common/graph/BaseGraph;)V
@@ -309,6 +315,7 @@
 .method public bridge synthetic edgeValueOrDefault(Lcom/google/common/graph/EndpointPair;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/graph/StandardValueGraph;->edgeValueOrDefault(Lcom/google/common/graph/EndpointPair;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -319,6 +326,7 @@
 .method public bridge synthetic edgeValueOrDefault(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2, p3}, Lcom/google/common/graph/StandardValueGraph;->edgeValueOrDefault(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -329,6 +337,7 @@
 .method public bridge synthetic hasEdgeConnecting(Lcom/google/common/graph/EndpointPair;)Z
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/StandardValueGraph;->hasEdgeConnecting(Lcom/google/common/graph/EndpointPair;)Z
 
     move-result p0
@@ -339,6 +348,7 @@
 .method public bridge synthetic hasEdgeConnecting(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/google/common/graph/StandardValueGraph;->hasEdgeConnecting(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0

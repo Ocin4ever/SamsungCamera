@@ -59,6 +59,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/z1;->h:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/z1;->i:Landroid/util/SparseIntArray;
@@ -81,6 +82,7 @@
 
     const/4 v0, 0x4
 
+    .line 2
     aget-object v0, p3, v0
 
     move-object v4, v0
@@ -139,20 +141,25 @@
 
     const-wide/16 v0, -0x1
 
+    .line 3
     iput-wide v0, p0, Lp4/z1;->g:J
 
+    .line 4
     iget-object p1, p0, Lp4/y1;->b:Lcom/sec/android/app/camera/MainLayout;
 
     const/4 p3, 0x0
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 5
     iget-object p1, p0, Lp4/y1;->f:Landroidx/databinding/ViewStubProxy;
 
     invoke-virtual {p1, p0}, Landroidx/databinding/ViewStubProxy;->setContainingBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 6
     invoke-virtual {p0, p2}, Landroidx/databinding/ViewDataBinding;->setRootTag(Landroid/view/View;)V
 
+    .line 7
     invoke-virtual {p0}, Lp4/z1;->invalidateAll()V
 
     return-void

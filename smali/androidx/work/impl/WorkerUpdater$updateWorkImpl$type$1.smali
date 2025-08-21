@@ -56,6 +56,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/work/impl/model/WorkSpec;
 
     invoke-virtual {p0, p1}, Landroidx/work/impl/WorkerUpdater$updateWorkImpl$type$1;->invoke(Landroidx/work/impl/model/WorkSpec;)Ljava/lang/String;
@@ -72,6 +73,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p1}, Landroidx/work/impl/model/WorkSpec;->isPeriodic()Z
 
     move-result p0

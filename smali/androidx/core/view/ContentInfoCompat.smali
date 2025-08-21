@@ -148,6 +148,7 @@
 
     move-object v3, v2
 
+    .line 14
     :goto_0
     invoke-virtual {p0}, Landroid/content/ClipData;->getItemCount()I
 
@@ -155,10 +156,12 @@
 
     if-ge v1, v4, :cond_3
 
+    .line 15
     invoke-virtual {p0, v1}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
 
     move-result-object v4
 
+    .line 16
     invoke-interface {p1, v4}, Landroidx/core/util/Predicate;->test(Ljava/lang/Object;)Z
 
     move-result v5
@@ -167,10 +170,12 @@
 
     if-nez v2, :cond_0
 
+    .line 17
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
+    .line 18
     :cond_0
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -179,10 +184,12 @@
     :cond_1
     if-nez v3, :cond_2
 
+    .line 19
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
+    .line 20
     :cond_2
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -194,6 +201,7 @@
     :cond_3
     if-nez v2, :cond_4
 
+    .line 21
     invoke-static {v0, p0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object p0
@@ -203,12 +211,14 @@
     :cond_4
     if-nez v3, :cond_5
 
+    .line 22
     invoke-static {p0, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object p0
 
     return-object p0
 
+    .line 23
     :cond_5
     invoke-virtual {p0}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
 
@@ -218,6 +228,7 @@
 
     move-result-object p1
 
+    .line 24
     invoke-virtual {p0}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
 
     move-result-object p0
@@ -226,6 +237,7 @@
 
     move-result-object p0
 
+    .line 25
     invoke-static {p1, p0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object p0
@@ -249,6 +261,7 @@
         }
     .end annotation
 
+    .line 26
     invoke-static {p0, p1}, Landroidx/core/view/ContentInfoCompat$Api31Impl;->partition(Landroid/view/ContentInfo;Ljava/util/function/Predicate;)Landroid/util/Pair;
 
     move-result-object p0
@@ -409,12 +422,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/core/view/ContentInfoCompat;->mCompat:Landroidx/core/view/ContentInfoCompat$Compat;
 
     invoke-interface {v0}, Landroidx/core/view/ContentInfoCompat$Compat;->getClip()Landroid/content/ClipData;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Landroid/content/ClipData;->getItemCount()I
 
     move-result v1
@@ -427,6 +442,7 @@
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-virtual {v0, v1}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
 
     move-result-object v0
@@ -449,6 +465,7 @@
 
     move-object p0, v3
 
+    .line 4
     :cond_1
     invoke-static {v0, p0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
@@ -456,32 +473,38 @@
 
     return-object p0
 
+    .line 5
     :cond_2
     invoke-static {v0, p1}, Landroidx/core/view/ContentInfoCompat;->partition(Landroid/content/ClipData;Landroidx/core/util/Predicate;)Landroid/util/Pair;
 
     move-result-object p1
 
+    .line 6
     iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     if-nez v0, :cond_3
 
+    .line 7
     invoke-static {v3, p0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object p0
 
     return-object p0
 
+    .line 8
     :cond_3
     iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     if-nez v0, :cond_4
 
+    .line 9
     invoke-static {p0, v3}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object p0
 
     return-object p0
 
+    .line 10
     :cond_4
     new-instance v0, Landroidx/core/view/ContentInfoCompat$Builder;
 
@@ -491,6 +514,7 @@
 
     check-cast v1, Landroid/content/ClipData;
 
+    .line 11
     invoke-virtual {v0, v1}, Landroidx/core/view/ContentInfoCompat$Builder;->setClip(Landroid/content/ClipData;)Landroidx/core/view/ContentInfoCompat$Builder;
 
     move-result-object v0
@@ -507,6 +531,7 @@
 
     check-cast p0, Landroid/content/ClipData;
 
+    .line 12
     invoke-virtual {v1, p0}, Landroidx/core/view/ContentInfoCompat$Builder;->setClip(Landroid/content/ClipData;)Landroidx/core/view/ContentInfoCompat$Builder;
 
     move-result-object p0
@@ -515,6 +540,7 @@
 
     move-result-object p0
 
+    .line 13
     invoke-static {v0, p0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object p0

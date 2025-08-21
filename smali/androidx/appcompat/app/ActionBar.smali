@@ -368,24 +368,28 @@
 .method public setHomeActionContentDescription(I)V
     .locals 0
 
+    .line 1
     return-void
 .end method
 
 .method public setHomeActionContentDescription(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 2
     return-void
 .end method
 
 .method public setHomeAsUpIndicator(I)V
     .locals 0
 
+    .line 1
     return-void
 .end method
 
 .method public setHomeAsUpIndicator(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 2
     return-void
 .end method
 

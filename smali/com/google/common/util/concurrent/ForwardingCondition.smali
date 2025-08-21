@@ -25,6 +25,7 @@
 .method public await()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingCondition;->delegate()Ljava/util/concurrent/locks/Condition;
 
     move-result-object p0
@@ -37,6 +38,7 @@
 .method public await(JLjava/util/concurrent/TimeUnit;)Z
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingCondition;->delegate()Ljava/util/concurrent/locks/Condition;
 
     move-result-object p0

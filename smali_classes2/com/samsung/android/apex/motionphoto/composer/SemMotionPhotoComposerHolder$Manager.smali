@@ -229,6 +229,7 @@
 .method public getComposer(I)Lcom/samsung/android/apex/motionphoto/composer/RemoteComposer;
     .locals 0
 
+    .line 8
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder$Manager;->composers:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -239,6 +240,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 9
     invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -256,6 +258,7 @@
 .method public getComposer(Ljava/lang/String;)Lcom/samsung/android/apex/motionphoto/composer/RemoteComposer;
     .locals 5
 
+    .line 1
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -300,6 +303,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     :goto_0
     iget-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder$Manager;->composers:Landroid/util/SparseArray;
 
@@ -317,6 +321,7 @@
 
     if-nez v0, :cond_1
 
+    .line 3
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -339,6 +344,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     iget-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder$Manager;->cv:Landroid/os/ConditionVariable;
 
     const-wide/16 v1, 0x7d0
@@ -351,6 +357,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/util/concurrent/TimeoutException;
 
@@ -360,6 +367,7 @@
 
     throw p0
 
+    .line 6
     :cond_1
     invoke-static {}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder;->access$000()Ljava/lang/String;
 
@@ -381,6 +389,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     iget-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposerHolder$Manager;->tags:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;

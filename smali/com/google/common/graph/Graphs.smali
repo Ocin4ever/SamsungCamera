@@ -80,6 +80,7 @@
     :goto_0
     const-string v1, "Not true that %s is non-negative."
 
+    .line 1
     invoke-static {v0, v1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
     return p0
@@ -104,6 +105,7 @@
     :goto_0
     const-string v1, "Not true that %s is non-negative."
 
+    .line 2
     invoke-static {v0, v1, p0, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
 
     return-wide p0
@@ -124,6 +126,7 @@
     :goto_0
     const-string v1, "Not true that %s is positive."
 
+    .line 1
     invoke-static {v0, v1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
     return p0
@@ -148,6 +151,7 @@
     :goto_0
     const-string v1, "Not true that %s is positive."
 
+    .line 2
     invoke-static {v0, v1, p0, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
 
     return-wide p0
@@ -167,6 +171,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/graph/GraphBuilder;->from(Lcom/google/common/graph/Graph;)Lcom/google/common/graph/GraphBuilder;
 
     move-result-object v0
@@ -187,6 +192,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->nodes()Ljava/util/Set;
 
     move-result-object v1
@@ -206,10 +212,12 @@
 
     move-result-object v2
 
+    .line 3
     invoke-interface {v0, v2}, Lcom/google/common/graph/MutableGraph;->addNode(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->edges()Ljava/util/Set;
 
@@ -232,6 +240,7 @@
 
     check-cast v1, Lcom/google/common/graph/EndpointPair;
 
+    .line 5
     invoke-virtual {v1}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object v2
@@ -264,10 +273,12 @@
         }
     .end annotation
 
+    .line 14
     invoke-static {p0}, Lcom/google/common/graph/NetworkBuilder;->from(Lcom/google/common/graph/Network;)Lcom/google/common/graph/NetworkBuilder;
 
     move-result-object v0
 
+    .line 15
     invoke-interface {p0}, Lcom/google/common/graph/Network;->nodes()Ljava/util/Set;
 
     move-result-object v1
@@ -280,6 +291,7 @@
 
     move-result-object v0
 
+    .line 16
     invoke-interface {p0}, Lcom/google/common/graph/Network;->edges()Ljava/util/Set;
 
     move-result-object v1
@@ -292,10 +304,12 @@
 
     move-result-object v0
 
+    .line 17
     invoke-virtual {v0}, Lcom/google/common/graph/NetworkBuilder;->build()Lcom/google/common/graph/MutableNetwork;
 
     move-result-object v0
 
+    .line 18
     invoke-interface {p0}, Lcom/google/common/graph/Network;->nodes()Ljava/util/Set;
 
     move-result-object v1
@@ -315,10 +329,12 @@
 
     move-result-object v2
 
+    .line 19
     invoke-interface {v0, v2}, Lcom/google/common/graph/MutableNetwork;->addNode(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 20
     :cond_0
     invoke-interface {p0}, Lcom/google/common/graph/Network;->edges()Ljava/util/Set;
 
@@ -339,10 +355,12 @@
 
     move-result-object v2
 
+    .line 21
     invoke-interface {p0, v2}, Lcom/google/common/graph/Network;->incidentNodes(Ljava/lang/Object;)Lcom/google/common/graph/EndpointPair;
 
     move-result-object v3
 
+    .line 22
     invoke-virtual {v3}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object v4
@@ -375,6 +393,7 @@
         }
     .end annotation
 
+    .line 6
     invoke-static {p0}, Lcom/google/common/graph/ValueGraphBuilder;->from(Lcom/google/common/graph/ValueGraph;)Lcom/google/common/graph/ValueGraphBuilder;
 
     move-result-object v0
@@ -395,6 +414,7 @@
 
     move-result-object v0
 
+    .line 7
     invoke-interface {p0}, Lcom/google/common/graph/ValueGraph;->nodes()Ljava/util/Set;
 
     move-result-object v1
@@ -414,10 +434,12 @@
 
     move-result-object v2
 
+    .line 8
     invoke-interface {v0, v2}, Lcom/google/common/graph/MutableValueGraph;->addNode(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 9
     :cond_0
     invoke-interface {p0}, Lcom/google/common/graph/ValueGraph;->edges()Ljava/util/Set;
 
@@ -440,14 +462,17 @@
 
     check-cast v2, Lcom/google/common/graph/EndpointPair;
 
+    .line 10
     invoke-virtual {v2}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 11
     invoke-virtual {v2}, Lcom/google/common/graph/EndpointPair;->nodeV()Ljava/lang/Object;
 
     move-result-object v4
 
+    .line 12
     invoke-virtual {v2}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object v5
@@ -464,6 +489,7 @@
 
     invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 13
     invoke-interface {v0, v3, v4, v2}, Lcom/google/common/graph/MutableValueGraph;->putEdgeValue(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
@@ -484,6 +510,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->edges()Ljava/util/Set;
 
     move-result-object v0
@@ -498,6 +525,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->isDirected()Z
 
@@ -519,6 +547,7 @@
 
     return v3
 
+    .line 3
     :cond_1
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->nodes()Ljava/util/Set;
 
@@ -532,6 +561,7 @@
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->nodes()Ljava/util/Set;
 
     move-result-object v2
@@ -553,6 +583,7 @@
 
     const/4 v5, 0x0
 
+    .line 5
     invoke-static {p0, v0, v4, v5}, Lcom/google/common/graph/Graphs;->subgraphHasCycle(Lcom/google/common/graph/Graph;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
@@ -575,18 +606,21 @@
         }
     .end annotation
 
+    .line 6
     invoke-interface {p0}, Lcom/google/common/graph/Network;->isDirected()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 7
     invoke-interface {p0}, Lcom/google/common/graph/Network;->allowsParallelEdges()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 8
     invoke-interface {p0}, Lcom/google/common/graph/Network;->edges()Ljava/util/Set;
 
     move-result-object v0
@@ -613,6 +647,7 @@
 
     return p0
 
+    .line 9
     :cond_0
     invoke-interface {p0}, Lcom/google/common/graph/Network;->asGraph()Lcom/google/common/graph/Graph;
 
@@ -641,10 +676,12 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p1, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/graph/GraphBuilder;->from(Lcom/google/common/graph/Graph;)Lcom/google/common/graph/GraphBuilder;
 
     move-result-object v0
@@ -667,6 +704,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-static {p0}, Lcom/google/common/graph/GraphBuilder;->from(Lcom/google/common/graph/Graph;)Lcom/google/common/graph/GraphBuilder;
 
@@ -676,6 +714,7 @@
 
     move-result-object v0
 
+    .line 4
     :goto_0
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -692,10 +731,12 @@
 
     move-result-object v1
 
+    .line 5
     invoke-interface {v0, v1}, Lcom/google/common/graph/MutableGraph;->addNode(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 6
     :cond_1
     invoke-interface {v0}, Lcom/google/common/graph/Graph;->nodes()Ljava/util/Set;
 
@@ -716,6 +757,7 @@
 
     move-result-object v1
 
+    .line 7
     invoke-interface {p0, v1}, Lcom/google/common/graph/Graph;->successors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v2
@@ -736,6 +778,7 @@
 
     move-result-object v3
 
+    .line 8
     invoke-interface {v0}, Lcom/google/common/graph/Graph;->nodes()Ljava/util/Set;
 
     move-result-object v4
@@ -746,6 +789,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 9
     invoke-interface {v0, v1, v3}, Lcom/google/common/graph/MutableGraph;->putEdge(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     goto :goto_2
@@ -772,10 +816,12 @@
         }
     .end annotation
 
+    .line 20
     instance-of v0, p1, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 21
     invoke-static {p0}, Lcom/google/common/graph/NetworkBuilder;->from(Lcom/google/common/graph/Network;)Lcom/google/common/graph/NetworkBuilder;
 
     move-result-object v0
@@ -798,6 +844,7 @@
 
     goto :goto_0
 
+    .line 22
     :cond_0
     invoke-static {p0}, Lcom/google/common/graph/NetworkBuilder;->from(Lcom/google/common/graph/Network;)Lcom/google/common/graph/NetworkBuilder;
 
@@ -807,6 +854,7 @@
 
     move-result-object v0
 
+    .line 23
     :goto_0
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -823,10 +871,12 @@
 
     move-result-object v1
 
+    .line 24
     invoke-interface {v0, v1}, Lcom/google/common/graph/MutableNetwork;->addNode(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 25
     :cond_1
     invoke-interface {v0}, Lcom/google/common/graph/Network;->nodes()Ljava/util/Set;
 
@@ -847,6 +897,7 @@
 
     move-result-object v1
 
+    .line 26
     invoke-interface {p0, v1}, Lcom/google/common/graph/Network;->outEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v2
@@ -867,6 +918,7 @@
 
     move-result-object v3
 
+    .line 27
     invoke-interface {p0, v3}, Lcom/google/common/graph/Network;->incidentNodes(Ljava/lang/Object;)Lcom/google/common/graph/EndpointPair;
 
     move-result-object v4
@@ -875,6 +927,7 @@
 
     move-result-object v4
 
+    .line 28
     invoke-interface {v0}, Lcom/google/common/graph/Network;->nodes()Ljava/util/Set;
 
     move-result-object v5
@@ -885,6 +938,7 @@
 
     if-eqz v5, :cond_3
 
+    .line 29
     invoke-interface {v0, v1, v4, v3}, Lcom/google/common/graph/MutableNetwork;->addEdge(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
     goto :goto_2
@@ -911,10 +965,12 @@
         }
     .end annotation
 
+    .line 10
     instance-of v0, p1, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 11
     invoke-static {p0}, Lcom/google/common/graph/ValueGraphBuilder;->from(Lcom/google/common/graph/ValueGraph;)Lcom/google/common/graph/ValueGraphBuilder;
 
     move-result-object v0
@@ -937,6 +993,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_0
     invoke-static {p0}, Lcom/google/common/graph/ValueGraphBuilder;->from(Lcom/google/common/graph/ValueGraph;)Lcom/google/common/graph/ValueGraphBuilder;
 
@@ -946,6 +1003,7 @@
 
     move-result-object v0
 
+    .line 13
     :goto_0
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -962,10 +1020,12 @@
 
     move-result-object v1
 
+    .line 14
     invoke-interface {v0, v1}, Lcom/google/common/graph/MutableValueGraph;->addNode(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 15
     :cond_1
     invoke-interface {v0}, Lcom/google/common/graph/ValueGraph;->nodes()Ljava/util/Set;
 
@@ -986,6 +1046,7 @@
 
     move-result-object v1
 
+    .line 16
     invoke-interface {p0, v1}, Lcom/google/common/graph/ValueGraph;->successors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v2
@@ -1006,6 +1067,7 @@
 
     move-result-object v3
 
+    .line 17
     invoke-interface {v0}, Lcom/google/common/graph/ValueGraph;->nodes()Ljava/util/Set;
 
     move-result-object v4
@@ -1018,12 +1080,14 @@
 
     const/4 v4, 0x0
 
+    .line 18
     invoke-interface {p0, v1, v3, v4}, Lcom/google/common/graph/ValueGraph;->edgeValueOrDefault(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
     invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 19
     invoke-interface {v0, v1, v3, v4}, Lcom/google/common/graph/MutableValueGraph;->putEdgeValue(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_2
@@ -1333,12 +1397,14 @@
         }
     .end annotation
 
+    .line 13
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair;->isOrdered()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 14
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair;->target()Ljava/lang/Object;
 
     move-result-object v0
@@ -1369,6 +1435,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->isDirected()Z
 
     move-result v0
@@ -1377,11 +1444,13 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     instance-of v0, p0, Lcom/google/common/graph/Graphs$TransposedGraph;
 
     if-eqz v0, :cond_1
 
+    .line 3
     check-cast p0, Lcom/google/common/graph/Graphs$TransposedGraph;
 
     invoke-static {p0}, Lcom/google/common/graph/Graphs$TransposedGraph;->access$000(Lcom/google/common/graph/Graphs$TransposedGraph;)Lcom/google/common/graph/Graph;
@@ -1390,6 +1459,7 @@
 
     return-object p0
 
+    .line 4
     :cond_1
     new-instance v0, Lcom/google/common/graph/Graphs$TransposedGraph;
 
@@ -1414,6 +1484,7 @@
         }
     .end annotation
 
+    .line 9
     invoke-interface {p0}, Lcom/google/common/graph/Network;->isDirected()Z
 
     move-result v0
@@ -1422,11 +1493,13 @@
 
     return-object p0
 
+    .line 10
     :cond_0
     instance-of v0, p0, Lcom/google/common/graph/Graphs$TransposedNetwork;
 
     if-eqz v0, :cond_1
 
+    .line 11
     check-cast p0, Lcom/google/common/graph/Graphs$TransposedNetwork;
 
     invoke-static {p0}, Lcom/google/common/graph/Graphs$TransposedNetwork;->access$200(Lcom/google/common/graph/Graphs$TransposedNetwork;)Lcom/google/common/graph/Network;
@@ -1435,6 +1508,7 @@
 
     return-object p0
 
+    .line 12
     :cond_1
     new-instance v0, Lcom/google/common/graph/Graphs$TransposedNetwork;
 
@@ -1459,6 +1533,7 @@
         }
     .end annotation
 
+    .line 5
     invoke-interface {p0}, Lcom/google/common/graph/ValueGraph;->isDirected()Z
 
     move-result v0
@@ -1467,11 +1542,13 @@
 
     return-object p0
 
+    .line 6
     :cond_0
     instance-of v0, p0, Lcom/google/common/graph/Graphs$TransposedValueGraph;
 
     if-eqz v0, :cond_1
 
+    .line 7
     check-cast p0, Lcom/google/common/graph/Graphs$TransposedValueGraph;
 
     invoke-static {p0}, Lcom/google/common/graph/Graphs$TransposedValueGraph;->access$100(Lcom/google/common/graph/Graphs$TransposedValueGraph;)Lcom/google/common/graph/ValueGraph;
@@ -1480,6 +1557,7 @@
 
     return-object p0
 
+    .line 8
     :cond_1
     new-instance v0, Lcom/google/common/graph/Graphs$TransposedValueGraph;
 

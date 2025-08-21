@@ -35,6 +35,7 @@
 .method public constructor <init>(Landroid/app/NotificationChannelGroup;)V
     .locals 1
 
+    .line 4
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -56,30 +57,35 @@
         }
     .end annotation
 
+    .line 5
     invoke-virtual {p1}, Landroid/app/NotificationChannelGroup;->getId()Ljava/lang/String;
 
     move-result-object p2
 
     invoke-direct {p0, p2}, Landroidx/core/app/NotificationChannelGroupCompat;-><init>(Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {p1}, Landroid/app/NotificationChannelGroup;->getName()Ljava/lang/CharSequence;
 
     move-result-object p2
 
     iput-object p2, p0, Landroidx/core/app/NotificationChannelGroupCompat;->mName:Ljava/lang/CharSequence;
 
+    .line 7
     invoke-virtual {p1}, Landroid/app/NotificationChannelGroup;->getDescription()Ljava/lang/String;
 
     move-result-object p2
 
     iput-object p2, p0, Landroidx/core/app/NotificationChannelGroupCompat;->mDescription:Ljava/lang/String;
 
+    .line 8
     invoke-virtual {p1}, Landroid/app/NotificationChannelGroup;->isBlocked()Z
 
     move-result p2
 
     iput-boolean p2, p0, Landroidx/core/app/NotificationChannelGroupCompat;->mBlocked:Z
 
+    .line 9
     invoke-virtual {p1}, Landroid/app/NotificationChannelGroup;->getChannels()Ljava/util/List;
 
     move-result-object p1
@@ -96,14 +102,17 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/core/app/NotificationChannelGroupCompat;->mChannels:Ljava/util/List;
 
+    .line 3
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

@@ -64,6 +64,7 @@
 .method public a()Landroid/graphics/Point;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lco/polarr/mgcsc/f/h/i$a;->f:Landroid/graphics/Point;
 
     return-object p0
@@ -72,6 +73,7 @@
 .method public a(Landroid/graphics/Point;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lco/polarr/mgcsc/f/h/i$a;->f:Landroid/graphics/Point;
 
     return-void
@@ -80,6 +82,7 @@
 .method public a([BLandroid/graphics/Point;)V
     .locals 0
 
+    .line 3
     iput-object p1, p0, Lco/polarr/mgcsc/f/h/i$a;->a:[B
 
     iput-object p2, p0, Lco/polarr/mgcsc/f/h/i$a;->f:Landroid/graphics/Point;

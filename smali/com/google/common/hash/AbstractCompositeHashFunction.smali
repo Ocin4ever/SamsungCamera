@@ -61,6 +61,7 @@
 .method public newHasher()Lcom/google/common/hash/Hasher;
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/hash/AbstractCompositeHashFunction;->functions:[Lcom/google/common/hash/HashFunction;
 
     array-length v0, v0
@@ -72,6 +73,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 2
     iget-object v3, p0, Lcom/google/common/hash/AbstractCompositeHashFunction;->functions:[Lcom/google/common/hash/HashFunction;
 
     aget-object v3, v3, v2
@@ -86,6 +88,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-direct {p0, v1}, Lcom/google/common/hash/AbstractCompositeHashFunction;->fromHashers([Lcom/google/common/hash/Hasher;)Lcom/google/common/hash/Hasher;
 
@@ -108,9 +111,11 @@
     :cond_0
     move v1, v0
 
+    .line 4
     :goto_0
     invoke-static {v1}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 5
     iget-object v1, p0, Lcom/google/common/hash/AbstractCompositeHashFunction;->functions:[Lcom/google/common/hash/HashFunction;
 
     array-length v1, v1
@@ -120,6 +125,7 @@
     :goto_1
     if-ge v0, v1, :cond_1
 
+    .line 6
     iget-object v3, p0, Lcom/google/common/hash/AbstractCompositeHashFunction;->functions:[Lcom/google/common/hash/HashFunction;
 
     aget-object v3, v3, v0
@@ -134,6 +140,7 @@
 
     goto :goto_1
 
+    .line 7
     :cond_1
     invoke-direct {p0, v2}, Lcom/google/common/hash/AbstractCompositeHashFunction;->fromHashers([Lcom/google/common/hash/Hasher;)Lcom/google/common/hash/Hasher;
 

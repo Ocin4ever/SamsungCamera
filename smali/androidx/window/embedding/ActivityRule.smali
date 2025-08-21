@@ -33,10 +33,13 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0}, Landroidx/window/embedding/EmbeddingRule;-><init>()V
 
+    .line 3
     iput-boolean p2, p0, Landroidx/window/embedding/ActivityRule;->alwaysExpand:Z
 
+    .line 4
     invoke-static {p1}, Lg6/w;->W(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object p1
@@ -55,6 +58,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
     invoke-direct {p0, p1, p2}, Landroidx/window/embedding/ActivityRule;-><init>(Ljava/util/Set;Z)V
 

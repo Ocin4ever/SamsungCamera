@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static sAttachInfoClass:Ljava/lang/Class;
+.field private static sAttachInfoClass:Ljava/lang/Class; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -24,13 +24,13 @@
     .end annotation
 .end field
 
-.field private static sAttachInfoField:Ljava/lang/reflect/Field;
+.field private static sAttachInfoField:Ljava/lang/reflect/Field; = null
 
-.field private static sGetViewRootImplMethod:Ljava/lang/reflect/Method;
+.field private static sGetViewRootImplMethod:Ljava/lang/reflect/Method; = null
 
-.field private static sVisibleInsetsField:Ljava/lang/reflect/Field;
+.field private static sVisibleInsetsField:Ljava/lang/reflect/Field; = null
 
-.field private static sVisibleRectReflectionFetched:Z
+.field private static sVisibleRectReflectionFetched:Z = false
 
 
 # instance fields
@@ -55,12 +55,15 @@
 .method public constructor <init>(Landroidx/core/view/WindowInsetsCompat;Landroid/view/WindowInsets;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/core/view/WindowInsetsCompat$Impl;-><init>(Landroidx/core/view/WindowInsetsCompat;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mSystemWindowInsets:Landroidx/core/graphics/Insets;
 
+    .line 3
     iput-object p2, p0, Landroidx/core/view/WindowInsetsCompat$Impl20;->mPlatformInsets:Landroid/view/WindowInsets;
 
     return-void
@@ -69,6 +72,7 @@
 .method public constructor <init>(Landroidx/core/view/WindowInsetsCompat;Landroidx/core/view/WindowInsetsCompat$Impl20;)V
     .locals 1
 
+    .line 4
     new-instance v0, Landroid/view/WindowInsets;
 
     iget-object p2, p2, Landroidx/core/view/WindowInsetsCompat$Impl20;->mPlatformInsets:Landroid/view/WindowInsets;
@@ -83,6 +87,7 @@
 .method private getInsets(IZ)Landroidx/core/graphics/Insets;
     .locals 3
 
+    .line 2
     sget-object v0, Landroidx/core/graphics/Insets;->NONE:Landroidx/core/graphics/Insets;
 
     const/4 v1, 0x1
@@ -98,6 +103,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_0
     invoke-virtual {p0, v1, p2}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getInsetsForType(IZ)Landroidx/core/graphics/Insets;
 
@@ -305,6 +311,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/core/view/WindowInsetsCompat$Impl20;->getInsets(IZ)Landroidx/core/graphics/Insets;
 
     move-result-object p0

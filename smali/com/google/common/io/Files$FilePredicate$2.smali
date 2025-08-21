@@ -30,6 +30,7 @@
 .method public apply(Ljava/io/File;)Z
     .locals 0
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/File;->isFile()Z
 
     move-result p0
@@ -40,6 +41,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/io/File;
 
     invoke-virtual {p0, p1}, Lcom/google/common/io/Files$FilePredicate$2;->apply(Ljava/io/File;)Z

@@ -63,6 +63,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1, p2}, Lcom/google/common/base/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -75,6 +76,7 @@
     .annotation runtime Lcom/google/common/util/concurrent/ParametricNullness;
     .end annotation
 
+    .line 1
     check-cast p1, Lcom/google/common/base/Function;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/util/concurrent/AbstractCatchingFuture$CatchingFuture;->doFallback(Lcom/google/common/base/Function;Ljava/lang/Throwable;)Ljava/lang/Object;

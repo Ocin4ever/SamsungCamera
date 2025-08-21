@@ -1155,26 +1155,31 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     new-instance v0, Lcom/sec/android/app/camera/setting/CameraSettingDialog;
 
     invoke-direct {v0}, Lcom/sec/android/app/camera/setting/CameraSettingDialog;-><init>()V
 
+    .line 2
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     const-string v2, "id"
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result p0
 
     invoke-virtual {v1, v2, p0}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
+    .line 4
     invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     return-object v0
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1188,16 +1193,19 @@
 
     if-eqz p0, :cond_0
 
+    .line 6
     new-instance v0, Lcom/sec/android/app/camera/setting/CameraSettingDialog;
 
     invoke-direct {v0}, Lcom/sec/android/app/camera/setting/CameraSettingDialog;-><init>()V
 
+    .line 7
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     const-string v2, "id"
 
+    .line 8
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result p0
@@ -1206,16 +1214,20 @@
 
     const-string p0, "title"
 
+    .line 9
     invoke-virtual {v1, p0, p1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p0, "msg"
 
+    .line 10
     invoke-virtual {v1, p0, p2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 11
     invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     return-object v0
 
+    .line 12
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

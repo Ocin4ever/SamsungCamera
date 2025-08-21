@@ -50,6 +50,7 @@
 .method public constructor <init>(Li0/l;Landroid/accounts/Account;Landroid/os/Looper;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lh0/d$a;->a:Li0/l;
@@ -62,6 +63,7 @@
 .method public synthetic constructor <init>(Li0/l;Landroid/accounts/Account;Landroid/os/Looper;Lh0/k;)V
     .locals 0
 
+    .line 2
     const/4 p2, 0x0
 
     invoke-direct {p0, p1, p2, p3}, Lh0/d$a;-><init>(Li0/l;Landroid/accounts/Account;Landroid/os/Looper;)V

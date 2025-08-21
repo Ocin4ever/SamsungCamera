@@ -477,6 +477,7 @@
 .method public getCurrentMaker()Lcom/samsung/android/camera/core2/MakerInterface;
     .locals 1
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/request/MakerHolder;->mMakerList:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/engine/request/MakerHolder;->getTargetCameraId()I
@@ -503,6 +504,7 @@
 .method public getCurrentMaker(I)Lcom/samsung/android/camera/core2/MakerInterface;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/request/MakerHolder;->mMakerList:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/request/CameraId;->getDeviceId(I)I
@@ -537,6 +539,7 @@
 .method public getMakerPublicSettings()Lcom/sec/android/app/camera/engine/request/MakerPublicSettings;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/engine/request/MakerHolder;->getTargetCameraId()I
 
     move-result v0
@@ -551,6 +554,7 @@
 .method public getMakerPublicSettings(I)Lcom/sec/android/app/camera/engine/request/MakerPublicSettings;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/request/MakerHolder;->mMakerSettingsList:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/request/CameraId;->getDeviceId(I)I

@@ -48,6 +48,7 @@
 .method public read()I
     .locals 3
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/google/common/io/BaseEncoding$3;->val$delegate:Ljava/io/Reader;
 
@@ -59,6 +60,7 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/io/BaseEncoding$3;->val$toIgnore:Ljava/lang/String;
 
     int-to-char v2, v0
@@ -76,6 +78,7 @@
 .method public read([CII)I
     .locals 0
 
+    .line 3
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

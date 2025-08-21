@@ -113,52 +113,67 @@
 .method public constructor <init>(Landroidx/constraintlayout/core/SolverVariable$Type;Ljava/lang/String;)V
     .locals 3
 
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p2, -0x1
 
+    .line 18
     iput p2, p0, Landroidx/constraintlayout/core/SolverVariable;->id:I
 
+    .line 19
     iput p2, p0, Landroidx/constraintlayout/core/SolverVariable;->definitionId:I
 
     const/4 v0, 0x0
 
+    .line 20
     iput v0, p0, Landroidx/constraintlayout/core/SolverVariable;->strength:I
 
+    .line 21
     iput-boolean v0, p0, Landroidx/constraintlayout/core/SolverVariable;->isFinalValue:Z
 
     const/16 v1, 0x9
 
     new-array v2, v1, [F
 
+    .line 22
     iput-object v2, p0, Landroidx/constraintlayout/core/SolverVariable;->strengthVector:[F
 
     new-array v1, v1, [F
 
+    .line 23
     iput-object v1, p0, Landroidx/constraintlayout/core/SolverVariable;->goalStrengthVector:[F
 
     const/16 v1, 0x10
 
     new-array v1, v1, [Landroidx/constraintlayout/core/ArrayRow;
 
+    .line 24
     iput-object v1, p0, Landroidx/constraintlayout/core/SolverVariable;->mClientEquations:[Landroidx/constraintlayout/core/ArrayRow;
 
+    .line 25
     iput v0, p0, Landroidx/constraintlayout/core/SolverVariable;->mClientEquationsCount:I
 
+    .line 26
     iput v0, p0, Landroidx/constraintlayout/core/SolverVariable;->usageInRowCount:I
 
+    .line 27
     iput-boolean v0, p0, Landroidx/constraintlayout/core/SolverVariable;->isSynonym:Z
 
+    .line 28
     iput p2, p0, Landroidx/constraintlayout/core/SolverVariable;->synonym:I
 
     const/4 p2, 0x0
 
+    .line 29
     iput p2, p0, Landroidx/constraintlayout/core/SolverVariable;->synonymDelta:F
 
     const/4 p2, 0x0
 
+    .line 30
     iput-object p2, p0, Landroidx/constraintlayout/core/SolverVariable;->inRows:Ljava/util/HashSet;
 
+    .line 31
     iput-object p1, p0, Landroidx/constraintlayout/core/SolverVariable;->mType:Landroidx/constraintlayout/core/SolverVariable$Type;
 
     return-void
@@ -167,54 +182,70 @@
 .method public constructor <init>(Ljava/lang/String;Landroidx/constraintlayout/core/SolverVariable$Type;)V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Landroidx/constraintlayout/core/SolverVariable;->id:I
 
+    .line 3
     iput v0, p0, Landroidx/constraintlayout/core/SolverVariable;->definitionId:I
 
     const/4 v1, 0x0
 
+    .line 4
     iput v1, p0, Landroidx/constraintlayout/core/SolverVariable;->strength:I
 
+    .line 5
     iput-boolean v1, p0, Landroidx/constraintlayout/core/SolverVariable;->isFinalValue:Z
 
     const/16 v2, 0x9
 
     new-array v3, v2, [F
 
+    .line 6
     iput-object v3, p0, Landroidx/constraintlayout/core/SolverVariable;->strengthVector:[F
 
     new-array v2, v2, [F
 
+    .line 7
     iput-object v2, p0, Landroidx/constraintlayout/core/SolverVariable;->goalStrengthVector:[F
 
     const/16 v2, 0x10
 
     new-array v2, v2, [Landroidx/constraintlayout/core/ArrayRow;
 
+    .line 8
     iput-object v2, p0, Landroidx/constraintlayout/core/SolverVariable;->mClientEquations:[Landroidx/constraintlayout/core/ArrayRow;
 
+    .line 9
     iput v1, p0, Landroidx/constraintlayout/core/SolverVariable;->mClientEquationsCount:I
 
+    .line 10
     iput v1, p0, Landroidx/constraintlayout/core/SolverVariable;->usageInRowCount:I
 
+    .line 11
     iput-boolean v1, p0, Landroidx/constraintlayout/core/SolverVariable;->isSynonym:Z
 
+    .line 12
     iput v0, p0, Landroidx/constraintlayout/core/SolverVariable;->synonym:I
 
     const/4 v0, 0x0
 
+    .line 13
     iput v0, p0, Landroidx/constraintlayout/core/SolverVariable;->synonymDelta:F
 
     const/4 v0, 0x0
 
+    .line 14
     iput-object v0, p0, Landroidx/constraintlayout/core/SolverVariable;->inRows:Ljava/util/HashSet;
 
+    .line 15
     iput-object p1, p0, Landroidx/constraintlayout/core/SolverVariable;->mName:Ljava/lang/String;
 
+    .line 16
     iput-object p2, p0, Landroidx/constraintlayout/core/SolverVariable;->mType:Landroidx/constraintlayout/core/SolverVariable$Type;
 
     return-void
@@ -493,6 +524,7 @@
 .method public compareTo(Landroidx/constraintlayout/core/SolverVariable;)I
     .locals 0
 
+    .line 2
     iget p0, p0, Landroidx/constraintlayout/core/SolverVariable;->id:I
 
     iget p1, p1, Landroidx/constraintlayout/core/SolverVariable;->id:I
@@ -505,6 +537,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/constraintlayout/core/SolverVariable;
 
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/SolverVariable;->compareTo(Landroidx/constraintlayout/core/SolverVariable;)I

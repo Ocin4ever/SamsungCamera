@@ -33,10 +33,13 @@
 .method public constructor <init>(Ljava/lang/Throwable;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lx6/x;->a:Ljava/lang/Throwable;
 
+    .line 3
     iput p2, p0, Lx6/x;->_handled:I
 
     return-void
@@ -51,6 +54,7 @@
 
     const/4 p2, 0x0
 
+    .line 4
     :cond_0
     invoke-direct {p0, p1, p2}, Lx6/x;-><init>(Ljava/lang/Throwable;Z)V
 

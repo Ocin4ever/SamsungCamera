@@ -95,6 +95,7 @@
 .method public bridge synthetic submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/util/concurrent/ListeningExecutorService;->submit(Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object p0
@@ -109,6 +110,7 @@
         .end annotation
     .end param
 
+    .line 2
     invoke-interface {p0, p1, p2}, Lcom/google/common/util/concurrent/ListeningExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object p0
@@ -119,6 +121,7 @@
 .method public bridge synthetic submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
     .locals 0
 
+    .line 3
     invoke-interface {p0, p1}, Lcom/google/common/util/concurrent/ListeningExecutorService;->submit(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object p0

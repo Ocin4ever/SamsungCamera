@@ -19,6 +19,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/sdk/scs/ai/text/bnlp/AbstractRawTextHolder;-><init>()V
 
     return-void
@@ -27,6 +28,7 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/scs/ai/text/bnlp/AbstractRawTextHolder;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -35,6 +37,7 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/sdk/scs/ai/text/bnlp/AbstractRawTextHolder;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -53,8 +56,10 @@
         }
     .end annotation
 
+    .line 4
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/sdk/scs/ai/text/bnlp/AbstractRawTextHolder;-><init>(Ljava/lang/String;I)V
 
+    .line 5
     iput-object p3, p0, Lcom/samsung/android/sdk/scs/ai/text/bnlp/Word;->tokenList:Ljava/util/List;
 
     return-void

@@ -26,14 +26,18 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeView;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/ShootingModeProviderImpl$ShootingMode;->mIsViewInitialized:Z
 
+    .line 4
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/ShootingModeProviderImpl$ShootingMode;->mView:Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeView;
 
+    .line 5
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/ShootingModeProviderImpl$ShootingMode;->mPresenter:Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;
 
     return-void
@@ -42,6 +46,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeView;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;Lcom/sec/android/app/camera/shootingmode/u;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/shootingmode/ShootingModeProviderImpl$ShootingMode;-><init>(Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeView;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;)V
 
     return-void

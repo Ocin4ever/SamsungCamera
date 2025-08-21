@@ -143,6 +143,7 @@
 .method public getDropPositionXInLinearMode(II)I
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -181,6 +182,7 @@
 .method public getDropPositionXInLinearMode(Landroid/view/View;)I
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getY()F
 
     move-result p1
@@ -219,6 +221,7 @@
 
     add-int/2addr p1, p2
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/more/dragdrop/MoreDragBox;->getDeltaHeight()I
 
     move-result p0
@@ -233,6 +236,7 @@
 .method public getDropPositionYInLinearMode(Landroid/view/View;)I
     .locals 1
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getX()F
 
     move-result v0

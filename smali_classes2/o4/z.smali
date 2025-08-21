@@ -27,32 +27,38 @@
 .method public constructor <init>(Lo4/z$a;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lo4/z$a;->d(Lo4/z$a;)Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
     move-result-object v0
 
     iput-object v0, p0, Lo4/z;->a:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
+    .line 4
     invoke-static {p1}, Lo4/z$a;->e(Lo4/z$a;)I
 
     move-result v0
 
     iput v0, p0, Lo4/z;->b:I
 
+    .line 5
     invoke-static {p1}, Lo4/z$a;->a(Lo4/z$a;)I
 
     move-result v0
 
     iput v0, p0, Lo4/z;->c:I
 
+    .line 6
     invoke-static {p1}, Lo4/z$a;->c(Lo4/z$a;)I
 
     move-result v0
 
     iput v0, p0, Lo4/z;->d:I
 
+    .line 7
     invoke-static {p1}, Lo4/z$a;->b(Lo4/z$a;)Z
 
     move-result p1
@@ -65,6 +71,7 @@
 .method public synthetic constructor <init>(Lo4/z$a;Lo4/a0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lo4/z;-><init>(Lo4/z$a;)V
 
     return-void

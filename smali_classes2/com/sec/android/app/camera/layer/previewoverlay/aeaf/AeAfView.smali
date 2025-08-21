@@ -64,14 +64,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 2
     invoke-static {}, Lcom/sec/android/app/camera/util/factory/RectFactory;->create()Landroid/graphics/Rect;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mAeAfTouchBoundary:Landroid/graphics/Rect;
 
+    .line 3
     const-class p1, Lcom/sec/android/app/camera/interfaces/PreviewOverlayLayerManager$AeAfSupportUi;
 
     invoke-static {p1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -82,20 +85,24 @@
 
     const/4 p1, 0x0
 
+    .line 4
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mAeAfTouchEventListener:Lcom/sec/android/app/camera/interfaces/PreviewOverlayLayerManager$AeAfTouchEventListener;
 
+    .line 5
     new-instance p1, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView$1;-><init>(Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mSeekBarChangeListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
+    .line 6
     new-instance p1, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/e0;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/e0;-><init>(Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mSeekBarTouchListener:Landroid/view/View$OnTouchListener;
 
+    .line 7
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->initView()V
 
     return-void
@@ -104,14 +111,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 8
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 9
     invoke-static {}, Lcom/sec/android/app/camera/util/factory/RectFactory;->create()Landroid/graphics/Rect;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mAeAfTouchBoundary:Landroid/graphics/Rect;
 
+    .line 10
     const-class p1, Lcom/sec/android/app/camera/interfaces/PreviewOverlayLayerManager$AeAfSupportUi;
 
     invoke-static {p1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -122,20 +132,24 @@
 
     const/4 p1, 0x0
 
+    .line 11
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mAeAfTouchEventListener:Lcom/sec/android/app/camera/interfaces/PreviewOverlayLayerManager$AeAfTouchEventListener;
 
+    .line 12
     new-instance p1, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView$1;-><init>(Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mSeekBarChangeListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
+    .line 13
     new-instance p1, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/e0;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/e0;-><init>(Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mSeekBarTouchListener:Landroid/view/View$OnTouchListener;
 
+    .line 14
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->initView()V
 
     return-void
@@ -1447,6 +1461,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->setPresenter(Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfContract$Presenter;)V
@@ -1457,6 +1472,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mPresenter:Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfContract$Presenter;
 
     return-void
@@ -1465,6 +1481,7 @@
 .method public showAeAfGroup()V
     .locals 1
 
+    .line 6
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mViewBinding:Lp4/t4;
 
     iget-object p0, p0, Lp4/t4;->a:Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;
@@ -1479,18 +1496,21 @@
 .method public showAeAfGroup(IZ)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mViewBinding:Lp4/t4;
 
     iget-object v0, v0, Lp4/t4;->a:Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AbstractAeAfGroup;->cancelRotateAnimation()V
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mViewBinding:Lp4/t4;
 
     iget-object v0, v0, Lp4/t4;->a:Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;
 
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;->setEvSliderStep(I)V
 
+    .line 3
     iget-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mViewBinding:Lp4/t4;
 
     iget-object p1, p1, Lp4/t4;->a:Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;
@@ -1499,6 +1519,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->mViewBinding:Lp4/t4;
 
     iget-object p0, p0, Lp4/t4;->a:Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;
@@ -1507,6 +1528,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfView;->showTouchAeAfAnimation()V
 

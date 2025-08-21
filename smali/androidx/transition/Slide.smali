@@ -98,16 +98,20 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/transition/Visibility;-><init>()V
 
+    .line 2
     sget-object v0, Landroidx/transition/Slide;->sCalculateBottom:Landroidx/transition/Slide$CalculateSlide;
 
     iput-object v0, p0, Landroidx/transition/Slide;->mSlideCalculator:Landroidx/transition/Slide$CalculateSlide;
 
     const/16 v0, 0x50
 
+    .line 3
     iput v0, p0, Landroidx/transition/Slide;->mSlideEdge:I
 
+    .line 4
     invoke-virtual {p0, v0}, Landroidx/transition/Slide;->setSlideEdge(I)V
 
     return-void
@@ -116,16 +120,20 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 5
     invoke-direct {p0}, Landroidx/transition/Visibility;-><init>()V
 
+    .line 6
     sget-object v0, Landroidx/transition/Slide;->sCalculateBottom:Landroidx/transition/Slide$CalculateSlide;
 
     iput-object v0, p0, Landroidx/transition/Slide;->mSlideCalculator:Landroidx/transition/Slide$CalculateSlide;
 
     const/16 v0, 0x50
 
+    .line 7
     iput v0, p0, Landroidx/transition/Slide;->mSlideEdge:I
 
+    .line 8
     invoke-virtual {p0, p1}, Landroidx/transition/Slide;->setSlideEdge(I)V
 
     return-void
@@ -134,22 +142,27 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
+    .line 9
     invoke-direct {p0, p1, p2}, Landroidx/transition/Visibility;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 10
     sget-object v0, Landroidx/transition/Slide;->sCalculateBottom:Landroidx/transition/Slide$CalculateSlide;
 
     iput-object v0, p0, Landroidx/transition/Slide;->mSlideCalculator:Landroidx/transition/Slide$CalculateSlide;
 
     const/16 v0, 0x50
 
+    .line 11
     iput v0, p0, Landroidx/transition/Slide;->mSlideEdge:I
 
+    .line 12
     sget-object v1, Landroidx/transition/Styleable;->SLIDE:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 13
     check-cast p2, Lorg/xmlpull/v1/XmlPullParser;
 
     const-string v1, "slideEdge"
@@ -160,8 +173,10 @@
 
     move-result p2
 
+    .line 14
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 15
     invoke-virtual {p0, p2}, Landroidx/transition/Slide;->setSlideEdge(I)V
 
     return-void

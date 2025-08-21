@@ -1266,19 +1266,23 @@
 .method public show(Landroid/view/View;IIZLjava/lang/CharSequence;)V
     .locals 9
 
+    .line 1
     invoke-virtual {p0}, Landroidx/appcompat/widget/TooltipPopup;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/appcompat/widget/TooltipPopup;->hide()V
 
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/widget/TooltipPopup;->mMessageView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 4
     iget-object v6, p0, Landroidx/appcompat/widget/TooltipPopup;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/4 v7, 0x0
@@ -1297,6 +1301,7 @@
 
     invoke-direct/range {v1 .. v8}, Landroidx/appcompat/widget/TooltipPopup;->computePosition(Landroid/view/View;IIZLandroid/view/WindowManager$LayoutParams;ZZ)V
 
+    .line 5
     iget-object p1, p0, Landroidx/appcompat/widget/TooltipPopup;->mContext:Landroid/content/Context;
 
     const-string p2, "window"
@@ -1307,6 +1312,7 @@
 
     check-cast p1, Landroid/view/WindowManager;
 
+    .line 6
     iget-object p2, p0, Landroidx/appcompat/widget/TooltipPopup;->mContentView:Landroid/view/View;
 
     iget-object p0, p0, Landroidx/appcompat/widget/TooltipPopup;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
@@ -1321,14 +1327,17 @@
 
     move-object v8, p0
 
+    .line 7
     invoke-virtual {p0}, Landroidx/appcompat/widget/TooltipPopup;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 8
     invoke-virtual {p0}, Landroidx/appcompat/widget/TooltipPopup;->hide()V
 
+    .line 9
     :cond_0
     iget-object v0, v8, Landroidx/appcompat/widget/TooltipPopup;->mMessageView:Landroid/widget/TextView;
 
@@ -1336,6 +1345,7 @@
 
     invoke-virtual {v0, p5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 10
     iget-object v5, v8, Landroidx/appcompat/widget/TooltipPopup;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     move-object v0, p0
@@ -1354,6 +1364,7 @@
 
     invoke-direct/range {v0 .. v7}, Landroidx/appcompat/widget/TooltipPopup;->computePosition(Landroid/view/View;IIZLandroid/view/WindowManager$LayoutParams;ZZ)V
 
+    .line 11
     iget-object v0, v8, Landroidx/appcompat/widget/TooltipPopup;->mContext:Landroid/content/Context;
 
     const-string v1, "window"
@@ -1364,6 +1375,7 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
+    .line 12
     iget-object v1, v8, Landroidx/appcompat/widget/TooltipPopup;->mContentView:Landroid/view/View;
 
     iget-object v2, v8, Landroidx/appcompat/widget/TooltipPopup;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;

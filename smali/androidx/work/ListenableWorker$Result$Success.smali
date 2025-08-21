@@ -22,6 +22,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/work/Data;->EMPTY:Landroidx/work/Data;
 
     invoke-direct {p0, v0}, Landroidx/work/ListenableWorker$Result$Success;-><init>(Landroidx/work/Data;)V
@@ -32,8 +33,10 @@
 .method public constructor <init>(Landroidx/work/Data;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Landroidx/work/ListenableWorker$Result;-><init>()V
 
+    .line 3
     iput-object p1, p0, Landroidx/work/ListenableWorker$Result$Success;->mOutputData:Landroidx/work/Data;
 
     return-void

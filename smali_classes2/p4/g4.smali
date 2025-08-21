@@ -85,6 +85,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/g4;->l:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/g4;->m:Landroid/util/SparseIntArray;
@@ -109,6 +110,7 @@
 
     const/4 v0, 0x2
 
+    .line 2
     aget-object v0, p3, v0
 
     move-object v4, v0
@@ -189,10 +191,12 @@
 
     const-wide/16 v0, -0x1
 
+    .line 3
     iput-wide v0, v13, Lp4/g4;->k:J
 
     const/4 v0, 0x0
 
+    .line 4
     aget-object v0, p3, v0
 
     check-cast v0, Landroidx/constraintlayout/widget/ConstraintLayout;
@@ -201,12 +205,15 @@
 
     const/4 v1, 0x0
 
+    .line 5
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     move-object/from16 v0, p2
 
+    .line 6
     invoke-virtual {p0, v0}, Landroidx/databinding/ViewDataBinding;->setRootTag(Landroid/view/View;)V
 
+    .line 7
     invoke-virtual {p0}, Lp4/g4;->invalidateAll()V
 
     return-void

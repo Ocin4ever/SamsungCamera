@@ -153,8 +153,10 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 2
     iget v0, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Object;->end:I
 
+    .line 3
     :goto_0
     iget-object v1, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Object;->bb:Landroidx/emoji2/text/flatbuffer/ReadBuf;
 
@@ -164,10 +166,12 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     iget v1, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Object;->end:I
 
     sub-int/2addr v0, v1
 
+    .line 5
     iget-object p0, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Object;->bb:Landroidx/emoji2/text/flatbuffer/ReadBuf;
 
     invoke-interface {p0, v1, v0}, Landroidx/emoji2/text/flatbuffer/ReadBuf;->getString(II)Ljava/lang/String;
@@ -185,6 +189,7 @@
 .method public toString(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Key;->toString()Ljava/lang/String;
 
     move-result-object p0

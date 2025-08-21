@@ -43,6 +43,7 @@
 .method public onPictureTaken(ILjava/nio/ByteBuffer;I)V
     .locals 2
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -67,6 +68,7 @@
 
     invoke-static {p3, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     iget-object p1, p0, Lcom/sec/android/app/camera/engine/MultiCameraEffectController$2;->this$0:Lcom/sec/android/app/camera/engine/MultiCameraEffectController;
 
     invoke-static {p1}, Lcom/sec/android/app/camera/engine/MultiCameraEffectController;->d(Lcom/sec/android/app/camera/engine/MultiCameraEffectController;)Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -83,8 +85,10 @@
 
     const-string p1, "onPictureTaken : Current capture state is not RECORDING. return."
 
+    .line 4
     invoke-static {p3, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/MultiCameraEffectController$2;->this$0:Lcom/sec/android/app/camera/engine/MultiCameraEffectController;
 
     invoke-static {p0}, Lcom/sec/android/app/camera/engine/MultiCameraEffectController;->d(Lcom/sec/android/app/camera/engine/MultiCameraEffectController;)Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -101,6 +105,7 @@
 
     return-void
 
+    .line 6
     :cond_0
     iget-object p1, p0, Lcom/sec/android/app/camera/engine/MultiCameraEffectController$2;->this$0:Lcom/sec/android/app/camera/engine/MultiCameraEffectController;
 
@@ -120,6 +125,7 @@
 
     invoke-virtual {p1, p2, p3}, Lcom/sec/android/app/camera/engine/PictureProcessor;->processSnapShot(Ljava/nio/ByteBuffer;Lcom/sec/android/app/camera/interfaces/InternalEngine$CaptureInfo;)V
 
+    .line 7
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/MultiCameraEffectController$2;->this$0:Lcom/sec/android/app/camera/engine/MultiCameraEffectController;
 
     invoke-static {p0}, Lcom/sec/android/app/camera/engine/MultiCameraEffectController;->d(Lcom/sec/android/app/camera/engine/MultiCameraEffectController;)Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -140,5 +146,6 @@
 .method public onPictureTaken(I[BI)V
     .locals 0
 
+    .line 1
     return-void
 .end method

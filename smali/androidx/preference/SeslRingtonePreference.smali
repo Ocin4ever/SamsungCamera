@@ -19,6 +19,7 @@
 
     const/4 v0, 0x0
 
+    .line 11
     invoke-direct {p0, p1, v0}, Landroidx/preference/SeslRingtonePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -27,6 +28,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 10
     sget v0, Landroidx/preference/R$attr;->ringtonePreferenceStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/preference/SeslRingtonePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -39,6 +41,7 @@
 
     const/4 v0, 0x0
 
+    .line 9
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/preference/SeslRingtonePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -47,14 +50,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 2
     sget-object v0, Landroidx/preference/R$styleable;->RingtonePreference:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 3
     sget p2, Landroidx/preference/R$styleable;->RingtonePreference_android_ringtoneType:I
 
     const/4 p3, 0x1
@@ -65,6 +71,7 @@
 
     iput p2, p0, Landroidx/preference/SeslRingtonePreference;->mRingtoneType:I
 
+    .line 4
     sget p2, Landroidx/preference/R$styleable;->RingtonePreference_android_showDefault:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -73,6 +80,7 @@
 
     iput-boolean p2, p0, Landroidx/preference/SeslRingtonePreference;->mShowDefault:Z
 
+    .line 5
     sget p2, Landroidx/preference/R$styleable;->RingtonePreference_android_showSilent:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -81,6 +89,7 @@
 
     iput-boolean p2, p0, Landroidx/preference/SeslRingtonePreference;->mShowSilent:Z
 
+    .line 6
     new-instance p2, Landroid/content/Intent;
 
     const-string p3, "android.intent.action.RINGTONE_PICKER"
@@ -89,12 +98,14 @@
 
     invoke-virtual {p0, p2}, Landroidx/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
+    .line 7
     invoke-static {}, Landroidx/reflect/os/SeslUserHandleReflector;->myUserId()I
 
     move-result p2
 
     invoke-virtual {p0, p2}, Landroidx/preference/SeslRingtonePreference;->setUserId(I)V
 
+    .line 8
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void

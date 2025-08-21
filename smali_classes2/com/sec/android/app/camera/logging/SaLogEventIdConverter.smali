@@ -341,6 +341,7 @@
 .method public static getCameraSettingEventId(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)Lcom/sec/android/app/camera/interfaces/SaLogEventId;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/logging/SaLogEventIdConverter;->mCameraSettingEventIdMap:Ljava/util/EnumMap;
 
     invoke-virtual {v0, p0}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -355,21 +356,25 @@
 .method public static getCameraSettingEventId(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;I)Lcom/sec/android/app/camera/interfaces/SaLogEventId;
     .locals 1
 
+    .line 2
     sget-object v0, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->RECORDING_MOTION_SPEED:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
     if-ne p0, v0, :cond_1
 
     if-nez p1, :cond_0
 
+    .line 3
     sget-object p0, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->REAR_SELECT_HYPER_LAPSE_SPEED_BUTTON:Lcom/sec/android/app/camera/interfaces/SaLogEventId;
 
     return-object p0
 
+    .line 4
     :cond_0
     sget-object p0, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->FRONT_SELECT_HYPER_LAPSE_SPEED_BUTTON:Lcom/sec/android/app/camera/interfaces/SaLogEventId;
 
     return-object p0
 
+    .line 5
     :cond_1
     invoke-static {p0}, Lcom/sec/android/app/camera/logging/SaLogEventIdConverter;->getCameraSettingEventId(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)Lcom/sec/android/app/camera/interfaces/SaLogEventId;
 
@@ -414,6 +419,7 @@
 .method public static getEventIdByCommandId(Lcom/sec/android/app/camera/interfaces/CommandId;)Lcom/sec/android/app/camera/interfaces/SaLogEventId;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/sec/android/app/camera/logging/SaLogEventIdConverter;->mCommandIdEventIdMap:Ljava/util/EnumMap;
 
     invoke-virtual {v0, p0}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -428,21 +434,25 @@
 .method public static getEventIdByCommandId(Lcom/sec/android/app/camera/interfaces/CommandId;I)Lcom/sec/android/app/camera/interfaces/SaLogEventId;
     .locals 1
 
+    .line 2
     sget-object v0, Lcom/sec/android/app/camera/interfaces/CommandId;->RECORDING_MOTION_SPEED_MENU:Lcom/sec/android/app/camera/interfaces/CommandId;
 
     if-ne p0, v0, :cond_1
 
     if-nez p1, :cond_0
 
+    .line 3
     sget-object p0, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->REAR_SELECT_HYPER_LAPSE_SPEED_MENU:Lcom/sec/android/app/camera/interfaces/SaLogEventId;
 
     return-object p0
 
+    .line 4
     :cond_0
     sget-object p0, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->FRONT_SELECT_HYPER_LAPSE_SPEED_MENU:Lcom/sec/android/app/camera/interfaces/SaLogEventId;
 
     return-object p0
 
+    .line 5
     :cond_1
     invoke-static {p0}, Lcom/sec/android/app/camera/logging/SaLogEventIdConverter;->getEventIdByCommandId(Lcom/sec/android/app/camera/interfaces/CommandId;)Lcom/sec/android/app/camera/interfaces/SaLogEventId;
 

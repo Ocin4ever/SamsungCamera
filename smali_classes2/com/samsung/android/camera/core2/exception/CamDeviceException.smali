@@ -19,12 +19,14 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/exception/CamDeviceException$Type;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/exception/CamDeviceException$Type;->m()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/util/AndroidException;-><init>(Ljava/lang/String;)V
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/camera/core2/exception/CamDeviceException;->a:Lcom/samsung/android/camera/core2/exception/CamDeviceException$Type;
 
     return-void
@@ -33,12 +35,14 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/exception/CamDeviceException$Type;Ljava/lang/String;)V
     .locals 0
 
+    .line 3
     invoke-static {p1, p2}, Lcom/samsung/android/camera/core2/exception/CamDeviceException;->a(Lcom/samsung/android/camera/core2/exception/CamDeviceException$Type;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-direct {p0, p2}, Landroid/util/AndroidException;-><init>(Ljava/lang/String;)V
 
+    .line 4
     iput-object p1, p0, Lcom/samsung/android/camera/core2/exception/CamDeviceException;->a:Lcom/samsung/android/camera/core2/exception/CamDeviceException$Type;
 
     return-void
@@ -47,6 +51,7 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/exception/CamDeviceException$Type;Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 5
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/exception/CamDeviceException$Type;->m()Ljava/lang/String;
 
     move-result-object v0
@@ -57,6 +62,7 @@
 
     invoke-direct {p0, p2}, Landroid/util/AndroidException;-><init>(Ljava/lang/String;)V
 
+    .line 6
     iput-object p1, p0, Lcom/samsung/android/camera/core2/exception/CamDeviceException;->a:Lcom/samsung/android/camera/core2/exception/CamDeviceException$Type;
 
     return-void

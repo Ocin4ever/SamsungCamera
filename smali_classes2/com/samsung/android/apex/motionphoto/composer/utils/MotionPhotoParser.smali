@@ -63,6 +63,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 5
     new-instance v0, Ljava/io/FileInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -79,6 +80,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 6
     new-instance v0, Ljava/io/FileInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
@@ -95,8 +97,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     const-class v0, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -105,6 +109,7 @@
 
     iput-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser;->TAG:Ljava/lang/String;
 
+    .line 3
     new-instance v0, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser$SefFile$SefFileStream;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser$SefFile$SefFileStream;-><init>(Ljava/io/FileInputStream;)V
@@ -121,6 +126,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 4
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -133,6 +139,7 @@
 .method private final read(I)J
     .locals 4
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser;->readBuffer(I)[B
 
     move-result-object p0
@@ -150,6 +157,7 @@
 
     shl-long/2addr v0, v2
 
+    .line 2
     aget-byte v2, p0, p1
 
     and-int/lit16 v2, v2, 0xff
@@ -169,6 +177,7 @@
 .method private final read(II)J
     .locals 5
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser;->readBuffer(I)[B
 
     move-result-object p0
@@ -186,6 +195,7 @@
 
     shl-long/2addr v1, v3
 
+    .line 4
     aget-byte v3, p0, v0
 
     and-int/lit16 v3, v3, 0xff
@@ -205,6 +215,7 @@
 
     const/4 p2, 0x0
 
+    .line 5
     invoke-static {p0, p2, p1}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
 
     move-result-object p0

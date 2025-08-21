@@ -174,6 +174,7 @@
 
     const/4 v0, 0x0
 
+    .line 20
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/sdk/scs/ai/image/ImageUpscaler;->createSession(ILjava/lang/String;)Z
 
     move-result p0
@@ -184,6 +185,7 @@
 .method public createSession(ILjava/lang/String;)Z
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -202,6 +204,7 @@
 
     invoke-static {v1, v0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Lcom/samsung/android/sdk/scs/ai/image/ImageUpscaler;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x0
@@ -210,6 +213,7 @@
 
     const-string p0, "createSession: Context is Null"
 
+    .line 3
     invoke-static {v1, p0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
@@ -217,6 +221,7 @@
     :cond_0
     const-string v0, "FEATURE_IMAGE_UPSCALE"
 
+    .line 4
     invoke-static {v0}, Lcom/samsung/android/sdk/scs/base/feature/FeatureStatusCache;->getStatus(Ljava/lang/String;)I
 
     move-result v3
@@ -225,6 +230,7 @@
 
     if-ne v3, v4, :cond_1
 
+    .line 5
     iget-object v3, p0, Lcom/samsung/android/sdk/scs/ai/image/ImageUpscaler;->mContext:Landroid/content/Context;
 
     invoke-static {v3, v0}, Lcom/samsung/android/sdk/scs/base/feature/Feature;->checkFeature(Landroid/content/Context;Ljava/lang/String;)I
@@ -234,6 +240,7 @@
     :cond_1
     if-eqz v3, :cond_2
 
+    .line 6
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -252,6 +259,7 @@
 
     return v2
 
+    .line 7
     :cond_2
     :try_start_0
     new-instance v0, Landroid/os/Bundle;
@@ -260,10 +268,12 @@
 
     const-string v3, "capacity"
 
+    .line 8
     invoke-virtual {v0, v3, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "applicationId"
 
+    .line 9
     iget-object v3, p0, Lcom/samsung/android/sdk/scs/ai/image/ImageUpscaler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -274,14 +284,17 @@
 
     const-string p1, "engineType"
 
+    .line 10
     invoke-virtual {v0, p1, p2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 11
     iget-object p1, p0, Lcom/samsung/android/sdk/scs/ai/image/ImageUpscaler;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
+    .line 12
     iget-object p2, p0, Lcom/samsung/android/sdk/scs/ai/image/ImageUpscaler;->mUri:Landroid/net/Uri;
 
     const-string v3, "upscaleImage"
@@ -292,6 +305,7 @@
 
     move-result-object p1
 
+    .line 13
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
@@ -302,6 +316,7 @@
 
     const-string p2, "readMemory"
 
+    .line 14
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p2
@@ -316,6 +331,7 @@
 
     const-string p2, "writeMemory"
 
+    .line 15
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
@@ -330,6 +346,7 @@
 
     const/4 p1, 0x1
 
+    .line 16
     iput-boolean p1, p0, Lcom/samsung/android/sdk/scs/ai/image/ImageUpscaler;->mIsSessionCreated:Z
 
     return p1
@@ -337,6 +354,7 @@
     :cond_3
     const-string p0, "createSession :: Failed to create buffer"
 
+    .line 17
     invoke-static {v1, p0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -348,8 +366,10 @@
 
     const-string p1, " createSession failed"
 
+    .line 18
     invoke-static {v1, p1, p0}, Lcom/samsung/android/sdk/scs/base/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 19
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     return v2

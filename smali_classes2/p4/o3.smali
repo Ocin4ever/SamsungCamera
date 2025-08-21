@@ -87,6 +87,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/o3;->j:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/o3;->k:Landroid/util/SparseIntArray;
@@ -109,6 +110,7 @@
 
     const/4 v0, 0x5
 
+    .line 2
     aget-object v0, p3, v0
 
     move-object v4, v0
@@ -173,22 +175,27 @@
 
     const-wide/16 v0, -0x1
 
+    .line 3
     iput-wide v0, p0, Lp4/o3;->i:J
 
+    .line 4
     iget-object p1, p0, Lp4/n3;->a:Lp4/p3;
 
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding;->setContainedBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 5
     iget-object p1, p0, Lp4/n3;->b:Lp4/p3;
 
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding;->setContainedBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 6
     iget-object p1, p0, Lp4/n3;->c:Lp4/p3;
 
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding;->setContainedBinding(Landroidx/databinding/ViewDataBinding;)V
 
     const/4 p1, 0x1
 
+    .line 7
     aget-object p1, p3, p1
 
     check-cast p1, Landroid/widget/LinearLayout;
@@ -197,26 +204,33 @@
 
     const/4 p3, 0x0
 
+    .line 8
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 9
     iget-object p1, p0, Lp4/n3;->d:Lp4/p3;
 
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding;->setContainedBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 10
     iget-object p1, p0, Lp4/n3;->e:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 11
     iget-object p1, p0, Lp4/n3;->f:Lp4/p3;
 
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding;->setContainedBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 12
     iget-object p1, p0, Lp4/n3;->g:Lp4/p3;
 
     invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBinding;->setContainedBinding(Landroidx/databinding/ViewDataBinding;)V
 
+    .line 13
     invoke-virtual {p0, p2}, Landroidx/databinding/ViewDataBinding;->setRootTag(Landroid/view/View;)V
 
+    .line 14
     invoke-virtual {p0}, Lp4/o3;->invalidateAll()V
 
     return-void

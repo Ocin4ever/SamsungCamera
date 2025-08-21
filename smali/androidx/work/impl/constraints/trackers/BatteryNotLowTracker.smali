@@ -156,12 +156,14 @@
 .method public readSystemState()Ljava/lang/Boolean;
     .locals 4
 
+    .line 2
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.BATTERY_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/work/impl/constraints/trackers/ConstraintTracker;->getAppContext()Landroid/content/Context;
 
     move-result-object p0
@@ -174,6 +176,7 @@
 
     if-nez p0, :cond_0
 
+    .line 4
     invoke-static {}, Landroidx/work/Logger;->get()Landroidx/work/Logger;
 
     move-result-object p0
@@ -186,6 +189,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroidx/work/Logger;->error(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object p0
@@ -195,18 +199,21 @@
 
     const/4 v1, -0x1
 
+    .line 6
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
     const-string v2, "level"
 
+    .line 7
     invoke-virtual {p0, v2, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
     const-string v3, "scale"
 
+    .line 8
     invoke-virtual {p0, v3, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p0
@@ -232,6 +239,7 @@
     :cond_1
     const/4 p0, 0x0
 
+    .line 9
     :cond_2
     :goto_0
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -244,6 +252,7 @@
 .method public bridge synthetic readSystemState()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/work/impl/constraints/trackers/BatteryNotLowTracker;->readSystemState()Ljava/lang/Boolean;
 
     move-result-object p0

@@ -24,10 +24,12 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     new-instance p1, Landroidx/activity/ActivityViewModelLazyKt$viewModels$factoryPromise$1;
 
     invoke-direct {p1, p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$factoryPromise$1;-><init>(Landroidx/activity/ComponentActivity;)V
 
+    .line 2
     :cond_0
     new-instance v0, Landroidx/lifecycle/ViewModelLazy;
 
@@ -43,14 +45,17 @@
 
     move-result-object v1
 
+    .line 3
     new-instance v2, Landroidx/activity/ActivityViewModelLazyKt$viewModels$1;
 
     invoke-direct {v2, p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$1;-><init>(Landroidx/activity/ComponentActivity;)V
 
+    .line 4
     new-instance v3, Landroidx/activity/ActivityViewModelLazyKt$viewModels$2;
 
     invoke-direct {v3, p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$2;-><init>(Landroidx/activity/ComponentActivity;)V
 
+    .line 5
     invoke-direct {v0, v1, v2, p1, v3}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lu6/c;Lq6/a;Lq6/a;Lq6/a;)V
 
     return-object v0
@@ -77,10 +82,12 @@
 
     if-nez p2, :cond_0
 
+    .line 6
     new-instance p2, Landroidx/activity/ActivityViewModelLazyKt$viewModels$factoryPromise$2;
 
     invoke-direct {p2, p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$factoryPromise$2;-><init>(Landroidx/activity/ComponentActivity;)V
 
+    .line 7
     :cond_0
     new-instance v0, Landroidx/lifecycle/ViewModelLazy;
 
@@ -96,14 +103,17 @@
 
     move-result-object v1
 
+    .line 8
     new-instance v2, Landroidx/activity/ActivityViewModelLazyKt$viewModels$3;
 
     invoke-direct {v2, p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$3;-><init>(Landroidx/activity/ComponentActivity;)V
 
+    .line 9
     new-instance v3, Landroidx/activity/ActivityViewModelLazyKt$viewModels$4;
 
     invoke-direct {v3, p1, p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$4;-><init>(Lq6/a;Landroidx/activity/ComponentActivity;)V
 
+    .line 10
     invoke-direct {v0, v1, v2, p2, v3}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lu6/c;Lq6/a;Lq6/a;Lq6/a;)V
 
     return-object v0
@@ -121,14 +131,17 @@
     :cond_0
     const-string p2, "<this>"
 
+    .line 1
     invoke-static {p0, p2}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-nez p1, :cond_1
 
+    .line 2
     new-instance p1, Landroidx/activity/ActivityViewModelLazyKt$viewModels$factoryPromise$1;
 
     invoke-direct {p1, p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$factoryPromise$1;-><init>(Landroidx/activity/ComponentActivity;)V
 
+    .line 3
     :cond_1
     new-instance p2, Landroidx/lifecycle/ViewModelLazy;
 
@@ -144,14 +157,17 @@
 
     move-result-object p3
 
+    .line 4
     new-instance v0, Landroidx/activity/ActivityViewModelLazyKt$viewModels$1;
 
     invoke-direct {v0, p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$1;-><init>(Landroidx/activity/ComponentActivity;)V
 
+    .line 5
     new-instance v1, Landroidx/activity/ActivityViewModelLazyKt$viewModels$2;
 
     invoke-direct {v1, p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$2;-><init>(Landroidx/activity/ComponentActivity;)V
 
+    .line 6
     invoke-direct {p2, p3, v0, p1, v1}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lu6/c;Lq6/a;Lq6/a;Lq6/a;)V
 
     return-object p2
@@ -178,14 +194,17 @@
     :cond_1
     const-string p3, "<this>"
 
+    .line 7
     invoke-static {p0, p3}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-nez p2, :cond_2
 
+    .line 8
     new-instance p2, Landroidx/activity/ActivityViewModelLazyKt$viewModels$factoryPromise$2;
 
     invoke-direct {p2, p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$factoryPromise$2;-><init>(Landroidx/activity/ComponentActivity;)V
 
+    .line 9
     :cond_2
     new-instance p3, Landroidx/lifecycle/ViewModelLazy;
 
@@ -201,14 +220,17 @@
 
     move-result-object p4
 
+    .line 10
     new-instance v0, Landroidx/activity/ActivityViewModelLazyKt$viewModels$3;
 
     invoke-direct {v0, p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$3;-><init>(Landroidx/activity/ComponentActivity;)V
 
+    .line 11
     new-instance v1, Landroidx/activity/ActivityViewModelLazyKt$viewModels$4;
 
     invoke-direct {v1, p1, p0}, Landroidx/activity/ActivityViewModelLazyKt$viewModels$4;-><init>(Lq6/a;Landroidx/activity/ComponentActivity;)V
 
+    .line 12
     invoke-direct {p3, p4, v0, p2, v1}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lu6/c;Lq6/a;Lq6/a;Lq6/a;)V
 
     return-object p3

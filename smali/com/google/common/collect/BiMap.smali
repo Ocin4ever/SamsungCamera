@@ -80,6 +80,7 @@
 .method public bridge synthetic values()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/collect/BiMap;->values()Ljava/util/Set;
 
     move-result-object p0

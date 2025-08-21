@@ -15,8 +15,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -29,12 +31,16 @@
 .method public constructor <init>(Landroid/graphics/PointF;ZLjava/util/List;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lt/n;->b:Landroid/graphics/PointF;
 
+    .line 3
     iput-boolean p2, p0, Lt/n;->c:Z
 
+    .line 4
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V

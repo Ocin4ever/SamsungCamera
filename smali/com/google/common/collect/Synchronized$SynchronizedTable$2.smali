@@ -48,6 +48,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/util/Map;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Synchronized$SynchronizedTable$2;->apply(Ljava/util/Map;)Ljava/util/Map;
@@ -69,6 +70,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/Synchronized$SynchronizedTable$2;->this$0:Lcom/google/common/collect/Synchronized$SynchronizedTable;
 
     iget-object p0, p0, Lcom/google/common/collect/Synchronized$SynchronizedObject;->mutex:Ljava/lang/Object;

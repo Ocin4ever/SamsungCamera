@@ -331,6 +331,7 @@
 .method public clone()Landroidx/constraintlayout/core/motion/key/MotionKey;
     .locals 0
 
+    .line 1
     const/4 p0, 0x0
 
     return-object p0
@@ -339,6 +340,7 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->clone()Landroidx/constraintlayout/core/motion/key/MotionKey;
 
     move-result-object p0
@@ -1630,82 +1632,98 @@
 
     packed-switch p1, :pswitch_data_1
 
+    .line 8
     invoke-super {p0, p1, p2}, Landroidx/constraintlayout/core/motion/key/MotionKey;->setValue(IF)Z
 
     move-result p0
 
     return p0
 
+    .line 9
     :pswitch_0
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mWavePhase:F
 
     goto :goto_0
 
+    .line 10
     :pswitch_1
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mWaveOffset:F
 
     goto :goto_0
 
+    .line 11
     :pswitch_2
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mWavePeriod:F
 
     goto :goto_0
 
+    .line 12
     :pswitch_3
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mScaleY:F
 
     goto :goto_0
 
+    .line 13
     :pswitch_4
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mScaleX:F
 
     goto :goto_0
 
+    .line 14
     :pswitch_5
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mRotation:F
 
     goto :goto_0
 
+    .line 15
     :pswitch_6
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mRotationY:F
 
     goto :goto_0
 
+    .line 16
     :pswitch_7
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mRotationX:F
 
     goto :goto_0
 
+    .line 17
     :pswitch_8
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mElevation:F
 
     goto :goto_0
 
+    .line 18
     :pswitch_9
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTranslationZ:F
 
     goto :goto_0
 
+    .line 19
     :pswitch_a
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTranslationY:F
 
     goto :goto_0
 
+    .line 20
     :pswitch_b
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTranslationX:F
 
     goto :goto_0
 
+    .line 21
     :cond_0
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTransitionPathRotate:F
 
     goto :goto_0
 
+    .line 22
     :cond_1
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mAlpha:F
 
     goto :goto_0
 
+    .line 23
     :cond_2
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mProgress:F
 
@@ -1752,6 +1770,7 @@
 
     int-to-float v0, p2
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->setValue(IF)Z
 
     move-result v0
@@ -1760,6 +1779,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-super {p0, p1, p2}, Landroidx/constraintlayout/core/motion/key/MotionKey;->setValue(II)Z
 
@@ -1767,11 +1787,13 @@
 
     return p0
 
+    .line 3
     :cond_1
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mWaveShape:I
 
     return v1
 
+    .line 4
     :cond_2
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mCurveFit:I
 
@@ -1791,17 +1813,20 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 5
     invoke-super {p0, p1, p2}, Landroidx/constraintlayout/core/motion/key/MotionKey;->setValue(ILjava/lang/String;)Z
 
     move-result p0
 
     return p0
 
+    .line 6
     :cond_0
     iput-object p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mCustomWaveShape:Ljava/lang/String;
 
     return v1
 
+    .line 7
     :cond_1
     iput-object p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTransitionEasing:Ljava/lang/String;
 

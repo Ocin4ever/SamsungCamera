@@ -69,6 +69,7 @@
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-static {p0, v0, v0}, Lcom/google/common/collect/RegularImmutableTable;->forCellsInternal(Ljava/lang/Iterable;Ljava/util/Comparator;Ljava/util/Comparator;)Lcom/google/common/collect/RegularImmutableTable;
 
     move-result-object p0
@@ -99,19 +100,23 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-nez p1, :cond_0
 
     if-eqz p2, :cond_1
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/common/collect/c;
 
     invoke-direct {v0, p1, p2}, Lcom/google/common/collect/c;-><init>(Ljava/util/Comparator;Ljava/util/Comparator;)V
 
+    .line 3
     invoke-static {p0, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
+    .line 4
     :cond_1
     invoke-static {p0, p1, p2}, Lcom/google/common/collect/RegularImmutableTable;->forCellsInternal(Ljava/lang/Iterable;Ljava/util/Comparator;Ljava/util/Comparator;)Lcom/google/common/collect/RegularImmutableTable;
 
@@ -395,6 +400,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableTable;->isEmpty()Z
 
     move-result v0
@@ -423,6 +429,7 @@
 .method public bridge synthetic createCellSet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/RegularImmutableTable;->createCellSet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -440,6 +447,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableTable;->isEmpty()Z
 
     move-result v0
@@ -468,6 +476,7 @@
 .method public bridge synthetic createValues()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/RegularImmutableTable;->createValues()Lcom/google/common/collect/ImmutableCollection;
 
     move-result-object p0

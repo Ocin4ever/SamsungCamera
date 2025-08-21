@@ -59,12 +59,14 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
 
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 2
     invoke-virtual {p0, v0, v1}, Lcom/google/common/collect/ObjectCountHashMap;->init(IF)V
 
     return-void
@@ -75,6 +77,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 8
     invoke-direct {p0, p1, v0}, Lcom/google/common/collect/ObjectCountHashMap;-><init>(IF)V
 
     return-void
@@ -83,8 +86,10 @@
 .method public constructor <init>(IF)V
     .locals 0
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 10
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ObjectCountHashMap;->init(IF)V
 
     return-void
@@ -100,8 +105,10 @@
         }
     .end annotation
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/common/collect/ObjectCountHashMap;->size()I
 
     move-result v0
@@ -110,6 +117,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/google/common/collect/ObjectCountHashMap;->init(IF)V
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/common/collect/ObjectCountHashMap;->firstIndex()I
 
     move-result v0
@@ -119,6 +127,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 6
     invoke-virtual {p1, v0}, Lcom/google/common/collect/ObjectCountHashMap;->getKey(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -129,6 +138,7 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/google/common/collect/ObjectCountHashMap;->put(Ljava/lang/Object;I)I
 
+    .line 7
     invoke-virtual {p1, v0}, Lcom/google/common/collect/ObjectCountHashMap;->nextIndex(I)I
 
     move-result v0
@@ -236,12 +246,14 @@
 .method private remove(Ljava/lang/Object;I)I
     .locals 8
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/collect/ObjectCountHashMap;->hashTableMask()I
 
     move-result v0
 
     and-int/2addr v0, p2
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/collect/ObjectCountHashMap;->table:[I
 
     aget v1, v1, v0
@@ -257,6 +269,7 @@
     :cond_0
     move v4, v3
 
+    .line 4
     :goto_0
     iget-object v5, p0, Lcom/google/common/collect/ObjectCountHashMap;->entries:[J
 
@@ -268,6 +281,7 @@
 
     if-ne v5, p2, :cond_2
 
+    .line 5
     iget-object v5, p0, Lcom/google/common/collect/ObjectCountHashMap;->keys:[Ljava/lang/Object;
 
     aget-object v5, v5, v1
@@ -278,12 +292,14 @@
 
     if-eqz v5, :cond_2
 
+    .line 6
     iget-object p1, p0, Lcom/google/common/collect/ObjectCountHashMap;->values:[I
 
     aget p1, p1, v1
 
     if-ne v4, v3, :cond_1
 
+    .line 7
     iget-object p2, p0, Lcom/google/common/collect/ObjectCountHashMap;->table:[I
 
     iget-object v2, p0, Lcom/google/common/collect/ObjectCountHashMap;->entries:[J
@@ -298,6 +314,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_1
     iget-object p2, p0, Lcom/google/common/collect/ObjectCountHashMap;->entries:[J
 
@@ -315,15 +332,18 @@
 
     aput-wide v2, p2, v4
 
+    .line 9
     :goto_1
     invoke-virtual {p0, v1}, Lcom/google/common/collect/ObjectCountHashMap;->moveLastEntry(I)V
 
+    .line 10
     iget p2, p0, Lcom/google/common/collect/ObjectCountHashMap;->size:I
 
     add-int/lit8 p2, p2, -0x1
 
     iput p2, p0, Lcom/google/common/collect/ObjectCountHashMap;->size:I
 
+    .line 11
     iget p2, p0, Lcom/google/common/collect/ObjectCountHashMap;->modCount:I
 
     add-int/lit8 p2, p2, 0x1
@@ -332,6 +352,7 @@
 
     return p1
 
+    .line 12
     :cond_2
     iget-object v4, p0, Lcom/google/common/collect/ObjectCountHashMap;->entries:[J
 
@@ -1128,6 +1149,7 @@
 .method public remove(Ljava/lang/Object;)I
     .locals 1
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/Hashing;->smearedHash(Ljava/lang/Object;)I
 
     move-result v0

@@ -70,6 +70,7 @@
 .method public bridge synthetic createIntent(Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
     .locals 0
 
+    .line 1
     check-cast p2, [Ljava/lang/String;
 
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$RequestMultiplePermissions;->createIntent(Landroid/content/Context;[Ljava/lang/String;)Landroid/content/Intent;
@@ -90,6 +91,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     sget-object p0, Landroidx/activity/result/contract/ActivityResultContracts$RequestMultiplePermissions;->Companion:Landroidx/activity/result/contract/ActivityResultContracts$RequestMultiplePermissions$Companion;
 
     invoke-virtual {p0, p2}, Landroidx/activity/result/contract/ActivityResultContracts$RequestMultiplePermissions$Companion;->createIntent$activity_release([Ljava/lang/String;)Landroid/content/Intent;
@@ -102,6 +104,7 @@
 .method public bridge synthetic getSynchronousResult(Landroid/content/Context;Ljava/lang/Object;)Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
     .locals 0
 
+    .line 1
     check-cast p2, [Ljava/lang/String;
 
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$RequestMultiplePermissions;->getSynchronousResult(Landroid/content/Context;[Ljava/lang/String;)Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
@@ -136,6 +139,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     array-length p0, p2
 
     const/4 v0, 0x1
@@ -154,6 +158,7 @@
     :goto_0
     if-eqz p0, :cond_1
 
+    .line 3
     new-instance p0, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
 
     invoke-static {}, Lg6/g0;->g()Ljava/util/Map;
@@ -164,6 +169,7 @@
 
     return-object p0
 
+    .line 4
     :cond_1
     array-length p0, p2
 
@@ -174,6 +180,7 @@
 
     aget-object v3, p2, v2
 
+    .line 5
     invoke-static {p1, v3}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v3
@@ -203,6 +210,7 @@
     :goto_3
     if-eqz v0, :cond_6
 
+    .line 6
     array-length p0, p2
 
     invoke-static {p0}, Lg6/f0;->d(I)I
@@ -215,10 +223,12 @@
 
     move-result p0
 
+    .line 7
     new-instance p1, Ljava/util/LinkedHashMap;
 
     invoke-direct {p1, p0}, Ljava/util/LinkedHashMap;-><init>(I)V
 
+    .line 8
     array-length p0, p2
 
     :goto_4
@@ -226,12 +236,14 @@
 
     aget-object v0, p2, v1
 
+    .line 9
     sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-static {v0, v2}, Lf6/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Lf6/h;
 
     move-result-object v0
 
+    .line 10
     invoke-virtual {v0}, Lf6/h;->c()Ljava/lang/Object;
 
     move-result-object v2
@@ -246,6 +258,7 @@
 
     goto :goto_4
 
+    .line 11
     :cond_5
     new-instance p0, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
 
@@ -263,6 +276,7 @@
 .method public bridge synthetic parseResult(ILandroid/content/Intent;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/activity/result/contract/ActivityResultContracts$RequestMultiplePermissions;->parseResult(ILandroid/content/Intent;)Ljava/util/Map;
 
     move-result-object p0
@@ -288,6 +302,7 @@
 
     if-eq p1, p0, :cond_0
 
+    .line 2
     invoke-static {}, Lg6/g0;->g()Ljava/util/Map;
 
     move-result-object p0
@@ -297,6 +312,7 @@
     :cond_0
     if-nez p2, :cond_1
 
+    .line 3
     invoke-static {}, Lg6/g0;->g()Ljava/util/Map;
 
     move-result-object p0
@@ -306,12 +322,14 @@
     :cond_1
     const-string p0, "androidx.activity.result.contract.extra.PERMISSIONS"
 
+    .line 4
     invoke-virtual {p2, p0}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     const-string p1, "androidx.activity.result.contract.extra.PERMISSION_GRANT_RESULTS"
 
+    .line 5
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getIntArrayExtra(Ljava/lang/String;)[I
 
     move-result-object p1
@@ -322,6 +340,7 @@
 
     goto :goto_2
 
+    .line 6
     :cond_2
     new-instance p2, Ljava/util/ArrayList;
 
@@ -329,6 +348,7 @@
 
     invoke-direct {p2, v0}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 7
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -349,17 +369,20 @@
     :cond_3
     move v3, v1
 
+    .line 8
     :goto_1
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
 
+    .line 9
     invoke-interface {p2, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 10
     :cond_4
     invoke-static {p0}, Lg6/k;->o([Ljava/lang/Object;)Ljava/util/List;
 
@@ -379,6 +402,7 @@
 
     return-object p0
 
+    .line 11
     :cond_5
     :goto_2
     invoke-static {}, Lg6/g0;->g()Ljava/util/Map;

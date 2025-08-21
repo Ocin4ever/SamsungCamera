@@ -297,6 +297,7 @@
 
     const/16 v0, 0xa
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/common/primitives/UnsignedBytes;->parseUnsignedByte(Ljava/lang/String;I)B
 
     move-result p0
@@ -307,6 +308,7 @@
 .method public static parseUnsignedByte(Ljava/lang/String;I)B
     .locals 2
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -325,6 +327,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p1, Ljava/lang/NumberFormatException;
 
@@ -388,8 +391,10 @@
 .method public static sort([B)V
     .locals 2
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -402,8 +407,10 @@
 .method public static sort([BII)V
     .locals 2
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     array-length v0, p0
 
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
@@ -413,6 +420,7 @@
     :goto_0
     if-ge v0, p2, :cond_0
 
+    .line 5
     aget-byte v1, p0, v0
 
     invoke-static {v1}, Lcom/google/common/primitives/UnsignedBytes;->flip(B)B
@@ -425,12 +433,14 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-static {p0, p1, p2}, Ljava/util/Arrays;->sort([BII)V
 
     :goto_1
     if-ge p1, p2, :cond_1
 
+    .line 7
     aget-byte v0, p0, p1
 
     invoke-static {v0}, Lcom/google/common/primitives/UnsignedBytes;->flip(B)B
@@ -450,8 +460,10 @@
 .method public static sortDescending([B)V
     .locals 2
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -464,8 +476,10 @@
 .method public static sortDescending([BII)V
     .locals 2
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     array-length v0, p0
 
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
@@ -475,6 +489,7 @@
     :goto_0
     if-ge v0, p2, :cond_0
 
+    .line 5
     aget-byte v1, p0, v0
 
     xor-int/lit8 v1, v1, 0x7f
@@ -487,12 +502,14 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-static {p0, p1, p2}, Ljava/util/Arrays;->sort([BII)V
 
     :goto_1
     if-ge p1, p2, :cond_1
 
+    .line 7
     aget-byte v0, p0, p1
 
     xor-int/lit8 v0, v0, 0x7f
@@ -522,6 +539,7 @@
 
     const/16 v0, 0xa
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/common/primitives/UnsignedBytes;->toString(BI)Ljava/lang/String;
 
     move-result-object p0
@@ -550,8 +568,10 @@
     :goto_0
     const-string v1, "radix (%s) must be between Character.MIN_RADIX and Character.MAX_RADIX"
 
+    .line 2
     invoke-static {v0, v1, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/primitives/UnsignedBytes;->toInt(B)I
 
     move-result p0

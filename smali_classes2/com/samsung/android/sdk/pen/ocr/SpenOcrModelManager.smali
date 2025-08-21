@@ -229,10 +229,12 @@
 
     const-string p0, "SpenOcrManager::LoadDB : filePath is null!"
 
+    .line 1
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
+    .line 2
     :cond_0
     invoke-virtual {p0, p3}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelManager;->findDB(Lcom/samsung/android/sdk/pen/ocr/SpenDBConfig;)I
 
@@ -242,6 +244,7 @@
 
     if-eq v1, v0, :cond_1
 
+    .line 3
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -262,6 +265,7 @@
 
     return v1
 
+    .line 4
     :cond_1
     iget-wide v0, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelManager;->mNativeHandle:J
 
@@ -269,6 +273,7 @@
 
     move-result p0
 
+    .line 5
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -303,12 +308,14 @@
 
     const/4 v2, 0x0
 
+    .line 6
     aget-object v3, p2, v2
 
     if-nez v3, :cond_0
 
     goto/16 :goto_0
 
+    .line 7
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -354,12 +361,14 @@
 
     move-object/from16 v8, p3
 
+    .line 8
     invoke-virtual {p0, v8}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelManager;->findDB(Lcom/samsung/android/sdk/pen/ocr/SpenDBConfig;)I
 
     move-result v3
 
     if-eq v3, v1, :cond_1
 
+    .line 9
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -380,6 +389,7 @@
 
     return v3
 
+    .line 10
     :cond_1
     iget-wide v6, v0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelManager;->mNativeHandle:J
 
@@ -431,6 +441,7 @@
 
     move-result v0
 
+    .line 11
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -455,6 +466,7 @@
     :goto_0
     const-string v0, "SpenOcrManager::LoadDB : FileDescriptor is null!"
 
+    .line 12
     invoke-static {v9, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1

@@ -28,6 +28,7 @@
 
     const/4 v0, 0x1
 
+    .line 5
     invoke-direct {p0, p1, p2, v0, p3}, Lcom/samsung/android/camera/core2/node/MultiFrameNodeBase;-><init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;ZI)V
 
     return-void
@@ -36,14 +37,18 @@
 .method public constructor <init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/Node2;-><init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Z)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput p1, p0, Lcom/samsung/android/camera/core2/node/MultiFrameNodeBase;->mCurrentInputCount:I
 
+    .line 3
     iput p1, p0, Lcom/samsung/android/camera/core2/node/MultiFrameNodeBase;->mCurrentYuvInputCount:I
 
+    .line 4
     iget-object p1, p0, Lcom/samsung/android/camera/core2/node/Node;->INPUTPORT_PICTURE:Lcom/samsung/android/camera/core2/node/Node$InputPort;
 
     new-instance p2, Lcom/samsung/android/camera/core2/node/MultiFrameNodeBase$1;
@@ -58,8 +63,10 @@
 .method public constructor <init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;ZI)V
     .locals 0
 
+    .line 6
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/MultiFrameNodeBase;-><init>(ILcom/samsung/android/camera/core2/util/CLog$Tag;Z)V
 
+    .line 7
     iput p4, p0, Lcom/samsung/android/camera/core2/node/MultiFrameNodeBase;->mMaxInputCount:I
 
     return-void

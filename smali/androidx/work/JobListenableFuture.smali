@@ -52,12 +52,16 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/work/JobListenableFuture;->job:Lx6/r1;
 
+    .line 3
     iput-object p2, p0, Landroidx/work/JobListenableFuture;->underlying:Landroidx/work/impl/utils/futures/SettableFuture;
 
+    .line 4
     new-instance p2, Landroidx/work/JobListenableFuture$1;
 
     invoke-direct {p2, p0}, Landroidx/work/JobListenableFuture$1;-><init>(Landroidx/work/JobListenableFuture;)V
@@ -74,6 +78,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 5
     invoke-static {}, Landroidx/work/impl/utils/futures/SettableFuture;->create()Landroidx/work/impl/utils/futures/SettableFuture;
 
     move-result-object p2
@@ -82,6 +87,7 @@
 
     invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 6
     :cond_0
     invoke-direct {p0, p1, p2}, Landroidx/work/JobListenableFuture;-><init>(Lx6/r1;Landroidx/work/impl/utils/futures/SettableFuture;)V
 
@@ -143,6 +149,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/work/JobListenableFuture;->underlying:Landroidx/work/impl/utils/futures/SettableFuture;
 
     invoke-virtual {p0}, Landroidx/work/impl/utils/futures/AbstractFuture;->get()Ljava/lang/Object;
@@ -162,6 +169,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Landroidx/work/JobListenableFuture;->underlying:Landroidx/work/impl/utils/futures/SettableFuture;
 
     invoke-virtual {p0, p1, p2, p3}, Landroidx/work/impl/utils/futures/AbstractFuture;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;

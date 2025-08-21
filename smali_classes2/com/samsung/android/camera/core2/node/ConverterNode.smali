@@ -120,12 +120,14 @@
 .method public processConvert(Lcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/ExtraBundle;)Ljava/lang/Object;
     .locals 7
 
+    .line 17
     sget-object v0, Lcom/samsung/android/camera/core2/node/ConverterNode;->CONVERTER_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const-string v1, "processConvert"
 
     invoke-static {v0, v1}, Lcom/samsung/android/camera/core2/util/CLog;->j(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 18
     iget-object v1, p0, Lcom/samsung/android/camera/core2/node/ConverterNode;->mInputPortTypeMap:Ljava/util/Map;
 
     sget-object v2, Lcom/samsung/android/camera/core2/node/Node;->PORT_TYPE_PICTURE:Lcom/samsung/android/camera/core2/node/Node$PortType;
@@ -150,14 +152,17 @@
 
     const-string p2, "processConvert fail - can\'t find converterConfiguration for %s"
 
+    .line 19
     invoke-static {v0, p2, p1}, Lcom/samsung/android/camera/core2/util/CLog;->h(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 20
     iget-object p0, p0, Lcom/samsung/android/camera/core2/node/ConverterNode;->mNodeCallback:Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;
 
     invoke-interface {p0}, Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;->onError()V
 
     return-object v5
 
+    .line 21
     :cond_0
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;->b(Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;)Lcom/samsung/android/camera/core2/node/Node$PortType;
 
@@ -175,6 +180,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 22
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;->a(Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;)Ljava/lang/Object;
 
     move-result-object v2
@@ -187,6 +193,7 @@
 
     new-array p1, p1, [Ljava/lang/Object;
 
+    .line 23
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;->a(Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;)Ljava/lang/Object;
 
     move-result-object p2
@@ -199,12 +206,14 @@
 
     invoke-static {v0, p2, p1}, Lcom/samsung/android/camera/core2/util/CLog;->h(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 24
     iget-object p0, p0, Lcom/samsung/android/camera/core2/node/ConverterNode;->mNodeCallback:Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;
 
     invoke-interface {p0}, Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;->onError()V
 
     return-object v5
 
+    .line 25
     :cond_1
     :try_start_0
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;->a(Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;)Ljava/lang/Object;
@@ -213,8 +222,10 @@
 
     check-cast v0, Lcom/samsung/android/camera/core2/util/ImageFile;
 
+    .line 26
     invoke-virtual {p1, v0}, Lcom/samsung/android/camera/core2/util/ImageBuffer;->f(Lcom/samsung/android/camera/core2/util/ImageFile;)V
 
+    .line 27
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;->b(Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;)Lcom/samsung/android/camera/core2/node/Node$PortType;
 
     move-result-object p1
@@ -235,6 +246,7 @@
     :catch_0
     move-exception p1
 
+    .line 28
     sget-object p2, Lcom/samsung/android/camera/core2/node/ConverterNode;->CONVERTER_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -253,6 +265,7 @@
 
     invoke-static {p2, p1}, Lcom/samsung/android/camera/core2/util/CLog;->f(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 29
     iget-object p0, p0, Lcom/samsung/android/camera/core2/node/ConverterNode;->mNodeCallback:Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;
 
     invoke-interface {p0}, Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;->onError()V
@@ -262,6 +275,7 @@
     :cond_2
     new-array p1, v4, [Ljava/lang/Object;
 
+    .line 30
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;->b(Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;)Lcom/samsung/android/camera/core2/node/Node$PortType;
 
     move-result-object p2
@@ -276,6 +290,7 @@
 
     invoke-static {v0, p2, p1}, Lcom/samsung/android/camera/core2/util/CLog;->h(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 31
     iget-object p0, p0, Lcom/samsung/android/camera/core2/node/ConverterNode;->mNodeCallback:Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;
 
     invoke-interface {p0}, Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;->onError()V
@@ -286,12 +301,14 @@
 .method public processConvert(Lcom/samsung/android/camera/core2/util/ImageFile;Lcom/samsung/android/camera/core2/ExtraBundle;)Ljava/lang/Object;
     .locals 10
 
+    .line 1
     sget-object v0, Lcom/samsung/android/camera/core2/node/ConverterNode;->CONVERTER_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const-string v1, "processConvert"
 
     invoke-static {v0, v1}, Lcom/samsung/android/camera/core2/util/CLog;->j(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 2
     iget-object v1, p0, Lcom/samsung/android/camera/core2/node/ConverterNode;->mInputPortTypeMap:Ljava/util/Map;
 
     sget-object v2, Lcom/samsung/android/camera/core2/node/Node;->PORT_TYPE_PICTURE_FILE:Lcom/samsung/android/camera/core2/node/Node$PortType;
@@ -316,14 +333,17 @@
 
     const-string p2, "processConvert fail - can\'t find converterConfiguration for %s"
 
+    .line 3
     invoke-static {v0, p2, p1}, Lcom/samsung/android/camera/core2/util/CLog;->h(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     iget-object p0, p0, Lcom/samsung/android/camera/core2/node/ConverterNode;->mNodeCallback:Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;
 
     invoke-interface {p0}, Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;->onError()V
 
     return-object v5
 
+    .line 5
     :cond_0
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;->b(Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;)Lcom/samsung/android/camera/core2/node/Node$PortType;
 
@@ -341,6 +361,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 6
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
@@ -356,6 +377,7 @@
 
     new-array p2, v4, [Ljava/lang/Object;
 
+    .line 7
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -364,6 +386,7 @@
 
     invoke-static {v0, p1, p2}, Lcom/samsung/android/camera/core2/util/CLog;->h(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 8
     iget-object p1, p0, Lcom/samsung/android/camera/core2/node/ConverterNode;->mNodeCallback:Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;
 
     invoke-interface {p1}, Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;->onError()V
@@ -373,6 +396,7 @@
     :cond_1
     long-to-int v0, v6
 
+    .line 9
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/util/ImageFile;->a()Lcom/samsung/android/camera/core2/util/ImageInfo;
 
     move-result-object v2
@@ -381,10 +405,13 @@
 
     move-result-object v0
 
+    .line 10
     invoke-virtual {v0, p1}, Lcom/samsung/android/camera/core2/util/BufferBase;->put(Ljava/io/File;)V
 
+    .line 11
     invoke-virtual {v0}, Lcom/samsung/android/camera/core2/util/BufferBase;->rewind()V
 
+    .line 12
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;->b(Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;)Lcom/samsung/android/camera/core2/node/Node$PortType;
 
     move-result-object p1
@@ -405,6 +432,7 @@
     :catch_0
     move-exception p1
 
+    .line 13
     sget-object p2, Lcom/samsung/android/camera/core2/node/ConverterNode;->CONVERTER_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -423,6 +451,7 @@
 
     invoke-static {p2, p1}, Lcom/samsung/android/camera/core2/util/CLog;->f(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 14
     iget-object p0, p0, Lcom/samsung/android/camera/core2/node/ConverterNode;->mNodeCallback:Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;
 
     invoke-interface {p0}, Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;->onError()V
@@ -432,6 +461,7 @@
     :cond_2
     new-array p1, v4, [Ljava/lang/Object;
 
+    .line 15
     invoke-static {v1}, Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;->b(Lcom/samsung/android/camera/core2/node/ConverterNode$OutputConfiguration;)Lcom/samsung/android/camera/core2/node/Node$PortType;
 
     move-result-object p2
@@ -446,6 +476,7 @@
 
     invoke-static {v0, p2, p1}, Lcom/samsung/android/camera/core2/util/CLog;->h(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 16
     iget-object p0, p0, Lcom/samsung/android/camera/core2/node/ConverterNode;->mNodeCallback:Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;
 
     invoke-interface {p0}, Lcom/samsung/android/camera/core2/node/ConverterNode$NodeCallback;->onError()V

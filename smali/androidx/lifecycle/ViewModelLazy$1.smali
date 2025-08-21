@@ -56,6 +56,7 @@
 .method public final invoke()Landroidx/lifecycle/viewmodel/CreationExtras$Empty;
     .locals 0
 
+    .line 1
     sget-object p0, Landroidx/lifecycle/viewmodel/CreationExtras$Empty;->INSTANCE:Landroidx/lifecycle/viewmodel/CreationExtras$Empty;
 
     return-object p0
@@ -64,6 +65,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/lifecycle/ViewModelLazy$1;->invoke()Landroidx/lifecycle/viewmodel/CreationExtras$Empty;
 
     move-result-object p0

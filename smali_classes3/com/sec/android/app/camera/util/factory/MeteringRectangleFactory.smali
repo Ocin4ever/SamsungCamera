@@ -25,6 +25,7 @@
 .method public static createArray(I)[Landroid/hardware/camera2/params/MeteringRectangle;
     .locals 0
 
+    .line 2
     new-array p0, p0, [Landroid/hardware/camera2/params/MeteringRectangle;
 
     return-object p0
@@ -33,6 +34,7 @@
 .method public static varargs createArray([Landroid/hardware/camera2/params/MeteringRectangle;)[Landroid/hardware/camera2/params/MeteringRectangle;
     .locals 1
 
+    .line 1
     array-length v0, p0
 
     invoke-static {p0, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;

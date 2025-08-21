@@ -64,6 +64,7 @@
 .method public final invoke()Landroidx/lifecycle/ViewModelProvider$Factory;
     .locals 2
 
+    .line 2
     iget-object v0, p0, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$4;->$owner$delegate:Lf6/d;
 
     invoke-static {v0}, Landroidx/fragment/app/FragmentViewModelLazyKt;->access$viewModels$lambda-0(Lf6/d;)Landroidx/lifecycle/ViewModelStoreOwner;
@@ -90,6 +91,7 @@
 
     if-nez v0, :cond_2
 
+    .line 3
     :cond_1
     iget-object p0, p0, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$4;->$this_viewModels:Landroidx/fragment/app/Fragment;
 
@@ -100,6 +102,7 @@
     :cond_2
     const-string p0, "(owner as? HasDefaultVie\u2026tViewModelProviderFactory"
 
+    .line 4
     invoke-static {v0, p0}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
@@ -108,6 +111,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$4;->invoke()Landroidx/lifecycle/ViewModelProvider$Factory;
 
     move-result-object p0

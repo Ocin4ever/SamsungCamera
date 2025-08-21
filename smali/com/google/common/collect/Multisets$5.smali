@@ -46,6 +46,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1}, Lcom/google/common/collect/Multiset$Entry;->getElement()Ljava/lang/Object;
 
     move-result-object p0
@@ -58,6 +59,7 @@
     .annotation runtime Lcom/google/common/collect/ParametricNullness;
     .end annotation
 
+    .line 1
     check-cast p1, Lcom/google/common/collect/Multiset$Entry;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Multisets$5;->transform(Lcom/google/common/collect/Multiset$Entry;)Ljava/lang/Object;

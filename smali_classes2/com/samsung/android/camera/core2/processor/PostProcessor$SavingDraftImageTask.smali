@@ -45,16 +45,19 @@
         }
     .end annotation
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/camera/core2/processor/PostProcessor$SavingDraftImageTask;->this$0:Lcom/samsung/android/camera/core2/processor/PostProcessor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-interface {p2}, Lcom/samsung/android/camera/core2/processor/ProcessRequest;->getPpSequenceId()I
 
     move-result p1
 
     iput p1, p0, Lcom/samsung/android/camera/core2/processor/PostProcessor$SavingDraftImageTask;->mPpSequenceId:I
 
+    .line 4
     invoke-interface {p2}, Lcom/samsung/android/camera/core2/processor/ProcessRequest;->getData()Ljava/lang/Object;
 
     move-result-object p1
@@ -67,18 +70,21 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/processor/PostProcessor$SavingDraftImageTask;->mOriginalBuffer:Lcom/samsung/android/camera/core2/util/ImageBuffer;
 
+    .line 5
     invoke-interface {p2}, Lcom/samsung/android/camera/core2/processor/ProcessRequest;->getCamCapability()Lcom/samsung/android/camera/core2/CamCapability;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/processor/PostProcessor$SavingDraftImageTask;->mCamCapability:Lcom/samsung/android/camera/core2/CamCapability;
 
+    .line 6
     invoke-interface {p2}, Lcom/samsung/android/camera/core2/processor/ProcessRequest;->getExtraBundle()Lcom/samsung/android/camera/core2/ExtraBundle;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/processor/PostProcessor$SavingDraftImageTask;->mExtraBundle:Lcom/samsung/android/camera/core2/ExtraBundle;
 
+    .line 7
     iput-object p3, p0, Lcom/samsung/android/camera/core2/processor/PostProcessor$SavingDraftImageTask;->mDraftJpegNodeChainAccessor:Lcom/samsung/android/camera/core2/processor/DraftNodeChainAccessor;
 
     return-void
@@ -87,6 +93,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/processor/PostProcessor;Lcom/samsung/android/camera/core2/processor/ProcessRequest;Lcom/samsung/android/camera/core2/processor/DraftNodeChainAccessor;Lcom/samsung/android/camera/core2/processor/y;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/processor/PostProcessor$SavingDraftImageTask;-><init>(Lcom/samsung/android/camera/core2/processor/PostProcessor;Lcom/samsung/android/camera/core2/processor/ProcessRequest;Lcom/samsung/android/camera/core2/processor/DraftNodeChainAccessor;)V
 
     return-void

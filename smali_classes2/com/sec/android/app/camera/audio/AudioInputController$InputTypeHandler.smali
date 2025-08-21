@@ -30,8 +30,10 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/audio/AudioInputController;Landroid/os/Looper;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 3
     new-instance p2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -44,6 +46,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/audio/AudioInputController;Landroid/os/Looper;Lcom/sec/android/app/camera/audio/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/audio/AudioInputController$InputTypeHandler;-><init>(Lcom/sec/android/app/camera/audio/AudioInputController;Landroid/os/Looper;)V
 
     return-void

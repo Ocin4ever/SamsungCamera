@@ -18,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,6 +27,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/work/OneTimeWorkRequest$Companion;-><init>()V
 
     return-void
@@ -50,6 +52,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance p0, Landroidx/work/OneTimeWorkRequest$Builder;
 
     invoke-direct {p0, p1}, Landroidx/work/OneTimeWorkRequest$Builder;-><init>(Ljava/lang/Class;)V
@@ -84,8 +87,10 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     check-cast p1, Ljava/lang/Iterable;
 
+    .line 3
     new-instance p0, Ljava/util/ArrayList;
 
     const/16 v0, 0xa
@@ -96,6 +101,7 @@
 
     invoke-direct {p0, v0}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 4
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -111,8 +117,10 @@
 
     move-result-object v0
 
+    .line 5
     check-cast v0, Ljava/lang/Class;
 
+    .line 6
     new-instance v1, Landroidx/work/OneTimeWorkRequest$Builder;
 
     invoke-direct {v1, v0}, Landroidx/work/OneTimeWorkRequest$Builder;-><init>(Ljava/lang/Class;)V
@@ -123,6 +131,7 @@
 
     check-cast v0, Landroidx/work/OneTimeWorkRequest;
 
+    .line 7
     invoke-interface {p0, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0

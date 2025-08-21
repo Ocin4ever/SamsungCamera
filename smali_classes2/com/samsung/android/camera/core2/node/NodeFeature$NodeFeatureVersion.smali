@@ -1206,6 +1206,7 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
     .locals 6
 
+    .line 1
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v5
@@ -1228,11 +1229,14 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 3
     :try_start_0
     iput-object p3, p0, Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureVersion;->a:Ljava/lang/String;
 
+    .line 4
     const-class p1, Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureVersion;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -1247,6 +1251,7 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureVersion;->b:Ljava/lang/Class;
 
+    .line 5
     iput-object p5, p0, Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureVersion;->c:Ljava/util/List;
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1256,6 +1261,7 @@
     :catch_0
     move-exception p0
 
+    .line 6
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     new-instance p2, Ljava/lang/StringBuilder;

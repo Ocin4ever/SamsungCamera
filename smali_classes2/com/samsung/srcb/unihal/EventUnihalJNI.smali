@@ -50,10 +50,12 @@
 
     new-array v2, v2, [I
 
+    .line 1
     new-instance v4, Lcom/samsung/srcb/unihal/EventGyroResult;
 
     invoke-direct {v4}, Lcom/samsung/srcb/unihal/EventGyroResult;-><init>()V
 
+    .line 2
     invoke-static {p0, v1, v3, v2}, Lcom/samsung/srcb/unihal/EventUnihalJNI;->decodeGyroInfo([B[I[J[I)V
 
     const/4 p0, 0x0
@@ -66,13 +68,17 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iput v5, v4, Lcom/samsung/srcb/unihal/EventGyroResult;->panTiltCount:I
 
+    .line 4
     iput-object v3, v4, Lcom/samsung/srcb/unihal/EventGyroResult;->panTiltTimestampList:[J
 
+    .line 5
     iput-object v2, v4, Lcom/samsung/srcb/unihal/EventGyroResult;->panTiltInfoList:[I
 
+    .line 6
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,6 +101,7 @@
 
     const-string v2, "panTiltInfoList : "
 
+    .line 7
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v2, ""
@@ -108,6 +115,7 @@
 
     if-ge v5, v7, :cond_2
 
+    .line 8
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -140,10 +148,12 @@
 
     if-lez v5, :cond_1
 
+    .line 9
     rem-int/lit8 v7, v5, 0x32
 
     if-nez v7, :cond_1
 
+    .line 10
     invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v6, v2
@@ -156,10 +166,12 @@
     :cond_2
     const-string v0, "-----------------------------------------------"
 
+    .line 11
     invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v0, "panTiltTimestampList : "
 
+    .line 12
     invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move v0, p0
@@ -171,6 +183,7 @@
 
     if-ge v0, v6, :cond_4
 
+    .line 13
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -193,10 +206,12 @@
 
     if-lez v0, :cond_3
 
+    .line 14
     rem-int/lit8 v6, v0, 0x32
 
     if-nez v6, :cond_3
 
+    .line 15
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v5, v2

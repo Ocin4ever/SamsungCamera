@@ -110,6 +110,7 @@
 .method public read()I
     .locals 5
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/io/ByteStreams$LimitedInputStream;->left:J
 
     const-wide/16 v2, 0x0
@@ -122,6 +123,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
@@ -131,6 +133,7 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 3
     iget-wide v1, p0, Lcom/google/common/io/ByteStreams$LimitedInputStream;->left:J
 
     const-wide/16 v3, 0x1
@@ -146,6 +149,7 @@
 .method public read([BII)I
     .locals 6
 
+    .line 4
     iget-wide v0, p0, Lcom/google/common/io/ByteStreams$LimitedInputStream;->left:J
 
     const-wide/16 v2, 0x0
@@ -161,12 +165,14 @@
     :cond_0
     int-to-long v4, p3
 
+    .line 5
     invoke-static {v4, v5, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
 
     long-to-int p3, v0
 
+    .line 6
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
@@ -175,6 +181,7 @@
 
     if-eq p1, v3, :cond_1
 
+    .line 7
     iget-wide p2, p0, Lcom/google/common/io/ByteStreams$LimitedInputStream;->left:J
 
     int-to-long v0, p1

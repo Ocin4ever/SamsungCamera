@@ -46,12 +46,14 @@
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     if-eqz p2, :cond_0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     const-class p2, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
@@ -59,6 +61,7 @@
 
     move-result-object p2
 
+    .line 3
     :goto_0
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
@@ -72,6 +75,7 @@
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final DEBUG:Z
+.field private static final DEBUG:Z = false
 
 
 # instance fields
@@ -115,10 +115,12 @@
 
     const-string v0, "\\s+"
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     array-length v0, p0
 
     new-array v1, v0, [D
@@ -128,6 +130,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 3
     aget-object v3, p0, v2
 
     invoke-static {v3}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
@@ -140,6 +143,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-static {v1}, Landroidx/constraintlayout/core/motion/utils/StepCurve;->genSpline([D)Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;
 
@@ -153,6 +157,7 @@
 
     move-object/from16 v0, p0
 
+    .line 5
     array-length v1, v0
 
     mul-int/lit8 v1, v1, 0x3
@@ -161,6 +166,7 @@
 
     sub-int/2addr v1, v2
 
+    .line 6
     array-length v3, v0
 
     const/4 v4, 0x1
@@ -181,6 +187,7 @@
 
     aput v1, v2, v4
 
+    .line 7
     sget-object v9, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
     invoke-static {v9, v2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
@@ -189,19 +196,23 @@
 
     check-cast v2, [[D
 
+    .line 8
     new-array v1, v1, [D
 
     move v9, v4
 
+    .line 9
     :goto_0
     array-length v10, v0
 
     if-ge v9, v10, :cond_1
 
+    .line 10
     aget-wide v10, v0, v9
 
     add-int v12, v9, v3
 
+    .line 11
     aget-object v13, v2, v12
 
     aput-wide v10, v13, v4
@@ -210,6 +221,7 @@
 
     mul-double/2addr v13, v5
 
+    .line 12
     aput-wide v13, v1, v12
 
     if-lez v9, :cond_0
@@ -218,6 +230,7 @@
 
     add-int/2addr v12, v9
 
+    .line 13
     aget-object v15, v2, v12
 
     add-double v16, v10, v7
@@ -226,10 +239,12 @@
 
     add-double v15, v13, v7
 
+    .line 14
     aput-wide v15, v1, v12
 
     add-int/lit8 v12, v9, -0x1
 
+    .line 15
     aget-object v15, v2, v12
 
     sub-double/2addr v10, v7
@@ -244,6 +259,7 @@
 
     sub-double/2addr v13, v5
 
+    .line 16
     aput-wide v13, v1, v12
 
     :cond_0
@@ -251,11 +267,13 @@
 
     goto :goto_0
 
+    .line 17
     :cond_1
     new-instance v0, Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;
 
     invoke-direct {v0, v1, v2}, Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;-><init>([D[[D)V
 
+    .line 18
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -280,6 +298,7 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 19
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;

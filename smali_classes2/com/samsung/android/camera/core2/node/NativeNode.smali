@@ -335,6 +335,7 @@
 .method public setNativeCallback(ILcom/samsung/android/camera/core2/node/NativeNode$NativeCallback;)V
     .locals 6
 
+    .line 1
     iget-wide v1, p0, Lcom/samsung/android/camera/core2/node/NativeNode;->mNativeNodeRef:J
 
     invoke-static {p2}, Lcom/samsung/android/camera/core2/node/NativeNode$NativeCallback;->a(Lcom/samsung/android/camera/core2/node/NativeNode$NativeCallback;)[J

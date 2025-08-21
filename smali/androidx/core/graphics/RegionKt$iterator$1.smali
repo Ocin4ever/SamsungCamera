@@ -74,16 +74,19 @@
 .method public next()Landroid/graphics/Rect;
     .locals 3
 
+    .line 2
     iget-boolean v0, p0, Landroidx/core/graphics/RegionKt$iterator$1;->hasMore:Z
 
     if-eqz v0, :cond_0
 
+    .line 3
     new-instance v0, Landroid/graphics/Rect;
 
     iget-object v1, p0, Landroidx/core/graphics/RegionKt$iterator$1;->rect:Landroid/graphics/Rect;
 
     invoke-direct {v0, v1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
+    .line 4
     iget-object v1, p0, Landroidx/core/graphics/RegionKt$iterator$1;->iterator:Landroid/graphics/RegionIterator;
 
     iget-object v2, p0, Landroidx/core/graphics/RegionKt$iterator$1;->rect:Landroid/graphics/Rect;
@@ -96,6 +99,7 @@
 
     return-object v0
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -107,6 +111,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/core/graphics/RegionKt$iterator$1;->next()Landroid/graphics/Rect;
 
     move-result-object p0

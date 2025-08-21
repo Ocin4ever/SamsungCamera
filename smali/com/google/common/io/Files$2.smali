@@ -50,18 +50,21 @@
         }
     .end annotation
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -72,6 +75,7 @@
 
     return-object p0
 
+    .line 5
     :cond_0
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
@@ -83,6 +87,7 @@
 .method public bridge synthetic successors(Ljava/lang/Object;)Ljava/lang/Iterable;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/io/File;
 
     invoke-virtual {p0, p1}, Lcom/google/common/io/Files$2;->successors(Ljava/io/File;)Ljava/lang/Iterable;

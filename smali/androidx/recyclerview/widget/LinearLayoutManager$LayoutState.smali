@@ -161,6 +161,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->assignPositionFromScrapList(Landroid/view/View;)V
 
     return-void
@@ -169,6 +170,7 @@
 .method public assignPositionFromScrapList(Landroid/view/View;)V
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->nextViewInLimitedList(Landroid/view/View;)Landroid/view/View;
 
     move-result-object p1
@@ -177,10 +179,12 @@
 
     const/4 p1, -0x1
 
+    .line 3
     iput p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -188,6 +192,7 @@
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
+    .line 5
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->getViewLayoutPosition()I
 
     move-result p1

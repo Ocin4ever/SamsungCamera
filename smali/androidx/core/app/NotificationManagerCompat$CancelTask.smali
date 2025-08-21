@@ -31,20 +31,25 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/app/NotificationManagerCompat$CancelTask;->packageName:Ljava/lang/String;
 
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Landroidx/core/app/NotificationManagerCompat$CancelTask;->id:I
 
     const/4 p1, 0x0
 
+    .line 4
     iput-object p1, p0, Landroidx/core/app/NotificationManagerCompat$CancelTask;->tag:Ljava/lang/String;
 
     const/4 p1, 0x1
 
+    .line 5
     iput-boolean p1, p0, Landroidx/core/app/NotificationManagerCompat$CancelTask;->all:Z
 
     return-void
@@ -53,16 +58,21 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 7
     iput-object p1, p0, Landroidx/core/app/NotificationManagerCompat$CancelTask;->packageName:Ljava/lang/String;
 
+    .line 8
     iput p2, p0, Landroidx/core/app/NotificationManagerCompat$CancelTask;->id:I
 
+    .line 9
     iput-object p3, p0, Landroidx/core/app/NotificationManagerCompat$CancelTask;->tag:Ljava/lang/String;
 
     const/4 p1, 0x0
 
+    .line 10
     iput-boolean p1, p0, Landroidx/core/app/NotificationManagerCompat$CancelTask;->all:Z
 
     return-void

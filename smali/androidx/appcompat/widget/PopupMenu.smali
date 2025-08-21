@@ -38,6 +38,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/PopupMenu;-><init>(Landroid/content/Context;Landroid/view/View;I)V
 
     return-void
@@ -46,6 +47,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/view/View;I)V
     .locals 6
 
+    .line 2
     sget v4, Landroidx/appcompat/R$attr;->popupMenuStyle:I
 
     const/4 v5, 0x0
@@ -66,30 +68,38 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/view/View;III)V
     .locals 8
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 4
     iput v0, p0, Landroidx/appcompat/widget/PopupMenu;->mXOffset:I
 
+    .line 5
     iput v0, p0, Landroidx/appcompat/widget/PopupMenu;->mYOffset:I
 
+    .line 6
     iput-object p1, p0, Landroidx/appcompat/widget/PopupMenu;->mContext:Landroid/content/Context;
 
+    .line 7
     iput-object p2, p0, Landroidx/appcompat/widget/PopupMenu;->mAnchor:Landroid/view/View;
 
+    .line 8
     new-instance v3, Landroidx/appcompat/view/menu/MenuBuilder;
 
     invoke-direct {v3, p1}, Landroidx/appcompat/view/menu/MenuBuilder;-><init>(Landroid/content/Context;)V
 
     iput-object v3, p0, Landroidx/appcompat/widget/PopupMenu;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
+    .line 9
     new-instance v0, Landroidx/appcompat/widget/PopupMenu$1;
 
     invoke-direct {v0, p0}, Landroidx/appcompat/widget/PopupMenu$1;-><init>(Landroidx/appcompat/widget/PopupMenu;)V
 
     invoke-virtual {v3, v0}, Landroidx/appcompat/view/menu/MenuBuilder;->setCallback(Landroidx/appcompat/view/menu/MenuBuilder$Callback;)V
 
+    .line 10
     new-instance v0, Landroidx/appcompat/view/menu/MenuPopupHelper;
 
     const/4 v5, 0x0
@@ -110,10 +120,13 @@
 
     const/4 p1, 0x1
 
+    .line 11
     invoke-virtual {v0, p1}, Landroidx/appcompat/view/menu/MenuPopupHelper;->seslSetOverflowOnly(Z)V
 
+    .line 12
     invoke-virtual {v0, p3}, Landroidx/appcompat/view/menu/MenuPopupHelper;->setGravity(I)V
 
+    .line 13
     new-instance p1, Landroidx/appcompat/widget/PopupMenu$2;
 
     invoke-direct {p1, p0}, Landroidx/appcompat/widget/PopupMenu$2;-><init>(Landroidx/appcompat/widget/PopupMenu;)V

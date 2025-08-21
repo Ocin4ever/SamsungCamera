@@ -30,6 +30,7 @@
 
     move-object v4, p4
 
+    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/camera/core2/container/DynamicShotMode;-><init>(Ljava/lang/String;IILjava/util/List;Lcom/samsung/android/camera/core2/container/w1;)V
 
     return-void
@@ -38,6 +39,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;IILjava/util/List;Lcom/samsung/android/camera/core2/container/d1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/camera/core2/container/DynamicShotMode$17;-><init>(Ljava/lang/String;IILjava/util/List;)V
 
     return-void

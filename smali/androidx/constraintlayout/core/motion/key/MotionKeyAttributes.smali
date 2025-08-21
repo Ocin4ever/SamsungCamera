@@ -832,6 +832,7 @@
 .method public clone()Landroidx/constraintlayout/core/motion/key/MotionKey;
     .locals 0
 
+    .line 1
     const/4 p0, 0x0
 
     return-object p0
@@ -840,6 +841,7 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->clone()Landroidx/constraintlayout/core/motion/key/MotionKey;
 
     move-result-object p0
@@ -1545,82 +1547,98 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 6
     invoke-super {p0, p1, p2}, Landroidx/constraintlayout/core/motion/key/MotionKey;->setValue(IF)Z
 
     move-result p0
 
     return p0
 
+    .line 7
     :pswitch_0
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTransitionPathRotate:F
 
     goto :goto_0
 
+    .line 8
     :pswitch_1
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mProgress:F
 
     goto :goto_0
 
+    .line 9
     :pswitch_2
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mPivotY:F
 
     goto :goto_0
 
+    .line 10
     :pswitch_3
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mPivotX:F
 
     goto :goto_0
 
+    .line 11
     :pswitch_4
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleY:F
 
     goto :goto_0
 
+    .line 12
     :pswitch_5
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleX:F
 
     goto :goto_0
 
+    .line 13
     :pswitch_6
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotation:F
 
     goto :goto_0
 
+    .line 14
     :pswitch_7
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationY:F
 
     goto :goto_0
 
+    .line 15
     :pswitch_8
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationX:F
 
     goto :goto_0
 
+    .line 16
     :pswitch_9
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mElevation:F
 
     goto :goto_0
 
+    .line 17
     :pswitch_a
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationZ:F
 
     goto :goto_0
 
+    .line 18
     :pswitch_b
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationY:F
 
     goto :goto_0
 
+    .line 19
     :pswitch_c
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationX:F
 
     goto :goto_0
 
+    .line 20
     :pswitch_d
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mAlpha:F
 
     goto :goto_0
 
+    .line 21
     :cond_0
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTransitionPathRotate:F
 
@@ -1663,28 +1681,33 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->setValue(II)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
+    .line 2
     invoke-super {p0, p1, p2}, Landroidx/constraintlayout/core/motion/key/MotionKey;->setValue(II)Z
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mVisibility:I
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     goto :goto_0
 
+    .line 5
     :cond_2
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
@@ -1706,17 +1729,20 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 22
     invoke-super {p0, p1, p2}, Landroidx/constraintlayout/core/motion/key/MotionKey;->setValue(ILjava/lang/String;)Z
 
     move-result p0
 
     return p0
 
+    .line 23
     :cond_0
     iput-object p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTransitionEasing:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 24
     :cond_1
     iput-object p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mTargetString:Ljava/lang/String;
 

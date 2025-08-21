@@ -52,14 +52,17 @@
 .method public constructor <init>(I)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 3
     sget-object v0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -82,8 +85,10 @@
 
     const-string v1, "preview"
 
+    .line 4
     invoke-direct {p0, v0, p1, v1}, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->native_setup(Ljava/lang/Object;ILjava/lang/String;)I
 
+    .line 5
     iput p1, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mToken:I
 
     return-void
@@ -92,14 +97,17 @@
 .method public constructor <init>(ILcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy$BufferMode;)V
     .locals 3
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 7
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 8
     sget-object v0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -118,6 +126,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 9
     sget-object v0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy$BufferMode;->PREVIEW:Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy$BufferMode;
 
     if-ne p2, v0, :cond_0
@@ -126,6 +135,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_0
     sget-object v0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy$BufferMode;->VIDEOOUT:Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy$BufferMode;
 
@@ -141,8 +151,10 @@
     :goto_0
     const/4 v0, 0x0
 
+    .line 11
     invoke-direct {p0, v0, p1, p2}, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->native_setup(Ljava/lang/Object;ILjava/lang/String;)I
 
+    .line 12
     iput p1, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mToken:I
 
     return-void
@@ -151,14 +163,17 @@
 .method public constructor <init>(Lcom/samsung/android/apex/motionphoto/composer/SemApexRecorderListener;I)V
     .locals 3
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 14
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 15
     sget-object v0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -179,8 +194,10 @@
 
     const-string v0, "preview"
 
+    .line 16
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->native_setup(Ljava/lang/Object;ILjava/lang/String;)I
 
+    .line 17
     iput p2, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mToken:I
 
     return-void
@@ -189,14 +206,17 @@
 .method public constructor <init>(Lcom/samsung/android/apex/motionphoto/composer/SemApexRecorderListener;ILcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy$BufferMode;)V
     .locals 3
 
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 19
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 20
     sget-object v0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -215,6 +235,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 21
     sget-object v0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy$BufferMode;->PREVIEW:Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy$BufferMode;
 
     if-ne p3, v0, :cond_0
@@ -223,6 +244,7 @@
 
     goto :goto_0
 
+    .line 22
     :cond_0
     sget-object v0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy$BufferMode;->VIDEOOUT:Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy$BufferMode;
 
@@ -235,9 +257,11 @@
     :cond_1
     const-string p3, "surface"
 
+    .line 23
     :goto_0
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->native_setup(Ljava/lang/Object;ILjava/lang/String;)I
 
+    .line 24
     iput p2, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mToken:I
 
     return-void
@@ -445,6 +469,7 @@
 .method public queueBuffer(IIJ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p3, p4, p2}, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->native_queueBuffer(IJI)V
 
     return-void
@@ -453,11 +478,13 @@
 .method public queueBuffer(Landroid/hardware/HardwareBuffer;J)V
     .locals 4
 
+    .line 9
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 10
     iget-wide v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mNativeContext:J
 
     const-wide/16 v2, 0x0
@@ -466,10 +493,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 11
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->native_queueHardwareBuffer(Landroid/hardware/HardwareBuffer;J)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 12
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -484,17 +513,20 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 13
     throw p1
 .end method
 
 .method public queueBuffer(Ljava/nio/ByteBuffer;IIIJ)V
     .locals 4
 
+    .line 4
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 5
     iget-wide v0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mNativeContext:J
 
     const-wide/16 v2, 0x0
@@ -503,10 +535,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 6
     invoke-direct/range {p0 .. p6}, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->native_queueByteBuffer(Ljava/nio/ByteBuffer;IIIJ)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemApexRecordingProxy;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -521,14 +555,17 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 8
     throw p1
 .end method
 
 .method public queueBuffer(Ljava/nio/ByteBuffer;IJ)Z
     .locals 6
 
+    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
+    .line 3
     invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
     move-result v2

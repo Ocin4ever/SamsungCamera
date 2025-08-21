@@ -59,6 +59,7 @@
 .method public final invoke()Landroidx/lifecycle/viewmodel/CreationExtras;
     .locals 2
 
+    .line 2
     iget-object p0, p0, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$3;->$owner$delegate:Lf6/d;
 
     invoke-static {p0}, Landroidx/fragment/app/FragmentViewModelLazyKt;->access$viewModels$lambda-0(Lf6/d;)Landroidx/lifecycle/ViewModelStoreOwner;
@@ -88,6 +89,7 @@
     :cond_1
     if-nez v1, :cond_2
 
+    .line 3
     sget-object v1, Landroidx/lifecycle/viewmodel/CreationExtras$Empty;->INSTANCE:Landroidx/lifecycle/viewmodel/CreationExtras$Empty;
 
     :cond_2
@@ -97,6 +99,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$viewModels$3;->invoke()Landroidx/lifecycle/viewmodel/CreationExtras;
 
     move-result-object p0

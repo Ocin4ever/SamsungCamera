@@ -121,6 +121,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 1
     sget v0, Ly0/a;->g:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -131,6 +132,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 9
 
+    .line 2
     sget v4, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->W:I
 
     invoke-static {p1, p2, p3, v4}, Lx1/a;->c(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
@@ -141,8 +143,10 @@
 
     const/4 p1, 0x1
 
+    .line 3
     iput-boolean p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->a:Z
 
+    .line 4
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -151,26 +155,34 @@
 
     const/4 v6, -0x1
 
+    .line 5
     iput v6, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->u:I
 
     const/4 v7, 0x0
 
+    .line 6
     iput v7, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->z:I
 
+    .line 7
     iput v7, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->B:I
 
+    .line 8
     iput-boolean v7, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->D:Z
 
     const/4 v0, 0x0
 
+    .line 9
     iput-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->Q:Landroid/view/View;
 
+    .line 10
     iput-boolean p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->V:Z
 
+    .line 11
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v8
 
+    .line 12
     sget-object v2, Ly0/l;->k1:[I
 
     new-array v5, v7, [I
@@ -181,10 +193,12 @@
 
     move v3, p3
 
+    .line 13
     invoke-static/range {v0 .. v5}, Lm1/q;->i(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
+    .line 14
     sget p3, Ly0/l;->I1:I
 
     invoke-virtual {p2, p3, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -193,6 +207,7 @@
 
     iput-boolean p3, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->m:Z
 
+    .line 15
     sget p3, Ly0/l;->y1:I
 
     invoke-virtual {p2, p3, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -201,14 +216,17 @@
 
     iput-boolean p3, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->J:Z
 
+    .line 16
     iget-boolean v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->m:Z
 
     if-ne v0, p3, :cond_0
 
     if-eqz v0, :cond_0
 
+    .line 17
     iput-boolean v7, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->m:Z
 
+    .line 18
     :cond_0
     new-instance p3, Lm1/b;
 
@@ -216,38 +234,49 @@
 
     iput-object p3, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->k:Lm1/b;
 
+    .line 19
     iget-boolean v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->m:Z
 
     if-eqz v0, :cond_1
 
+    .line 20
     sget-object v0, Lz0/a;->e:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {p3, v0}, Lm1/b;->F0(Landroid/animation/TimeInterpolator;)V
 
+    .line 21
     invoke-virtual {p3, v7}, Lm1/b;->B0(Z)V
 
+    .line 22
     sget v0, Ly0/l;->p1:I
 
     const v1, 0x800053
 
+    .line 23
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v0
 
+    .line 24
     invoke-virtual {p3, v0}, Lm1/b;->p0(I)V
 
+    .line 25
     sget v0, Ly0/l;->l1:I
 
     const v1, 0x800013
 
+    .line 26
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v0
 
+    .line 27
     invoke-virtual {p3, v0}, Lm1/b;->g0(I)V
 
+    .line 28
     sget v0, Ly0/l;->q1:I
 
+    .line 29
     invoke-virtual {p2, v0, v7}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v0
@@ -260,6 +289,7 @@
 
     iput v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->f:I
 
+    .line 30
     :cond_1
     new-instance v0, Lk1/a;
 
@@ -267,6 +297,7 @@
 
     iput-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->l:Lk1/a;
 
+    .line 31
     sget v0, Ly0/l;->z1:I
 
     invoke-virtual {p2, v0, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -275,6 +306,7 @@
 
     iput v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->M:I
 
+    .line 32
     sget v0, Ly0/l;->x1:I
 
     invoke-virtual {p2, v0, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -283,6 +315,7 @@
 
     iput v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->L:I
 
+    .line 33
     sget v0, Ly0/l;->v1:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -291,12 +324,14 @@
 
     if-eqz v1, :cond_2
 
+    .line 34
     invoke-virtual {p2, v0, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v1
 
     iput v1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->M:I
 
+    .line 35
     :cond_2
     sget v1, Ly0/l;->G1:I
 
@@ -304,6 +339,7 @@
 
     move-result-object v1
 
+    .line 36
     iget-boolean v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->J:Z
 
     if-eqz v2, :cond_3
@@ -324,34 +360,41 @@
     :goto_0
     iput-boolean v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->K:Z
 
+    .line 37
     new-instance v2, Landroid/widget/LinearLayout;
 
     invoke-direct {v2, v8}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->F:Landroid/widget/LinearLayout;
 
+    .line 38
     sget v3, Ly0/e;->k:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setId(I)V
 
+    .line 39
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->F:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, v7}, Landroid/view/View;->setBackgroundColor(I)V
 
+    .line 40
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->F:Landroid/widget/LinearLayout;
 
     const/16 v3, 0x11
 
     if-eqz v2, :cond_4
 
+    .line 41
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v2, v6, v6, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
+    .line 42
     iget-object v4, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->F:Landroid/widget/LinearLayout;
 
     invoke-virtual {p0, v4, v2}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 43
     :cond_4
     new-instance v2, Landroid/widget/LinearLayout;
 
@@ -359,20 +402,25 @@
 
     iput-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->E:Landroid/widget/LinearLayout;
 
+    .line 44
     sget v4, Ly0/e;->j:I
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setId(I)V
 
+    .line 45
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->E:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, v7}, Landroid/view/View;->setBackgroundColor(I)V
 
+    .line 46
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->E:Landroid/widget/LinearLayout;
 
     if-eqz v2, :cond_6
 
+    .line 47
     invoke-virtual {v2, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
+    .line 48
     new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v4, -0x2
@@ -383,18 +431,22 @@
 
     const/16 v4, 0x10
 
+    .line 49
     iput v4, v2, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
+    .line 50
     invoke-direct {p0}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->getStatusbarHeight()I
 
     move-result v4
 
     if-lez v4, :cond_5
 
+    .line 51
     div-int/lit8 v4, v4, 0x2
 
     iput v4, v2, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
+    .line 52
     :cond_5
     iget-object v4, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->F:Landroid/widget/LinearLayout;
 
@@ -402,41 +454,49 @@
 
     invoke-virtual {v4, v5, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 53
     :cond_6
     iget-boolean v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->J:Z
 
     if-eqz v2, :cond_7
 
+    .line 54
     new-instance v2, Landroid/widget/TextView;
 
     invoke-direct {v2, v8}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->H:Landroid/widget/TextView;
 
+    .line 55
     sget v4, Ly0/e;->i:I
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setId(I)V
 
+    .line 56
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->H:Landroid/widget/TextView;
 
     invoke-virtual {v2, p1}, Landroid/widget/TextView;->setHyphenationFrequency(I)V
 
+    .line 57
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->E:Landroid/widget/LinearLayout;
 
     iget-object v4, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->H:Landroid/widget/TextView;
 
     invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
+    .line 58
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->H:Landroid/widget/TextView;
 
     sget-object v4, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
+    .line 59
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->H:Landroid/widget/TextView;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setGravity(I)V
 
+    .line 60
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->H:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -447,6 +507,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
+    .line 61
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -459,10 +520,12 @@
 
     float-to-int v2, v2
 
+    .line 62
     iget-object v3, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->H:Landroid/widget/TextView;
 
     invoke-virtual {v3, v2, v7, v2, v7}, Landroid/widget/TextView;->setPadding(IIII)V
 
+    .line 63
     iget-object v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->H:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -479,18 +542,23 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/widget/TextView;->setLineSpacing(FF)V
 
+    .line 64
     :cond_7
     iget-boolean v2, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->K:Z
 
     if-eqz v2, :cond_8
 
+    .line 65
     invoke-virtual {p0, v1}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->y(Ljava/lang/CharSequence;)V
 
+    .line 66
     :cond_8
     invoke-virtual {p0}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->E()V
 
+    .line 67
     invoke-virtual {p0}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->J()V
 
+    .line 68
     sget v1, Ly0/l;->t1:I
 
     invoke-virtual {p2, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -499,12 +567,14 @@
 
     if-eqz v2, :cond_9
 
+    .line 69
     invoke-virtual {p2, v1, v7}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v1
 
     iput v1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->f:I
 
+    .line 70
     :cond_9
     sget v1, Ly0/l;->s1:I
 
@@ -514,12 +584,14 @@
 
     if-eqz v2, :cond_a
 
+    .line 71
     invoke-virtual {p2, v1, v7}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v1
 
     iput v1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->h:I
 
+    .line 72
     :cond_a
     sget v1, Ly0/l;->u1:I
 
@@ -529,12 +601,14 @@
 
     if-eqz v2, :cond_b
 
+    .line 73
     invoke-virtual {p2, v1, v7}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v1
 
     iput v1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->g:I
 
+    .line 74
     :cond_b
     sget v1, Ly0/l;->r1:I
 
@@ -544,12 +618,14 @@
 
     if-eqz v2, :cond_c
 
+    .line 75
     invoke-virtual {p2, v1, v7}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v1
 
     iput v1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->i:I
 
+    .line 76
     :cond_c
     sget v1, Ly0/l;->H1:I
 
@@ -559,30 +635,37 @@
 
     invoke-virtual {p0, v1}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->setTitle(Ljava/lang/CharSequence;)V
 
+    .line 77
     iget-boolean v1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->m:Z
 
     if-eqz v1, :cond_11
 
+    .line 78
     sget v1, Ly0/k;->a:I
 
     invoke-virtual {p3, v1}, Lm1/b;->m0(I)V
 
+    .line 79
     sget v1, Landroidx/appcompat/R$style;->TextAppearance_AppCompat_Widget_ActionBar_Title:I
 
     invoke-virtual {p3, v1}, Lm1/b;->d0(I)V
 
+    .line 80
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_d
 
+    .line 81
     invoke-virtual {p2, v0, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
 
+    .line 82
     invoke-virtual {p3, v0}, Lm1/b;->m0(I)V
 
+    .line 83
     :cond_d
     sget v0, Ly0/l;->m1:I
 
@@ -592,12 +675,15 @@
 
     if-eqz v1, :cond_e
 
+    .line 84
     invoke-virtual {p2, v0, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
 
+    .line 85
     invoke-virtual {p3, v0}, Lm1/b;->d0(I)V
 
+    .line 86
     :cond_e
     sget v0, Ly0/l;->K1:I
 
@@ -607,16 +693,20 @@
 
     if-eqz v1, :cond_f
 
+    .line 87
     invoke-virtual {p2, v0, v6}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v0
 
+    .line 88
     invoke-virtual {p0, v0}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->j(I)Landroid/text/TextUtils$TruncateAt;
 
     move-result-object v0
 
+    .line 89
     invoke-virtual {p0, v0}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->setTitleEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
+    .line 90
     :cond_f
     sget v0, Ly0/l;->w1:I
 
@@ -626,12 +716,15 @@
 
     if-eqz v1, :cond_10
 
+    .line 91
     invoke-static {v8, p2, v0}, Lq1/c;->a(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
+    .line 92
     invoke-virtual {p3, v0}, Lm1/b;->o0(Landroid/content/res/ColorStateList;)V
 
+    .line 93
     :cond_10
     sget v0, Ly0/l;->n1:I
 
@@ -641,21 +734,26 @@
 
     if-eqz v1, :cond_11
 
+    .line 94
     invoke-static {v8, p2, v0}, Lq1/c;->a(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
+    .line 95
     invoke-virtual {p3, v0}, Lm1/b;->f0(Landroid/content/res/ColorStateList;)V
 
+    .line 96
     :cond_11
     sget v0, Ly0/l;->E1:I
 
+    .line 97
     invoke-virtual {p2, v0, v6}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v0
 
     iput v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->u:I
 
+    .line 98
     sget v0, Ly0/l;->C1:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -664,12 +762,14 @@
 
     if-eqz v1, :cond_12
 
+    .line 99
     invoke-virtual {p2, v0, p1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v0
 
     invoke-virtual {p3, v0}, Lm1/b;->z0(I)V
 
+    .line 100
     :cond_12
     sget v0, Ly0/l;->J1:I
 
@@ -679,21 +779,26 @@
 
     if-eqz v1, :cond_13
 
+    .line 101
     invoke-virtual {p2, v0, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
 
+    .line 102
     invoke-static {v8, v0}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
 
     move-result-object v0
 
+    .line 103
     invoke-virtual {p3, v0}, Lm1/b;->A0(Landroid/animation/TimeInterpolator;)V
 
+    .line 104
     :cond_13
     sget p3, Ly0/l;->D1:I
 
     const/16 v0, 0x258
 
+    .line 105
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result p3
@@ -702,6 +807,7 @@
 
     iput-wide v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->t:J
 
+    .line 106
     sget p3, Ly0/l;->o1:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -710,6 +816,7 @@
 
     invoke-virtual {p0, p3}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->setContentScrim(Landroid/graphics/drawable/Drawable;)V
 
+    .line 107
     sget p3, Ly0/l;->F1:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -718,6 +825,7 @@
 
     invoke-virtual {p0, p3}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->setStatusBarScrim(Landroid/graphics/drawable/Drawable;)V
 
+    .line 108
     sget p3, Ly0/l;->L1:I
 
     invoke-virtual {p2, p3, v6}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -726,24 +834,30 @@
 
     iput p3, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->b:I
 
+    .line 109
     sget p3, Ly0/l;->B1:I
 
+    .line 110
     invoke-virtual {p2, p3, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p3
 
     iput-boolean p3, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->A:Z
 
+    .line 111
     sget p3, Ly0/l;->A1:I
 
+    .line 112
     invoke-virtual {p2, p3, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p3
 
     iput-boolean p3, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->C:Z
 
+    .line 113
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 114
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -754,6 +868,7 @@
 
     move-result-object p2
 
+    .line 115
     sget p3, Landroidx/appcompat/R$styleable;->AppCompatTheme_windowActionModeOverlay:I
 
     invoke-virtual {p2, p3, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -762,6 +877,7 @@
 
     if-nez p3, :cond_14
 
+    .line 116
     invoke-static {v8}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p3
@@ -770,6 +886,7 @@
 
     invoke-virtual {p3, v0, p0, p1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
+    .line 117
     sget p1, Ly0/e;->a:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -780,11 +897,14 @@
 
     iput-object p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->G:Landroidx/appcompat/widget/ViewStubCompat;
 
+    .line 118
     :cond_14
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 119
     invoke-virtual {p0, v7}, Landroid/view/View;->setWillNotDraw(Z)V
 
+    .line 120
     new-instance p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout$a;
 
     invoke-direct {p1, p0}, Lcom/google/android/material/appbar/CollapsingToolbarLayout$a;-><init>(Lcom/google/android/material/appbar/CollapsingToolbarLayout;)V
@@ -2231,6 +2351,7 @@
 .method public bridge synthetic generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->n()Lcom/google/android/material/appbar/CollapsingToolbarLayout$c;
 
     move-result-object p0
@@ -2241,6 +2362,7 @@
 .method public bridge synthetic generateDefaultLayoutParams()Landroid/widget/FrameLayout$LayoutParams;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->n()Lcom/google/android/material/appbar/CollapsingToolbarLayout$c;
 
     move-result-object p0
@@ -2251,6 +2373,7 @@
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->generateLayoutParams(Landroid/util/AttributeSet;)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object p0
@@ -2261,6 +2384,7 @@
 .method public bridge synthetic generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->o(Landroid/view/ViewGroup$LayoutParams;)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object p0
@@ -2271,6 +2395,7 @@
 .method public generateLayoutParams(Landroid/util/AttributeSet;)Landroid/widget/FrameLayout$LayoutParams;
     .locals 1
 
+    .line 3
     new-instance v0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$c;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -3402,6 +3527,7 @@
 .method public setCollapsedTitleTextColor(I)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -3414,10 +3540,12 @@
 .method public setCollapsedTitleTextColor(Landroid/content/res/ColorStateList;)V
     .locals 1
 
+    .line 2
     iget-boolean v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->m:Z
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->k:Lm1/b;
 
     invoke-virtual {p0, p1}, Lm1/b;->f0(Landroid/content/res/ColorStateList;)V

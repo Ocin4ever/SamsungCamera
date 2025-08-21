@@ -32,8 +32,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 21
     new-instance v0, Lcom/google/ar/core/j;
 
     invoke-direct {v0}, Lcom/google/ar/core/j;-><init>()V
@@ -42,12 +44,15 @@
 
     const/4 v0, 0x0
 
+    .line 22
     iput-object v0, p0, Lcom/google/ar/core/Session;->sharedCamera:Lcom/google/ar/core/SharedCamera;
 
     const-wide/16 v0, 0x0
 
+    .line 23
     iput-wide v0, p0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
 
+    .line 24
     iput-wide v0, p0, Lcom/google/ar/core/Session;->nativeSymbolTableHandle:J
 
     return-void
@@ -56,8 +61,10 @@
 .method public constructor <init>(J)V
     .locals 1
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 16
     new-instance v0, Lcom/google/ar/core/j;
 
     invoke-direct {v0}, Lcom/google/ar/core/j;-><init>()V
@@ -66,10 +73,13 @@
 
     const/4 v0, 0x0
 
+    .line 17
     iput-object v0, p0, Lcom/google/ar/core/Session;->sharedCamera:Lcom/google/ar/core/SharedCamera;
 
+    .line 18
     iput-wide p1, p0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
 
+    .line 19
     invoke-direct {p0, p1, p2}, Lcom/google/ar/core/Session;->nativeGetSymbolTable(J)J
 
     move-result-wide p1
@@ -82,6 +92,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/ar/core/Session$Feature;
 
     invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -105,8 +116,10 @@
         }
     .end annotation
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Lcom/google/ar/core/j;
 
     invoke-direct {v0}, Lcom/google/ar/core/j;-><init>()V
@@ -115,12 +128,15 @@
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Lcom/google/ar/core/Session;->sharedCamera:Lcom/google/ar/core/SharedCamera;
 
     const-string v0, "arcore_sdk_jni"
 
+    .line 5
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
+    .line 6
     invoke-interface {p2}, Ljava/util/Set;->size()I
 
     move-result v0
@@ -129,6 +145,7 @@
 
     new-array v0, v0, [I
 
+    .line 7
     invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -148,6 +165,7 @@
 
     check-cast v3, Lcom/google/ar/core/Session$Feature;
 
+    .line 8
     iget v3, v3, Lcom/google/ar/core/Session$Feature;->nativeCode:I
 
     aput v3, v0, v2
@@ -156,6 +174,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_0
     sget-object v1, Lcom/google/ar/core/Session$b;->a:Lcom/google/ar/core/Session$b;
 
@@ -163,18 +182,21 @@
 
     aput v1, v0, v2
 
+    .line 10
     invoke-static {p1, v0}, Lcom/google/ar/core/Session;->nativeCreateSessionAndWrapperWithFeatures(Landroid/content/Context;[I)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
 
+    .line 11
     invoke-direct {p0, v0, v1}, Lcom/google/ar/core/Session;->nativeGetSymbolTable(J)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/ar/core/Session;->nativeSymbolTableHandle:J
 
+    .line 12
     sget-object p1, Lcom/google/ar/core/Session$Feature;->SHARED_CAMERA:Lcom/google/ar/core/Session$Feature;
 
     invoke-interface {p2, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -183,12 +205,14 @@
 
     if-eqz p1, :cond_1
 
+    .line 13
     new-instance p1, Lcom/google/ar/core/SharedCamera;
 
     invoke-direct {p1, p0}, Lcom/google/ar/core/SharedCamera;-><init>(Lcom/google/ar/core/Session;)V
 
     iput-object p1, p0, Lcom/google/ar/core/Session;->sharedCamera:Lcom/google/ar/core/SharedCamera;
 
+    .line 14
     :cond_1
     invoke-static {}, Lcom/google/ar/core/Session;->loadDynamicSymbolsAfterSessionCreate()V
 
@@ -337,6 +361,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0, p0, v0, v0}, Lcom/google/ar/core/Session;->throwExceptionFromArStatus(Ljava/lang/String;I[Ljava/lang/String;[I)V
 
     return-void
@@ -345,6 +370,7 @@
 .method public static throwExceptionFromArStatus(Ljava/lang/String;I[Ljava/lang/String;[I)V
     .locals 10
 
+    .line 2
     invoke-static {}, Lcom/google/ar/core/Session$a;->values()[Lcom/google/ar/core/Session$a;
 
     move-result-object v0
@@ -360,10 +386,12 @@
 
     aget-object v4, v0, v3
 
+    .line 3
     iget v5, v4, Lcom/google/ar/core/Session$a;->j:I
 
     if-ne v5, p1, :cond_a
 
+    .line 4
     iget-object p1, v4, Lcom/google/ar/core/Session$a;->k:Ljava/lang/Class;
 
     if-nez p1, :cond_0
@@ -375,6 +403,7 @@
 
     if-eqz p3, :cond_2
 
+    .line 5
     array-length v0, p2
 
     array-length v1, p3
@@ -383,6 +412,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
     array-length v0, p2
 
@@ -392,6 +422,7 @@
     :goto_1
     move v0, v2
 
+    .line 7
     :goto_2
     iget-object v1, v4, Lcom/google/ar/core/Session$a;->l:Ljava/lang/String;
 
@@ -404,6 +435,7 @@
     :cond_3
     new-array p0, v2, [Ljava/lang/Class;
 
+    .line 8
     invoke-virtual {p1, p0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p0
@@ -435,6 +467,7 @@
 
     goto :goto_4
 
+    .line 9
     :cond_6
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -461,6 +494,7 @@
 
     invoke-direct {p0, p1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
+    .line 10
     :goto_4
     iget-object p1, v4, Lcom/google/ar/core/Session$a;->k:Ljava/lang/Class;
 
@@ -472,6 +506,7 @@
 
     aput-object v4, v3, v2
 
+    .line 11
     invoke-virtual {p1, v3}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -486,10 +521,12 @@
 
     check-cast p0, Ljava/lang/Exception;
 
+    .line 12
     invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object p1
 
+    .line 13
     array-length v3, p1
 
     add-int/2addr v3, v0
@@ -501,6 +538,7 @@
     :goto_5
     if-ge v4, v0, :cond_8
 
+    .line 14
     new-instance v5, Ljava/lang/StackTraceElement;
 
     aget-object v6, p2, v4
@@ -519,6 +557,7 @@
 
     goto :goto_5
 
+    .line 15
     :cond_8
     array-length p2, p1
 
@@ -527,6 +566,7 @@
 
     aget-object p3, p1, v2
 
+    .line 16
     aput-object p3, v3, v4
 
     add-int/2addr v4, v1
@@ -535,9 +575,11 @@
 
     goto :goto_6
 
+    .line 17
     :cond_9
     invoke-virtual {p0, v3}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
+    .line 18
     throw p0
 
     :cond_a
@@ -545,6 +587,7 @@
 
     goto/16 :goto_0
 
+    .line 19
     :cond_b
     new-instance p0, Lcom/google/ar/core/exceptions/FatalException;
 
@@ -914,10 +957,12 @@
 .method public getConfig()Lcom/google/ar/core/Config;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/ar/core/Config;
 
     invoke-direct {v0, p0}, Lcom/google/ar/core/Config;-><init>(Lcom/google/ar/core/Session;)V
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/ar/core/Session;->getConfig(Lcom/google/ar/core/Config;)V
 
     return-object v0
@@ -926,6 +971,7 @@
 .method public getConfig(Lcom/google/ar/core/Config;)V
     .locals 4
 
+    .line 3
     iget-wide v0, p0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
 
     iget-wide v2, p1, Lcom/google/ar/core/Config;->nativeHandle:J
@@ -968,12 +1014,14 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
 
     invoke-direct {p0, v0, v1}, Lcom/google/ar/core/Session;->nativeGetSupportedCameraConfigs(J)[J
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/ar/core/Session;->convertNativeCameraConfigsToCollection([J)Ljava/util/List;
 
     move-result-object p0
@@ -996,20 +1044,25 @@
 
     if-eqz p1, :cond_1
 
+    .line 3
     iget-wide v0, p0, Lcom/google/ar/core/Session;->nativeWrapperHandle:J
 
+    .line 4
     iget-wide v2, p1, Lcom/google/ar/core/CameraConfigFilter;->nativeHandle:J
 
+    .line 5
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/google/ar/core/Session;->nativeGetSupportedCameraConfigsWithFilter(JJ)[J
 
     move-result-object p1
 
+    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     array-length v1, p1
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 7
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -1019,16 +1072,19 @@
 
     aget-wide v3, p1, v2
 
+    .line 8
     new-instance v5, Lcom/google/ar/core/CameraConfig;
 
     invoke-direct {v5, p0, v3, v4}, Lcom/google/ar/core/CameraConfig;-><init>(Lcom/google/ar/core/Session;J)V
 
+    .line 9
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 10
     :cond_0
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -1036,6 +1092,7 @@
 
     return-object p0
 
+    .line 11
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

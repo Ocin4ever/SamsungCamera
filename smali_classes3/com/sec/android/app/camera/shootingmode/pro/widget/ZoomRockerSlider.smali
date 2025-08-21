@@ -46,8 +46,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -60,14 +62,17 @@
 
     const/4 p1, 0x0
 
+    .line 3
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ZoomRockerSlider;->mIsTouchDown:Z
 
+    .line 4
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/pro/widget/f;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/pro/widget/f;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/widget/ZoomRockerSlider;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ZoomRockerSlider;->mCheckDragPositionRunnable:Ljava/lang/Runnable;
 
+    .line 5
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/pro/widget/ZoomRockerSlider;->initView()V
 
     return-void
@@ -76,8 +81,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 6
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 7
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -90,14 +97,17 @@
 
     const/4 p1, 0x0
 
+    .line 8
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ZoomRockerSlider;->mIsTouchDown:Z
 
+    .line 9
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/pro/widget/f;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/pro/widget/f;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/widget/ZoomRockerSlider;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/widget/ZoomRockerSlider;->mCheckDragPositionRunnable:Ljava/lang/Runnable;
 
+    .line 10
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/pro/widget/ZoomRockerSlider;->initView()V
 
     return-void

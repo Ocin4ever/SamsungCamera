@@ -49,14 +49,18 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ConnectionManager;->mIsConnecting:Z
 
+    .line 4
     iput-boolean v0, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ConnectionManager;->mIsConnected:Z
 
+    .line 5
     sget-object p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ConnectionManager;->TAG:Ljava/lang/String;
 
     const-string v0, "ConnectionManager"
@@ -69,6 +73,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/apex/motionphoto/composer/utils/ConnectionManager$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/apex/motionphoto/composer/utils/ConnectionManager;-><init>()V
 
     return-void

@@ -82,14 +82,18 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->mIsIgnoreScrollEvent:Z
 
+    .line 3
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->mCurrentScrollX:I
 
+    .line 4
     new-instance p2, Landroid/util/SparseIntArray;
 
     invoke-direct {p2}, Landroid/util/SparseIntArray;-><init>()V
@@ -98,8 +102,10 @@
 
     const/4 p2, 0x1
 
+    .line 5
     iput-boolean p2, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->mZoomSliderMagneticEffectEnabled:Z
 
+    .line 6
     const-class p2, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;
 
     invoke-static {p2}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -108,8 +114,10 @@
 
     iput-object p2, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->mSupportUiSet:Ljava/util/EnumSet;
 
+    .line 7
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->isScrolling:Z
 
+    .line 8
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->initializeView()V
 
     return-void
@@ -118,14 +126,18 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 9
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x0
 
+    .line 10
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->mIsIgnoreScrollEvent:Z
 
+    .line 11
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->mCurrentScrollX:I
 
+    .line 12
     new-instance p2, Landroid/util/SparseIntArray;
 
     invoke-direct {p2}, Landroid/util/SparseIntArray;-><init>()V
@@ -134,8 +146,10 @@
 
     const/4 p2, 0x1
 
+    .line 13
     iput-boolean p2, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->mZoomSliderMagneticEffectEnabled:Z
 
+    .line 14
     const-class p2, Lcom/sec/android/app/camera/interfaces/ZoomManager$ZoomSupportUi;
 
     invoke-static {p2}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -144,8 +158,10 @@
 
     iput-object p2, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->mSupportUiSet:Ljava/util/EnumSet;
 
+    .line 15
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->isScrolling:Z
 
+    .line 16
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->initializeView()V
 
     return-void
@@ -1528,6 +1544,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->setPresenter(Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderContract$Presenter;)V
@@ -1538,6 +1555,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderView;->mPresenter:Lcom/sec/android/app/camera/layer/keyscreen/zoom/slider/ZoomSliderContract$Presenter;
 
     return-void

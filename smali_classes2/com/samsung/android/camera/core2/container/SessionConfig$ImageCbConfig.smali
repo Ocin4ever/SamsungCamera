@@ -26,6 +26,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;-><init>(ILandroid/util/Size;Ljava/lang/Integer;Ljava/lang/String;)V
 
     return-void
@@ -34,14 +35,17 @@
 .method public constructor <init>(ILandroid/util/Size;Ljava/lang/Integer;Ljava/lang/String;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p3, p4}, Lcom/samsung/android/camera/core2/container/SessionConfig$DefaultStreamConfig;-><init>(Ljava/lang/Integer;Ljava/lang/String;)V
 
+    .line 3
     invoke-static {p1}, Lcom/samsung/android/camera/core2/util/SemImageFormat;->D(I)Lcom/samsung/android/camera/core2/util/SemImageFormat;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;->c:Lcom/samsung/android/camera/core2/util/SemImageFormat;
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/camera/core2/container/SessionConfig$ImageCbConfig;->d:Landroid/util/Size;
 
     return-void

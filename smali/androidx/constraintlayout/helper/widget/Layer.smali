@@ -49,46 +49,62 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/widget/ConstraintHelper;-><init>(Landroid/content/Context;)V
 
     const/high16 p1, 0x7fc00000    # Float.NaN
 
+    .line 2
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mRotationCenterX:F
 
+    .line 3
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mRotationCenterY:F
 
+    .line 4
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mGroupRotateAngle:F
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 5
     iput v0, p0, Landroidx/constraintlayout/helper/widget/Layer;->mScaleX:F
 
+    .line 6
     iput v0, p0, Landroidx/constraintlayout/helper/widget/Layer;->mScaleY:F
 
+    .line 7
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedCenterX:F
 
+    .line 8
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedCenterY:F
 
+    .line 9
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedMaxX:F
 
+    .line 10
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedMaxY:F
 
+    .line 11
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedMinX:F
 
+    .line 12
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedMinY:F
 
     const/4 p1, 0x1
 
+    .line 13
     iput-boolean p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mNeedBounds:Z
 
     const/4 p1, 0x0
 
+    .line 14
     iput-object p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mViews:[Landroid/view/View;
 
     const/4 p1, 0x0
 
+    .line 15
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mShiftX:F
 
+    .line 16
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mShiftY:F
 
     return-void
@@ -97,46 +113,62 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 17
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintHelper;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/high16 p1, 0x7fc00000    # Float.NaN
 
+    .line 18
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mRotationCenterX:F
 
+    .line 19
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mRotationCenterY:F
 
+    .line 20
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mGroupRotateAngle:F
 
     const/high16 p2, 0x3f800000    # 1.0f
 
+    .line 21
     iput p2, p0, Landroidx/constraintlayout/helper/widget/Layer;->mScaleX:F
 
+    .line 22
     iput p2, p0, Landroidx/constraintlayout/helper/widget/Layer;->mScaleY:F
 
+    .line 23
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedCenterX:F
 
+    .line 24
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedCenterY:F
 
+    .line 25
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedMaxX:F
 
+    .line 26
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedMaxY:F
 
+    .line 27
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedMinX:F
 
+    .line 28
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedMinY:F
 
     const/4 p1, 0x1
 
+    .line 29
     iput-boolean p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mNeedBounds:Z
 
     const/4 p1, 0x0
 
+    .line 30
     iput-object p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mViews:[Landroid/view/View;
 
     const/4 p1, 0x0
 
+    .line 31
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mShiftX:F
 
+    .line 32
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mShiftY:F
 
     return-void
@@ -145,46 +177,62 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 33
     invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/widget/ConstraintHelper;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/high16 p1, 0x7fc00000    # Float.NaN
 
+    .line 34
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mRotationCenterX:F
 
+    .line 35
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mRotationCenterY:F
 
+    .line 36
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mGroupRotateAngle:F
 
     const/high16 p2, 0x3f800000    # 1.0f
 
+    .line 37
     iput p2, p0, Landroidx/constraintlayout/helper/widget/Layer;->mScaleX:F
 
+    .line 38
     iput p2, p0, Landroidx/constraintlayout/helper/widget/Layer;->mScaleY:F
 
+    .line 39
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedCenterX:F
 
+    .line 40
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedCenterY:F
 
+    .line 41
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedMaxX:F
 
+    .line 42
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedMaxY:F
 
+    .line 43
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedMinX:F
 
+    .line 44
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mComputedMinY:F
 
     const/4 p1, 0x1
 
+    .line 45
     iput-boolean p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mNeedBounds:Z
 
     const/4 p1, 0x0
 
+    .line 46
     iput-object p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mViews:[Landroid/view/View;
 
     const/4 p1, 0x0
 
+    .line 47
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mShiftX:F
 
+    .line 48
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Layer;->mShiftY:F
 
     return-void

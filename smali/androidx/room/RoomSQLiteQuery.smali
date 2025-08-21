@@ -87,28 +87,35 @@
 .method private constructor <init>(I)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput p1, p0, Landroidx/room/RoomSQLiteQuery;->capacity:I
 
     add-int/lit8 p1, p1, 0x1
 
+    .line 4
     new-array v0, p1, [I
 
     iput-object v0, p0, Landroidx/room/RoomSQLiteQuery;->bindingTypes:[I
 
+    .line 5
     new-array v0, p1, [J
 
     iput-object v0, p0, Landroidx/room/RoomSQLiteQuery;->longBindings:[J
 
+    .line 6
     new-array v0, p1, [D
 
     iput-object v0, p0, Landroidx/room/RoomSQLiteQuery;->doubleBindings:[D
 
+    .line 7
     new-array v0, p1, [Ljava/lang/String;
 
     iput-object v0, p0, Landroidx/room/RoomSQLiteQuery;->stringBindings:[Ljava/lang/String;
 
+    .line 8
     new-array p1, p1, [[B
 
     iput-object p1, p0, Landroidx/room/RoomSQLiteQuery;->blobBindings:[[B
@@ -119,6 +126,7 @@
 .method public synthetic constructor <init>(ILkotlin/jvm/internal/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/room/RoomSQLiteQuery;-><init>(I)V
 
     return-void

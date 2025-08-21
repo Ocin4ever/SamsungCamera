@@ -37,6 +37,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/app/Activity;Lh0/a;Lh0/a$d;Lh0/d$a;)V
     .locals 5
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Null context is not permitted."
@@ -45,18 +46,22 @@
 
     const-string v0, "Api must not be null."
 
+    .line 2
     invoke-static {p3, v0}, Lj0/n;->h(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "Settings must not be null; use Settings.DEFAULT_SETTINGS instead."
 
+    .line 3
     invoke-static {p5, v0}, Lj0/n;->h(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lh0/d;->a:Landroid/content/Context;
 
+    .line 5
     invoke-static {}, Ln0/e;->i()Z
 
     move-result v0
@@ -74,12 +79,14 @@
 
     new-array v4, v3, [Ljava/lang/Class;
 
+    .line 6
     invoke-virtual {v0, v2, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     new-array v2, v3, [Ljava/lang/Object;
 
+    .line 7
     invoke-virtual {v0, p1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -100,16 +107,19 @@
 
     iput-object p4, p0, Lh0/d;->d:Lh0/a$d;
 
+    .line 8
     iget-object p1, p5, Lh0/d$a;->b:Landroid/os/Looper;
 
     iput-object p1, p0, Lh0/d;->f:Landroid/os/Looper;
 
+    .line 9
     invoke-static {p3, p4, v1}, Li0/b;->a(Lh0/a;Lh0/a$d;Ljava/lang/String;)Li0/b;
 
     move-result-object p1
 
     iput-object p1, p0, Lh0/d;->e:Li0/b;
 
+    .line 10
     new-instance p3, Li0/d0;
 
     invoke-direct {p3, p0}, Li0/d0;-><init>(Lh0/d;)V
@@ -118,28 +128,33 @@
 
     iget-object p3, p0, Lh0/d;->a:Landroid/content/Context;
 
+    .line 11
     invoke-static {p3}, Li0/e;->x(Landroid/content/Context;)Li0/e;
 
     move-result-object p3
 
     iput-object p3, p0, Lh0/d;->j:Li0/e;
 
+    .line 12
     invoke-virtual {p3}, Li0/e;->m()I
 
     move-result p4
 
     iput p4, p0, Lh0/d;->g:I
 
+    .line 13
     iget-object p4, p5, Lh0/d$a;->a:Li0/l;
 
     iput-object p4, p0, Lh0/d;->i:Li0/l;
 
     if-eqz p2, :cond_1
 
+    .line 14
     instance-of p4, p2, Lcom/google/android/gms/common/api/GoogleApiActivity;
 
     if-nez p4, :cond_1
 
+    .line 15
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object p4
@@ -150,8 +165,10 @@
 
     if-ne p4, p5, :cond_1
 
+    .line 16
     invoke-static {p2, p3, p1}, Li0/q;->u(Landroid/app/Activity;Li0/e;Li0/b;)V
 
+    .line 17
     :cond_1
     invoke-virtual {p3, p0}, Li0/e;->b(Lh0/d;)V
 
@@ -173,6 +190,7 @@
 
     move-object v5, p4
 
+    .line 18
     invoke-direct/range {v0 .. v5}, Lh0/d;-><init>(Landroid/content/Context;Landroid/app/Activity;Lh0/a;Lh0/a$d;Lh0/d$a;)V
 
     return-void

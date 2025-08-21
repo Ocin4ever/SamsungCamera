@@ -883,6 +883,7 @@
 .method public store()J
     .locals 5
 
+    .line 7
     invoke-virtual {p0}, Lcom/samsung/android/apex/motionphoto/composer/LocalComposer;->getTag()Ljava/lang/String;
 
     move-result-object v0
@@ -909,6 +910,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 8
     new-instance v0, Lcom/samsung/android/apex/motionphoto/composer/LocalComposer$6;
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -923,6 +925,7 @@
 
     move-result-object p0
 
+    .line 9
     invoke-virtual {p0}, Lcom/samsung/android/apex/motionphoto/command/Reply;->isSuccess()Z
 
     move-result v0
@@ -953,6 +956,7 @@
 .method public store(Lcom/samsung/android/apex/motionphoto/model/MPStoreData;)J
     .locals 6
 
+    .line 4
     invoke-virtual {p0}, Lcom/samsung/android/apex/motionphoto/composer/LocalComposer;->getTag()Ljava/lang/String;
 
     move-result-object v0
@@ -983,6 +987,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     new-instance v0, Lcom/samsung/android/apex/motionphoto/composer/LocalComposer$5;
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -999,6 +1004,7 @@
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {p0}, Lcom/samsung/android/apex/motionphoto/command/Reply;->isSuccess()Z
 
     move-result p1
@@ -1029,6 +1035,7 @@
 .method public store(Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;)J
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/apex/motionphoto/composer/LocalComposer;->getTag()Ljava/lang/String;
 
     move-result-object v0
@@ -1059,6 +1066,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     new-instance v0, Lcom/samsung/android/apex/motionphoto/composer/LocalComposer$4;
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1075,6 +1083,7 @@
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0}, Lcom/samsung/android/apex/motionphoto/command/Reply;->isSuccess()Z
 
     move-result p1

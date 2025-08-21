@@ -40,6 +40,7 @@
 .method public compare(Landroid/graphics/PointF;Landroid/graphics/PointF;)I
     .locals 3
 
+    .line 2
     iget p0, p1, Landroid/graphics/PointF;->y:F
 
     iget v0, p2, Landroid/graphics/PointF;->y:F
@@ -59,6 +60,7 @@
 
     if-nez p0, :cond_1
 
+    .line 3
     iget p0, p1, Landroid/graphics/PointF;->x:F
 
     iget p1, p2, Landroid/graphics/PointF;->x:F
@@ -76,6 +78,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/graphics/PointF;
 
     check-cast p2, Landroid/graphics/PointF;

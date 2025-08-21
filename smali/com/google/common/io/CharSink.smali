@@ -164,6 +164,7 @@
 
     const-string v0, "line.separator"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -187,14 +188,18 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-static {}, Lcom/google/common/io/Closer;->create()Lcom/google/common/io/Closer;
 
     move-result-object v0
 
+    .line 5
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/io/CharSink;->openBufferedStream()Ljava/io/Writer;
 
@@ -206,6 +211,7 @@
 
     check-cast p0, Ljava/io/Writer;
 
+    .line 6
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -223,6 +229,7 @@
 
     check-cast v1, Ljava/lang/CharSequence;
 
+    .line 7
     invoke-virtual {p0, v1}, Ljava/io/Writer;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
 
     move-result-object v1
@@ -231,11 +238,13 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     invoke-virtual {p0}, Ljava/io/Writer;->flush()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
     return-void
@@ -243,6 +252,7 @@
     :catchall_0
     move-exception p0
 
+    .line 10
     :try_start_1
     invoke-virtual {v0, p0}, Lcom/google/common/io/Closer;->rethrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
@@ -255,7 +265,9 @@
     :catchall_1
     move-exception p0
 
+    .line 11
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
+    .line 12
     throw p0
 .end method

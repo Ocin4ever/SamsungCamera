@@ -222,6 +222,7 @@
 .method public final toArray()[Ljava/lang/Object;
     .locals 1
 
+    .line 2
     iget-object v0, p0, Lg6/f;->a:[Ljava/lang/Object;
 
     iget-boolean p0, p0, Lg6/f;->b:Z
@@ -236,6 +237,7 @@
 .method public toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 1
 
+    .line 1
     const-string v0, "array"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V

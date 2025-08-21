@@ -81,6 +81,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Landroidx/room/CoroutinesRoom;->Companion:Landroidx/room/CoroutinesRoom$Companion;
 
     move-object v1, p0
@@ -117,6 +118,7 @@
         }
     .end annotation
 
+    .line 2
     sget-object v0, Landroidx/room/CoroutinesRoom;->Companion:Landroidx/room/CoroutinesRoom$Companion;
 
     invoke-virtual {v0, p0, p1, p2, p3}, Landroidx/room/CoroutinesRoom$Companion;->execute(Landroidx/room/RoomDatabase;ZLjava/util/concurrent/Callable;Li6/d;)Ljava/lang/Object;

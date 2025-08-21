@@ -439,6 +439,7 @@
 .method public getAnchor()Landroidx/constraintlayout/core/widgets/ConstraintAnchor;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/widgets/Guideline;->mAnchor:Landroidx/constraintlayout/core/widgets/ConstraintAnchor;
 
     return-object p0
@@ -447,6 +448,7 @@
 .method public getAnchor(Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;)Landroidx/constraintlayout/core/widgets/ConstraintAnchor;
     .locals 2
 
+    .line 2
     sget-object v0, Landroidx/constraintlayout/core/widgets/Guideline$1;->$SwitchMap$androidx$constraintlayout$core$widgets$ConstraintAnchor$Type:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -473,20 +475,24 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget p1, p0, Landroidx/constraintlayout/core/widgets/Guideline;->mOrientation:I
 
     if-nez p1, :cond_2
 
+    .line 4
     iget-object p0, p0, Landroidx/constraintlayout/core/widgets/Guideline;->mAnchor:Landroidx/constraintlayout/core/widgets/ConstraintAnchor;
 
     return-object p0
 
+    .line 5
     :cond_1
     iget p1, p0, Landroidx/constraintlayout/core/widgets/Guideline;->mOrientation:I
 
     if-ne p1, v0, :cond_2
 
+    .line 6
     iget-object p0, p0, Landroidx/constraintlayout/core/widgets/Guideline;->mAnchor:Landroidx/constraintlayout/core/widgets/ConstraintAnchor;
 
     return-object p0
@@ -797,12 +803,15 @@
 
     if-lez v0, :cond_0
 
+    .line 2
     iput p1, p0, Landroidx/constraintlayout/core/widgets/Guideline;->mRelativePercent:F
 
     const/4 p1, -0x1
 
+    .line 3
     iput p1, p0, Landroidx/constraintlayout/core/widgets/Guideline;->mRelativeBegin:I
 
+    .line 4
     iput p1, p0, Landroidx/constraintlayout/core/widgets/Guideline;->mRelativeEnd:I
 
     :cond_0
@@ -818,6 +827,7 @@
 
     div-float/2addr p1, v0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/widgets/Guideline;->setGuidePercent(F)V
 
     return-void

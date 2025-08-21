@@ -30,14 +30,17 @@
 .method private constructor <init>(Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainCreator$Bundle$Builder;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainCreator$Bundle$Builder;->a(Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainCreator$Bundle$Builder;)Lcom/samsung/android/camera/core2/CamCapability;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainCreator$Bundle;->camCapability:Lcom/samsung/android/camera/core2/CamCapability;
 
+    .line 4
     invoke-static {p1}, Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainCreator$Bundle$Builder;->b(Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainCreator$Bundle$Builder;)I
 
     move-result p1
@@ -50,6 +53,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainCreator$Bundle$Builder;Lcom/samsung/android/camera/core2/processor/nodeController/n;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainCreator$Bundle;-><init>(Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainCreator$Bundle$Builder;)V
 
     return-void

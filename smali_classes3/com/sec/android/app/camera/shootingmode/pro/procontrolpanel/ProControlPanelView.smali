@@ -67,8 +67,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -83,6 +85,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->ITEM_LEFT_MARGIN_MIN:I
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -97,6 +100,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->ITEM_LEFT_MARGIN_MAX:I
 
+    .line 4
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -105,26 +109,32 @@
 
     const/4 p1, 0x0
 
+    .line 5
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mOrientation:I
 
+    .line 6
     sget-object v0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$BackgroundState;->IDLE:Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$BackgroundState;
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mBackgroundState:Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$BackgroundState;
 
+    .line 7
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mIsCustomScrollBehaviorNeed:Z
 
+    .line 8
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$1;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mTouchListener:Landroidx/recyclerview/widget/RecyclerView$SimpleOnItemTouchListener;
 
+    .line 9
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$2;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$2;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
 
+    .line 10
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->initView()V
 
     return-void
@@ -133,8 +143,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 11
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 12
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -149,6 +161,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->ITEM_LEFT_MARGIN_MIN:I
 
+    .line 13
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -163,6 +176,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->ITEM_LEFT_MARGIN_MAX:I
 
+    .line 14
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -171,26 +185,32 @@
 
     const/4 p1, 0x0
 
+    .line 15
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mOrientation:I
 
+    .line 16
     sget-object p2, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$BackgroundState;->IDLE:Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$BackgroundState;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mBackgroundState:Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$BackgroundState;
 
+    .line 17
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mIsCustomScrollBehaviorNeed:Z
 
+    .line 18
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$1;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mTouchListener:Landroidx/recyclerview/widget/RecyclerView$SimpleOnItemTouchListener;
 
+    .line 19
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$2;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$2;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mOnScrollListener:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
 
+    .line 20
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->initView()V
 
     return-void
@@ -199,8 +219,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 21
     invoke-direct {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 22
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -215,6 +237,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->ITEM_LEFT_MARGIN_MIN:I
 
+    .line 23
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -229,6 +252,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->ITEM_LEFT_MARGIN_MAX:I
 
+    .line 24
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -237,20 +261,25 @@
 
     const/4 p1, 0x0
 
+    .line 25
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mOrientation:I
 
+    .line 26
     sget-object p2, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$BackgroundState;->IDLE:Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$BackgroundState;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mBackgroundState:Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$BackgroundState;
 
+    .line 27
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mIsCustomScrollBehaviorNeed:Z
 
+    .line 28
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$1;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mTouchListener:Landroidx/recyclerview/widget/RecyclerView$SimpleOnItemTouchListener;
 
+    .line 29
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$2;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView$2;-><init>(Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;)V
@@ -1244,6 +1273,7 @@
 .method public setItemChanged(I)V
     .locals 1
 
+    .line 4
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mAdapter:Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelAdapter;
 
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mProItemIdsPositionList:Ljava/util/List;
@@ -1264,6 +1294,7 @@
 .method public setItemChanged(ILjava/lang/String;)V
     .locals 2
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1288,6 +1319,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mAdapter:Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelAdapter;
 
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mProItemIdsPositionList:Ljava/util/List;
@@ -1308,6 +1340,7 @@
 .method public setItemChanged(IZ)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mAdapter:Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelAdapter;
 
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mProItemIdsPositionList:Ljava/util/List;
@@ -1507,6 +1540,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->setPresenter(Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelContract$Presenter;)V
@@ -1517,6 +1551,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelView;->mPresenter:Lcom/sec/android/app/camera/shootingmode/pro/procontrolpanel/ProControlPanelContract$Presenter;
 
     return-void

@@ -121,12 +121,14 @@
 .method public create(Landroid/content/Context;)Landroidx/profileinstaller/ProfileInstallerInitializer$Result;
     .locals 0
 
+    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
     invoke-virtual {p0, p1}, Landroidx/profileinstaller/ProfileInstallerInitializer;->delayAfterFirstFrame(Landroid/content/Context;)V
 
+    .line 3
     new-instance p0, Landroidx/profileinstaller/ProfileInstallerInitializer$Result;
 
     invoke-direct {p0}, Landroidx/profileinstaller/ProfileInstallerInitializer$Result;-><init>()V
@@ -137,6 +139,7 @@
 .method public bridge synthetic create(Landroid/content/Context;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/profileinstaller/ProfileInstallerInitializer;->create(Landroid/content/Context;)Landroidx/profileinstaller/ProfileInstallerInitializer$Result;
 
     move-result-object p0

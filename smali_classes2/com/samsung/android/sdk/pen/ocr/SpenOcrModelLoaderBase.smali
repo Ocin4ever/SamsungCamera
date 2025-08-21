@@ -44,11 +44,13 @@
 
     monitor-enter p0
 
+    .line 6
     :try_start_0
     new-instance v0, Lcom/samsung/android/sdk/pen/ocr/SpenDBConfig;
 
     invoke-direct {v0, p3, p2}, Lcom/samsung/android/sdk/pen/ocr/SpenDBConfig;-><init>(Lcom/samsung/android/sdk/pen/ocr/SpenDBType;Ljava/lang/String;)V
 
+    .line 7
     iget-object p3, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelLoaderBase;->mModelManager:Lcom/samsung/android/sdk/pen/ocr/SpenIOcrModelManager;
 
     iget-object v1, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelLoaderBase;->mContext:Landroid/content/Context;
@@ -63,10 +65,12 @@
 
     const-string p2, "loadDBby(Object[] fileDescriptor, ...) Fail to load"
 
+    .line 8
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     monitor-exit p0
 
     const/4 p0, 0x0
@@ -77,6 +81,7 @@
     :try_start_1
     const-string p1, "LoaderBase"
 
+    .line 10
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,6 +100,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 11
     monitor-exit p0
 
     const/4 p0, 0x1
@@ -369,11 +375,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     new-instance v0, Lcom/samsung/android/sdk/pen/ocr/SpenDBConfig;
 
     invoke-direct {v0, p3, p2}, Lcom/samsung/android/sdk/pen/ocr/SpenDBConfig;-><init>(Lcom/samsung/android/sdk/pen/ocr/SpenDBType;Ljava/lang/String;)V
 
+    .line 2
     iget-object p2, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelLoaderBase;->mModelManager:Lcom/samsung/android/sdk/pen/ocr/SpenIOcrModelManager;
 
     iget-object p3, p0, Lcom/samsung/android/sdk/pen/ocr/SpenOcrModelLoaderBase;->mContext:Landroid/content/Context;
@@ -388,16 +396,19 @@
 
     const-string p2, "loadDBby(String filePath, ...) Fail to load"
 
+    .line 3
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     const/4 p0, 0x0
 
     return p0
 
+    .line 5
     :cond_0
     monitor-exit p0
 

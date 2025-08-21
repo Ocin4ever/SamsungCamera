@@ -286,6 +286,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object p0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
 
     new-instance v0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase$execSQL$1;
@@ -308,6 +309,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
 
     new-instance v0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase$execSQL$2;
@@ -643,6 +645,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 9
     :try_start_0
     iget-object v0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
 
@@ -656,6 +659,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     new-instance v0, Landroidx/room/AutoClosingRoomOpenHelper$KeepAliveCursor;
 
     iget-object p0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
@@ -667,10 +671,12 @@
     :catchall_0
     move-exception p1
 
+    .line 11
     iget-object p0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
 
     invoke-virtual {p0}, Landroidx/room/AutoCloser;->decrementCountAndScheduleClose()V
 
+    .line 12
     throw p1
 .end method
 
@@ -681,6 +687,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 13
     :try_start_0
     iget-object v0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
 
@@ -694,6 +701,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 14
     new-instance p2, Landroidx/room/AutoClosingRoomOpenHelper$KeepAliveCursor;
 
     iget-object p0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
@@ -705,10 +713,12 @@
     :catchall_0
     move-exception p1
 
+    .line 15
     iget-object p0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
 
     invoke-virtual {p0}, Landroidx/room/AutoCloser;->decrementCountAndScheduleClose()V
 
+    .line 16
     throw p1
 .end method
 
@@ -719,6 +729,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
 
@@ -732,6 +743,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     new-instance v0, Landroidx/room/AutoClosingRoomOpenHelper$KeepAliveCursor;
 
     iget-object p0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
@@ -743,10 +755,12 @@
     :catchall_0
     move-exception p1
 
+    .line 3
     iget-object p0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
 
     invoke-virtual {p0}, Landroidx/room/AutoCloser;->decrementCountAndScheduleClose()V
 
+    .line 4
     throw p1
 .end method
 
@@ -761,6 +775,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 5
     :try_start_0
     iget-object v0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
 
@@ -774,6 +789,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     new-instance p2, Landroidx/room/AutoClosingRoomOpenHelper$KeepAliveCursor;
 
     iget-object p0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
@@ -785,10 +801,12 @@
     :catchall_0
     move-exception p1
 
+    .line 7
     iget-object p0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
 
     invoke-virtual {p0}, Landroidx/room/AutoCloser;->decrementCountAndScheduleClose()V
 
+    .line 8
     throw p1
 .end method
 
@@ -972,10 +990,13 @@
 .method public yieldIfContendedSafely()Z
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
 
+    .line 2
     sget-object v0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase$yieldIfContendedSafely$1;->INSTANCE:Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase$yieldIfContendedSafely$1;
 
+    .line 3
     invoke-virtual {p0, v0}, Landroidx/room/AutoCloser;->executeRefCountingFunction(Lq6/l;)Ljava/lang/Object;
 
     move-result-object p0
@@ -992,10 +1013,13 @@
 .method public yieldIfContendedSafely(J)Z
     .locals 0
 
+    .line 4
     iget-object p0, p0, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase;->autoCloser:Landroidx/room/AutoCloser;
 
+    .line 5
     sget-object p1, Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase$yieldIfContendedSafely$2;->INSTANCE:Landroidx/room/AutoClosingRoomOpenHelper$AutoClosingSupportSQLiteDatabase$yieldIfContendedSafely$2;
 
+    .line 6
     invoke-virtual {p0, p1}, Landroidx/room/AutoCloser;->executeRefCountingFunction(Lq6/l;)Ljava/lang/Object;
 
     move-result-object p0

@@ -160,6 +160,7 @@
 .method public static fromCompat(Landroidx/core/app/RemoteInput;)Landroid/app/RemoteInput;
     .locals 0
 
+    .line 4
     invoke-static {p0}, Landroidx/core/app/RemoteInput$Api20Impl;->fromCompat(Landroidx/core/app/RemoteInput;)Landroid/app/RemoteInput;
 
     move-result-object p0
@@ -176,6 +177,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     array-length v0, p0
 
@@ -183,11 +185,13 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
+    .line 3
     aget-object v2, p0, v1
 
     invoke-static {v2}, Landroidx/core/app/RemoteInput;->fromCompat(Landroidx/core/app/RemoteInput;)Landroid/app/RemoteInput;

@@ -92,10 +92,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Landroidx/core/content/FileProvider;->mResourceId:I
 
     return-void
@@ -104,8 +106,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
+    .line 4
     iput p1, p0, Landroidx/core/content/FileProvider;->mResourceId:I
 
     return-void
@@ -143,10 +147,12 @@
 .method private static copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
     .locals 2
 
+    .line 3
     new-array v0, p1, [Ljava/lang/Object;
 
     const/4 v1, 0x0
 
+    .line 4
     invoke-static {p0, v1, v0, v1, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-object v0
@@ -155,10 +161,12 @@
 .method private static copyOf([Ljava/lang/String;I)[Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-array v0, p1, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {p0, v1, v0, v1, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-object v0
@@ -306,10 +314,12 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, p1, v0}, Landroidx/core/content/FileProvider;->getPathStrategy(Landroid/content/Context;Ljava/lang/String;I)Landroidx/core/content/FileProvider$PathStrategy;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0, p2}, Landroidx/core/content/FileProvider$PathStrategy;->getUriForFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p0
@@ -320,10 +330,12 @@
 .method public static getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)Landroid/net/Uri;
     .locals 0
 
+    .line 3
     invoke-static {p0, p1, p2}, Landroidx/core/content/FileProvider;->getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object p0

@@ -46,24 +46,30 @@
 .method public final invoke()Lcom/samsung/android/app/sdk/deepsky/search/SearchImpl;
     .locals 4
 
+    .line 2
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/search/SearchImpl;
 
+    .line 3
     iget-object v1, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$searchByLazy$2;->$appContext:Landroid/content/Context;
 
+    .line 4
     sget-object v2, Lcom/samsung/android/app/sdk/deepsky/common/Injector;->INSTANCE:Lcom/samsung/android/app/sdk/deepsky/common/Injector;
 
     invoke-virtual {v2, v1}, Lcom/samsung/android/app/sdk/deepsky/common/Injector;->provideServiceCaller$deepsky_sdk_smartsuggestion_1_0_8_release(Landroid/content/Context;)Lcom/samsung/android/app/sdk/deepsky/common/ContentProviderCaller;
 
     move-result-object v3
 
+    .line 5
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/DeepSky$searchByLazy$2;->$appContext:Landroid/content/Context;
 
     invoke-virtual {v2, p0}, Lcom/samsung/android/app/sdk/deepsky/common/Injector;->shareSystemDatasource$deepsky_sdk_smartsuggestion_1_0_8_release(Landroid/content/Context;)Lcom/samsung/android/app/sdk/deepsky/common/SystemDataSource;
 
     move-result-object p0
 
+    .line 6
     invoke-direct {v0, v1, v3, p0}, Lcom/samsung/android/app/sdk/deepsky/search/SearchImpl;-><init>(Landroid/content/Context;Lcom/samsung/android/app/sdk/deepsky/common/ContentProviderCaller;Lcom/samsung/android/app/sdk/deepsky/common/SystemDataSource;)V
 
+    .line 7
     invoke-virtual {v0}, Lcom/samsung/android/app/sdk/deepsky/search/SearchImpl;->checkIfAccessAllowed()Z
 
     move-result p0
@@ -82,6 +88,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/app/sdk/deepsky/DeepSky$searchByLazy$2;->invoke()Lcom/samsung/android/app/sdk/deepsky/search/SearchImpl;
 
     move-result-object p0

@@ -28,6 +28,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-direct {p0, p1, v0, v0}, Lcom/samsung/android/camera/core2/node/NodeFeatureUtil$NodeFeatureInfo;-><init>(Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureVersion;II)V
 
     return-void
@@ -36,12 +37,16 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureVersion;II)V
     .locals 0
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/NodeFeatureUtil$NodeFeatureInfo;->a:Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureVersion;
 
+    .line 6
     iput p2, p0, Lcom/samsung/android/camera/core2/node/NodeFeatureUtil$NodeFeatureInfo;->b:I
 
+    .line 7
     iput p3, p0, Lcom/samsung/android/camera/core2/node/NodeFeatureUtil$NodeFeatureInfo;->c:I
 
     return-void
@@ -50,6 +55,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureVersion;IILcom/samsung/android/camera/core2/node/i0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/NodeFeatureUtil$NodeFeatureInfo;-><init>(Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureVersion;II)V
 
     return-void
@@ -58,6 +64,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureVersion;Lcom/samsung/android/camera/core2/node/i0;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/node/NodeFeatureUtil$NodeFeatureInfo;-><init>(Lcom/samsung/android/camera/core2/node/NodeFeature$NodeFeatureVersion;)V
 
     return-void

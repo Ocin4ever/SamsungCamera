@@ -2245,12 +2245,15 @@
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-virtual {p0, v0}, Landroidx/fragment/app/FragmentManager;->execPendingActions(Z)Z
 
     const/4 v0, 0x1
 
+    .line 6
     invoke-direct {p0, v0}, Landroidx/fragment/app/FragmentManager;->ensureExecReady(Z)V
 
+    .line 7
     iget-object v1, p0, Landroidx/fragment/app/FragmentManager;->mPrimaryNav:Landroidx/fragment/app/Fragment;
 
     if-eqz v1, :cond_0
@@ -2259,10 +2262,12 @@
 
     if-nez p1, :cond_0
 
+    .line 8
     invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v1
 
+    .line 9
     invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->popBackStackImmediate()Z
 
     move-result v1
@@ -2271,6 +2276,7 @@
 
     return v0
 
+    .line 10
     :cond_0
     iget-object v3, p0, Landroidx/fragment/app/FragmentManager;->mTmpRecords:Ljava/util/ArrayList;
 
@@ -2290,8 +2296,10 @@
 
     if-eqz p1, :cond_1
 
+    .line 11
     iput-boolean v0, p0, Landroidx/fragment/app/FragmentManager;->mExecutingActions:Z
 
+    .line 12
     :try_start_0
     iget-object p2, p0, Landroidx/fragment/app/FragmentManager;->mTmpRecords:Ljava/util/ArrayList;
 
@@ -2301,6 +2309,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 13
     invoke-direct {p0}, Landroidx/fragment/app/FragmentManager;->cleanupExec()V
 
     goto :goto_0
@@ -2310,14 +2319,18 @@
 
     invoke-direct {p0}, Landroidx/fragment/app/FragmentManager;->cleanupExec()V
 
+    .line 14
     throw p1
 
+    .line 15
     :cond_1
     :goto_0
     invoke-direct {p0}, Landroidx/fragment/app/FragmentManager;->updateOnBackPressedCallbackEnabled()V
 
+    .line 16
     invoke-direct {p0}, Landroidx/fragment/app/FragmentManager;->doPendingDeferredStart()V
 
+    .line 17
     iget-object p0, p0, Landroidx/fragment/app/FragmentManager;->mFragmentStore:Landroidx/fragment/app/FragmentStore;
 
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentStore;->burpActive()V
@@ -6174,6 +6187,7 @@
 .method public popBackStack()V
     .locals 4
 
+    .line 1
     new-instance v0, Landroidx/fragment/app/FragmentManager$PopBackStackState;
 
     const/4 v1, 0x0
@@ -6194,6 +6208,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, p2, v0}, Landroidx/fragment/app/FragmentManager;->popBackStack(IIZ)V
 
     return-void
@@ -6204,6 +6219,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 4
     new-instance v0, Landroidx/fragment/app/FragmentManager$PopBackStackState;
 
     const/4 v1, 0x0
@@ -6214,6 +6230,7 @@
 
     return-void
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6239,6 +6256,7 @@
 .method public popBackStack(Ljava/lang/String;I)V
     .locals 2
 
+    .line 2
     new-instance v0, Landroidx/fragment/app/FragmentManager$PopBackStackState;
 
     const/4 v1, -0x1
@@ -6261,6 +6279,7 @@
 
     const/4 v2, 0x0
 
+    .line 1
     invoke-direct {p0, v2, v0, v1}, Landroidx/fragment/app/FragmentManager;->popBackStackImmediate(Ljava/lang/String;II)Z
 
     move-result p0
@@ -6275,12 +6294,14 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-direct {p0, v0, p1, p2}, Landroidx/fragment/app/FragmentManager;->popBackStackImmediate(Ljava/lang/String;II)Z
 
     move-result p0
 
     return p0
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6308,6 +6329,7 @@
 
     const/4 v0, -0x1
 
+    .line 2
     invoke-direct {p0, p1, v0, p2}, Landroidx/fragment/app/FragmentManager;->popBackStackImmediate(Ljava/lang/String;II)Z
 
     move-result p0

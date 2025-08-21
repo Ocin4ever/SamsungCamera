@@ -36,6 +36,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/CompactHashSet;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/CompactHashSet;-><init>(I)V
 
     return-void
@@ -61,6 +63,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/CompactLinkedHashSet;
 
     invoke-direct {v0}, Lcom/google/common/collect/CompactLinkedHashSet;-><init>()V
@@ -82,6 +85,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
     move-result v0
@@ -90,6 +94,7 @@
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
 
     return-object v0
@@ -110,12 +115,14 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
+    .line 4
     array-length v0, p0
 
     invoke-static {v0}, Lcom/google/common/collect/CompactLinkedHashSet;->createWithExpectedSize(I)Lcom/google/common/collect/CompactLinkedHashSet;
 
     move-result-object v0
 
+    .line 5
     invoke-static {v0, p0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
     return-object v0
@@ -485,6 +492,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/collect/ObjectArrays;->toArrayImpl(Ljava/util/Collection;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -502,6 +510,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p0, p1}, Lcom/google/common/collect/ObjectArrays;->toArrayImpl(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0

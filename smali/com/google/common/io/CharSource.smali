@@ -40,6 +40,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/io/CharSource$ConcatenatedCharSource;
 
     invoke-direct {v0, p0}, Lcom/google/common/io/CharSource$ConcatenatedCharSource;-><init>(Ljava/lang/Iterable;)V
@@ -60,6 +61,7 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -74,6 +76,7 @@
 .method public static varargs concat([Lcom/google/common/io/CharSource;)Lcom/google/common/io/CharSource;
     .locals 0
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -160,12 +163,15 @@
 .method public copyTo(Lcom/google/common/io/CharSink;)J
     .locals 1
 
+    .line 9
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 10
     invoke-static {}, Lcom/google/common/io/Closer;->create()Lcom/google/common/io/Closer;
 
     move-result-object v0
 
+    .line 11
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/io/CharSource;->openStream()Ljava/io/Reader;
 
@@ -177,6 +183,7 @@
 
     check-cast p0, Ljava/io/Reader;
 
+    .line 12
     invoke-virtual {p1}, Lcom/google/common/io/CharSink;->openStream()Ljava/io/Writer;
 
     move-result-object p1
@@ -187,12 +194,14 @@
 
     check-cast p1, Ljava/io/Writer;
 
+    .line 13
     invoke-static {p0, p1}, Lcom/google/common/io/CharStreams;->copy(Ljava/lang/Readable;Ljava/lang/Appendable;)J
 
     move-result-wide p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 14
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
     return-wide p0
@@ -200,6 +209,7 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     :try_start_1
     invoke-virtual {v0, p0}, Lcom/google/common/io/Closer;->rethrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
@@ -212,20 +222,25 @@
     :catchall_1
     move-exception p0
 
+    .line 16
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
+    .line 17
     throw p0
 .end method
 
 .method public copyTo(Ljava/lang/Appendable;)J
     .locals 1
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {}, Lcom/google/common/io/Closer;->create()Lcom/google/common/io/Closer;
 
     move-result-object v0
 
+    .line 3
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/io/CharSource;->openStream()Ljava/io/Reader;
 
@@ -237,12 +252,14 @@
 
     check-cast p0, Ljava/io/Reader;
 
+    .line 4
     invoke-static {p0, p1}, Lcom/google/common/io/CharStreams;->copy(Ljava/lang/Readable;Ljava/lang/Appendable;)J
 
     move-result-wide p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
     return-wide p0
@@ -250,6 +267,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     :try_start_1
     invoke-virtual {v0, p0}, Lcom/google/common/io/Closer;->rethrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
@@ -262,8 +280,10 @@
     :catchall_1
     move-exception p0
 
+    .line 7
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
+    .line 8
     throw p0
 .end method
 
@@ -589,10 +609,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/io/Closer;->create()Lcom/google/common/io/Closer;
 
     move-result-object v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/io/CharSource;->openBufferedStream()Ljava/io/BufferedReader;
 
@@ -604,10 +626,12 @@
 
     check-cast p0, Ljava/io/BufferedReader;
 
+    .line 3
     invoke-static {}, Lcom/google/common/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v1
 
+    .line 4
     :goto_0
     invoke-virtual {p0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -615,10 +639,12 @@
 
     if-eqz v2, :cond_0
 
+    .line 5
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
 
@@ -626,6 +652,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
     return-object p0
@@ -633,6 +660,7 @@
     :catchall_0
     move-exception p0
 
+    .line 8
     :try_start_1
     invoke-virtual {v0, p0}, Lcom/google/common/io/Closer;->rethrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
@@ -645,8 +673,10 @@
     :catchall_1
     move-exception p0
 
+    .line 9
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
+    .line 10
     throw p0
 .end method
 
@@ -665,12 +695,15 @@
         }
     .end annotation
 
+    .line 11
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 12
     invoke-static {}, Lcom/google/common/io/Closer;->create()Lcom/google/common/io/Closer;
 
     move-result-object v0
 
+    .line 13
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/io/CharSource;->openStream()Ljava/io/Reader;
 
@@ -682,12 +715,14 @@
 
     check-cast p0, Ljava/io/Reader;
 
+    .line 14
     invoke-static {p0, p1}, Lcom/google/common/io/CharStreams;->readLines(Ljava/lang/Readable;Lcom/google/common/io/LineProcessor;)Ljava/lang/Object;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 15
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
     return-object p0
@@ -695,6 +730,7 @@
     :catchall_0
     move-exception p0
 
+    .line 16
     :try_start_1
     invoke-virtual {v0, p0}, Lcom/google/common/io/Closer;->rethrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
@@ -707,7 +743,9 @@
     :catchall_1
     move-exception p0
 
+    .line 17
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
+    .line 18
     throw p0
 .end method

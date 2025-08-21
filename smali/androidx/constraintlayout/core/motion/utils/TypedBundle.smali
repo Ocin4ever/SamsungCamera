@@ -101,6 +101,7 @@
 .method public add(IF)V
     .locals 3
 
+    .line 6
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountFloat:I
 
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeFloat:[I
@@ -109,6 +110,7 @@
 
     if-lt v0, v2, :cond_0
 
+    .line 7
     array-length v0, v1
 
     mul-int/lit8 v0, v0, 0x2
@@ -119,6 +121,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeFloat:[I
 
+    .line 8
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueFloat:[F
 
     array-length v1, v0
@@ -131,6 +134,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueFloat:[F
 
+    .line 9
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeFloat:[I
 
@@ -138,6 +142,7 @@
 
     aput p1, v0, v1
 
+    .line 10
     iget-object p1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueFloat:[F
 
     add-int/lit8 v0, v1, 0x1
@@ -152,6 +157,7 @@
 .method public add(II)V
     .locals 3
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountInt:I
 
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeInt:[I
@@ -160,6 +166,7 @@
 
     if-lt v0, v2, :cond_0
 
+    .line 2
     array-length v0, v1
 
     mul-int/lit8 v0, v0, 0x2
@@ -170,6 +177,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeInt:[I
 
+    .line 3
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueInt:[I
 
     array-length v1, v0
@@ -182,6 +190,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueInt:[I
 
+    .line 4
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeInt:[I
 
@@ -189,6 +198,7 @@
 
     aput p1, v0, v1
 
+    .line 5
     iget-object p1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueInt:[I
 
     add-int/lit8 v0, v1, 0x1
@@ -203,6 +213,7 @@
 .method public add(ILjava/lang/String;)V
     .locals 3
 
+    .line 11
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountString:I
 
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeString:[I
@@ -211,6 +222,7 @@
 
     if-lt v0, v2, :cond_0
 
+    .line 12
     array-length v0, v1
 
     mul-int/lit8 v0, v0, 0x2
@@ -221,6 +233,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeString:[I
 
+    .line 13
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueString:[Ljava/lang/String;
 
     array-length v1, v0
@@ -235,6 +248,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueString:[Ljava/lang/String;
 
+    .line 14
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeString:[I
 
@@ -242,6 +256,7 @@
 
     aput p1, v0, v1
 
+    .line 15
     iget-object p1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueString:[Ljava/lang/String;
 
     add-int/lit8 v0, v1, 0x1
@@ -256,6 +271,7 @@
 .method public add(IZ)V
     .locals 3
 
+    .line 16
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountBoolean:I
 
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeBoolean:[I
@@ -264,6 +280,7 @@
 
     if-lt v0, v2, :cond_0
 
+    .line 17
     array-length v0, v1
 
     mul-int/lit8 v0, v0, 0x2
@@ -274,6 +291,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeBoolean:[I
 
+    .line 18
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueBoolean:[Z
 
     array-length v1, v0
@@ -286,6 +304,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueBoolean:[Z
 
+    .line 19
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeBoolean:[I
 
@@ -293,6 +312,7 @@
 
     aput p1, v0, v1
 
+    .line 20
     iget-object p1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueBoolean:[Z
 
     add-int/lit8 v0, v1, 0x1
@@ -322,11 +342,13 @@
 
     move v1, v0
 
+    .line 9
     :goto_0
     iget v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountInt:I
 
     if-ge v1, v2, :cond_0
 
+    .line 10
     iget-object v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeInt:[I
 
     aget v2, v2, v1
@@ -344,11 +366,13 @@
     :cond_0
     move v1, v0
 
+    .line 11
     :goto_1
     iget v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountFloat:I
 
     if-ge v1, v2, :cond_1
 
+    .line 12
     iget-object v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeFloat:[I
 
     aget v2, v2, v1
@@ -366,11 +390,13 @@
     :cond_1
     move v1, v0
 
+    .line 13
     :goto_2
     iget v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountString:I
 
     if-ge v1, v2, :cond_2
 
+    .line 14
     iget-object v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeString:[I
 
     aget v2, v2, v1
@@ -385,12 +411,14 @@
 
     goto :goto_2
 
+    .line 15
     :cond_2
     :goto_3
     iget v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountBoolean:I
 
     if-ge v0, v1, :cond_3
 
+    .line 16
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeBoolean:[I
 
     aget v1, v1, v0
@@ -416,11 +444,13 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     iget v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountInt:I
 
     if-ge v1, v2, :cond_0
 
+    .line 2
     iget-object v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeInt:[I
 
     aget v2, v2, v1
@@ -438,11 +468,13 @@
     :cond_0
     move v1, v0
 
+    .line 3
     :goto_1
     iget v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountFloat:I
 
     if-ge v1, v2, :cond_1
 
+    .line 4
     iget-object v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeFloat:[I
 
     aget v2, v2, v1
@@ -460,11 +492,13 @@
     :cond_1
     move v1, v0
 
+    .line 5
     :goto_2
     iget v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountString:I
 
     if-ge v1, v2, :cond_2
 
+    .line 6
     iget-object v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeString:[I
 
     aget v2, v2, v1
@@ -479,12 +513,14 @@
 
     goto :goto_2
 
+    .line 7
     :cond_2
     :goto_3
     iget v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountBoolean:I
 
     if-ge v0, v1, :cond_3
 
+    .line 8
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeBoolean:[I
 
     aget v1, v1, v0

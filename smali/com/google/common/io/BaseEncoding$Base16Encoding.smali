@@ -24,14 +24,17 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, v0}, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;-><init>(Lcom/google/common/io/BaseEncoding$Alphabet;Ljava/lang/Character;)V
 
     const/16 v0, 0x200
 
     new-array v0, v0, [C
 
+    .line 3
     iput-object v0, p0, Lcom/google/common/io/BaseEncoding$Base16Encoding;->encoding:[C
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/io/BaseEncoding$Alphabet;->access$000(Lcom/google/common/io/BaseEncoding$Alphabet;)[C
 
     move-result-object v0
@@ -59,6 +62,7 @@
 
     if-ge v2, v0, :cond_1
 
+    .line 5
     iget-object v0, p0, Lcom/google/common/io/BaseEncoding$Base16Encoding;->encoding:[C
 
     ushr-int/lit8 v1, v2, 0x4
@@ -69,6 +73,7 @@
 
     aput-char v1, v0, v2
 
+    .line 6
     iget-object v0, p0, Lcom/google/common/io/BaseEncoding$Base16Encoding;->encoding:[C
 
     or-int/lit16 v1, v2, 0x100
@@ -92,6 +97,7 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/io/BaseEncoding$Alphabet;
 
     invoke-virtual {p2}, Ljava/lang/String;->toCharArray()[C

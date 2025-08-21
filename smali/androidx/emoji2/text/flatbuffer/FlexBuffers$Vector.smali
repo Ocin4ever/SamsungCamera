@@ -153,6 +153,7 @@
 .method public bridge synthetic toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Object;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -165,8 +166,10 @@
 
     const-string v0, "[ "
 
+    .line 2
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 3
     invoke-virtual {p0}, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Vector;->size()I
 
     move-result v0
@@ -176,6 +179,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 4
     invoke-virtual {p0, v1}, Landroidx/emoji2/text/flatbuffer/FlexBuffers$Vector;->get(I)Landroidx/emoji2/text/flatbuffer/FlexBuffers$Reference;
 
     move-result-object v2
@@ -188,6 +192,7 @@
 
     const-string v2, ", "
 
+    .line 5
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -198,6 +203,7 @@
     :cond_1
     const-string p0, " ]"
 
+    .line 6
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     return-object p1

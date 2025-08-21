@@ -66,6 +66,7 @@
 
     const-string v0, "Unknown"
 
+    .line 1
     sget-object v1, Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainKeyContainer$Usage;->NONE:Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainKeyContainer$Usage;
 
     invoke-direct {p0, p1, v0, v1, p2}, Lcom/samsung/android/camera/core2/node/NodeChain$Key;-><init>(ILjava/lang/String;Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainKeyContainer$Usage;Lcom/samsung/android/camera/core2/node/Node$PortType;)V
@@ -76,16 +77,22 @@
 .method public constructor <init>(ILjava/lang/String;Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainKeyContainer$Usage;Lcom/samsung/android/camera/core2/node/Node$PortType;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput p1, p0, Lcom/samsung/android/camera/core2/node/NodeChain$Key;->mId:I
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/camera/core2/node/NodeChain$Key;->mName:Ljava/lang/String;
 
+    .line 5
     iput-object p3, p0, Lcom/samsung/android/camera/core2/node/NodeChain$Key;->mUsage:Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainKeyContainer$Usage;
 
+    .line 6
     iput-object p4, p0, Lcom/samsung/android/camera/core2/node/NodeChain$Key;->mPortType:Lcom/samsung/android/camera/core2/node/Node$PortType;
 
+    .line 7
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -98,6 +105,7 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/node/NodeChain$Key;->mInputDataClass:Ljava/lang/Class;
 
+    .line 8
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1

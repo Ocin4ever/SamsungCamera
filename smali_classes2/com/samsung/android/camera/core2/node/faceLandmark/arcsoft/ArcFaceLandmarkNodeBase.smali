@@ -511,12 +511,14 @@
 .method public processBackgroundPreviewInternal(Lcom/samsung/android/camera/core2/util/DirectBuffer;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
     .locals 5
 
+    .line 2
     new-instance p3, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;
 
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->s()J
 
     move-result-wide v0
 
+    .line 3
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->r()Lcom/samsung/android/camera/core2/util/StrideInfo;
 
     move-result-object v2
@@ -525,6 +527,7 @@
 
     move-result v2
 
+    .line 4
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->r()Lcom/samsung/android/camera/core2/util/StrideInfo;
 
     move-result-object p2
@@ -535,18 +538,22 @@
 
     invoke-direct {p3, v0, v1, v2, p2}, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;-><init>(JII)V
 
+    .line 5
     iget-wide v0, p3, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;->timeStamp:J
 
     iput-wide v0, p0, Lcom/samsung/android/camera/core2/node/faceLandmark/arcsoft/ArcFaceLandmarkNodeBase;->mPreviewTimestamp:J
 
+    .line 6
     iget p2, p3, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;->rowStride:I
 
     iput p2, p0, Lcom/samsung/android/camera/core2/node/faceLandmark/arcsoft/ArcFaceLandmarkNodeBase;->mRowStride:I
 
+    .line 7
     iget p2, p3, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;->heightSlice:I
 
     iput p2, p0, Lcom/samsung/android/camera/core2/node/faceLandmark/arcsoft/ArcFaceLandmarkNodeBase;->mHeightSlice:I
 
+    .line 8
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/node/Node;->getNodeTag()Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     move-result-object p2
@@ -577,6 +584,7 @@
 
     invoke-static {p2, v2, v1}, Lcom/samsung/android/camera/core2/util/CLog;->s(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     iget-object p2, p0, Lcom/samsung/android/camera/core2/node/faceLandmark/arcsoft/ArcFaceLandmarkNodeBase;->mFDSolutionType:Lcom/samsung/android/camera/core2/node/faceLandmark/arcsoft/ArcFaceLandmarkNodeBase$FaceDetectionType;
 
     sget-object v1, Lcom/samsung/android/camera/core2/node/faceLandmark/arcsoft/ArcFaceLandmarkNodeBase$FaceDetectionType;->c:Lcom/samsung/android/camera/core2/node/faceLandmark/arcsoft/ArcFaceLandmarkNodeBase$FaceDetectionType;
@@ -587,11 +595,13 @@
 
     if-ne p2, v1, :cond_1
 
+    .line 10
     :cond_0
     iget-object p2, p0, Lcom/samsung/android/camera/core2/node/faceLandmark/arcsoft/ArcFaceLandmarkNodeBase;->mLatestRepeatingCaptureResult:Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {p0, p2}, Lcom/samsung/android/camera/core2/node/faceLandmark/arcsoft/ArcFaceLandmarkNodeBase;->setFaceInfo(Landroid/hardware/camera2/CaptureResult;)V
 
+    .line 11
     :cond_1
     sget-object p2, Lcom/samsung/android/camera/core2/node/faceLandmark/arcsoft/ArcFaceLandmarkNodeBase;->NATIVE_COMMAND_PROCESS:Lcom/samsung/android/camera/core2/node/NativeNode$Command;
 
@@ -617,6 +627,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 12
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/node/Node;->getNodeTag()Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     move-result-object p0
@@ -640,6 +651,7 @@
 .method public bridge synthetic processBackgroundPreviewInternal(Ljava/lang/Object;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/samsung/android/camera/core2/util/DirectBuffer;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/faceLandmark/arcsoft/ArcFaceLandmarkNodeBase;->processBackgroundPreviewInternal(Lcom/samsung/android/camera/core2/util/DirectBuffer;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V

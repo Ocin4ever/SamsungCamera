@@ -2033,16 +2033,19 @@
 .method private updatePreferenceAttr(Landroidx/preference/Preference;)V
     .locals 2
 
+    .line 17
     instance-of v0, p1, Lcom/sec/android/app/camera/setting/SettingPreference;
 
     if-eqz v0, :cond_0
 
+    .line 18
     check-cast p1, Lcom/sec/android/app/camera/setting/SettingPreference;
 
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/WidgetCustomFragment;->updatePreferenceAttr(Lcom/sec/android/app/camera/setting/SettingPreference;)V
 
     return-void
 
+    .line 19
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -2072,6 +2075,7 @@
 .method private updatePreferenceAttr(Lcom/sec/android/app/camera/setting/SettingPreference;)V
     .locals 5
 
+    .line 1
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -2082,13 +2086,16 @@
 
     const-string p0, "updatePreferenceAttr : preference key is null"
 
+    .line 2
     invoke-static {v1, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 3
     :cond_0
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/WidgetCustomFragment;->registerPreferenceClickListener(Landroidx/preference/Preference;)V
 
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
@@ -2111,8 +2118,10 @@
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {p1, v2}, Landroidx/preference/Preference;->seslSetSummaryColor(Landroid/content/res/ColorStateList;)V
 
+    .line 6
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2129,6 +2138,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     sget-object v1, Lcom/sec/android/app/camera/setting/WidgetCustomFragment;->mEventIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2139,18 +2149,21 @@
 
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/SettingPreference;->setEventId(Lcom/sec/android/app/camera/interfaces/SaLogEventId;)V
 
+    .line 8
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/setting/WidgetCustomFragment;->getSummary(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
+    .line 9
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/setting/WidgetCustomFragment;->getSummary(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/SettingPreference;->setSummaryDescription(Ljava/lang/CharSequence;)V
 
+    .line 10
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/setting/WidgetCustomFragment;->getDescription(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -2159,16 +2172,19 @@
 
     const-string v1, "widget_settings_custom_camera_title"
 
+    .line 11
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 12
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/WidgetCustomFragment;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
     if-nez v0, :cond_2
 
+    .line 13
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/WidgetCustomFragment;->createTitleEditTextDialog(Lcom/sec/android/app/camera/setting/SettingPreference;)Landroidx/appcompat/app/AlertDialog;
 
     move-result-object p1
@@ -2180,16 +2196,19 @@
     :cond_1
     const-string p1, "widget_settings_custom_camera_save_to"
 
+    .line 14
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 15
     iget-object p1, p0, Lcom/sec/android/app/camera/setting/WidgetCustomFragment;->mStorageDialog:Landroidx/appcompat/app/AlertDialog;
 
     if-nez p1, :cond_2
 
+    .line 16
     invoke-direct {p0}, Lcom/sec/android/app/camera/setting/WidgetCustomFragment;->createStorageDialog()Landroidx/appcompat/app/AlertDialog;
 
     move-result-object p1

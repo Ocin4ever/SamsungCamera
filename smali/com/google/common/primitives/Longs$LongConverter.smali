@@ -67,6 +67,7 @@
 .method public bridge synthetic doBackward(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/Longs$LongConverter;->doBackward(Ljava/lang/Long;)Ljava/lang/String;
@@ -79,6 +80,7 @@
 .method public doBackward(Ljava/lang/Long;)Ljava/lang/String;
     .locals 0
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Long;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -89,6 +91,7 @@
 .method public doForward(Ljava/lang/String;)Ljava/lang/Long;
     .locals 0
 
+    .line 2
     invoke-static {p1}, Ljava/lang/Long;->decode(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object p0
@@ -99,6 +102,7 @@
 .method public bridge synthetic doForward(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/Longs$LongConverter;->doForward(Ljava/lang/String;)Ljava/lang/Long;

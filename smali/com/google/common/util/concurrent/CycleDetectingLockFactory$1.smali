@@ -37,6 +37,7 @@
 .method public bridge synthetic initialValue()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/CycleDetectingLockFactory$1;->initialValue()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -57,6 +58,7 @@
 
     const/4 p0, 0x3
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/collect/Lists;->newArrayListWithCapacity(I)Ljava/util/ArrayList;
 
     move-result-object p0

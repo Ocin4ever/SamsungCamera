@@ -118,6 +118,7 @@
 .method public readSystemState()Landroidx/work/impl/constraints/NetworkState;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/work/impl/constraints/trackers/NetworkStateTrackerPre24;->connectivityManager:Landroid/net/ConnectivityManager;
 
     invoke-static {p0}, Landroidx/work/impl/constraints/trackers/NetworkStateTrackerKt;->getActiveNetworkState(Landroid/net/ConnectivityManager;)Landroidx/work/impl/constraints/NetworkState;
@@ -130,6 +131,7 @@
 .method public bridge synthetic readSystemState()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/work/impl/constraints/trackers/NetworkStateTrackerPre24;->readSystemState()Landroidx/work/impl/constraints/NetworkState;
 
     move-result-object p0

@@ -796,8 +796,10 @@
 .method public refreshLayout()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/menu/singletakecustomizedoption/SingleTakeCustomizedOptionMenuView;->inflateLayout()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/menu/singletakecustomizedoption/SingleTakeCustomizedOptionMenuView;->initialize()V
 
     return-void
@@ -806,6 +808,7 @@
 .method public refreshLayout(Z)V
     .locals 0
 
+    .line 3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/layer/menu/singletakecustomizedoption/SingleTakeCustomizedOptionMenuView;->refreshLayout()V
 
     return-void

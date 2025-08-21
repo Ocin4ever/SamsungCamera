@@ -54,6 +54,7 @@
 
     ushr-int/lit8 v1, v1, 0x1
 
+    .line 1
     aget v2, p0, v1
 
     if-ge v2, p2, :cond_0
@@ -96,6 +97,7 @@
 
     ushr-int/lit8 v1, v1, 0x1
 
+    .line 2
     aget-wide v2, p0, v1
 
     cmp-long v2, v2, p2

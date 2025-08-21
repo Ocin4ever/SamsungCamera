@@ -841,54 +841,64 @@
 .method private updatePreferenceAttr(Landroidx/preference/Preference;)V
     .locals 2
 
+    .line 48
     instance-of v0, p1, Lcom/sec/android/app/camera/setting/CameraEditTextCheckBoxPreference;
 
     if-eqz v0, :cond_0
 
+    .line 49
     check-cast p1, Lcom/sec/android/app/camera/setting/CameraEditTextCheckBoxPreference;
 
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/WatermarkFragment;->updatePreferenceAttr(Lcom/sec/android/app/camera/setting/CameraEditTextCheckBoxPreference;)V
 
     goto :goto_0
 
+    .line 50
     :cond_0
     instance-of v0, p1, Lcom/sec/android/app/camera/setting/CameraCheckBoxPreference;
 
     if-eqz v0, :cond_1
 
+    .line 51
     check-cast p1, Lcom/sec/android/app/camera/setting/CameraCheckBoxPreference;
 
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/WatermarkFragment;->updatePreferenceAttr(Lcom/sec/android/app/camera/setting/CameraCheckBoxPreference;)V
 
     goto :goto_0
 
+    .line 52
     :cond_1
     instance-of v0, p1, Lcom/sec/android/app/camera/setting/SpinnerPreference;
 
     if-eqz v0, :cond_2
 
+    .line 53
     check-cast p1, Lcom/sec/android/app/camera/setting/SpinnerPreference;
 
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/WatermarkFragment;->updatePreferenceAttr(Lcom/sec/android/app/camera/setting/SpinnerPreference;)V
 
     goto :goto_0
 
+    .line 54
     :cond_2
     instance-of v0, p1, Lcom/sec/android/app/camera/setting/WatermarkAlignmentPreference;
 
     if-eqz v0, :cond_3
 
+    .line 55
     check-cast p1, Lcom/sec/android/app/camera/setting/WatermarkAlignmentPreference;
 
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/WatermarkFragment;->updatePreferenceAttr(Lcom/sec/android/app/camera/setting/WatermarkAlignmentPreference;)V
 
     goto :goto_0
 
+    .line 56
     :cond_3
     instance-of v0, p1, Lcom/sec/android/app/camera/setting/CameraCheckBoxSpinnerPreference;
 
     if-eqz v0, :cond_4
 
+    .line 57
     check-cast p1, Lcom/sec/android/app/camera/setting/CameraCheckBoxSpinnerPreference;
 
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/WatermarkFragment;->updatePreferenceAttr(Lcom/sec/android/app/camera/setting/CameraCheckBoxSpinnerPreference;)V
@@ -896,6 +906,7 @@
     :goto_0
     return-void
 
+    .line 58
     :cond_4
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -925,6 +936,7 @@
 .method private updatePreferenceAttr(Lcom/sec/android/app/camera/setting/CameraCheckBoxPreference;)V
     .locals 4
 
+    .line 33
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/WatermarkFragment;->mSettingKeyMap:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
@@ -941,6 +953,7 @@
 
     return-void
 
+    .line 34
     :cond_0
     iget-object v1, p0, Lcom/sec/android/app/camera/setting/CameraPreferenceFragment;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -948,6 +961,7 @@
 
     move-result v1
 
+    .line 35
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -976,12 +990,14 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 36
     invoke-static {v1}, Lcom/sec/android/app/camera/util/Util;->toBoolean(I)Z
 
     move-result v1
 
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/CameraCheckBoxPreference;->setChecked(Z)V
 
+    .line 37
     invoke-virtual {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->getPreferenceKey()Ljava/lang/String;
 
     move-result-object v0
@@ -998,6 +1014,7 @@
 .method private updatePreferenceAttr(Lcom/sec/android/app/camera/setting/CameraCheckBoxSpinnerPreference;)V
     .locals 6
 
+    .line 6
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/WatermarkFragment;->mSettingKeyMap:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
@@ -1014,6 +1031,7 @@
 
     return-void
 
+    .line 7
     :cond_0
     iget-object v1, p0, Lcom/sec/android/app/camera/setting/CameraPreferenceFragment;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -1021,6 +1039,7 @@
 
     move-result v1
 
+    .line 8
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1049,12 +1068,14 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 9
     invoke-static {v1}, Lcom/sec/android/app/camera/util/Util;->toBoolean(I)Z
 
     move-result v1
 
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/CameraCheckBoxSpinnerPreference;->setChecked(Z)V
 
+    .line 10
     invoke-virtual {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->getPreferenceKey()Ljava/lang/String;
 
     move-result-object v1
@@ -1065,29 +1086,36 @@
 
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/CameraCheckBoxSpinnerPreference;->setEventId(Lcom/sec/android/app/camera/interfaces/SaLogEventId;)V
 
+    .line 11
     sget-object v1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->WATERMARK_TIME:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
     if-ne v0, v1, :cond_1
 
+    .line 12
     sget-object v0, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->WATERMARK_TIME_FORMAT:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
+    .line 13
     sget-object v1, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->SETTING_WATERMARK_SCREEN_SPINNER_TIME:Lcom/sec/android/app/camera/interfaces/SaLogEventId;
 
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/CameraCheckBoxSpinnerPreference;->setSpinnerEventId(Lcom/sec/android/app/camera/interfaces/SaLogEventId;)V
 
     goto :goto_0
 
+    .line 14
     :cond_1
     sget-object v1, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->WATERMARK_DATE:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
     if-ne v0, v1, :cond_2
 
+    .line 15
     sget-object v0, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->WATERMARK_DATE_FORMAT:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
+    .line 16
     sget-object v1, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->SETTING_WATERMARK_SCREEN_SPINNER_DATE:Lcom/sec/android/app/camera/interfaces/SaLogEventId;
 
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/CameraCheckBoxSpinnerPreference;->setSpinnerEventId(Lcom/sec/android/app/camera/interfaces/SaLogEventId;)V
 
+    .line 17
     :cond_2
     :goto_0
     iget-object v1, p0, Lcom/sec/android/app/camera/setting/CameraPreferenceFragment;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -1096,6 +1124,7 @@
 
     move-result v1
 
+    .line 18
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1120,6 +1149,7 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 19
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
@@ -1142,14 +1172,19 @@
 
     move-result-object v2
 
+    .line 20
     invoke-virtual {p1, v2}, Landroidx/preference/Preference;->seslSetSummaryColor(Landroid/content/res/ColorStateList;)V
 
+    .line 21
     invoke-virtual {p1, v0}, Lcom/sec/android/app/camera/setting/CameraCheckBoxSpinnerPreference;->setEntries(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)V
 
+    .line 22
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/CameraCheckBoxSpinnerPreference;->setValue(I)V
 
+    .line 23
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/setting/WatermarkFragment;->updateSpinnerSummary(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)V
 
+    .line 24
     invoke-virtual {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->getPreferenceKey()Ljava/lang/String;
 
     move-result-object v0
@@ -1166,6 +1201,7 @@
 .method private updatePreferenceAttr(Lcom/sec/android/app/camera/setting/CameraEditTextCheckBoxPreference;)V
     .locals 4
 
+    .line 25
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/WatermarkFragment;->mSettingKeyMap:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
@@ -1182,6 +1218,7 @@
 
     return-void
 
+    .line 26
     :cond_0
     iget-object v1, p0, Lcom/sec/android/app/camera/setting/CameraPreferenceFragment;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -1189,6 +1226,7 @@
 
     move-result v1
 
+    .line 27
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1217,27 +1255,32 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 28
     invoke-static {v1}, Lcom/sec/android/app/camera/util/Util;->toBoolean(I)Z
 
     move-result v1
 
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/CameraEditTextCheckBoxPreference;->setChecked(Z)V
 
+    .line 29
     iget-object v1, p0, Lcom/sec/android/app/camera/setting/WatermarkFragment;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
     if-nez v1, :cond_1
 
+    .line 30
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/setting/WatermarkFragment;->createEditTextDialog(Lcom/sec/android/app/camera/setting/CameraEditTextCheckBoxPreference;)Landroidx/appcompat/app/AlertDialog;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/sec/android/app/camera/setting/WatermarkFragment;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
+    .line 31
     :cond_1
     iget-object v1, p0, Lcom/sec/android/app/camera/setting/WatermarkFragment;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/CameraEditTextCheckBoxPreference;->setEditTextDialog(Landroidx/appcompat/app/AlertDialog;)V
 
+    .line 32
     invoke-virtual {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->getPreferenceKey()Ljava/lang/String;
 
     move-result-object v0
@@ -1254,6 +1297,7 @@
 .method private updatePreferenceAttr(Lcom/sec/android/app/camera/setting/SpinnerPreference;)V
     .locals 5
 
+    .line 38
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/WatermarkFragment;->mSettingKeyMap:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
@@ -1270,6 +1314,7 @@
 
     return-void
 
+    .line 39
     :cond_0
     iget-object v1, p0, Lcom/sec/android/app/camera/setting/CameraPreferenceFragment;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -1277,6 +1322,7 @@
 
     move-result v1
 
+    .line 40
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1305,6 +1351,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 41
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
@@ -1327,14 +1374,19 @@
 
     move-result-object v2
 
+    .line 42
     invoke-virtual {p1, v2}, Landroidx/preference/Preference;->seslSetSummaryColor(Landroid/content/res/ColorStateList;)V
 
+    .line 43
     invoke-virtual {p1, v0}, Lcom/sec/android/app/camera/setting/SpinnerPreference;->setEntries(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)V
 
+    .line 44
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/SpinnerPreference;->setValue(I)V
 
+    .line 45
     invoke-direct {p0, v0}, Lcom/sec/android/app/camera/setting/WatermarkFragment;->updateSpinnerSummary(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)V
 
+    .line 46
     invoke-virtual {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->getPreferenceKey()Ljava/lang/String;
 
     move-result-object v0
@@ -1345,6 +1397,7 @@
 
     invoke-virtual {p1, p0}, Lcom/sec/android/app/camera/setting/SpinnerPreference;->setEventId(Lcom/sec/android/app/camera/interfaces/SaLogEventId;)V
 
+    .line 47
     sget-object p0, Lcom/sec/android/app/camera/interfaces/SaLogEventId;->SETTING_WATERMARK_SCREEN_FONT_SELECT:Lcom/sec/android/app/camera/interfaces/SaLogEventId;
 
     invoke-virtual {p1, p0}, Lcom/sec/android/app/camera/setting/SpinnerPreference;->setSubEventId(Lcom/sec/android/app/camera/interfaces/SaLogEventId;)V
@@ -1355,6 +1408,7 @@
 .method private updatePreferenceAttr(Lcom/sec/android/app/camera/setting/WatermarkAlignmentPreference;)V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/WatermarkFragment;->mSettingKeyMap:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
@@ -1371,6 +1425,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v1, p0, Lcom/sec/android/app/camera/setting/CameraPreferenceFragment;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
@@ -1378,6 +1433,7 @@
 
     move-result v1
 
+    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1406,8 +1462,10 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     invoke-virtual {p1, v1}, Lcom/sec/android/app/camera/setting/WatermarkAlignmentPreference;->setValue(I)V
 
+    .line 5
     invoke-virtual {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->getPreferenceKey()Ljava/lang/String;
 
     move-result-object v0

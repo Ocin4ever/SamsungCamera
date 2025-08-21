@@ -202,6 +202,7 @@
 
     const/16 v0, 0x10
 
+    .line 1
     invoke-static {v0}, Lcom/google/common/collect/HashBiMap;->create(I)Lcom/google/common/collect/HashBiMap;
 
     move-result-object v0
@@ -223,6 +224,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/HashBiMap;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/HashBiMap;-><init>(I)V
@@ -246,6 +248,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v0
@@ -254,6 +257,7 @@
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v0, p0}, Ljava/util/AbstractMap;->putAll(Ljava/util/Map;)V
 
     return-object v0
@@ -889,29 +893,37 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 3
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/HashBiMap;->deleteFromTableKToV(II)V
 
+    .line 4
     invoke-direct {p0, p1, p3}, Lcom/google/common/collect/HashBiMap;->deleteFromTableVToK(II)V
 
+    .line 5
     iget-object p2, p0, Lcom/google/common/collect/HashBiMap;->prevInInsertionOrder:[I
 
     aget p2, p2, p1
 
+    .line 6
     iget-object p3, p0, Lcom/google/common/collect/HashBiMap;->nextInInsertionOrder:[I
 
     aget p3, p3, p1
 
+    .line 7
     invoke-direct {p0, p2, p3}, Lcom/google/common/collect/HashBiMap;->setSucceeds(II)V
 
+    .line 8
     iget p2, p0, Lcom/google/common/collect/HashBiMap;->size:I
 
     sub-int/2addr p2, v1
 
     invoke-direct {p0, p2, p1}, Lcom/google/common/collect/HashBiMap;->moveEntryToIndex(II)V
 
+    .line 9
     iget-object p1, p0, Lcom/google/common/collect/HashBiMap;->keys:[Ljava/lang/Object;
 
     iget p2, p0, Lcom/google/common/collect/HashBiMap;->size:I
@@ -922,6 +934,7 @@
 
     aput-object v0, p1, p3
 
+    .line 10
     iget-object p1, p0, Lcom/google/common/collect/HashBiMap;->values:[Ljava/lang/Object;
 
     add-int/lit8 p3, p2, -0x1
@@ -930,8 +943,10 @@
 
     sub-int/2addr p2, v1
 
+    .line 11
     iput p2, p0, Lcom/google/common/collect/HashBiMap;->size:I
 
+    .line 12
     iget p1, p0, Lcom/google/common/collect/HashBiMap;->modCount:I
 
     add-int/2addr p1, v1
@@ -1427,6 +1442,7 @@
 .method public findEntryByKey(Ljava/lang/Object;)I
     .locals 1
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/Hashing;->smearedHash(Ljava/lang/Object;)I
 
     move-result v0
@@ -1441,6 +1457,7 @@
 .method public findEntryByKey(Ljava/lang/Object;I)I
     .locals 6
 
+    .line 2
     iget-object v3, p0, Lcom/google/common/collect/HashBiMap;->hashTableKToV:[I
 
     iget-object v4, p0, Lcom/google/common/collect/HashBiMap;->nextInBucketKToV:[I
@@ -1463,6 +1480,7 @@
 .method public findEntryByValue(Ljava/lang/Object;)I
     .locals 1
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/Hashing;->smearedHash(Ljava/lang/Object;)I
 
     move-result v0
@@ -1477,6 +1495,7 @@
 .method public findEntryByValue(Ljava/lang/Object;I)I
     .locals 6
 
+    .line 2
     iget-object v3, p0, Lcom/google/common/collect/HashBiMap;->hashTableVToK:[I
 
     iget-object v4, p0, Lcom/google/common/collect/HashBiMap;->nextInBucketVToK:[I
@@ -1719,6 +1738,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, v0}, Lcom/google/common/collect/HashBiMap;->put(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object;
 
     move-result-object p0
@@ -1742,10 +1762,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/Hashing;->smearedHash(Ljava/lang/Object;)I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/HashBiMap;->findEntryByKey(Ljava/lang/Object;I)I
 
     move-result v1
@@ -1754,10 +1776,12 @@
 
     if-eq v1, v2, :cond_1
 
+    .line 4
     iget-object p1, p0, Lcom/google/common/collect/HashBiMap;->values:[Ljava/lang/Object;
 
     aget-object p1, p1, v1
 
+    .line 5
     invoke-static {p1, p2}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -1766,16 +1790,19 @@
 
     return-object p2
 
+    .line 6
     :cond_0
     invoke-direct {p0, v1, p2, p3}, Lcom/google/common/collect/HashBiMap;->replaceValueInEntry(ILjava/lang/Object;Z)V
 
     return-object p1
 
+    .line 7
     :cond_1
     invoke-static {p2}, Lcom/google/common/collect/Hashing;->smearedHash(Ljava/lang/Object;)I
 
     move-result v1
 
+    .line 8
     invoke-virtual {p0, p2, v1}, Lcom/google/common/collect/HashBiMap;->findEntryByValue(Ljava/lang/Object;I)I
 
     move-result v3
@@ -1786,6 +1813,7 @@
 
     if-eq v3, v2, :cond_4
 
+    .line 9
     invoke-virtual {p0, v3, v1}, Lcom/google/common/collect/HashBiMap;->removeEntryValueHashKnown(II)V
 
     goto :goto_1
@@ -1803,8 +1831,10 @@
     :goto_0
     const-string v2, "Value already present: %s"
 
+    .line 10
     invoke-static {p3, v2, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 11
     :cond_4
     :goto_1
     iget p3, p0, Lcom/google/common/collect/HashBiMap;->size:I
@@ -1813,40 +1843,48 @@
 
     invoke-direct {p0, p3}, Lcom/google/common/collect/HashBiMap;->ensureCapacity(I)V
 
+    .line 12
     iget-object p3, p0, Lcom/google/common/collect/HashBiMap;->keys:[Ljava/lang/Object;
 
     iget v2, p0, Lcom/google/common/collect/HashBiMap;->size:I
 
     aput-object p1, p3, v2
 
+    .line 13
     iget-object p1, p0, Lcom/google/common/collect/HashBiMap;->values:[Ljava/lang/Object;
 
     aput-object p2, p1, v2
 
+    .line 14
     invoke-direct {p0, v2, v0}, Lcom/google/common/collect/HashBiMap;->insertIntoTableKToV(II)V
 
+    .line 15
     iget p1, p0, Lcom/google/common/collect/HashBiMap;->size:I
 
     invoke-direct {p0, p1, v1}, Lcom/google/common/collect/HashBiMap;->insertIntoTableVToK(II)V
 
+    .line 16
     iget p1, p0, Lcom/google/common/collect/HashBiMap;->lastInInsertionOrder:I
 
     iget p2, p0, Lcom/google/common/collect/HashBiMap;->size:I
 
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/HashBiMap;->setSucceeds(II)V
 
+    .line 17
     iget p1, p0, Lcom/google/common/collect/HashBiMap;->size:I
 
     const/4 p2, -0x2
 
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/HashBiMap;->setSucceeds(II)V
 
+    .line 18
     iget p1, p0, Lcom/google/common/collect/HashBiMap;->size:I
 
     add-int/2addr p1, v4
 
     iput p1, p0, Lcom/google/common/collect/HashBiMap;->size:I
 
+    .line 19
     iget p1, p0, Lcom/google/common/collect/HashBiMap;->modCount:I
 
     add-int/2addr p1, v4
@@ -2045,6 +2083,7 @@
 .method public removeEntry(I)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/HashBiMap;->keys:[Ljava/lang/Object;
 
     aget-object v0, v0, p1
@@ -2137,6 +2176,7 @@
 .method public bridge synthetic values()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/HashBiMap;->values()Ljava/util/Set;
 
     move-result-object p0
@@ -2154,10 +2194,12 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/HashBiMap;->valueSet:Ljava/util/Set;
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance v0, Lcom/google/common/collect/HashBiMap$ValueSet;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/HashBiMap$ValueSet;-><init>(Lcom/google/common/collect/HashBiMap;)V

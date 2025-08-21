@@ -40,6 +40,7 @@
 .method public bridge synthetic run()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/primitives/UnsignedBytes$LexicographicalComparatorHolder$UnsafeComparator$1;->run()Lsun/misc/Unsafe;
 
     move-result-object p0
@@ -50,8 +51,10 @@
 .method public run()Lsun/misc/Unsafe;
     .locals 5
 
+    .line 2
     const-class p0, Lsun/misc/Unsafe;
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -67,20 +70,24 @@
 
     const/4 v4, 0x1
 
+    .line 4
     invoke-virtual {v3, v4}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     const/4 v4, 0x0
 
+    .line 5
     invoke-virtual {v3, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 6
     invoke-virtual {p0, v3}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
+    .line 7
     invoke-virtual {p0, v3}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -94,6 +101,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     new-instance p0, Ljava/lang/NoSuchFieldError;
 

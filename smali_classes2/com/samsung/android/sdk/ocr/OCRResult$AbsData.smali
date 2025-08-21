@@ -51,16 +51,19 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/graphics/Point;
 
+    .line 2
     iput-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult$AbsData;->mRect:[Landroid/graphics/Point;
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult$AbsData;->mAngle:F
 
     return-void
@@ -69,16 +72,19 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 9
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x4
 
     new-array v1, v0, [Landroid/graphics/Point;
 
+    .line 5
     iput-object v1, p0, Lcom/samsung/android/sdk/ocr/OCRResult$AbsData;->mRect:[Landroid/graphics/Point;
 
     const/4 v1, 0x0
 
+    .line 6
     iput v1, p0, Lcom/samsung/android/sdk/ocr/OCRResult$AbsData;->mAngle:F
 
     const/16 v1, 0x8
@@ -89,10 +95,13 @@
 
     const-string v3, "readIntArray"
 
+    .line 7
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 8
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readIntArray([I)V
 
+    .line 9
     iget-object v2, p0, Lcom/samsung/android/sdk/ocr/OCRResult$AbsData;->mRect:[Landroid/graphics/Point;
 
     new-instance v3, Landroid/graphics/Point;
@@ -109,6 +118,7 @@
 
     aput-object v3, v2, v4
 
+    .line 10
     iget-object v2, p0, Lcom/samsung/android/sdk/ocr/OCRResult$AbsData;->mRect:[Landroid/graphics/Point;
 
     new-instance v3, Landroid/graphics/Point;
@@ -125,6 +135,7 @@
 
     aput-object v3, v2, v6
 
+    .line 11
     iget-object v2, p0, Lcom/samsung/android/sdk/ocr/OCRResult$AbsData;->mRect:[Landroid/graphics/Point;
 
     new-instance v3, Landroid/graphics/Point;
@@ -139,6 +150,7 @@
 
     aput-object v3, v2, v4
 
+    .line 12
     iget-object v0, p0, Lcom/samsung/android/sdk/ocr/OCRResult$AbsData;->mRect:[Landroid/graphics/Point;
 
     new-instance v2, Landroid/graphics/Point;
@@ -155,6 +167,7 @@
 
     aput-object v2, v0, v7
 
+    .line 13
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result p1

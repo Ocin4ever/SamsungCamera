@@ -28,16 +28,19 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder$ForwardThread;->d:Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
+    .line 3
     new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder$ForwardThread;->a:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 4
     invoke-virtual {p1}, Ljava/util/concurrent/locks/ReentrantLock;->newCondition()Ljava/util/concurrent/locks/Condition;
 
     move-result-object p1
@@ -50,6 +53,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder;Lcom/samsung/android/camera/core2/callbackutil/c;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder$ForwardThread;-><init>(Lcom/samsung/android/camera/core2/callbackutil/BufferForwarder;)V
 
     return-void

@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager$GppmState;-><init>(Ljava/lang/String;ILcom/samsung/android/camera/core2/processor/gppm/j;)V
 
     return-void
@@ -28,6 +29,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;ILcom/samsung/android/camera/core2/processor/gppm/f;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager$GppmState$1;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -38,6 +40,7 @@
 .method public updateState(Landroid/content/Context;)Z
     .locals 0
 
+    .line 1
     :goto_0
     invoke-static {p1}, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager;->b(Landroid/content/Context;)Z
 
@@ -45,6 +48,7 @@
 
     if-nez p0, :cond_0
 
+    .line 2
     invoke-static {}, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager;->d()V
 
     goto :goto_0
@@ -58,6 +62,7 @@
 .method public updateState(Landroid/content/Context;Landroid/os/Bundle;)Z
     .locals 0
 
+    .line 3
     :goto_0
     invoke-static {p1, p2}, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager;->c(Landroid/content/Context;Landroid/os/Bundle;)Z
 
@@ -65,6 +70,7 @@
 
     if-nez p0, :cond_0
 
+    .line 4
     invoke-static {}, Lcom/samsung/android/camera/core2/processor/gppm/GppmStateManager;->d()V
 
     goto :goto_0

@@ -7,6 +7,7 @@
 .method private static a(DD)D
     .locals 2
 
+    .line 1
     const-wide/16 v0, 0x0
 
     cmpl-double v0, p2, v0
@@ -34,6 +35,7 @@
 .method public static a(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     .locals 8
 
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -88,6 +90,7 @@
 .method public static a(Landroid/graphics/Bitmap;IZZ)Landroid/graphics/Bitmap;
     .locals 7
 
+    .line 3
     if-eqz p0, :cond_2
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
@@ -155,6 +158,7 @@
 .method public static a(Landroid/graphics/Bitmap;Lco/polarr/mgcsc/entities/CropWindow;)Landroid/graphics/Bitmap;
     .locals 11
 
+    .line 4
     iget v0, p1, Lco/polarr/mgcsc/entities/CropWindow;->right:I
 
     iget v1, p1, Lco/polarr/mgcsc/entities/CropWindow;->left:I
@@ -257,6 +261,7 @@
 .method public static a(IID)Landroid/util/Size;
     .locals 11
 
+    .line 5
     const-wide v0, 0x3ff921fb54442d18L    # 1.5707963267948966
 
     div-double v0, p2, v0

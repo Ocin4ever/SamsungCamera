@@ -19,24 +19,30 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->a:I
 
     const/high16 v0, -0x80000000
 
+    .line 3
     iput v0, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->b:I
 
+    .line 4
     iput v0, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->c:I
 
     const-wide/high16 v0, -0x8000000000000000L
 
+    .line 5
     iput-wide v0, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->d:J
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->e:Ljava/lang/String;
 
     return-void
@@ -45,16 +51,22 @@
 .method public constructor <init>(IIIJLjava/lang/String;)V
     .locals 0
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 8
     iput p1, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->a:I
 
+    .line 9
     iput p2, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->b:I
 
+    .line 10
     iput p3, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->c:I
 
+    .line 11
     iput-wide p4, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->d:J
 
+    .line 12
     iput-object p6, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->e:Ljava/lang/String;
 
     return-void
@@ -63,32 +75,38 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;)V
     .locals 2
 
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 14
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->e()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->a:I
 
+    .line 15
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->a()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->b:I
 
+    .line 16
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->c()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->c:I
 
+    .line 17
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->b()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->d:J
 
+    .line 18
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/container/DynamicShotInfo;->f()Ljava/lang/String;
 
     move-result-object p1

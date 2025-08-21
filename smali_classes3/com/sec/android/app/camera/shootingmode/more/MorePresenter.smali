@@ -43,20 +43,25 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/more/MoreContract$View;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
     const/4 p2, 0x0
 
+    .line 2
     iput-boolean p2, p0, Lcom/sec/android/app/camera/shootingmode/more/MorePresenter;->mIsEditMode:Z
 
+    .line 3
     iput-boolean p2, p0, Lcom/sec/android/app/camera/shootingmode/more/MorePresenter;->mIsEditHelpShowing:Z
 
+    .line 4
     new-instance p2, Lcom/sec/android/app/camera/shootingmode/more/MorePresenter$1;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/shootingmode/more/MorePresenter$1;-><init>(Lcom/sec/android/app/camera/shootingmode/more/MorePresenter;)V
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/more/MorePresenter;->mLocalBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 5
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
@@ -69,20 +74,25 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/more/MoreContract$View;I)V
     .locals 0
 
+    .line 6
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;-><init>(Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;I)V
 
     const/4 p1, 0x0
 
+    .line 7
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/more/MorePresenter;->mIsEditMode:Z
 
+    .line 8
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/more/MorePresenter;->mIsEditHelpShowing:Z
 
+    .line 9
     new-instance p1, Lcom/sec/android/app/camera/shootingmode/more/MorePresenter$1;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/shootingmode/more/MorePresenter$1;-><init>(Lcom/sec/android/app/camera/shootingmode/more/MorePresenter;)V
 
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/more/MorePresenter;->mLocalBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 10
     invoke-interface {p2}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
@@ -220,6 +230,7 @@
 .method private changeNormalMode()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/ActivityContext;->getApplicationContext()Landroid/content/Context;
@@ -248,6 +259,7 @@
 .method private changeNormalMode(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 2
     iget-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/more/MorePresenter;->mIsEditMode:Z
 
     if-nez v0, :cond_0
@@ -257,20 +269,24 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/sec/android/app/camera/shootingmode/more/MorePresenter;->mIsEditMode:Z
 
+    .line 4
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mView:Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;
 
     check-cast v0, Lcom/sec/android/app/camera/shootingmode/more/MoreContract$View;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/shootingmode/more/MoreContract$View;->changeNormalMode()V
 
+    .line 5
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mView:Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModeContract$View;
 
     check-cast v0, Lcom/sec/android/app/camera/shootingmode/more/MoreContract$View;
 
     invoke-interface {v0, p1, p2}, Lcom/sec/android/app/camera/shootingmode/more/MoreContract$View;->resetDrag(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 6
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/abstraction/AbstractShootingModePresenter;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getLayerManager()Lcom/sec/android/app/camera/interfaces/LayerManager;

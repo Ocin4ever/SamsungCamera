@@ -70,6 +70,7 @@
 
     const/16 v0, 0x8
 
+    .line 9
     invoke-direct {p0, v0}, Lh6/d;-><init>(I)V
 
     return-void
@@ -78,14 +79,17 @@
 .method public constructor <init>(I)V
     .locals 7
 
+    .line 10
     invoke-static {p1}, Lh6/c;->d(I)[Ljava/lang/Object;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
+    .line 11
     new-array v3, p1, [I
 
+    .line 12
     sget-object v0, Lh6/d;->m:Lh6/d$a;
 
     invoke-static {v0, p1}, Lh6/d$a;->a(Lh6/d$a;I)I
@@ -100,6 +104,7 @@
 
     move-object v0, p0
 
+    .line 13
     invoke-direct/range {v0 .. v6}, Lh6/d;-><init>([Ljava/lang/Object;[Ljava/lang/Object;[I[III)V
 
     return-void
@@ -108,20 +113,28 @@
 .method public constructor <init>([Ljava/lang/Object;[Ljava/lang/Object;[I[III)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lh6/d;->a:[Ljava/lang/Object;
 
+    .line 3
     iput-object p2, p0, Lh6/d;->b:[Ljava/lang/Object;
 
+    .line 4
     iput-object p3, p0, Lh6/d;->c:[I
 
+    .line 5
     iput-object p4, p0, Lh6/d;->d:[I
 
+    .line 6
     iput p5, p0, Lh6/d;->e:I
 
+    .line 7
     iput p6, p0, Lh6/d;->f:I
 
+    .line 8
     sget-object p1, Lh6/d;->m:Lh6/d$a;
 
     invoke-virtual {p0}, Lh6/d;->v()I

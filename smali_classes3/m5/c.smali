@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static a:Lm5/a;
+.field public static a:Lm5/a; = null
 
-.field public static b:Landroid/os/Bundle;
+.field public static b:Landroid/os/Bundle; = null
 
-.field public static c:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field public static c:Ljava/lang/Thread$UncaughtExceptionHandler; = null
 
-.field public static d:Z
+.field public static d:Z = false
 
 .field public static e:Lm5/c$a;
 

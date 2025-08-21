@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, p2, v0}, Lcom/samsung/android/camera/core2/device/CamDeviceCaptureRequestGroup$Policy;-><init>(Ljava/lang/String;ILcom/samsung/android/camera/core2/device/f0;)V
 
     return-void
@@ -28,6 +29,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;ILcom/samsung/android/camera/core2/device/e0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/core2/device/CamDeviceCaptureRequestGroup$Policy$2;-><init>(Ljava/lang/String;I)V
 
     return-void

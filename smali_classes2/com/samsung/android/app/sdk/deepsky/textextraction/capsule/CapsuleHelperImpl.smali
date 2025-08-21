@@ -655,6 +655,7 @@
 .method private final convertToCapsuleActionType(Lcom/samsung/android/app/sdk/deepsky/textextraction/entity/EntityType;)Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
     .locals 0
 
+    .line 13
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl$WhenMappings;->$EnumSwitchMapping$1:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -665,45 +666,54 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 14
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->OTHER:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
     goto :goto_0
 
+    .line 15
     :pswitch_0
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->ENTITY_BANK_ACCOUNT_NUMBER:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
     goto :goto_0
 
+    .line 16
     :pswitch_1
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->ENTITY_CONVERT_UNIT:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
     goto :goto_0
 
+    .line 17
     :pswitch_2
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->ENTITY_MAP:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
     goto :goto_0
 
+    .line 18
     :pswitch_3
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->ENTITY_ADD_EVENT:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
     goto :goto_0
 
+    .line 19
     :pswitch_4
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->ENTITY_ADD_EVENT:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
     goto :goto_0
 
+    .line 20
     :pswitch_5
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->ENTITY_CALL:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
     goto :goto_0
 
+    .line 21
     :pswitch_6
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->ENTITY_WEBSITE:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
     goto :goto_0
 
+    .line 22
     :pswitch_7
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->ENTITY_EMAIL:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
@@ -726,10 +736,12 @@
 .method private final convertToCapsuleActionType(Lcom/samsung/android/app/sdk/deepsky/textextraction/entity/EntityType;Ljava/lang/String;)Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
     .locals 1
 
+    .line 4
     sget-object v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/entity/EntityType;->PHONE:Lcom/samsung/android/app/sdk/deepsky/textextraction/entity/EntityType;
 
     if-ne p1, v0, :cond_6
 
+    .line 5
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result p0
@@ -759,6 +771,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->ENTITY_ADD_CONTACT:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
@@ -767,6 +780,7 @@
     :cond_2
     const-string p0, "Send message"
 
+    .line 7
     invoke-virtual {p2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -775,6 +789,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_3
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->ENTITY_SEND_MESSAGE:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
@@ -783,22 +798,26 @@
     :cond_4
     const-string p0, "Call"
 
+    .line 9
     invoke-virtual {p2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-nez p0, :cond_5
 
+    .line 10
     :goto_0
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->OTHER:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
     goto :goto_1
 
+    .line 11
     :cond_5
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->ENTITY_CALL:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
     return-object p0
 
+    .line 12
     :cond_6
     invoke-direct {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/CapsuleHelperImpl;->convertToCapsuleActionType(Lcom/samsung/android/app/sdk/deepsky/textextraction/entity/EntityType;)Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 
@@ -813,6 +832,7 @@
 
     const-string p0, "Boardingpass"
 
+    .line 1
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -826,6 +846,7 @@
     :cond_0
     const-string p0, "Coupon"
 
+    .line 2
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -836,6 +857,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     sget-object p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;->OTHER:Lcom/samsung/android/app/sdk/deepsky/textextraction/capsule/data/CapsuleActionType;
 

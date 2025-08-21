@@ -73,26 +73,34 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, La1/a;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->u:Z
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->v:Z
 
+    .line 4
     iput-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->A:Z
 
     const/4 v1, -0x1
 
+    .line 5
     iput v1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->C:I
 
     const/4 v1, 0x0
 
+    .line 6
     iput v1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->D:F
 
+    .line 7
     iput-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->E:Z
 
+    .line 8
     iput-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->F:Z
 
     return-void
@@ -101,26 +109,34 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 9
     invoke-direct {p0, p1, p2}, La1/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
+    .line 10
     iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->u:Z
 
+    .line 11
     iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->v:Z
 
+    .line 12
     iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->A:Z
 
     const/4 p2, -0x1
 
+    .line 13
     iput p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->C:I
 
     const/4 p2, 0x0
 
+    .line 14
     iput p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->D:F
 
+    .line 15
     iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->E:Z
 
+    .line 16
     iput-boolean p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->F:Z
 
     return-void

@@ -22,8 +22,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/view/WindowInsets$Builder;
 
     invoke-direct {v0}, Landroid/view/WindowInsets$Builder;-><init>()V
@@ -36,20 +38,24 @@
 .method public constructor <init>(Landroidx/core/view/WindowInsetsCompat;)V
     .locals 1
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;-><init>(Landroidx/core/view/WindowInsetsCompat;)V
 
+    .line 4
     invoke-virtual {p1}, Landroidx/core/view/WindowInsetsCompat;->toWindowInsets()Landroid/view/WindowInsets;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 5
     new-instance v0, Landroid/view/WindowInsets$Builder;
 
     invoke-direct {v0, p1}, Landroid/view/WindowInsets$Builder;-><init>(Landroid/view/WindowInsets;)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance v0, Landroid/view/WindowInsets$Builder;
 

@@ -7,6 +7,7 @@
 .method public constructor <init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 7
 
+    .line 1
     sget-object v2, Lkotlin/jvm/internal/c;->NO_RECEIVER:Ljava/lang/Object;
 
     move-object v0, p0
@@ -29,6 +30,7 @@
 .method public constructor <init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
+    .line 2
     invoke-direct/range {p0 .. p6}, Lkotlin/jvm/internal/j;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void

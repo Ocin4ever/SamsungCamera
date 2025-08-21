@@ -7,6 +7,7 @@
 .method public static final toDrawable(I)Landroid/graphics/drawable/ColorDrawable;
     .locals 1
 
+    .line 1
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v0, p0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
@@ -21,6 +22,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-virtual {p0}, Landroid/graphics/Color;->toArgb()I

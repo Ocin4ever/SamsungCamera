@@ -2037,6 +2037,7 @@
 .method public read(Ljava/nio/ByteBuffer;)I
     .locals 6
 
+    .line 10
     iget-object v0, p0, Lh7/a;->a:Lh7/i;
 
     if-nez v0, :cond_0
@@ -2045,6 +2046,7 @@
 
     return p0
 
+    .line 11
     :cond_0
     invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
@@ -2060,18 +2062,21 @@
 
     move-result v1
 
+    .line 12
     iget-object v2, v0, Lh7/i;->a:[B
 
     iget v3, v0, Lh7/i;->b:I
 
     invoke-virtual {p1, v2, v3, v1}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
+    .line 13
     iget p1, v0, Lh7/i;->b:I
 
     add-int/2addr p1, v1
 
     iput p1, v0, Lh7/i;->b:I
 
+    .line 14
     iget-wide v2, p0, Lh7/a;->b:J
 
     int-to-long v4, v1
@@ -2080,16 +2085,19 @@
 
     iput-wide v2, p0, Lh7/a;->b:J
 
+    .line 15
     iget v2, v0, Lh7/i;->c:I
 
     if-ne p1, v2, :cond_1
 
+    .line 16
     invoke-virtual {v0}, Lh7/i;->b()Lh7/i;
 
     move-result-object p1
 
     iput-object p1, p0, Lh7/a;->a:Lh7/i;
 
+    .line 17
     invoke-static {v0}, Lh7/j;->a(Lh7/i;)V
 
     :cond_1
@@ -2099,6 +2107,7 @@
 .method public read([BII)I
     .locals 7
 
+    .line 1
     array-length v0, p1
 
     int-to-long v1, v0
@@ -2109,6 +2118,7 @@
 
     invoke-static/range {v1 .. v6}, Lh7/n;->b(JJJ)V
 
+    .line 2
     iget-object v0, p0, Lh7/a;->a:Lh7/i;
 
     if-nez v0, :cond_0
@@ -2117,6 +2127,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     iget v1, v0, Lh7/i;->c:I
 
@@ -2128,18 +2139,21 @@
 
     move-result p3
 
+    .line 4
     iget-object v1, v0, Lh7/i;->a:[B
 
     iget v2, v0, Lh7/i;->b:I
 
     invoke-static {v1, v2, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 5
     iget p1, v0, Lh7/i;->b:I
 
     add-int/2addr p1, p3
 
     iput p1, v0, Lh7/i;->b:I
 
+    .line 6
     iget-wide v1, p0, Lh7/a;->b:J
 
     int-to-long v3, p3
@@ -2148,16 +2162,19 @@
 
     iput-wide v1, p0, Lh7/a;->b:J
 
+    .line 7
     iget p2, v0, Lh7/i;->c:I
 
     if-ne p1, p2, :cond_1
 
+    .line 8
     invoke-virtual {v0}, Lh7/i;->b()Lh7/i;
 
     move-result-object p1
 
     iput-object p1, p0, Lh7/a;->a:Lh7/i;
 
+    .line 9
     invoke-static {v0}, Lh7/j;->a(Lh7/i;)V
 
     :cond_1

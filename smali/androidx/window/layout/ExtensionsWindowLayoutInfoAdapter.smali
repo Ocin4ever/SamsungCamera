@@ -139,6 +139,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p2}, Landroidx/window/extensions/layout/FoldingFeature;->getType()I
 
     move-result v0
@@ -155,6 +156,7 @@
 
     return-object v3
 
+    .line 2
     :cond_0
     sget-object v0, Landroidx/window/layout/HardwareFoldingFeature$Type;->Companion:Landroidx/window/layout/HardwareFoldingFeature$Type$Companion;
 
@@ -164,6 +166,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     sget-object v0, Landroidx/window/layout/HardwareFoldingFeature$Type;->Companion:Landroidx/window/layout/HardwareFoldingFeature$Type$Companion;
 
@@ -171,6 +174,7 @@
 
     move-result-object v0
 
+    .line 4
     :goto_0
     invoke-virtual {p2}, Landroidx/window/extensions/layout/FoldingFeature;->getState()I
 
@@ -182,14 +186,17 @@
 
     return-object v3
 
+    .line 5
     :cond_2
     sget-object v1, Landroidx/window/layout/FoldingFeature$State;->HALF_OPENED:Landroidx/window/layout/FoldingFeature$State;
 
     goto :goto_1
 
+    .line 6
     :cond_3
     sget-object v1, Landroidx/window/layout/FoldingFeature$State;->FLAT:Landroidx/window/layout/FoldingFeature$State;
 
+    .line 7
     :goto_1
     new-instance v2, Landroidx/window/core/Bounds;
 
@@ -203,12 +210,14 @@
 
     invoke-direct {v2, v4}, Landroidx/window/core/Bounds;-><init>(Landroid/graphics/Rect;)V
 
+    .line 8
     invoke-direct {p0, p1, v2}, Landroidx/window/layout/ExtensionsWindowLayoutInfoAdapter;->validBounds(Landroid/app/Activity;Landroidx/window/core/Bounds;)Z
 
     move-result p0
 
     if-eqz p0, :cond_4
 
+    .line 9
     new-instance v3, Landroidx/window/layout/HardwareFoldingFeature;
 
     new-instance p0, Landroidx/window/core/Bounds;
@@ -238,6 +247,7 @@
 
     invoke-static {p2, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 10
     invoke-virtual {p2}, Landroidx/window/extensions/layout/WindowLayoutInfo;->getDisplayFeatures()Ljava/util/List;
 
     move-result-object p0
@@ -248,10 +258,12 @@
 
     check-cast p0, Ljava/lang/Iterable;
 
+    .line 11
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
+    .line 12
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -267,8 +279,10 @@
 
     move-result-object v0
 
+    .line 13
     check-cast v0, Landroidx/window/extensions/layout/DisplayFeature;
 
+    .line 14
     instance-of v1, v0, Landroidx/window/extensions/layout/FoldingFeature;
 
     if-eqz v1, :cond_0
@@ -295,11 +309,13 @@
 
     goto :goto_0
 
+    .line 15
     :cond_1
     invoke-interface {p2, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 16
     :cond_2
     new-instance p0, Landroidx/window/layout/WindowLayoutInfo;
 

@@ -19,6 +19,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lg1/i;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -29,6 +30,7 @@
 
     const/4 v0, -0x1
 
+    .line 2
     invoke-direct {p0, p1, p2, v0}, Lg1/i;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -37,12 +39,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 6
 
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p2, 0x0
 
+    .line 4
     iput-boolean p2, p0, Lg1/i;->c:Z
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -55,6 +60,7 @@
 
     invoke-virtual {p0, p2}, Landroid/view/View;->setElevation(F)V
 
+    .line 6
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -65,6 +71,7 @@
 
     move-result p1
 
+    .line 7
     new-instance p2, Lg1/i$a;
 
     int-to-long v4, p1

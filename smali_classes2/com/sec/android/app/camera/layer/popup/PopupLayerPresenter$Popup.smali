@@ -24,10 +24,13 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupPresenter;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerPresenter$Popup;->mView:Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;
 
+    .line 4
     iput-object p2, p0, Lcom/sec/android/app/camera/layer/popup/PopupLayerPresenter$Popup;->mPresenter:Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupPresenter;
 
     return-void
@@ -36,6 +39,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupPresenter;Lcom/sec/android/app/camera/layer/popup/i0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/layer/popup/PopupLayerPresenter$Popup;-><init>(Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupPresenter;)V
 
     return-void

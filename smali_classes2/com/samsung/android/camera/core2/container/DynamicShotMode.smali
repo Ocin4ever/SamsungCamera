@@ -2428,6 +2428,7 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 1
 
+    .line 2
     sget-object v0, Lcom/samsung/android/camera/core2/container/DynamicShotMode$Property;->a:Lcom/samsung/android/camera/core2/container/DynamicShotMode$Property;
 
     invoke-static {v0}, Ljava/util/List;->of(Ljava/lang/Object;)Ljava/util/List;
@@ -2442,10 +2443,13 @@
 .method public constructor <init>(Ljava/lang/String;IILjava/util/List;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 4
     iput p3, p0, Lcom/samsung/android/camera/core2/container/DynamicShotMode;->a:I
 
+    .line 5
     invoke-interface {p4}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
     move-result-object p1
@@ -2476,6 +2480,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;IILjava/util/List;Lcom/samsung/android/camera/core2/container/w1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/camera/core2/container/DynamicShotMode;-><init>(Ljava/lang/String;IILjava/util/List;)V
 
     return-void

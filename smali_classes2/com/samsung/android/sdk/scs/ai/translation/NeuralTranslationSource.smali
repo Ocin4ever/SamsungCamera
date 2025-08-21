@@ -43,6 +43,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,6 +52,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/sdk/scs/ai/translation/i;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationSource;-><init>()V
 
     return-void

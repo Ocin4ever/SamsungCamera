@@ -170,10 +170,12 @@
 .method public static make(Landroid/widget/LinearLayout;)Landroidx/core/view/SeslTouchTargetDelegate$Builder;
     .locals 1
 
+    .line 1
     invoke-static {p0}, Landroidx/core/view/SeslTouchDelegateFactory;->getChildren(Landroid/view/ViewGroup;)Ljava/util/List;
 
     move-result-object v0
 
+    .line 2
     invoke-static {p0, v0}, Landroidx/core/view/SeslTouchDelegateFactory;->make(Landroid/widget/LinearLayout;Ljava/util/List;)Landroidx/core/view/SeslTouchTargetDelegate$Builder;
 
     move-result-object p0
@@ -194,6 +196,7 @@
         }
     .end annotation
 
+    .line 3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -204,25 +207,30 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v0
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
+    .line 6
     new-instance v2, Landroid/graphics/Rect;
 
     const/4 v3, 0x0
 
     invoke-direct {v2, v3, v3, v1, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
+    .line 7
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
+    .line 8
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -240,6 +248,7 @@
 
     check-cast v6, Landroid/view/View;
 
+    .line 9
     invoke-static {p0, v6}, Landroidx/core/view/SeslTouchTargetDelegate;->calculateViewBounds(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v6
@@ -248,6 +257,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getOrientation()I
 
@@ -255,17 +265,20 @@
 
     if-nez v5, :cond_2
 
+    .line 11
     new-instance v5, Landroidx/core/view/f;
 
     invoke-direct {v5, v2}, Landroidx/core/view/f;-><init>(Landroid/graphics/Rect;)V
 
     goto :goto_1
 
+    .line 12
     :cond_2
     new-instance v5, Landroidx/core/view/g;
 
     invoke-direct {v5, v2}, Landroidx/core/view/g;-><init>(Landroid/graphics/Rect;)V
 
+    .line 13
     :goto_1
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -279,6 +292,7 @@
 
     check-cast v2, Landroid/graphics/Rect;
 
+    .line 14
     new-instance v6, Landroid/graphics/Rect;
 
     iget v7, v2, Landroid/graphics/Rect;->right:I
@@ -295,6 +309,7 @@
 
     sub-int v2, v0, v2
 
+    .line 15
     invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v2
@@ -303,16 +318,20 @@
 
     invoke-direct {v6, v7, v2, v1, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
+    .line 16
     invoke-interface {v4, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 17
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, v3, v3, v3, v3}, Landroid/graphics/Rect;-><init>(IIII)V
 
+    .line 18
     new-instance v1, Landroidx/core/view/SeslTouchTargetDelegate$Builder;
 
     invoke-direct {v1, p0}, Landroidx/core/view/SeslTouchTargetDelegate$Builder;-><init>(Landroid/view/View;)V
 
+    .line 19
     :goto_2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -320,6 +339,7 @@
 
     if-ge v3, p0, :cond_3
 
+    .line 20
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -328,22 +348,26 @@
 
     add-int/lit8 v2, v3, 0x1
 
+    .line 21
     invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Landroid/graphics/Rect;
 
+    .line 22
     invoke-interface {v5, v0, p0, v6}, Landroidx/core/view/SeslTouchDelegateFactory$Strategy;->getExtraInsets(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;
 
     move-result-object v0
 
+    .line 23
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/view/View;
 
+    .line 24
     invoke-virtual {v1, v3, v0}, Landroidx/core/view/SeslTouchTargetDelegate$Builder;->addDelegateView(Landroid/view/View;Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;)Landroidx/core/view/SeslTouchTargetDelegate$Builder;
 
     move-object v0, p0

@@ -419,12 +419,14 @@
 .method public static execute(Landroid/graphics/Bitmap;[FLcom/samsung/android/smartscan/SmartScanRectify$SSImage;I)I
     .locals 3
 
+    .line 10
     sget-object v0, Lcom/samsung/android/smartscan/SmartScanRectify;->TAG:Ljava/lang/String;
 
     const-string v1, "execute basic API is called"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 11
     invoke-static {}, Lcom/samsung/android/smartscan/SmartScanRectify;->waitAndGetInitStatus()Z
 
     move-result v1
@@ -433,10 +435,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 12
     sget-boolean v1, Lcom/samsung/android/smartscan/SmartScanRectify;->existNativeWrapper:Z
 
     if-eqz v1, :cond_0
 
+    .line 13
     invoke-static {p0, p1, p2, p3}, Lcom/samsung/android/smartscan/SmartScanRectify;->rectify(Landroid/graphics/Bitmap;[FLcom/samsung/android/smartscan/SmartScanRectify$SSImage;I)I
 
     move-result v2
@@ -446,8 +450,10 @@
     :cond_0
     const-string p0, "rectify function is not exist"
 
+    .line 14
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 15
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -478,12 +484,14 @@
 .method public static execute(Landroid/graphics/Bitmap;[FLcom/samsung/android/smartscan/SmartScanRectify$SSImage;II)I
     .locals 3
 
+    .line 16
     sget-object v0, Lcom/samsung/android/smartscan/SmartScanRectify;->TAG:Ljava/lang/String;
 
     const-string v1, "execute w/ mode API is called"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 17
     invoke-static {}, Lcom/samsung/android/smartscan/SmartScanRectify;->waitAndGetInitStatus()Z
 
     move-result v1
@@ -492,10 +500,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 18
     sget-boolean v1, Lcom/samsung/android/smartscan/SmartScanRectify;->existNativeWrapper:Z
 
     if-eqz v1, :cond_0
 
+    .line 19
     invoke-static {p0, p1, p2, p3, p4}, Lcom/samsung/android/smartscan/SmartScanRectify;->rectify(Landroid/graphics/Bitmap;[FLcom/samsung/android/smartscan/SmartScanRectify$SSImage;II)I
 
     move-result v2
@@ -505,8 +515,10 @@
     :cond_0
     const-string p0, "rectify function is not exist"
 
+    .line 20
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 21
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -537,12 +549,14 @@
 .method public static execute(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;Lcom/samsung/android/smartscan/SmartScanRectify$SSImage;)I
     .locals 13
 
+    .line 22
     sget-object v0, Lcom/samsung/android/smartscan/SmartScanRectify;->TAG:Ljava/lang/String;
 
     const-string v1, "execute w/ SSparams API is called"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 23
     invoke-static {}, Lcom/samsung/android/smartscan/SmartScanRectify;->waitAndGetInitStatus()Z
 
     move-result v1
@@ -551,10 +565,12 @@
 
     if-eqz v1, :cond_a
 
+    .line 24
     sget-boolean v1, Lcom/samsung/android/smartscan/SmartScanRectify;->existNativeWrapper:Z
 
     if-eqz v1, :cond_9
 
+    .line 25
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -593,6 +609,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 26
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -613,6 +630,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 27
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -633,6 +651,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 28
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -653,10 +672,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 29
     invoke-static {p0}, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;->access$1300(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;)Ljava/util/ArrayList;
 
     move-result-object v0
 
+    .line 30
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -665,8 +686,10 @@
 
     mul-int/2addr v1, v3
 
+    .line 31
     new-array v4, v1, [F
 
+    .line 32
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -690,12 +713,14 @@
 
     add-int/lit8 v8, v6, 0x1
 
+    .line 33
     iget v9, v7, Landroid/graphics/PointF;->x:F
 
     aput v9, v4, v6
 
     add-int/lit8 v6, v8, 0x1
 
+    .line 34
     iget v7, v7, Landroid/graphics/PointF;->y:F
 
     aput v7, v4, v8
@@ -705,6 +730,7 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 35
     :try_start_0
     invoke-static {v3, v5, v2}, Lcom/samsung/android/smartscan/SmartScanRectify;->nativeGetProperty(III)I
     :try_end_0
@@ -717,8 +743,10 @@
     :catch_0
     move-exception v6
 
+    .line 36
     invoke-virtual {v6}, Ljava/lang/Throwable;->printStackTrace()V
 
+    .line 37
     sget-object v6, Lcom/samsung/android/smartscan/SmartScanRectify;->TAG:Ljava/lang/String;
 
     const-string v7, "Fail to call a new API so the old API will be called"
@@ -732,12 +760,14 @@
 
     if-eqz v6, :cond_2
 
+    .line 38
     invoke-static {p0}, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;->access$1100(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;)I
 
     move-result v0
 
     if-ne v0, v7, :cond_1
 
+    .line 39
     invoke-static {p0}, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;->access$1000(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -752,6 +782,7 @@
 
     goto/16 :goto_5
 
+    .line 40
     :cond_1
     invoke-static {p0}, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;->access$1000(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;)Landroid/graphics/Bitmap;
 
@@ -763,6 +794,7 @@
 
     goto/16 :goto_5
 
+    .line 41
     :cond_2
     new-instance v6, Ljava/util/ArrayList;
 
@@ -775,18 +807,21 @@
 
     if-gt v8, v9, :cond_4
 
+    .line 42
     invoke-static {v3, v8, v2}, Lcom/samsung/android/smartscan/SmartScanRectify;->nativeGetProperty(III)I
 
     move-result v9
 
     if-ne v0, v9, :cond_3
 
+    .line 43
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
 
     invoke-virtual {v6, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 44
     :cond_3
     sget-object v10, Lcom/samsung/android/smartscan/SmartScanRectify;->TAG:Ljava/lang/String;
 
@@ -816,6 +851,7 @@
 
     goto :goto_2
 
+    .line 45
     :cond_4
     sget-object v3, Lcom/samsung/android/smartscan/SmartScanRectify;->TAG:Ljava/lang/String;
 
@@ -835,18 +871,21 @@
 
     invoke-static {v3, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 46
     invoke-static {p0}, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;->access$1100(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;)I
 
     move-result v3
 
     if-ne v3, v7, :cond_5
 
+    .line 47
     new-instance v3, Lcom/samsung/android/smartscan/a;
 
     invoke-direct {v3}, Lcom/samsung/android/smartscan/a;-><init>()V
 
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->removeIf(Ljava/util/function/Predicate;)Z
 
+    .line 48
     :cond_5
     invoke-static {p0}, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;->access$1200(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;)I
 
@@ -854,6 +893,7 @@
 
     if-ne v3, v0, :cond_6
 
+    .line 49
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -866,12 +906,14 @@
 
     const/16 v3, 0x10
 
+    .line 50
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {v6, v0, v3}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
+    .line 51
     :cond_6
     invoke-static {p0}, Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;->access$1000(Lcom/samsung/android/smartscan/SmartScanRectify$SSParam;)Landroid/graphics/Bitmap;
 
@@ -881,6 +923,7 @@
 
     move-result-object p0
 
+    .line 52
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -900,6 +943,7 @@
 
     check-cast v3, Ljava/lang/Integer;
 
+    .line 53
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -929,8 +973,10 @@
     :cond_9
     const-string p0, "rectify function is not exist"
 
+    .line 54
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 55
     :goto_6
     sget-object p0, Lcom/samsung/android/smartscan/SmartScanRectify;->TAG:Ljava/lang/String;
 
@@ -963,33 +1009,39 @@
 .method public static execute([BIII[FLcom/samsung/android/smartscan/SmartScanRectify$SSImage;I)I
     .locals 9
 
+    .line 1
     sget-object v0, Lcom/samsung/android/smartscan/SmartScanRectify;->TAG:Ljava/lang/String;
 
     const-string v1, "Old execute w/ byte array data API is called"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/samsung/android/smartscan/SmartScanRectify;->waitAndGetInitStatus()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 3
     sget-boolean v1, Lcom/samsung/android/smartscan/SmartScanRectify;->existNativeWrapper:Z
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-static/range {p0 .. p6}, Lcom/samsung/android/smartscan/SmartScanRectify;->rectify([BIII[FLcom/samsung/android/smartscan/SmartScanRectify$SSImage;I)I
 
     move-result p0
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance v8, Lcamera/samsung/smartscan/SmartScanRectify$SSImage;
 
     invoke-direct {v8}, Lcamera/samsung/smartscan/SmartScanRectify$SSImage;-><init>()V
 
+    .line 6
     invoke-static {p5, v8}, Lcom/samsung/android/smartscan/SmartScanRectify;->convertSSImageTo2_5_xSSImage(Lcom/samsung/android/smartscan/SmartScanRectify$SSImage;Lcamera/samsung/smartscan/SmartScanRectify$SSImage;)V
 
     move-object v1, p0
@@ -1006,12 +1058,15 @@
 
     move v7, p6
 
+    .line 7
     invoke-static/range {v1 .. v7}, Lcamera/samsung/smartscan/SmartScanRectify;->rectify([BIII[FLcamera/samsung/smartscan/SmartScanRectify$SSImage;I)I
 
     move-result p0
 
+    .line 8
     invoke-static {v8, p5}, Lcom/samsung/android/smartscan/SmartScanRectify;->convert2_5_xSSImageToSSImage(Lcamera/samsung/smartscan/SmartScanRectify$SSImage;Lcom/samsung/android/smartscan/SmartScanRectify$SSImage;)V
 
+    .line 9
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 

@@ -40,18 +40,24 @@
 .method public constructor <init>(IIID)V
     .locals 0
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 8
     iput p1, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->key:I
 
+    .line 9
     iput p2, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->type:I
 
+    .line 10
     iput p3, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->minBitWidth:I
 
+    .line 11
     iput-wide p4, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->dValue:D
 
     const-wide/high16 p1, -0x8000000000000000L
 
+    .line 12
     iput-wide p1, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->iValue:J
 
     return-void
@@ -60,18 +66,24 @@
 .method public constructor <init>(IIIJ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->key:I
 
+    .line 3
     iput p2, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->type:I
 
+    .line 4
     iput p3, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->minBitWidth:I
 
+    .line 5
     iput-wide p4, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->iValue:J
 
     const-wide/16 p1, 0x1
 
+    .line 6
     iput-wide p1, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->dValue:D
 
     return-void
@@ -180,6 +192,7 @@
 .method private elemWidth(II)I
     .locals 6
 
+    .line 1
     iget v0, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->type:I
 
     iget v1, p0, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->minBitWidth:I
@@ -200,6 +213,7 @@
 .method private static elemWidth(IIJII)I
     .locals 4
 
+    .line 2
     invoke-static {p0}, Landroidx/emoji2/text/flatbuffer/FlexBuffers;->isTypeInline(I)Z
 
     move-result p0
@@ -216,6 +230,7 @@
 
     if-gt p0, p1, :cond_2
 
+    .line 3
     invoke-static {p4, p0}, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->paddingBytes(II)I
 
     move-result p1
@@ -234,6 +249,7 @@
 
     int-to-long v0, p1
 
+    .line 4
     invoke-static {v0, v1}, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder;->widthUInBits(J)I
 
     move-result p1
@@ -412,6 +428,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->storedPackedType(I)B
 
     move-result p0
@@ -422,6 +439,7 @@
 .method private storedPackedType(I)B
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Landroidx/emoji2/text/flatbuffer/FlexBuffersBuilder$Value;->storedWidth(I)I
 
     move-result p1

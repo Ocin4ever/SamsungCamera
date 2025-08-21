@@ -116,6 +116,7 @@
 .method public static computeReplacement(Lcom/google/common/escape/CharEscaper;C)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/escape/CharEscaper;->escape(C)[C
 
     move-result-object p0
@@ -130,6 +131,7 @@
 .method public static computeReplacement(Lcom/google/common/escape/UnicodeEscaper;I)Ljava/lang/String;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/escape/UnicodeEscaper;->escape(I)[C
 
     move-result-object p0

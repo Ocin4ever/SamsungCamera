@@ -277,6 +277,7 @@
 .method public static getThemeAttrColor(Landroid/content/Context;I)I
     .locals 2
 
+    .line 1
     sget-object v0, Landroidx/appcompat/widget/ThemeUtils;->TEMP_ARRAY:[I
 
     const/4 v1, 0x0
@@ -285,10 +286,12 @@
 
     const/4 p1, 0x0
 
+    .line 2
     invoke-static {p0, p1, v0}, Landroidx/appcompat/widget/TintTypedArray;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroidx/appcompat/widget/TintTypedArray;
 
     move-result-object p0
 
+    .line 3
     :try_start_0
     invoke-virtual {p0, v1, v1}, Landroidx/appcompat/widget/TintTypedArray;->getColor(II)I
 
@@ -296,6 +299,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-virtual {p0}, Landroidx/appcompat/widget/TintTypedArray;->recycle()V
 
     return p1
@@ -305,16 +309,19 @@
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/TintTypedArray;->recycle()V
 
+    .line 5
     throw p1
 .end method
 
 .method public static getThemeAttrColor(Landroid/content/Context;IF)I
     .locals 0
 
+    .line 6
     invoke-static {p0, p1}, Landroidx/appcompat/widget/ThemeUtils;->getThemeAttrColor(Landroid/content/Context;I)I
 
     move-result p0
 
+    .line 7
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result p1
@@ -323,6 +330,7 @@
 
     mul-float/2addr p1, p2
 
+    .line 8
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
     move-result p1

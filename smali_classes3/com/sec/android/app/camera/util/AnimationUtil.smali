@@ -222,6 +222,7 @@
 .method public static enablePartialBlur(Landroid/content/Context;Landroid/view/View;)V
     .locals 1
 
+    .line 11
     new-instance v0, Lcom/sec/android/app/camera/util/AnimationUtil$PartialBlurInfo;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/util/AnimationUtil$PartialBlurInfo;-><init>(Landroid/content/Context;)V
@@ -234,6 +235,7 @@
 .method public static enablePartialBlur(Landroid/content/Context;Landroid/view/View;Lcom/sec/android/app/camera/util/AnimationUtil$PartialBlurInfo;)V
     .locals 8
 
+    .line 1
     sget-object v0, Ly2/b;->j:Ly2/b;
 
     invoke-static {v0}, Ly2/d;->e(Ly2/b;)Z
@@ -242,6 +244,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -258,6 +261,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Landroid/view/SemBlurInfo$Builder;
 
@@ -265,10 +269,12 @@
 
     invoke-direct {p0, v0}, Landroid/view/SemBlurInfo$Builder;-><init>(I)V
 
+    .line 4
     invoke-static {p2}, Lcom/sec/android/app/camera/util/AnimationUtil$PartialBlurInfo;->h(Lcom/sec/android/app/camera/util/AnimationUtil$PartialBlurInfo;)I
 
     move-result v0
 
+    .line 5
     invoke-virtual {p0, v0}, Landroid/view/SemBlurInfo$Builder;->setRadius(I)Landroid/view/SemBlurInfo$Builder;
 
     move-result-object p0
@@ -277,6 +283,7 @@
 
     move-result v0
 
+    .line 6
     invoke-virtual {p0, v0}, Landroid/view/SemBlurInfo$Builder;->setBackgroundCornerRadius(F)Landroid/view/SemBlurInfo$Builder;
 
     move-result-object p0
@@ -285,6 +292,7 @@
 
     move-result v0
 
+    .line 7
     invoke-virtual {p0, v0}, Landroid/view/SemBlurInfo$Builder;->setBackgroundColor(I)Landroid/view/SemBlurInfo$Builder;
 
     move-result-object v1
@@ -313,14 +321,17 @@
 
     move-result v7
 
+    .line 8
     invoke-virtual/range {v1 .. v7}, Landroid/view/SemBlurInfo$Builder;->setColorCurve(FFFFFF)Landroid/view/SemBlurInfo$Builder;
 
     move-result-object p0
 
+    .line 9
     invoke-virtual {p0}, Landroid/view/SemBlurInfo$Builder;->build()Landroid/view/SemBlurInfo;
 
     move-result-object p0
 
+    .line 10
     invoke-virtual {p1, p0}, Landroid/view/View;->semSetBlurInfo(Landroid/view/SemBlurInfo;)V
 
     return-void
@@ -343,6 +354,7 @@
 .method public static getAlphaAnimator(Landroid/view/View;FF)Landroid/animation/ObjectAnimator;
     .locals 2
 
+    .line 5
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
@@ -359,6 +371,7 @@
 .method public static getAlphaAnimator(Landroid/view/View;FFI)Landroid/animation/ObjectAnimator;
     .locals 1
 
+    .line 4
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
@@ -373,6 +386,7 @@
 .method public static getAlphaAnimator(Landroid/view/View;FFILandroid/view/animation/Interpolator;)Landroid/animation/ObjectAnimator;
     .locals 3
 
+    .line 1
     sget-object v0, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
     const/4 v1, 0x2
@@ -393,8 +407,10 @@
 
     int-to-long p1, p3
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
+    .line 3
     invoke-virtual {p0, p4}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     return-object p0
@@ -403,6 +419,7 @@
 .method public static getAlphaOffAnimation()Landroid/view/animation/Animation;
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -413,6 +430,7 @@
 
     const-wide/16 v1, 0xc8
 
+    .line 2
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
     return-object v0
@@ -421,6 +439,7 @@
 .method public static getAlphaOffAnimation(FI)Landroid/view/animation/Animation;
     .locals 2
 
+    .line 6
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/4 v1, 0x0
@@ -429,6 +448,7 @@
 
     int-to-long p0, p1
 
+    .line 7
     invoke-virtual {v0, p0, p1}, Landroid/view/animation/Animation;->setDuration(J)V
 
     return-object v0
@@ -437,6 +457,7 @@
 .method public static getAlphaOffAnimation(I)Landroid/view/animation/Animation;
     .locals 3
 
+    .line 3
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -447,10 +468,12 @@
 
     int-to-long v1, p0
 
+    .line 4
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
     const/4 p0, 0x1
 
+    .line 5
     invoke-virtual {v0, p0}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
     return-object v0
@@ -459,6 +482,7 @@
 .method public static getAlphaOffAnimation(ILandroid/view/animation/Interpolator;)Landroid/view/animation/Animation;
     .locals 3
 
+    .line 8
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -469,8 +493,10 @@
 
     int-to-long v1, p0
 
+    .line 9
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
+    .line 10
     invoke-virtual {v0, p1}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     return-object v0
@@ -479,6 +505,7 @@
 .method public static getAlphaOnAnimation()Landroid/view/animation/Animation;
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/4 v1, 0x0
@@ -489,6 +516,7 @@
 
     const-wide/16 v1, 0xc8
 
+    .line 2
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
     return-object v0
@@ -497,6 +525,7 @@
 .method public static getAlphaOnAnimation(F)Landroid/view/animation/Animation;
     .locals 3
 
+    .line 3
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/4 v1, 0x0
@@ -505,6 +534,7 @@
 
     const-wide/16 v1, 0xc8
 
+    .line 4
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
     return-object v0
@@ -513,6 +543,7 @@
 .method public static getAlphaOnAnimation(FI)Landroid/view/animation/Animation;
     .locals 2
 
+    .line 8
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/4 v1, 0x0
@@ -521,10 +552,12 @@
 
     int-to-long p0, p1
 
+    .line 9
     invoke-virtual {v0, p0, p1}, Landroid/view/animation/Animation;->setDuration(J)V
 
     const/4 p0, 0x1
 
+    .line 10
     invoke-virtual {v0, p0}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
     return-object v0
@@ -533,6 +566,7 @@
 .method public static getAlphaOnAnimation(I)Landroid/view/animation/Animation;
     .locals 3
 
+    .line 5
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/4 v1, 0x0
@@ -543,10 +577,12 @@
 
     int-to-long v1, p0
 
+    .line 6
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
     const/4 p0, 0x1
 
+    .line 7
     invoke-virtual {v0, p0}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
     return-object v0
@@ -555,6 +591,7 @@
 .method public static getAlphaOnAnimation(IILandroid/view/animation/Interpolator;)Landroid/view/animation/Animation;
     .locals 3
 
+    .line 11
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/4 v1, 0x0
@@ -565,12 +602,15 @@
 
     int-to-long v1, p0
 
+    .line 12
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
+    .line 13
     invoke-virtual {v0, p2}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     int-to-long p0, p1
 
+    .line 14
     invoke-virtual {v0, p0, p1}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
     return-object v0
@@ -579,6 +619,7 @@
 .method public static getAlphaOnAnimation(ILandroid/view/animation/Interpolator;)Landroid/view/animation/Animation;
     .locals 3
 
+    .line 15
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/4 v1, 0x0
@@ -589,8 +630,10 @@
 
     int-to-long v1, p0
 
+    .line 16
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
+    .line 17
     invoke-virtual {v0, p1}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     return-object v0
@@ -939,6 +982,7 @@
 .method public static getScaleAnimation(FFFFLandroid/view/View;Landroid/view/animation/Interpolator;IIZ)Landroid/view/animation/Animation;
     .locals 10
 
+    .line 5
     new-instance v9, Landroid/view/animation/ScaleAnimation;
 
     const/4 v5, 0x1
@@ -961,6 +1005,7 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
+    .line 6
     invoke-virtual {p4}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -981,22 +1026,26 @@
 
     move-object v0, p5
 
+    .line 7
     invoke-virtual {v9, p5}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     move/from16 v0, p7
 
     int-to-long v0, v0
 
+    .line 8
     invoke-virtual {v9, v0, v1}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
     move/from16 v0, p6
 
     int-to-long v0, v0
 
+    .line 9
     invoke-virtual {v9, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
 
     move/from16 v0, p8
 
+    .line 10
     invoke-virtual {v9, v0}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
     return-object v9
@@ -1005,6 +1054,7 @@
 .method public static getScaleAnimation(FFFFLandroid/view/animation/Interpolator;II)Landroid/view/animation/Animation;
     .locals 10
 
+    .line 1
     new-instance v9, Landroid/view/animation/ScaleAnimation;
 
     const/4 v5, 0x1
@@ -1029,18 +1079,21 @@
 
     move-object v0, p4
 
+    .line 2
     invoke-virtual {v9, p4}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     move/from16 v0, p6
 
     int-to-long v0, v0
 
+    .line 3
     invoke-virtual {v9, v0, v1}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
     move v0, p5
 
     int-to-long v0, v0
 
+    .line 4
     invoke-virtual {v9, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
 
     return-object v9
@@ -1227,6 +1280,7 @@
 
     const/4 v1, 0x0
 
+    .line 6
     invoke-static {p0, p1, v0, v1}, Lcom/sec/android/app/camera/util/AnimationUtil;->rotationAnimation(Landroid/view/View;FILandroid/animation/Animator$AnimatorListener;)Landroid/animation/ObjectAnimator;
 
     move-result-object p0
@@ -1251,18 +1305,22 @@
 
     const-string p1, "rotation"
 
+    .line 1
     invoke-static {p0, p1, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object p0
 
     int-to-long p1, p3
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     if-eqz p4, :cond_0
 
+    .line 3
     invoke-virtual {p0, p4}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroid/animation/ObjectAnimator;->start()V
 
@@ -1278,6 +1336,7 @@
 
     return-object p0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getRotation()F
 
@@ -1297,6 +1356,7 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 6
     invoke-static {p0, v0, v1}, Lcom/sec/android/app/camera/util/AnimationUtil;->startPartialBlurShowAnimation(Landroid/view/View;FF)V
 
     return-void
@@ -1317,10 +1377,12 @@
 
     aput p2, v0, p1
 
+    .line 1
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object p1
 
+    .line 2
     new-instance p2, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {p2}, Landroid/view/animation/LinearInterpolator;-><init>()V
@@ -1329,14 +1391,17 @@
 
     const-wide/16 v0, 0xc8
 
+    .line 3
     invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
+    .line 4
     new-instance p2, Lcom/sec/android/app/camera/util/a;
 
     invoke-direct {p2, p0}, Lcom/sec/android/app/camera/util/a;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
+    .line 5
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
     return-void

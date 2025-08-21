@@ -38,6 +38,7 @@
 .method public onNotifyCallback(Landroidx/databinding/Observable$OnPropertyChangedCallback;Landroidx/databinding/Observable;ILjava/lang/Void;)V
     .locals 0
 
+    .line 2
     invoke-virtual {p1, p2, p3}, Landroidx/databinding/Observable$OnPropertyChangedCallback;->onPropertyChanged(Landroidx/databinding/Observable;I)V
 
     return-void
@@ -46,6 +47,7 @@
 .method public bridge synthetic onNotifyCallback(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/databinding/Observable$OnPropertyChangedCallback;
 
     check-cast p2, Landroidx/databinding/Observable;

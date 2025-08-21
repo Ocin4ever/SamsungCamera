@@ -564,10 +564,12 @@
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-static {v0, v0}, Lcom/sec/android/app/camera/util/factory/PointFactory;->create(II)Landroid/graphics/Point;
 
     move-result-object v0
 
+    .line 5
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/more/MoreView;->mViewBinding:Lp4/n5;
 
     iget-object v1, v1, Lp4/n5;->e:Lcom/sec/android/app/camera/shootingmode/more/gridlist/MoreGridListView;
@@ -588,6 +590,7 @@
 
     if-lez v1, :cond_1
 
+    .line 6
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/more/MoreView;->mViewBinding:Lp4/n5;
 
     iget-object v0, v0, Lp4/n5;->e:Lcom/sec/android/app/camera/shootingmode/more/gridlist/MoreGridListView;
@@ -602,6 +605,7 @@
 
     move-result v0
 
+    .line 7
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/more/MoreView;->mViewBinding:Lp4/n5;
 
     iget-object v1, v1, Lp4/n5;->e:Lcom/sec/android/app/camera/shootingmode/more/gridlist/MoreGridListView;
@@ -616,6 +620,7 @@
 
     check-cast v0, Lcom/sec/android/app/camera/shootingmode/more/itemview/AbstractItemView;
 
+    .line 8
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/more/MoreView;->mViewBinding:Lp4/n5;
 
     iget-object v1, v1, Lp4/n5;->e:Lcom/sec/android/app/camera/shootingmode/more/gridlist/MoreGridListView;
@@ -628,6 +633,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 9
     invoke-virtual {v0}, Lcom/sec/android/app/camera/shootingmode/more/itemview/AbstractItemView;->getResourceIdSet()Lb5/e$b;
 
     move-result-object v0
@@ -642,12 +648,14 @@
 
     if-ge p1, v0, :cond_0
 
+    .line 10
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/shootingmode/more/MoreView;->findAbovePosition(I)Landroid/graphics/Point;
 
     move-result-object v0
 
     goto :goto_0
 
+    .line 11
     :cond_0
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/shootingmode/more/MoreView;->findBelowPosition(I)Landroid/graphics/Point;
 
@@ -661,6 +669,7 @@
 .method private getGridModeViewDropPosition(Landroid/view/View;)Landroid/graphics/Point;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/more/MoreView;->mViewBinding:Lp4/n5;
 
     iget-object v0, v0, Lp4/n5;->e:Lcom/sec/android/app/camera/shootingmode/more/gridlist/MoreGridListView;
@@ -695,6 +704,7 @@
 
     float-to-int v0, v0
 
+    .line 2
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/more/MoreView;->mViewBinding:Lp4/n5;
 
     iget-object v1, v1, Lp4/n5;->e:Lcom/sec/android/app/camera/shootingmode/more/gridlist/MoreGridListView;
@@ -745,6 +755,7 @@
 
     float-to-int p0, v1
 
+    .line 3
     invoke-static {v0, p0}, Lcom/sec/android/app/camera/util/factory/PointFactory;->create(II)Landroid/graphics/Point;
 
     move-result-object p0
@@ -2680,6 +2691,7 @@
 
     move-object v1, p1
 
+    .line 1
     invoke-direct/range {v0 .. v5}, Lcom/sec/android/app/camera/shootingmode/more/MoreView;->showViewWithAnimation(Landroid/view/View;JJ)V
 
     return-void
@@ -2696,6 +2708,7 @@
 
     move-wide v2, p2
 
+    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/sec/android/app/camera/shootingmode/more/MoreView;->showViewWithAnimation(Landroid/view/View;JJ)V
 
     return-void
@@ -2706,12 +2719,15 @@
 
     const/4 p0, 0x0
 
+    .line 3
     invoke-virtual {p1, p0}, Landroid/view/View;->setAlpha(F)V
 
     const/4 p0, 0x0
 
+    .line 4
     invoke-virtual {p1, p0}, Landroid/view/View;->setVisibility(I)V
 
+    .line 5
     invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p0
@@ -2722,14 +2738,17 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
+    .line 6
     invoke-virtual {p0, p1}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p0
 
+    .line 7
     invoke-virtual {p0, p4, p5}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p0
 
+    .line 8
     invoke-virtual {p0, p2, p3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p0
@@ -2738,6 +2757,7 @@
 
     invoke-direct {p1}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
+    .line 9
     invoke-virtual {p0, p1}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     return-void

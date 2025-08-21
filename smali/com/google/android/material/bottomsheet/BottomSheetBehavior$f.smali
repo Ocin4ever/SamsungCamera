@@ -54,20 +54,24 @@
 .method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
+    .line 2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
 
     iput p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->a:I
 
+    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
 
     iput p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->b:I
 
+    .line 4
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
@@ -88,6 +92,7 @@
     :goto_0
     iput-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->c:Z
 
+    .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
@@ -104,6 +109,7 @@
     :goto_1
     iput-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->d:Z
 
+    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -121,28 +127,34 @@
 .method public constructor <init>(Landroid/os/Parcelable;Lcom/google/android/material/bottomsheet/BottomSheetBehavior;)V
     .locals 0
 
+    .line 7
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
+    .line 8
     iget p1, p2, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->K:I
 
     iput p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->a:I
 
+    .line 9
     invoke-static {p2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->g(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;)I
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->b:I
 
+    .line 10
     invoke-static {p2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->f(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->c:Z
 
+    .line 11
     iget-boolean p1, p2, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->H:Z
 
     iput-boolean p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$f;->d:Z
 
+    .line 12
     invoke-static {p2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->h(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;)Z
 
     move-result p1

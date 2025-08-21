@@ -57,6 +57,7 @@
 .method public a(IIII[B)Landroid/graphics/Bitmap;
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lco/polarr/mgcsc/f/h/g;->a:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_0
@@ -206,6 +207,7 @@
 .method public a()V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lco/polarr/mgcsc/f/h/g;->g:Landroid/renderscript/ScriptIntrinsicYuvToRGB;
 
     const/4 v1, 0x0

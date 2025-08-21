@@ -114,6 +114,7 @@
 .method public final toArray()[Ljava/lang/Object;
     .locals 1
 
+    .line 1
     sget-object v0, Ls0/t;->a:[Ljava/lang/Object;
 
     invoke-virtual {p0, v0}, Ls0/t;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -126,8 +127,10 @@
 .method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 2
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 3
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
@@ -136,6 +139,7 @@
 
     if-ge v1, v0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Ls0/t;->f()[Ljava/lang/Object;
 
     move-result-object v1
@@ -150,6 +154,7 @@
 
     move-result-object p1
 
+    .line 5
     invoke-static {p1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -158,6 +163,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Ls0/t;->c()I
 
@@ -171,6 +177,7 @@
 
     move-result-object p1
 
+    .line 7
     invoke-static {v1, v0, p0, p1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -182,12 +189,14 @@
 
     const/4 v1, 0x0
 
+    .line 8
     aput-object v1, p1, v0
 
     :cond_2
     :goto_0
     const/4 v0, 0x0
 
+    .line 9
     invoke-virtual {p0, p1, v0}, Ls0/t;->a([Ljava/lang/Object;I)I
 
     return-object p1

@@ -80,6 +80,7 @@
 
     move v5, p4
 
+    .line 9
     invoke-direct/range {v1 .. v7}, Landroidx/room/util/TableInfo$Column;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;I)V
 
     return-void
@@ -96,20 +97,28 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/room/util/TableInfo$Column;->name:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Landroidx/room/util/TableInfo$Column;->type:Ljava/lang/String;
 
+    .line 4
     iput-boolean p3, p0, Landroidx/room/util/TableInfo$Column;->notNull:Z
 
+    .line 5
     iput p4, p0, Landroidx/room/util/TableInfo$Column;->primaryKeyPosition:I
 
+    .line 6
     iput-object p5, p0, Landroidx/room/util/TableInfo$Column;->defaultValue:Ljava/lang/String;
 
+    .line 7
     iput p6, p0, Landroidx/room/util/TableInfo$Column;->createdFrom:I
 
+    .line 8
     invoke-direct {p0, p2}, Landroidx/room/util/TableInfo$Column;->findAffinity(Ljava/lang/String;)I
 
     move-result p1

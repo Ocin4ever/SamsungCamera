@@ -40,14 +40,18 @@
 
     invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0, p1, p3}, Le3/c$b;-><init>(Le3/c;Lq6/a;)V
 
+    .line 3
     iput-object p2, p0, Le3/c$b;->b:Ld3/f;
 
+    .line 4
     invoke-virtual {p0, p4}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
+    .line 5
     iput-boolean p1, p0, Le3/c$b;->c:Z
 
     return-void
@@ -60,6 +64,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iput-object p1, p0, Le3/c$b;->d:Le3/c;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V

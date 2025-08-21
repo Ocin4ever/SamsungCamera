@@ -342,6 +342,7 @@
 
     move-object/from16 v2, p3
 
+    .line 27
     sget-object v3, Lcom/samsung/android/apex/motionphoto/composer/SemApexVideoSplitter;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -366,6 +367,7 @@
 
     const-string v4, "support-googlephotos"
 
+    .line 28
     invoke-virtual {v2, v4}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->contains(Ljava/lang/String;)Z
 
     move-result v5
@@ -374,6 +376,7 @@
 
     if-eqz v5, :cond_0
 
+    .line 29
     invoke-virtual {v2, v4}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
@@ -396,6 +399,7 @@
     :goto_0
     const-string v5, "xmp-length"
 
+    .line 30
     invoke-virtual {v2, v5}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
@@ -408,6 +412,7 @@
 
     const-string v7, "has-hdr"
 
+    .line 31
     invoke-virtual {v2, v7}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v7
@@ -416,6 +421,7 @@
 
     const-string v8, "end-timestampUs"
 
+    .line 32
     invoke-virtual {v2, v8}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v8
@@ -440,16 +446,19 @@
 
     sub-long v19, v8, v10
 
+    .line 33
     sget-object v8, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     if-eqz v4, :cond_2
 
+    .line 34
     sget-object v8, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelperV2;->Companion:Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelperV2$Companion;
 
     invoke-virtual {v8, v0}, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelperV2$Companion;->create(Ljava/io/FileDescriptor;)Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelperV2;
 
     move-result-object v8
 
+    .line 35
     invoke-virtual {v8}, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelperV2;->hasHeic()Z
 
     move-result v9
@@ -458,24 +467,28 @@
 
     move-result-object v9
 
+    .line 36
     invoke-virtual {v9}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v10
 
     if-eqz v10, :cond_1
 
+    .line 37
     invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v10
 
     if-nez v10, :cond_1
 
+    .line 38
     new-instance v10, Lcom/samsung/android/apex/motionphoto/composer/n;
 
     invoke-direct {v10, v1, v0}, Lcom/samsung/android/apex/motionphoto/composer/n;-><init>(Lcom/samsung/android/apex/motionphoto/composer/SemApexVideoSplitter;Ljava/io/FileDescriptor;)V
 
     invoke-virtual {v8, v10}, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelperV2;->setXmpReserver(Lcom/samsung/android/apex/motionphoto/composer/utils/XmpReserver;)V
 
+    .line 39
     :cond_1
     invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -494,12 +507,14 @@
 
     move-object v12, v5
 
+    .line 40
     :goto_1
     :try_start_0
     iget-object v5, v1, Lcom/samsung/android/apex/motionphoto/composer/SemApexVideoSplitter;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v5}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 41
     iget-wide v9, v1, Lcom/samsung/android/apex/motionphoto/composer/SemApexVideoSplitter;->mNativeContext:J
 
     const-wide/16 v13, 0x0
@@ -508,6 +523,7 @@
 
     if-eqz v5, :cond_9
 
+    .line 42
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->flatten()Ljava/lang/String;
 
     move-result-object v2
@@ -524,10 +540,12 @@
 
     if-eqz v12, :cond_3
 
+    .line 43
     invoke-virtual {v12}, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelperV2;->removeXmp()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 44
     :cond_3
     iget-object v0, v1, Lcom/samsung/android/apex/motionphoto/composer/SemApexVideoSplitter;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -542,10 +560,12 @@
 
     if-eqz v4, :cond_8
 
+    .line 45
     new-instance v1, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser;
 
     invoke-direct {v1, v0}, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser;-><init>(Ljava/io/FileDescriptor;)V
 
+    .line 46
     invoke-virtual {v8}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
@@ -554,12 +574,14 @@
 
     if-eqz v0, :cond_6
 
+    .line 47
     invoke-virtual {v1}, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser;->parseSefTail_Heic()Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser$DataPosition64;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
+    .line 48
     invoke-virtual {v0}, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser$DataPosition64;->getOffset()J
 
     move-result-wide v2
@@ -568,6 +590,7 @@
 
     sub-long v13, v2, v4
 
+    .line 49
     invoke-virtual {v1}, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser;->getFileSize()J
 
     move-result-wide v0
@@ -578,15 +601,18 @@
 
     const/16 v18, 0x0
 
+    .line 50
     invoke-virtual/range {v12 .. v20}, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelperV2;->writeXmp(JIJIJ)V
 
     goto :goto_2
 
+    .line 51
     :cond_5
     invoke-static {v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
+    .line 52
     :cond_6
     invoke-virtual {v1}, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser;->parseSefTail()Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser$DataPosition64;
 
@@ -594,10 +620,12 @@
 
     if-eqz v0, :cond_7
 
+    .line 53
     invoke-virtual {v0}, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser$DataPosition64;->getOffset()J
 
     move-result-wide v2
 
+    .line 54
     invoke-virtual {v1}, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser;->getSEFStartOffset()J
 
     move-result-wide v13
@@ -606,6 +634,7 @@
 
     long-to-int v15, v4
 
+    .line 55
     invoke-virtual {v1}, Lcom/samsung/android/apex/motionphoto/composer/utils/MotionPhotoParser;->getFileSize()J
 
     move-result-wide v0
@@ -614,10 +643,12 @@
 
     const/16 v18, 0x0
 
+    .line 56
     invoke-virtual/range {v12 .. v20}, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelperV2;->writeXmp(JIJIJ)V
 
     goto :goto_2
 
+    .line 57
     :cond_7
     invoke-static {v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -625,6 +656,7 @@
     :goto_2
     return v6
 
+    .line 58
     :cond_9
     iget-object v0, v1, Lcom/samsung/android/apex/motionphoto/composer/SemApexVideoSplitter;->mLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -641,6 +673,7 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
+    .line 59
     throw v0
 .end method
 
@@ -667,6 +700,7 @@
 
     move/from16 v11, p9
 
+    .line 3
     invoke-direct/range {v0 .. v11}, Lcom/samsung/android/apex/motionphoto/composer/SemApexVideoSplitter;->native_split(Ljava/io/FileDescriptor;JJJIZZZ)V
 
     return-void
@@ -677,6 +711,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 4
     invoke-direct/range {p0 .. p11}, Lcom/samsung/android/apex/motionphoto/composer/SemApexVideoSplitter;->native_split(Ljava/io/FileDescriptor;JJJIZZZ)V
 
     return-void
@@ -705,6 +740,7 @@
 
     move/from16 v11, p10
 
+    .line 2
     invoke-direct/range {v0 .. v11}, Lcom/samsung/android/apex/motionphoto/composer/SemApexVideoSplitter;->native_split(Ljava/io/FileDescriptor;JJJIZZZ)V
 
     return-void
@@ -733,6 +769,7 @@
 
     move/from16 v11, p8
 
+    .line 1
     invoke-direct/range {v0 .. v11}, Lcom/samsung/android/apex/motionphoto/composer/SemApexVideoSplitter;->native_split(Ljava/io/FileDescriptor;JJJIZZZ)V
 
     return-void
@@ -745,6 +782,7 @@
 
     move-object/from16 v0, p2
 
+    .line 5
     sget-object v1, Lcom/samsung/android/apex/motionphoto/composer/SemApexVideoSplitter;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -769,6 +807,7 @@
 
     const-string v2, "image-path"
 
+    .line 6
     invoke-virtual {v0, v2}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -777,6 +816,7 @@
 
     const-string v3, "start-timestampUs"
 
+    .line 7
     invoke-virtual {v0, v3}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -789,6 +829,7 @@
 
     const-string v3, "end-timestampUs"
 
+    .line 8
     invoke-virtual {v0, v3}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -801,6 +842,7 @@
 
     const-string v3, "rotation"
 
+    .line 9
     invoke-virtual {v0, v3}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -813,6 +855,7 @@
 
     const-string v3, "support-sef"
 
+    .line 10
     sget-object v4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {v0, v3, v4}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->get(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
@@ -825,12 +868,14 @@
 
     move-result v15
 
+    .line 11
     new-instance v3, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelper;
 
     invoke-direct {v3, v2}, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelper;-><init>(Ljava/lang/String;)V
 
     const-string v14, "support-googlephotos"
 
+    .line 12
     invoke-virtual {v0, v14}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->contains(Ljava/lang/String;)Z
 
     move-result v4
@@ -851,31 +896,37 @@
 
     if-eqz v4, :cond_1
 
+    .line 13
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
+    .line 14
     invoke-virtual {v3}, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelper;->isHEIC()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
+    .line 15
     new-instance v6, Lcom/samsung/android/apex/motionphoto/composer/m;
 
     invoke-direct {v6}, Lcom/samsung/android/apex/motionphoto/composer/m;-><init>()V
 
     invoke-virtual {v3, v6}, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelper;->setXMPReserver(Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelper$XMPReserver;)V
 
+    .line 16
     :cond_0
     invoke-virtual {v3}, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelper;->reserveXMP()V
 
+    .line 17
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
     sub-long/2addr v6, v4
 
+    .line 18
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -894,6 +945,7 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 19
     :cond_1
     invoke-virtual/range {p1 .. p1}, Ljava/io/RandomAccessFile;->getFD()Ljava/io/FileDescriptor;
 
@@ -923,6 +975,7 @@
 
     move-object/from16 v4, v19
 
+    .line 20
     invoke-virtual {v0, v4}, Lcom/samsung/android/apex/motionphoto/SemApexParameters;->contains(Ljava/lang/String;)Z
 
     move-result v5
@@ -941,20 +994,24 @@
 
     if-eqz v0, :cond_2
 
+    .line 21
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
+    .line 22
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     const-string v2, "MotionPhoto_Data"
 
+    .line 23
     invoke-static {v0, v2}, Lcom/samsung/android/media/SemExtendedFormat;->getDataPosition(Ljava/io/File;Ljava/lang/String;)Lcom/samsung/android/media/SemExtendedFormat$DataPosition;
 
     move-result-object v2
 
+    .line 24
     iget-wide v6, v2, Lcom/samsung/android/media/SemExtendedFormat$DataPosition;->length:J
 
     invoke-virtual {v0}, Ljava/io/File;->length()J
@@ -967,12 +1024,14 @@
 
     invoke-virtual {v3, v6, v7, v8, v9}, Lcom/samsung/android/apex/motionphoto/composer/utils/GooglePhotosHelper;->writeXMP(JJ)V
 
+    .line 25
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     sub-long/2addr v2, v4
 
+    .line 26
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

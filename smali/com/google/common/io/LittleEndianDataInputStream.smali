@@ -128,6 +128,7 @@
 .method public readFully([B)V
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/io/ByteStreams;->readFully(Ljava/io/InputStream;[B)V
 
     return-void
@@ -136,6 +137,7 @@
 .method public readFully([BII)V
     .locals 0
 
+    .line 2
     invoke-static {p0, p1, p2, p3}, Lcom/google/common/io/ByteStreams;->readFully(Ljava/io/InputStream;[BII)V
 
     return-void

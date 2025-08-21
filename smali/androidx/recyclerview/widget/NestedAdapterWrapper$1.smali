@@ -56,6 +56,7 @@
 .method public onItemRangeChanged(II)V
     .locals 2
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     iget-object v0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCallback:Landroidx/recyclerview/widget/NestedAdapterWrapper$Callback;
@@ -70,6 +71,7 @@
 .method public onItemRangeChanged(IILjava/lang/Object;)V
     .locals 1
 
+    .line 2
     iget-object p0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     iget-object v0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCallback:Landroidx/recyclerview/widget/NestedAdapterWrapper$Callback;

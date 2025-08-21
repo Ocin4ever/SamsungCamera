@@ -49,6 +49,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/collect/Sets$CartesianSet;->create(Ljava/util/List;)Ljava/util/Set;
 
     move-result-object p0
@@ -74,6 +75,7 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
+    .line 2
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -181,10 +183,12 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Ljava/util/EnumSet;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Ljava/util/EnumSet;
 
     invoke-static {p0}, Ljava/util/EnumSet;->complementOf(Ljava/util/EnumSet;)Ljava/util/EnumSet;
@@ -193,6 +197,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
@@ -202,8 +207,10 @@
 
     const-string v1, "collection is empty; use the other version of this method"
 
+    .line 4
     invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -218,6 +225,7 @@
 
     move-result-object v0
 
+    .line 6
     invoke-static {p0, v0}, Lcom/google/common/collect/Sets;->makeComplementByHand(Ljava/util/Collection;Ljava/lang/Class;)Ljava/util/EnumSet;
 
     move-result-object p0
@@ -241,12 +249,15 @@
         }
     .end annotation
 
+    .line 7
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 8
     instance-of v0, p0, Ljava/util/EnumSet;
 
     if-eqz v0, :cond_0
 
+    .line 9
     check-cast p0, Ljava/util/EnumSet;
 
     invoke-static {p0}, Ljava/util/EnumSet;->complementOf(Ljava/util/EnumSet;)Ljava/util/EnumSet;
@@ -255,6 +266,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_0
     invoke-static {p0, p1}, Lcom/google/common/collect/Sets;->makeComplementByHand(Ljava/util/Collection;Ljava/lang/Class;)Ljava/util/EnumSet;
 
@@ -371,18 +383,22 @@
         }
     .end annotation
 
+    .line 13
     instance-of v0, p0, Lcom/google/common/collect/Sets$FilteredSet;
 
     if-eqz v0, :cond_0
 
+    .line 14
     check-cast p0, Lcom/google/common/collect/Sets$FilteredSet;
 
+    .line 15
     iget-object v0, p0, Lcom/google/common/collect/Collections2$FilteredCollection;->predicate:Lcom/google/common/base/Predicate;
 
     invoke-static {v0, p1}, Lcom/google/common/base/Predicates;->and(Lcom/google/common/base/Predicate;Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
 
+    .line 16
     new-instance v0, Lcom/google/common/collect/Sets$FilteredNavigableSet;
 
     iget-object p0, p0, Lcom/google/common/collect/Collections2$FilteredCollection;->unfiltered:Ljava/util/Collection;
@@ -393,6 +409,7 @@
 
     return-object v0
 
+    .line 17
     :cond_0
     new-instance v0, Lcom/google/common/collect/Sets$FilteredNavigableSet;
 
@@ -429,10 +446,12 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Ljava/util/SortedSet;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Ljava/util/SortedSet;
 
     invoke-static {p0, p1}, Lcom/google/common/collect/Sets;->filter(Ljava/util/SortedSet;Lcom/google/common/base/Predicate;)Ljava/util/SortedSet;
@@ -441,19 +460,23 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     instance-of v0, p0, Lcom/google/common/collect/Sets$FilteredSet;
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast p0, Lcom/google/common/collect/Sets$FilteredSet;
 
+    .line 5
     iget-object v0, p0, Lcom/google/common/collect/Collections2$FilteredCollection;->predicate:Lcom/google/common/base/Predicate;
 
     invoke-static {v0, p1}, Lcom/google/common/base/Predicates;->and(Lcom/google/common/base/Predicate;Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
 
+    .line 6
     new-instance v0, Lcom/google/common/collect/Sets$FilteredSet;
 
     iget-object p0, p0, Lcom/google/common/collect/Collections2$FilteredCollection;->unfiltered:Ljava/util/Collection;
@@ -464,6 +487,7 @@
 
     return-object v0
 
+    .line 7
     :cond_1
     new-instance v0, Lcom/google/common/collect/Sets$FilteredSet;
 
@@ -500,18 +524,22 @@
         }
     .end annotation
 
+    .line 8
     instance-of v0, p0, Lcom/google/common/collect/Sets$FilteredSet;
 
     if-eqz v0, :cond_0
 
+    .line 9
     check-cast p0, Lcom/google/common/collect/Sets$FilteredSet;
 
+    .line 10
     iget-object v0, p0, Lcom/google/common/collect/Collections2$FilteredCollection;->predicate:Lcom/google/common/base/Predicate;
 
     invoke-static {v0, p1}, Lcom/google/common/base/Predicates;->and(Lcom/google/common/base/Predicate;Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
 
+    .line 11
     new-instance v0, Lcom/google/common/collect/Sets$FilteredSortedSet;
 
     iget-object p0, p0, Lcom/google/common/collect/Collections2$FilteredCollection;->unfiltered:Ljava/util/Collection;
@@ -522,6 +550,7 @@
 
     return-object v0
 
+    .line 12
     :cond_0
     new-instance v0, Lcom/google/common/collect/Sets$FilteredSortedSet;
 
@@ -607,6 +636,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;[Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object p0
@@ -632,33 +662,40 @@
         }
     .end annotation
 
+    .line 2
     instance-of v0, p0, Lcom/google/common/collect/ImmutableEnumSet;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Lcom/google/common/collect/ImmutableEnumSet;
 
     return-object p0
 
+    .line 4
     :cond_0
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_2
 
+    .line 5
     check-cast p0, Ljava/util/Collection;
 
+    .line 6
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 7
     invoke-static {}, Lcom/google/common/collect/ImmutableSet;->of()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
 
     return-object p0
 
+    .line 8
     :cond_1
     invoke-static {p0}, Ljava/util/EnumSet;->copyOf(Ljava/util/Collection;)Ljava/util/EnumSet;
 
@@ -670,17 +707,20 @@
 
     return-object p0
 
+    .line 9
     :cond_2
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
+    .line 10
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
+    .line 11
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -691,14 +731,17 @@
 
     move-result-object v0
 
+    .line 12
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterators;->addAll(Ljava/util/Collection;Ljava/util/Iterator;)Z
 
+    .line 13
     invoke-static {v0}, Lcom/google/common/collect/ImmutableEnumSet;->asImmutable(Ljava/util/EnumSet;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
 
     return-object p0
 
+    .line 14
     :cond_3
     invoke-static {}, Lcom/google/common/collect/ImmutableSet;->of()Lcom/google/common/collect/ImmutableSet;
 
@@ -775,6 +818,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -800,10 +844,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/Sets;->newConcurrentHashSet()Ljava/util/Set;
 
     move-result-object v0
 
+    .line 3
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->addAll(Ljava/util/Collection;Ljava/lang/Iterable;)Z
 
     return-object v0
@@ -821,6 +867,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
@@ -842,19 +889,23 @@
         }
     .end annotation
 
+    .line 2
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Ljava/util/Collection;
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-static {p0}, Lcom/google/common/collect/Lists;->newArrayList(Ljava/lang/Iterable;)Ljava/util/ArrayList;
 
     move-result-object p0
 
+    .line 5
     :goto_0
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
@@ -900,6 +951,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -921,10 +973,12 @@
         }
     .end annotation
 
+    .line 4
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 5
     new-instance v0, Ljava/util/HashSet;
 
     check-cast p0, Ljava/util/Collection;
@@ -933,6 +987,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -960,10 +1015,12 @@
         }
     .end annotation
 
+    .line 7
     invoke-static {}, Lcom/google/common/collect/Sets;->newHashSet()Ljava/util/HashSet;
 
     move-result-object v0
 
+    .line 8
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterators;->addAll(Ljava/util/Collection;Ljava/util/Iterator;)Z
 
     return-object v0
@@ -981,12 +1038,14 @@
         }
     .end annotation
 
+    .line 2
     array-length v0, p0
 
     invoke-static {v0}, Lcom/google/common/collect/Sets;->newHashSetWithExpectedSize(I)Ljava/util/HashSet;
 
     move-result-object v0
 
+    .line 3
     invoke-static {v0, p0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
     return-object v0
@@ -1050,6 +1109,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
@@ -1071,10 +1131,12 @@
         }
     .end annotation
 
+    .line 2
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 3
     new-instance v0, Ljava/util/LinkedHashSet;
 
     check-cast p0, Ljava/util/Collection;
@@ -1083,11 +1145,13 @@
 
     return-object v0
 
+    .line 4
     :cond_0
     invoke-static {}, Lcom/google/common/collect/Sets;->newLinkedHashSet()Ljava/util/LinkedHashSet;
 
     move-result-object v0
 
+    .line 5
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->addAll(Ljava/util/Collection;Ljava/lang/Iterable;)Z
 
     return-object v0
@@ -1154,6 +1218,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/TreeSet;
 
     invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
@@ -1175,10 +1240,12 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/Sets;->newTreeSet()Ljava/util/TreeSet;
 
     move-result-object v0
 
+    .line 3
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->addAll(Ljava/util/Collection;Ljava/lang/Iterable;)Z
 
     return-object v0
@@ -1198,6 +1265,7 @@
         }
     .end annotation
 
+    .line 4
     new-instance v0, Ljava/util/TreeSet;
 
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1245,18 +1313,22 @@
         }
     .end annotation
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     instance-of v0, p1, Lcom/google/common/collect/Multiset;
 
     if-eqz v0, :cond_0
 
+    .line 5
     check-cast p1, Lcom/google/common/collect/Multiset;
 
     invoke-interface {p1}, Lcom/google/common/collect/Multiset;->elementSet()Ljava/util/Set;
 
     move-result-object p1
 
+    .line 6
     :cond_0
     instance-of v0, p1, Ljava/util/Set;
 
@@ -1272,6 +1344,7 @@
 
     if-le v0, v1, :cond_1
 
+    .line 7
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1282,6 +1355,7 @@
 
     return p0
 
+    .line 8
     :cond_1
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -1308,6 +1382,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1315,6 +1390,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1

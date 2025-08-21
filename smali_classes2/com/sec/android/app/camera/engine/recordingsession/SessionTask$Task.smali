@@ -50,6 +50,7 @@
 .method public call()Ljava/lang/Integer;
     .locals 2
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/recordingsession/SessionTask$Task;->this$0:Lcom/sec/android/app/camera/engine/recordingsession/SessionTask;
 
@@ -61,6 +62,7 @@
 
     const/4 p0, 0x0
 
+    .line 3
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -70,6 +72,7 @@
     :catch_0
     move-exception p0
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,6 +97,7 @@
 
     const/4 p0, -0x1
 
+    .line 5
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -104,6 +108,7 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/engine/recordingsession/SessionTask$Task;->call()Ljava/lang/Integer;
 
     move-result-object p0

@@ -122,19 +122,23 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lcom/google/common/graph/ImmutableGraph;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lcom/google/common/graph/ImmutableGraph;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/graph/ImmutableGraph;
 
     new-instance v1, Lcom/google/common/graph/StandardValueGraph;
 
+    .line 4
     invoke-static {p0}, Lcom/google/common/graph/GraphBuilder;->from(Lcom/google/common/graph/Graph;)Lcom/google/common/graph/GraphBuilder;
 
     move-result-object v2
@@ -180,6 +184,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 5
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -296,6 +301,7 @@
 .method public bridge synthetic hasEdgeConnecting(Lcom/google/common/graph/EndpointPair;)Z
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/ForwardingGraph;->hasEdgeConnecting(Lcom/google/common/graph/EndpointPair;)Z
 
     move-result p0
@@ -306,6 +312,7 @@
 .method public bridge synthetic hasEdgeConnecting(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/google/common/graph/ForwardingGraph;->hasEdgeConnecting(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0

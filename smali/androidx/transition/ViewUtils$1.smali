@@ -37,6 +37,7 @@
 .method public get(Landroid/view/View;)Ljava/lang/Float;
     .locals 0
 
+    .line 2
     invoke-static {p1}, Landroidx/transition/ViewUtils;->getTransitionAlpha(Landroid/view/View;)F
 
     move-result p0
@@ -51,6 +52,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroidx/transition/ViewUtils$1;->get(Landroid/view/View;)Ljava/lang/Float;
@@ -63,6 +65,7 @@
 .method public set(Landroid/view/View;Ljava/lang/Float;)V
     .locals 0
 
+    .line 2
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result p0
@@ -75,6 +78,7 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     check-cast p2, Ljava/lang/Float;

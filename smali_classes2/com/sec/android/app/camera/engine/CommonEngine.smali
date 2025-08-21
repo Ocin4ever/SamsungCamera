@@ -129,46 +129,56 @@
 .method public constructor <init>(Lcom/sec/android/app/camera/engine/EngineContainer;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/interfaces/Engine$GenericEventListener;Lcom/sec/android/app/camera/interfaces/Engine$CameraErrorEventListener;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mUiThreadRunnableListLock:Ljava/lang/Object;
 
+    .line 4
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCaptureEventListeners:Ljava/util/List;
 
+    .line 5
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mRequestQueueEmptyListeners:Ljava/util/List;
 
+    .line 6
     sget-object v0, Lcom/sec/android/app/camera/interfaces/Engine$State;->IDLE:Lcom/sec/android/app/camera/interfaces/Engine$State;
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCurrentState:Lcom/sec/android/app/camera/interfaces/Engine$State;
 
+    .line 7
     sget-object v0, Lcom/sec/android/app/camera/interfaces/Engine$CaptureState;->IDLE:Lcom/sec/android/app/camera/interfaces/Engine$CaptureState;
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCurrentCaptureState:Lcom/sec/android/app/camera/interfaces/Engine$CaptureState;
 
     const-string v0, "Create CommonEngine"
 
+    .line 8
     invoke-static {v0}, Lcom/sec/android/app/TraceWrapper;->traceBegin(Ljava/lang/String;)V
 
+    .line 9
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
+    .line 10
     invoke-interface {p2}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getCameraSettings()Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
+    .line 11
     invoke-interface {p2}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getShootingModeFeature()Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
 
     move-result-object p2
@@ -177,10 +187,12 @@
 
     if-nez p1, :cond_0
 
+    .line 12
     new-instance p1, Lcom/sec/android/app/camera/engine/EngineContainer;
 
     invoke-direct {p1, p0}, Lcom/sec/android/app/camera/engine/EngineContainer;-><init>(Lcom/sec/android/app/camera/engine/CommonEngine;)V
 
+    .line 13
     :cond_0
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getCameraHolder()Lcom/sec/android/app/camera/engine/request/CameraHolder;
 
@@ -188,190 +200,223 @@
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraHolder:Lcom/sec/android/app/camera/engine/request/CameraHolder;
 
+    .line 14
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getMakerHolder()Lcom/sec/android/app/camera/engine/request/MakerHolder;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mMakerHolder:Lcom/sec/android/app/camera/engine/request/MakerHolder;
 
+    .line 15
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getRequestQueue()Lcom/sec/android/app/camera/engine/request/RequestQueue;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mRequestQueue:Lcom/sec/android/app/camera/engine/request/RequestQueue;
 
+    .line 16
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getAeAfManager()Lcom/sec/android/app/camera/engine/AeAfManagerImpl;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mAeAfManager:Lcom/sec/android/app/camera/engine/AeAfManagerImpl;
 
+    .line 17
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getOrientationManager()Lcom/sec/android/app/camera/engine/OrientationManager;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mOrientationManager:Lcom/sec/android/app/camera/engine/OrientationManager;
 
+    .line 18
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getRecordingManager()Lcom/sec/android/app/camera/engine/RecordingManagerImpl;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mRecordingManager:Lcom/sec/android/app/camera/engine/RecordingManagerImpl;
 
+    .line 19
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getRequestEventManager()Lcom/sec/android/app/camera/engine/RequestEventManager;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mRequestEventManager:Lcom/sec/android/app/camera/engine/RequestEventManager;
 
+    .line 20
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getShutterTimerManager()Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mShutterTimerManager:Lcom/sec/android/app/camera/engine/ShutterTimerManagerImpl;
 
+    .line 21
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getSingleTakeManager()Lcom/sec/android/app/camera/engine/SingleTakeManager;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mSingleTakeManager:Lcom/sec/android/app/camera/engine/SingleTakeManager;
 
+    .line 22
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getTransientCaptureManager()Lcom/sec/android/app/camera/engine/TransientCaptureManager;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mTransientCaptureManager:Lcom/sec/android/app/camera/engine/TransientCaptureManager;
 
+    .line 23
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getVideoAutoFramingManager()Lcom/sec/android/app/camera/engine/VideoAutoFramingManager;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mVideoAutoFramingManager:Lcom/sec/android/app/camera/engine/VideoAutoFramingManager;
 
+    .line 24
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getMotionPhotoManager()Lcom/sec/android/app/camera/engine/MotionPhotoManagerImpl;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mMotionPhotoManager:Lcom/sec/android/app/camera/engine/MotionPhotoManagerImpl;
 
+    .line 25
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getCallbackManager()Lcom/sec/android/app/camera/engine/callback/CallbackManagerImpl;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCallbackManager:Lcom/sec/android/app/camera/engine/callback/CallbackManagerImpl;
 
+    .line 26
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getPictureCallbackManager()Lcom/sec/android/app/camera/engine/PictureCallbackManager;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mPictureCallbackManager:Lcom/sec/android/app/camera/engine/PictureCallbackManager;
 
+    .line 27
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getAgifCaptureController()Lcom/sec/android/app/camera/engine/AgifCaptureController;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mAgifCaptureController:Lcom/sec/android/app/camera/engine/AgifCaptureController;
 
+    .line 28
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getBeautyController()Lcom/sec/android/app/camera/engine/BeautyController;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mBeautyController:Lcom/sec/android/app/camera/engine/BeautyController;
 
+    .line 29
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getBokehEffectController()Lcom/sec/android/app/camera/engine/BokehEffectController;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mBokehEffectController:Lcom/sec/android/app/camera/engine/BokehEffectController;
 
+    .line 30
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getBurstCaptureController()Lcom/sec/android/app/camera/engine/BurstCaptureController;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mBurstCaptureController:Lcom/sec/android/app/camera/engine/BurstCaptureController;
 
+    .line 31
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getCaptureLoggingController()Lcom/sec/android/app/camera/engine/CaptureLoggingController;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCaptureLoggingController:Lcom/sec/android/app/camera/engine/CaptureLoggingController;
 
+    .line 32
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getCustomMultiCameraIdController()Lcom/sec/android/app/camera/engine/CustomMultiCameraIdController;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCustomMultiCameraIdController:Lcom/sec/android/app/camera/engine/CustomMultiCameraIdController;
 
+    .line 33
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getEffectController()Lcom/sec/android/app/camera/engine/EffectController;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mEffectController:Lcom/sec/android/app/camera/engine/EffectController;
 
+    .line 34
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getMakerSettingApplier()Lcom/sec/android/app/camera/engine/MakerSettingApplier;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mMakerSettingApplier:Lcom/sec/android/app/camera/engine/MakerSettingApplier;
 
+    .line 35
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getMultiCameraEffectController()Lcom/sec/android/app/camera/engine/MultiCameraEffectController;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mMultiCameraEffectController:Lcom/sec/android/app/camera/engine/MultiCameraEffectController;
 
+    .line 36
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getQrController()Lcom/sec/android/app/camera/engine/QrController;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mQrController:Lcom/sec/android/app/camera/engine/QrController;
 
+    .line 37
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getScreenFlashController()Lcom/sec/android/app/camera/engine/ScreenFlashController;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mScreenFlashController:Lcom/sec/android/app/camera/engine/ScreenFlashController;
 
+    .line 38
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getStitchingCaptureController()Lcom/sec/android/app/camera/engine/StitchingCaptureController;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mStitchingCaptureController:Lcom/sec/android/app/camera/engine/StitchingCaptureController;
 
+    .line 39
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getZoomController()Lcom/sec/android/app/camera/engine/ZoomController;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mZoomController:Lcom/sec/android/app/camera/engine/ZoomController;
 
+    .line 40
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getPictureProcessor()Lcom/sec/android/app/camera/engine/PictureProcessor;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mPictureProcessor:Lcom/sec/android/app/camera/engine/PictureProcessor;
 
+    .line 41
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getLastContentData()Lcom/sec/android/app/camera/engine/LastContentData;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mLastContentData:Lcom/sec/android/app/camera/engine/LastContentData;
 
+    .line 42
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getThumbnailProcessor()Lcom/sec/android/app/camera/engine/ThumbnailProcessor;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mThumbnailProcessor:Lcom/sec/android/app/camera/engine/ThumbnailProcessor;
 
+    .line 43
     invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/EngineContainer;->getCameraDeviceStateListener()Lcom/sec/android/app/camera/engine/CameraDeviceStateListener;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraDeviceStateListener:Lcom/sec/android/app/camera/engine/CameraDeviceStateListener;
 
+    .line 44
     iput-object p3, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mGenericEventListener:Lcom/sec/android/app/camera/interfaces/Engine$GenericEventListener;
 
+    .line 45
     iput-object p4, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraErrorEventListener:Lcom/sec/android/app/camera/interfaces/Engine$CameraErrorEventListener;
 
+    .line 46
     invoke-static {}, Lcom/sec/android/app/TraceWrapper;->traceEnd()V
 
     return-void
@@ -382,6 +427,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0, p1, p2, p3}, Lcom/sec/android/app/camera/engine/CommonEngine;-><init>(Lcom/sec/android/app/camera/engine/EngineContainer;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/interfaces/Engine$GenericEventListener;Lcom/sec/android/app/camera/interfaces/Engine$CameraErrorEventListener;)V
 
     return-void
@@ -2259,6 +2305,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mMakerSettingApplier:Lcom/sec/android/app/camera/engine/MakerSettingApplier;
 
     invoke-virtual {p0, p1, p2}, Lcom/sec/android/app/camera/engine/MakerSettingApplier;->applySettings(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
@@ -2269,6 +2316,7 @@
 .method public applySettings(Lcom/sec/android/app/camera/interfaces/InternalEngine$MakerPublicSettingsUpdater;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mMakerSettingApplier:Lcom/sec/android/app/camera/engine/MakerSettingApplier;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/engine/MakerSettingApplier;->applySettings(Lcom/sec/android/app/camera/interfaces/InternalEngine$MakerPublicSettingsUpdater;)V
@@ -3108,12 +3156,14 @@
 .method public getCapability()Lcom/sec/android/app/camera/interfaces/Capability;
     .locals 2
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->getCameraId()I
 
     move-result v0
 
+    .line 3
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {v1}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->getCameraId()I
@@ -3126,12 +3176,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mMakerHolder:Lcom/sec/android/app/camera/engine/request/MakerHolder;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/engine/request/MakerHolder;->getTargetCameraId()I
 
     move-result v0
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraHolder:Lcom/sec/android/app/camera/engine/request/CameraHolder;
 
@@ -3145,6 +3197,7 @@
 .method public getCapability(I)Lcom/sec/android/app/camera/interfaces/Capability;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraHolder:Lcom/sec/android/app/camera/engine/request/CameraHolder;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/engine/request/CameraHolder;->getCapability(I)Lcom/sec/android/app/camera/interfaces/Capability;
@@ -3374,6 +3427,7 @@
 .method public getMaxZoomLevel()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mZoomController:Lcom/sec/android/app/camera/engine/ZoomController;
 
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -3392,6 +3446,7 @@
 .method public getMaxZoomLevel(I)I
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mZoomController:Lcom/sec/android/app/camera/engine/ZoomController;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/engine/ZoomController;->getMaxZoomLevel(I)I
@@ -3404,6 +3459,7 @@
 .method public getMinZoomLevel()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mZoomController:Lcom/sec/android/app/camera/engine/ZoomController;
 
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -3422,6 +3478,7 @@
 .method public getMinZoomLevel(I)I
     .locals 1
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mZoomController:Lcom/sec/android/app/camera/engine/ZoomController;
 
     const/4 v0, 0x6
@@ -3749,6 +3806,7 @@
 .method public getSensorInfoActiveArraySize()Landroid/graphics/Rect;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->getCameraId()I
@@ -3765,10 +3823,12 @@
 .method public getSensorInfoActiveArraySize(I)Landroid/graphics/Rect;
     .locals 1
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/engine/CommonEngine;->getCapability(I)Lcom/sec/android/app/camera/interfaces/Capability;
 
     move-result-object p1
 
+    .line 3
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/Capability;->isSensorCropSupported()Z
 
     move-result v0
@@ -3781,6 +3841,7 @@
 
     if-nez v0, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {p0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->isSensorCropEnabled()Z
@@ -3793,6 +3854,7 @@
 
     return-object p0
 
+    .line 5
     :cond_0
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/Capability;->getSensorInfoActiveArraySize()Landroid/graphics/Rect;
 

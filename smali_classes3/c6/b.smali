@@ -23,6 +23,7 @@
 
     const/high16 v1, 0x3f400000    # 0.75f
 
+    .line 1
     invoke-direct {p0, v0, v1}, Lc6/b;-><init>(IF)V
 
     return-void
@@ -31,16 +32,20 @@
 .method public constructor <init>(IF)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput p2, p0, Lc6/b;->a:F
 
+    .line 4
     invoke-static {p1}, Lc6/c;->a(I)I
 
     move-result p1
 
     add-int/lit8 v0, p1, -0x1
 
+    .line 5
     iput v0, p0, Lc6/b;->b:I
 
     int-to-float v0, p1
@@ -49,8 +54,10 @@
 
     float-to-int p2, p2
 
+    .line 6
     iput p2, p0, Lc6/b;->d:I
 
+    .line 7
     new-array p1, p1, [Ljava/lang/Object;
 
     iput-object p1, p0, Lc6/b;->e:[Ljava/lang/Object;

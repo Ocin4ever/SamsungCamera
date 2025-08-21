@@ -77,6 +77,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
 
     return-void
@@ -85,30 +86,39 @@
 .method public constructor <init>(Landroid/content/Context;IZ)V
     .locals 4
 
+    .line 2
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;-><init>()V
 
     const/4 p1, 0x1
 
+    .line 3
     iput p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
     const/4 v0, 0x0
 
+    .line 4
     iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mReverseLayout:Z
 
+    .line 5
     iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mShouldReverseLayout:Z
 
+    .line 6
     iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mStackFromEnd:Z
 
+    .line 7
     iput-boolean p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mSmoothScrollbarEnabled:Z
 
     const/4 p1, -0x1
 
+    .line 8
     iput p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mPendingScrollPosition:I
 
     const/high16 p1, -0x80000000
 
+    .line 9
     iput p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mPendingScrollPositionOffset:I
 
+    .line 10
     new-instance p1, Landroid/view/animation/PathInterpolator;
 
     const/4 v0, 0x0
@@ -125,14 +135,17 @@
 
     const/4 p1, 0x0
 
+    .line 11
     iput-object p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mPendingSavedState:Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;
 
+    .line 12
     new-instance p1, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;
 
     invoke-direct {p1}, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;-><init>()V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mAnchorInfo:Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;
 
+    .line 13
     new-instance p1, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;
 
     invoke-direct {p1}, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;-><init>()V
@@ -141,14 +154,18 @@
 
     const/4 p1, 0x2
 
+    .line 14
     iput p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mInitialPrefetchItemCount:I
 
     new-array p1, p1, [I
 
+    .line 15
     iput-object p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mReusableIntPair:[I
 
+    .line 16
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->setOrientation(I)V
 
+    .line 17
     invoke-virtual {p0, p3}, Landroidx/recyclerview/widget/LinearLayoutManager;->setReverseLayout(Z)V
 
     return-void
@@ -157,30 +174,39 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 5
 
+    .line 18
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 19
     iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientation:I
 
     const/4 v1, 0x0
 
+    .line 20
     iput-boolean v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mReverseLayout:Z
 
+    .line 21
     iput-boolean v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mShouldReverseLayout:Z
 
+    .line 22
     iput-boolean v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mStackFromEnd:Z
 
+    .line 23
     iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mSmoothScrollbarEnabled:Z
 
     const/4 v0, -0x1
 
+    .line 24
     iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mPendingScrollPosition:I
 
     const/high16 v0, -0x80000000
 
+    .line 25
     iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mPendingScrollPositionOffset:I
 
+    .line 26
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
     const/4 v1, 0x0
@@ -197,14 +223,17 @@
 
     const/4 v0, 0x0
 
+    .line 27
     iput-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mPendingSavedState:Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;
 
+    .line 28
     new-instance v0, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;
 
     invoke-direct {v0}, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mAnchorInfo:Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;
 
+    .line 29
     new-instance v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;
 
     invoke-direct {v0}, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutChunkResult;-><init>()V
@@ -213,24 +242,30 @@
 
     const/4 v0, 0x2
 
+    .line 30
     iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mInitialPrefetchItemCount:I
 
     new-array v0, v0, [I
 
+    .line 31
     iput-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mReusableIntPair:[I
 
+    .line 32
     invoke-static {p1, p2, p3, p4}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getProperties(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroidx/recyclerview/widget/RecyclerView$LayoutManager$Properties;
 
     move-result-object p1
 
+    .line 33
     iget p2, p1, Landroidx/recyclerview/widget/RecyclerView$LayoutManager$Properties;->orientation:I
 
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->setOrientation(I)V
 
+    .line 34
     iget-boolean p2, p1, Landroidx/recyclerview/widget/RecyclerView$LayoutManager$Properties;->reverseLayout:Z
 
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->setReverseLayout(Z)V
 
+    .line 35
     iget-boolean p1, p1, Landroidx/recyclerview/widget/RecyclerView$LayoutManager$Properties;->stackFromEnd:Z
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->setStackFromEnd(Z)V
@@ -1934,6 +1969,7 @@
 .method private updateLayoutStateToFillEnd(II)V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mLayoutState:Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;
 
     iget-object v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
@@ -1946,6 +1982,7 @@
 
     iput v1, v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mAvailable:I
 
+    .line 3
     iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mLayoutState:Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;
 
     iget-boolean p0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mShouldReverseLayout:Z
@@ -1961,17 +1998,22 @@
     :cond_0
     move p0, v1
 
+    .line 4
     :goto_0
     iput p0, v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mItemDirection:I
 
+    .line 5
     iput p1, v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
+    .line 6
     iput v1, v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mLayoutDirection:I
 
+    .line 7
     iput p2, v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mOffset:I
 
     const/high16 p0, -0x80000000
 
+    .line 8
     iput p0, v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mScrollingOffset:I
 
     return-void
@@ -1980,6 +2022,7 @@
 .method private updateLayoutStateToFillEnd(Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;)V
     .locals 1
 
+    .line 1
     iget v0, p1, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;->mPosition:I
 
     iget p1, p1, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;->mCoordinate:I
@@ -1992,6 +2035,7 @@
 .method private updateLayoutStateToFillStart(II)V
     .locals 2
 
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mLayoutState:Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;
 
     iget-object v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mOrientationHelper:Landroidx/recyclerview/widget/OrientationHelper;
@@ -2004,10 +2048,12 @@
 
     iput v1, v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mAvailable:I
 
+    .line 3
     iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mLayoutState:Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;
 
     iput p1, v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
+    .line 4
     iget-boolean p0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;->mShouldReverseLayout:Z
 
     const/4 p1, -0x1
@@ -2021,15 +2067,19 @@
     :cond_0
     move p0, p1
 
+    .line 5
     :goto_0
     iput p0, v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mItemDirection:I
 
+    .line 6
     iput p1, v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mLayoutDirection:I
 
+    .line 7
     iput p2, v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mOffset:I
 
     const/high16 p0, -0x80000000
 
+    .line 8
     iput p0, v0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mScrollingOffset:I
 
     return-void
@@ -2038,6 +2088,7 @@
 .method private updateLayoutStateToFillStart(Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;)V
     .locals 1
 
+    .line 1
     iget v0, p1, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;->mPosition:I
 
     iget p1, p1, Landroidx/recyclerview/widget/LinearLayoutManager$AnchorInfo;->mCoordinate:I

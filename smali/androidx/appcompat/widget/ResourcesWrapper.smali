@@ -143,6 +143,7 @@
 .method public getDrawable(I)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -155,6 +156,7 @@
 .method public getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-static {p0, p1, p2}, Landroidx/core/content/res/ResourcesCompat;->getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -177,6 +179,7 @@
 .method public getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     const/4 v0, 0x0
@@ -191,6 +194,7 @@
 .method public getDrawableForDensity(IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-static {p0, p1, p2, p3}, Landroidx/core/content/res/ResourcesCompat;->getDrawableForDensity(Landroid/content/res/Resources;IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
@@ -275,6 +279,7 @@
 .method public getQuantityString(II)Ljava/lang/String;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
@@ -287,6 +292,7 @@
 .method public varargs getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
@@ -359,6 +365,7 @@
 .method public getString(I)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -371,6 +378,7 @@
 .method public varargs getString(I[Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -395,6 +403,7 @@
 .method public getText(I)Ljava/lang/CharSequence;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
@@ -407,6 +416,7 @@
 .method public getText(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getText(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
@@ -431,6 +441,7 @@
 .method public getValue(ILandroid/util/TypedValue;Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
@@ -441,6 +452,7 @@
 .method public getValue(Ljava/lang/String;Landroid/util/TypedValue;Z)V
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/content/res/Resources;->getValue(Ljava/lang/String;Landroid/util/TypedValue;Z)V
@@ -497,6 +509,7 @@
 .method public openRawResource(I)Ljava/io/InputStream;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
@@ -509,6 +522,7 @@
 .method public openRawResource(ILandroid/util/TypedValue;)Ljava/io/InputStream;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->openRawResource(ILandroid/util/TypedValue;)Ljava/io/InputStream;

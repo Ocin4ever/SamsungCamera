@@ -80,6 +80,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -90,6 +91,7 @@
 
     const/4 p1, 0x0
 
+    .line 2
     invoke-static {p0, p1}, Landroidx/work/impl/utils/PackageManagerHelper;->isComponentEnabled(IZ)Z
 
     move-result p0
@@ -100,6 +102,7 @@
 .method public static isComponentExplicitlyEnabled(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
+    .line 3
     invoke-static {p0, p1}, Landroidx/work/impl/utils/PackageManagerHelper;->getComponentEnabledSetting(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result p0

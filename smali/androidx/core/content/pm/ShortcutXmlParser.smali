@@ -182,12 +182,14 @@
         }
     .end annotation
 
+    .line 16
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 17
     :cond_0
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -200,17 +202,20 @@
 
     if-ne v2, v3, :cond_1
 
+    .line 18
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v3
 
     if-lez v3, :cond_3
 
+    .line 19
     :cond_1
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v3
 
+    .line 20
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -223,6 +228,7 @@
 
     const-string v2, "shortcut"
 
+    .line 21
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -231,6 +237,7 @@
 
     const-string v2, "shortcutId"
 
+    .line 22
     invoke-static {p0, v2}, Landroidx/core/content/pm/ShortcutXmlParser;->getAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -239,6 +246,7 @@
 
     goto :goto_0
 
+    .line 23
     :cond_2
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -261,10 +269,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 2
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.MAIN"
@@ -273,14 +283,17 @@
 
     const-string v2, "android.intent.category.LAUNCHER"
 
+    .line 3
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 4
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 5
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
@@ -293,6 +306,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 6
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -301,6 +315,7 @@
 
     goto :goto_2
 
+    .line 7
     :cond_0
     :try_start_0
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -321,26 +336,31 @@
 
     check-cast v2, Landroid/content/pm/ResolveInfo;
 
+    .line 8
     iget-object v2, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
+    .line 9
     iget-object v3, v2, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz v3, :cond_1
 
     const-string v4, "android.app.shortcuts"
 
+    .line 10
     invoke-virtual {v3, v4}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
+    .line 11
     invoke-static {p0, v2}, Landroidx/core/content/pm/ShortcutXmlParser;->getXmlResourceParser(Landroid/content/Context;Landroid/content/pm/ActivityInfo;)Landroid/content/res/XmlResourceParser;
 
     move-result-object v2
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 12
     :try_start_1
     invoke-static {v2}, Landroidx/core/content/pm/ShortcutXmlParser;->parseShortcutIds(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/List;
 
@@ -352,6 +372,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 13
     :try_start_2
     invoke-interface {v2}, Landroid/content/res/XmlResourceParser;->close()V
     :try_end_2
@@ -364,6 +385,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 14
     :try_start_3
     invoke-interface {v2}, Landroid/content/res/XmlResourceParser;->close()V
     :try_end_3
@@ -390,6 +412,7 @@
 
     const-string v2, "Failed to parse the Xml resource: "
 
+    .line 15
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_3

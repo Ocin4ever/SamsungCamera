@@ -189,6 +189,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 1
     invoke-static {p0, p1, p2, v0}, Lcom/sec/android/app/camera/cropper/handle/HandleHelper;->getTouchedHandle(FFLcom/sec/android/app/camera/cropper/polygon/Polygon;F)Lcom/sec/android/app/camera/cropper/handle/Handle;
 
     move-result-object p0
@@ -203,6 +204,7 @@
 
     move v1, v0
 
+    .line 2
     :goto_0
     invoke-virtual {p2}, Lcom/sec/android/app/camera/cropper/polygon/Polygon;->getVertexCount()I
 
@@ -210,6 +212,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 3
     invoke-virtual {p2}, Lcom/sec/android/app/camera/cropper/polygon/Polygon;->getPointList()Ljava/util/ArrayList;
 
     move-result-object v2
@@ -220,6 +223,7 @@
 
     check-cast v2, Landroid/graphics/PointF;
 
+    .line 4
     invoke-static {v1, p0, p1, v2}, Lcom/sec/android/app/camera/cropper/handle/HandleHelper;->getTouchedPointHandle(IFFLandroid/graphics/PointF;)Lcom/sec/android/app/camera/cropper/handle/Handle;
 
     move-result-object v2
@@ -233,6 +237,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     :goto_1
     invoke-virtual {p2}, Lcom/sec/android/app/camera/cropper/polygon/Polygon;->getVertexCount()I
@@ -241,6 +246,7 @@
 
     if-ge v0, v1, :cond_3
 
+    .line 6
     invoke-virtual {p2}, Lcom/sec/android/app/camera/cropper/polygon/Polygon;->getPointList()Ljava/util/ArrayList;
 
     move-result-object v1
@@ -265,6 +271,7 @@
 
     if-gtz p3, :cond_4
 
+    .line 7
     invoke-virtual {p2}, Lcom/sec/android/app/camera/cropper/polygon/Polygon;->getPointList()Ljava/util/ArrayList;
 
     move-result-object p3
@@ -275,6 +282,7 @@
 
     if-eqz p0, :cond_4
 
+    .line 8
     invoke-static {}, Lcom/sec/android/app/camera/cropper/handle/HandleHelper;->getHandleList()Ljava/util/ArrayList;
 
     move-result-object p0

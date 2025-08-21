@@ -2036,8 +2036,10 @@
 
     const-string v1, "ScoverManager"
 
+    .line 19
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 20
     invoke-virtual {p0}, Lcom/samsung/android/sdk/cover/ScoverManager;->isSupportCover()Z
 
     move-result v0
@@ -2046,10 +2048,12 @@
 
     const-string p0, "registerListener : This device is not supported cover"
 
+    .line 21
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 22
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/sdk/cover/ScoverManager;->isSmartCover()Z
 
@@ -2059,6 +2063,7 @@
 
     const-string p0, "registerListener : If cover is smart cover, it does not need to register listener of intenal App"
 
+    .line 23
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -2066,6 +2071,7 @@
     :cond_1
     const/high16 v0, 0x1010000
 
+    .line 24
     invoke-static {v0}, Lcom/samsung/android/sdk/cover/ScoverManager;->isSupportableVersion(I)Z
 
     move-result v0
@@ -2078,10 +2084,12 @@
 
     const-string p0, "registerListener : listener is null"
 
+    .line 25
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 26
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/ScoverManager;->mCoverStateListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -2089,6 +2097,7 @@
 
     move-result-object v0
 
+    .line 27
     :cond_3
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2098,12 +2107,14 @@
 
     if-eqz v3, :cond_4
 
+    .line 28
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate;
 
+    .line 29
     invoke-virtual {v3}, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate;->getListener()Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListener;
 
     move-result-object v5
@@ -2126,12 +2137,14 @@
     :goto_0
     if-nez v3, :cond_5
 
+    .line 30
     new-instance v3, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate;
 
     iget-object v5, p0, Lcom/samsung/android/sdk/cover/ScoverManager;->mContext:Landroid/content/Context;
 
     invoke-direct {v3, p1, v4, v5}, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate;-><init>(Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListener;Landroid/os/Handler;Landroid/content/Context;)V
 
+    .line 31
     :cond_5
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/android/sdk/cover/ScoverManager;->getService()Lcom/samsung/android/cover/ICoverManager;
@@ -2140,6 +2153,7 @@
 
     if-eqz p1, :cond_6
 
+    .line 32
     new-instance v4, Landroid/content/ComponentName;
 
     iget-object v5, p0, Lcom/samsung/android/sdk/cover/ScoverManager;->mContext:Landroid/content/Context;
@@ -2148,6 +2162,7 @@
 
     move-result-object v5
 
+    .line 33
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v6
@@ -2158,10 +2173,12 @@
 
     invoke-direct {v4, v5, v6}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 34
     invoke-interface {p1, v3, v4, v2}, Lcom/samsung/android/cover/ICoverManager;->registerListenerCallback(Landroid/os/IBinder;Landroid/content/ComponentName;I)V
 
     if-nez v0, :cond_6
 
+    .line 35
     iget-object p0, p0, Lcom/samsung/android/sdk/cover/ScoverManager;->mCoverStateListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -2175,12 +2192,14 @@
 
     const-string p1, "RemoteException in registerListener: "
 
+    .line 36
     invoke-static {v1, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_6
     :goto_1
     return-void
 
+    .line 37
     :cond_7
     new-instance p0, Lcom/samsung/android/sdk/SsdkUnsupportedException;
 
@@ -2200,6 +2219,7 @@
 
     const-string p1, "registerListener : Use deprecated API!! Change ScoverStateListener to StateListener"
 
+    .line 1
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -2212,8 +2232,10 @@
 
     const-string v1, "ScoverManager"
 
+    .line 2
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     invoke-virtual {p0}, Lcom/samsung/android/sdk/cover/ScoverManager;->isSupportCover()Z
 
     move-result v0
@@ -2222,10 +2244,12 @@
 
     const-string p0, "registerListener : This device is not supported cover"
 
+    .line 4
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/sdk/cover/ScoverManager;->isSmartCover()Z
 
@@ -2235,6 +2259,7 @@
 
     const-string p0, "registerListener : If cover is smart cover, it does not need to register listener of intenal App"
 
+    .line 6
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -2244,10 +2269,12 @@
 
     const-string p0, "registerListener : listener is null"
 
+    .line 7
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 8
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/ScoverManager;->mListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -2255,6 +2282,7 @@
 
     move-result-object v0
 
+    .line 9
     :cond_3
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2264,12 +2292,14 @@
 
     if-eqz v2, :cond_4
 
+    .line 10
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/samsung/android/sdk/cover/CoverListenerDelegate;
 
+    .line 11
     invoke-virtual {v2}, Lcom/samsung/android/sdk/cover/CoverListenerDelegate;->getListener()Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
 
     move-result-object v4
@@ -2292,12 +2322,14 @@
     :goto_0
     if-nez v2, :cond_5
 
+    .line 12
     new-instance v2, Lcom/samsung/android/sdk/cover/CoverListenerDelegate;
 
     iget-object v4, p0, Lcom/samsung/android/sdk/cover/ScoverManager;->mContext:Landroid/content/Context;
 
     invoke-direct {v2, p1, v3, v4}, Lcom/samsung/android/sdk/cover/CoverListenerDelegate;-><init>(Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;Landroid/os/Handler;Landroid/content/Context;)V
 
+    .line 13
     :cond_5
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/android/sdk/cover/ScoverManager;->getService()Lcom/samsung/android/cover/ICoverManager;
@@ -2306,6 +2338,7 @@
 
     if-eqz p1, :cond_6
 
+    .line 14
     new-instance v3, Landroid/content/ComponentName;
 
     iget-object v4, p0, Lcom/samsung/android/sdk/cover/ScoverManager;->mContext:Landroid/content/Context;
@@ -2314,6 +2347,7 @@
 
     move-result-object v4
 
+    .line 15
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v5
@@ -2324,10 +2358,12 @@
 
     invoke-direct {v3, v4, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 16
     invoke-interface {p1, v2, v3}, Lcom/samsung/android/cover/ICoverManager;->registerCallback(Landroid/os/IBinder;Landroid/content/ComponentName;)V
 
     if-nez v0, :cond_6
 
+    .line 17
     iget-object p0, p0, Lcom/samsung/android/sdk/cover/ScoverManager;->mListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -2341,6 +2377,7 @@
 
     const-string p1, "RemoteException in registerListener: "
 
+    .line 18
     invoke-static {v1, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_6
@@ -3186,8 +3223,10 @@
 
     const-string v1, "ScoverManager"
 
+    .line 16
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 17
     invoke-virtual {p0}, Lcom/samsung/android/sdk/cover/ScoverManager;->isSupportCover()Z
 
     move-result v0
@@ -3196,10 +3235,12 @@
 
     const-string p0, "unregisterListener : This device is not supported cover"
 
+    .line 18
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 19
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/sdk/cover/ScoverManager;->isSmartCover()Z
 
@@ -3209,6 +3250,7 @@
 
     const-string p0, "unregisterListener : If cover is smart cover, it does not need to unregister listener of intenal App"
 
+    .line 20
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -3216,6 +3258,7 @@
     :cond_1
     const/high16 v0, 0x1010000
 
+    .line 21
     invoke-static {v0}, Lcom/samsung/android/sdk/cover/ScoverManager;->isSupportableVersion(I)Z
 
     move-result v0
@@ -3226,10 +3269,12 @@
 
     const-string p0, "unregisterListener : listener is null"
 
+    .line 22
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 23
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/ScoverManager;->mCoverStateListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -3237,6 +3282,7 @@
 
     move-result-object v0
 
+    .line 24
     :cond_3
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -3244,12 +3290,14 @@
 
     if-eqz v2, :cond_4
 
+    .line 25
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate;
 
+    .line 26
     invoke-virtual {v2}, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate;->getListener()Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListener;
 
     move-result-object v3
@@ -3270,6 +3318,7 @@
 
     return-void
 
+    .line 27
     :cond_5
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/android/sdk/cover/ScoverManager;->getService()Lcom/samsung/android/cover/ICoverManager;
@@ -3278,12 +3327,14 @@
 
     if-eqz p1, :cond_6
 
+    .line 28
     invoke-interface {p1, v2}, Lcom/samsung/android/cover/ICoverManager;->unregisterCallback(Landroid/os/IBinder;)Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
+    .line 29
     iget-object p0, p0, Lcom/samsung/android/sdk/cover/ScoverManager;->mCoverStateListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
@@ -3297,12 +3348,14 @@
 
     const-string p1, "RemoteException in unregisterListener: "
 
+    .line 30
     invoke-static {v1, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_6
     :goto_1
     return-void
 
+    .line 31
     :cond_7
     new-instance p0, Lcom/samsung/android/sdk/SsdkUnsupportedException;
 
@@ -3324,6 +3377,7 @@
 
     const-string p1, "unregisterListener : Use deprecated API!! Change ScoverStateListener to StateListener"
 
+    .line 1
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -3336,8 +3390,10 @@
 
     const-string v1, "ScoverManager"
 
+    .line 2
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     invoke-virtual {p0}, Lcom/samsung/android/sdk/cover/ScoverManager;->isSupportCover()Z
 
     move-result v0
@@ -3346,10 +3402,12 @@
 
     const-string p0, "unregisterListener : This device is not supported cover"
 
+    .line 4
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/sdk/cover/ScoverManager;->isSmartCover()Z
 
@@ -3359,6 +3417,7 @@
 
     const-string p0, "unregisterListener : If cover is smart cover, it does not need to unregister listener of intenal App"
 
+    .line 6
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -3368,10 +3427,12 @@
 
     const-string p0, "unregisterListener : listener is null"
 
+    .line 7
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
+    .line 8
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/ScoverManager;->mListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -3379,6 +3440,7 @@
 
     move-result-object v0
 
+    .line 9
     :cond_3
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -3386,12 +3448,14 @@
 
     if-eqz v2, :cond_4
 
+    .line 10
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/samsung/android/sdk/cover/CoverListenerDelegate;
 
+    .line 11
     invoke-virtual {v2}, Lcom/samsung/android/sdk/cover/CoverListenerDelegate;->getListener()Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
 
     move-result-object v3
@@ -3412,6 +3476,7 @@
 
     return-void
 
+    .line 12
     :cond_5
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/android/sdk/cover/ScoverManager;->getService()Lcom/samsung/android/cover/ICoverManager;
@@ -3420,12 +3485,14 @@
 
     if-eqz p1, :cond_6
 
+    .line 13
     invoke-interface {p1, v2}, Lcom/samsung/android/cover/ICoverManager;->unregisterCallback(Landroid/os/IBinder;)Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
+    .line 14
     iget-object p0, p0, Lcom/samsung/android/sdk/cover/ScoverManager;->mListenerDelegates:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
@@ -3439,6 +3506,7 @@
 
     const-string p1, "RemoteException in unregisterListener: "
 
+    .line 15
     invoke-static {v1, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_6

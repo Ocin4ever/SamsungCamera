@@ -196,6 +196,7 @@
 .method public bridge synthetic multiset()Lcom/google/common/collect/Multiset;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/SortedMultisets$ElementSet;->multiset()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -213,6 +214,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/SortedMultisets$ElementSet;->multiset:Lcom/google/common/collect/SortedMultiset;
 
     return-object p0

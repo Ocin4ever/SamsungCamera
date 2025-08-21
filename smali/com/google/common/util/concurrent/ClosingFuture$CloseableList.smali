@@ -39,8 +39,10 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/util/IdentityHashMap;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$DeferredCloser;
 
     invoke-direct {v0, p0}, Lcom/google/common/util/concurrent/ClosingFuture$DeferredCloser;-><init>(Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;)V
@@ -53,6 +55,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/util/concurrent/ClosingFuture$1;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;-><init>()V
 
     return-void

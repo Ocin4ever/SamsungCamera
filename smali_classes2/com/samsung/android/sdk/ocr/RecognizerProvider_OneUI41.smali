@@ -19,12 +19,14 @@
 .method private isHandwritten(Landroid/graphics/Bitmap;Z)Z
     .locals 5
 
+    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     if-eqz p2, :cond_0
 
+    .line 3
     iget-object p2, p0, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->mClassifier:Lcom/samsung/android/sdk/pen/ocr/SpenITypeClassifier;
 
     iget-object p0, p0, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->mDataConverter:Lcom/samsung/android/sdk/ocr/DataConverter;
@@ -39,6 +41,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->mClassifier:Lcom/samsung/android/sdk/pen/ocr/SpenITypeClassifier;
 
@@ -46,6 +49,7 @@
 
     move-result p0
 
+    .line 5
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -57,6 +61,7 @@
 
     const/4 v3, 0x0
 
+    .line 6
     invoke-static {p0}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object v4
@@ -151,6 +156,7 @@
 .method public isHandwritten(Landroid/graphics/Bitmap;)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/samsung/android/sdk/ocr/RecognizerProvider;->mDataConverter:Lcom/samsung/android/sdk/ocr/DataConverter;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/sdk/ocr/DataConverter;->resizeBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;

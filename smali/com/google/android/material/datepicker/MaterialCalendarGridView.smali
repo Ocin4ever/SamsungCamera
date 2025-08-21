@@ -15,6 +15,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -23,14 +24,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/GridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 3
     invoke-static {}, Lcom/google/android/material/datepicker/r;->i()Ljava/util/Calendar;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->a:Ljava/util/Calendar;
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -41,14 +45,17 @@
 
     if-eqz p1, :cond_0
 
+    .line 5
     sget p1, Ly0/e;->d:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setNextFocusLeftId(I)V
 
+    .line 6
     sget p1, Ly0/e;->l:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setNextFocusRightId(I)V
 
+    .line 7
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -60,6 +67,7 @@
 
     iput-boolean p1, p0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b:Z
 
+    .line 8
     new-instance p1, Lcom/google/android/material/datepicker/MaterialCalendarGridView$a;
 
     invoke-direct {p1, p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView$a;-><init>(Lcom/google/android/material/datepicker/MaterialCalendarGridView;)V
@@ -131,6 +139,7 @@
 .method public bridge synthetic getAdapter()Landroid/widget/Adapter;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b()Lcom/google/android/material/datepicker/l;
 
     move-result-object p0
@@ -141,6 +150,7 @@
 .method public bridge synthetic getAdapter()Landroid/widget/ListAdapter;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->b()Lcom/google/android/material/datepicker/l;
 
     move-result-object p0
@@ -328,6 +338,7 @@
 .method public bridge synthetic setAdapter(Landroid/widget/Adapter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/widget/ListAdapter;
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/MaterialCalendarGridView;->setAdapter(Landroid/widget/ListAdapter;)V
@@ -338,14 +349,17 @@
 .method public final setAdapter(Landroid/widget/ListAdapter;)V
     .locals 2
 
+    .line 2
     instance-of v0, p1, Lcom/google/android/material/datepicker/l;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-super {p0, p1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     return-void
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -355,6 +369,7 @@
 
     const-class v0, Lcom/google/android/material/datepicker/MaterialCalendarGridView;
 
+    .line 5
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v0
@@ -365,6 +380,7 @@
 
     const-class v0, Lcom/google/android/material/datepicker/l;
 
+    .line 6
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v0
@@ -375,6 +391,7 @@
 
     const-string v0, "%1$s must have its Adapter set to a %2$s"
 
+    .line 7
     invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1

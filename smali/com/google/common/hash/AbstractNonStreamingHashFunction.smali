@@ -29,6 +29,7 @@
 .method public hashBytes(Ljava/nio/ByteBuffer;)Lcom/google/common/hash/HashCode;
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
     move-result v0
@@ -180,6 +181,7 @@
 
     const/16 v0, 0x20
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/common/hash/AbstractNonStreamingHashFunction;->newHasher(I)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -199,9 +201,11 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 3
     new-instance v0, Lcom/google/common/hash/AbstractNonStreamingHashFunction$BufferingHasher;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/hash/AbstractNonStreamingHashFunction$BufferingHasher;-><init>(Lcom/google/common/hash/AbstractNonStreamingHashFunction;I)V

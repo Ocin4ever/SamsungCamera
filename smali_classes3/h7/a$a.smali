@@ -58,6 +58,7 @@
 .method public read()I
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lh7/a$a;->a:Lh7/a;
 
     iget-wide v0, p0, Lh7/a;->b:J
@@ -85,6 +86,7 @@
 .method public read([BII)I
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lh7/a$a;->a:Lh7/a;
 
     invoke-virtual {p0, p1, p2, p3}, Lh7/a;->read([BII)I

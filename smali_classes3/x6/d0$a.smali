@@ -18,10 +18,13 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 2
     sget-object v0, Li6/e;->R:Li6/e$b;
 
+    .line 3
     sget-object v1, Lx6/d0$a$a;->a:Lx6/d0$a$a;
 
+    .line 4
     invoke-direct {p0, v0, v1}, Li6/b;-><init>(Li6/g$c;Lq6/l;)V
 
     return-void
@@ -30,6 +33,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lx6/d0$a;-><init>()V
 
     return-void

@@ -58,6 +58,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     sget v0, Lcom/samsung/android/camera/core2/util/BufferPoolBase;->h:I
 
     invoke-direct {p0, p1, v0}, Lcom/samsung/android/camera/core2/util/BufferPoolBase;-><init>(Landroid/content/Context;I)V
@@ -68,14 +69,17 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 3
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/util/BufferPoolBase;->a:Ljava/util/NavigableMap;
 
+    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -90,6 +94,7 @@
 
     const-string v2, "activity"
 
+    .line 5
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -98,8 +103,10 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/core2/util/BufferPoolBase;->c:Landroid/app/ActivityManager;
 
+    .line 6
     iput p2, p0, Lcom/samsung/android/camera/core2/util/BufferPoolBase;->d:I
 
+    .line 7
     invoke-virtual {p0}, Lcom/samsung/android/camera/core2/util/BufferPoolBase;->d()Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     move-result-object p1
@@ -108,6 +115,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
+    .line 8
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result p0
@@ -126,10 +134,12 @@
 
     const-string p0, "bufferPool(hash %d), created : bufferPoolSize max %d"
 
+    .line 9
     invoke-static {p1, p0, v2}, Lcom/samsung/android/camera/core2/util/CLog;->l(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 10
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -137,6 +147,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
+    .line 11
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -145,6 +156,7 @@
 
     const-string p2, "maxBufferPoolSize(%d) must not be less than 1"
 
+    .line 12
     invoke-static {p1, p2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1

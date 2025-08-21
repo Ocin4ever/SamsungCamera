@@ -17,14 +17,19 @@
 .method public constructor <init>(IIII)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Landroidx/window/core/Bounds;->left:I
 
+    .line 3
     iput p2, p0, Landroidx/window/core/Bounds;->top:I
 
+    .line 4
     iput p3, p0, Landroidx/window/core/Bounds;->right:I
 
+    .line 5
     iput p4, p0, Landroidx/window/core/Bounds;->bottom:I
 
     return-void
@@ -37,6 +42,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 6
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I

@@ -657,6 +657,7 @@
 
     const-string v1, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nvarying vec2 v_TextureCoord;\nuniform samplerExternalOES u_TextureUnit;\nvoid main() {\n  gl_FragColor = texture2D(u_TextureUnit, v_TextureCoord);\n}\n"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->createProgram(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -672,12 +673,14 @@
     :cond_0
     const-string v1, "u_MVPMatrix"
 
+    .line 2
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mu_MVPMatrixHandle:I
 
+    .line 3
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mProgram:I
 
     const-string v1, "u_STMatrix"
@@ -688,6 +691,7 @@
 
     iput v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mu_STMatrixHandle:I
 
+    .line 4
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mProgram:I
 
     const-string v1, "a_Position"
@@ -698,6 +702,7 @@
 
     iput v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->ma_PositionHandle:I
 
+    .line 5
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mProgram:I
 
     const-string v1, "a_TextureCoordinates"
@@ -708,6 +713,7 @@
 
     iput v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->ma_TextureCoordinatesHandle:I
 
+    .line 6
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mProgram:I
 
     const-string v1, "u_TextureUnit"
@@ -718,10 +724,12 @@
 
     iput v0, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mu_TextureUnitHandle:I
 
+    .line 7
     invoke-virtual {p0, p1}, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->loadTexture(I)I
 
     const/4 p0, 0x0
 
+    .line 8
     invoke-static {p0, p0, p0, p0}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/4 p0, 0x1
@@ -736,6 +744,7 @@
 
     const-string p9, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nvarying vec2 v_TextureCoord;\nuniform samplerExternalOES u_TextureUnit;\nvoid main() {\n  gl_FragColor = texture2D(u_TextureUnit, v_TextureCoord);\n}\n"
 
+    .line 9
     invoke-static {p8, p9}, Lcom/samsung/android/sdk/sgpl/pip/util/OpenGlHelper;->createProgram(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p8
@@ -751,12 +760,14 @@
     :cond_0
     const-string p9, "u_MVPMatrix"
 
+    .line 10
     invoke-static {p8, p9}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
     move-result p8
 
     iput p8, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mu_MVPMatrixHandle:I
 
+    .line 11
     iget p8, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mProgram:I
 
     const-string p9, "u_STMatrix"
@@ -767,6 +778,7 @@
 
     iput p8, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mu_STMatrixHandle:I
 
+    .line 12
     iget p8, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mProgram:I
 
     const-string p9, "a_Position"
@@ -777,6 +789,7 @@
 
     iput p8, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->ma_PositionHandle:I
 
+    .line 13
     iget p8, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mProgram:I
 
     const-string p9, "a_TextureCoordinates"
@@ -787,6 +800,7 @@
 
     iput p8, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->ma_TextureCoordinatesHandle:I
 
+    .line 14
     iget p8, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mProgram:I
 
     const-string p9, "u_TextureUnit"
@@ -797,22 +811,29 @@
 
     iput p8, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mu_TextureUnitHandle:I
 
+    .line 15
     invoke-virtual {p0, p1}, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->loadTexture(I)I
 
     int-to-float p8, p4
 
+    .line 16
     iput p8, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mWidth:F
 
     int-to-float p8, p5
 
+    .line 17
     iput p8, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mHeight:F
 
+    .line 18
     iput p6, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mOriginalWidth:I
 
+    .line 19
     iput p7, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mOriginalHeight:I
 
+    .line 20
     iput p1, p0, Lcom/samsung/android/sdk/sgpl/pip/renderer/RenderTexture_GL_OES;->mRotation:I
 
+    .line 21
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -835,8 +856,10 @@
 
     const/4 p0, 0x0
 
+    .line 22
     invoke-static {p0, p0, p0, p0}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
+    .line 23
     invoke-static {p2, p3, p4, p5}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
     const/4 p0, 0x1

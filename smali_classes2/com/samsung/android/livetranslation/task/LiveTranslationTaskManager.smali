@@ -248,6 +248,7 @@
 
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager;->TAG:Ljava/lang/String;
 
@@ -279,12 +280,14 @@
 
     invoke-static {v0, p1}, Lcom/samsung/android/livetranslation/util/LTTLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 3
     invoke-direct {p0}, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager;->isValidCPs()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
+    .line 4
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -323,10 +326,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     monitor-exit p0
 
     return-void
 
+    .line 6
     :cond_0
     :try_start_1
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager;->mStatus:Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$STATUS;
@@ -335,6 +340,7 @@
 
     if-ne p1, p2, :cond_1
 
+    .line 7
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager;->TAG:Ljava/lang/String;
 
     const-string p2, "requestTask() is canceled Task.......  return"
@@ -343,10 +349,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 8
     monitor-exit p0
 
     return-void
 
+    .line 9
     :cond_1
     :try_start_2
     sget-object p1, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager$1;->$SwitchMap$com$samsung$android$livetranslation$task$LiveTranslationTask$TASKTYPE:[I
@@ -373,11 +381,13 @@
 
     goto :goto_0
 
+    .line 10
     :cond_2
     iget-object p1, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager;->mKeyFrame:Lcom/samsung/android/livetranslation/text/KeyFrame;
 
     invoke-virtual {p1, p5}, Lcom/samsung/android/livetranslation/text/KeyFrame;->setTRLReqString(Ljava/util/List;)V
 
+    .line 11
     new-instance p1, Lcom/samsung/android/livetranslation/task/PostTRLTask;
 
     iget-object v1, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager;->mKeyFrame:Lcom/samsung/android/livetranslation/text/KeyFrame;
@@ -398,14 +408,17 @@
 
     new-array p2, p3, [Ljava/lang/Void;
 
+    .line 12
     invoke-virtual {p1, p2}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
+    .line 13
     iget-object p2, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager;->mPostTRLTasks:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 14
     :cond_3
     new-instance p1, Lcom/samsung/android/livetranslation/task/PostSTRTask;
 
@@ -427,14 +440,17 @@
 
     new-array p2, p3, [Ljava/lang/Void;
 
+    .line 15
     invoke-virtual {p1, p2}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
+    .line 16
     iget-object p2, p0, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager;->mPostSTRTasks:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 17
     :goto_0
     monitor-exit p0
 
@@ -545,6 +561,7 @@
 
     move-object v4, p4
 
+    .line 1
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/livetranslation/task/LiveTranslationTaskManager;->requestTask(Ljava/lang/String;Ljava/lang/String;Lcom/samsung/android/livetranslation/task/LiveTranslationTask$TASKTYPE;Lcom/samsung/android/livetranslation/data/LttOcrResult;Ljava/util/List;)V
 
     return-void

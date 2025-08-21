@@ -51,6 +51,7 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 1
 
+    .line 2
     sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-direct {p0, p1, v0}, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;-><init>(Ljava/io/InputStream;Ljava/nio/ByteOrder;)V
@@ -61,12 +62,15 @@
 .method public constructor <init>(Ljava/io/InputStream;Ljava/nio/ByteOrder;)V
     .locals 1
 
+    .line 3
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
+    .line 4
     sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     iput-object v0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
+    .line 5
     new-instance v0, Ljava/io/DataInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
@@ -75,10 +79,13 @@
 
     const/4 p1, 0x0
 
+    .line 6
     invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
 
+    .line 7
     iput p1, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mPosition:I
 
+    .line 8
     iput-object p2, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
     return-void
@@ -87,6 +94,7 @@
 .method public constructor <init>([B)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
@@ -135,12 +143,14 @@
 .method public read()I
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mPosition:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mPosition:I
 
+    .line 2
     iget-object p0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mDataInputStream:Ljava/io/DataInputStream;
 
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
@@ -153,12 +163,14 @@
 .method public read([BII)I
     .locals 1
 
+    .line 3
     iget-object v0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mDataInputStream:Ljava/io/DataInputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/DataInputStream;->read([BII)I
 
     move-result p1
 
+    .line 4
     iget p2, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mPosition:I
 
     add-int/2addr p2, p1
@@ -264,6 +276,7 @@
 .method public readFully([B)V
     .locals 2
 
+    .line 3
     iget v0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mPosition:I
 
     array-length v1, p1
@@ -272,6 +285,7 @@
 
     iput v0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mPosition:I
 
+    .line 4
     iget-object p0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mDataInputStream:Ljava/io/DataInputStream;
 
     invoke-virtual {p0, p1}, Ljava/io/DataInputStream;->readFully([B)V
@@ -282,12 +296,14 @@
 .method public readFully([BII)V
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mPosition:I
 
     add-int/2addr v0, p3
 
     iput v0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mPosition:I
 
+    .line 2
     iget-object p0, p0, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->mDataInputStream:Ljava/io/DataInputStream;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/io/DataInputStream;->readFully([BII)V

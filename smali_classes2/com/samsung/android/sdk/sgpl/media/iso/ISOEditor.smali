@@ -3295,6 +3295,7 @@
 .method private isEditableAttribute(I)Z
     .locals 4
 
+    .line 4
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->mMimeType:I
 
     const/4 v1, 0x3
@@ -3317,6 +3318,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->mFileName:Ljava/lang/String;
 
@@ -3328,6 +3330,7 @@
 
     return v3
 
+    .line 6
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->mFileName:Ljava/lang/String;
 
@@ -3358,6 +3361,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_3
     iget-boolean v0, p0, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->mHasExif:Z
 
@@ -3365,6 +3369,7 @@
 
     return v3
 
+    .line 8
     :cond_4
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -5525,6 +5530,7 @@
 
     return v1
 
+    .line 1
     :cond_0
     :try_start_0
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->isRemovableAtrribute(I)Z
@@ -5533,6 +5539,7 @@
 
     return p0
 
+    .line 2
     :cond_1
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->isRestorableAttribute(I)Z
 
@@ -5540,6 +5547,7 @@
 
     return p0
 
+    .line 3
     :cond_2
     invoke-direct {p0, p1}, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->isEditableAttribute(I)Z
 
@@ -5823,6 +5831,7 @@
 .method public setAttribute(ILjava/lang/String;)V
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->mMimeType:I
 
     if-eqz v0, :cond_4
@@ -5850,6 +5859,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -5859,6 +5869,7 @@
 
     throw p0
 
+    .line 3
     :cond_2
     :goto_0
     new-instance v0, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor$MetaTag;
@@ -5867,12 +5878,14 @@
 
     invoke-direct {v0, p1, p2, v1}, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor$MetaTag;-><init>(ILjava/lang/String;Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor$1;)V
 
+    .line 4
     iget-object p0, p0, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->mAttribute:Ljava/util/Vector;
 
     invoke-virtual {p0, v0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
     return-void
 
+    .line 5
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -5894,6 +5907,7 @@
 
     throw p0
 
+    .line 6
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -5907,6 +5921,7 @@
 .method public setAttribute(ILjava/lang/String;Z)V
     .locals 3
 
+    .line 7
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->mMimeType:I
 
     if-eqz v0, :cond_4
@@ -5934,6 +5949,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -5955,6 +5971,7 @@
 
     throw p0
 
+    .line 9
     :cond_2
     :goto_0
     new-instance p3, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor$MetaTag;
@@ -5963,12 +5980,14 @@
 
     invoke-direct {p3, p1, p2, v0}, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor$MetaTag;-><init>(ILjava/lang/String;Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor$1;)V
 
+    .line 10
     iget-object p0, p0, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->mAttribute:Ljava/util/Vector;
 
     invoke-virtual {p0, p3}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
     return-void
 
+    .line 11
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -5990,6 +6009,7 @@
 
     throw p0
 
+    .line 12
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6003,6 +6023,7 @@
 .method public setAttribute(I[BZ)V
     .locals 2
 
+    .line 13
     iget v0, p0, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->mMimeType:I
 
     const/4 v1, 0x1
@@ -6017,18 +6038,21 @@
 
     if-nez p3, :cond_0
 
+    .line 14
     new-instance p3, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor$MetaTag;
 
     const/4 v0, 0x0
 
     invoke-direct {p3, p1, p2, v0}, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor$MetaTag;-><init>(I[BLcom/samsung/android/sdk/sgpl/media/iso/ISOEditor$1;)V
 
+    .line 15
     iget-object p0, p0, Lcom/samsung/android/sdk/sgpl/media/iso/ISOEditor;->mAttribute:Ljava/util/Vector;
 
     invoke-virtual {p0, p3}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
     return-void
 
+    .line 16
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6050,6 +6074,7 @@
 
     throw p0
 
+    .line 17
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6071,6 +6096,7 @@
 
     throw p0
 
+    .line 18
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

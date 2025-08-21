@@ -475,6 +475,7 @@
 .method public static speakTtsAllAtOnce(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     invoke-static {p0}, Lcom/sec/android/app/camera/util/VoiceAssistantManager;->getInstance(Landroid/content/Context;)Lcom/sec/android/app/camera/util/VoiceAssistantManager;
 
     move-result-object p0
@@ -491,6 +492,7 @@
 .method public static speakTtsAllAtOnce(Landroid/content/Context;Ljava/lang/String;Lcom/sec/android/app/camera/util/VoiceAssistantManager$Category;)V
     .locals 1
 
+    .line 2
     invoke-static {p0}, Lcom/sec/android/app/camera/util/VoiceAssistantManager;->getInstance(Landroid/content/Context;)Lcom/sec/android/app/camera/util/VoiceAssistantManager;
 
     move-result-object p0

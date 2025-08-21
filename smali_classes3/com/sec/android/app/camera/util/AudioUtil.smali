@@ -14,7 +14,7 @@
 
 .field private static final TAG:Ljava/lang/String; = "AudioUtil"
 
-.field private static mIsSystemSoundMute:Z
+.field private static mIsSystemSoundMute:Z = false
 
 
 # direct methods

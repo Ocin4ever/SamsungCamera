@@ -66,6 +66,7 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/livetranslation/task/LiveTranslationTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
@@ -81,6 +82,7 @@
 .method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/livetranslation/task/LiveTranslationTask;->onPostExecute(Ljava/lang/Boolean;)V

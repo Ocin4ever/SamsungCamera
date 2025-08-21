@@ -191,6 +191,7 @@
 .method public static createStopWorkIntent(Landroid/content/Context;Landroidx/work/impl/model/WorkGenerationalId;)Landroid/content/Intent;
     .locals 2
 
+    .line 4
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Landroidx/work/impl/background/systemalarm/SystemAlarmService;
@@ -199,8 +200,10 @@
 
     const-string p0, "ACTION_STOP_WORK"
 
+    .line 5
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 6
     invoke-static {v0, p1}, Landroidx/work/impl/background/systemalarm/CommandHandler;->writeWorkGenerationalId(Landroid/content/Intent;Landroidx/work/impl/model/WorkGenerationalId;)Landroid/content/Intent;
 
     move-result-object p0
@@ -211,6 +214,7 @@
 .method public static createStopWorkIntent(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
     .locals 2
 
+    .line 1
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Landroidx/work/impl/background/systemalarm/SystemAlarmService;
@@ -219,10 +223,12 @@
 
     const-string p0, "ACTION_STOP_WORK"
 
+    .line 2
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p0, "KEY_WORKSPEC_ID"
 
+    .line 3
     invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     return-object v0

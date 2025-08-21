@@ -11,6 +11,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     new-instance p2, Ljava/lang/NullPointerException;
 
@@ -25,6 +26,7 @@
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

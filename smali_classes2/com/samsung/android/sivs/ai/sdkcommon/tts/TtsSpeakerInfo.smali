@@ -40,14 +40,17 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/sivs/ai/sdkcommon/tts/TtsSpeakerInfo;->id:Ljava/lang/String;
 
+    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
@@ -60,10 +63,13 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/sivs/ai/sdkcommon/tts/TtsSpeakerInfo;->id:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lcom/samsung/android/sivs/ai/sdkcommon/tts/TtsSpeakerInfo;->displayName:Ljava/lang/String;
 
     return-void

@@ -343,6 +343,7 @@
 .method private restoreDim(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)V
     .locals 3
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/setting/repository/DimController;->mSettingValueMap:Ljava/util/EnumMap;
 
     invoke-virtual {p0, p1}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -353,8 +354,10 @@
 
     if-eqz p0, :cond_1
 
+    .line 2
     invoke-virtual {p0, p2}, Lcom/sec/android/app/camera/setting/repository/SettingValue;->restoreValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)V
 
+    .line 3
     iget p2, p0, Lcom/sec/android/app/camera/setting/repository/SettingValue;->mDimCount:I
 
     const-string v0, ", dimCount="
@@ -365,6 +368,7 @@
 
     if-nez p2, :cond_0
 
+    .line 4
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -399,6 +403,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -454,6 +459,7 @@
 
     return-void
 
+    .line 6
     :cond_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -472,6 +478,7 @@
 
     check-cast v0, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
 
+    .line 7
     invoke-direct {p0, v0, p2}, Lcom/sec/android/app/camera/setting/repository/DimController;->restoreDim(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)V
 
     goto :goto_0
@@ -495,6 +502,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/setting/repository/DimController;->mSettingValueMap:Ljava/util/EnumMap;
 
     invoke-virtual {p0, p1}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -510,19 +518,24 @@
     :cond_0
     if-eqz p2, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/repository/SettingValue;->saveValue()V
 
+    .line 4
     :cond_1
     invoke-virtual {p0, p3, p5}, Lcom/sec/android/app/camera/setting/repository/SettingValue;->dimValue(ILcom/sec/android/app/camera/interfaces/CameraSettings$Key;)V
 
+    .line 5
     invoke-virtual {p4, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-nez p2, :cond_2
 
+    .line 6
     invoke-virtual {p4, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 7
     :cond_2
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -590,6 +603,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 1
     iget-object p3, p0, Lcom/sec/android/app/camera/setting/repository/DimController;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {p3, p1}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->getDefaultValue(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
@@ -1595,6 +1609,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, v0}, Lcom/sec/android/app/camera/setting/repository/DimController;->registerDimChangedListener(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Lcom/sec/android/app/camera/interfaces/CameraSettings$DimChangedListener;Z)V
 
     return-void
@@ -1603,10 +1618,12 @@
 .method public registerDimChangedListener(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Lcom/sec/android/app/camera/interfaces/CameraSettings$DimChangedListener;Z)V
     .locals 4
 
+    .line 2
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/repository/DimController;->mDimChangedListenerMap:Ljava/util/EnumMap;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/sec/android/app/camera/setting/repository/DimController;->mDimChangedListenerMap:Ljava/util/EnumMap;
 
@@ -1618,21 +1635,26 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 6
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 7
     iget-object v2, p0, Lcom/sec/android/app/camera/setting/repository/DimController;->mDimChangedListenerMap:Ljava/util/EnumMap;
 
     invoke-virtual {v2, p1, v1}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 8
     :goto_0
     iget-object v1, p0, Lcom/sec/android/app/camera/setting/repository/DimController;->mCurrentDimArray:[Z
 
@@ -1644,6 +1666,7 @@
 
     invoke-interface {p2, p1, v1}, Lcom/sec/android/app/camera/interfaces/CameraSettings$DimChangedListener;->onDimChanged(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;Z)V
 
+    .line 9
     iget-object p2, p0, Lcom/sec/android/app/camera/setting/repository/DimController;->mNotifyDimArray:[Z
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -1662,10 +1685,12 @@
 
     if-eqz p3, :cond_1
 
+    .line 10
     iget-object p0, p0, Lcom/sec/android/app/camera/setting/repository/DimController;->mAlwaysNotifyList:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 11
     :cond_1
     monitor-exit v0
 

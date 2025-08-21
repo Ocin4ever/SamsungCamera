@@ -23,14 +23,17 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Lcom/google/ar/core/CameraConfig;->session:Lcom/google/ar/core/Session;
 
     const-wide/16 v0, 0x0
 
+    .line 6
     iput-wide v0, p0, Lcom/google/ar/core/CameraConfig;->nativeHandle:J
 
     return-void
@@ -39,10 +42,13 @@
 .method public constructor <init>(Lcom/google/ar/core/Session;J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/ar/core/CameraConfig;->session:Lcom/google/ar/core/Session;
 
+    .line 3
     iput-wide p2, p0, Lcom/google/ar/core/CameraConfig;->nativeHandle:J
 
     return-void

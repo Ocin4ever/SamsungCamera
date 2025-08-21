@@ -11,8 +11,10 @@
 .method public constructor <init>(Ljava/lang/Boolean;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lz1/j;-><init>()V
 
+    .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lz1/p;->a:Ljava/lang/Object;
@@ -23,8 +25,10 @@
 .method public constructor <init>(Ljava/lang/Number;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Lz1/j;-><init>()V
 
+    .line 4
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lz1/p;->a:Ljava/lang/Object;
@@ -35,8 +39,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Lz1/j;-><init>()V
 
+    .line 6
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lz1/p;->a:Ljava/lang/Object;

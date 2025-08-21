@@ -247,40 +247,53 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mCameraContext:Landroid/content/Context;
 
+    .line 3
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEffectProcessorListener:Lcom/samsung/android/camera/effect/SecEffectProcessor$EffectProcessorListener;
 
     const/4 v1, 0x0
 
+    .line 4
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     const/high16 v2, -0x40800000    # -1.0f
 
+    .line 5
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenWidth:F
 
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenHeight:F
 
     const/4 v3, 0x1
 
+    .line 6
     iput v3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowHeight:I
 
+    .line 7
     iput v3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowWidth:I
 
+    .line 8
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectSelected:Z
 
+    .line 9
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->motionEngineInitialized:Z
 
+    .line 10
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectDragging:Z
 
+    .line 11
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isPointDraggable:Z
 
+    .line 12
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectScaling:Z
 
+    .line 13
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mStartX:F
 
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mStartY:F
@@ -289,16 +302,20 @@
 
     const-string v3, "aar version : 1.3.1.0"
 
+    .line 14
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 15
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEffectProcessorListener:Lcom/samsung/android/camera/effect/SecEffectProcessor$EffectProcessorListener;
 
+    .line 16
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
+    .line 17
     new-instance v3, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v3, p0, p0, v2}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -307,6 +324,7 @@
 
     goto :goto_0
 
+    .line 18
     :cond_0
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -314,6 +332,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 19
     new-instance v3, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v3, p0, p0, v2}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -322,30 +341,38 @@
 
     goto :goto_0
 
+    .line 20
     :cond_1
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEventHandler:Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
+    .line 21
     :goto_0
     iput v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewType:I
 
+    .line 22
     new-instance v2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v2, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     invoke-direct {p0, v2, v1}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setup(Ljava/lang/Object;I)V
 
+    .line 23
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mAssetManager:Landroid/content/res/AssetManager;
 
+    .line 24
     invoke-direct {p0, v1}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setAssetManger(Ljava/lang/Object;)V
 
+    .line 25
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
+    .line 26
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mFilteringImageStream:[B
 
+    .line 27
     iput-object p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mCameraContext:Landroid/content/Context;
 
     return-void
@@ -354,50 +381,65 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 4
 
+    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 81
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mCameraContext:Landroid/content/Context;
 
     const/4 v1, 0x0
 
+    .line 82
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     const/high16 v2, -0x40800000    # -1.0f
 
+    .line 83
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenWidth:F
 
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenHeight:F
 
     const/4 v3, 0x1
 
+    .line 84
     iput v3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowHeight:I
 
+    .line 85
     iput v3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowWidth:I
 
+    .line 86
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectSelected:Z
 
+    .line 87
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->motionEngineInitialized:Z
 
+    .line 88
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectDragging:Z
 
+    .line 89
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isPointDraggable:Z
 
+    .line 90
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectScaling:Z
 
+    .line 91
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mStartX:F
 
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mStartY:F
 
+    .line 92
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEffectProcessorListener:Lcom/samsung/android/camera/effect/SecEffectProcessor$EffectProcessorListener;
 
+    .line 93
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 94
     new-instance v2, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v2, p0, p0, v1}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -406,6 +448,7 @@
 
     goto :goto_0
 
+    .line 95
     :cond_0
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -413,6 +456,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 96
     new-instance v2, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v2, p0, p0, v1}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -421,30 +465,38 @@
 
     goto :goto_0
 
+    .line 97
     :cond_1
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEventHandler:Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
+    .line 98
     :goto_0
     iput p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewType:I
 
+    .line 99
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     invoke-direct {p0, v1, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setup(Ljava/lang/Object;I)V
 
+    .line 100
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mAssetManager:Landroid/content/res/AssetManager;
 
+    .line 101
     invoke-direct {p0, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setAssetManger(Ljava/lang/Object;)V
 
+    .line 102
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
+    .line 103
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mFilteringImageStream:[B
 
+    .line 104
     iput-object p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mCameraContext:Landroid/content/Context;
 
     return-void
@@ -453,46 +505,60 @@
 .method public constructor <init>(Landroid/content/Context;IILandroid/os/Looper;)V
     .locals 4
 
+    .line 131
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 132
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mCameraContext:Landroid/content/Context;
 
     const/4 v1, 0x0
 
+    .line 133
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     const/high16 v2, -0x40800000    # -1.0f
 
+    .line 134
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenWidth:F
 
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenHeight:F
 
     const/4 v3, 0x1
 
+    .line 135
     iput v3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowHeight:I
 
+    .line 136
     iput v3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowWidth:I
 
+    .line 137
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectSelected:Z
 
+    .line 138
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->motionEngineInitialized:Z
 
+    .line 139
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectDragging:Z
 
+    .line 140
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isPointDraggable:Z
 
+    .line 141
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectScaling:Z
 
+    .line 142
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mStartX:F
 
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mStartY:F
 
+    .line 143
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEffectProcessorListener:Lcom/samsung/android/camera/effect/SecEffectProcessor$EffectProcessorListener;
 
     if-eqz p4, :cond_0
 
+    .line 144
     new-instance v1, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v1, p0, p0, p4}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -501,6 +567,7 @@
 
     goto :goto_0
 
+    .line 145
     :cond_0
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -508,6 +575,7 @@
 
     if-eqz p4, :cond_1
 
+    .line 146
     new-instance v1, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v1, p0, p0, p4}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -516,6 +584,7 @@
 
     goto :goto_0
 
+    .line 147
     :cond_1
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -523,6 +592,7 @@
 
     if-eqz p4, :cond_2
 
+    .line 148
     new-instance v1, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v1, p0, p0, p4}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -531,18 +601,22 @@
 
     goto :goto_0
 
+    .line 149
     :cond_2
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEventHandler:Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
+    .line 150
     :goto_0
     iput p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewType:I
 
+    .line 151
     new-instance p4, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p4, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     invoke-direct {p0, p4, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setup(Ljava/lang/Object;I)V
 
+    .line 152
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -559,18 +633,23 @@
 
     invoke-virtual {p0, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->setProcessorParameter(Ljava/lang/String;)V
 
+    .line 153
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mAssetManager:Landroid/content/res/AssetManager;
 
+    .line 154
     invoke-direct {p0, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setAssetManger(Ljava/lang/Object;)V
 
+    .line 155
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
+    .line 156
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mFilteringImageStream:[B
 
+    .line 157
     iput-object p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mCameraContext:Landroid/content/Context;
 
     return-void
@@ -579,46 +658,60 @@
 .method public constructor <init>(Landroid/content/Context;ILandroid/os/Looper;)V
     .locals 4
 
+    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 106
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mCameraContext:Landroid/content/Context;
 
     const/4 v1, 0x0
 
+    .line 107
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     const/high16 v2, -0x40800000    # -1.0f
 
+    .line 108
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenWidth:F
 
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenHeight:F
 
     const/4 v3, 0x1
 
+    .line 109
     iput v3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowHeight:I
 
+    .line 110
     iput v3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowWidth:I
 
+    .line 111
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectSelected:Z
 
+    .line 112
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->motionEngineInitialized:Z
 
+    .line 113
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectDragging:Z
 
+    .line 114
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isPointDraggable:Z
 
+    .line 115
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectScaling:Z
 
+    .line 116
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mStartX:F
 
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mStartY:F
 
+    .line 117
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEffectProcessorListener:Lcom/samsung/android/camera/effect/SecEffectProcessor$EffectProcessorListener;
 
     if-eqz p3, :cond_0
 
+    .line 118
     new-instance v1, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v1, p0, p0, p3}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -627,6 +720,7 @@
 
     goto :goto_0
 
+    .line 119
     :cond_0
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -634,6 +728,7 @@
 
     if-eqz p3, :cond_1
 
+    .line 120
     new-instance v1, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v1, p0, p0, p3}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -642,6 +737,7 @@
 
     goto :goto_0
 
+    .line 121
     :cond_1
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -649,6 +745,7 @@
 
     if-eqz p3, :cond_2
 
+    .line 122
     new-instance v1, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v1, p0, p0, p3}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -657,30 +754,38 @@
 
     goto :goto_0
 
+    .line 123
     :cond_2
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEventHandler:Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
+    .line 124
     :goto_0
     iput p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewType:I
 
+    .line 125
     new-instance p3, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p3, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     invoke-direct {p0, p3, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setup(Ljava/lang/Object;I)V
 
+    .line 126
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mAssetManager:Landroid/content/res/AssetManager;
 
+    .line 127
     invoke-direct {p0, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setAssetManger(Ljava/lang/Object;)V
 
+    .line 128
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
+    .line 129
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mFilteringImageStream:[B
 
+    .line 130
     iput-object p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mCameraContext:Landroid/content/Context;
 
     return-void
@@ -689,46 +794,60 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;)V
     .locals 4
 
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 29
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mCameraContext:Landroid/content/Context;
 
     const/4 v1, 0x0
 
+    .line 30
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     const/high16 v2, -0x40800000    # -1.0f
 
+    .line 31
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenWidth:F
 
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenHeight:F
 
     const/4 v3, 0x1
 
+    .line 32
     iput v3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowHeight:I
 
+    .line 33
     iput v3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowWidth:I
 
+    .line 34
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectSelected:Z
 
+    .line 35
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->motionEngineInitialized:Z
 
+    .line 36
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectDragging:Z
 
+    .line 37
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isPointDraggable:Z
 
+    .line 38
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectScaling:Z
 
+    .line 39
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mStartX:F
 
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mStartY:F
 
+    .line 40
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEffectProcessorListener:Lcom/samsung/android/camera/effect/SecEffectProcessor$EffectProcessorListener;
 
     if-eqz p2, :cond_0
 
+    .line 41
     new-instance v2, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v2, p0, p0, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -737,6 +856,7 @@
 
     goto :goto_0
 
+    .line 42
     :cond_0
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -744,6 +864,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 43
     new-instance v2, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v2, p0, p0, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -752,6 +873,7 @@
 
     goto :goto_0
 
+    .line 44
     :cond_1
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -759,6 +881,7 @@
 
     if-eqz p2, :cond_2
 
+    .line 45
     new-instance v2, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v2, p0, p0, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -767,30 +890,38 @@
 
     goto :goto_0
 
+    .line 46
     :cond_2
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEventHandler:Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
+    .line 47
     :goto_0
     iput v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewType:I
 
+    .line 48
     new-instance p2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p2, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     invoke-direct {p0, p2, v1}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setup(Ljava/lang/Object;I)V
 
+    .line 49
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mAssetManager:Landroid/content/res/AssetManager;
 
+    .line 50
     invoke-direct {p0, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setAssetManger(Ljava/lang/Object;)V
 
+    .line 51
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
+    .line 52
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mFilteringImageStream:[B
 
+    .line 53
     iput-object p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mCameraContext:Landroid/content/Context;
 
     return-void
@@ -799,46 +930,60 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Landroid/content/res/AssetManager;)V
     .locals 4
 
+    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 55
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mCameraContext:Landroid/content/Context;
 
     const/4 v1, 0x0
 
+    .line 56
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     const/high16 v2, -0x40800000    # -1.0f
 
+    .line 57
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenWidth:F
 
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenHeight:F
 
     const/4 v3, 0x1
 
+    .line 58
     iput v3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowHeight:I
 
+    .line 59
     iput v3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowWidth:I
 
+    .line 60
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectSelected:Z
 
+    .line 61
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->motionEngineInitialized:Z
 
+    .line 62
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectDragging:Z
 
+    .line 63
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isPointDraggable:Z
 
+    .line 64
     iput-boolean v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->isObjectScaling:Z
 
+    .line 65
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mStartX:F
 
     iput v2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mStartY:F
 
+    .line 66
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEffectProcessorListener:Lcom/samsung/android/camera/effect/SecEffectProcessor$EffectProcessorListener;
 
     if-eqz p2, :cond_0
 
+    .line 67
     new-instance v2, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v2, p0, p0, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -847,6 +992,7 @@
 
     goto :goto_0
 
+    .line 68
     :cond_0
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -854,6 +1000,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 69
     new-instance v2, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v2, p0, p0, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -862,6 +1009,7 @@
 
     goto :goto_0
 
+    .line 70
     :cond_1
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -869,6 +1017,7 @@
 
     if-eqz p2, :cond_2
 
+    .line 71
     new-instance v2, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
     invoke-direct {v2, p0, p0, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;-><init>(Lcom/samsung/android/camera/effect/SecEffectProcessor;Lcom/samsung/android/camera/effect/SecEffectProcessor;Landroid/os/Looper;)V
@@ -877,26 +1026,34 @@
 
     goto :goto_0
 
+    .line 72
     :cond_2
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mEventHandler:Lcom/samsung/android/camera/effect/SecEffectProcessor$EventHandler;
 
+    .line 73
     :goto_0
     iput v1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewType:I
 
+    .line 74
     new-instance p2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p2, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     invoke-direct {p0, p2, v1}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setup(Ljava/lang/Object;I)V
 
+    .line 75
     iput-object p3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mAssetManager:Landroid/content/res/AssetManager;
 
+    .line 76
     invoke-direct {p0, p3}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setAssetManger(Ljava/lang/Object;)V
 
+    .line 77
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
+    .line 78
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mFilteringImageStream:[B
 
+    .line 79
     iput-object p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mCameraContext:Landroid/content/Context;
 
     return-void
@@ -1345,10 +1502,12 @@
 .method public setEffect(I)V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setEffect_internal(I)Z
 
     goto :goto_0
@@ -1358,6 +1517,7 @@
 
     const-string p1, "EffectProcessor is not running."
 
+    .line 3
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1367,12 +1527,14 @@
 .method public setEffect(Ljava/lang/String;)V
     .locals 1
 
+    .line 4
     iget-boolean v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setEffect_external(Ljava/lang/String;)Z
 
     goto :goto_0
@@ -1382,6 +1544,7 @@
 
     const-string p1, "EffectProcessor is not running."
 
+    .line 6
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1391,10 +1554,12 @@
 .method public setEffect(Ljava/lang/String;Landroid/content/res/AssetManager;)V
     .locals 1
 
+    .line 7
     iget-boolean v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     if-eqz v0, :cond_0
 
+    .line 8
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setEffect_assetManager(Ljava/lang/String;Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -1404,6 +1569,7 @@
 
     const-string p1, "EffectProcessor is not running."
 
+    .line 9
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1413,10 +1579,12 @@
 .method public setEffectParameter(ILjava/lang/Object;II)V
     .locals 1
 
+    .line 7
     iget-boolean v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     if-eqz v0, :cond_0
 
+    .line 8
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setEffect_parameter_generic(ILjava/lang/Object;II)Z
 
     goto :goto_0
@@ -1426,6 +1594,7 @@
 
     const-string p1, "EffectProcessor is not running."
 
+    .line 9
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1435,10 +1604,12 @@
 .method public setEffectParameter(ILjava/lang/Object;[B)V
     .locals 1
 
+    .line 10
     iget-boolean v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     if-eqz v0, :cond_0
 
+    .line 11
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setEffect_parameter_generic_extended(ILjava/lang/Object;[B)Z
 
     goto :goto_0
@@ -1448,6 +1619,7 @@
 
     const-string p1, "EffectProcessor is not running."
 
+    .line 12
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1457,10 +1629,12 @@
 .method public setEffectParameter(I[B)V
     .locals 1
 
+    .line 4
     iget-boolean v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     if-eqz v0, :cond_0
 
+    .line 5
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setEffect_parameters(I[B)Z
 
     goto :goto_0
@@ -1470,6 +1644,7 @@
 
     const-string p1, "EffectProcessor is not running."
 
+    .line 6
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1479,10 +1654,12 @@
 .method public setEffectParameter(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mIsProcessing:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setEffect_parameter(Ljava/lang/String;)Z
 
     goto :goto_0
@@ -1492,6 +1669,7 @@
 
     const-string p1, "EffectProcessor is not running."
 
+    .line 3
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1832,14 +2010,17 @@
 .method public setOutputSurface(Landroid/view/Surface;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setOutputSurface(Ljava/lang/Object;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_getPreviewWindowHeight()I
 
     move-result p1
 
     iput p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowHeight:I
 
+    .line 3
     invoke-direct {p0}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_getPreviewWindowWidth()I
 
     move-result p1
@@ -1852,14 +2033,17 @@
 .method public setOutputSurface(Landroid/view/Surface;I)V
     .locals 0
 
+    .line 4
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_setOutputSurfaceType(Ljava/lang/Object;I)V
 
+    .line 5
     invoke-direct {p0}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_getPreviewWindowHeight()I
 
     move-result p1
 
     iput p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mPreviewWindowHeight:I
 
+    .line 6
     invoke-direct {p0}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_getPreviewWindowWidth()I
 
     move-result p1
@@ -1896,10 +2080,13 @@
 .method public setTouchMargin(FF)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mMarginX:F
 
+    .line 2
     iput p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mMarginY:F
 
+    .line 3
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1934,14 +2121,19 @@
 .method public setTouchMargin(FFFF)V
     .locals 0
 
+    .line 4
     iput p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mMarginX:F
 
+    .line 5
     iput p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mMarginY:F
 
+    .line 6
     iput p3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenWidth:F
 
+    .line 7
     iput p4, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mScreenHeight:F
 
+    .line 8
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2098,11 +2290,13 @@
 
     const/4 v0, 0x0
 
+    .line 4
     :try_start_0
     invoke-direct {p0, v0}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_snapcapture(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     monitor-exit p0
 
     return-void
@@ -2120,13 +2314,16 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput p1, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mImgFormat:I
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_snapcapture(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-void
@@ -2149,16 +2346,20 @@
 
     const-string v1, "SecEffectProcessor.java >> takepicture(ByteBuffer jpegdata)"
 
+    .line 26
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p1, :cond_0
 
     const/4 v0, 0x0
 
+    .line 27
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
+    .line 28
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mFilteringImageStream:[B
 
+    .line 29
     invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
     move-result v0
@@ -2169,10 +2370,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 30
     monitor-exit p0
 
     return-void
 
+    .line 31
     :cond_0
     :try_start_1
     new-instance p1, Ljava/lang/NullPointerException;
@@ -2201,6 +2404,7 @@
     :try_start_0
     const-string v0, "SECIMAGING/J"
 
+    .line 19
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2221,16 +2425,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 20
     iput p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mImgFormat:I
 
     const/4 v0, 0x0
 
+    .line 21
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
+    .line 22
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mFilteringImageStream:[B
 
     if-eqz p1, :cond_0
 
+    .line 23
     invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
     move-result v0
@@ -2239,10 +2447,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 24
     monitor-exit p0
 
     return-void
 
+    .line 25
     :cond_0
     :try_start_1
     new-instance p1, Ljava/lang/NullPointerException;
@@ -2268,11 +2478,13 @@
 
     monitor-enter p0
 
+    .line 6
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 7
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2295,6 +2507,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 8
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2318,24 +2531,29 @@
     :cond_0
     const-string v1, "SECIMAGING/J"
 
+    .line 9
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 10
     iput p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mImgFormat:I
 
+    .line 11
     iput-object p3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
     const/4 v0, 0x0
 
+    .line 12
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mFilteringImageStream:[B
 
     if-eqz p1, :cond_2
 
     if-eqz p3, :cond_1
 
+    .line 13
     invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
     move-result v3
@@ -2354,6 +2572,7 @@
 
     iget-object p3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
+    .line 14
     invoke-virtual {p3}, Lcom/samsung/android/camera/effect/WatermarkInfo;->getMargin()Landroid/graphics/Rect;
 
     move-result-object p3
@@ -2390,10 +2609,12 @@
 
     move v4, p2
 
+    .line 15
     invoke-direct/range {v1 .. v10}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_takepicture_buffer_watermark(Ljava/lang/Object;IILjava/lang/Object;IIIII)V
 
     goto :goto_0
 
+    .line 16
     :cond_1
     invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
@@ -2403,11 +2624,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 17
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 18
     :cond_2
     :try_start_1
     new-instance p1, Ljava/lang/NullPointerException;
@@ -2438,26 +2661,32 @@
 
     const-string v1, "SecEffectProcessor.java >> takepicture(byte[] jpegdata)"
 
+    .line 52
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p1, :cond_0
 
     const/4 v0, 0x0
 
+    .line 53
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
+    .line 54
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mFilteringImageStream:[B
 
     const/4 v0, 0x0
 
+    .line 55
     invoke-direct {p0, p1, v0}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_takepicture_array([BI)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 56
     monitor-exit p0
 
     return-void
 
+    .line 57
     :cond_0
     :try_start_1
     new-instance p1, Ljava/lang/NullPointerException;
@@ -2486,6 +2715,7 @@
     :try_start_0
     const-string v0, "SECIMAGING/J"
 
+    .line 45
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2506,24 +2736,30 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 46
     iput p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mImgFormat:I
 
     const/4 v0, 0x0
 
+    .line 47
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
+    .line 48
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mFilteringImageStream:[B
 
     if-eqz p1, :cond_0
 
+    .line 49
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_takepicture_array([BI)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 50
     monitor-exit p0
 
     return-void
 
+    .line 51
     :cond_0
     :try_start_1
     new-instance p1, Ljava/lang/NullPointerException;
@@ -2549,11 +2785,13 @@
 
     monitor-enter p0
 
+    .line 32
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 33
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2576,6 +2814,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 34
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2599,24 +2838,29 @@
     :cond_0
     const-string v1, "SECIMAGING/J"
 
+    .line 35
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 36
     iput p2, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mImgFormat:I
 
+    .line 37
     iput-object p3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
     const/4 v0, 0x0
 
+    .line 38
     iput-object v0, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mFilteringImageStream:[B
 
     if-eqz p1, :cond_2
 
     if-eqz p3, :cond_1
 
+    .line 39
     invoke-virtual {p3}, Lcom/samsung/android/camera/effect/WatermarkInfo;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v4
@@ -2629,6 +2873,7 @@
 
     iget-object p3, p0, Lcom/samsung/android/camera/effect/SecEffectProcessor;->mWatermarkInfo:Lcom/samsung/android/camera/effect/WatermarkInfo;
 
+    .line 40
     invoke-virtual {p3}, Lcom/samsung/android/camera/effect/WatermarkInfo;->getMargin()Landroid/graphics/Rect;
 
     move-result-object p3
@@ -2665,20 +2910,24 @@
 
     move v3, p2
 
+    .line 41
     invoke-direct/range {v1 .. v9}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_takepicture_array_watermark([BILjava/lang/Object;IIIII)V
 
     goto :goto_0
 
+    .line 42
     :cond_1
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/effect/SecEffectProcessor;->native_takepicture_array([BI)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 43
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 44
     :cond_2
     :try_start_1
     new-instance p1, Ljava/lang/NullPointerException;

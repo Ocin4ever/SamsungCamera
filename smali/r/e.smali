@@ -35,8 +35,10 @@
 .method public constructor <init>(Lr/e;)V
     .locals 2
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p1, Lr/e;->a:Ljava/util/List;
@@ -45,6 +47,7 @@
 
     iput-object v0, p0, Lr/e;->a:Ljava/util/List;
 
+    .line 5
     iget-object p1, p1, Lr/e;->b:Lr/f;
 
     iput-object p1, p0, Lr/e;->b:Lr/f;
@@ -55,8 +58,10 @@
 .method public varargs constructor <init>([Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1

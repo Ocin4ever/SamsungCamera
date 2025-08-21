@@ -1865,6 +1865,7 @@
 
     int-to-long v0, p2
 
+    .line 1
     invoke-static {p0, p1, v0, v1}, Lcom/google/common/math/LongMath;->mod(JJ)J
 
     move-result-wide p0
@@ -1883,6 +1884,7 @@
 
     if-lez v2, :cond_1
 
+    .line 2
     rem-long/2addr p0, p2
 
     cmp-long v0, p0, v0
@@ -1897,6 +1899,7 @@
     :goto_0
     return-wide p0
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/ArithmeticException;
 

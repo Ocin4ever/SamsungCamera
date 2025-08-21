@@ -30,18 +30,22 @@
 .method public constructor <init>(Landroid/app/Activity;Landroid/content/Context;Landroid/os/Handler;I)V
     .locals 1
 
+    .line 3
     invoke-direct {p0}, Landroidx/fragment/app/FragmentContainer;-><init>()V
 
+    .line 4
     new-instance v0, Landroidx/fragment/app/FragmentManagerImpl;
 
     invoke-direct {v0}, Landroidx/fragment/app/FragmentManagerImpl;-><init>()V
 
     iput-object v0, p0, Landroidx/fragment/app/FragmentHostCallback;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
+    .line 5
     iput-object p1, p0, Landroidx/fragment/app/FragmentHostCallback;->mActivity:Landroid/app/Activity;
 
     const-string p1, "context == null"
 
+    .line 6
     invoke-static {p2, p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -52,6 +56,7 @@
 
     const-string p1, "handler == null"
 
+    .line 7
     invoke-static {p3, p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -60,6 +65,7 @@
 
     iput-object p1, p0, Landroidx/fragment/app/FragmentHostCallback;->mHandler:Landroid/os/Handler;
 
+    .line 8
     iput p4, p0, Landroidx/fragment/app/FragmentHostCallback;->mWindowAnimations:I
 
     return-void
@@ -68,6 +74,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;I)V
     .locals 1
 
+    .line 1
     instance-of v0, p1, Landroid/app/Activity;
 
     if-eqz v0, :cond_0
@@ -90,6 +97,7 @@
 .method public constructor <init>(Landroidx/fragment/app/FragmentActivity;)V
     .locals 2
 
+    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -214,6 +222,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/fragment/app/FragmentHostCallback;->onStartActivityFromFragment(Landroidx/fragment/app/Fragment;Landroid/content/Intent;ILandroid/os/Bundle;)V
 
     return-void
@@ -226,12 +235,14 @@
 
     if-ne p3, p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Landroidx/fragment/app/FragmentHostCallback;->mContext:Landroid/content/Context;
 
     invoke-static {p0, p2, p4}, Landroidx/core/content/ContextCompat;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

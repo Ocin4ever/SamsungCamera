@@ -60,6 +60,7 @@
 
     invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Rect;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -74,6 +75,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     check-cast p1, Landroid/graphics/Rect;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/DrawUtil$logOcrResult$rectString$1;->invoke(Landroid/graphics/Rect;)Ljava/lang/CharSequence;

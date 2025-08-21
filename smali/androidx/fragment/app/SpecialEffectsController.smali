@@ -227,10 +227,12 @@
 .method public static getOrCreateController(Landroid/view/ViewGroup;Landroidx/fragment/app/FragmentManager;)Landroidx/fragment/app/SpecialEffectsController;
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->getSpecialEffectsControllerFactory()Landroidx/fragment/app/SpecialEffectsControllerFactory;
 
     move-result-object p1
 
+    .line 2
     invoke-static {p0, p1}, Landroidx/fragment/app/SpecialEffectsController;->getOrCreateController(Landroid/view/ViewGroup;Landroidx/fragment/app/SpecialEffectsControllerFactory;)Landroidx/fragment/app/SpecialEffectsController;
 
     move-result-object p0
@@ -241,25 +243,30 @@
 .method public static getOrCreateController(Landroid/view/ViewGroup;Landroidx/fragment/app/SpecialEffectsControllerFactory;)Landroidx/fragment/app/SpecialEffectsController;
     .locals 3
 
+    .line 3
     sget v0, Landroidx/fragment/R$id;->special_effects_controller_view_tag:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 4
     instance-of v2, v1, Landroidx/fragment/app/SpecialEffectsController;
 
     if-eqz v2, :cond_0
 
+    .line 5
     check-cast v1, Landroidx/fragment/app/SpecialEffectsController;
 
     return-object v1
 
+    .line 6
     :cond_0
     invoke-interface {p1, p0}, Landroidx/fragment/app/SpecialEffectsControllerFactory;->createController(Landroid/view/ViewGroup;)Landroidx/fragment/app/SpecialEffectsController;
 
     move-result-object p1
 
+    .line 7
     invoke-virtual {p0, v0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
     return-object p1

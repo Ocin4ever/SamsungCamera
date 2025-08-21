@@ -1678,6 +1678,7 @@
 .method public final updateIsSelectedCharacters(IIZ)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextSelectionHelper;->selectableOcrResult:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/SelectableOcrResult;
 
     invoke-virtual {p0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/SelectableOcrResult;->getSelectableCharacters()Ljava/util/List;
@@ -1687,6 +1688,7 @@
     :goto_0
     if-ge p1, p2, :cond_0
 
+    .line 2
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1714,22 +1716,26 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 3
     iget-object v0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextSelectionHelper;->selectableOcrResult:Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/SelectableOcrResult;
 
     invoke-virtual {v0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/data/SelectableOcrResult;->getSelectableCharacters()Ljava/util/List;
 
     move-result-object v0
 
+    .line 4
     invoke-interface {v0, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result p1
 
+    .line 5
     invoke-interface {v0, p2}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result p2
 
     add-int/lit8 p2, p2, 0x1
 
+    .line 6
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/app/sdk/deepsky/textextraction/selectionui/TextSelectionHelper;->updateIsSelectedCharacters(IIZ)V
 
     return-void

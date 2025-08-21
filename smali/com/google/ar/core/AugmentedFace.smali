@@ -33,6 +33,7 @@
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-direct {p0, v0, v1, v2}, Lcom/google/ar/core/TrackableBase;-><init>(JLcom/google/ar/core/Session;)V
 
     return-void
@@ -41,8 +42,10 @@
 .method public constructor <init>(JLcom/google/ar/core/Session;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/ar/core/TrackableBase;-><init>(JLcom/google/ar/core/Session;)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/ar/core/AugmentedFace;->populateMeshData()V
 
     return-void

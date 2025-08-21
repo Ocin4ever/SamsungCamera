@@ -15,6 +15,7 @@
 .method public static createAudioDecoder(Landroid/media/MediaCodecInfo;Landroid/media/MediaFormat;)Landroid/media/MediaCodec;
     .locals 2
 
+    .line 4
     invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -27,8 +28,10 @@
 
     const/4 v1, 0x0
 
+    .line 5
     invoke-virtual {p0, p1, v0, v0, v1}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
 
+    .line 6
     invoke-virtual {p0}, Landroid/media/MediaCodec;->start()V
 
     return-object p0
@@ -37,6 +40,7 @@
 .method public static createAudioDecoder(Landroid/media/MediaFormat;)Landroid/media/MediaCodec;
     .locals 3
 
+    .line 1
     invoke-static {p0}, Lcom/samsung/android/sdk/sgpl/pip/util/CodecsHelper;->getMimeTypeFor(Landroid/media/MediaFormat;)Ljava/lang/String;
 
     move-result-object v0
@@ -49,8 +53,10 @@
 
     const/4 v2, 0x0
 
+    .line 2
     invoke-virtual {v0, p0, v1, v1, v2}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
 
+    .line 3
     invoke-virtual {v0}, Landroid/media/MediaCodec;->start()V
 
     return-object v0
@@ -543,22 +549,26 @@
 
     goto :goto_3
 
+    .line 3
     :cond_0
     new-instance v1, Landroid/media/MediaMetadataRetriever;
 
     invoke-direct {v1}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
+    .line 4
     :try_start_0
     invoke-virtual {v1, p0, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
 
     const/16 p0, 0xc
 
+    .line 5
     invoke-virtual {v1, p0}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
 
     move-result-object p0
 
     const-string p1, "video/mp4"
 
+    .line 6
     invoke-virtual {p0, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -566,6 +576,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     :goto_0
     :try_start_1
     invoke-virtual {v1}, Landroid/media/MediaMetadataRetriever;->release()V
@@ -582,6 +593,7 @@
     :catch_0
     move-exception p0
 
+    .line 8
     :try_start_2
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_2
@@ -593,12 +605,14 @@
     :goto_1
     return v0
 
+    .line 9
     :goto_2
     :try_start_3
     invoke-virtual {v1}, Landroid/media/MediaMetadataRetriever;->release()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
+    .line 10
     :catch_2
     throw p0
 
@@ -612,10 +626,12 @@
 
     const/16 v0, 0xc
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     sget-object v0, Lcom/samsung/android/sdk/sgpl/pip/core/Encode$ContentType;->sSupportedVideoTypes:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z

@@ -1036,8 +1036,10 @@
 .method private final sum(Landroid/graphics/Rect;Landroid/graphics/Rect;)Landroid/graphics/Rect;
     .locals 4
 
+    .line 1
     new-instance p0, Landroid/graphics/Rect;
 
+    .line 2
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iget v1, p2, Landroid/graphics/Rect;->left:I
@@ -1046,6 +1048,7 @@
 
     move-result v0
 
+    .line 3
     iget v1, p1, Landroid/graphics/Rect;->top:I
 
     iget v2, p2, Landroid/graphics/Rect;->top:I
@@ -1054,6 +1057,7 @@
 
     move-result v1
 
+    .line 4
     iget v2, p1, Landroid/graphics/Rect;->right:I
 
     iget v3, p2, Landroid/graphics/Rect;->right:I
@@ -1062,6 +1066,7 @@
 
     move-result v2
 
+    .line 5
     iget p1, p1, Landroid/graphics/Rect;->bottom:I
 
     iget p2, p2, Landroid/graphics/Rect;->bottom:I
@@ -1070,6 +1075,7 @@
 
     move-result p1
 
+    .line 6
     invoke-direct {p0, v0, v1, v2, p1}, Landroid/graphics/Rect;-><init>(IIII)V
 
     return-object p0
@@ -1082,6 +1088,7 @@
 
     new-array p0, p0, [Landroid/graphics/Point;
 
+    .line 7
     new-instance v0, Landroid/graphics/Point;
 
     const/4 v1, 0x0
@@ -1096,6 +1103,7 @@
 
     aput-object v0, p0, v1
 
+    .line 8
     new-instance v0, Landroid/graphics/Point;
 
     const/4 v1, 0x1
@@ -1110,6 +1118,7 @@
 
     aput-object v0, p0, v1
 
+    .line 9
     new-instance v0, Landroid/graphics/Point;
 
     const/4 v1, 0x2
@@ -1124,6 +1133,7 @@
 
     aput-object v0, p0, v1
 
+    .line 10
     new-instance p2, Landroid/graphics/Point;
 
     const/4 v0, 0x3

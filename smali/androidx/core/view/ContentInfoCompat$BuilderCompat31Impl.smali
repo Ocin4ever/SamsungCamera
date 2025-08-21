@@ -25,8 +25,10 @@
 .method public constructor <init>(Landroid/content/ClipData;I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/view/ContentInfo$Builder;
 
     invoke-direct {v0, p1, p2}, Landroid/view/ContentInfo$Builder;-><init>(Landroid/content/ClipData;I)V
@@ -39,8 +41,10 @@
 .method public constructor <init>(Landroidx/core/view/ContentInfoCompat;)V
     .locals 1
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     new-instance v0, Landroid/view/ContentInfo$Builder;
 
     invoke-virtual {p1}, Landroidx/core/view/ContentInfoCompat;->toContentInfo()Landroid/view/ContentInfo;

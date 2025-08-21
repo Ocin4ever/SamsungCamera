@@ -91,6 +91,7 @@
 .method public a(FFFI)V
     .locals 2
 
+    .line 1
     const/high16 v0, 0x43960000    # 300.0f
 
     mul-float/2addr p2, v0
@@ -153,6 +154,7 @@
 .method public a(IIIII)V
     .locals 6
 
+    .line 2
     iget-object v0, p0, Lco/polarr/mgcsc/f/h/e;->e:Lco/polarr/mgcsc/f/h/f;
 
     int-to-float v1, p1
@@ -177,6 +179,7 @@
 .method public a(Z)V
     .locals 0
 
+    .line 3
     iput-boolean p1, p0, Lco/polarr/mgcsc/f/h/e;->k:Z
 
     return-void
@@ -185,6 +188,7 @@
 .method public a([B)V
     .locals 4
 
+    .line 4
     iget-boolean v0, p0, Lco/polarr/mgcsc/f/h/e;->f:Z
 
     const/4 v1, 0x1
@@ -304,6 +308,7 @@
 .method public a()Z
     .locals 0
 
+    .line 5
     iget-boolean p0, p0, Lco/polarr/mgcsc/f/h/e;->k:Z
 
     return p0

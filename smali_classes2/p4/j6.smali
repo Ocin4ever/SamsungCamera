@@ -55,6 +55,7 @@
 .method public constructor <init>(Landroidx/databinding/DataBindingComponent;[Landroid/view/View;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lp4/j6;->o:Landroidx/databinding/ViewDataBinding$IncludedLayouts;
 
     sget-object v1, Lp4/j6;->p:Landroid/util/SparseIntArray;
@@ -79,6 +80,7 @@
 
     const/16 v16, 0x0
 
+    .line 2
     aget-object v2, v14, v16
 
     const/4 v3, 0x0
@@ -193,54 +195,67 @@
 
     move-object/from16 v2, p0
 
+    .line 3
     iput-wide v0, v2, Lp4/j6;->n:J
 
+    .line 4
     iget-object v0, v2, Lp4/i6;->a:Landroidx/constraintlayout/widget/Guideline;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 5
     iget-object v0, v2, Lp4/i6;->b:Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/CompositionGuide;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 6
     iget-object v0, v2, Lp4/i6;->c:Lcom/sec/android/app/camera/widget/NightCaptureCountDownTimer;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 7
     iget-object v0, v2, Lp4/i6;->e:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 8
     aget-object v0, p3, v16
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
     iput-object v0, v2, Lp4/j6;->m:Landroid/widget/RelativeLayout;
 
+    .line 9
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 10
     iget-object v0, v2, Lp4/i6;->h:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 11
     iget-object v0, v2, Lp4/i6;->i:Landroidx/constraintlayout/widget/Guideline;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 12
     iget-object v0, v2, Lp4/i6;->j:Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/SmartScan;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 13
     iget-object v0, v2, Lp4/i6;->l:Landroidx/constraintlayout/widget/Guideline;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     move-object/from16 v0, p2
 
+    .line 14
     invoke-virtual {v2, v0}, Landroidx/databinding/ViewDataBinding;->setRootTag([Landroid/view/View;)V
 
+    .line 15
     invoke-virtual/range {p0 .. p0}, Lp4/j6;->invalidateAll()V
 
     return-void

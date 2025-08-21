@@ -1603,54 +1603,67 @@
 .method public static compositeColors(II)I
     .locals 6
 
+    .line 1
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v0
 
+    .line 2
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v1
 
+    .line 3
     invoke-static {v1, v0}, Landroidx/core/graphics/ColorUtils;->compositeAlpha(II)I
 
     move-result v2
 
+    .line 4
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v3
 
+    .line 5
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v4
 
+    .line 6
     invoke-static {v3, v1, v4, v0, v2}, Landroidx/core/graphics/ColorUtils;->compositeComponent(IIIII)I
 
     move-result v3
 
+    .line 7
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
     move-result v4
 
+    .line 8
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
     move-result v5
 
+    .line 9
     invoke-static {v4, v1, v5, v0, v2}, Landroidx/core/graphics/ColorUtils;->compositeComponent(IIIII)I
 
     move-result v4
 
+    .line 10
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
     move-result p0
 
+    .line 11
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
     move-result p1
 
+    .line 12
     invoke-static {p0, v1, p1, v0, v2}, Landroidx/core/graphics/ColorUtils;->compositeComponent(IIIII)I
 
     move-result p0
 
+    .line 13
     invoke-static {v2, v3, v4, p0}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result p0
@@ -1661,6 +1674,7 @@
 .method public static compositeColors(Landroid/graphics/Color;Landroid/graphics/Color;)Landroid/graphics/Color;
     .locals 0
 
+    .line 14
     invoke-static {p0, p1}, Landroidx/core/graphics/ColorUtils$Api26Impl;->compositeColors(Landroid/graphics/Color;Landroid/graphics/Color;)Landroid/graphics/Color;
 
     move-result-object p0
@@ -1706,6 +1720,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-static {p0, p2}, Ljava/lang/Math;->min(FF)F
 
@@ -1722,6 +1737,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-static {p0, p2}, Ljava/lang/Math;->min(II)I
 

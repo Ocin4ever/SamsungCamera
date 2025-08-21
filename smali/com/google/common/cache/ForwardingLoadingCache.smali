@@ -64,6 +64,7 @@
 .method public bridge synthetic delegate()Lcom/google/common/cache/Cache;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingLoadingCache;->delegate()Lcom/google/common/cache/LoadingCache;
 
     move-result-object p0
@@ -84,6 +85,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingLoadingCache;->delegate()Lcom/google/common/cache/LoadingCache;
 
     move-result-object p0

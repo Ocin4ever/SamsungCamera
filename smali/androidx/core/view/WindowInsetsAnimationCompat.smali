@@ -29,8 +29,10 @@
 .method public constructor <init>(ILandroid/view/animation/Interpolator;J)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;
 
     invoke-direct {v0, p1, p2, p3, p4}, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;-><init>(ILandroid/view/animation/Interpolator;J)V
@@ -49,8 +51,10 @@
 
     const/4 v3, 0x0
 
+    .line 3
     invoke-direct {p0, v3, v0, v1, v2}, Landroidx/core/view/WindowInsetsAnimationCompat;-><init>(ILandroid/view/animation/Interpolator;J)V
 
+    .line 4
     new-instance v0, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;
 
     invoke-direct {v0, p1}, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;-><init>(Landroid/view/WindowInsetsAnimation;)V

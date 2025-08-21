@@ -24,6 +24,7 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     new-instance v0, Landroidx/core/view/WindowInsetsCompat;
 
     const/4 v1, 0x0
@@ -38,8 +39,10 @@
 .method public constructor <init>(Landroidx/core/view/WindowInsetsCompat;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsets:Landroidx/core/view/WindowInsetsCompat;
 
     return-void

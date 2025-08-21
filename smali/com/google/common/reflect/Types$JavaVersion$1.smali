@@ -30,6 +30,7 @@
 .method public newArrayType(Ljava/lang/reflect/Type;)Ljava/lang/reflect/GenericArrayType;
     .locals 0
 
+    .line 2
     new-instance p0, Lcom/google/common/reflect/Types$GenericArrayTypeImpl;
 
     invoke-direct {p0, p1}, Lcom/google/common/reflect/Types$GenericArrayTypeImpl;-><init>(Ljava/lang/reflect/Type;)V
@@ -40,6 +41,7 @@
 .method public bridge synthetic newArrayType(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/reflect/Types$JavaVersion$1;->newArrayType(Ljava/lang/reflect/Type;)Ljava/lang/reflect/GenericArrayType;
 
     move-result-object p0

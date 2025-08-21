@@ -18,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,6 +27,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/room/CoroutinesRoom$Companion;-><init>()V
 
     return-void
@@ -102,6 +104,7 @@
         }
     .end annotation
 
+    .line 6
     invoke-virtual {p1}, Landroidx/room/RoomDatabase;->isOpen()Z
 
     move-result p0
@@ -114,12 +117,14 @@
 
     if-eqz p0, :cond_0
 
+    .line 7
     invoke-interface {p4}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 8
     :cond_0
     invoke-interface {p5}, Li6/d;->getContext()Li6/g;
 
@@ -153,6 +158,7 @@
     :goto_1
     if-eqz p2, :cond_3
 
+    .line 9
     invoke-static {p1}, Landroidx/room/CoroutinesRoomKt;->getTransactionDispatcher(Landroidx/room/RoomDatabase;)Lx6/d0;
 
     move-result-object p0
@@ -166,6 +172,7 @@
 
     goto :goto_0
 
+    .line 10
     :goto_2
     new-instance p0, Lx6/n;
 
@@ -177,8 +184,10 @@
 
     invoke-direct {p0, p1, p2}, Lx6/n;-><init>(Li6/d;I)V
 
+    .line 11
     invoke-virtual {p0}, Lx6/n;->A()V
 
+    .line 12
     sget-object v0, Lx6/k1;->a:Lx6/k1;
 
     const/4 v2, 0x0
@@ -197,16 +206,19 @@
 
     move-result-object p1
 
+    .line 13
     new-instance p2, Landroidx/room/CoroutinesRoom$Companion$execute$4$1;
 
     invoke-direct {p2, p3, p1}, Landroidx/room/CoroutinesRoom$Companion$execute$4$1;-><init>(Landroid/os/CancellationSignal;Lx6/r1;)V
 
     invoke-interface {p0, p2}, Lx6/m;->h(Lq6/l;)V
 
+    .line 14
     invoke-virtual {p0}, Lx6/n;->x()Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 15
     invoke-static {}, Lj6/c;->c()Ljava/lang/Object;
 
     move-result-object p1
@@ -236,6 +248,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroidx/room/RoomDatabase;->isOpen()Z
 
     move-result p0
@@ -248,12 +261,14 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p3}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-interface {p4}, Li6/d;->getContext()Li6/g;
 
@@ -278,6 +293,7 @@
     :cond_1
     if-eqz p2, :cond_2
 
+    .line 4
     invoke-static {p1}, Landroidx/room/CoroutinesRoomKt;->getTransactionDispatcher(Landroidx/room/RoomDatabase;)Lx6/d0;
 
     move-result-object p0
@@ -289,6 +305,7 @@
 
     move-result-object p0
 
+    .line 5
     :cond_3
     :goto_0
     new-instance p1, Landroidx/room/CoroutinesRoom$Companion$execute$2;

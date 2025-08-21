@@ -43,6 +43,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Ly6/d$b;->invoke(Ljava/lang/Throwable;)V
@@ -55,6 +56,7 @@
 .method public final invoke(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 2
     iget-object p1, p0, Ly6/d$b;->a:Ly6/d;
 
     invoke-static {p1}, Ly6/d;->F(Ly6/d;)Landroid/os/Handler;

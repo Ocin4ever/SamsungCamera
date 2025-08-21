@@ -131,14 +131,17 @@
 .method public static setDefaultValues(Landroid/content/Context;IZ)V
     .locals 2
 
+    .line 1
     invoke-static {p0}, Landroidx/preference/PreferenceManager;->getDefaultSharedPreferencesName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroidx/preference/PreferenceManager;->getDefaultSharedPreferencesMode()I
 
     move-result v1
 
+    .line 3
     invoke-static {p0, v0, v1, p1, p2}, Landroidx/preference/PreferenceManager;->setDefaultValues(Landroid/content/Context;Ljava/lang/String;IIZ)V
 
     return-void
@@ -151,41 +154,50 @@
 
     const/4 v1, 0x0
 
+    .line 4
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v2
 
     if-nez p4, :cond_0
 
+    .line 5
     invoke-interface {v2, v0, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p4
 
     if-nez p4, :cond_1
 
+    .line 6
     :cond_0
     new-instance p4, Landroidx/preference/PreferenceManager;
 
     invoke-direct {p4, p0}, Landroidx/preference/PreferenceManager;-><init>(Landroid/content/Context;)V
 
+    .line 7
     invoke-virtual {p4, p1}, Landroidx/preference/PreferenceManager;->setSharedPreferencesName(Ljava/lang/String;)V
 
+    .line 8
     invoke-virtual {p4, p2}, Landroidx/preference/PreferenceManager;->setSharedPreferencesMode(I)V
 
     const/4 p1, 0x0
 
+    .line 9
     invoke-virtual {p4, p0, p3, p1}, Landroidx/preference/PreferenceManager;->inflateFromResource(Landroid/content/Context;ILandroidx/preference/PreferenceScreen;)Landroidx/preference/PreferenceScreen;
 
+    .line 10
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
     const/4 p1, 0x1
 
+    .line 11
     invoke-interface {p0, v0, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
+    .line 12
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     :cond_1

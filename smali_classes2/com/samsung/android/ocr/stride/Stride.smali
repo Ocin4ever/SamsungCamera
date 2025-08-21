@@ -298,6 +298,7 @@
 .method public detectBlock([BIILcom/samsung/android/ocr/MOCRConstants$MOCRPxlFmt;Landroid/graphics/Point;[Landroid/graphics/Point;)I
     .locals 0
 
+    .line 1
     invoke-virtual {p4}, Lcom/samsung/android/ocr/MOCRConstants$MOCRPxlFmt;->getValue()I
 
     move-result p0
@@ -316,6 +317,7 @@
 .method public detectBlock([BIILcom/samsung/android/ocr/MOCRConstants$MOCRPxlFmt;[Landroid/graphics/Point;)I
     .locals 2
 
+    .line 2
     new-instance p0, Landroid/graphics/Point;
 
     div-int/lit8 v0, p2, 0x2
@@ -324,6 +326,7 @@
 
     invoke-direct {p0, v0, v1}, Landroid/graphics/Point;-><init>(II)V
 
+    .line 3
     invoke-virtual {p4}, Lcom/samsung/android/ocr/MOCRConstants$MOCRPxlFmt;->getValue()I
 
     move-result p4
@@ -344,6 +347,7 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     sget-object p0, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRUnsupportedFormat:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {p0}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -352,6 +356,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-static {p1, p2, p3}, Lcom/samsung/android/ocr/stride/Stride;->DetectBlock(Lcom/samsung/android/ocr/MOCRImage;Landroid/graphics/Point;[Landroid/graphics/Point;)I
 
@@ -365,6 +370,7 @@
 
     if-nez p1, :cond_0
 
+    .line 3
     sget-object p0, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRUnsupportedFormat:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {p0}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -373,6 +379,7 @@
 
     return p0
 
+    .line 4
     :cond_0
     new-instance p0, Landroid/graphics/Point;
 
@@ -390,6 +397,7 @@
 
     invoke-direct {p0, v0, v1}, Landroid/graphics/Point;-><init>(II)V
 
+    .line 5
     invoke-static {p1, p0, p2}, Lcom/samsung/android/ocr/stride/Stride;->DetectBlock(Lcom/samsung/android/ocr/MOCRImage;Landroid/graphics/Point;[Landroid/graphics/Point;)I
 
     move-result p0
@@ -542,10 +550,12 @@
 
     const/4 v0, -0x1
 
+    .line 9
     iput v0, p0, Lcom/samsung/android/ocr/stride/Stride;->lang:I
 
     const/4 p0, 0x0
 
+    .line 10
     invoke-static {p0}, Lcom/samsung/android/ocr/stride/Stride;->Init(Ljava/lang/String;)I
 
     move-result p0
@@ -556,18 +566,21 @@
 .method public init(I)I
     .locals 2
 
+    .line 1
     iput p1, p0, Lcom/samsung/android/ocr/stride/Stride;->lang:I
 
     const/16 v0, 0x3e9
 
     if-ne p1, v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/samsung/android/ocr/stride/Stride;->getDeviceLang()I
 
     move-result p1
 
     iput p1, p0, Lcom/samsung/android/ocr/stride/Stride;->lang:I
 
+    .line 3
     sget-object p1, Lcom/samsung/android/ocr/stride/Stride;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -591,6 +604,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 4
     iget p0, p0, Lcom/samsung/android/ocr/stride/Stride;->lang:I
 
     invoke-static {p1, p0}, Lcom/samsung/android/ocr/stride/Stride;->Init(Ljava/lang/String;I)I
@@ -605,8 +619,10 @@
 
     const/4 v0, -0x1
 
+    .line 11
     iput v0, p0, Lcom/samsung/android/ocr/stride/Stride;->lang:I
 
+    .line 12
     invoke-static {p1}, Lcom/samsung/android/ocr/stride/Stride;->Init(Ljava/lang/String;)I
 
     move-result p0
@@ -617,18 +633,21 @@
 .method public init(Ljava/lang/String;I)I
     .locals 2
 
+    .line 5
     iput p2, p0, Lcom/samsung/android/ocr/stride/Stride;->lang:I
 
     const/16 v0, 0x3e9
 
     if-ne p2, v0, :cond_0
 
+    .line 6
     invoke-direct {p0}, Lcom/samsung/android/ocr/stride/Stride;->getDeviceLang()I
 
     move-result p2
 
     iput p2, p0, Lcom/samsung/android/ocr/stride/Stride;->lang:I
 
+    .line 7
     sget-object p2, Lcom/samsung/android/ocr/stride/Stride;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -649,6 +668,7 @@
 
     invoke-static {p2, v0}, Lcom/samsung/android/ocr/MOCRLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 8
     :cond_0
     iget p0, p0, Lcom/samsung/android/ocr/stride/Stride;->lang:I
 
@@ -679,6 +699,7 @@
 .method public recognizeBlock([BIILcom/samsung/android/ocr/MOCRConstants$MOCRPxlFmt;Landroid/graphics/Point;Lcom/samsung/android/ocr/MOCRResult$Page;)I
     .locals 0
 
+    .line 1
     invoke-virtual {p4}, Lcom/samsung/android/ocr/MOCRConstants$MOCRPxlFmt;->getValue()I
 
     move-result p0
@@ -697,6 +718,7 @@
 .method public recognizeBlock([BIILcom/samsung/android/ocr/MOCRConstants$MOCRPxlFmt;Lcom/samsung/android/ocr/MOCRResult$Page;)I
     .locals 2
 
+    .line 2
     new-instance p0, Landroid/graphics/Point;
 
     div-int/lit8 v0, p2, 0x2
@@ -705,6 +727,7 @@
 
     invoke-direct {p0, v0, v1}, Landroid/graphics/Point;-><init>(II)V
 
+    .line 3
     invoke-virtual {p4}, Lcom/samsung/android/ocr/MOCRConstants$MOCRPxlFmt;->getValue()I
 
     move-result p4
@@ -725,6 +748,7 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     sget-object p0, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRUnsupportedFormat:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {p0}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -733,6 +757,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-static {p1, p2, p3}, Lcom/samsung/android/ocr/stride/Stride;->RecognizeBlock(Lcom/samsung/android/ocr/MOCRImage;Landroid/graphics/Point;Lcom/samsung/android/ocr/MOCRResult$Page;)I
 
@@ -746,6 +771,7 @@
 
     if-nez p1, :cond_0
 
+    .line 3
     sget-object p0, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRUnsupportedFormat:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {p0}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -754,6 +780,7 @@
 
     return p0
 
+    .line 4
     :cond_0
     new-instance p0, Landroid/graphics/Point;
 
@@ -771,6 +798,7 @@
 
     invoke-direct {p0, v0, v1}, Landroid/graphics/Point;-><init>(II)V
 
+    .line 5
     invoke-static {p1, p0, p2}, Lcom/samsung/android/ocr/stride/Stride;->RecognizeBlock(Lcom/samsung/android/ocr/MOCRImage;Landroid/graphics/Point;Lcom/samsung/android/ocr/MOCRResult$Page;)I
 
     move-result p0

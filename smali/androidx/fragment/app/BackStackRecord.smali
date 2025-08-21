@@ -25,6 +25,7 @@
 .method public constructor <init>(Landroidx/fragment/app/BackStackRecord;)V
     .locals 2
 
+    .line 7
     iget-object v0, p1, Landroidx/fragment/app/BackStackRecord;->mManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->getFragmentFactory()Landroidx/fragment/app/FragmentFactory;
@@ -39,6 +40,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 8
     iget-object v1, p1, Landroidx/fragment/app/BackStackRecord;->mManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->getHost()Landroidx/fragment/app/FragmentHostCallback;
@@ -58,29 +60,36 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 9
     :goto_0
     invoke-direct {p0, v0, v1, p1}, Landroidx/fragment/app/FragmentTransaction;-><init>(Landroidx/fragment/app/FragmentFactory;Ljava/lang/ClassLoader;Landroidx/fragment/app/FragmentTransaction;)V
 
     const/4 v0, -0x1
 
+    .line 10
     iput v0, p0, Landroidx/fragment/app/BackStackRecord;->mIndex:I
 
     const/4 v0, 0x0
 
+    .line 11
     iput-boolean v0, p0, Landroidx/fragment/app/BackStackRecord;->mBeingSaved:Z
 
+    .line 12
     iget-object v0, p1, Landroidx/fragment/app/BackStackRecord;->mManager:Landroidx/fragment/app/FragmentManager;
 
     iput-object v0, p0, Landroidx/fragment/app/BackStackRecord;->mManager:Landroidx/fragment/app/FragmentManager;
 
+    .line 13
     iget-boolean v0, p1, Landroidx/fragment/app/BackStackRecord;->mCommitted:Z
 
     iput-boolean v0, p0, Landroidx/fragment/app/BackStackRecord;->mCommitted:Z
 
+    .line 14
     iget v0, p1, Landroidx/fragment/app/BackStackRecord;->mIndex:I
 
     iput v0, p0, Landroidx/fragment/app/BackStackRecord;->mIndex:I
 
+    .line 15
     iget-boolean p1, p1, Landroidx/fragment/app/BackStackRecord;->mBeingSaved:Z
 
     iput-boolean p1, p0, Landroidx/fragment/app/BackStackRecord;->mBeingSaved:Z
@@ -91,6 +100,7 @@
 .method public constructor <init>(Landroidx/fragment/app/FragmentManager;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->getFragmentFactory()Landroidx/fragment/app/FragmentFactory;
 
     move-result-object v0
@@ -101,6 +111,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->getHost()Landroidx/fragment/app/FragmentHostCallback;
 
     move-result-object v1
@@ -118,17 +129,21 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
     invoke-direct {p0, v0, v1}, Landroidx/fragment/app/FragmentTransaction;-><init>(Landroidx/fragment/app/FragmentFactory;Ljava/lang/ClassLoader;)V
 
     const/4 v0, -0x1
 
+    .line 4
     iput v0, p0, Landroidx/fragment/app/BackStackRecord;->mIndex:I
 
     const/4 v0, 0x0
 
+    .line 5
     iput-boolean v0, p0, Landroidx/fragment/app/BackStackRecord;->mBeingSaved:Z
 
+    .line 6
     iput-object p1, p0, Landroidx/fragment/app/BackStackRecord;->mManager:Landroidx/fragment/app/FragmentManager;
 
     return-void
@@ -585,6 +600,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, p1, p2, v0}, Landroidx/fragment/app/BackStackRecord;->dump(Ljava/lang/String;Ljava/io/PrintWriter;Z)V
 
     return-void
@@ -595,6 +611,7 @@
 
     if-eqz p3, :cond_8
 
+    .line 2
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mName="
@@ -607,6 +624,7 @@
 
     const-string v0, " mIndex="
 
+    .line 3
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Landroidx/fragment/app/BackStackRecord;->mIndex:I
@@ -615,22 +633,26 @@
 
     const-string v0, " mCommitted="
 
+    .line 4
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Landroidx/fragment/app/BackStackRecord;->mCommitted:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
+    .line 5
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mTransition:I
 
     if-eqz v0, :cond_0
 
+    .line 6
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mTransition=#"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 7
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mTransition:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -639,6 +661,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 8
     :cond_0
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mEnterAnim:I
 
@@ -648,6 +671,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 9
     :cond_1
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -655,6 +679,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 10
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mEnterAnim:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -665,8 +690,10 @@
 
     const-string v0, " mExitAnim=#"
 
+    .line 11
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 12
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mExitAnim:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -675,6 +702,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 13
     :cond_2
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mPopEnterAnim:I
 
@@ -684,6 +712,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 14
     :cond_3
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -691,6 +720,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 15
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mPopEnterAnim:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -701,8 +731,10 @@
 
     const-string v0, " mPopExitAnim=#"
 
+    .line 16
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 17
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mPopExitAnim:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -711,6 +743,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 18
     :cond_4
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbTitleRes:I
 
@@ -720,6 +753,7 @@
 
     if-eqz v0, :cond_6
 
+    .line 19
     :cond_5
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -727,6 +761,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 20
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbTitleRes:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -737,12 +772,15 @@
 
     const-string v0, " mBreadCrumbTitleText="
 
+    .line 21
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 22
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbTitleText:Ljava/lang/CharSequence;
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
+    .line 23
     :cond_6
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbShortTitleRes:I
 
@@ -752,6 +790,7 @@
 
     if-eqz v0, :cond_8
 
+    .line 24
     :cond_7
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -759,6 +798,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 25
     iget v0, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbShortTitleRes:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -769,12 +809,15 @@
 
     const-string v0, " mBreadCrumbShortTitleText="
 
+    .line 26
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 27
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mBreadCrumbShortTitleText:Ljava/lang/CharSequence;
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
+    .line 28
     :cond_8
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mOps:Ljava/util/ArrayList;
 
@@ -784,12 +827,14 @@
 
     if-nez v0, :cond_d
 
+    .line 29
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "Operations:"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 30
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransaction;->mOps:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -801,6 +846,7 @@
     :goto_0
     if-ge v1, v0, :cond_d
 
+    .line 31
     iget-object v2, p0, Landroidx/fragment/app/FragmentTransaction;->mOps:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -809,10 +855,12 @@
 
     check-cast v2, Landroidx/fragment/app/FragmentTransaction$Op;
 
+    .line 32
     iget v3, v2, Landroidx/fragment/app/FragmentTransaction$Op;->mCmd:I
 
     packed-switch v3, :pswitch_data_0
 
+    .line 33
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -884,6 +932,7 @@
     :pswitch_a
     const-string v3, "NULL"
 
+    .line 34
     :goto_1
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -895,12 +944,14 @@
 
     const-string v4, ": "
 
+    .line 35
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, " "
 
+    .line 36
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v3, v2, Landroidx/fragment/app/FragmentTransaction$Op;->mFragment:Landroidx/fragment/app/Fragment;
@@ -909,6 +960,7 @@
 
     if-eqz p3, :cond_c
 
+    .line 37
     iget v3, v2, Landroidx/fragment/app/FragmentTransaction$Op;->mEnterAnim:I
 
     if-nez v3, :cond_9
@@ -917,6 +969,7 @@
 
     if-eqz v3, :cond_a
 
+    .line 38
     :cond_9
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -924,6 +977,7 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 39
     iget v3, v2, Landroidx/fragment/app/FragmentTransaction$Op;->mEnterAnim:I
 
     invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -934,8 +988,10 @@
 
     const-string v3, " exitAnim=#"
 
+    .line 40
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 41
     iget v3, v2, Landroidx/fragment/app/FragmentTransaction$Op;->mExitAnim:I
 
     invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -944,6 +1000,7 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 42
     :cond_a
     iget v3, v2, Landroidx/fragment/app/FragmentTransaction$Op;->mPopEnterAnim:I
 
@@ -953,6 +1010,7 @@
 
     if-eqz v3, :cond_c
 
+    .line 43
     :cond_b
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -960,6 +1018,7 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 44
     iget v3, v2, Landroidx/fragment/app/FragmentTransaction$Op;->mPopEnterAnim:I
 
     invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -970,8 +1029,10 @@
 
     const-string v3, " popExitAnim=#"
 
+    .line 45
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
+    .line 46
     iget v2, v2, Landroidx/fragment/app/FragmentTransaction$Op;->mPopExitAnim:I
 
     invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;

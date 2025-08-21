@@ -226,12 +226,14 @@
 .method public onLocationChanged(Landroid/location/Location;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$LocationListenerTransport;->mKey:Landroidx/core/location/LocationManagerCompat$LocationListenerKey;
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$LocationListenerTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
@@ -255,12 +257,14 @@
         }
     .end annotation
 
+    .line 3
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$LocationListenerTransport;->mKey:Landroidx/core/location/LocationManagerCompat$LocationListenerKey;
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 4
     :cond_0
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$LocationListenerTransport;->mExecutor:Ljava/util/concurrent/Executor;
 

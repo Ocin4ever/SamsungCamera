@@ -42,6 +42,7 @@
 .method public constructor <init>(Landroid/app/Activity;)V
     .locals 1
 
+    .line 1
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -60,8 +61,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -70,6 +73,7 @@
 
     iput-object p1, p0, Landroidx/core/app/ShareCompat$IntentReader;->mContext:Landroid/content/Context;
 
+    .line 4
     invoke-static {p2}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -78,12 +82,14 @@
 
     iput-object p1, p0, Landroidx/core/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
+    .line 5
     invoke-static {p2}, Landroidx/core/app/ShareCompat;->getCallingPackage(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/core/app/ShareCompat$IntentReader;->mCallingPackage:Ljava/lang/String;
 
+    .line 6
     invoke-static {p2}, Landroidx/core/app/ShareCompat;->getCallingActivity(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     move-result-object p1
@@ -444,6 +450,7 @@
 .method public getStream()Landroid/net/Uri;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/core/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     const-string v0, "android.intent.extra.STREAM"
@@ -460,6 +467,7 @@
 .method public getStream(I)Landroid/net/Uri;
     .locals 3
 
+    .line 2
     iget-object v0, p0, Landroidx/core/app/ShareCompat$IntentReader;->mStreams:Ljava/util/ArrayList;
 
     const-string v1, "android.intent.extra.STREAM"
@@ -472,6 +480,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Landroidx/core/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->getParcelableArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
@@ -480,11 +489,13 @@
 
     iput-object v0, p0, Landroidx/core/app/ShareCompat$IntentReader;->mStreams:Ljava/util/ArrayList;
 
+    .line 4
     :cond_0
     iget-object v0, p0, Landroidx/core/app/ShareCompat$IntentReader;->mStreams:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -496,6 +507,7 @@
     :cond_1
     if-nez p1, :cond_2
 
+    .line 6
     iget-object p0, p0, Landroidx/core/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {p0, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -506,6 +518,7 @@
 
     return-object p0
 
+    .line 7
     :cond_2
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 

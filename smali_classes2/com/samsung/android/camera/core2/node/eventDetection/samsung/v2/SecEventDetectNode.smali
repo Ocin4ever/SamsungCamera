@@ -315,6 +315,7 @@
 .method public bridge synthetic processBackgroundPreviewInternal(Ljava/lang/Object;Lcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
     .locals 0
 
+    .line 1
     check-cast p1, [B
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/node/eventDetection/samsung/v2/SecEventDetectNode;->processBackgroundPreviewInternal([BLcom/samsung/android/camera/core2/util/ImageInfo;Lcom/samsung/android/camera/core2/ExtraBundle;)V
@@ -327,11 +328,13 @@
 
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iget-boolean p3, p0, Lcom/samsung/android/camera/core2/node/eventDetection/samsung/v2/SecEventDetectNode;->mIsEventFinderInitialized:Z
 
     if-nez p3, :cond_0
 
+    .line 3
     sget-object p1, Lcom/samsung/android/camera/core2/node/eventDetection/samsung/v2/SecEventDetectNode;->SEC_EVENT_DETECTION_V2_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     const-string p2, "processBackgroundPreviewInternal : processing is skipped, EventFinder is not initialized"
@@ -340,10 +343,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     return-void
 
+    .line 5
     :cond_0
     :try_start_1
     iget p3, p0, Lcom/samsung/android/camera/core2/node/eventDetection/samsung/v2/SecEventDetectNode;->mDeviceOrientation:I
@@ -364,6 +369,7 @@
 
     move-result v8
 
+    .line 6
     sget-object p3, Lcom/samsung/android/camera/core2/node/eventDetection/samsung/v2/SecEventDetectNode;->SEC_EVENT_DETECTION_V2_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -382,6 +388,7 @@
 
     invoke-static {p3, v0}, Lcom/samsung/android/camera/core2/util/CLog;->q(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 7
     new-instance v0, Lcom/samsung/android/camera/core2/container/ExtraPreviewInfo;
 
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->s()J
@@ -392,6 +399,7 @@
 
     div-long/2addr v1, v3
 
+    .line 8
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->r()Lcom/samsung/android/camera/core2/util/StrideInfo;
 
     move-result-object v3
@@ -400,6 +408,7 @@
 
     move-result v3
 
+    .line 9
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->r()Lcom/samsung/android/camera/core2/util/StrideInfo;
 
     move-result-object v4
@@ -416,6 +425,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
+    .line 10
     iget-object v3, p0, Lcom/samsung/android/camera/core2/node/eventDetection/samsung/v2/SecEventDetectNode;->mPreviewSize:Landroid/util/Size;
 
     const/4 v4, 0x0
@@ -432,8 +442,10 @@
 
     invoke-static {p3, v1, v2}, Lcom/samsung/android/camera/core2/util/CLog;->s(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 11
     iget-object v2, p0, Lcom/samsung/android/camera/core2/node/eventDetection/samsung/v2/SecEventDetectNode;->mEventFinder:Lcom/samsung/srcb/eventdetector/a;
 
+    .line 12
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->p()Landroid/util/Size;
 
     move-result-object p3
@@ -444,6 +456,7 @@
 
     move-result v4
 
+    .line 13
     invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/ImageInfo;->p()Landroid/util/Size;
 
     move-result-object p2
@@ -460,6 +473,7 @@
 
     move-object v3, p1
 
+    .line 14
     invoke-virtual/range {v2 .. v10}, Lcom/samsung/srcb/eventdetector/a;->e([BIIIIIJ)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -470,6 +484,7 @@
     :catch_0
     move-exception p1
 
+    .line 15
     :try_start_2
     sget-object p2, Lcom/samsung/android/camera/core2/node/eventDetection/samsung/v2/SecEventDetectNode;->SEC_EVENT_DETECTION_V2_TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
@@ -491,6 +506,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 16
     :goto_0
     monitor-exit p0
 

@@ -27,6 +27,7 @@
 
     new-array v0, v0, [Landroidx/work/impl/constraints/controllers/ConstraintController;
 
+    .line 3
     new-instance v1, Landroidx/work/impl/constraints/controllers/BatteryChargingController;
 
     invoke-virtual {p1}, Landroidx/work/impl/constraints/trackers/Trackers;->getBatteryChargingTracker()Landroidx/work/impl/constraints/trackers/ConstraintTracker;
@@ -39,6 +40,7 @@
 
     aput-object v1, v0, v2
 
+    .line 4
     new-instance v1, Landroidx/work/impl/constraints/controllers/BatteryNotLowController;
 
     invoke-virtual {p1}, Landroidx/work/impl/constraints/trackers/Trackers;->getBatteryNotLowTracker()Landroidx/work/impl/constraints/trackers/BatteryNotLowTracker;
@@ -51,6 +53,7 @@
 
     aput-object v1, v0, v2
 
+    .line 5
     new-instance v1, Landroidx/work/impl/constraints/controllers/StorageNotLowController;
 
     invoke-virtual {p1}, Landroidx/work/impl/constraints/trackers/Trackers;->getStorageNotLowTracker()Landroidx/work/impl/constraints/trackers/ConstraintTracker;
@@ -63,6 +66,7 @@
 
     aput-object v1, v0, v2
 
+    .line 6
     new-instance v1, Landroidx/work/impl/constraints/controllers/NetworkConnectedController;
 
     invoke-virtual {p1}, Landroidx/work/impl/constraints/trackers/Trackers;->getNetworkStateTracker()Landroidx/work/impl/constraints/trackers/ConstraintTracker;
@@ -75,6 +79,7 @@
 
     aput-object v1, v0, v2
 
+    .line 7
     new-instance v1, Landroidx/work/impl/constraints/controllers/NetworkUnmeteredController;
 
     invoke-virtual {p1}, Landroidx/work/impl/constraints/trackers/Trackers;->getNetworkStateTracker()Landroidx/work/impl/constraints/trackers/ConstraintTracker;
@@ -87,6 +92,7 @@
 
     aput-object v1, v0, v2
 
+    .line 8
     new-instance v1, Landroidx/work/impl/constraints/controllers/NetworkNotRoamingController;
 
     invoke-virtual {p1}, Landroidx/work/impl/constraints/trackers/Trackers;->getNetworkStateTracker()Landroidx/work/impl/constraints/trackers/ConstraintTracker;
@@ -99,6 +105,7 @@
 
     aput-object v1, v0, v2
 
+    .line 9
     new-instance v1, Landroidx/work/impl/constraints/controllers/NetworkMeteredController;
 
     invoke-virtual {p1}, Landroidx/work/impl/constraints/trackers/Trackers;->getNetworkStateTracker()Landroidx/work/impl/constraints/trackers/ConstraintTracker;
@@ -111,10 +118,12 @@
 
     aput-object v1, v0, p1
 
+    .line 10
     invoke-static {v0}, Lg6/o;->j([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
+    .line 11
     invoke-direct {p0, p1}, Landroidx/work/impl/constraints/WorkConstraintsTracker;-><init>(Ljava/util/List;)V
 
     return-void
@@ -136,8 +145,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/work/impl/constraints/WorkConstraintsTracker;->controllers:Ljava/util/List;
 
     return-void

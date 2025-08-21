@@ -58,6 +58,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance p0, Lcom/google/common/collect/ImmutableBiMap$Builder;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/ImmutableBiMap$Builder;-><init>(I)V
@@ -68,6 +69,7 @@
 .method public bridge synthetic makeBuilder(I)Lcom/google/common/collect/ImmutableMap$Builder;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableBiMap$SerializedForm;->makeBuilder(I)Lcom/google/common/collect/ImmutableBiMap$Builder;
 
     move-result-object p0

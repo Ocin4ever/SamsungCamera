@@ -111,16 +111,20 @@
 .method private applyBias(FF)V
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
+    .line 3
     iput p1, v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->horizontalBias:F
 
+    .line 4
     iput p2, v0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->verticalBias:F
 
+    .line 5
     invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
@@ -171,6 +175,7 @@
 .method public applyBias()V
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;->mPortraitHorizontalBias:F
 
     iget v1, p0, Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;->mPortraitVerticalBias:F
@@ -500,6 +505,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;->setPresenter(Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupContract$Presenter;)V
@@ -515,6 +521,7 @@
         }
     .end annotation
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;->mPresenter:Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupContract$Presenter;
 
     return-void
@@ -639,14 +646,17 @@
 .method public startShowAnimation(Landroid/view/View;Ljava/lang/Runnable;)V
     .locals 3
 
+    .line 2
     iget-boolean v0, p0, Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;->mIsRefreshByOrientation:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
 
+    .line 4
     invoke-static {p2}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
 
     move-result-object p0
@@ -659,6 +669,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
@@ -668,10 +679,13 @@
 
     const/4 v0, 0x0
 
+    .line 6
     invoke-virtual {p0, v0}, Landroid/view/View;->setAlpha(F)V
 
+    .line 7
     invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
 
+    .line 8
     :cond_1
     invoke-virtual {p0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -699,6 +713,7 @@
 
     move-result-object v0
 
+    .line 9
     invoke-static {p2}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
 
     move-result-object p2
@@ -711,6 +726,7 @@
 
     invoke-virtual {p2, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 10
     invoke-static {p1}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
 
     move-result-object p1
@@ -730,6 +746,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/sec/android/app/camera/layer/popup/abstraction/AbstractPopupView;->startShowAnimation(Landroid/view/View;Ljava/lang/Runnable;)V
 
     return-void

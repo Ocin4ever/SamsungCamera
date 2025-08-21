@@ -970,12 +970,14 @@
         }
     .end annotation
 
+    .line 45
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
     move-result v0
 
     if-nez v0, :cond_8
 
+    .line 46
     iget-object v0, p0, Landroidx/work/impl/utils/futures/AbstractFuture;->value:Ljava/lang/Object;
 
     const/4 v1, 0x0
@@ -991,6 +993,7 @@
     :cond_0
     move v3, v1
 
+    .line 47
     :goto_0
     instance-of v4, v0, Landroidx/work/impl/utils/futures/AbstractFuture$SetFuture;
 
@@ -1000,26 +1003,32 @@
 
     if-eqz v3, :cond_1
 
+    .line 48
     invoke-direct {p0, v0}, Landroidx/work/impl/utils/futures/AbstractFuture;->getDoneValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 49
     :cond_1
     iget-object v0, p0, Landroidx/work/impl/utils/futures/AbstractFuture;->waiters:Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;
 
+    .line 50
     sget-object v3, Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;->TOMBSTONE:Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;
 
     if-eq v0, v3, :cond_7
 
+    .line 51
     new-instance v3, Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;
 
     invoke-direct {v3}, Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;-><init>()V
 
+    .line 52
     :cond_2
     invoke-virtual {v3, v0}, Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;->setNext(Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;)V
 
+    .line 53
     sget-object v4, Landroidx/work/impl/utils/futures/AbstractFuture;->ATOMIC_HELPER:Landroidx/work/impl/utils/futures/AbstractFuture$AtomicHelper;
 
     invoke-virtual {v4, p0, v0, v3}, Landroidx/work/impl/utils/futures/AbstractFuture$AtomicHelper;->casWaiters(Landroidx/work/impl/utils/futures/AbstractFuture;Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;)Z
@@ -1028,15 +1037,18 @@
 
     if-eqz v0, :cond_6
 
+    .line 54
     :cond_3
     invoke-static {p0}, Ljava/util/concurrent/locks/LockSupport;->park(Ljava/lang/Object;)V
 
+    .line 55
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
     move-result v0
 
     if-nez v0, :cond_5
 
+    .line 56
     iget-object v0, p0, Landroidx/work/impl/utils/futures/AbstractFuture;->value:Ljava/lang/Object;
 
     if-eqz v0, :cond_4
@@ -1048,6 +1060,7 @@
     :cond_4
     move v4, v1
 
+    .line 57
     :goto_1
     instance-of v5, v0, Landroidx/work/impl/utils/futures/AbstractFuture$SetFuture;
 
@@ -1057,28 +1070,34 @@
 
     if-eqz v4, :cond_3
 
+    .line 58
     invoke-direct {p0, v0}, Landroidx/work/impl/utils/futures/AbstractFuture;->getDoneValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 59
     :cond_5
     invoke-direct {p0, v3}, Landroidx/work/impl/utils/futures/AbstractFuture;->removeWaiter(Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;)V
 
+    .line 60
     new-instance p0, Ljava/lang/InterruptedException;
 
     invoke-direct {p0}, Ljava/lang/InterruptedException;-><init>()V
 
     throw p0
 
+    .line 61
     :cond_6
     iget-object v0, p0, Landroidx/work/impl/utils/futures/AbstractFuture;->waiters:Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;
 
+    .line 62
     sget-object v4, Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;->TOMBSTONE:Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;
 
     if-ne v0, v4, :cond_2
 
+    .line 63
     :cond_7
     iget-object v0, p0, Landroidx/work/impl/utils/futures/AbstractFuture;->value:Ljava/lang/Object;
 
@@ -1088,6 +1107,7 @@
 
     return-object p0
 
+    .line 64
     :cond_8
     new-instance p0, Ljava/lang/InterruptedException;
 
@@ -1112,16 +1132,19 @@
 
     move-object/from16 v3, p3
 
+    .line 1
     invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
     move-result-wide v4
 
+    .line 2
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
     move-result v6
 
     if-nez v6, :cond_16
 
+    .line 3
     iget-object v6, v0, Landroidx/work/impl/utils/futures/AbstractFuture;->value:Ljava/lang/Object;
 
     const/4 v8, 0x1
@@ -1135,6 +1158,7 @@
     :cond_0
     const/4 v9, 0x0
 
+    .line 4
     :goto_0
     instance-of v10, v6, Landroidx/work/impl/utils/futures/AbstractFuture$SetFuture;
 
@@ -1144,6 +1168,7 @@
 
     if-eqz v9, :cond_1
 
+    .line 5
     invoke-direct {v0, v6}, Landroidx/work/impl/utils/futures/AbstractFuture;->getDoneValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1157,6 +1182,7 @@
 
     if-lez v6, :cond_2
 
+    .line 6
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v11
@@ -1175,19 +1201,24 @@
 
     if-ltz v6, :cond_a
 
+    .line 7
     iget-object v6, v0, Landroidx/work/impl/utils/futures/AbstractFuture;->waiters:Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;
 
+    .line 8
     sget-object v15, Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;->TOMBSTONE:Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;
 
     if-eq v6, v15, :cond_9
 
+    .line 9
     new-instance v15, Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;
 
     invoke-direct {v15}, Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;-><init>()V
 
+    .line 10
     :cond_3
     invoke-virtual {v15, v6}, Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;->setNext(Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;)V
 
+    .line 11
     sget-object v7, Landroidx/work/impl/utils/futures/AbstractFuture;->ATOMIC_HELPER:Landroidx/work/impl/utils/futures/AbstractFuture$AtomicHelper;
 
     invoke-virtual {v7, v0, v6, v15}, Landroidx/work/impl/utils/futures/AbstractFuture$AtomicHelper;->casWaiters(Landroidx/work/impl/utils/futures/AbstractFuture;Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;)Z
@@ -1196,15 +1227,18 @@
 
     if-eqz v6, :cond_8
 
+    .line 12
     :cond_4
     invoke-static {v0, v4, v5}, Ljava/util/concurrent/locks/LockSupport;->parkNanos(Ljava/lang/Object;J)V
 
+    .line 13
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
     move-result v4
 
     if-nez v4, :cond_7
 
+    .line 14
     iget-object v4, v0, Landroidx/work/impl/utils/futures/AbstractFuture;->value:Ljava/lang/Object;
 
     if-eqz v4, :cond_5
@@ -1216,6 +1250,7 @@
     :cond_5
     const/4 v5, 0x0
 
+    .line 15
     :goto_2
     instance-of v6, v4, Landroidx/work/impl/utils/futures/AbstractFuture$SetFuture;
 
@@ -1225,12 +1260,14 @@
 
     if-eqz v5, :cond_6
 
+    .line 16
     invoke-direct {v0, v4}, Landroidx/work/impl/utils/futures/AbstractFuture;->getDoneValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 
+    .line 17
     :cond_6
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -1242,26 +1279,32 @@
 
     if-gez v6, :cond_4
 
+    .line 18
     invoke-direct {v0, v15}, Landroidx/work/impl/utils/futures/AbstractFuture;->removeWaiter(Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;)V
 
     goto :goto_3
 
+    .line 19
     :cond_7
     invoke-direct {v0, v15}, Landroidx/work/impl/utils/futures/AbstractFuture;->removeWaiter(Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;)V
 
+    .line 20
     new-instance v0, Ljava/lang/InterruptedException;
 
     invoke-direct {v0}, Ljava/lang/InterruptedException;-><init>()V
 
     throw v0
 
+    .line 21
     :cond_8
     iget-object v6, v0, Landroidx/work/impl/utils/futures/AbstractFuture;->waiters:Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;
 
+    .line 22
     sget-object v7, Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;->TOMBSTONE:Landroidx/work/impl/utils/futures/AbstractFuture$Waiter;
 
     if-ne v6, v7, :cond_3
 
+    .line 23
     :cond_9
     iget-object v1, v0, Landroidx/work/impl/utils/futures/AbstractFuture;->value:Ljava/lang/Object;
 
@@ -1277,6 +1320,7 @@
 
     if-lez v6, :cond_e
 
+    .line 24
     iget-object v4, v0, Landroidx/work/impl/utils/futures/AbstractFuture;->value:Ljava/lang/Object;
 
     if-eqz v4, :cond_b
@@ -1288,6 +1332,7 @@
     :cond_b
     const/4 v5, 0x0
 
+    .line 25
     :goto_4
     instance-of v6, v4, Landroidx/work/impl/utils/futures/AbstractFuture$SetFuture;
 
@@ -1297,12 +1342,14 @@
 
     if-eqz v5, :cond_c
 
+    .line 26
     invoke-direct {v0, v4}, Landroidx/work/impl/utils/futures/AbstractFuture;->getDoneValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 
+    .line 27
     :cond_c
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
@@ -1310,6 +1357,7 @@
 
     if-nez v4, :cond_d
 
+    .line 28
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v4
@@ -1318,6 +1366,7 @@
 
     goto :goto_3
 
+    .line 29
     :cond_d
     new-instance v0, Ljava/lang/InterruptedException;
 
@@ -1325,11 +1374,13 @@
 
     throw v0
 
+    .line 30
     :cond_e
     invoke-virtual/range {p0 .. p0}, Landroidx/work/impl/utils/futures/AbstractFuture;->toString()Ljava/lang/String;
 
     move-result-object v6
 
+    .line 31
     invoke-virtual/range {p3 .. p3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v7
@@ -1340,6 +1391,7 @@
 
     move-result-object v7
 
+    .line 32
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1374,6 +1426,7 @@
 
     if-gez v11, :cond_14
 
+    .line 33
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -1390,12 +1443,14 @@
 
     neg-long v4, v4
 
+    .line 34
     sget-object v11, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {v3, v4, v5, v11}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
 
     move-result-wide v11
 
+    .line 35
     invoke-virtual {v3, v11, v12}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
     move-result-wide v17
@@ -1424,6 +1479,7 @@
     :goto_6
     if-lez v3, :cond_12
 
+    .line 36
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1442,6 +1498,7 @@
 
     if-eqz v16, :cond_11
 
+    .line 37
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1456,6 +1513,7 @@
 
     move-result-object v2
 
+    .line 38
     :cond_11
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1472,6 +1530,7 @@
     :cond_12
     if-eqz v16, :cond_13
 
+    .line 39
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1488,6 +1547,7 @@
 
     move-result-object v2
 
+    .line 40
     :cond_13
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1503,6 +1563,7 @@
 
     move-result-object v2
 
+    .line 41
     :cond_14
     invoke-virtual/range {p0 .. p0}, Landroidx/work/impl/utils/futures/AbstractFuture;->isDone()Z
 
@@ -1510,6 +1571,7 @@
 
     if-eqz v0, :cond_15
 
+    .line 42
     new-instance v0, Ljava/util/concurrent/TimeoutException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1530,6 +1592,7 @@
 
     throw v0
 
+    .line 43
     :cond_15
     new-instance v0, Ljava/util/concurrent/TimeoutException;
 
@@ -1553,6 +1616,7 @@
 
     throw v0
 
+    .line 44
     :cond_16
     new-instance v0, Ljava/lang/InterruptedException;
 

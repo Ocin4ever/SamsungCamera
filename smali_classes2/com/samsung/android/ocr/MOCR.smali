@@ -90,31 +90,37 @@
 .method public static getInstance()Lcom/samsung/android/ocr/MOCR;
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
     if-nez v0, :cond_2
 
+    .line 2
     const-class v0, Lcom/samsung/android/ocr/MOCR;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     sget-object v1, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
     if-nez v1, :cond_1
 
+    .line 4
     sget-object v1, Lcom/samsung/android/ocr/MOCR;->engineType:Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;
 
     sget-object v2, Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;->Stride:Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;
 
     if-ne v1, v2, :cond_0
 
+    .line 5
     invoke-static {}, Lcom/samsung/android/ocr/stride/Stride;->getInstance()Lcom/samsung/android/ocr/stride/Stride;
 
     move-result-object v1
 
     sput-object v1, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
+    .line 6
     sget-object v1, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -149,6 +155,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     sget-object v1, Lcom/samsung/android/ocr/MOCR;->engineType:Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;
 
@@ -156,12 +163,14 @@
 
     if-ne v1, v2, :cond_1
 
+    .line 8
     invoke-static {}, Lcom/samsung/ocr/SecMOCR;->e()Lcom/samsung/ocr/SecMOCR;
 
     move-result-object v1
 
     sput-object v1, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
+    .line 9
     sget-object v1, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -194,6 +203,7 @@
 
     invoke-static {v1, v2}, Lcom/samsung/android/ocr/MOCRLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 10
     :cond_1
     :goto_0
     monitor-exit v0
@@ -209,6 +219,7 @@
 
     throw v1
 
+    .line 11
     :cond_2
     :goto_1
     sget-object v0, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
@@ -219,8 +230,10 @@
 .method public static getInstance(Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;)Lcom/samsung/android/ocr/MOCR;
     .locals 4
 
+    .line 12
     sput-object p0, Lcom/samsung/android/ocr/MOCR;->engineType:Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;
 
+    .line 13
     sget-object v0, Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;->Stride:Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;
 
     const-string v1, "1.5.7"
@@ -232,6 +245,7 @@
     :try_start_0
     const-string p0, "Stride.camera.samsung"
 
+    .line 14
     invoke-static {p0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
@@ -241,12 +255,15 @@
     :catch_0
     move-exception p0
 
+    .line 15
     sget-object v0, Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;->None:Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;
 
     sput-object v0, Lcom/samsung/android/ocr/MOCR;->engineType:Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;
 
+    .line 16
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
+    .line 17
     :goto_0
     invoke-static {}, Lcom/samsung/android/ocr/stride/Stride;->getInstance()Lcom/samsung/android/ocr/stride/Stride;
 
@@ -254,6 +271,7 @@
 
     sput-object p0, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
+    .line 18
     sget-object p0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -284,6 +302,7 @@
 
     goto :goto_2
 
+    .line 19
     :cond_0
     sget-object v0, Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;->SecMOCR:Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;
 
@@ -292,6 +311,7 @@
     :try_start_1
     const-string p0, "mOCR.camera.samsung"
 
+    .line 20
     invoke-static {p0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_1 .. :try_end_1} :catch_1
@@ -301,12 +321,15 @@
     :catch_1
     move-exception p0
 
+    .line 21
     sget-object v0, Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;->None:Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;
 
     sput-object v0, Lcom/samsung/android/ocr/MOCR;->engineType:Lcom/samsung/android/ocr/MOCRConstants$MOCREngineType;
 
+    .line 22
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
+    .line 23
     :goto_1
     invoke-static {}, Lcom/samsung/ocr/SecMOCR;->e()Lcom/samsung/ocr/SecMOCR;
 
@@ -314,6 +337,7 @@
 
     sput-object p0, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
+    .line 24
     sget-object p0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -342,6 +366,7 @@
 
     invoke-static {p0, v0}, Lcom/samsung/android/ocr/MOCRLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 25
     :cond_1
     :goto_2
     sget-object p0, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
@@ -352,8 +377,10 @@
 .method public static getInstance(Lcom/samsung/android/ocr/MOCROptions;)Lcom/samsung/android/ocr/MOCR;
     .locals 5
 
+    .line 26
     invoke-static {}, Lcom/samsung/android/ocr/MOCR;->getInstance()Lcom/samsung/android/ocr/MOCR;
 
+    .line 27
     invoke-virtual {p0}, Lcom/samsung/android/ocr/MOCROptions;->isForceLang()Z
 
     move-result v0
@@ -368,22 +395,26 @@
 
     const-string v3, "ForceLang_MOCROption"
 
+    .line 28
     invoke-static {v3, v1, v0, v2}, Lcom/samsung/android/ocr/MOCR;->isFeatureSupported(Ljava/lang/String;III)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 29
     sget-object p0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
     const-string v0, "ForceLang Option unavailable for current engine version"
 
     invoke-static {p0, v0}, Lcom/samsung/android/ocr/MOCRLog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 30
     sget-object p0, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
     return-object p0
 
+    .line 31
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/ocr/MOCROptions;->isRunInverted()Z
 
@@ -397,22 +428,26 @@
 
     const-string v3, "RunInverted_MOCROption"
 
+    .line 32
     invoke-static {v3, v1, v0, v2}, Lcom/samsung/android/ocr/MOCR;->isFeatureSupported(Ljava/lang/String;III)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
+    .line 33
     sget-object p0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
     const-string v0, "RunInverted Option unavailable for current engine version"
 
     invoke-static {p0, v0}, Lcom/samsung/android/ocr/MOCRLog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 34
     sget-object p0, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
     return-object p0
 
+    .line 35
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/ocr/MOCROptions;->getLanguageMode()I
 
@@ -432,22 +467,26 @@
 
     const-string v0, "LanguageMode_MOCROption"
 
+    .line 36
     invoke-static {v0, v1, v4, v3}, Lcom/samsung/android/ocr/MOCR;->isFeatureSupported(Ljava/lang/String;III)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
+    .line 37
     sget-object p0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
     const-string v0, "LanguageMode Option unavailable for current engine version"
 
     invoke-static {p0, v0}, Lcom/samsung/android/ocr/MOCRLog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 38
     sget-object p0, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
     return-object p0
 
+    .line 39
     :cond_2
     invoke-virtual {p0}, Lcom/samsung/android/ocr/MOCROptions;->getImageType()I
 
@@ -463,27 +502,32 @@
 
     const-string v0, "ImageType_MOCROption"
 
+    .line 40
     invoke-static {v0, v1, v4, v3}, Lcom/samsung/android/ocr/MOCR;->isFeatureSupported(Ljava/lang/String;III)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
+    .line 41
     sget-object p0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
     const-string v0, "ImageType Option unavailable for current engine version"
 
     invoke-static {p0, v0}, Lcom/samsung/android/ocr/MOCRLog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 42
     sget-object p0, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
     return-object p0
 
+    .line 43
     :cond_3
     sget-object v0, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/ocr/MOCR;->set_options(Lcom/samsung/android/ocr/MOCROptions;)V
 
+    .line 44
     sget-object p0, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
     return-object p0
@@ -739,6 +783,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     sget-object v0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
@@ -772,32 +817,38 @@
 
     const/4 v4, 0x1
 
+    .line 2
     invoke-static {v1, v4, v2, v3}, Lcom/samsung/android/ocr/MOCR;->isFeatureSupported(Ljava/lang/String;III)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
+    .line 3
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v1
 
+    .line 4
     sget-object v3, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRModelNotInitError:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {v3}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
 
     move-result v3
 
+    .line 5
     iget-boolean v4, p0, Lcom/samsung/android/ocr/MOCR;->initialized:Z
 
     if-eqz v4, :cond_1
 
+    .line 6
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCRImage;->fromBitmap(Landroid/graphics/Bitmap;)Lcom/samsung/android/ocr/MOCRImage;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
+    .line 7
     sget-object p1, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRUnsupportedFormat:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {p1}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -806,6 +857,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     sget-object v3, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
@@ -813,6 +865,7 @@
 
     move-result v3
 
+    .line 9
     :cond_1
     :goto_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -823,8 +876,10 @@
 
     const-wide/32 v1, 0xf4240
 
+    .line 10
     div-long/2addr p1, v1
 
+    .line 11
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -853,10 +908,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 12
     monitor-exit p0
 
     return v3
 
+    .line 13
     :cond_2
     :try_start_1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -882,6 +939,7 @@
 
     monitor-enter p0
 
+    .line 14
     :try_start_0
     sget-object v0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
@@ -915,32 +973,38 @@
 
     const/4 v4, 0x1
 
+    .line 15
     invoke-static {v1, v4, v2, v3}, Lcom/samsung/android/ocr/MOCR;->isFeatureSupported(Ljava/lang/String;III)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
+    .line 16
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v1
 
+    .line 17
     sget-object v3, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRModelNotInitError:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {v3}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
 
     move-result v3
 
+    .line 18
     iget-boolean v4, p0, Lcom/samsung/android/ocr/MOCR;->initialized:Z
 
     if-eqz v4, :cond_1
 
+    .line 19
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCRImage;->fromBitmap(Landroid/graphics/Bitmap;)Lcom/samsung/android/ocr/MOCRImage;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
+    .line 20
     sget-object p1, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRUnsupportedFormat:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {p1}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -949,6 +1013,7 @@
 
     goto :goto_0
 
+    .line 21
     :cond_0
     sget-object v3, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
@@ -956,6 +1021,7 @@
 
     move-result v3
 
+    .line 22
     :cond_1
     :goto_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -966,8 +1032,10 @@
 
     const-wide/32 v1, 0xf4240
 
+    .line 23
     div-long/2addr p1, v1
 
+    .line 24
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -996,10 +1064,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 25
     monitor-exit p0
 
     return v3
 
+    .line 26
     :cond_2
     :try_start_1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -1700,6 +1770,7 @@
 
     monitor-enter p0
 
+    .line 25
     :try_start_0
     sget-object v0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
@@ -1707,18 +1778,22 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/ocr/MOCRLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 26
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v1
 
+    .line 27
     iget-boolean v3, p0, Lcom/samsung/android/ocr/MOCR;->initialized:Z
 
     if-eqz v3, :cond_0
 
     const-string v3, "Engine already initialized!!"
 
+    .line 28
     invoke-static {v0, v3}, Lcom/samsung/android/ocr/MOCRLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 29
     sget-object v3, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRActiveEngineError:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {v3}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -1727,6 +1802,7 @@
 
     goto :goto_0
 
+    .line 30
     :cond_0
     sget-object v3, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
@@ -1734,6 +1810,7 @@
 
     move-result v3
 
+    .line 31
     sget-object v4, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRSuccess:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {v4}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -1744,8 +1821,10 @@
 
     const/4 v4, 0x1
 
+    .line 32
     iput-boolean v4, p0, Lcom/samsung/android/ocr/MOCR;->initialized:Z
 
+    .line 33
     :cond_1
     :goto_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -1756,8 +1835,10 @@
 
     const-wide/32 v1, 0xf4240
 
+    .line 34
     div-long/2addr v4, v1
 
+    .line 35
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1786,6 +1867,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 36
     monitor-exit p0
 
     return v3
@@ -1803,6 +1885,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     sget-object v0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
@@ -1810,18 +1893,22 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/ocr/MOCRLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v1
 
+    .line 3
     iget-boolean v3, p0, Lcom/samsung/android/ocr/MOCR;->initialized:Z
 
     if-eqz v3, :cond_0
 
     const-string p1, "Engine already initialized!!"
 
+    .line 4
     invoke-static {v0, p1}, Lcom/samsung/android/ocr/MOCRLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     sget-object p1, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRActiveEngineError:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {p1}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -1830,6 +1917,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     sget-object v3, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
@@ -1841,6 +1929,7 @@
 
     move-result p1
 
+    .line 7
     sget-object v3, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRSuccess:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {v3}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -1851,8 +1940,10 @@
 
     const/4 v3, 0x1
 
+    .line 8
     iput-boolean v3, p0, Lcom/samsung/android/ocr/MOCR;->initialized:Z
 
+    .line 9
     :cond_1
     :goto_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -1863,8 +1954,10 @@
 
     const-wide/32 v1, 0xf4240
 
+    .line 10
     div-long/2addr v3, v1
 
+    .line 11
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1893,6 +1986,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 12
     monitor-exit p0
 
     return p1
@@ -1910,6 +2004,7 @@
 
     monitor-enter p0
 
+    .line 37
     :try_start_0
     sget-object v0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
@@ -1933,18 +2028,22 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/ocr/MOCRLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 38
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v1
 
+    .line 39
     iget-boolean v3, p0, Lcom/samsung/android/ocr/MOCR;->initialized:Z
 
     if-eqz v3, :cond_0
 
     const-string p1, "Engine already initialized!!"
 
+    .line 40
     invoke-static {v0, p1}, Lcom/samsung/android/ocr/MOCRLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 41
     sget-object p1, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRActiveEngineError:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {p1}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -1953,6 +2052,7 @@
 
     goto :goto_0
 
+    .line 42
     :cond_0
     sget-object v3, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
@@ -1960,6 +2060,7 @@
 
     move-result p1
 
+    .line 43
     sget-object v3, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRSuccess:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {v3}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -1970,8 +2071,10 @@
 
     const/4 v3, 0x1
 
+    .line 44
     iput-boolean v3, p0, Lcom/samsung/android/ocr/MOCR;->initialized:Z
 
+    .line 45
     :cond_1
     :goto_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -1982,8 +2085,10 @@
 
     const-wide/32 v1, 0xf4240
 
+    .line 46
     div-long/2addr v3, v1
 
+    .line 47
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2006,6 +2111,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 48
     monitor-exit p0
 
     return p1
@@ -2023,6 +2129,7 @@
 
     monitor-enter p0
 
+    .line 13
     :try_start_0
     sget-object v0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
@@ -2046,18 +2153,22 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/ocr/MOCRLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 14
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v1
 
+    .line 15
     iget-boolean v3, p0, Lcom/samsung/android/ocr/MOCR;->initialized:Z
 
     if-eqz v3, :cond_0
 
     const-string p1, "Engine already initialized!!"
 
+    .line 16
     invoke-static {v0, p1}, Lcom/samsung/android/ocr/MOCRLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 17
     sget-object p1, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRActiveEngineError:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {p1}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -2066,6 +2177,7 @@
 
     goto :goto_0
 
+    .line 18
     :cond_0
     sget-object v3, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
@@ -2077,6 +2189,7 @@
 
     move-result p1
 
+    .line 19
     sget-object p2, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRSuccess:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {p2}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -2087,8 +2200,10 @@
 
     const/4 p2, 0x1
 
+    .line 20
     iput-boolean p2, p0, Lcom/samsung/android/ocr/MOCR;->initialized:Z
 
+    .line 21
     :cond_1
     :goto_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -2099,8 +2214,10 @@
 
     const-wide/32 v1, 0xf4240
 
+    .line 22
     div-long/2addr v3, v1
 
+    .line 23
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2123,6 +2240,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 24
     monitor-exit p0
 
     return p1
@@ -2438,6 +2556,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     sget-object v0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
@@ -2471,32 +2590,38 @@
 
     const/4 v4, 0x1
 
+    .line 2
     invoke-static {v1, v4, v2, v3}, Lcom/samsung/android/ocr/MOCR;->isFeatureSupported(Ljava/lang/String;III)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
+    .line 3
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v1
 
+    .line 4
     sget-object v3, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRModelNotInitError:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {v3}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
 
     move-result v3
 
+    .line 5
     iget-boolean v4, p0, Lcom/samsung/android/ocr/MOCR;->initialized:Z
 
     if-eqz v4, :cond_1
 
+    .line 6
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCRImage;->fromBitmap(Landroid/graphics/Bitmap;)Lcom/samsung/android/ocr/MOCRImage;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
+    .line 7
     sget-object p1, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRUnsupportedFormat:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {p1}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -2505,6 +2630,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     sget-object v3, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
@@ -2512,6 +2638,7 @@
 
     move-result v3
 
+    .line 9
     :cond_1
     :goto_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -2522,8 +2649,10 @@
 
     const-wide/32 v1, 0xf4240
 
+    .line 10
     div-long/2addr p1, v1
 
+    .line 11
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2552,10 +2681,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 12
     monitor-exit p0
 
     return v3
 
+    .line 13
     :cond_2
     :try_start_1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -2581,6 +2712,7 @@
 
     monitor-enter p0
 
+    .line 14
     :try_start_0
     sget-object v0, Lcom/samsung/android/ocr/MOCR;->TAG:Ljava/lang/String;
 
@@ -2614,32 +2746,38 @@
 
     const/4 v4, 0x1
 
+    .line 15
     invoke-static {v1, v4, v2, v3}, Lcom/samsung/android/ocr/MOCR;->isFeatureSupported(Ljava/lang/String;III)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
+    .line 16
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v1
 
+    .line 17
     sget-object v3, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRModelNotInitError:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {v3}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
 
     move-result v3
 
+    .line 18
     iget-boolean v4, p0, Lcom/samsung/android/ocr/MOCR;->initialized:Z
 
     if-eqz v4, :cond_1
 
+    .line 19
     invoke-static {p1}, Lcom/samsung/android/ocr/MOCRImage;->fromBitmap(Landroid/graphics/Bitmap;)Lcom/samsung/android/ocr/MOCRImage;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
+    .line 20
     sget-object p1, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->MOCRUnsupportedFormat:Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;
 
     invoke-virtual {p1}, Lcom/samsung/android/ocr/MOCRConstants$MOCRStatus;->getValue()I
@@ -2648,6 +2786,7 @@
 
     goto :goto_0
 
+    .line 21
     :cond_0
     sget-object v3, Lcom/samsung/android/ocr/MOCR;->mMOCR:Lcom/samsung/android/ocr/MOCR;
 
@@ -2655,6 +2794,7 @@
 
     move-result v3
 
+    .line 22
     :cond_1
     :goto_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -2665,8 +2805,10 @@
 
     const-wide/32 v1, 0xf4240
 
+    .line 23
     div-long/2addr p1, v1
 
+    .line 24
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2695,10 +2837,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 25
     monitor-exit p0
 
     return v3
 
+    .line 26
     :cond_2
     :try_start_1
     new-instance p1, Ljava/lang/UnsupportedOperationException;

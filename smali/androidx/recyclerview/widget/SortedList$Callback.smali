@@ -85,6 +85,7 @@
 .method public onChanged(IILjava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/SortedList$Callback;->onChanged(II)V
 
     return-void

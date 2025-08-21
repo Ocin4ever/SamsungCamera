@@ -11,10 +11,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lg/j;->g:Lg/j;
 
     invoke-direct {p0, v0}, Lg/e;-><init>(Lg/j;)V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -27,10 +29,12 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 3
     sget-object v0, Lg/j;->g:Lg/j;
 
     invoke-direct {p0, v0}, Lg/e;-><init>(Lg/j;)V
 
+    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(I)V

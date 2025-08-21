@@ -59,6 +59,7 @@
 .method public bridge synthetic getResult()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/io/Files$1;->getResult()Ljava/util/List;
 
     move-result-object p0
@@ -77,6 +78,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/io/Files$1;->result:Ljava/util/List;
 
     return-object p0

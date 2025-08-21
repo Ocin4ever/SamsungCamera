@@ -32,14 +32,17 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/lifecycle/ViewModel;->mBagOfTags:Ljava/util/Map;
 
+    .line 3
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
@@ -48,6 +51,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     iput-boolean v0, p0, Landroidx/lifecycle/ViewModel;->mCleared:Z
 
     return-void
@@ -56,14 +60,17 @@
 .method public varargs constructor <init>([Ljava/io/Closeable;)V
     .locals 2
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/lifecycle/ViewModel;->mBagOfTags:Ljava/util/Map;
 
+    .line 7
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
@@ -72,8 +79,10 @@
 
     const/4 v1, 0x0
 
+    .line 8
     iput-boolean v1, p0, Landroidx/lifecycle/ViewModel;->mCleared:Z
 
+    .line 9
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0

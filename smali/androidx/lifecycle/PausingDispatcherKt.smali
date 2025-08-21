@@ -19,6 +19,7 @@
         }
     .end annotation
 
+    .line 2
     sget-object v0, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-static {p0, v0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lq6/p;Li6/d;)Ljava/lang/Object;
@@ -43,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p0
@@ -69,6 +71,7 @@
         }
     .end annotation
 
+    .line 2
     sget-object v0, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-static {p0, v0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lq6/p;Li6/d;)Ljava/lang/Object;
@@ -93,6 +96,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p0
@@ -119,6 +123,7 @@
         }
     .end annotation
 
+    .line 2
     sget-object v0, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-static {p0, v0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lq6/p;Li6/d;)Ljava/lang/Object;
@@ -143,6 +148,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p0

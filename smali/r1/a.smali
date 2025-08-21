@@ -23,8 +23,10 @@
 .method public constructor <init>(Lr1/a$b;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
+    .line 4
     iput-object p1, p0, Lr1/a;->a:Lr1/a$b;
 
     return-void
@@ -33,6 +35,7 @@
 .method public synthetic constructor <init>(Lr1/a$b;Lr1/a$a;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lr1/a;-><init>(Lr1/a$b;)V
 
     return-void
@@ -41,6 +44,7 @@
 .method public constructor <init>(Lt1/k;)V
     .locals 2
 
+    .line 2
     new-instance v0, Lr1/a$b;
 
     new-instance v1, Lt1/g;

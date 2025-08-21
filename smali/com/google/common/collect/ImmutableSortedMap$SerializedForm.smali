@@ -68,6 +68,7 @@
 .method public bridge synthetic makeBuilder(I)Lcom/google/common/collect/ImmutableMap$Builder;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedMap$SerializedForm;->makeBuilder(I)Lcom/google/common/collect/ImmutableSortedMap$Builder;
 
     move-result-object p0
@@ -85,6 +86,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance p1, Lcom/google/common/collect/ImmutableSortedMap$Builder;
 
     iget-object p0, p0, Lcom/google/common/collect/ImmutableSortedMap$SerializedForm;->comparator:Ljava/util/Comparator;

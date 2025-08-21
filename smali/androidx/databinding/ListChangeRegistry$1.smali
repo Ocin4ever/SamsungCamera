@@ -54,10 +54,12 @@
 
     if-eq p3, p0, :cond_0
 
+    .line 2
     invoke-virtual {p1, p2}, Landroidx/databinding/ObservableList$OnListChangedCallback;->onChanged(Landroidx/databinding/ObservableList;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget p0, p4, Landroidx/databinding/ListChangeRegistry$ListChanges;->start:I
 
@@ -67,6 +69,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget p0, p4, Landroidx/databinding/ListChangeRegistry$ListChanges;->start:I
 
@@ -78,6 +81,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_2
     iget p0, p4, Landroidx/databinding/ListChangeRegistry$ListChanges;->start:I
 
@@ -87,6 +91,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_3
     iget p0, p4, Landroidx/databinding/ListChangeRegistry$ListChanges;->start:I
 
@@ -101,6 +106,7 @@
 .method public bridge synthetic onNotifyCallback(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/databinding/ObservableList$OnListChangedCallback;
 
     check-cast p2, Landroidx/databinding/ObservableList;

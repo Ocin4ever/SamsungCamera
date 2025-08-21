@@ -204,16 +204,21 @@
 
     const-string v1, "UWDC-AAR"
 
+    .line 51
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 52
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
+    .line 53
     invoke-static {p2}, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->prepareFeatureConfig(I)V
 
+    .line 54
     invoke-static {}, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->prepareInputBufferInfo()V
 
+    .line 55
     sget-object v6, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_calData:[B
 
     sget-object v7, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_inputBufferInfo:[I
@@ -228,12 +233,14 @@
 
     invoke-static/range {v4 .. v9}, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->Enhance([B[B[B[I[I[I)I
 
+    .line 56
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p0
 
     sub-long/2addr p0, v2
 
+    .line 57
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -268,14 +275,17 @@
 
     const-string v2, "UWDC-AAR"
 
+    .line 1
     invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
     const/4 v1, 0x0
 
+    .line 3
     :try_start_0
     invoke-static {}, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->getCameraConfigFromFloatingFeature()Ljava/lang/String;
 
@@ -288,6 +298,7 @@
     :catch_0
     const-string v5, "Unable to load FLOATING_FEATURE(1)"
 
+    .line 4
     invoke-static {v2, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v5, v1
@@ -295,6 +306,7 @@
     :goto_0
     if-eqz v5, :cond_0
 
+    .line 5
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -303,6 +315,7 @@
 
     const-string v6, ","
 
+    .line 6
     invoke-virtual {v5, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
@@ -312,10 +325,12 @@
     :cond_0
     const-string v6, "Unable to load FLOATING_FEATURE(2)"
 
+    .line 7
     invoke-static {v2, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v6, v1
 
+    .line 8
     :goto_1
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -347,44 +362,54 @@
 
     if-eqz v6, :cond_1
 
+    .line 9
     array-length v12, v6
 
     if-lez v12, :cond_1
 
+    .line 10
     aget-object v12, v6, v10
 
     invoke-static {v12}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v12
 
+    .line 11
     aget-object v13, v6, v9
 
     invoke-static {v13}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v13
 
+    .line 12
     aget-object v14, v6, v11
 
     invoke-static {v14}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v14
 
+    .line 13
     aget-object v15, v6, v8
 
     invoke-static {v15}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v15
 
+    .line 14
     sget-object v16, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_featureConfig:[I
 
     aput v12, v16, v10
 
+    .line 15
     aput v13, v16, v9
 
+    .line 16
     aput v14, v16, v11
 
+    .line 17
     aput v15, v16, v8
 
+    .line 18
     aget-object v12, v6, v7
 
     invoke-static {v12}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -393,6 +418,7 @@
 
     aput v12, v16, v7
 
+    .line 19
     aget-object v12, v6, v5
 
     invoke-static {v12}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -403,6 +429,7 @@
 
     const/4 v12, 0x6
 
+    .line 20
     aget-object v13, v6, v12
 
     invoke-static {v13}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -413,6 +440,7 @@
 
     const/4 v12, 0x7
 
+    .line 21
     aget-object v13, v6, v12
 
     invoke-static {v13}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -423,6 +451,7 @@
 
     const/16 v12, 0x8
 
+    .line 22
     aget-object v13, v6, v12
 
     invoke-static {v13}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -433,6 +462,7 @@
 
     const/16 v12, 0x9
 
+    .line 23
     aget-object v6, v6, v12
 
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -443,6 +473,7 @@
 
     goto :goto_2
 
+    .line 24
     :cond_1
     sget-object v6, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_featureConfig:[I
 
@@ -452,15 +483,19 @@
 
     const/16 v12, 0x6d
 
+    .line 25
     aput v12, v6, v9
 
+    .line 26
     aput v0, v6, v11
 
+    .line 27
     aput v10, v6, v8
 
     :goto_2
     if-nez v0, :cond_4
 
+    .line 28
     sget-object v0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_featureConfig:[I
 
     aget v5, v0, v11
@@ -473,6 +508,7 @@
 
     const-string v5, "AUTO_REAR : m_featureConfig[2] should be 10 (0x1010)"
 
+    .line 29
     invoke-static {v2, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
@@ -482,8 +518,10 @@
 
     const-string v5, "AUTO_REAR : m_featureConfig[2] should be 9 (0x1001)"
 
+    .line 30
     invoke-static {v2, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 31
     :cond_3
     :goto_3
     new-instance v5, Ljava/lang/StringBuilder;
@@ -511,6 +549,7 @@
 
     if-ne v0, v6, :cond_5
 
+    .line 32
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -531,6 +570,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 33
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -551,39 +591,48 @@
 
     goto :goto_4
 
+    .line 34
     :cond_5
     sget-object v6, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_featureConfig:[I
 
     aput v0, v6, v11
 
+    .line 35
     sput v0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_mode:I
 
+    .line 36
     sget-object v0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_inputSizeInfo:[I
 
     sget v6, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_width:I
 
     aput v6, v0, v10
 
+    .line 37
     sget v6, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_height:I
 
     aput v6, v0, v9
 
+    .line 38
     sget v6, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_stride:I
 
     aput v6, v0, v11
 
+    .line 39
     sget v6, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_slice:I
 
     aput v6, v0, v8
 
+    .line 40
     sget v6, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_maxWidth:I
 
     aput v6, v0, v7
 
+    .line 41
     sget v6, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_maxHeight:I
 
     aput v6, v0, v5
 
+    .line 42
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -602,6 +651,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 43
     :goto_4
     sget-object v22, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_featureConfig:[I
 
@@ -609,6 +659,7 @@
 
     aput v0, v22, v11
 
+    .line 44
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -627,6 +678,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 45
     sget v0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_mode:I
 
     const/16 v5, 0x20
@@ -637,11 +689,14 @@
 
     if-ne v0, v5, :cond_7
 
+    .line 46
     :cond_6
     sput v10, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_nFaces:I
 
+    .line 47
     sput-object v1, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_faces:[I
 
+    .line 48
     :cond_7
     sget-object v14, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_inputSizeInfo:[I
 
@@ -665,12 +720,14 @@
 
     invoke-static/range {v12 .. v22}, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->Process([B[B[II[I[I[IFI[B[I)I
 
+    .line 49
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     sub-long/2addr v0, v3
 
+    .line 50
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1473,10 +1530,12 @@
 .method public static setFaceInfo([Landroid/hardware/camera2/params/Face;II)V
     .locals 3
 
+    .line 38
     sput p1, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_nFaces:I
 
     if-lez p1, :cond_0
 
+    .line 39
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1497,6 +1556,7 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 40
     sget p1, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_nFaces:I
 
     mul-int/lit8 p1, p1, 0x4
@@ -1509,11 +1569,13 @@
 
     move p2, p1
 
+    .line 41
     :goto_0
     sget v0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_nFaces:I
 
     if-ge p1, v0, :cond_0
 
+    .line 42
     sget-object v0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_faces:[I
 
     add-int/lit8 v1, p2, 0x1
@@ -1528,6 +1590,7 @@
 
     aput v2, v0, p2
 
+    .line 43
     sget-object p2, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_faces:[I
 
     add-int/lit8 v0, v1, 0x1
@@ -1542,6 +1605,7 @@
 
     aput v2, p2, v1
 
+    .line 44
     sget-object p2, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_faces:[I
 
     add-int/lit8 v1, v0, 0x1
@@ -1556,6 +1620,7 @@
 
     aput v2, p2, v0
 
+    .line 45
     sget-object p2, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_faces:[I
 
     add-int/lit8 v0, v1, 0x1
@@ -1591,12 +1656,15 @@
 
     move/from16 v2, p4
 
+    .line 1
     sput p1, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_nFaces:I
 
     const/4 v3, 0x1
 
+    .line 2
     sput v3, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_mode:I
 
+    .line 3
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1615,6 +1683,7 @@
 
     invoke-static {v5, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     sget v4, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_maxWidth:I
 
     rsub-int/lit8 v2, v2, 0x64
@@ -1625,6 +1694,7 @@
 
     int-to-double v6, v4
 
+    .line 5
     sget v4, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_maxHeight:I
 
     mul-int/2addr v4, v2
@@ -1633,6 +1703,7 @@
 
     int-to-double v8, v4
 
+    .line 6
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1663,6 +1734,7 @@
 
     div-double/2addr v6, v10
 
+    .line 7
     sget v2, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_maxWidth:I
 
     int-to-double v12, v2
@@ -1675,6 +1747,7 @@
 
     div-double/2addr v8, v10
 
+    .line 8
     sget v2, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_maxHeight:I
 
     int-to-double v10, v2
@@ -1683,6 +1756,7 @@
 
     sub-double/2addr v10, v14
 
+    .line 9
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1709,6 +1783,7 @@
 
     invoke-static {v5, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 10
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1735,14 +1810,17 @@
 
     invoke-static {v5, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 11
     sget v2, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_nFaces:I
 
     if-nez v2, :cond_0
 
     const-string v0, "H/W FD Num 0"
 
+    .line 12
     invoke-static {v5, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 13
     sput v3, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_mode:I
 
     goto/16 :goto_3
@@ -1750,6 +1828,7 @@
     :cond_0
     if-lez v2, :cond_4
 
+    .line 14
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1768,6 +1847,7 @@
 
     invoke-static {v5, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 15
     sget v2, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_nFaces:I
 
     mul-int/lit8 v2, v2, 0x4
@@ -1782,6 +1862,7 @@
 
     move v10, v9
 
+    .line 16
     :goto_0
     sget v11, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_nFaces:I
 
@@ -1789,6 +1870,7 @@
 
     if-ge v9, v11, :cond_3
 
+    .line 17
     sget-object v11, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_faces:[I
 
     add-int/lit8 v13, v10, 0x1
@@ -1803,6 +1885,7 @@
 
     aput v14, v11, v10
 
+    .line 18
     sget-object v10, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_faces:[I
 
     add-int/lit8 v11, v13, 0x1
@@ -1817,6 +1900,7 @@
 
     aput v14, v10, v13
 
+    .line 19
     sget-object v10, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_faces:[I
 
     add-int/lit8 v13, v11, 0x1
@@ -1831,6 +1915,7 @@
 
     aput v14, v10, v11
 
+    .line 20
     sget-object v10, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_faces:[I
 
     add-int/lit8 v11, v13, 0x1
@@ -1845,6 +1930,7 @@
 
     aput v14, v10, v13
 
+    .line 21
     aget-object v10, p0, v9
 
     invoke-virtual {v10}, Landroid/hardware/camera2/params/Face;->getBounds()Landroid/graphics/Rect;
@@ -1867,6 +1953,7 @@
 
     aget-object v10, p0, v9
 
+    .line 22
     invoke-virtual {v10}, Landroid/hardware/camera2/params/Face;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v10
@@ -1887,23 +1974,28 @@
 
     goto :goto_1
 
+    .line 23
     :cond_1
     sput v3, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_mode:I
 
     const-string v10, "mode set[0] : 2"
 
+    .line 24
     invoke-static {v5, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
+    .line 25
     :cond_2
     :goto_1
     sput v12, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_mode:I
 
     const-string v10, "mode set[0] : 1"
 
+    .line 26
     invoke-static {v5, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 27
     :goto_2
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -1943,6 +2035,7 @@
 
     aget-object v12, p0, v9
 
+    .line 28
     invoke-virtual {v12}, Landroid/hardware/camera2/params/Face;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v12
@@ -1969,6 +2062,7 @@
 
     move-result-object v10
 
+    .line 29
     invoke-static {v5, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     add-int/lit8 v9, v9, 0x1
@@ -1977,6 +2071,7 @@
 
     goto/16 :goto_0
 
+    .line 30
     :cond_3
     sget-object v4, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_activeArray:[I
 
@@ -1984,34 +2079,41 @@
 
     aput v5, v4, v2
 
+    .line 31
     iget v5, v0, Landroid/graphics/Rect;->top:I
 
     aput v5, v4, v3
 
+    .line 32
     iget v5, v0, Landroid/graphics/Rect;->right:I
 
     aput v5, v4, v12
 
+    .line 33
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
     const/4 v5, 0x3
 
     aput v0, v4, v5
 
+    .line 34
     sget-object v0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_cropRegion:[I
 
     iget v4, v1, Landroid/graphics/Rect;->left:I
 
     aput v4, v0, v2
 
+    .line 35
     iget v2, v1, Landroid/graphics/Rect;->top:I
 
     aput v2, v0, v3
 
+    .line 36
     iget v2, v1, Landroid/graphics/Rect;->right:I
 
     aput v2, v0, v12
 
+    .line 37
     iget v1, v1, Landroid/graphics/Rect;->bottom:I
 
     aput v1, v0, v5
@@ -2026,22 +2128,31 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sput p0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_stride:I
 
+    .line 2
     sput p1, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_slice:I
 
+    .line 3
     sput p3, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_height:I
 
+    .line 4
     sput p2, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_width:I
 
+    .line 5
     sput p4, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_maxWidth:I
 
+    .line 6
     sput p5, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_maxHeight:I
 
+    .line 7
     sput p6, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_fov:I
 
+    .line 8
     sput p7, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_zoomRatio:F
 
+    .line 9
     sget-object p6, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_inputSizeInfo:[I
 
     const/4 p7, 0x0
@@ -2050,22 +2161,27 @@
 
     const/4 p2, 0x1
 
+    .line 10
     aput p3, p6, p2
 
     const/4 p2, 0x2
 
+    .line 11
     aput p0, p6, p2
 
     const/4 p0, 0x3
 
+    .line 12
     aput p1, p6, p0
 
     const/4 p0, 0x4
 
+    .line 13
     aput p4, p6, p0
 
     const/4 p0, 0x5
 
+    .line 14
     aput p5, p6, p0
 
     return-void
@@ -2074,28 +2190,39 @@
 .method public static setImgInfo(IIIIIILandroid/graphics/Rect;Landroid/graphics/Rect;[BIFI)V
     .locals 0
 
+    .line 15
     sput p0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_stride:I
 
+    .line 16
     sput p1, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_slice:I
 
+    .line 17
     sput p2, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_width:I
 
+    .line 18
     sput p3, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_height:I
 
+    .line 19
     sput p4, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_maxWidth:I
 
+    .line 20
     sput p5, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_maxHeight:I
 
+    .line 21
     sput p9, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_fov:I
 
+    .line 22
     sput-object p8, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_calData:[B
 
+    .line 23
     sput p10, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_zoomRatio:F
 
     const/4 p0, 0x0
 
+    .line 24
     sput p0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_orientation:I
 
+    .line 25
     sput p0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_flipmode:I
 
     const/4 p1, 0x3
@@ -2106,6 +2233,7 @@
 
     if-nez p11, :cond_0
 
+    .line 26
     sput p3, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_orientation:I
 
     goto :goto_0
@@ -2115,6 +2243,7 @@
 
     if-ne p11, p4, :cond_1
 
+    .line 27
     sput p2, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_orientation:I
 
     goto :goto_0
@@ -2124,6 +2253,7 @@
 
     if-ne p11, p4, :cond_2
 
+    .line 28
     sput p1, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_orientation:I
 
     goto :goto_0
@@ -2135,8 +2265,10 @@
 
     const/4 p4, 0x4
 
+    .line 29
     sput p4, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_orientation:I
 
+    .line 30
     :cond_3
     :goto_0
     new-instance p4, Ljava/lang/StringBuilder;
@@ -2161,20 +2293,24 @@
 
     if-eqz p6, :cond_4
 
+    .line 31
     sget-object p4, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_activeArray:[I
 
     iget p5, p6, Landroid/graphics/Rect;->left:I
 
     aput p5, p4, p0
 
+    .line 32
     iget p5, p6, Landroid/graphics/Rect;->top:I
 
     aput p5, p4, p3
 
+    .line 33
     iget p5, p6, Landroid/graphics/Rect;->right:I
 
     aput p5, p4, p2
 
+    .line 34
     iget p5, p6, Landroid/graphics/Rect;->bottom:I
 
     aput p5, p4, p1
@@ -2182,20 +2318,24 @@
     :cond_4
     if-eqz p7, :cond_5
 
+    .line 35
     sget-object p4, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_cropRegion:[I
 
     iget p5, p7, Landroid/graphics/Rect;->left:I
 
     aput p5, p4, p0
 
+    .line 36
     iget p0, p7, Landroid/graphics/Rect;->top:I
 
     aput p0, p4, p3
 
+    .line 37
     iget p0, p7, Landroid/graphics/Rect;->right:I
 
     aput p0, p4, p2
 
+    .line 38
     iget p0, p7, Landroid/graphics/Rect;->bottom:I
 
     aput p0, p4, p1
@@ -2207,28 +2347,39 @@
 .method public static setImgInfo(IIIIIILandroid/graphics/Rect;Landroid/graphics/Rect;[BIFII)V
     .locals 0
 
+    .line 39
     sput p0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_stride:I
 
+    .line 40
     sput p1, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_slice:I
 
+    .line 41
     sput p2, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_width:I
 
+    .line 42
     sput p3, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_height:I
 
+    .line 43
     sput p4, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_maxWidth:I
 
+    .line 44
     sput p5, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_maxHeight:I
 
+    .line 45
     sput p9, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_fov:I
 
+    .line 46
     sput-object p8, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_calData:[B
 
+    .line 47
     sput p10, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_zoomRatio:F
 
     const/4 p0, 0x0
 
+    .line 48
     sput p0, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_orientation:I
 
+    .line 49
     sput p12, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_flipmode:I
 
     const/4 p1, 0x3
@@ -2239,6 +2390,7 @@
 
     if-nez p11, :cond_0
 
+    .line 50
     sput p3, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_orientation:I
 
     goto :goto_0
@@ -2248,6 +2400,7 @@
 
     if-ne p11, p4, :cond_1
 
+    .line 51
     sput p2, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_orientation:I
 
     goto :goto_0
@@ -2257,6 +2410,7 @@
 
     if-ne p11, p4, :cond_2
 
+    .line 52
     sput p1, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_orientation:I
 
     goto :goto_0
@@ -2268,8 +2422,10 @@
 
     const/4 p4, 0x4
 
+    .line 53
     sput p4, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_orientation:I
 
+    .line 54
     :cond_3
     :goto_0
     new-instance p4, Ljava/lang/StringBuilder;
@@ -2294,20 +2450,24 @@
 
     if-eqz p6, :cond_4
 
+    .line 55
     sget-object p4, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_activeArray:[I
 
     iget p5, p6, Landroid/graphics/Rect;->left:I
 
     aput p5, p4, p0
 
+    .line 56
     iget p5, p6, Landroid/graphics/Rect;->top:I
 
     aput p5, p4, p3
 
+    .line 57
     iget p5, p6, Landroid/graphics/Rect;->right:I
 
     aput p5, p4, p2
 
+    .line 58
     iget p5, p6, Landroid/graphics/Rect;->bottom:I
 
     aput p5, p4, p1
@@ -2315,20 +2475,24 @@
     :cond_4
     if-eqz p7, :cond_5
 
+    .line 59
     sget-object p4, Lcom/sec/android/vsw/uwdistortioncorrection/solution/UWDistortionCorrectionEngine;->m_cropRegion:[I
 
     iget p5, p7, Landroid/graphics/Rect;->left:I
 
     aput p5, p4, p0
 
+    .line 60
     iget p0, p7, Landroid/graphics/Rect;->top:I
 
     aput p0, p4, p3
 
+    .line 61
     iget p0, p7, Landroid/graphics/Rect;->right:I
 
     aput p0, p4, p2
 
+    .line 62
     iget p0, p7, Landroid/graphics/Rect;->bottom:I
 
     aput p0, p4, p1

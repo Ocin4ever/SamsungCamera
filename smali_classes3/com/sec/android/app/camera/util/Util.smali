@@ -186,6 +186,7 @@
 .method public static clamp(FFF)F
     .locals 0
 
+    .line 2
     invoke-static {p1, p0}, Ljava/lang/Math;->max(FF)F
 
     move-result p0
@@ -204,6 +205,7 @@
 
     return p2
 
+    .line 1
     :cond_0
     invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I
 
@@ -2626,8 +2628,10 @@
 .method public static getViewAbsolutePositionY(Landroid/graphics/Rect;II)I
     .locals 3
 
+    .line 3
     iget v0, p0, Landroid/graphics/Rect;->left:I
 
+    .line 4
     iget v1, p0, Landroid/graphics/Rect;->top:I
 
     const/16 v2, 0x5a
@@ -2643,6 +2647,7 @@
 
     sub-int/2addr p2, v0
 
+    .line 5
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
 
     move-result p0
@@ -2665,6 +2670,7 @@
 
     new-array v0, v0, [I
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->getLocationInWindow([I)V
 
     const/16 v1, 0x5a
@@ -2686,6 +2692,7 @@
 
     sub-int/2addr p2, p1
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getRotation()F
 
     move-result p1
@@ -2718,28 +2725,34 @@
 .method public static getWatermarkDateString(IJ)Ljava/lang/String;
     .locals 6
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     const-string v2, "MMMM dd,yyyy"
 
+    .line 3
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string v2, "MMM dd,yyyy"
 
+    .line 4
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string v2, "yyyy.MM.dd"
 
+    .line 5
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const/4 v2, 0x0
 
+    .line 6
     :goto_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -2747,6 +2760,7 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 7
     new-instance v3, Ljava/text/SimpleDateFormat;
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -2765,10 +2779,12 @@
 
     invoke-direct {v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
+    .line 8
     new-instance v4, Ljava/util/Date;
 
     invoke-direct {v4, p1, p2}, Ljava/util/Date;-><init>(J)V
 
+    .line 9
     invoke-virtual {v3, v4}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v5
@@ -2779,6 +2795,7 @@
 
     if-nez v5, :cond_0
 
+    .line 10
     invoke-virtual {v3, v4}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v3
@@ -2790,6 +2807,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -2797,12 +2815,14 @@
 
     if-lt p0, p1, :cond_2
 
+    .line 12
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result p0
 
     add-int/lit8 p0, p0, -0x1
 
+    .line 13
     :cond_2
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -2816,28 +2836,34 @@
 .method public static getWatermarkDateString()[Ljava/lang/CharSequence;
     .locals 6
 
+    .line 14
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 15
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     const-string v2, "MMMM dd,yyyy"
 
+    .line 16
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string v2, "MMM dd,yyyy"
 
+    .line 17
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string v2, "yyyy.MM.dd"
 
+    .line 18
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const/4 v2, 0x0
 
+    .line 19
     :goto_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -2845,6 +2871,7 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 20
     new-instance v3, Ljava/text/SimpleDateFormat;
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -2863,6 +2890,7 @@
 
     invoke-direct {v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
+    .line 21
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v4
@@ -2871,6 +2899,7 @@
 
     move-result-object v4
 
+    .line 22
     invoke-virtual {v3, v4}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v5
@@ -2881,6 +2910,7 @@
 
     if-nez v5, :cond_0
 
+    .line 23
     invoke-virtual {v3, v4}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v3
@@ -2892,6 +2922,7 @@
 
     goto :goto_0
 
+    .line 24
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -2920,6 +2951,7 @@
     :cond_0
     const-string p0, "HH:mm"
 
+    .line 4
     :goto_0
     new-instance v0, Ljava/text/SimpleDateFormat;
 
@@ -2933,14 +2965,17 @@
 
     invoke-direct {v0, p0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
+    .line 5
     new-instance p0, Ljava/util/Date;
 
     invoke-direct {p0, p1, p2}, Ljava/util/Date;-><init>(J)V
 
+    .line 6
     invoke-static {}, Landroidx/core/text/BidiFormatter;->getInstance()Landroidx/core/text/BidiFormatter;
 
     move-result-object p1
 
+    .line 7
     invoke-virtual {v0, p0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object p0
@@ -2955,6 +2990,7 @@
 .method public static getWatermarkTimeString(Landroid/content/Context;J)Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-static {p0}, Landroid/text/format/DateFormat;->getLongDateFormat(Landroid/content/Context;)Ljava/text/DateFormat;
@@ -2973,6 +3009,7 @@
 
     const/16 v1, 0x20
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const/4 v1, 0x1
@@ -2983,6 +3020,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -2993,24 +3031,29 @@
 .method public static getWatermarkTimeString()[Ljava/lang/CharSequence;
     .locals 6
 
+    .line 8
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 9
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     const-string v2, "h:mm a"
 
+    .line 10
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string v2, "HH:mm"
 
+    .line 11
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const/4 v2, 0x0
 
+    .line 12
     :goto_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -3018,6 +3061,7 @@
 
     if-ge v2, v3, :cond_0
 
+    .line 13
     new-instance v3, Ljava/text/SimpleDateFormat;
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -3036,6 +3080,7 @@
 
     invoke-direct {v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
+    .line 14
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v4
@@ -3044,10 +3089,12 @@
 
     move-result-object v4
 
+    .line 15
     invoke-static {}, Landroidx/core/text/BidiFormatter;->getInstance()Landroidx/core/text/BidiFormatter;
 
     move-result-object v5
 
+    .line 16
     invoke-virtual {v3, v4}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v3
@@ -3062,6 +3109,7 @@
 
     goto :goto_0
 
+    .line 17
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 

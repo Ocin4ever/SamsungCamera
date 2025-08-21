@@ -172,10 +172,12 @@
 .method public static read(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroidx/emoji2/text/flatbuffer/MetadataList;
     .locals 0
 
+    .line 14
     invoke-virtual {p0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object p0
 
+    .line 15
     :try_start_0
     invoke-static {p0}, Landroidx/emoji2/text/MetadataListReader;->read(Ljava/io/InputStream;)Landroidx/emoji2/text/flatbuffer/MetadataList;
 
@@ -185,6 +187,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 16
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
     :cond_0
@@ -195,6 +198,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 17
     :try_start_1
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_1
@@ -215,14 +219,17 @@
 .method public static read(Ljava/io/InputStream;)Landroidx/emoji2/text/flatbuffer/MetadataList;
     .locals 6
 
+    .line 1
     new-instance v0, Landroidx/emoji2/text/MetadataListReader$InputStreamOpenTypeReader;
 
     invoke-direct {v0, p0}, Landroidx/emoji2/text/MetadataListReader$InputStreamOpenTypeReader;-><init>(Ljava/io/InputStream;)V
 
+    .line 2
     invoke-static {v0}, Landroidx/emoji2/text/MetadataListReader;->findOffsetInfo(Landroidx/emoji2/text/MetadataListReader$OpenTypeReader;)Landroidx/emoji2/text/MetadataListReader$OffsetInfo;
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {v1}, Landroidx/emoji2/text/MetadataListReader$OffsetInfo;->getStartOffset()J
 
     move-result-wide v2
@@ -237,6 +244,7 @@
 
     invoke-interface {v0, v2}, Landroidx/emoji2/text/MetadataListReader$OpenTypeReader;->skip(I)V
 
+    .line 4
     invoke-virtual {v1}, Landroidx/emoji2/text/MetadataListReader$OffsetInfo;->getLength()J
 
     move-result-wide v2
@@ -247,6 +255,7 @@
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v2
@@ -257,6 +266,7 @@
 
     int-to-long v2, p0
 
+    .line 6
     invoke-virtual {v1}, Landroidx/emoji2/text/MetadataListReader$OffsetInfo;->getLength()J
 
     move-result-wide v4
@@ -265,12 +275,14 @@
 
     if-nez v2, :cond_0
 
+    .line 7
     invoke-static {v0}, Landroidx/emoji2/text/flatbuffer/MetadataList;->getRootAsMetadataList(Ljava/nio/ByteBuffer;)Landroidx/emoji2/text/flatbuffer/MetadataList;
 
     move-result-object p0
 
     return-object p0
 
+    .line 8
     :cond_0
     new-instance v0, Ljava/io/IOException;
 
@@ -306,18 +318,22 @@
 .method public static read(Ljava/nio/ByteBuffer;)Landroidx/emoji2/text/flatbuffer/MetadataList;
     .locals 2
 
+    .line 9
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
+    .line 10
     new-instance v0, Landroidx/emoji2/text/MetadataListReader$ByteBufferReader;
 
     invoke-direct {v0, p0}, Landroidx/emoji2/text/MetadataListReader$ByteBufferReader;-><init>(Ljava/nio/ByteBuffer;)V
 
+    .line 11
     invoke-static {v0}, Landroidx/emoji2/text/MetadataListReader;->findOffsetInfo(Landroidx/emoji2/text/MetadataListReader$OpenTypeReader;)Landroidx/emoji2/text/MetadataListReader$OffsetInfo;
 
     move-result-object v0
 
+    .line 12
     invoke-virtual {v0}, Landroidx/emoji2/text/MetadataListReader$OffsetInfo;->getStartOffset()J
 
     move-result-wide v0
@@ -326,6 +342,7 @@
 
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 13
     invoke-static {p0}, Landroidx/emoji2/text/flatbuffer/MetadataList;->getRootAsMetadataList(Ljava/nio/ByteBuffer;)Landroidx/emoji2/text/flatbuffer/MetadataList;
 
     move-result-object p0

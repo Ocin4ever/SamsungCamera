@@ -108,21 +108,26 @@
 
     if-eqz p3, :cond_0
 
+    .line 2
     sget-object v0, Landroidx/core/app/JobIntentService;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x1
 
+    .line 3
     :try_start_0
     invoke-static {p0, p1, v1, p2}, Landroidx/core/app/JobIntentService;->getWorkEnqueuer(Landroid/content/Context;Landroid/content/ComponentName;ZI)Landroidx/core/app/JobIntentService$WorkEnqueuer;
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p0, p2}, Landroidx/core/app/JobIntentService$WorkEnqueuer;->ensureJobId(I)V
 
+    .line 5
     invoke-virtual {p0, p3}, Landroidx/core/app/JobIntentService$WorkEnqueuer;->enqueueWork(Landroid/content/Intent;)V
 
+    .line 6
     monitor-exit v0
 
     return-void
@@ -136,6 +141,7 @@
 
     throw p0
 
+    .line 7
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -159,6 +165,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-direct {v0, p0, p1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V

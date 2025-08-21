@@ -60,6 +60,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,8 +69,10 @@
 .method public constructor <init>(Landroidx/work/Data;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     iget-object p1, p1, Landroidx/work/Data;->mValues:Ljava/util/Map;
@@ -92,8 +95,10 @@
         }
     .end annotation
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
@@ -286,17 +291,20 @@
 .method public static convertToPrimitiveArray([Ljava/lang/Byte;)[B
     .locals 3
 
+    .line 4
     array-length v0, p0
 
     new-array v0, v0, [B
 
     const/4 v1, 0x0
 
+    .line 5
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
+    .line 6
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Ljava/lang/Byte;->byteValue()B
@@ -316,17 +324,20 @@
 .method public static convertToPrimitiveArray([Ljava/lang/Double;)[D
     .locals 4
 
+    .line 16
     array-length v0, p0
 
     new-array v0, v0, [D
 
     const/4 v1, 0x0
 
+    .line 17
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
+    .line 18
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Ljava/lang/Double;->doubleValue()D
@@ -346,17 +357,20 @@
 .method public static convertToPrimitiveArray([Ljava/lang/Float;)[F
     .locals 3
 
+    .line 13
     array-length v0, p0
 
     new-array v0, v0, [F
 
     const/4 v1, 0x0
 
+    .line 14
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
+    .line 15
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
@@ -376,17 +390,20 @@
 .method public static convertToPrimitiveArray([Ljava/lang/Integer;)[I
     .locals 3
 
+    .line 7
     array-length v0, p0
 
     new-array v0, v0, [I
 
     const/4 v1, 0x0
 
+    .line 8
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
+    .line 9
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
@@ -406,17 +423,20 @@
 .method public static convertToPrimitiveArray([Ljava/lang/Long;)[J
     .locals 4
 
+    .line 10
     array-length v0, p0
 
     new-array v0, v0, [J
 
     const/4 v1, 0x0
 
+    .line 11
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
+    .line 12
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
@@ -436,17 +456,20 @@
 .method public static convertToPrimitiveArray([Ljava/lang/Boolean;)[Z
     .locals 3
 
+    .line 1
     array-length v0, p0
 
     new-array v0, v0, [Z
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z

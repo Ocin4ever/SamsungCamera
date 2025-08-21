@@ -51,12 +51,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AbstractAeAfGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;->mIsAvailableMoveEvSlider:Z
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -71,6 +74,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;->EV_SLIDER_MOVE_THRESHOLD:I
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -83,6 +87,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;->EV_SLIDER_SMOOTHNESS_FACTOR:I
 
+    .line 5
     const-class p1, Lcom/sec/android/app/camera/interfaces/PreviewOverlayLayerManager$AeAfSupportUi;
 
     invoke-static {p1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -91,6 +96,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;->mSupportUiSet:Ljava/util/EnumSet;
 
+    .line 6
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;->initView()V
 
     return-void
@@ -99,12 +105,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 7
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AbstractAeAfGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x0
 
+    .line 8
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;->mIsAvailableMoveEvSlider:Z
 
+    .line 9
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -119,6 +128,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;->EV_SLIDER_MOVE_THRESHOLD:I
 
+    .line 10
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -131,6 +141,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;->EV_SLIDER_SMOOTHNESS_FACTOR:I
 
+    .line 11
     const-class p1, Lcom/sec/android/app/camera/interfaces/PreviewOverlayLayerManager$AeAfSupportUi;
 
     invoke-static {p1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
@@ -139,6 +150,7 @@
 
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;->mSupportUiSet:Ljava/util/EnumSet;
 
+    .line 12
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/previewoverlay/aeaf/AeAfGroup;->initView()V
 
     return-void

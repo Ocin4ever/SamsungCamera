@@ -17,10 +17,13 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0}, Landroidx/core/view/AccessibilityDelegateCompat;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/util/RoleDescriptionAccessibilityDelegate;->roleDescription:Ljava/lang/String;
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/util/RoleDescriptionAccessibilityDelegate;->contentDescriptionPrefix:Ljava/lang/String;
 
     return-void
@@ -35,6 +38,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/app/sdk/deepsky/textextraction/util/RoleDescriptionAccessibilityDelegate;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 

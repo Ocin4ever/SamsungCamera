@@ -469,6 +469,7 @@
 .method public static addAccessibilityAction(Landroid/view/View;Ljava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)I
     .locals 2
 
+    .line 1
     invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->getAvailableActionIdFromResources(Landroid/view/View;Ljava/lang/CharSequence;)I
 
     move-result v0
@@ -477,10 +478,12 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     new-instance v1, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
     invoke-direct {v1, v0, p1, p2}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;-><init>(ILjava/lang/CharSequence;Landroidx/core/view/accessibility/AccessibilityViewCommand;)V
 
+    .line 3
     invoke-static {p0, v1}, Landroidx/core/view/ViewCompat;->addAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
 
     :cond_0
@@ -490,14 +493,17 @@
 .method private static addAccessibilityAction(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)V
     .locals 1
 
+    .line 4
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->ensureAccessibilityDelegateCompat(Landroid/view/View;)V
 
+    .line 5
     invoke-virtual {p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->getId()I
 
     move-result v0
 
     invoke-static {v0, p0}, Landroidx/core/view/ViewCompat;->removeActionWithId(ILandroid/view/View;)V
 
+    .line 6
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->getActionList(Landroid/view/View;)Ljava/util/List;
 
     move-result-object v0
@@ -506,6 +512,7 @@
 
     const/4 p1, 0x0
 
+    .line 7
     invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->notifyViewAccessibilityStateChangedIfNeeded(Landroid/view/View;I)V
 
     return-void
@@ -793,6 +800,7 @@
 .method public static dispatchNestedPreScroll(Landroid/view/View;II[I[I)Z
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2, p3, p4}, Landroidx/core/view/ViewCompat$Api21Impl;->dispatchNestedPreScroll(Landroid/view/View;II[I[I)Z
 
     move-result p0
@@ -803,10 +811,12 @@
 .method public static dispatchNestedPreScroll(Landroid/view/View;II[I[II)Z
     .locals 7
 
+    .line 2
     instance-of v0, p0, Landroidx/core/view/NestedScrollingChild2;
 
     if-eqz v0, :cond_0
 
+    .line 3
     move-object v1, p0
 
     check-cast v1, Landroidx/core/view/NestedScrollingChild2;
@@ -830,6 +840,7 @@
     :cond_0
     if-nez p5, :cond_1
 
+    .line 4
     invoke-static {p0, p1, p2, p3, p4}, Landroidx/core/view/ViewCompat;->dispatchNestedPreScroll(Landroid/view/View;II[I[I)Z
 
     move-result p0
@@ -847,10 +858,12 @@
 
     move-object v0, p0
 
+    .line 2
     instance-of v1, v0, Landroidx/core/view/NestedScrollingChild3;
 
     if-eqz v1, :cond_0
 
+    .line 3
     move-object v2, v0
 
     check-cast v2, Landroidx/core/view/NestedScrollingChild3;
@@ -873,6 +886,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-static/range {p0 .. p6}, Landroidx/core/view/ViewCompat;->dispatchNestedScroll(Landroid/view/View;IIII[II)Z
 
@@ -883,6 +897,7 @@
 .method public static dispatchNestedScroll(Landroid/view/View;IIII[I)Z
     .locals 0
 
+    .line 1
     invoke-static/range {p0 .. p5}, Landroidx/core/view/ViewCompat$Api21Impl;->dispatchNestedScroll(Landroid/view/View;IIII[I)Z
 
     move-result p0
@@ -893,10 +908,12 @@
 .method public static dispatchNestedScroll(Landroid/view/View;IIII[II)Z
     .locals 8
 
+    .line 5
     instance-of v0, p0, Landroidx/core/view/NestedScrollingChild2;
 
     if-eqz v0, :cond_0
 
+    .line 6
     move-object v1, p0
 
     check-cast v1, Landroidx/core/view/NestedScrollingChild2;
@@ -922,6 +939,7 @@
     :cond_0
     if-nez p6, :cond_1
 
+    .line 7
     invoke-static/range {p0 .. p5}, Landroidx/core/view/ViewCompat;->dispatchNestedScroll(Landroid/view/View;IIII[I)Z
 
     move-result p0
@@ -1891,6 +1909,7 @@
 .method public static hasNestedScrollingParent(Landroid/view/View;)Z
     .locals 0
 
+    .line 1
     invoke-static {p0}, Landroidx/core/view/ViewCompat$Api21Impl;->hasNestedScrollingParent(Landroid/view/View;)Z
 
     move-result p0
@@ -1901,10 +1920,12 @@
 .method public static hasNestedScrollingParent(Landroid/view/View;I)Z
     .locals 1
 
+    .line 2
     instance-of v0, p0, Landroidx/core/view/NestedScrollingChild2;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Landroidx/core/view/NestedScrollingChild2;
 
     invoke-interface {p0, p1}, Landroidx/core/view/NestedScrollingChild2;->hasNestedScrollingParent(I)Z
@@ -1914,6 +1935,7 @@
     :cond_0
     if-nez p1, :cond_1
 
+    .line 4
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->hasNestedScrollingParent(Landroid/view/View;)Z
 
     move-result p0
@@ -2526,6 +2548,7 @@
 .method public static postInvalidateOnAnimation(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Landroidx/core/view/ViewCompat$Api16Impl;->postInvalidateOnAnimation(Landroid/view/View;)V
 
     return-void
@@ -2534,6 +2557,7 @@
 .method public static postInvalidateOnAnimation(Landroid/view/View;IIII)V
     .locals 0
 
+    .line 2
     invoke-static {p0, p1, p2, p3, p4}, Landroidx/core/view/ViewCompat$Api16Impl;->postInvalidateOnAnimation(Landroid/view/View;IIII)V
 
     return-void
@@ -3227,6 +3251,7 @@
 .method public static setScrollIndicators(Landroid/view/View;I)V
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Landroidx/core/view/ViewCompat$Api23Impl;->setScrollIndicators(Landroid/view/View;I)V
 
     return-void
@@ -3235,6 +3260,7 @@
 .method public static setScrollIndicators(Landroid/view/View;II)V
     .locals 0
 
+    .line 2
     invoke-static {p0, p1, p2}, Landroidx/core/view/ViewCompat$Api23Impl;->setScrollIndicators(Landroid/view/View;II)V
 
     return-void
@@ -3415,6 +3441,7 @@
 .method public static startNestedScroll(Landroid/view/View;I)Z
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Landroidx/core/view/ViewCompat$Api21Impl;->startNestedScroll(Landroid/view/View;I)Z
 
     move-result p0
@@ -3425,10 +3452,12 @@
 .method public static startNestedScroll(Landroid/view/View;II)Z
     .locals 1
 
+    .line 2
     instance-of v0, p0, Landroidx/core/view/NestedScrollingChild2;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Landroidx/core/view/NestedScrollingChild2;
 
     invoke-interface {p0, p1, p2}, Landroidx/core/view/NestedScrollingChild2;->startNestedScroll(II)Z
@@ -3440,6 +3469,7 @@
     :cond_0
     if-nez p2, :cond_1
 
+    .line 4
     invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->startNestedScroll(Landroid/view/View;I)Z
 
     move-result p0
@@ -3481,6 +3511,7 @@
 .method public static stopNestedScroll(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Landroidx/core/view/ViewCompat$Api21Impl;->stopNestedScroll(Landroid/view/View;)V
 
     return-void
@@ -3489,10 +3520,12 @@
 .method public static stopNestedScroll(Landroid/view/View;I)V
     .locals 1
 
+    .line 2
     instance-of v0, p0, Landroidx/core/view/NestedScrollingChild2;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Landroidx/core/view/NestedScrollingChild2;
 
     invoke-interface {p0, p1}, Landroidx/core/view/NestedScrollingChild2;->stopNestedScroll(I)V
@@ -3502,6 +3535,7 @@
     :cond_0
     if-nez p1, :cond_1
 
+    .line 4
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->stopNestedScroll(Landroid/view/View;)V
 
     :cond_1

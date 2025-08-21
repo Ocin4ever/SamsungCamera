@@ -356,14 +356,17 @@
 .method public static getStylizedText(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/CharSequence;
     .locals 2
 
+    .line 4
     new-instance v0, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v0, p1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
+    .line 5
     invoke-virtual {p1, p2}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result p1
 
+    .line 6
     new-instance v1, Landroid/text/style/StyleSpan;
 
     invoke-direct {v1, p0}, Landroid/text/style/StyleSpan;-><init>(I)V
@@ -384,6 +387,7 @@
 .method public static getStylizedText(Landroid/content/Context;III)Ljava/lang/CharSequence;
     .locals 2
 
+    .line 1
     invoke-virtual {p0, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p3
@@ -396,10 +400,12 @@
 
     aput-object p3, v0, v1
 
+    .line 2
     invoke-virtual {p0, p2, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 3
     invoke-static {p1, p0, p3}, Lcom/sec/android/app/camera/util/TextUtil;->getStylizedText(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object p0

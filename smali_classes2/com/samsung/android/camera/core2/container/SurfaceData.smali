@@ -26,6 +26,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/samsung/android/camera/core2/container/SurfaceData;-><init>(Landroid/view/Surface;I)V
 
     return-void
@@ -34,10 +35,13 @@
 .method public constructor <init>(Landroid/view/Surface;I)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/camera/core2/container/SurfaceData;->a:Landroid/view/Surface;
 
+    .line 4
     iput p2, p0, Lcom/samsung/android/camera/core2/container/SurfaceData;->b:I
 
     return-void

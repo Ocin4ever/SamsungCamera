@@ -42,8 +42,10 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
@@ -52,12 +54,14 @@
 
     iput-object v0, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/LocaleInfo;->mLocale:Ljava/util/Locale;
 
+    .line 7
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/LocaleInfo;->mDisplayName:Ljava/lang/String;
 
+    .line 8
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -70,12 +74,16 @@
 .method public constructor <init>(Ljava/util/Locale;Ljava/lang/String;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/LocaleInfo;->mLocale:Ljava/util/Locale;
 
+    .line 3
     iput-object p2, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/LocaleInfo;->mDisplayName:Ljava/lang/String;
 
+    .line 4
     iput p3, p0, Lcom/samsung/android/scs/ai/sdkcommon/asr/LocaleInfo;->mOrder:I
 
     return-void

@@ -51,8 +51,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -67,22 +69,30 @@
 
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mPreAccelerationX:F
 
+    .line 4
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mPreAccelerationY:F
 
     const/4 p1, 0x0
 
+    .line 5
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mState:I
 
+    .line 6
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mIsFirstSensorInputUpdated:Z
 
+    .line 7
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mIsLayoutUpdated:Z
 
+    .line 8
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mIsAnimationRunning:Z
 
+    .line 9
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mIsLevelMeterVisible:Z
 
+    .line 10
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->init()V
 
     return-void
@@ -91,8 +101,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 11
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 12
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -107,22 +119,30 @@
 
     const/4 p1, 0x0
 
+    .line 13
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mPreAccelerationX:F
 
+    .line 14
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mPreAccelerationY:F
 
     const/4 p1, 0x0
 
+    .line 15
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mState:I
 
+    .line 16
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mIsFirstSensorInputUpdated:Z
 
+    .line 17
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mIsLayoutUpdated:Z
 
+    .line 18
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mIsAnimationRunning:Z
 
+    .line 19
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mIsLevelMeterVisible:Z
 
+    .line 20
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->init()V
 
     return-void
@@ -131,8 +151,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 21
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 22
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -147,22 +169,30 @@
 
     const/4 p1, 0x0
 
+    .line 23
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mPreAccelerationX:F
 
+    .line 24
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mPreAccelerationY:F
 
     const/4 p1, 0x0
 
+    .line 25
     iput p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mState:I
 
+    .line 26
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mIsFirstSensorInputUpdated:Z
 
+    .line 27
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mIsLayoutUpdated:Z
 
+    .line 28
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mIsAnimationRunning:Z
 
+    .line 29
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->mIsLevelMeterVisible:Z
 
+    .line 30
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/previewoverlay/guideline/LevelMeter;->init()V
 
     return-void

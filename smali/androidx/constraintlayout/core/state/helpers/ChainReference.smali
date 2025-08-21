@@ -31,6 +31,7 @@
 .method public bridge synthetic bias(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/state/helpers/ChainReference;->bias(F)Landroidx/constraintlayout/core/state/helpers/ChainReference;
 
     move-result-object p0
@@ -41,6 +42,7 @@
 .method public bias(F)Landroidx/constraintlayout/core/state/helpers/ChainReference;
     .locals 0
 
+    .line 2
     iput p1, p0, Landroidx/constraintlayout/core/state/helpers/ChainReference;->mBias:F
 
     return-object p0

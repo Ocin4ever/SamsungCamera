@@ -418,6 +418,7 @@
 .method public static setImeActionLabel(Landroid/widget/TextView;I)V
     .locals 1
 
+    .line 2
     invoke-virtual {p0}, Landroid/widget/TextView;->getImeActionLabel()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -430,6 +431,7 @@
 .method public static setImeActionLabel(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/widget/TextView;->getImeActionId()I
 
     move-result v0

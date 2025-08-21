@@ -20,6 +20,7 @@
 .method public final next()Ljava/lang/Long;
     .locals 2
 
+    .line 2
     invoke-virtual {p0}, Lg6/d0;->nextLong()J
 
     move-result-wide v0
@@ -34,6 +35,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lg6/d0;->nextLong()J
 
     move-result-wide v0

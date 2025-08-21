@@ -607,6 +607,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManagerGroup;->mPostSavingStateManagerStore:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -625,6 +626,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     sget-object v0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManagerGroup;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
@@ -654,6 +656,7 @@
 
     invoke-static {v0, p1}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0, p2, p3, p4}, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->runDraft(Lcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/ExtraBundle;Ljava/util/function/Consumer;)Z
 
     move-result p0
@@ -677,6 +680,7 @@
         }
     .end annotation
 
+    .line 4
     iget-object p0, p0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManagerGroup;->mPostSavingStateManagerStore:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -695,6 +699,7 @@
 
     return p0
 
+    .line 5
     :cond_0
     sget-object v0, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManagerGroup;->TAG:Lcom/samsung/android/camera/core2/util/CLog$Tag;
 
@@ -724,6 +729,7 @@
 
     invoke-static {v0, p1}, Lcom/samsung/android/camera/core2/processor/util/PLog;->i(Lcom/samsung/android/camera/core2/util/CLog$Tag;Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {p0, p2, p3, p4, p5}, Lcom/samsung/android/camera/core2/processor/postSaving/PostSavingStateManager;->runDraft(Lcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/ExtraBundle;Ljava/util/function/Supplier;Ljava/util/function/Consumer;)Z
 
     move-result p0

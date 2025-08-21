@@ -57,10 +57,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0, p1}, Le3/c;-><init>(Landroid/os/Handler;)V
 
     iput p2, p0, Le3/b;->i:I
 
+    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -83,16 +85,20 @@
 
     const-wide/16 p1, -0x1
 
+    .line 3
     iput-wide p1, p0, Le3/b;->k:J
 
+    .line 4
     iput-wide p1, p0, Le3/b;->l:J
 
+    .line 5
     new-instance p1, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {p1}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
     iput-object p1, p0, Le3/b;->m:Ljava/util/concurrent/LinkedBlockingQueue;
 
+    .line 6
     new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
@@ -111,6 +117,7 @@
 
     const/4 p2, 0x4
 
+    .line 7
     :cond_0
     invoke-direct {p0, p1, p2}, Le3/b;-><init>(Landroid/os/Handler;I)V
 

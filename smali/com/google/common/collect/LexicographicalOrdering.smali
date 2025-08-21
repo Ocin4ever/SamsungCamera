@@ -70,14 +70,17 @@
         }
     .end annotation
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
+    .line 3
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
 
+    .line 4
     :cond_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -85,6 +88,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 5
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -95,6 +99,7 @@
 
     return p0
 
+    .line 6
     :cond_1
     iget-object v0, p0, Lcom/google/common/collect/LexicographicalOrdering;->elementOrder:Ljava/util/Comparator;
 
@@ -114,6 +119,7 @@
 
     return v0
 
+    .line 7
     :cond_2
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -134,6 +140,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Iterable;
 
     check-cast p2, Ljava/lang/Iterable;

@@ -22,6 +22,7 @@
 .method public constructor <init>(Lcom/google/android/material/timepicker/ChipTextInputComboView;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView$b;->a:Lcom/google/android/material/timepicker/ChipTextInputComboView;
 
     invoke-direct {p0}, Lm1/p;-><init>()V
@@ -32,6 +33,7 @@
 .method public synthetic constructor <init>(Lcom/google/android/material/timepicker/ChipTextInputComboView;Lcom/google/android/material/timepicker/ChipTextInputComboView$a;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/android/material/timepicker/ChipTextInputComboView$b;-><init>(Lcom/google/android/material/timepicker/ChipTextInputComboView;)V
 
     return-void

@@ -25,8 +25,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Lcom/google/common/reflect/TypeResolver$TypeTable;
 
     invoke-direct {v0}, Lcom/google/common/reflect/TypeResolver$TypeTable;-><init>()V
@@ -39,8 +41,10 @@
 .method private constructor <init>(Lcom/google/common/reflect/TypeResolver$TypeTable;)V
     .locals 0
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     iput-object p1, p0, Lcom/google/common/reflect/TypeResolver;->typeTable:Lcom/google/common/reflect/TypeResolver$TypeTable;
 
     return-void
@@ -49,6 +53,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/reflect/TypeResolver$TypeTable;Lcom/google/common/reflect/TypeResolver$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/reflect/TypeResolver;-><init>(Lcom/google/common/reflect/TypeResolver$TypeTable;)V
 
     return-void
@@ -443,10 +448,12 @@
 .method public where(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Lcom/google/common/reflect/TypeResolver;
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -461,6 +468,7 @@
 
     invoke-static {v0, p1, p2}, Lcom/google/common/reflect/TypeResolver;->populateTypeMappings(Ljava/util/Map;Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)V
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/common/reflect/TypeResolver;->where(Ljava/util/Map;)Lcom/google/common/reflect/TypeResolver;
 
     move-result-object p0
@@ -482,6 +490,7 @@
         }
     .end annotation
 
+    .line 4
     new-instance v0, Lcom/google/common/reflect/TypeResolver;
 
     iget-object p0, p0, Lcom/google/common/reflect/TypeResolver;->typeTable:Lcom/google/common/reflect/TypeResolver$TypeTable;

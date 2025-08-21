@@ -58,14 +58,17 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/core/app/NotificationCompat$Style;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mMessages:Ljava/util/List;
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -78,20 +81,24 @@
 .method public constructor <init>(Landroidx/core/app/Person;)V
     .locals 1
 
+    .line 8
     invoke-direct {p0}, Landroidx/core/app/NotificationCompat$Style;-><init>()V
 
+    .line 9
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mMessages:Ljava/util/List;
 
+    .line 10
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mHistoricMessages:Ljava/util/List;
 
+    .line 11
     invoke-virtual {p1}, Landroidx/core/app/Person;->getName()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -102,10 +109,12 @@
 
     if-nez v0, :cond_0
 
+    .line 12
     iput-object p1, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mUser:Landroidx/core/app/Person;
 
     return-void
 
+    .line 13
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -121,20 +130,24 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 4
     invoke-direct {p0}, Landroidx/core/app/NotificationCompat$Style;-><init>()V
 
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mMessages:Ljava/util/List;
 
+    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mHistoricMessages:Ljava/util/List;
 
+    .line 7
     new-instance v0, Landroidx/core/app/Person$Builder;
 
     invoke-direct {v0}, Landroidx/core/app/Person$Builder;-><init>()V
@@ -591,10 +604,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 7
     iget-object v0, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mMessages:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 8
     iget-object p1, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mMessages:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -605,6 +620,7 @@
 
     if-le p1, v0, :cond_0
 
+    .line 9
     iget-object p1, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mMessages:Ljava/util/List;
 
     const/4 v0, 0x0
@@ -618,6 +634,7 @@
 .method public addMessage(Ljava/lang/CharSequence;JLandroidx/core/app/Person;)Landroidx/core/app/NotificationCompat$MessagingStyle;
     .locals 1
 
+    .line 6
     new-instance v0, Landroidx/core/app/NotificationCompat$MessagingStyle$Message;
 
     invoke-direct {v0, p1, p2, p3, p4}, Landroidx/core/app/NotificationCompat$MessagingStyle$Message;-><init>(Ljava/lang/CharSequence;JLandroidx/core/app/Person;)V
@@ -632,6 +649,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mMessages:Ljava/util/List;
 
     new-instance v1, Landroidx/core/app/NotificationCompat$MessagingStyle$Message;
@@ -640,6 +658,7 @@
 
     invoke-direct {v2}, Landroidx/core/app/Person$Builder;-><init>()V
 
+    .line 2
     invoke-virtual {v2, p4}, Landroidx/core/app/Person$Builder;->setName(Ljava/lang/CharSequence;)Landroidx/core/app/Person$Builder;
 
     move-result-object p4
@@ -650,8 +669,10 @@
 
     invoke-direct {v1, p1, p2, p3, p4}, Landroidx/core/app/NotificationCompat$MessagingStyle$Message;-><init>(Ljava/lang/CharSequence;JLandroidx/core/app/Person;)V
 
+    .line 3
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 4
     iget-object p1, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mMessages:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -662,6 +683,7 @@
 
     if-le p1, p2, :cond_0
 
+    .line 5
     iget-object p1, p0, Landroidx/core/app/NotificationCompat$MessagingStyle;->mMessages:Ljava/util/List;
 
     const/4 p2, 0x0

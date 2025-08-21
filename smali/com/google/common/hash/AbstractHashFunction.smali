@@ -25,6 +25,7 @@
 .method public hashBytes(Ljava/nio/ByteBuffer;)Lcom/google/common/hash/HashCode;
     .locals 1
 
+    .line 4
     invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
     move-result v0
@@ -47,6 +48,7 @@
 .method public hashBytes([B)Lcom/google/common/hash/HashCode;
     .locals 2
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -63,10 +65,12 @@
 
     add-int v0, p2, p3
 
+    .line 2
     array-length v1, p1
 
     invoke-static {p2, v0, v1}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
+    .line 3
     invoke-virtual {p0, p3}, Lcom/google/common/hash/AbstractHashFunction;->newHasher(I)Lcom/google/common/hash/Hasher;
 
     move-result-object p0

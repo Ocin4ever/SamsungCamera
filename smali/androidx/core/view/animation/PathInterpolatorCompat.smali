@@ -23,6 +23,7 @@
 .method public static create(FF)Landroid/view/animation/Interpolator;
     .locals 0
 
+    .line 2
     invoke-static {p0, p1}, Landroidx/core/view/animation/PathInterpolatorCompat$Api21Impl;->createPathInterpolator(FF)Landroid/view/animation/PathInterpolator;
 
     move-result-object p0
@@ -33,6 +34,7 @@
 .method public static create(FFFF)Landroid/view/animation/Interpolator;
     .locals 0
 
+    .line 3
     invoke-static {p0, p1, p2, p3}, Landroidx/core/view/animation/PathInterpolatorCompat$Api21Impl;->createPathInterpolator(FFFF)Landroid/view/animation/PathInterpolator;
 
     move-result-object p0
@@ -43,6 +45,7 @@
 .method public static create(Landroid/graphics/Path;)Landroid/view/animation/Interpolator;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Landroidx/core/view/animation/PathInterpolatorCompat$Api21Impl;->createPathInterpolator(Landroid/graphics/Path;)Landroid/view/animation/PathInterpolator;
 
     move-result-object p0

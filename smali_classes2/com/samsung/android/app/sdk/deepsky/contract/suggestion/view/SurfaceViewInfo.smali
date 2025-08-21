@@ -58,22 +58,31 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;->revision:I
 
+    .line 3
     iput-object p2, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;->surfaceHash:Ljava/lang/String;
 
+    .line 4
     iput-object p3, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;->hostToken:Landroid/os/IBinder;
 
+    .line 5
     iput-object p4, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;->displayId:Ljava/lang/Integer;
 
+    .line 6
     iput-object p5, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;->width:Ljava/lang/Integer;
 
+    .line 7
     iput-object p6, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;->height:Ljava/lang/Integer;
 
+    .line 8
     iput-object p7, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;->minHeight:Ljava/lang/Integer;
 
+    .line 9
     iput-object p8, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;->extras:Landroid/os/Bundle;
 
     return-void
@@ -176,6 +185,7 @@
 
     move-object v4, p2
 
+    .line 10
     invoke-direct/range {v2 .. v10}, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;-><init>(ILjava/lang/String;Landroid/os/IBinder;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Landroid/os/Bundle;)V
 
     return-void
@@ -188,10 +198,12 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 11
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
+    .line 12
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
@@ -202,10 +214,12 @@
 
     invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 13
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v4
 
+    .line 14
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -231,6 +245,7 @@
     :cond_0
     move-object v5, v6
 
+    .line 15
     :goto_0
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -253,6 +268,7 @@
     :cond_1
     move-object v7, v6
 
+    .line 16
     :goto_1
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -275,6 +291,7 @@
     :cond_2
     move-object v8, v6
 
+    .line 17
     :goto_2
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -295,6 +312,7 @@
     :cond_3
     move-object v0, v6
 
+    .line 18
     :goto_3
     const-class v1, Landroid/os/Bundle;
 
@@ -314,10 +332,12 @@
 
     move-object v8, v0
 
+    .line 19
     invoke-direct/range {v1 .. v9}, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/view/SurfaceViewInfo;-><init>(ILjava/lang/String;Landroid/os/IBinder;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Landroid/os/Bundle;)V
 
     return-void
 
+    .line 20
     :cond_4
     new-instance p0, Ljava/lang/IllegalStateException;
 

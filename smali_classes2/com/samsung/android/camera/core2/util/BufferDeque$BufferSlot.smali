@@ -24,10 +24,13 @@
 .method public constructor <init>(JLcom/samsung/android/camera/core2/util/ImageBuffer;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-wide p1, p0, Lcom/samsung/android/camera/core2/util/BufferDeque$BufferSlot;->a:J
 
+    .line 4
     iput-object p3, p0, Lcom/samsung/android/camera/core2/util/BufferDeque$BufferSlot;->b:Lcom/samsung/android/camera/core2/util/ImageBuffer;
 
     return-void
@@ -36,6 +39,7 @@
 .method public synthetic constructor <init>(JLcom/samsung/android/camera/core2/util/ImageBuffer;Lcom/samsung/android/camera/core2/util/k;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/util/BufferDeque$BufferSlot;-><init>(JLcom/samsung/android/camera/core2/util/ImageBuffer;)V
 
     return-void

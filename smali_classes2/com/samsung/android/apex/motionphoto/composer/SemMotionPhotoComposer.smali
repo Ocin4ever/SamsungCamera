@@ -449,6 +449,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, v0, v1}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->changeStateIf(Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer$StateHandler;Lcom/samsung/android/apex/motionphoto/composer/State;J)Lcom/samsung/android/apex/motionphoto/command/Reply;
 
     move-result-object p0
@@ -463,6 +464,7 @@
 
     const-string v1, "changeState: "
 
+    .line 2
     iget-object v2, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->mLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
@@ -473,6 +475,7 @@
 
     const/4 v2, 0x0
 
+    .line 3
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->mState:Lcom/samsung/android/apex/motionphoto/composer/State;
 
@@ -480,6 +483,7 @@
 
     if-ne v3, v4, :cond_0
 
+    .line 4
     new-instance p1, Lcom/samsung/android/apex/motionphoto/command/Reply;
 
     const-string p3, "already released, ignore this"
@@ -488,6 +492,7 @@
 
     goto/16 :goto_2
 
+    .line 5
     :cond_0
     invoke-virtual {p1, v3}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer$StateHandler;->contains(Lcom/samsung/android/apex/motionphoto/composer/State;)Z
 
@@ -495,6 +500,7 @@
 
     if-nez v3, :cond_1
 
+    .line 6
     new-instance p3, Lcom/samsung/android/apex/motionphoto/command/Reply;
 
     new-instance p4, Ljava/lang/StringBuilder;
@@ -540,10 +546,12 @@
 
     if-lez v3, :cond_3
 
+    .line 7
     iget-object v4, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->threadPool:Ljava/util/concurrent/ExecutorService;
 
     if-eqz v4, :cond_3
 
+    .line 8
     new-instance v3, Lcom/samsung/android/apex/motionphoto/composer/o;
 
     invoke-direct {v3, p1}, Lcom/samsung/android/apex/motionphoto/composer/o;-><init>(Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer$StateHandler;)V
@@ -552,6 +560,7 @@
 
     move-result-object p1
 
+    .line 9
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-interface {p1, p3, p4, v3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
@@ -565,6 +574,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 10
     :try_start_1
     invoke-virtual {p1}, Lcom/samsung/android/apex/motionphoto/command/Reply;->isSuccess()Z
 
@@ -572,6 +582,7 @@
 
     if-eqz p3, :cond_2
 
+    .line 11
     invoke-virtual {p0}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->getTag()Ljava/lang/String;
 
     move-result-object p3
@@ -604,10 +615,12 @@
 
     invoke-static {p3, p4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 12
     iput-object p2, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->mState:Lcom/samsung/android/apex/motionphoto/composer/State;
 
     goto :goto_0
 
+    .line 13
     :cond_2
     invoke-virtual {p0}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->getTag()Ljava/lang/String;
 
@@ -643,6 +656,7 @@
 
     invoke-static {p3, p4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 14
     iput-object v2, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->mState:Lcom/samsung/android/apex/motionphoto/composer/State;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -674,6 +688,7 @@
     :cond_3
     if-lez v3, :cond_4
 
+    .line 15
     :try_start_2
     sget-object v3, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->TAG:Ljava/lang/String;
 
@@ -693,6 +708,7 @@
 
     invoke-static {v3, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 16
     :cond_4
     new-instance p3, Lcom/samsung/android/apex/motionphoto/command/Reply;
 
@@ -703,6 +719,7 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
+    .line 17
     :try_start_3
     invoke-static {p1}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer$StateHandler;->access$100(Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer$StateHandler;)Ljava/util/ArrayList;
 
@@ -710,6 +727,7 @@
 
     invoke-virtual {p1, p4, p3}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer$StateHandler;->onState(Ljava/util/List;Lcom/samsung/android/apex/motionphoto/command/Reply;)V
 
+    .line 18
     invoke-virtual {p0}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->getTag()Ljava/lang/String;
 
     move-result-object p1
@@ -742,6 +760,7 @@
 
     invoke-static {p1, p4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 19
     iput-object p2, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->mState:Lcom/samsung/android/apex/motionphoto/composer/State;
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
@@ -749,6 +768,7 @@
 
     move-object v2, p3
 
+    .line 20
     :goto_1
     :try_start_4
     iget-object p1, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->mState:Lcom/samsung/android/apex/motionphoto/composer/State;
@@ -763,6 +783,7 @@
     :goto_2
     if-eqz p1, :cond_5
 
+    .line 21
     invoke-virtual {p1}, Lcom/samsung/android/apex/motionphoto/command/Reply;->isSuccess()Z
 
     move-result p2
@@ -775,6 +796,7 @@
 
     invoke-virtual {p1, p2}, Lcom/samsung/android/apex/motionphoto/command/Reply;->printMessage(Ljava/lang/String;)V
 
+    .line 22
     :cond_5
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->mLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
@@ -808,6 +830,7 @@
     :catch_2
     move-exception p1
 
+    .line 23
     :goto_3
     :try_start_5
     sget-object p3, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->TAG:Ljava/lang/String;
@@ -832,6 +855,7 @@
 
     invoke-static {p3, p4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 24
     invoke-virtual {p0}, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->getTag()Ljava/lang/String;
 
     move-result-object p3
@@ -864,16 +888,19 @@
 
     invoke-static {p3, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 25
     sget-object p2, Lcom/samsung/android/apex/motionphoto/composer/State;->ERROR:Lcom/samsung/android/apex/motionphoto/composer/State;
 
     iput-object p2, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->mState:Lcom/samsung/android/apex/motionphoto/composer/State;
 
+    .line 26
     new-instance p2, Lcom/samsung/android/apex/motionphoto/command/Reply;
 
     invoke-direct {p2, p1}, Lcom/samsung/android/apex/motionphoto/command/Reply;-><init>(Ljava/lang/Exception;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
+    .line 27
     invoke-virtual {p2}, Lcom/samsung/android/apex/motionphoto/command/Reply;->isSuccess()Z
 
     move-result p1
@@ -886,6 +913,7 @@
 
     invoke-virtual {p2, p1}, Lcom/samsung/android/apex/motionphoto/command/Reply;->printMessage(Ljava/lang/String;)V
 
+    .line 28
     :cond_6
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->mLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
@@ -900,6 +928,7 @@
     :goto_4
     if-eqz v2, :cond_7
 
+    .line 29
     invoke-virtual {v2}, Lcom/samsung/android/apex/motionphoto/command/Reply;->isSuccess()Z
 
     move-result p2
@@ -912,6 +941,7 @@
 
     invoke-virtual {v2, p2}, Lcom/samsung/android/apex/motionphoto/command/Reply;->printMessage(Ljava/lang/String;)V
 
+    .line 30
     :cond_7
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/SemMotionPhotoComposer;->mLock:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
@@ -921,6 +951,7 @@
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;->unlock()V
 
+    .line 31
     throw p1
 .end method
 
@@ -2668,6 +2699,7 @@
 .method public store(I)J
     .locals 0
 
+    .line 1
     const-wide/16 p0, 0x0
 
     return-wide p0
@@ -2678,6 +2710,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 2
     const-wide/16 p0, 0x0
 
     return-wide p0
@@ -2686,6 +2719,7 @@
 .method public store(IJLandroid/location/Location;)J
     .locals 0
 
+    .line 3
     const-wide/16 p0, 0x0
 
     return-wide p0

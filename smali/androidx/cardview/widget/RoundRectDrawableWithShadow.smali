@@ -809,12 +809,14 @@
 
     if-ltz v0, :cond_3
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->toEven(F)I
 
     move-result p1
 
     int-to-float p1, p1
 
+    .line 2
     invoke-direct {p0, p2}, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->toEven(F)I
 
     move-result p2
@@ -827,15 +829,18 @@
 
     if-lez v0, :cond_1
 
+    .line 3
     iget-boolean p1, p0, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->mPrintedShadowClipWarning:Z
 
     if-nez p1, :cond_0
 
+    .line 4
     iput-boolean v1, p0, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->mPrintedShadowClipWarning:Z
 
     :cond_0
     move p1, p2
 
+    .line 5
     :cond_1
     iget v0, p0, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->mRawShadowSize:F
 
@@ -851,15 +856,18 @@
 
     return-void
 
+    .line 6
     :cond_2
     iput p1, p0, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->mRawShadowSize:F
 
+    .line 7
     iput p2, p0, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->mRawMaxShadowSize:F
 
     const/high16 p2, 0x3fc00000    # 1.5f
 
     mul-float/2addr p1, p2
 
+    .line 8
     iget p2, p0, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->mInsetShadow:I
 
     int-to-float p2, p2
@@ -876,12 +884,15 @@
 
     iput p1, p0, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->mShadowSize:F
 
+    .line 9
     iput-boolean v1, p0, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->mDirty:Z
 
+    .line 10
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 
+    .line 11
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -905,6 +916,7 @@
 
     throw p0
 
+    .line 12
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1389,6 +1401,7 @@
 .method public setShadowSize(F)V
     .locals 1
 
+    .line 13
     iget v0, p0, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->mRawMaxShadowSize:F
 
     invoke-direct {p0, p1, v0}, Landroidx/cardview/widget/RoundRectDrawableWithShadow;->setShadowSize(FF)V

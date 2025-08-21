@@ -80,6 +80,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/SeslSwitchBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -88,6 +89,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 2
     sget v0, Landroidx/appcompat/R$attr;->seslSwitchBarStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/SeslSwitchBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -100,6 +102,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/appcompat/widget/SeslSwitchBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -108,8 +111,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 2
 
+    .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -118,8 +123,10 @@
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mSessionDesc:Ljava/lang/String;
 
+    .line 7
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
@@ -128,72 +135,88 @@
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
+    .line 8
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
+    .line 9
     sget-object v1, Landroidx/appcompat/R$styleable;->SeslSwitchBar:[I
 
     invoke-virtual {p1, p2, v1, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 10
     sget p2, Landroidx/appcompat/R$styleable;->SeslSwitchBar_seslSwitchBarBackgroundColor:I
 
     sget p3, Landroidx/appcompat/R$color;->sesl_switchbar_off_background_color_light:I
 
+    .line 11
     invoke-virtual {v0, p3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p3
 
+    .line 12
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p2
 
     iput p2, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mBackgroundColor:I
 
+    .line 13
     sget p2, Landroidx/appcompat/R$styleable;->SeslSwitchBar_seslSwitchBarBackgroundActivatedColor:I
 
     sget p3, Landroidx/appcompat/R$color;->sesl_switchbar_on_background_color_light:I
 
+    .line 14
     invoke-virtual {v0, p3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p3
 
+    .line 15
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p2
 
     iput p2, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mBackgroundActivatedColor:I
 
+    .line 16
     sget p2, Landroidx/appcompat/R$styleable;->SeslSwitchBar_seslSwitchBarTextActivatedColor:I
 
     sget p3, Landroidx/appcompat/R$color;->sesl_switchbar_on_text_color_light:I
 
+    .line 17
     invoke-virtual {v0, p3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p4
 
+    .line 18
     invoke-virtual {p1, p2, p4}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p2
 
     iput p2, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mOnTextColor:I
 
+    .line 19
     sget p2, Landroidx/appcompat/R$styleable;->SeslSwitchBar_seslSwitchBarTextColor:I
 
+    .line 20
     invoke-virtual {v0, p3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p3
 
+    .line 21
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p2
 
     iput p2, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mOffTextColor:I
 
+    .line 22
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 23
     sget p1, Landroidx/appcompat/R$id;->sesl_switchbar_progress:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -204,6 +227,7 @@
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mProgressBar:Landroidx/appcompat/widget/SeslProgressBar;
 
+    .line 24
     sget p1, Landroidx/appcompat/R$id;->sesl_switchbar_container:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -214,20 +238,24 @@
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mBackground:Landroid/widget/LinearLayout;
 
+    .line 25
     new-instance p2, Landroidx/appcompat/widget/SeslSwitchBar$1;
 
     invoke-direct {p2, p0}, Landroidx/appcompat/widget/SeslSwitchBar$1;-><init>(Landroidx/appcompat/widget/SeslSwitchBar;)V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 26
     sget p1, Landroidx/appcompat/widget/SeslSwitchBar;->SWITCH_ON_STRING_RESOURCE_ID:I
 
     iput p1, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mOnTextId:I
 
+    .line 27
     sget p1, Landroidx/appcompat/widget/SeslSwitchBar;->SWITCH_OFF_STRING_RESOURCE_ID:I
 
     iput p1, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mOffTextId:I
 
+    .line 28
     sget p1, Landroidx/appcompat/R$id;->sesl_switchbar_text:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -238,12 +266,14 @@
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mTextView:Landroid/widget/TextView;
 
+    .line 29
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
+    .line 30
     sget p2, Landroidx/appcompat/R$dimen;->sesl_switchbar_margin_start:I
 
     invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -254,6 +284,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
 
+    .line 31
     sget p1, Landroidx/appcompat/R$id;->sesl_switchbar_switch:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -266,32 +297,39 @@
 
     const/4 p2, 0x0
 
+    .line 32
     invoke-virtual {p1, p2}, Landroid/view/View;->setSaveEnabled(Z)V
 
+    .line 33
     iget-object p1, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mSwitch:Landroidx/appcompat/widget/SeslToggleSwitch;
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setFocusable(Z)V
 
+    .line 34
     iget-object p1, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mSwitch:Landroidx/appcompat/widget/SeslToggleSwitch;
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setClickable(Z)V
 
+    .line 35
     iget-object p1, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mSwitch:Landroidx/appcompat/widget/SeslToggleSwitch;
 
     invoke-virtual {p1, p0}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
+    .line 36
     iget p1, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mOnTextId:I
 
     iget p2, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mOffTextId:I
 
     invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/SeslSwitchBar;->setSwitchBarText(II)V
 
+    .line 37
     new-instance p1, Landroidx/appcompat/widget/SeslSwitchBar$2;
 
     invoke-direct {p1, p0}, Landroidx/appcompat/widget/SeslSwitchBar$2;-><init>(Landroidx/appcompat/widget/SeslSwitchBar;)V
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/SeslSwitchBar;->addOnSwitchChangeListener(Landroidx/appcompat/widget/SeslSwitchBar$OnSwitchChangeListener;)V
 
+    .line 38
     iget-object p1, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mSwitch:Landroidx/appcompat/widget/SeslToggleSwitch;
 
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -300,6 +338,7 @@
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
+    .line 39
     sget p2, Landroidx/appcompat/R$dimen;->sesl_switchbar_margin_end:I
 
     invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -310,16 +349,19 @@
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
 
+    .line 40
     new-instance p1, Landroidx/appcompat/widget/SeslSwitchBar$SwitchBarDelegate;
 
     invoke-direct {p1, p0}, Landroidx/appcompat/widget/SeslSwitchBar$SwitchBarDelegate;-><init>(Landroid/view/View;)V
 
     iput-object p1, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mDelegate:Landroidx/appcompat/widget/SeslSwitchBar$SwitchBarDelegate;
 
+    .line 41
     iget-object p2, p0, Landroidx/appcompat/widget/SeslSwitchBar;->mBackground:Landroid/widget/LinearLayout;
 
     invoke-static {p2, p1}, Landroidx/core/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroidx/core/view/AccessibilityDelegateCompat;)V
 
+    .line 42
     invoke-direct {p0}, Landroidx/appcompat/widget/SeslSwitchBar;->getActivityTitle()Ljava/lang/String;
 
     move-result-object p1

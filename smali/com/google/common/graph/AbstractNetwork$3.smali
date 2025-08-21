@@ -54,6 +54,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/AbstractNetwork$3;->val$network:Lcom/google/common/graph/Network;
 
     invoke-interface {p0, p1}, Lcom/google/common/graph/Network;->incidentNodes(Ljava/lang/Object;)Lcom/google/common/graph/EndpointPair;
@@ -66,6 +67,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/graph/AbstractNetwork$3;->apply(Ljava/lang/Object;)Lcom/google/common/graph/EndpointPair;
 
     move-result-object p0

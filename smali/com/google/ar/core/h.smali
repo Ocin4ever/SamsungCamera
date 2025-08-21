@@ -59,6 +59,7 @@
 .method public static synthetic a(Lcom/google/ar/core/h;Lcom/google/ar/core/ArCoreApk$Availability;)Lcom/google/ar/core/ArCoreApk$Availability;
     .locals 0
 
+    .line 13
     iput-object p1, p0, Lcom/google/ar/core/h;->g:Lcom/google/ar/core/ArCoreApk$Availability;
 
     return-object p1
@@ -69,6 +70,7 @@
 
     const-string v0, "ARCore-ArCoreApk"
 
+    .line 2
     invoke-static {p0}, Lcom/google/ar/core/aj;->b(Landroid/content/Context;)Landroid/app/PendingIntent;
 
     move-result-object v1
@@ -78,8 +80,10 @@
     :try_start_0
     const-string v2, "Starting setup activity"
 
+    .line 3
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     invoke-virtual {v1}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
 
     move-result-object v4
@@ -96,6 +100,7 @@
 
     invoke-virtual/range {v3 .. v8}, Landroid/app/Activity;->startIntentSender(Landroid/content/IntentSender;Landroid/content/Intent;III)V
 
+    .line 5
     sget-object p0, Lcom/google/ar/core/ArCoreApk$InstallStatus;->INSTALL_REQUESTED:Lcom/google/ar/core/ArCoreApk$InstallStatus;
     :try_end_0
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
@@ -108,8 +113,10 @@
 
     const-string v1, "Setup activity launch failed"
 
+    .line 6
     invoke-static {v0, v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 7
     :cond_0
     sget-object p0, Lcom/google/ar/core/ArCoreApk$InstallStatus;->INSTALLED:Lcom/google/ar/core/ArCoreApk$InstallStatus;
 
@@ -119,6 +126,7 @@
 .method public static a()Lcom/google/ar/core/h;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/ar/core/h;->c:Lcom/google/ar/core/h;
 
     return-object v0
@@ -129,6 +137,7 @@
 
     const/4 p1, 0x0
 
+    .line 14
     iput-boolean p1, p0, Lcom/google/ar/core/h;->h:Z
 
     return p1
@@ -137,6 +146,7 @@
 .method private static c()Z
     .locals 1
 
+    .line 1
     const/4 v0, 0x1
 
     return v0
@@ -145,8 +155,10 @@
 .method private final c(Landroid/content/Context;)Z
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/ar/core/h;->e(Landroid/content/Context;)V
 
+    .line 3
     iget-boolean p0, p0, Lcom/google/ar/core/h;->k:Z
 
     return p0
@@ -423,25 +435,30 @@
 
     monitor-enter p0
 
+    .line 8
     :try_start_0
     iget-object v0, p0, Lcom/google/ar/core/h;->i:Lcom/google/ar/core/p;
 
     if-nez v0, :cond_0
 
+    .line 9
     new-instance v0, Lcom/google/ar/core/p;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/google/ar/core/p;-><init>(B)V
 
+    .line 10
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Lcom/google/ar/core/p;->a(Landroid/content/Context;)V
 
+    .line 11
     iput-object v0, p0, Lcom/google/ar/core/h;->i:Lcom/google/ar/core/p;
 
+    .line 12
     :cond_0
     iget-object p1, p0, Lcom/google/ar/core/h;->i:Lcom/google/ar/core/p;
     :try_end_0
@@ -464,6 +481,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/ar/core/h;->a:Ljava/lang/Exception;
 
@@ -471,23 +489,29 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iput v1, p0, Lcom/google/ar/core/h;->e:I
 
+    .line 3
     :cond_0
     iput-boolean v1, p0, Lcom/google/ar/core/h;->d:Z
 
+    .line 4
     iget-object v0, p0, Lcom/google/ar/core/h;->i:Lcom/google/ar/core/p;
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v0}, Lcom/google/ar/core/p;->a()V
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lcom/google/ar/core/h;->i:Lcom/google/ar/core/p;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     :cond_1
     monitor-exit p0
 
@@ -504,14 +528,17 @@
 .method public final b(Landroid/content/Context;)Z
     .locals 1
 
+    .line 8
     invoke-direct {p0, p1}, Lcom/google/ar/core/h;->e(Landroid/content/Context;)V
 
+    .line 9
     invoke-static {p1}, Lcom/google/ar/core/h;->d(Landroid/content/Context;)I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 10
     invoke-static {p1}, Lcom/google/ar/core/h;->d(Landroid/content/Context;)I
 
     move-result p1
@@ -699,6 +726,7 @@
 .method public final requestInstall(Landroid/app/Activity;Z)Lcom/google/ar/core/ArCoreApk$InstallStatus;
     .locals 2
 
+    .line 31
     invoke-direct {p0, p1}, Lcom/google/ar/core/h;->c(Landroid/content/Context;)Z
 
     move-result v0
@@ -712,6 +740,7 @@
     :cond_0
     sget-object v0, Lcom/google/ar/core/ArCoreApk$InstallBehavior;->OPTIONAL:Lcom/google/ar/core/ArCoreApk$InstallBehavior;
 
+    .line 32
     :goto_0
     invoke-direct {p0, p1}, Lcom/google/ar/core/h;->c(Landroid/content/Context;)Z
 
@@ -719,13 +748,16 @@
 
     if-eqz v1, :cond_1
 
+    .line 33
     sget-object v1, Lcom/google/ar/core/ArCoreApk$UserMessageType;->APPLICATION:Lcom/google/ar/core/ArCoreApk$UserMessageType;
 
     goto :goto_1
 
+    .line 34
     :cond_1
     sget-object v1, Lcom/google/ar/core/ArCoreApk$UserMessageType;->USER_ALREADY_INFORMED:Lcom/google/ar/core/ArCoreApk$UserMessageType;
 
+    .line 35
     :goto_1
     invoke-virtual {p0, p1, p2, v0, v1}, Lcom/google/ar/core/h;->requestInstall(Landroid/app/Activity;ZLcom/google/ar/core/ArCoreApk$InstallBehavior;Lcom/google/ar/core/ArCoreApk$UserMessageType;)Lcom/google/ar/core/ArCoreApk$InstallStatus;
 
@@ -737,35 +769,42 @@
 .method public final requestInstall(Landroid/app/Activity;ZLcom/google/ar/core/ArCoreApk$InstallBehavior;Lcom/google/ar/core/ArCoreApk$UserMessageType;)Lcom/google/ar/core/ArCoreApk$InstallStatus;
     .locals 6
 
+    .line 1
     invoke-static {}, Lcom/google/ar/core/h;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/ar/core/h;->b(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/ar/core/h;->b()V
 
+    .line 4
     invoke-static {p1}, Lcom/google/ar/core/h;->a(Landroid/app/Activity;)Lcom/google/ar/core/ArCoreApk$InstallStatus;
 
     move-result-object p0
 
     return-object p0
 
+    .line 5
     :cond_0
     iget-boolean v0, p0, Lcom/google/ar/core/h;->d:Z
 
     if-eqz v0, :cond_1
 
+    .line 6
     sget-object p0, Lcom/google/ar/core/ArCoreApk$InstallStatus;->INSTALL_REQUESTED:Lcom/google/ar/core/ArCoreApk$InstallStatus;
 
     return-object p0
 
+    .line 7
     :cond_1
     iget-object v0, p0, Lcom/google/ar/core/h;->a:Ljava/lang/Exception;
 
@@ -777,31 +816,38 @@
 
     const-string v1, "Clearing previous failure: "
 
+    .line 8
     invoke-static {p2, v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p2, 0x0
 
+    .line 9
     iput-object p2, p0, Lcom/google/ar/core/h;->a:Ljava/lang/Exception;
 
     goto :goto_0
 
+    .line 10
     :cond_2
     instance-of p1, v0, Lcom/google/ar/core/exceptions/UnavailableDeviceNotCompatibleException;
 
     if-nez p1, :cond_5
 
+    .line 11
     instance-of p1, v0, Lcom/google/ar/core/exceptions/UnavailableUserDeclinedInstallationException;
 
     if-nez p1, :cond_4
 
+    .line 12
     instance-of p1, v0, Ljava/lang/RuntimeException;
 
     if-eqz p1, :cond_3
 
+    .line 13
     check-cast v0, Ljava/lang/RuntimeException;
 
     throw v0
 
+    .line 14
     :cond_3
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -813,22 +859,26 @@
 
     throw p1
 
+    .line 15
     :cond_4
     check-cast v0, Lcom/google/ar/core/exceptions/UnavailableUserDeclinedInstallationException;
 
     throw v0
 
+    .line 16
     :cond_5
     check-cast v0, Lcom/google/ar/core/exceptions/UnavailableDeviceNotCompatibleException;
 
     throw v0
 
+    .line 17
     :cond_6
     :goto_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
+    .line 18
     iget-wide v2, p0, Lcom/google/ar/core/h;->f:J
 
     sub-long v2, v0, v2
@@ -841,8 +891,10 @@
 
     const/4 p2, 0x0
 
+    .line 19
     iput p2, p0, Lcom/google/ar/core/h;->e:I
 
+    .line 20
     :cond_7
     iget p2, p0, Lcom/google/ar/core/h;->e:I
 
@@ -852,12 +904,14 @@
 
     iput p2, p0, Lcom/google/ar/core/h;->e:I
 
+    .line 21
     iput-wide v0, p0, Lcom/google/ar/core/h;->f:J
 
     const/4 v0, 0x2
 
     if-gt p2, v0, :cond_8
 
+    .line 22
     :try_start_0
     new-instance p2, Landroid/content/Intent;
 
@@ -867,22 +921,27 @@
 
     const-string v0, "message"
 
+    .line 23
     invoke-virtual {p2, v0, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     move-result-object p2
 
     const-string p4, "behavior"
 
+    .line 24
     invoke-virtual {p2, p4, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     move-result-object p2
 
+    .line 25
     invoke-virtual {p1, p2}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 26
     iput-boolean v2, p0, Lcom/google/ar/core/h;->d:Z
 
+    .line 27
     sget-object p0, Lcom/google/ar/core/ArCoreApk$InstallStatus;->INSTALL_REQUESTED:Lcom/google/ar/core/ArCoreApk$InstallStatus;
 
     return-object p0
@@ -890,6 +949,7 @@
     :catch_0
     move-exception p0
 
+    .line 28
     new-instance p1, Lcom/google/ar/core/exceptions/FatalException;
 
     const-string p2, "Failed to launch InstallActivity"
@@ -898,6 +958,7 @@
 
     throw p1
 
+    .line 29
     :cond_8
     new-instance p0, Lcom/google/ar/core/exceptions/FatalException;
 
@@ -907,6 +968,7 @@
 
     throw p0
 
+    .line 30
     :cond_9
     new-instance p0, Lcom/google/ar/core/exceptions/UnavailableDeviceNotCompatibleException;
 

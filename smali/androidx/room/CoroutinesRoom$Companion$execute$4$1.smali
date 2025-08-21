@@ -50,6 +50,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Landroidx/room/CoroutinesRoom$Companion$execute$4$1;->invoke(Ljava/lang/Throwable;)V
@@ -62,10 +63,12 @@
 .method public final invoke(Ljava/lang/Throwable;)V
     .locals 1
 
+    .line 2
     iget-object p1, p0, Landroidx/room/CoroutinesRoom$Companion$execute$4$1;->$cancellationSignal:Landroid/os/CancellationSignal;
 
     invoke-static {p1}, Landroidx/sqlite/db/SupportSQLiteCompat$Api16Impl;->cancel(Landroid/os/CancellationSignal;)V
 
+    .line 3
     iget-object p0, p0, Landroidx/room/CoroutinesRoom$Companion$execute$4$1;->$job:Lx6/r1;
 
     const/4 p1, 0x1

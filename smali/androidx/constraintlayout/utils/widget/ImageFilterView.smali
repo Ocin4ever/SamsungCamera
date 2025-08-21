@@ -49,8 +49,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance v0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;
 
     invoke-direct {v0}, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;-><init>()V
@@ -59,38 +61,50 @@
 
     const/4 v0, 0x1
 
+    .line 3
     iput-boolean v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mOverlay:Z
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mAltDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 5
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     const/4 v1, 0x0
 
+    .line 6
     iput v1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mCrossfade:F
 
+    .line 7
     iput v1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mRoundPercent:F
 
     const/high16 v1, 0x7fc00000    # Float.NaN
 
+    .line 8
     iput v1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mRound:F
 
     const/4 v2, 0x2
 
     new-array v2, v2, [Landroid/graphics/drawable/Drawable;
 
+    .line 9
     iput-object v2, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mLayers:[Landroid/graphics/drawable/Drawable;
 
+    .line 10
     iput v1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mPanX:F
 
+    .line 11
     iput v1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mPanY:F
 
+    .line 12
     iput v1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mZoom:F
 
+    .line 13
     iput v1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mRotate:F
 
+    .line 14
     invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/utils/widget/ImageFilterView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -99,8 +113,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
+    .line 15
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 16
     new-instance v0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;
 
     invoke-direct {v0}, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;-><init>()V
@@ -109,38 +125,50 @@
 
     const/4 v0, 0x1
 
+    .line 17
     iput-boolean v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mOverlay:Z
 
     const/4 v0, 0x0
 
+    .line 18
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mAltDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 19
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     const/4 v0, 0x0
 
+    .line 20
     iput v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mCrossfade:F
 
+    .line 21
     iput v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mRoundPercent:F
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
+    .line 22
     iput v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mRound:F
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Landroid/graphics/drawable/Drawable;
 
+    .line 23
     iput-object v1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mLayers:[Landroid/graphics/drawable/Drawable;
 
+    .line 24
     iput v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mPanX:F
 
+    .line 25
     iput v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mPanY:F
 
+    .line 26
     iput v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mZoom:F
 
+    .line 27
     iput v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mRotate:F
 
+    .line 28
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/utils/widget/ImageFilterView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -149,8 +177,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
 
+    .line 29
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 30
     new-instance p3, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;
 
     invoke-direct {p3}, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;-><init>()V
@@ -159,38 +189,50 @@
 
     const/4 p3, 0x1
 
+    .line 31
     iput-boolean p3, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mOverlay:Z
 
     const/4 p3, 0x0
 
+    .line 32
     iput-object p3, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mAltDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 33
     iput-object p3, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     const/4 p3, 0x0
 
+    .line 34
     iput p3, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mCrossfade:F
 
+    .line 35
     iput p3, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mRoundPercent:F
 
     const/high16 p3, 0x7fc00000    # Float.NaN
 
+    .line 36
     iput p3, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mRound:F
 
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/graphics/drawable/Drawable;
 
+    .line 37
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mLayers:[Landroid/graphics/drawable/Drawable;
 
+    .line 38
     iput p3, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mPanX:F
 
+    .line 39
     iput p3, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mPanY:F
 
+    .line 40
     iput p3, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mZoom:F
 
+    .line 41
     iput p3, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView;->mRotate:F
 
+    .line 42
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/utils/widget/ImageFilterView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void

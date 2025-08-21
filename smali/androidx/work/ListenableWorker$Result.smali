@@ -34,6 +34,7 @@
 .method public static failure()Landroidx/work/ListenableWorker$Result;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/work/ListenableWorker$Result$Failure;
 
     invoke-direct {v0}, Landroidx/work/ListenableWorker$Result$Failure;-><init>()V
@@ -44,6 +45,7 @@
 .method public static failure(Landroidx/work/Data;)Landroidx/work/ListenableWorker$Result;
     .locals 1
 
+    .line 2
     new-instance v0, Landroidx/work/ListenableWorker$Result$Failure;
 
     invoke-direct {v0, p0}, Landroidx/work/ListenableWorker$Result$Failure;-><init>(Landroidx/work/Data;)V
@@ -64,6 +66,7 @@
 .method public static success()Landroidx/work/ListenableWorker$Result;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/work/ListenableWorker$Result$Success;
 
     invoke-direct {v0}, Landroidx/work/ListenableWorker$Result$Success;-><init>()V
@@ -74,6 +77,7 @@
 .method public static success(Landroidx/work/Data;)Landroidx/work/ListenableWorker$Result;
     .locals 1
 
+    .line 2
     new-instance v0, Landroidx/work/ListenableWorker$Result$Success;
 
     invoke-direct {v0, p0}, Landroidx/work/ListenableWorker$Result$Success;-><init>(Landroidx/work/Data;)V

@@ -193,6 +193,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ImmediateFuture;->value:Ljava/lang/Object;
 
     return-object p0
@@ -211,8 +212,10 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {p3}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ImmediateFuture;->get()Ljava/lang/Object;
 
     move-result-object p0

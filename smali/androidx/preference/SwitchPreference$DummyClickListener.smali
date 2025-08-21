@@ -25,6 +25,7 @@
 .method private constructor <init>(Landroidx/preference/SwitchPreference;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/preference/SwitchPreference$DummyClickListener;->this$0:Landroidx/preference/SwitchPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,6 +36,7 @@
 .method public synthetic constructor <init>(Landroidx/preference/SwitchPreference;Landroidx/preference/SwitchPreference$1;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Landroidx/preference/SwitchPreference$DummyClickListener;-><init>(Landroidx/preference/SwitchPreference;)V
 
     return-void

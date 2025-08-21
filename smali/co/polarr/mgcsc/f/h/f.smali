@@ -266,6 +266,7 @@
 .method private static a(Landroid/graphics/PointF;FF)Landroid/graphics/Rect;
     .locals 4
 
+    .line 3
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -302,6 +303,7 @@
 .method private a(D[BI)Z
     .locals 15
 
+    .line 8
     move-object v0, p0
 
     iget-object v1, v0, Lco/polarr/mgcsc/f/h/f;->x:Lco/polarr/cv/tracker/CGTracker;
@@ -534,6 +536,7 @@
 .method public a()I
     .locals 5
 
+    .line 1
     iget-boolean v0, p0, Lco/polarr/mgcsc/f/h/f;->u:Z
 
     const/4 v1, 0x2
@@ -575,6 +578,7 @@
 .method public a(Z)Landroid/graphics/PointF;
     .locals 4
 
+    .line 2
     iget-object v0, p0, Lco/polarr/mgcsc/f/h/f;->G:Landroid/graphics/RectF;
 
     iget v1, v0, Landroid/graphics/RectF;->left:F
@@ -651,6 +655,7 @@
 .method public a(F)V
     .locals 2
 
+    .line 4
     float-to-double v0, p1
 
     iput-wide v0, p0, Lco/polarr/mgcsc/f/h/f;->s:D
@@ -661,6 +666,7 @@
 .method public a(FFFFI)V
     .locals 0
 
+    .line 5
     iput p1, p0, Lco/polarr/mgcsc/f/h/f;->J:F
 
     iput p2, p0, Lco/polarr/mgcsc/f/h/f;->K:F
@@ -677,6 +683,7 @@
 .method public a(I)V
     .locals 0
 
+    .line 6
     iput p1, p0, Lco/polarr/mgcsc/f/h/f;->t:I
 
     return-void
@@ -685,6 +692,7 @@
 .method public a([B)V
     .locals 0
 
+    .line 7
     iput-object p1, p0, Lco/polarr/mgcsc/f/h/f;->I:[B
 
     return-void
@@ -693,6 +701,7 @@
 .method public a(Landroid/graphics/PointF;Landroid/graphics/PointF;)Z
     .locals 26
 
+    .line 9
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -841,6 +850,7 @@
 .method public b(F)V
     .locals 1
 
+    .line 1
     iput p1, p0, Lco/polarr/mgcsc/f/h/f;->A:F
 
     const/high16 v0, 0x43960000    # 300.0f
@@ -861,6 +871,7 @@
 .method public b(I)V
     .locals 0
 
+    .line 2
     iput p1, p0, Lco/polarr/mgcsc/f/h/f;->y:I
 
     return-void
@@ -869,6 +880,7 @@
 .method public b(Z)V
     .locals 0
 
+    .line 3
     iput-boolean p1, p0, Lco/polarr/mgcsc/f/h/f;->u:Z
 
     return-void
@@ -877,6 +889,7 @@
 .method public b([B)V
     .locals 1
 
+    .line 4
     iget v0, p0, Lco/polarr/mgcsc/f/h/f;->z:I
 
     if-lez v0, :cond_0
@@ -892,6 +905,7 @@
 .method public b()[Landroid/graphics/RectF;
     .locals 0
 
+    .line 5
     iget-object p0, p0, Lco/polarr/mgcsc/f/h/f;->H:[Landroid/graphics/RectF;
 
     return-object p0

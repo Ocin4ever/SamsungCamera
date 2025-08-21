@@ -38,6 +38,7 @@
 .method public onNotifyCallback(Landroidx/databinding/ObservableMap$OnMapChangedCallback;Landroidx/databinding/ObservableMap;ILjava/lang/Object;)V
     .locals 0
 
+    .line 2
     invoke-virtual {p1, p2, p4}, Landroidx/databinding/ObservableMap$OnMapChangedCallback;->onMapChanged(Landroidx/databinding/ObservableMap;Ljava/lang/Object;)V
 
     return-void
@@ -46,6 +47,7 @@
 .method public bridge synthetic onNotifyCallback(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroidx/databinding/ObservableMap$OnMapChangedCallback;
 
     check-cast p2, Landroidx/databinding/ObservableMap;

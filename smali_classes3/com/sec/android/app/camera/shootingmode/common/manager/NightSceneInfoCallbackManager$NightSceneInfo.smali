@@ -125,6 +125,7 @@
 .method public static valueOf(I)Lcom/sec/android/app/camera/shootingmode/common/manager/NightSceneInfoCallbackManager$NightSceneInfo;
     .locals 1
 
+    .line 2
     invoke-static {}, Lcom/sec/android/app/camera/shootingmode/common/manager/NightSceneInfoCallbackManager$NightSceneInfo;->values()[Lcom/sec/android/app/camera/shootingmode/common/manager/NightSceneInfoCallbackManager$NightSceneInfo;
 
     move-result-object v0
@@ -137,6 +138,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/sec/android/app/camera/shootingmode/common/manager/NightSceneInfoCallbackManager$NightSceneInfo;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/sec/android/app/camera/shootingmode/common/manager/NightSceneInfoCallbackManager$NightSceneInfo;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;

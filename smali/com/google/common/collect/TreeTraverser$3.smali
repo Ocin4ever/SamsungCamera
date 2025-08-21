@@ -52,6 +52,7 @@
         }
     .end annotation
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/TreeTraverser$3;->this$0:Lcom/google/common/collect/TreeTraverser;
 
     iget-object p0, p0, Lcom/google/common/collect/TreeTraverser$3;->val$root:Ljava/lang/Object;
@@ -66,6 +67,7 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/TreeTraverser$3;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object p0

@@ -37,6 +37,7 @@
 
     move-object v1, p0
 
+    .line 1
     invoke-direct/range {v1 .. v6}, Lk2/j;-><init>([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -45,18 +46,24 @@
 .method public constructor <init>([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 2
     sget-object v0, Lk2/v;->b:Lk2/v;
 
     invoke-direct {p0, v0}, Lk2/u;-><init>(Lk2/v;)V
 
+    .line 3
     iput-object p1, p0, Lk2/j;->b:[Ljava/lang/String;
 
+    .line 4
     iput-object p2, p0, Lk2/j;->c:[Ljava/lang/String;
 
+    .line 5
     iput-object p3, p0, Lk2/j;->d:[Ljava/lang/String;
 
+    .line 6
     iput-object p4, p0, Lk2/j;->e:Ljava/lang/String;
 
+    .line 7
     iput-object p5, p0, Lk2/j;->f:Ljava/lang/String;
 
     return-void

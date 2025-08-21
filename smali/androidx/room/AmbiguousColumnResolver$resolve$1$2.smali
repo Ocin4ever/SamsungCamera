@@ -69,6 +69,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Landroidx/room/AmbiguousColumnResolver$resolve$1$2;->invoke(Ljava/util/List;)V
@@ -93,6 +94,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     move-object v0, p1
 
     check-cast v0, Ljava/lang/Iterable;
@@ -141,6 +143,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -186,6 +189,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_3
     iget-object v0, p0, Landroidx/room/AmbiguousColumnResolver$resolve$1$2;->$mappingMatches:Ljava/util/List;
 
@@ -197,18 +201,23 @@
 
     check-cast p0, Ljava/util/List;
 
+    .line 5
     new-instance v0, Landroidx/room/AmbiguousColumnResolver$Match;
 
+    .line 6
     new-instance v3, Lt6/d;
 
     invoke-direct {v3, v2, v1}, Lt6/d;-><init>(II)V
 
+    .line 7
     invoke-direct {v0, v3, p1}, Landroidx/room/AmbiguousColumnResolver$Match;-><init>(Lt6/d;Ljava/util/List;)V
 
+    .line 8
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 
+    .line 9
     :cond_4
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -216,6 +225,7 @@
 
     throw p0
 
+    .line 10
     :cond_5
     new-instance p0, Ljava/util/NoSuchElementException;
 

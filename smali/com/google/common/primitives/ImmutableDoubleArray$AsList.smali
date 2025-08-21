@@ -36,8 +36,10 @@
 .method private constructor <init>(Lcom/google/common/primitives/ImmutableDoubleArray;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;->parent:Lcom/google/common/primitives/ImmutableDoubleArray;
 
     return-void
@@ -46,6 +48,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/primitives/ImmutableDoubleArray;Lcom/google/common/primitives/ImmutableDoubleArray$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;-><init>(Lcom/google/common/primitives/ImmutableDoubleArray;)V
 
     return-void
@@ -184,6 +187,7 @@
 .method public get(I)Ljava/lang/Double;
     .locals 0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;->parent:Lcom/google/common/primitives/ImmutableDoubleArray;
 
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/ImmutableDoubleArray;->get(I)D
@@ -200,6 +204,7 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;->get(I)Ljava/lang/Double;
 
     move-result-object p0

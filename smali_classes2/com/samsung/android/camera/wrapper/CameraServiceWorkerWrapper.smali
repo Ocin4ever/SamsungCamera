@@ -85,5 +85,8 @@
 .method public abstract acquireRequestInjector()Landroid/os/IBinder;
 .end method
 
+.method public abstract getInterfaceVersion()I
+.end method
+
 .method public abstract storeLoggingData(ILjava/lang/String;)V
 .end method

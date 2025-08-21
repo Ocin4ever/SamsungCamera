@@ -291,16 +291,20 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lcom/google/ar/core/ImageMetadata;->session:Lcom/google/ar/core/Session;
 
     const-wide/16 v1, 0x0
 
+    .line 7
     iput-wide v1, p0, Lcom/google/ar/core/ImageMetadata;->nativeHandle:J
 
+    .line 8
     iput-object v0, p0, Lcom/google/ar/core/ImageMetadata;->sketchEntry:Lcom/google/ar/core/ImageMetadata$a;
 
     return-void
@@ -309,12 +313,16 @@
 .method public constructor <init>(JLcom/google/ar/core/Session;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p3, p0, Lcom/google/ar/core/ImageMetadata;->session:Lcom/google/ar/core/Session;
 
+    .line 3
     iput-wide p1, p0, Lcom/google/ar/core/ImageMetadata;->nativeHandle:J
 
+    .line 4
     new-instance p1, Lcom/google/ar/core/ImageMetadata$a;
 
     invoke-direct {p1}, Lcom/google/ar/core/ImageMetadata$a;-><init>()V

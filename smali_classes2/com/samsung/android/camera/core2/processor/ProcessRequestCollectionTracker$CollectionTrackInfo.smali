@@ -24,10 +24,13 @@
 .method private constructor <init>(I)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput p1, p0, Lcom/samsung/android/camera/core2/processor/ProcessRequestCollectionTracker$CollectionTrackInfo;->mCollectionCount:I
 
+    .line 4
     new-instance v0, Ljava/util/BitSet;
 
     invoke-direct {v0, p1}, Ljava/util/BitSet;-><init>(I)V
@@ -40,6 +43,7 @@
 .method public synthetic constructor <init>(ILcom/samsung/android/camera/core2/processor/a0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/processor/ProcessRequestCollectionTracker$CollectionTrackInfo;-><init>(I)V
 
     return-void

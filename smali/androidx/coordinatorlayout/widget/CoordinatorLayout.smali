@@ -222,6 +222,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -230,6 +231,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 2
     sget v0, Landroidx/coordinatorlayout/R$attr;->coordinatorLayoutStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -240,20 +242,24 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 10
 
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mDependencySortedChildren:Ljava/util/List;
 
+    .line 5
     new-instance v0, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;
 
     invoke-direct {v0}, Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;-><init>()V
 
     iput-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mChildDag:Landroidx/coordinatorlayout/widget/DirectedAcyclicGraph;
 
+    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -264,16 +270,20 @@
 
     new-array v1, v0, [I
 
+    .line 7
     iput-object v1, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mBehaviorConsumed:[I
 
     new-array v0, v0, [I
 
+    .line 8
     iput-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingV2ConsumedCompat:[I
 
     const/4 v0, 0x1
 
+    .line 9
     iput-boolean v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mEnableAutoCollapsingKeyEvent:Z
 
+    .line 10
     new-instance v1, Landroidx/core/view/NestedScrollingParentHelper;
 
     invoke-direct {v1, p0}, Landroidx/core/view/NestedScrollingParentHelper;-><init>(Landroid/view/ViewGroup;)V
@@ -284,6 +294,7 @@
 
     if-nez p3, :cond_0
 
+    .line 11
     sget-object v2, Landroidx/coordinatorlayout/R$styleable;->CoordinatorLayout:[I
 
     sget v3, Landroidx/coordinatorlayout/R$style;->Widget_Support_CoordinatorLayout:I
@@ -294,6 +305,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_0
     sget-object v2, Landroidx/coordinatorlayout/R$styleable;->CoordinatorLayout:[I
 
@@ -304,6 +316,7 @@
     :goto_0
     if-nez p3, :cond_1
 
+    .line 13
     sget-object v5, Landroidx/coordinatorlayout/R$styleable;->CoordinatorLayout:[I
 
     const/4 v8, 0x0
@@ -322,6 +335,7 @@
 
     goto :goto_1
 
+    .line 14
     :cond_1
     sget-object v5, Landroidx/coordinatorlayout/R$styleable;->CoordinatorLayout:[I
 
@@ -339,6 +353,7 @@
 
     invoke-static/range {v3 .. v9}, Landroidx/core/view/ViewCompat;->saveAttributeDataForStyleable(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
+    .line 15
     :goto_1
     sget p2, Landroidx/coordinatorlayout/R$styleable;->CoordinatorLayout_keylines:I
 
@@ -348,22 +363,26 @@
 
     if-eqz p2, :cond_2
 
+    .line 16
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
+    .line 17
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getIntArray(I)[I
 
     move-result-object p2
 
     iput-object p2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mKeylines:[I
 
+    .line 18
     invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object p1
 
     iget p1, p1, Landroid/util/DisplayMetrics;->density:F
 
+    .line 19
     iget-object p2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mKeylines:[I
 
     array-length p2, p2
@@ -371,6 +390,7 @@
     :goto_2
     if-ge v1, p2, :cond_2
 
+    .line 20
     iget-object p3, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mKeylines:[I
 
     aget v3, p3, v1
@@ -387,6 +407,7 @@
 
     goto :goto_2
 
+    .line 21
     :cond_2
     sget p1, Landroidx/coordinatorlayout/R$styleable;->CoordinatorLayout_statusBarBackground:I
 
@@ -396,22 +417,27 @@
 
     iput-object p1, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mStatusBarBackground:Landroid/graphics/drawable/Drawable;
 
+    .line 22
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 23
     invoke-direct {p0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->setupForInsets()V
 
+    .line 24
     new-instance p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$HierarchyChangeListener;
 
     invoke-direct {p1, p0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$HierarchyChangeListener;-><init>(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)V
 
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
 
+    .line 25
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->getImportantForAccessibility(Landroid/view/View;)I
 
     move-result p1
 
     if-nez p1, :cond_3
 
+    .line 26
     invoke-static {p0, v0}, Landroidx/core/view/ViewCompat;->setImportantForAccessibility(Landroid/view/View;I)V
 
     :cond_3
@@ -3037,6 +3063,7 @@
 .method public bridge synthetic generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->generateDefaultLayoutParams()Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
 
     move-result-object p0
@@ -3047,6 +3074,7 @@
 .method public generateDefaultLayoutParams()Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
     .locals 1
 
+    .line 2
     new-instance p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
 
     const/4 v0, -0x2
@@ -3059,6 +3087,7 @@
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->generateLayoutParams(Landroid/util/AttributeSet;)Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
 
     move-result-object p0
@@ -3069,6 +3098,7 @@
 .method public bridge synthetic generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
 
     move-result-object p0
@@ -3079,6 +3109,7 @@
 .method public generateLayoutParams(Landroid/util/AttributeSet;)Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
     .locals 1
 
+    .line 3
     new-instance v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -3093,10 +3124,12 @@
 .method public generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
     .locals 0
 
+    .line 4
     instance-of p0, p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
 
     if-eqz p0, :cond_0
 
+    .line 5
     new-instance p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
 
     check-cast p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
@@ -3105,11 +3138,13 @@
 
     return-object p0
 
+    .line 6
     :cond_0
     instance-of p0, p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
     if-eqz p0, :cond_1
 
+    .line 7
     new-instance p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
@@ -3118,6 +3153,7 @@
 
     return-object p0
 
+    .line 8
     :cond_1
     new-instance p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
 
@@ -4968,6 +5004,7 @@
 
     move-object v4, p4
 
+    .line 1
     invoke-virtual/range {v0 .. v5}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->onNestedPreScroll(Landroid/view/View;II[II)V
 
     return-void
@@ -4978,6 +5015,7 @@
 
     move-object/from16 v8, p0
 
+    .line 2
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v9
@@ -4997,10 +5035,12 @@
 
     if-ge v11, v9, :cond_5
 
+    .line 3
     invoke-virtual {v8, v11}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
+    .line 4
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v1
@@ -5013,6 +5053,7 @@
 
     goto :goto_3
 
+    .line 5
     :cond_0
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -5022,6 +5063,7 @@
 
     move/from16 v15, p5
 
+    .line 6
     invoke-virtual {v1, v15}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->isNestedScrollAccepted(I)Z
 
     move-result v3
@@ -5030,6 +5072,7 @@
 
     goto :goto_3
 
+    .line 7
     :cond_1
     invoke-virtual {v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
 
@@ -5037,10 +5080,12 @@
 
     if-eqz v1, :cond_4
 
+    .line 8
     iget-object v6, v8, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mBehaviorConsumed:[I
 
     aput v10, v6, v10
 
+    .line 9
     aput v10, v6, v14
 
     move-object v0, v1
@@ -5055,10 +5100,12 @@
 
     move/from16 v7, p5
 
+    .line 10
     invoke-virtual/range {v0 .. v7}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;->onNestedPreScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[II)V
 
     if-lez p2, :cond_2
 
+    .line 11
     iget-object v0, v8, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mBehaviorConsumed:[I
 
     aget v0, v0, v10
@@ -5069,6 +5116,7 @@
 
     goto :goto_1
 
+    .line 12
     :cond_2
     iget-object v0, v8, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mBehaviorConsumed:[I
 
@@ -5083,6 +5131,7 @@
 
     if-lez p3, :cond_3
 
+    .line 13
     iget-object v0, v8, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mBehaviorConsumed:[I
 
     aget v0, v0, v14
@@ -5093,6 +5142,7 @@
 
     goto :goto_2
 
+    .line 14
     :cond_3
     iget-object v0, v8, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mBehaviorConsumed:[I
 
@@ -5113,13 +5163,16 @@
 
     goto :goto_0
 
+    .line 15
     :cond_5
     aput v12, p4, v10
 
+    .line 16
     aput v13, p4, v14
 
     if-eqz v0, :cond_6
 
+    .line 17
     invoke-virtual {v8, v14}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->onChildViewsChanged(I)V
 
     :cond_6
@@ -5143,6 +5196,7 @@
 
     move v5, p5
 
+    .line 1
     invoke-virtual/range {v0 .. v6}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->onNestedScroll(Landroid/view/View;IIIII)V
 
     return-void
@@ -5153,6 +5207,7 @@
 
     const/4 v6, 0x0
 
+    .line 2
     iget-object v7, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingV2ConsumedCompat:[I
 
     move-object v0, p0
@@ -5177,6 +5232,7 @@
 
     move-object/from16 v10, p0
 
+    .line 3
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v11
@@ -5196,10 +5252,12 @@
 
     if-ge v13, v11, :cond_5
 
+    .line 4
     invoke-virtual {v10, v13}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v1
@@ -5210,6 +5268,7 @@
 
     goto :goto_3
 
+    .line 6
     :cond_0
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -5219,6 +5278,7 @@
 
     move/from16 v8, p6
 
+    .line 7
     invoke-virtual {v1, v8}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->isNestedScrollAccepted(I)Z
 
     move-result v3
@@ -5227,6 +5287,7 @@
 
     goto :goto_3
 
+    .line 8
     :cond_1
     invoke-virtual {v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
 
@@ -5234,10 +5295,12 @@
 
     if-eqz v1, :cond_4
 
+    .line 9
     iget-object v7, v10, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mBehaviorConsumed:[I
 
     aput v12, v7, v12
 
+    .line 10
     aput v12, v7, v9
 
     move-object v0, v1
@@ -5260,10 +5323,12 @@
 
     move-object/from16 v9, v16
 
+    .line 11
     invoke-virtual/range {v0 .. v9}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;->onNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIIII[I)V
 
     if-lez p4, :cond_2
 
+    .line 12
     iget-object v0, v10, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mBehaviorConsumed:[I
 
     aget v0, v0, v12
@@ -5274,6 +5339,7 @@
 
     goto :goto_1
 
+    .line 13
     :cond_2
     iget-object v0, v10, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mBehaviorConsumed:[I
 
@@ -5288,6 +5354,7 @@
 
     if-lez p5, :cond_3
 
+    .line 14
     iget-object v0, v10, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mBehaviorConsumed:[I
 
     const/4 v1, 0x1
@@ -5303,6 +5370,7 @@
     :cond_3
     const/4 v1, 0x1
 
+    .line 15
     iget-object v0, v10, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mBehaviorConsumed:[I
 
     aget v0, v0, v1
@@ -5325,12 +5393,14 @@
     :cond_5
     move v1, v9
 
+    .line 16
     aget v2, p7, v12
 
     add-int/2addr v2, v14
 
     aput v2, p7, v12
 
+    .line 17
     aget v2, p7, v1
 
     add-int/2addr v2, v15
@@ -5339,6 +5409,7 @@
 
     if-eqz v0, :cond_6
 
+    .line 18
     invoke-virtual {v10, v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->onChildViewsChanged(I)V
 
     :cond_6
@@ -5350,6 +5421,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;II)V
 
     return-void
@@ -5358,14 +5430,18 @@
 .method public onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;II)V
     .locals 9
 
+    .line 2
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingParentHelper:Landroidx/core/view/NestedScrollingParentHelper;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroidx/core/view/NestedScrollingParentHelper;->onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;II)V
 
+    .line 3
     iput-object p2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingTarget:Landroid/view/View;
 
+    .line 4
     iput-object p2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastNestedScrollingChild:Landroid/view/View;
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -5375,16 +5451,19 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
+    .line 6
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
+    .line 7
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
 
+    .line 8
     invoke-virtual {v2, p4}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->isNestedScrollAccepted(I)Z
 
     move-result v3
@@ -5393,6 +5472,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_0
     invoke-virtual {v2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
 
@@ -5410,6 +5490,7 @@
 
     move v8, p4
 
+    .line 10
     invoke-virtual/range {v2 .. v8}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;->onNestedScrollAccepted(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)V
 
     :cond_1
@@ -5566,6 +5647,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->onStartNestedScroll(Landroid/view/View;Landroid/view/View;II)Z
 
     move-result p0
@@ -5578,6 +5660,7 @@
 
     move/from16 v7, p4
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v8
@@ -5593,10 +5676,12 @@
 
     move-object v12, p0
 
+    .line 3
     invoke-virtual {p0, v10}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
+    .line 4
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -5607,6 +5692,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_0
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -5616,6 +5702,7 @@
 
     check-cast v13, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
 
+    .line 6
     invoke-virtual {v13}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
 
     move-result-object v0
@@ -5632,16 +5719,19 @@
 
     move/from16 v6, p4
 
+    .line 7
     invoke-virtual/range {v0 .. v6}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;->onStartNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
 
     move-result v0
 
     or-int/2addr v11, v0
 
+    .line 8
     invoke-virtual {v13, v7, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->setNestedScrollAccepted(IZ)V
 
     goto :goto_1
 
+    .line 9
     :cond_1
     invoke-virtual {v13, v7, v9}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->setNestedScrollAccepted(IZ)V
 
@@ -5659,6 +5749,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->onStopNestedScroll(Landroid/view/View;I)V
 
     return-void
@@ -5667,12 +5758,15 @@
 .method public onStopNestedScroll(Landroid/view/View;I)V
     .locals 5
 
+    .line 2
     iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingParentHelper:Landroidx/core/view/NestedScrollingParentHelper;
 
     invoke-virtual {v0, p1, p2}, Landroidx/core/view/NestedScrollingParentHelper;->onStopNestedScroll(Landroid/view/View;I)V
 
+    .line 3
     iput-object p1, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastNestedScrollingChild:Landroid/view/View;
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -5682,16 +5776,19 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
+    .line 5
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
+    .line 6
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
     check-cast v3, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;
 
+    .line 7
     invoke-virtual {v3, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->isNestedScrollAccepted(I)Z
 
     move-result v4
@@ -5700,6 +5797,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_0
     invoke-virtual {v3}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;
 
@@ -5707,11 +5805,14 @@
 
     if-eqz v4, :cond_1
 
+    .line 9
     invoke-virtual {v4, p0, v2, p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior;->onStopNestedScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;I)V
 
+    .line 10
     :cond_1
     invoke-virtual {v3, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->resetNestedScroll(I)V
 
+    .line 11
     invoke-virtual {v3}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$LayoutParams;->resetChangedAfterNestedScroll()V
 
     :goto_1
@@ -5722,6 +5823,7 @@
     :cond_2
     const/4 p1, 0x0
 
+    .line 12
     iput-object p1, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingTarget:Landroid/view/View;
 
     return-void

@@ -17,12 +17,15 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 5
     iput v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomDefaultValue;->mZoomValue:I
 
+    .line 6
     iput v0, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomDefaultValue;->mLensType:I
 
     return-void
@@ -31,10 +34,13 @@
 .method public constructor <init>(II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomDefaultValue;->mZoomValue:I
 
+    .line 3
     iput p2, p0, Lcom/sec/android/app/camera/layer/keyscreen/zoom/data/ZoomDefaultValue;->mLensType:I
 
     return-void

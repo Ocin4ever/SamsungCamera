@@ -2018,6 +2018,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainConfiguration;->nodeChainConfigurationMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -2032,6 +2033,7 @@
 
     invoke-direct {v0}, Lcom/samsung/android/camera/core2/processor/nodeController/g;-><init>()V
 
+    .line 2
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -2040,14 +2042,17 @@
 
     invoke-direct {v0}, Lcom/samsung/android/camera/core2/processor/nodeController/h;-><init>()V
 
+    .line 3
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
+    .line 4
     invoke-interface {p0}, Ljava/util/stream/Stream;->distinct()Ljava/util/stream/Stream;
 
     move-result-object p0
 
+    .line 5
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v0
@@ -2078,6 +2083,7 @@
         }
     .end annotation
 
+    .line 6
     iget-object p0, p0, Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainConfiguration;->nodeChainConfigurationMap:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/samsung/android/camera/core2/node/NodeChain$Key;->getUsage()Lcom/samsung/android/camera/core2/processor/nodeController/NodeChainKeyContainer$Usage;
@@ -2098,10 +2104,12 @@
 
     invoke-direct {v0, p1}, Lcom/samsung/android/camera/core2/processor/nodeController/i;-><init>(Lcom/samsung/android/camera/core2/node/NodeChain$Key;)V
 
+    .line 7
     invoke-virtual {p0, v0}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object p0
 
+    .line 8
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1

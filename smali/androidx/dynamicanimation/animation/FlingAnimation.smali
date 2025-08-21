@@ -27,14 +27,17 @@
 .method public constructor <init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;-><init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
 
+    .line 2
     new-instance p1, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
 
     invoke-direct {p1}, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;-><init>()V
 
     iput-object p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
 
+    .line 3
     invoke-virtual {p0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->getValueThreshold()F
 
     move-result p0
@@ -56,14 +59,17 @@
         }
     .end annotation
 
+    .line 4
     invoke-direct {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
 
+    .line 5
     new-instance p1, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
 
     invoke-direct {p1}, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;-><init>()V
 
     iput-object p1, p0, Landroidx/dynamicanimation/animation/FlingAnimation;->mFlingForce:Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
 
+    .line 6
     invoke-virtual {p0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->getValueThreshold()F
 
     move-result p0
@@ -165,6 +171,7 @@
 .method public bridge synthetic setMaxValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/FlingAnimation;->setMaxValue(F)Landroidx/dynamicanimation/animation/FlingAnimation;
 
     move-result-object p0
@@ -175,6 +182,7 @@
 .method public setMaxValue(F)Landroidx/dynamicanimation/animation/FlingAnimation;
     .locals 0
 
+    .line 2
     invoke-super {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setMaxValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     return-object p0
@@ -183,6 +191,7 @@
 .method public bridge synthetic setMinValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/FlingAnimation;->setMinValue(F)Landroidx/dynamicanimation/animation/FlingAnimation;
 
     move-result-object p0
@@ -193,6 +202,7 @@
 .method public setMinValue(F)Landroidx/dynamicanimation/animation/FlingAnimation;
     .locals 0
 
+    .line 2
     invoke-super {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setMinValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     return-object p0
@@ -201,6 +211,7 @@
 .method public bridge synthetic setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/FlingAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/FlingAnimation;
 
     move-result-object p0
@@ -211,6 +222,7 @@
 .method public setStartVelocity(F)Landroidx/dynamicanimation/animation/FlingAnimation;
     .locals 0
 
+    .line 2
     invoke-super {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     return-object p0

@@ -43,6 +43,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lm/l0;-><init>(Ljava/util/concurrent/Callable;Z)V
 
     return-void
@@ -51,8 +52,10 @@
 .method public constructor <init>(Ljava/util/concurrent/Callable;Z)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Ljava/util/LinkedHashSet;
 
     const/4 v1, 0x1
@@ -61,12 +64,14 @@
 
     iput-object v0, p0, Lm/l0;->a:Ljava/util/Set;
 
+    .line 4
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0, v1}, Ljava/util/LinkedHashSet;-><init>(I)V
 
     iput-object v0, p0, Lm/l0;->b:Ljava/util/Set;
 
+    .line 5
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -79,10 +84,12 @@
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lm/l0;->d:Lm/j0;
 
     if-eqz p2, :cond_0
 
+    .line 7
     :try_start_0
     invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
@@ -99,6 +106,7 @@
     :catchall_0
     move-exception p1
 
+    .line 8
     new-instance p2, Lm/j0;
 
     invoke-direct {p2, p1}, Lm/j0;-><init>(Ljava/lang/Throwable;)V
@@ -107,6 +115,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_0
     sget-object p2, Lm/l0;->e:Ljava/util/concurrent/Executor;
 

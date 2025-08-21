@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static DEBUG:Z
+.field static DEBUG:Z = false
 
 
 # instance fields
@@ -471,6 +471,7 @@
 .method public static parse(Ljava/lang/String;)Landroidx/constraintlayout/core/parser/CLObject;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/parser/CLParser;
 
     invoke-direct {v0, p0}, Landroidx/constraintlayout/core/parser/CLParser;-><init>(Ljava/lang/String;)V
@@ -489,16 +490,19 @@
 
     move-object/from16 v0, p0
 
+    .line 2
     iget-object v1, v0, Landroidx/constraintlayout/core/parser/CLParser;->mContent:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v1
 
+    .line 3
     array-length v2, v1
 
     const/4 v3, 0x1
 
+    .line 4
     iput v3, v0, Landroidx/constraintlayout/core/parser/CLParser;->lineNumber:I
 
     const/4 v4, 0x0
@@ -512,6 +516,7 @@
 
     if-ge v5, v2, :cond_2
 
+    .line 5
     aget-char v8, v1, v5
 
     const/16 v9, 0x7b
@@ -523,6 +528,7 @@
     :cond_0
     if-ne v8, v6, :cond_1
 
+    .line 6
     iget v6, v0, Landroidx/constraintlayout/core/parser/CLParser;->lineNumber:I
 
     add-int/2addr v6, v3
@@ -540,16 +546,19 @@
     :goto_1
     if-eq v5, v7, :cond_1a
 
+    .line 7
     invoke-static {v1}, Landroidx/constraintlayout/core/parser/CLObject;->allocate([C)Landroidx/constraintlayout/core/parser/CLObject;
 
     move-result-object v7
 
+    .line 8
     iget v8, v0, Landroidx/constraintlayout/core/parser/CLParser;->lineNumber:I
 
     invoke-virtual {v7, v8}, Landroidx/constraintlayout/core/parser/CLElement;->setLine(I)V
 
     int-to-long v8, v5
 
+    .line 9
     invoke-virtual {v7, v8, v9}, Landroidx/constraintlayout/core/parser/CLElement;->setStart(J)V
 
     add-int/2addr v5, v3
@@ -559,16 +568,19 @@
     :goto_2
     if-ge v5, v2, :cond_16
 
+    .line 10
     aget-char v9, v1, v5
 
     if-ne v9, v6, :cond_3
 
+    .line 11
     iget v10, v0, Landroidx/constraintlayout/core/parser/CLParser;->lineNumber:I
 
     add-int/2addr v10, v3
 
     iput v10, v0, Landroidx/constraintlayout/core/parser/CLParser;->lineNumber:I
 
+    .line 12
     :cond_3
     iget-boolean v10, v0, Landroidx/constraintlayout/core/parser/CLParser;->hasComment:Z
 
@@ -576,6 +588,7 @@
 
     if-ne v9, v6, :cond_15
 
+    .line 13
     iput-boolean v4, v0, Landroidx/constraintlayout/core/parser/CLParser;->hasComment:Z
 
     :cond_4
@@ -583,6 +596,7 @@
 
     goto/16 :goto_5
 
+    .line 14
     :cond_5
     invoke-virtual {v8}, Landroidx/constraintlayout/core/parser/CLElement;->isDone()Z
 
@@ -590,12 +604,14 @@
 
     if-eqz v10, :cond_6
 
+    .line 15
     invoke-direct {v0, v5, v9, v8, v1}, Landroidx/constraintlayout/core/parser/CLParser;->getNextJsonElement(ICLandroidx/constraintlayout/core/parser/CLElement;[C)Landroidx/constraintlayout/core/parser/CLElement;
 
     move-result-object v8
 
     goto/16 :goto_4
 
+    .line 16
     :cond_6
     instance-of v10, v8, Landroidx/constraintlayout/core/parser/CLObject;
 
@@ -609,10 +625,12 @@
 
     int-to-long v9, v9
 
+    .line 17
     invoke-virtual {v8, v9, v10}, Landroidx/constraintlayout/core/parser/CLElement;->setEnd(J)V
 
     goto/16 :goto_4
 
+    .line 18
     :cond_7
     invoke-direct {v0, v5, v9, v8, v1}, Landroidx/constraintlayout/core/parser/CLParser;->getNextJsonElement(ICLandroidx/constraintlayout/core/parser/CLElement;[C)Landroidx/constraintlayout/core/parser/CLElement;
 
@@ -620,6 +638,7 @@
 
     goto/16 :goto_4
 
+    .line 19
     :cond_8
     instance-of v10, v8, Landroidx/constraintlayout/core/parser/CLArray;
 
@@ -633,10 +652,12 @@
 
     int-to-long v9, v9
 
+    .line 20
     invoke-virtual {v8, v9, v10}, Landroidx/constraintlayout/core/parser/CLElement;->setEnd(J)V
 
     goto/16 :goto_4
 
+    .line 21
     :cond_9
     invoke-direct {v0, v5, v9, v8, v1}, Landroidx/constraintlayout/core/parser/CLParser;->getNextJsonElement(ICLandroidx/constraintlayout/core/parser/CLElement;[C)Landroidx/constraintlayout/core/parser/CLElement;
 
@@ -644,6 +665,7 @@
 
     goto/16 :goto_4
 
+    .line 22
     :cond_a
     instance-of v10, v8, Landroidx/constraintlayout/core/parser/CLString;
 
@@ -651,6 +673,7 @@
 
     if-eqz v10, :cond_b
 
+    .line 23
     iget-wide v10, v8, Landroidx/constraintlayout/core/parser/CLElement;->start:J
 
     long-to-int v12, v10
@@ -661,27 +684,32 @@
 
     add-long/2addr v10, v13
 
+    .line 24
     invoke-virtual {v8, v10, v11}, Landroidx/constraintlayout/core/parser/CLElement;->setStart(J)V
 
     add-int/lit8 v9, v5, -0x1
 
     int-to-long v9, v9
 
+    .line 25
     invoke-virtual {v8, v9, v10}, Landroidx/constraintlayout/core/parser/CLElement;->setEnd(J)V
 
     goto/16 :goto_4
 
+    .line 26
     :cond_b
     instance-of v15, v8, Landroidx/constraintlayout/core/parser/CLToken;
 
     if-eqz v15, :cond_d
 
+    .line 27
     move-object v15, v8
 
     check-cast v15, Landroidx/constraintlayout/core/parser/CLToken;
 
     int-to-long v3, v5
 
+    .line 28
     invoke-virtual {v15, v9, v3, v4}, Landroidx/constraintlayout/core/parser/CLToken;->validate(CJ)Z
 
     move-result v3
@@ -690,6 +718,7 @@
 
     goto :goto_3
 
+    .line 29
     :cond_c
     new-instance v1, Landroidx/constraintlayout/core/parser/CLParsingException;
 
@@ -723,6 +752,7 @@
 
     throw v1
 
+    .line 30
     :cond_d
     :goto_3
     instance-of v3, v8, Landroidx/constraintlayout/core/parser/CLKey;
@@ -731,6 +761,7 @@
 
     if-eqz v10, :cond_10
 
+    .line 31
     :cond_e
     iget-wide v3, v8, Landroidx/constraintlayout/core/parser/CLElement;->start:J
 
@@ -751,14 +782,17 @@
 
     add-long/2addr v3, v13
 
+    .line 32
     invoke-virtual {v8, v3, v4}, Landroidx/constraintlayout/core/parser/CLElement;->setStart(J)V
 
     add-int/lit8 v3, v5, -0x1
 
     int-to-long v3, v3
 
+    .line 33
     invoke-virtual {v8, v3, v4}, Landroidx/constraintlayout/core/parser/CLElement;->setEnd(J)V
 
+    .line 34
     :cond_10
     invoke-virtual {v8}, Landroidx/constraintlayout/core/parser/CLElement;->isDone()Z
 
@@ -797,29 +831,36 @@
 
     int-to-long v3, v3
 
+    .line 35
     invoke-virtual {v8, v3, v4}, Landroidx/constraintlayout/core/parser/CLElement;->setEnd(J)V
 
     if-eq v9, v11, :cond_12
 
     if-ne v9, v12, :cond_13
 
+    .line 36
     :cond_12
     invoke-virtual {v8}, Landroidx/constraintlayout/core/parser/CLElement;->getContainer()Landroidx/constraintlayout/core/parser/CLElement;
 
     move-result-object v8
 
+    .line 37
     invoke-virtual {v8, v3, v4}, Landroidx/constraintlayout/core/parser/CLElement;->setEnd(J)V
 
+    .line 38
     instance-of v9, v8, Landroidx/constraintlayout/core/parser/CLKey;
 
     if-eqz v9, :cond_13
 
+    .line 39
     invoke-virtual {v8}, Landroidx/constraintlayout/core/parser/CLElement;->getContainer()Landroidx/constraintlayout/core/parser/CLElement;
 
     move-result-object v8
 
+    .line 40
     invoke-virtual {v8, v3, v4}, Landroidx/constraintlayout/core/parser/CLElement;->setEnd(J)V
 
+    .line 41
     :cond_13
     :goto_4
     invoke-virtual {v8}, Landroidx/constraintlayout/core/parser/CLElement;->isDone()Z
@@ -844,6 +885,7 @@
 
     if-lez v3, :cond_15
 
+    .line 42
     :cond_14
     invoke-virtual {v8}, Landroidx/constraintlayout/core/parser/CLElement;->getContainer()Landroidx/constraintlayout/core/parser/CLElement;
 
@@ -862,16 +904,19 @@
     :goto_5
     if-eqz v8, :cond_18
 
+    .line 43
     invoke-virtual {v8}, Landroidx/constraintlayout/core/parser/CLElement;->isDone()Z
 
     move-result v0
 
     if-nez v0, :cond_18
 
+    .line 44
     instance-of v0, v8, Landroidx/constraintlayout/core/parser/CLString;
 
     if-eqz v0, :cond_17
 
+    .line 45
     iget-wide v0, v8, Landroidx/constraintlayout/core/parser/CLElement;->start:J
 
     long-to-int v0, v0
@@ -894,19 +939,23 @@
 
     int-to-long v3, v0
 
+    .line 46
     invoke-virtual {v8, v3, v4}, Landroidx/constraintlayout/core/parser/CLElement;->setEnd(J)V
 
+    .line 47
     invoke-virtual {v8}, Landroidx/constraintlayout/core/parser/CLElement;->getContainer()Landroidx/constraintlayout/core/parser/CLElement;
 
     move-result-object v8
 
     goto :goto_5
 
+    .line 48
     :cond_18
     sget-boolean v0, Landroidx/constraintlayout/core/parser/CLParser;->DEBUG:Z
 
     if-eqz v0, :cond_19
 
+    .line 49
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -932,6 +981,7 @@
     :cond_19
     return-object v7
 
+    .line 50
     :cond_1a
     new-instance v0, Landroidx/constraintlayout/core/parser/CLParsingException;
 

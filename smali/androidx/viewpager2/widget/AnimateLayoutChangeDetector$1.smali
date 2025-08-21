@@ -45,6 +45,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, [I
 
     check-cast p2, [I
@@ -61,6 +62,7 @@
 
     const/4 p0, 0x0
 
+    .line 2
     aget p1, p1, p0
 
     aget p0, p2, p0

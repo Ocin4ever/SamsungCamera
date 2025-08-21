@@ -66,10 +66,12 @@
 
     if-nez p1, :cond_0
 
+    .line 3
     sget-object p0, Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;->NONE:Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance v0, Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;
 
@@ -89,10 +91,12 @@
 
     if-nez p3, :cond_0
 
+    .line 1
     sget-object p0, Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;->NONE:Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;
 
@@ -106,6 +110,7 @@
 
     if-nez p0, :cond_0
 
+    .line 5
     sget-object p0, Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;->NONE:Landroidx/core/view/SeslTouchTargetDelegate$ExtraInsets;
 
     goto :goto_0

@@ -312,12 +312,15 @@
 
     if-nez p1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker;->reset()V
 
+    .line 5
     sget-object p0, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker$AutoScanState;->IDLE:Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker$AutoScanState;
 
     return-object p0
 
+    .line 6
     :cond_0
     invoke-direct {p0, p2}, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker;->isAutoScannablePositionAndSize([F)Z
 
@@ -335,6 +338,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
 
@@ -354,17 +358,21 @@
 
     if-ltz p1, :cond_2
 
+    .line 8
     invoke-virtual {p0}, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker;->reset()V
 
+    .line 9
     sget-object p0, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker$AutoScanState;->TIMER_EXPIRED:Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker$AutoScanState;
 
     return-object p0
 
+    .line 10
     :cond_2
     sget-object p0, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker$AutoScanState;->TIMER_RUNNING:Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker$AutoScanState;
 
     return-object p0
 
+    .line 11
     :cond_3
     :goto_0
     invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
@@ -377,6 +385,7 @@
 
     iput-wide v0, p0, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker;->mStartAutoScanTimeStamp:J
 
+    .line 12
     iget-object p0, p0, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker;->mStartAutoScanResult:[F
 
     array-length p1, p2
@@ -385,6 +394,7 @@
 
     invoke-static {p2, v0, p0, v0, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 13
     sget-object p0, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker$AutoScanState;->IDLE:Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker$AutoScanState;
 
     return-object p0
@@ -393,12 +403,15 @@
 .method public getAutoScanState(Z[FLandroid/graphics/Matrix;)Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker$AutoScanState;
     .locals 1
 
+    .line 1
     array-length v0, p2
 
     new-array v0, v0, [F
 
+    .line 2
     invoke-virtual {p3, v0, p2}, Landroid/graphics/Matrix;->mapPoints([F[F)V
 
+    .line 3
     invoke-virtual {p0, p1, v0}, Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker;->getAutoScanState(Z[F)Lcom/sec/android/app/camera/shootingmode/photo/intelligentui/AutoScanConditionChecker$AutoScanState;
 
     move-result-object p0

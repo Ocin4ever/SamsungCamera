@@ -155,6 +155,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
+    .line 1
     sget v0, Ly0/a;->a:I
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/material/appbar/AppBarLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -165,6 +166,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 10
 
+    .line 2
     sget v4, Lcom/google/android/material/appbar/AppBarLayout;->d0:I
 
     invoke-static {p1, p2, p3, v4}, Lx1/a;->c(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
@@ -175,66 +177,91 @@
 
     const/4 p1, -0x1
 
+    .line 3
     iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->b:I
 
+    .line 4
     iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->c:I
 
+    .line 5
     iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->d:I
 
     const/4 v6, 0x0
 
+    .line 6
     iput v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->f:I
 
+    .line 7
     iput-boolean v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->k:Z
 
+    .line 8
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->p:Ljava/util/List;
 
+    .line 9
     iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->v:I
 
+    .line 10
     iput v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->E:I
 
+    .line 11
     iput-boolean v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->F:Z
 
+    .line 12
     iput-boolean v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->I:Z
 
+    .line 13
     iput-boolean v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->K:Z
 
+    .line 14
     iput-boolean v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->L:Z
 
+    .line 15
     iput-boolean v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->M:Z
 
+    .line 16
     iput-boolean v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->N:Z
 
+    .line 17
     iput-boolean v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->O:Z
 
+    .line 18
     iput-boolean v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->P:Z
 
+    .line 19
     iput-boolean v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->Q:Z
 
+    .line 20
     iput v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->V:I
 
+    .line 21
     iput v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->W:I
 
     const/4 v7, 0x0
 
+    .line 22
     iput-object v7, p0, Lcom/google/android/material/appbar/AppBarLayout;->a0:Landroidx/core/graphics/Insets;
 
+    .line 23
     iput-object v7, p0, Lcom/google/android/material/appbar/AppBarLayout;->b0:Landroidx/core/graphics/Insets;
 
+    .line 24
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v8
 
     const/4 v9, 0x1
 
+    .line 25
     invoke-virtual {p0, v9}, Lcom/google/android/material/appbar/AppBarLayout;->setOrientation(I)V
 
+    .line 26
     invoke-static {p0, p2, p3, v4}, La1/e;->b(Landroid/view/View;Landroid/util/AttributeSet;II)V
 
+    .line 27
     sget-object v2, Ly0/l;->a:[I
 
     new-array v5, v6, [I
@@ -245,26 +272,31 @@
 
     move v3, p3
 
+    .line 28
     invoke-static/range {v0 .. v5}, Lm1/q;->i(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
+    .line 29
     new-instance p3, Lcom/google/android/material/appbar/AppBarLayout$h;
 
     invoke-direct {p3}, Lcom/google/android/material/appbar/AppBarLayout$h;-><init>()V
 
     iput-object p3, p0, Lcom/google/android/material/appbar/AppBarLayout;->J:Lcom/google/android/material/appbar/AppBarLayout$h;
 
+    .line 30
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
     iput-object p3, p0, Lcom/google/android/material/appbar/AppBarLayout;->G:Landroid/content/res/Resources;
 
+    .line 31
     invoke-static {v8}, Landroidx/appcompat/util/SeslMisc;->isLightTheme(Landroid/content/Context;)Z
 
     move-result p3
 
+    .line 32
     sget v0, Ly0/l;->b:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -273,30 +305,37 @@
 
     if-eqz v1, :cond_0
 
+    .line 33
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p3
 
     iput-object p3, p0, Lcom/google/android/material/appbar/AppBarLayout;->D:Landroid/graphics/drawable/Drawable;
 
+    .line 34
     invoke-static {p0, p3}, Landroidx/core/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_1
 
+    .line 35
     :cond_0
     iput-object v7, p0, Lcom/google/android/material/appbar/AppBarLayout;->D:Landroid/graphics/drawable/Drawable;
 
+    .line 36
     iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->G:Landroid/content/res/Resources;
 
     if-eqz p3, :cond_1
 
+    .line 37
     sget p3, Landroidx/appcompat/R$color;->sesl_action_bar_background_color_light:I
 
     goto :goto_0
 
+    .line 38
     :cond_1
     sget p3, Landroidx/appcompat/R$color;->sesl_action_bar_background_color_dark:I
 
+    .line 39
     :goto_0
     invoke-virtual {v0, p3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -304,6 +343,7 @@
 
     invoke-virtual {p0, p3}, Landroid/view/View;->setBackgroundColor(I)V
 
+    .line 40
     :goto_1
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -313,16 +353,19 @@
 
     if-eqz p3, :cond_2
 
+    .line 41
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p3
 
     check-cast p3, Landroid/graphics/drawable/ColorDrawable;
 
+    .line 42
     new-instance v0, Lt1/g;
 
     invoke-direct {v0}, Lt1/g;-><init>()V
 
+    .line 43
     invoke-virtual {p3}, Landroid/graphics/drawable/ColorDrawable;->getColor()I
 
     move-result p3
@@ -333,10 +376,13 @@
 
     invoke-virtual {v0, p3}, Lt1/g;->W(Landroid/content/res/ColorStateList;)V
 
+    .line 44
     invoke-virtual {v0, v8}, Lt1/g;->L(Landroid/content/Context;)V
 
+    .line 45
     invoke-static {p0, v0}, Landroidx/core/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
+    .line 46
     :cond_2
     sget p3, Ly0/l;->g:I
 
@@ -346,12 +392,15 @@
 
     if-eqz v0, :cond_3
 
+    .line 47
     invoke-virtual {p2, p3, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p3
 
+    .line 48
     invoke-virtual {p0, p3, v6, v6}, Lcom/google/android/material/appbar/AppBarLayout;->O(ZZZ)V
 
+    .line 49
     :cond_3
     sget p3, Ly0/l;->f:I
 
@@ -361,14 +410,17 @@
 
     if-eqz v0, :cond_4
 
+    .line 50
     invoke-virtual {p2, p3, v6}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v0
 
     int-to-float v0, v0
 
+    .line 51
     invoke-static {p0, v0}, La1/e;->a(Landroid/view/View;F)V
 
+    .line 52
     :cond_4
     sget v0, Ly0/l;->k:I
 
@@ -378,12 +430,14 @@
 
     if-eqz v1, :cond_5
 
+    .line 53
     invoke-virtual {p2, v0, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->y:Z
 
+    .line 54
     :cond_5
     sget v0, Ly0/l;->j:I
 
@@ -395,8 +449,10 @@
 
     if-eqz v1, :cond_6
 
+    .line 55
     iput-boolean v9, p0, Lcom/google/android/material/appbar/AppBarLayout;->w:Z
 
+    .line 56
     invoke-virtual {p2, v0, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v0
@@ -405,11 +461,14 @@
 
     goto :goto_2
 
+    .line 57
     :cond_6
     iput-boolean v6, p0, Lcom/google/android/material/appbar/AppBarLayout;->w:Z
 
+    .line 58
     iput v2, p0, Lcom/google/android/material/appbar/AppBarLayout;->u:F
 
+    .line 59
     :goto_2
     iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->G:Landroid/content/res/Resources;
 
@@ -421,6 +480,7 @@
 
     iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->A:F
 
+    .line 60
     sget v0, Ly0/l;->l:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -429,17 +489,20 @@
 
     if-eqz v1, :cond_7
 
+    .line 61
     invoke-virtual {p2, v0, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->z:Z
 
+    .line 62
     :cond_7
     iget-boolean v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->z:Z
 
     if-eqz v0, :cond_8
 
+    .line 63
     sget v0, Ly0/l;->c:I
 
     invoke-virtual {p2, v0, v6}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -450,6 +513,7 @@
 
     goto :goto_3
 
+    .line 64
     :cond_8
     iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->G:Landroid/content/res/Resources;
 
@@ -461,11 +525,13 @@
 
     iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->E:I
 
+    .line 65
     :goto_3
     iget v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->E:I
 
     invoke-virtual {p0, v6, v6, v6, v0}, Landroid/view/View;->setPadding(IIII)V
 
+    .line 66
     iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->G:Landroid/content/res/Resources;
 
     sget v1, Landroidx/appcompat/R$dimen;->sesl_action_bar_height_with_padding:I
@@ -482,22 +548,27 @@
 
     iput v0, p0, Lcom/google/android/material/appbar/AppBarLayout;->t:F
 
+    .line 67
     invoke-virtual {p0, v0, v6}, Lcom/google/android/material/appbar/AppBarLayout;->M(FZ)V
 
+    .line 68
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
+    .line 69
     invoke-virtual {p2, p3, v6}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p3
 
     int-to-float p3, p3
 
+    .line 70
     invoke-static {p0, p3}, La1/e;->a(Landroid/view/View;F)V
 
+    .line 71
     :cond_9
     sget p3, Ly0/l;->e:I
 
@@ -507,12 +578,15 @@
 
     if-eqz v0, :cond_a
 
+    .line 72
     invoke-virtual {p2, p3, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p3
 
+    .line 73
     invoke-virtual {p0, p3}, Landroid/view/View;->setKeyboardNavigationCluster(Z)V
 
+    .line 74
     :cond_a
     sget p3, Ly0/l;->d:I
 
@@ -522,12 +596,15 @@
 
     if-eqz v0, :cond_b
 
+    .line 75
     invoke-virtual {p2, p3, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p3
 
+    .line 76
     invoke-virtual {p0, p3}, Landroid/view/ViewGroup;->setTouchscreenBlocksFocus(Z)V
 
+    .line 77
     :cond_b
     sget p3, Ly0/l;->h:I
 
@@ -537,14 +614,17 @@
 
     iput-boolean p3, p0, Lcom/google/android/material/appbar/AppBarLayout;->l:Z
 
+    .line 78
     sget p3, Ly0/l;->i:I
 
+    .line 79
     invoke-virtual {p2, p3, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->m:I
 
+    .line 80
     sget p1, Ly0/l;->m:I
 
     invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -553,14 +633,17 @@
 
     invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->setStatusBarForeground(Landroid/graphics/drawable/Drawable;)V
 
+    .line 81
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 82
     new-instance p1, Lcom/google/android/material/appbar/AppBarLayout$a;
 
     invoke-direct {p1, p0}, Lcom/google/android/material/appbar/AppBarLayout$a;-><init>(Lcom/google/android/material/appbar/AppBarLayout;)V
 
     invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setOnApplyWindowInsetsListener(Landroid/view/View;Landroidx/core/view/OnApplyWindowInsetsListener;)V
 
+    .line 83
     iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->G:Landroid/content/res/Resources;
 
     invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
@@ -571,6 +654,7 @@
 
     iput p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->B:I
 
+    .line 84
     iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout;->G:Landroid/content/res/Resources;
 
     invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
@@ -2083,6 +2167,7 @@
 .method public bridge synthetic generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->o()Lcom/google/android/material/appbar/AppBarLayout$f;
 
     move-result-object p0
@@ -2093,6 +2178,7 @@
 .method public bridge synthetic generateDefaultLayoutParams()Landroid/widget/LinearLayout$LayoutParams;
     .locals 0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/material/appbar/AppBarLayout;->o()Lcom/google/android/material/appbar/AppBarLayout$f;
 
     move-result-object p0
@@ -2103,6 +2189,7 @@
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->p(Landroid/util/AttributeSet;)Lcom/google/android/material/appbar/AppBarLayout$f;
 
     move-result-object p0
@@ -2113,6 +2200,7 @@
 .method public bridge synthetic generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->q(Landroid/view/ViewGroup$LayoutParams;)Lcom/google/android/material/appbar/AppBarLayout$f;
 
     move-result-object p0
@@ -2123,6 +2211,7 @@
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/widget/LinearLayout$LayoutParams;
     .locals 0
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->p(Landroid/util/AttributeSet;)Lcom/google/android/material/appbar/AppBarLayout$f;
 
     move-result-object p0
@@ -2133,6 +2222,7 @@
 .method public bridge synthetic generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/widget/LinearLayout$LayoutParams;
     .locals 0
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/android/material/appbar/AppBarLayout;->q(Landroid/view/ViewGroup$LayoutParams;)Lcom/google/android/material/appbar/AppBarLayout$f;
 
     move-result-object p0

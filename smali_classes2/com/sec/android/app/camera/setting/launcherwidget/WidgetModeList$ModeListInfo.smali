@@ -26,12 +26,16 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/interfaces/CommandId;II)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/sec/android/app/camera/setting/launcherwidget/WidgetModeList$ModeListInfo;->mCommandId:Lcom/sec/android/app/camera/interfaces/CommandId;
 
+    .line 4
     iput p2, p0, Lcom/sec/android/app/camera/setting/launcherwidget/WidgetModeList$ModeListInfo;->mTitleId:I
 
+    .line 5
     iput p3, p0, Lcom/sec/android/app/camera/setting/launcherwidget/WidgetModeList$ModeListInfo;->mOrder:I
 
     return-void
@@ -40,6 +44,7 @@
 .method public synthetic constructor <init>(Lcom/sec/android/app/camera/interfaces/CommandId;IILcom/sec/android/app/camera/setting/launcherwidget/c;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/setting/launcherwidget/WidgetModeList$ModeListInfo;-><init>(Lcom/sec/android/app/camera/interfaces/CommandId;II)V
 
     return-void

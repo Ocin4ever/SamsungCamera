@@ -227,24 +227,29 @@
 
     const-string v2, "getBytesFrom : AssetFileDescriptor is null"
 
+    .line 1
     invoke-static {p0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit v0
 
     return-object v1
 
+    .line 3
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Landroid/content/res/AssetFileDescriptor;->getParcelFileDescriptor()Landroid/os/ParcelFileDescriptor;
 
     move-result-object v2
 
+    .line 4
     invoke-virtual {p0}, Landroid/content/res/AssetFileDescriptor;->getStartOffset()J
 
     move-result-wide v3
 
+    .line 5
     invoke-virtual {p0}, Landroid/content/res/AssetFileDescriptor;->getLength()J
 
     move-result-wide v5
@@ -259,10 +264,12 @@
 
     const-string v2, "getBytesFrom : UNKNOWN_LENGTH"
 
+    .line 6
     invoke-static {p0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 7
     monitor-exit v0
 
     return-object v1
@@ -270,6 +277,7 @@
     :cond_1
     long-to-int p0, v5
 
+    .line 8
     :try_start_2
     invoke-static {v2, v3, v4, p0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrDataProviderHelper;->getBytesFrom(Landroid/os/ParcelFileDescriptor;JI)[B
 
@@ -299,6 +307,7 @@
     :try_start_0
     const-string v1, "SpenOcrDataProviderHelper"
 
+    .line 9
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -321,12 +330,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 10
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 11
     :try_start_1
     new-instance v2, Ljava/io/BufferedInputStream;
 
@@ -339,6 +350,7 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
+    .line 12
     :try_start_2
     invoke-virtual {v2, p1, p2}, Ljava/io/BufferedInputStream;->skip(J)J
 
@@ -354,18 +366,21 @@
 
     const-string p2, "getBytesFrom : startoffset skip failed!"
 
+    .line 13
     invoke-static {p0, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     new-array p0, p1, [B
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 14
     :try_start_3
     invoke-virtual {v2}, Ljava/io/BufferedInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
+    .line 15
     monitor-exit v0
 
     return-object p0
@@ -376,24 +391,29 @@
     :try_start_4
     new-array p2, p0, [B
 
+    .line 16
     div-int/lit16 v3, p3, 0x2000
 
+    .line 17
     rem-int/2addr p3, p0
 
     :goto_0
     if-ge p1, v3, :cond_1
 
+    .line 18
     invoke-static {v1, v2, p2, p0}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrDataProviderHelper;->readAndWriteToBuffer(Ljava/io/OutputStream;Ljava/io/InputStream;[BI)V
 
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_0
 
+    .line 19
     :cond_1
     invoke-static {v1, v2, p2, p3}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrDataProviderHelper;->readAndWriteToBuffer(Ljava/io/OutputStream;Ljava/io/InputStream;[BI)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
+    .line 20
     :try_start_5
     invoke-virtual {v2}, Ljava/io/BufferedInputStream;->close()V
     :try_end_5
@@ -405,6 +425,7 @@
     :catchall_0
     move-exception p0
 
+    .line 21
     :try_start_6
     invoke-virtual {v2}, Ljava/io/BufferedInputStream;->close()V
     :try_end_6
@@ -427,9 +448,11 @@
     :catch_0
     move-exception p0
 
+    .line 22
     :try_start_8
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
+    .line 23
     :goto_2
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
@@ -456,11 +479,13 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     invoke-static {p0, p2, p3}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrDataProviderHelper;->getAssetFileDescriptor(Landroid/content/Context;Ljava/lang/String;Lcom/samsung/android/sdk/pen/ocr/SpenDBType;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object v1
 
+    .line 2
     invoke-static {v1}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrDataProviderHelper;->getBytesFrom(Landroid/content/res/AssetFileDescriptor;)[B
 
     move-result-object v1
@@ -490,11 +515,13 @@
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
     move-result-object p0
@@ -505,16 +532,19 @@
 
     const-string p1, "cache dir is null!"
 
+    .line 5
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p0, ""
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     monitor-exit v0
 
     return-object p0
 
+    .line 7
     :cond_0
     :try_start_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -539,16 +569,19 @@
 
     move-result-object p0
 
+    .line 8
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 9
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
+    .line 10
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
     move-result v1
@@ -559,16 +592,19 @@
 
     const-string p1, "Fail to create moire cache dir!"
 
+    .line 11
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p0, ""
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 12
     monitor-exit v0
 
     return-object p0
 
+    .line 13
     :cond_1
     :try_start_2
     sget-object v1, Lcom/samsung/android/sdk/pen/ocr/SpenDBType;->MoireDetector:Lcom/samsung/android/sdk/pen/ocr/SpenDBType;
@@ -579,6 +615,7 @@
 
     if-nez p3, :cond_2
 
+    .line 14
     new-instance p1, Ljava/io/File;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -606,12 +643,14 @@
     :cond_2
     if-eqz p1, :cond_3
 
+    .line 15
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p2
 
     if-lez p2, :cond_3
 
+    .line 16
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -631,6 +670,7 @@
     :cond_3
     const-string p1, "_moire.tflite"
 
+    .line 17
     :goto_0
     new-instance p2, Ljava/io/File;
 
@@ -638,6 +678,7 @@
 
     move-object p1, p2
 
+    .line 18
     :goto_1
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
@@ -645,6 +686,7 @@
 
     if-eqz p0, :cond_5
 
+    .line 19
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     move-result p0
@@ -655,12 +697,14 @@
 
     const-string p1, "Fail to delete existing file!"
 
+    .line 20
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p0, ""
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 21
     monitor-exit v0
 
     return-object p0
@@ -671,8 +715,10 @@
 
     const-string p2, "Success to delete existing file!"
 
+    .line 22
     invoke-static {p0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 23
     :cond_5
     invoke-static {p1, p4}, Lcom/samsung/android/sdk/pen/ocr/SpenOcrDataProviderHelper;->writeBytesToFile(Ljava/io/File;[B)Z
 
@@ -684,10 +730,12 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 24
     monitor-exit v0
 
     return-object p0
 
+    .line 25
     :cond_6
     :try_start_4
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;

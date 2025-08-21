@@ -56,6 +56,7 @@
 .method public constructor <init>()V
     .locals 13
 
+    .line 1
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -92,6 +93,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 13
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
@@ -107,6 +109,7 @@
     :cond_0
     move-object v3, v0
 
+    .line 14
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -121,6 +124,7 @@
     :cond_1
     move-object v4, v0
 
+    .line 15
     :goto_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -135,6 +139,7 @@
     :cond_2
     move-object v5, v0
 
+    .line 16
     :goto_2
     const-class v0, Landroid/net/Uri;
 
@@ -150,6 +155,7 @@
 
     check-cast v6, Landroid/net/Uri;
 
+    .line 17
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
@@ -162,6 +168,7 @@
 
     check-cast v7, Landroid/net/Uri;
 
+    .line 18
     const-class v0, Landroid/os/Bundle;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -172,6 +179,7 @@
 
     move-result-object v8
 
+    .line 19
     new-instance v9, Lorg/json/JSONObject;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -185,16 +193,19 @@
     :cond_3
     invoke-direct {v9, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
+    .line 20
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v10
 
+    .line 21
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v11
 
     move-object v2, p0
 
+    .line 22
     invoke-direct/range {v2 .. v12}, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/SuggestionData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/net/Uri;Landroid/os/Bundle;Lorg/json/JSONObject;Ljava/lang/String;J)V
 
     return-void
@@ -215,24 +226,34 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/SuggestionData;->idParam:Ljava/lang/String;
 
+    .line 4
     iput-object p2, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/SuggestionData;->titleParam:Ljava/lang/String;
 
+    .line 5
     iput-object p3, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/SuggestionData;->descriptionParam:Ljava/lang/String;
 
+    .line 6
     iput-object p4, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/SuggestionData;->iconParam:Landroid/net/Uri;
 
+    .line 7
     iput-object p5, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/SuggestionData;->backgroundParam:Landroid/net/Uri;
 
+    .line 8
     iput-object p6, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/SuggestionData;->extrasParam:Landroid/os/Bundle;
 
+    .line 9
     iput-object p7, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/SuggestionData;->structuredDataParam:Lorg/json/JSONObject;
 
+    .line 10
     iput-object p8, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/SuggestionData;->urlParam:Ljava/lang/String;
 
+    .line 11
     iput-wide p9, p0, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/SuggestionData;->creationTimeParam:J
 
     return-void
@@ -307,6 +328,7 @@
 
     const-wide/16 p9, 0x0
 
+    .line 12
     :cond_8
     invoke-direct/range {p0 .. p10}, Lcom/samsung/android/app/sdk/deepsky/contract/suggestion/SuggestionData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/net/Uri;Landroid/os/Bundle;Lorg/json/JSONObject;Ljava/lang/String;J)V
 

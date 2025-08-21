@@ -60,6 +60,7 @@
 .method public final invoke()Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$1;
     .locals 1
 
+    .line 2
     new-instance v0, Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$1;
 
     iget-object p0, p0, Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2;->this$0:Landroidx/activity/result/ActivityResultCallerLauncher;
@@ -72,6 +73,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2;->invoke()Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$1;
 
     move-result-object p0

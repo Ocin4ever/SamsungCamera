@@ -77,12 +77,14 @@
 .method public read()I
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lh7/h$a;->a:Lh7/h;
 
     iget-boolean v1, v0, Lh7/h;->c:Z
 
     if-nez v1, :cond_1
 
+    .line 2
     iget-object v1, v0, Lh7/h;->a:Lh7/a;
 
     iget-wide v2, v1, Lh7/a;->b:J
@@ -93,6 +95,7 @@
 
     if-nez v2, :cond_0
 
+    .line 3
     iget-object v0, v0, Lh7/h;->b:Lh7/l;
 
     const-wide/16 v2, 0x2000
@@ -111,6 +114,7 @@
 
     return p0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lh7/h$a;->a:Lh7/h;
 
@@ -124,6 +128,7 @@
 
     return p0
 
+    .line 5
     :cond_1
     new-instance p0, Ljava/io/IOException;
 
@@ -137,12 +142,14 @@
 .method public read([BII)I
     .locals 7
 
+    .line 6
     iget-object v0, p0, Lh7/h$a;->a:Lh7/h;
 
     iget-boolean v0, v0, Lh7/h;->c:Z
 
     if-nez v0, :cond_1
 
+    .line 7
     array-length v0, p1
 
     int-to-long v1, v0
@@ -153,6 +160,7 @@
 
     invoke-static/range {v1 .. v6}, Lh7/n;->b(JJJ)V
 
+    .line 8
     iget-object v0, p0, Lh7/h$a;->a:Lh7/h;
 
     iget-object v1, v0, Lh7/h;->a:Lh7/a;
@@ -165,6 +173,7 @@
 
     if-nez v2, :cond_0
 
+    .line 9
     iget-object v0, v0, Lh7/h;->b:Lh7/l;
 
     const-wide/16 v2, 0x2000
@@ -183,6 +192,7 @@
 
     return p0
 
+    .line 10
     :cond_0
     iget-object p0, p0, Lh7/h$a;->a:Lh7/h;
 
@@ -194,6 +204,7 @@
 
     return p0
 
+    .line 11
     :cond_1
     new-instance p0, Ljava/io/IOException;
 

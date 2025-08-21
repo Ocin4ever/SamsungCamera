@@ -55,6 +55,7 @@
 .method public call()Ljava/lang/Long;
     .locals 3
 
+    .line 2
     iget-object v0, p0, Landroidx/work/impl/model/WorkSpecDao_Impl$25;->this$0:Landroidx/work/impl/model/WorkSpecDao_Impl;
 
     invoke-static {v0}, Landroidx/work/impl/model/WorkSpecDao_Impl;->access$000(Landroidx/work/impl/model/WorkSpecDao_Impl;)Landroidx/room/RoomDatabase;
@@ -71,6 +72,7 @@
 
     move-result-object p0
 
+    .line 3
     :try_start_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -78,6 +80,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
@@ -87,6 +90,7 @@
     :cond_0
     const-wide/16 v0, 0x0
 
+    .line 5
     :goto_0
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -94,6 +98,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     return-object v0
@@ -103,12 +108,14 @@
 
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
+    .line 7
     throw v0
 .end method
 
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/work/impl/model/WorkSpecDao_Impl$25;->call()Ljava/lang/Long;
 
     move-result-object p0

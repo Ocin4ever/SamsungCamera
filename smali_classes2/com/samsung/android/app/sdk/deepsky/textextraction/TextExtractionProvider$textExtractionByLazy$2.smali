@@ -46,6 +46,7 @@
 .method public final invoke()Lcom/samsung/android/app/sdk/deepsky/textextraction/TextExtractionImpl;
     .locals 1
 
+    .line 2
     new-instance v0, Lcom/samsung/android/app/sdk/deepsky/textextraction/TextExtractionImpl;
 
     iget-object p0, p0, Lcom/samsung/android/app/sdk/deepsky/textextraction/TextExtractionProvider$textExtractionByLazy$2;->$appContext:Landroid/content/Context;
@@ -70,6 +71,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/app/sdk/deepsky/textextraction/TextExtractionProvider$textExtractionByLazy$2;->invoke()Lcom/samsung/android/app/sdk/deepsky/textextraction/TextExtractionImpl;
 
     move-result-object p0

@@ -40,6 +40,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,30 +49,39 @@
 .method public constructor <init>(JILjava/lang/String;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->id:J
 
+    .line 4
     iput p3, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->token:I
 
+    .line 5
     iput-object p4, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->path:Ljava/lang/String;
 
     const-wide/16 p1, -0x1
 
+    .line 6
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->timestamp:J
 
     const-wide/16 p1, 0x0
 
+    .line 7
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->latitude:J
 
+    .line 8
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->longitude:J
 
     const/4 p1, 0x0
 
+    .line 9
     iput p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->rotation:I
 
     const/4 p1, 0x0
 
+    .line 10
     iput-object p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->rect:Landroid/graphics/Rect;
 
     return-void
@@ -80,28 +90,37 @@
 .method public constructor <init>(JILjava/lang/String;J)V
     .locals 0
 
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 12
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->id:J
 
+    .line 13
     iput p3, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->token:I
 
+    .line 14
     iput-object p4, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->path:Ljava/lang/String;
 
+    .line 15
     iput-wide p5, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->timestamp:J
 
     const-wide/16 p1, 0x0
 
+    .line 16
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->latitude:J
 
+    .line 17
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->longitude:J
 
     const/4 p1, 0x0
 
+    .line 18
     iput p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->rotation:I
 
     const/4 p1, 0x0
 
+    .line 19
     iput-object p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->rect:Landroid/graphics/Rect;
 
     return-void
@@ -110,26 +129,35 @@
 .method public constructor <init>(JILjava/lang/String;JI)V
     .locals 0
 
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 21
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->id:J
 
+    .line 22
     iput p3, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->token:I
 
+    .line 23
     iput-object p4, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->path:Ljava/lang/String;
 
+    .line 24
     iput-wide p5, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->timestamp:J
 
     const-wide/16 p1, 0x0
 
+    .line 25
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->latitude:J
 
+    .line 26
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->longitude:J
 
+    .line 27
     iput p7, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->rotation:I
 
     const/4 p1, 0x0
 
+    .line 28
     iput-object p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->rect:Landroid/graphics/Rect;
 
     return-void
@@ -138,24 +166,33 @@
 .method public constructor <init>(JILjava/lang/String;JILandroid/graphics/Rect;)V
     .locals 0
 
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 30
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->id:J
 
+    .line 31
     iput p3, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->token:I
 
+    .line 32
     iput-object p4, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->path:Ljava/lang/String;
 
+    .line 33
     iput-wide p5, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->timestamp:J
 
     const-wide/16 p1, 0x0
 
+    .line 34
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->latitude:J
 
+    .line 35
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->longitude:J
 
+    .line 36
     iput p7, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->rotation:I
 
+    .line 37
     iput-object p8, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->rect:Landroid/graphics/Rect;
 
     return-void
@@ -164,22 +201,31 @@
 .method public constructor <init>(JILjava/lang/String;JJJILandroid/graphics/Rect;)V
     .locals 0
 
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 39
     iput-wide p1, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->id:J
 
+    .line 40
     iput p3, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->token:I
 
+    .line 41
     iput-object p4, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->path:Ljava/lang/String;
 
+    .line 42
     iput-wide p5, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->timestamp:J
 
+    .line 43
     iput-wide p7, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->latitude:J
 
+    .line 44
     iput-wide p9, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->longitude:J
 
+    .line 45
     iput p11, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->rotation:I
 
+    .line 46
     iput-object p12, p0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->rect:Landroid/graphics/Rect;
 
     return-void
@@ -188,8 +234,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 48
     invoke-virtual {p0, p1}, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->unflatten(Ljava/lang/String;)V
 
     return-void
@@ -204,6 +252,7 @@
 
     const-wide/16 v2, -0x1
 
+    .line 1
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v5
@@ -212,6 +261,7 @@
 
     const/4 v2, -0x1
 
+    .line 2
     invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
     move-result v7
@@ -220,36 +270,42 @@
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     const-string v1, "timestamp"
 
+    .line 4
     invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v9
 
     const-string v1, "latitude"
 
+    .line 5
     invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v11
 
     const-string v1, "longitude"
 
+    .line 6
     invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v13
 
     const-string v1, "rotation"
 
+    .line 7
     invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
 
     move-result v15
 
     const-string v1, "rect"
 
+    .line 8
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
@@ -258,6 +314,7 @@
 
     check-cast v16, Landroid/graphics/Rect;
 
+    .line 9
     new-instance v0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;
 
     move-object v4, v0
@@ -272,6 +329,7 @@
 
     move-object/from16 v0, p0
 
+    .line 10
     sget-object v1, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -292,6 +350,7 @@
 
     const-string v1, "id"
 
+    .line 11
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -304,6 +363,7 @@
 
     const-string v1, "token"
 
+    .line 12
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -316,6 +376,7 @@
 
     const-string v1, "path"
 
+    .line 13
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -326,6 +387,7 @@
 
     const-string v1, "timestamp"
 
+    .line 14
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -338,6 +400,7 @@
 
     const-string v1, "latitude"
 
+    .line 15
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -350,6 +413,7 @@
 
     const-string v1, "longitude"
 
+    .line 16
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -362,6 +426,7 @@
 
     const-string v1, "rotation"
 
+    .line 17
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -374,12 +439,14 @@
 
     const-string v1, "rect"
 
+    .line 18
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [I
 
+    .line 19
     new-instance v14, Landroid/graphics/Rect;
 
     const/4 v1, 0x0
@@ -400,6 +467,7 @@
 
     invoke-direct {v14, v1, v2, v15, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
+    .line 20
     new-instance v0, Lcom/samsung/android/apex/motionphoto/model/SemApexStoreData;
 
     move-object v2, v0

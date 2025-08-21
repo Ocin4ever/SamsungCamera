@@ -7,6 +7,7 @@
 .method public static a(Ljava/io/File;)[B
     .locals 1
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -43,6 +44,7 @@
 .method public static a(Ljava/lang/String;[II)[B
     .locals 1
 
+    .line 2
     add-int/lit8 p2, p2, 0x1
 
     const/4 v0, 0x0
@@ -59,6 +61,7 @@
 .method public static a([B)[B
     .locals 2
 
+    .line 3
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -73,6 +76,7 @@
 .method public static a([BII)[B
     .locals 7
 
+    .line 4
     aget-byte v0, p0, p1
 
     sub-int/2addr p2, v0
@@ -137,6 +141,7 @@
 .method public static a([B[BII)[B
     .locals 5
 
+    .line 5
     new-array v0, p3, [B
 
     const/4 v1, 0x0
@@ -186,6 +191,7 @@
 .method public static a(Ljava/lang/String;[I)[Ljava/lang/String;
     .locals 7
 
+    .line 6
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -273,6 +279,7 @@
 .method private static a(Ljava/lang/String;[III)[[B
     .locals 3
 
+    .line 7
     :try_start_0
     new-instance v0, Ljava/io/File;
 

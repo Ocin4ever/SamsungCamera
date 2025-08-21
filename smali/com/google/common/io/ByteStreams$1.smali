@@ -36,12 +36,14 @@
 .method public write(I)V
     .locals 0
 
+    .line 1
     return-void
 .end method
 
 .method public write([B)V
     .locals 0
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -50,10 +52,12 @@
 .method public write([BII)V
     .locals 0
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/2addr p3, p2
 
+    .line 4
     array-length p0, p1
 
     invoke-static {p2, p3, p0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V

@@ -95,8 +95,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -109,6 +111,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->MULTI_PREVIEW_LIST_ALPHA_FADE_IN_ANIMATION_DURATION:I
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -121,6 +124,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->MULTI_PREVIEW_LIST_SCALE_ANIMATION_DURATION:I
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -133,6 +137,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->MULTI_PREVIEW_LIST_OPEN_ANIMATION_START_DELAY:I
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -145,6 +150,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->MULTI_PREVIEW_LIST_OPEN_ANIMATION_START_DELAY_INTERVAL:I
 
+    .line 6
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -153,8 +159,10 @@
 
     const/4 p1, 0x0
 
+    .line 7
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->mMultiRecordingLensType:I
 
+    .line 8
     sget-object p1, Ly2/b;->n0:Ly2/b;
 
     invoke-static {p1}, Ly2/d;->e(Ly2/b;)Z
@@ -163,6 +171,7 @@
 
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->mIsAutoTrackingViewEnabled:Z
 
+    .line 9
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->init()V
 
     return-void
@@ -171,8 +180,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 10
     invoke-direct {p0, p1, p2}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 11
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -185,6 +196,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->MULTI_PREVIEW_LIST_ALPHA_FADE_IN_ANIMATION_DURATION:I
 
+    .line 12
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -197,6 +209,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->MULTI_PREVIEW_LIST_SCALE_ANIMATION_DURATION:I
 
+    .line 13
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -209,6 +222,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->MULTI_PREVIEW_LIST_OPEN_ANIMATION_START_DELAY:I
 
+    .line 14
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -221,6 +235,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->MULTI_PREVIEW_LIST_OPEN_ANIMATION_START_DELAY_INTERVAL:I
 
+    .line 15
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -229,8 +244,10 @@
 
     const/4 p1, 0x0
 
+    .line 16
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->mMultiRecordingLensType:I
 
+    .line 17
     sget-object p1, Ly2/b;->n0:Ly2/b;
 
     invoke-static {p1}, Ly2/d;->e(Ly2/b;)Z
@@ -239,6 +256,7 @@
 
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->mIsAutoTrackingViewEnabled:Z
 
+    .line 18
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->init()V
 
     return-void
@@ -247,8 +265,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 19
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 20
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -261,6 +281,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->MULTI_PREVIEW_LIST_ALPHA_FADE_IN_ANIMATION_DURATION:I
 
+    .line 21
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -273,6 +294,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->MULTI_PREVIEW_LIST_SCALE_ANIMATION_DURATION:I
 
+    .line 22
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -285,6 +307,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->MULTI_PREVIEW_LIST_OPEN_ANIMATION_START_DELAY:I
 
+    .line 23
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -297,6 +320,7 @@
 
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->MULTI_PREVIEW_LIST_OPEN_ANIMATION_START_DELAY_INTERVAL:I
 
+    .line 24
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -305,8 +329,10 @@
 
     const/4 p1, 0x0
 
+    .line 25
     iput p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->mMultiRecordingLensType:I
 
+    .line 26
     sget-object p1, Ly2/b;->n0:Ly2/b;
 
     invoke-static {p1}, Ly2/d;->e(Ly2/b;)Z
@@ -315,6 +341,7 @@
 
     iput-boolean p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->mIsAutoTrackingViewEnabled:Z
 
+    .line 27
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->init()V
 
     return-void
@@ -1710,6 +1737,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->setPresenter(Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListContract$Presenter;)V
@@ -1720,6 +1748,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListView;->mPresenter:Lcom/sec/android/app/camera/shootingmode/multirecording/multipreviewlist/MultiPreviewListContract$Presenter;
 
     return-void

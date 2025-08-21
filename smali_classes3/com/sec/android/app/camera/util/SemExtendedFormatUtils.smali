@@ -30,6 +30,7 @@
 .method public static addData(Ljava/io/File;Ljava/lang/String;Ljava/io/File;I)I
     .locals 1
 
+    .line 5
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
@@ -38,10 +39,12 @@
 
     move-result-object v0
 
+    .line 6
     invoke-static {v0}, Lcom/sec/android/app/camera/util/SemExtendedFormatUtils;->getOptionsByFileExtension(Ljava/lang/String;)I
 
     move-result v0
 
+    .line 7
     :try_start_0
     invoke-static {p0, p1, p2, p3, v0}, Lcom/samsung/android/media/SemExtendedFormat;->addData(Ljava/io/File;Ljava/lang/String;Ljava/io/File;II)I
 
@@ -51,6 +54,7 @@
 
     return p0
 
+    .line 8
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -78,6 +82,7 @@
 .method public static addData(Ljava/io/File;Ljava/lang/String;[BI)I
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
@@ -86,10 +91,12 @@
 
     move-result-object v0
 
+    .line 2
     invoke-static {v0}, Lcom/sec/android/app/camera/util/SemExtendedFormatUtils;->getOptionsByFileExtension(Ljava/lang/String;)I
 
     move-result v0
 
+    .line 3
     :try_start_0
     invoke-static {p0, p1, p2, p3, v0}, Lcom/samsung/android/media/SemExtendedFormat;->addData(Ljava/io/File;Ljava/lang/String;[BII)I
 
@@ -99,6 +106,7 @@
 
     return p0
 
+    .line 4
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 

@@ -26,8 +26,10 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/util/concurrent/AbstractListeningExecutorService;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -36,8 +38,10 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Lcom/google/common/util/concurrent/MoreExecutors$DirectExecutorService;->runningTasks:I
 
+    .line 4
     iput-boolean v0, p0, Lcom/google/common/util/concurrent/MoreExecutors$DirectExecutorService;->shutdown:Z
 
     return-void
@@ -46,6 +50,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/util/concurrent/MoreExecutors$1;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0}, Lcom/google/common/util/concurrent/MoreExecutors$DirectExecutorService;-><init>()V
 
     return-void

@@ -64,20 +64,25 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x4
 
+    .line 2
     iput v0, p0, Landroidx/work/Configuration$Builder;->loggingLevel:I
 
     const v0, 0x7fffffff
 
+    .line 3
     iput v0, p0, Landroidx/work/Configuration$Builder;->maxJobSchedulerId:I
 
     const/16 v0, 0x14
 
+    .line 4
     iput v0, p0, Landroidx/work/Configuration$Builder;->maxSchedulerLimit:I
 
+    .line 5
     invoke-static {}, Landroidx/work/ConfigurationKt;->getDEFAULT_CONTENT_URI_TRIGGERS_WORKERS_LIMIT()I
 
     move-result v0
@@ -94,98 +99,116 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x4
 
+    .line 7
     iput v0, p0, Landroidx/work/Configuration$Builder;->loggingLevel:I
 
     const v0, 0x7fffffff
 
+    .line 8
     iput v0, p0, Landroidx/work/Configuration$Builder;->maxJobSchedulerId:I
 
     const/16 v0, 0x14
 
+    .line 9
     iput v0, p0, Landroidx/work/Configuration$Builder;->maxSchedulerLimit:I
 
+    .line 10
     invoke-static {}, Landroidx/work/ConfigurationKt;->getDEFAULT_CONTENT_URI_TRIGGERS_WORKERS_LIMIT()I
 
     move-result v0
 
     iput v0, p0, Landroidx/work/Configuration$Builder;->contentUriTriggerWorkersLimit:I
 
+    .line 11
     invoke-virtual {p1}, Landroidx/work/Configuration;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/work/Configuration$Builder;->executor:Ljava/util/concurrent/Executor;
 
+    .line 12
     invoke-virtual {p1}, Landroidx/work/Configuration;->getWorkerFactory()Landroidx/work/WorkerFactory;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/work/Configuration$Builder;->workerFactory:Landroidx/work/WorkerFactory;
 
+    .line 13
     invoke-virtual {p1}, Landroidx/work/Configuration;->getInputMergerFactory()Landroidx/work/InputMergerFactory;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/work/Configuration$Builder;->inputMergerFactory:Landroidx/work/InputMergerFactory;
 
+    .line 14
     invoke-virtual {p1}, Landroidx/work/Configuration;->getTaskExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/work/Configuration$Builder;->taskExecutor:Ljava/util/concurrent/Executor;
 
+    .line 15
     invoke-virtual {p1}, Landroidx/work/Configuration;->getClock()Landroidx/work/Clock;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/work/Configuration$Builder;->clock:Landroidx/work/Clock;
 
+    .line 16
     invoke-virtual {p1}, Landroidx/work/Configuration;->getMinimumLoggingLevel()I
 
     move-result v0
 
     iput v0, p0, Landroidx/work/Configuration$Builder;->loggingLevel:I
 
+    .line 17
     invoke-virtual {p1}, Landroidx/work/Configuration;->getMinJobSchedulerId()I
 
     move-result v0
 
     iput v0, p0, Landroidx/work/Configuration$Builder;->minJobSchedulerId:I
 
+    .line 18
     invoke-virtual {p1}, Landroidx/work/Configuration;->getMaxJobSchedulerId()I
 
     move-result v0
 
     iput v0, p0, Landroidx/work/Configuration$Builder;->maxJobSchedulerId:I
 
+    .line 19
     invoke-virtual {p1}, Landroidx/work/Configuration;->getMaxSchedulerLimit()I
 
     move-result v0
 
     iput v0, p0, Landroidx/work/Configuration$Builder;->maxSchedulerLimit:I
 
+    .line 20
     invoke-virtual {p1}, Landroidx/work/Configuration;->getRunnableScheduler()Landroidx/work/RunnableScheduler;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/work/Configuration$Builder;->runnableScheduler:Landroidx/work/RunnableScheduler;
 
+    .line 21
     invoke-virtual {p1}, Landroidx/work/Configuration;->getInitializationExceptionHandler()Landroidx/core/util/Consumer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/work/Configuration$Builder;->initializationExceptionHandler:Landroidx/core/util/Consumer;
 
+    .line 22
     invoke-virtual {p1}, Landroidx/work/Configuration;->getSchedulingExceptionHandler()Landroidx/core/util/Consumer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/work/Configuration$Builder;->schedulingExceptionHandler:Landroidx/core/util/Consumer;
 
+    .line 23
     invoke-virtual {p1}, Landroidx/work/Configuration;->getDefaultProcessName()Ljava/lang/String;
 
     move-result-object p1

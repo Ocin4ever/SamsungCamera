@@ -60,6 +60,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p2, p0, Landroidx/work/impl/constraints/WorkConstraintsTrackerKt$listen$1$1;->$listener:Landroidx/work/impl/constraints/OnConstraintsStateChangedListener;
 
     iget-object p0, p0, Landroidx/work/impl/constraints/WorkConstraintsTrackerKt$listen$1$1;->$spec:Landroidx/work/impl/model/WorkSpec;
@@ -74,6 +75,7 @@
 .method public bridge synthetic emit(Ljava/lang/Object;Li6/d;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     check-cast p1, Landroidx/work/impl/constraints/ConstraintsState;
 
     invoke-virtual {p0, p1, p2}, Landroidx/work/impl/constraints/WorkConstraintsTrackerKt$listen$1$1;->emit(Landroidx/work/impl/constraints/ConstraintsState;Li6/d;)Ljava/lang/Object;

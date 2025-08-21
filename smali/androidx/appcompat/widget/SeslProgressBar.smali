@@ -184,6 +184,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/SeslProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -194,6 +195,7 @@
 
     const v0, 0x1010077
 
+    .line 2
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/SeslProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -204,6 +206,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-direct {p0, p1, p2, p3, v0}, Landroidx/appcompat/widget/SeslProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -212,24 +215,31 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 10
 
+    .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     const/4 v0, 0x0
 
+    .line 5
     iput v0, p0, Landroidx/appcompat/widget/SeslProgressBar;->mCurrentMode:I
 
+    .line 6
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslProgressBar;->mUseHorizontalProgress:Z
 
+    .line 7
     iput v0, p0, Landroidx/appcompat/widget/SeslProgressBar;->mSampleWidth:I
 
+    .line 8
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslProgressBar;->mMirrorForRtl:Z
 
+    .line 9
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Landroidx/appcompat/widget/SeslProgressBar;->mRefreshData:Ljava/util/ArrayList;
 
+    .line 10
     new-instance v1, Landroidx/appcompat/widget/SeslProgressBar$1;
 
     const-string v2, "visual_progress"
@@ -238,6 +248,7 @@
 
     iput-object v1, p0, Landroidx/appcompat/widget/SeslProgressBar;->VISUAL_PROGRESS:Landroid/util/FloatProperty;
 
+    .line 11
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
@@ -248,8 +259,10 @@
 
     iput-wide v1, p0, Landroidx/appcompat/widget/SeslProgressBar;->mUiThreadId:J
 
+    .line 12
     invoke-direct {p0}, Landroidx/appcompat/widget/SeslProgressBar;->initProgressBar()V
 
+    .line 13
     sget-object v5, Landroidx/appcompat/R$styleable;->ProgressBar:[I
 
     invoke-virtual {p1, p2, v5, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
@@ -268,13 +281,16 @@
 
     move v9, p4
 
+    .line 14
     :try_start_0
     invoke-virtual/range {v3 .. v9}, Landroid/view/View;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
     const/4 p2, 0x1
 
+    .line 15
     iput-boolean p2, p0, Landroidx/appcompat/widget/SeslProgressBar;->mNoInvalidate:Z
 
+    .line 16
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_progressDrawable:I
 
     invoke-virtual {v1, p3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -283,19 +299,23 @@
 
     if-eqz p3, :cond_1
 
+    .line 17
     invoke-static {p3}, Landroidx/appcompat/widget/SeslProgressBar;->needsTileify(Landroid/graphics/drawable/Drawable;)Z
 
     move-result p4
 
     if-eqz p4, :cond_0
 
+    .line 18
     invoke-virtual {p0, p3}, Landroidx/appcompat/widget/SeslProgressBar;->setProgressDrawableTiled(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
+    .line 19
     :cond_0
     invoke-virtual {p0, p3}, Landroidx/appcompat/widget/SeslProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 20
     :cond_1
     :goto_0
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_indeterminateDuration:I
@@ -308,6 +328,7 @@
 
     iput p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mDuration:I
 
+    .line 21
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_minWidth:I
 
     iget p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mMinWidth:I
@@ -318,6 +339,7 @@
 
     iput p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mMinWidth:I
 
+    .line 22
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_maxWidth:I
 
     iget p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mMaxWidth:I
@@ -328,6 +350,7 @@
 
     iput p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mMaxWidth:I
 
+    .line 23
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_minHeight:I
 
     iget p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mMinHeight:I
@@ -338,6 +361,7 @@
 
     iput p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mMinHeight:I
 
+    .line 24
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_maxHeight:I
 
     iget p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mMaxHeight:I
@@ -348,6 +372,7 @@
 
     iput p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mMaxHeight:I
 
+    .line 25
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_indeterminateBehavior:I
 
     iget p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mBehavior:I
@@ -358,6 +383,7 @@
 
     iput p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mBehavior:I
 
+    .line 26
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_interpolator:I
 
     const p4, 0x10a000b
@@ -368,8 +394,10 @@
 
     if-lez p3, :cond_2
 
+    .line 27
     invoke-virtual {p0, p1, p3}, Landroidx/appcompat/widget/SeslProgressBar;->setInterpolator(Landroid/content/Context;I)V
 
+    .line 28
     :cond_2
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_min:I
 
@@ -381,6 +409,7 @@
 
     invoke-virtual {p0, p3}, Landroidx/appcompat/widget/SeslProgressBar;->setMin(I)V
 
+    .line 29
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_max:I
 
     iget p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mMax:I
@@ -391,6 +420,7 @@
 
     invoke-virtual {p0, p3}, Landroidx/appcompat/widget/SeslProgressBar;->setMax(I)V
 
+    .line 30
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_progress:I
 
     iget p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgress:I
@@ -401,6 +431,7 @@
 
     invoke-virtual {p0, p3}, Landroidx/appcompat/widget/SeslProgressBar;->setProgress(I)V
 
+    .line 31
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_secondaryProgress:I
 
     iget p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mSecondaryProgress:I
@@ -411,6 +442,7 @@
 
     invoke-virtual {p0, p3}, Landroidx/appcompat/widget/SeslProgressBar;->setSecondaryProgress(I)V
 
+    .line 32
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_indeterminateDrawable:I
 
     invoke-virtual {v1, p3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -419,19 +451,23 @@
 
     if-eqz p3, :cond_4
 
+    .line 33
     invoke-static {p3}, Landroidx/appcompat/widget/SeslProgressBar;->needsTileify(Landroid/graphics/drawable/Drawable;)Z
 
     move-result p4
 
     if-eqz p4, :cond_3
 
+    .line 34
     invoke-virtual {p0, p3}, Landroidx/appcompat/widget/SeslProgressBar;->setIndeterminateDrawableTiled(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_1
 
+    .line 35
     :cond_3
     invoke-virtual {p0, p3}, Landroidx/appcompat/widget/SeslProgressBar;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 36
     :cond_4
     :goto_1
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_indeterminateOnly:I
@@ -444,10 +480,12 @@
 
     iput-boolean p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mOnlyIndeterminate:Z
 
+    .line 37
     iput-boolean v0, p0, Landroidx/appcompat/widget/SeslProgressBar;->mNoInvalidate:Z
 
     if-nez p3, :cond_5
 
+    .line 38
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_indeterminate:I
 
     iget-boolean p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mIndeterminate:Z
@@ -464,6 +502,7 @@
     :cond_6
     invoke-virtual {p0, v0}, Landroidx/appcompat/widget/SeslProgressBar;->setIndeterminate(Z)V
 
+    .line 39
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_mirrorForRtl:I
 
     iget-boolean p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mMirrorForRtl:Z
@@ -474,6 +513,7 @@
 
     iput-boolean p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mMirrorForRtl:Z
 
+    .line 40
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_progressTintMode:I
 
     invoke-virtual {v1, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -486,16 +526,19 @@
 
     if-eqz p4, :cond_8
 
+    .line 41
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     if-nez p4, :cond_7
 
+    .line 42
     new-instance p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     invoke-direct {p4, v2}, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;-><init>(Landroidx/appcompat/widget/SeslProgressBar$1;)V
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
+    .line 43
     :cond_7
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
@@ -509,10 +552,12 @@
 
     iput-object p3, p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mProgressTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 44
     iget-object p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     iput-boolean p2, p3, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mHasProgressTintMode:Z
 
+    .line 45
     :cond_8
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_progressTint:I
 
@@ -522,16 +567,19 @@
 
     if-eqz p4, :cond_a
 
+    .line 46
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     if-nez p4, :cond_9
 
+    .line 47
     new-instance p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     invoke-direct {p4, v2}, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;-><init>(Landroidx/appcompat/widget/SeslProgressBar$1;)V
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
+    .line 48
     :cond_9
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
@@ -541,10 +589,12 @@
 
     iput-object p3, p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mProgressTintList:Landroid/content/res/ColorStateList;
 
+    .line 49
     iget-object p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     iput-boolean p2, p3, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mHasProgressTint:Z
 
+    .line 50
     :cond_a
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_progressBackgroundTintMode:I
 
@@ -554,16 +604,19 @@
 
     if-eqz p4, :cond_c
 
+    .line 51
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     if-nez p4, :cond_b
 
+    .line 52
     new-instance p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     invoke-direct {p4, v2}, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;-><init>(Landroidx/appcompat/widget/SeslProgressBar$1;)V
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
+    .line 53
     :cond_b
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
@@ -577,10 +630,12 @@
 
     iput-object p3, p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mProgressBackgroundTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 54
     iget-object p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     iput-boolean p2, p3, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mHasProgressBackgroundTintMode:Z
 
+    .line 55
     :cond_c
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_progressBackgroundTint:I
 
@@ -590,16 +645,19 @@
 
     if-eqz p4, :cond_e
 
+    .line 56
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     if-nez p4, :cond_d
 
+    .line 57
     new-instance p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     invoke-direct {p4, v2}, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;-><init>(Landroidx/appcompat/widget/SeslProgressBar$1;)V
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
+    .line 58
     :cond_d
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
@@ -609,10 +667,12 @@
 
     iput-object p3, p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mProgressBackgroundTintList:Landroid/content/res/ColorStateList;
 
+    .line 59
     iget-object p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     iput-boolean p2, p3, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mHasProgressBackgroundTint:Z
 
+    .line 60
     :cond_e
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_secondaryProgressTintMode:I
 
@@ -622,33 +682,40 @@
 
     if-eqz p4, :cond_10
 
+    .line 61
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     if-nez p4, :cond_f
 
+    .line 62
     new-instance p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     invoke-direct {p4, v2}, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;-><init>(Landroidx/appcompat/widget/SeslProgressBar$1;)V
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
+    .line 63
     :cond_f
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
+    .line 64
     invoke-virtual {v1, p3, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result p3
 
+    .line 65
     invoke-static {p3, v2}, Landroidx/appcompat/widget/DrawableUtils;->parseTintMode(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object p3
 
     iput-object p3, p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mSecondaryProgressTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 66
     iget-object p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     iput-boolean p2, p3, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mHasSecondaryProgressTintMode:Z
 
+    .line 67
     :cond_10
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_secondaryProgressTint:I
 
@@ -658,16 +725,19 @@
 
     if-eqz p4, :cond_12
 
+    .line 68
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     if-nez p4, :cond_11
 
+    .line 69
     new-instance p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     invoke-direct {p4, v2}, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;-><init>(Landroidx/appcompat/widget/SeslProgressBar$1;)V
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
+    .line 70
     :cond_11
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
@@ -677,10 +747,12 @@
 
     iput-object p3, p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mSecondaryProgressTintList:Landroid/content/res/ColorStateList;
 
+    .line 71
     iget-object p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     iput-boolean p2, p3, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mHasSecondaryProgressTint:Z
 
+    .line 72
     :cond_12
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_indeterminateTintMode:I
 
@@ -690,16 +762,19 @@
 
     if-eqz p4, :cond_14
 
+    .line 73
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     if-nez p4, :cond_13
 
+    .line 74
     new-instance p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     invoke-direct {p4, v2}, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;-><init>(Landroidx/appcompat/widget/SeslProgressBar$1;)V
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
+    .line 75
     :cond_13
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
@@ -713,10 +788,12 @@
 
     iput-object p3, p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mIndeterminateTintMode:Landroid/graphics/PorterDuff$Mode;
 
+    .line 76
     iget-object p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     iput-boolean p2, p3, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mHasIndeterminateTintMode:Z
 
+    .line 77
     :cond_14
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_android_indeterminateTint:I
 
@@ -726,16 +803,19 @@
 
     if-eqz p4, :cond_16
 
+    .line 78
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     if-nez p4, :cond_15
 
+    .line 79
     new-instance p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     invoke-direct {p4, v2}, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;-><init>(Landroidx/appcompat/widget/SeslProgressBar$1;)V
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
+    .line 80
     :cond_15
     iget-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
@@ -745,10 +825,12 @@
 
     iput-object p3, p4, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mIndeterminateTintList:Landroid/content/res/ColorStateList;
 
+    .line 81
     iget-object p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mProgressTintInfo:Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;
 
     iput-boolean p2, p3, Landroidx/appcompat/widget/SeslProgressBar$ProgressTintInfo;->mHasIndeterminateTint:Z
 
+    .line 82
     :cond_16
     sget p3, Landroidx/appcompat/R$styleable;->ProgressBar_useHorizontalProgress:I
 
@@ -760,12 +842,14 @@
 
     iput-boolean p3, p0, Landroidx/appcompat/widget/SeslProgressBar;->mUseHorizontalProgress:Z
 
+    .line 83
     new-instance p3, Landroidx/appcompat/view/ContextThemeWrapper;
 
     sget p4, Landroidx/appcompat/R$style;->Base_V7_Theme_AppCompat_Light:I
 
     invoke-direct {p3, p1, p4}, Landroidx/appcompat/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
+    .line 84
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p4
@@ -782,6 +866,7 @@
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mIndeterminateHorizontalXsmall:Landroid/graphics/drawable/Drawable;
 
+    .line 85
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p4
@@ -798,6 +883,7 @@
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mIndeterminateHorizontalSmall:Landroid/graphics/drawable/Drawable;
 
+    .line 86
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p4
@@ -814,6 +900,7 @@
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mIndeterminateHorizontalMedium:Landroid/graphics/drawable/Drawable;
 
+    .line 87
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p4
@@ -830,6 +917,7 @@
 
     iput-object p4, p0, Landroidx/appcompat/widget/SeslProgressBar;->mIndeterminateHorizontalLarge:Landroid/graphics/drawable/Drawable;
 
+    .line 88
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p4
@@ -848,20 +936,26 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 89
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 90
     invoke-direct {p0}, Landroidx/appcompat/widget/SeslProgressBar;->applyProgressTints()V
 
+    .line 91
     invoke-direct {p0}, Landroidx/appcompat/widget/SeslProgressBar;->applyIndeterminateTint()V
 
+    .line 92
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->getImportantForAccessibility(Landroid/view/View;)I
 
     move-result p3
 
     if-nez p3, :cond_17
 
+    .line 93
     invoke-static {p0, p2}, Landroidx/core/view/ViewCompat;->setImportantForAccessibility(Landroid/view/View;I)V
 
+    .line 94
     :cond_17
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -875,6 +969,7 @@
 
     iput p1, p0, Landroidx/appcompat/widget/SeslProgressBar;->mDensity:F
 
+    .line 95
     new-instance p1, Landroidx/appcompat/widget/SeslProgressBar$CircleAnimationCallback;
 
     invoke-direct {p1, p0}, Landroidx/appcompat/widget/SeslProgressBar$CircleAnimationCallback;-><init>(Landroidx/appcompat/widget/SeslProgressBar;)V
@@ -886,8 +981,10 @@
     :catchall_0
     move-exception p0
 
+    .line 96
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 97
     throw p0
 .end method
 
@@ -4456,6 +4553,7 @@
 .method public setInterpolator(Landroid/content/Context;I)V
     .locals 0
 
+    .line 1
     invoke-static {p1, p2}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
 
     move-result-object p1
@@ -4468,6 +4566,7 @@
 .method public setInterpolator(Landroid/view/animation/Interpolator;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Landroidx/appcompat/widget/SeslProgressBar;->mInterpolator:Landroid/view/animation/Interpolator;
 
     return-void
@@ -4712,11 +4811,13 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1, v0, v0}, Landroidx/appcompat/widget/SeslProgressBar;->setProgressInternal(IZZ)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-void
@@ -4734,6 +4835,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, v0, p2}, Landroidx/appcompat/widget/SeslProgressBar;->setProgressInternal(IZZ)Z
 
     return-void

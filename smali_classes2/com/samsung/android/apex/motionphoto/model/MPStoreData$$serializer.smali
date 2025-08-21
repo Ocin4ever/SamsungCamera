@@ -205,6 +205,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/apex/motionphoto/model/MPStoreData$$serializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object v1
@@ -523,6 +524,7 @@
 .method public bridge synthetic deserialize(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/samsung/android/apex/motionphoto/model/MPStoreData$$serializer;->deserialize(Lkotlinx/serialization/encoding/Decoder;)Lcom/samsung/android/apex/motionphoto/model/MPStoreData;
 
     move-result-object p0
@@ -551,6 +553,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Lcom/samsung/android/apex/motionphoto/model/MPStoreData$$serializer;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
 
     move-result-object p0
@@ -569,6 +572,7 @@
 .method public bridge synthetic serialize(Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
     .locals 0
 
+    .line 2
     check-cast p2, Lcom/samsung/android/apex/motionphoto/model/MPStoreData;
 
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/apex/motionphoto/model/MPStoreData$$serializer;->serialize(Lkotlinx/serialization/encoding/Encoder;Lcom/samsung/android/apex/motionphoto/model/MPStoreData;)V

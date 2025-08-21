@@ -70,6 +70,7 @@
 .method public read()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
@@ -80,6 +81,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/hash/HashingInputStream;->hasher:Lcom/google/common/hash/Hasher;
 
     int-to-byte v1, v0
@@ -93,6 +95,7 @@
 .method public read([BII)I
     .locals 1
 
+    .line 3
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
@@ -103,6 +106,7 @@
 
     if-eq p3, v0, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/hash/HashingInputStream;->hasher:Lcom/google/common/hash/Hasher;
 
     invoke-interface {p0, p1, p2, p3}, Lcom/google/common/hash/Hasher;->putBytes([BII)Lcom/google/common/hash/Hasher;

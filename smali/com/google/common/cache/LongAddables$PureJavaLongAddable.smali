@@ -21,6 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
     return-void
@@ -29,6 +30,7 @@
 .method public synthetic constructor <init>(Lcom/google/common/cache/LongAddables$1;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/cache/LongAddables$PureJavaLongAddable;-><init>()V
 
     return-void

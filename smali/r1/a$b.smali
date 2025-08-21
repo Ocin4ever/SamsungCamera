@@ -24,8 +24,10 @@
 .method public constructor <init>(Lr1/a$b;)V
     .locals 1
 
+    .line 4
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
+    .line 5
     iget-object v0, p1, Lr1/a$b;->a:Lt1/g;
 
     invoke-virtual {v0}, Lt1/g;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
@@ -40,6 +42,7 @@
 
     iput-object v0, p0, Lr1/a$b;->a:Lt1/g;
 
+    .line 6
     iget-boolean p1, p1, Lr1/a$b;->b:Z
 
     iput-boolean p1, p0, Lr1/a$b;->b:Z
@@ -50,12 +53,15 @@
 .method public constructor <init>(Lt1/g;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lr1/a$b;->a:Lt1/g;
 
     const/4 p1, 0x0
 
+    .line 3
     iput-boolean p1, p0, Lr1/a$b;->b:Z
 
     return-void

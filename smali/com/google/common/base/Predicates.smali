@@ -101,6 +101,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Lcom/google/common/base/Predicates$AndPredicate;
 
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -142,6 +143,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/base/Predicates$AndPredicate;
 
     invoke-static {p0}, Lcom/google/common/base/Predicates;->defensiveCopy(Ljava/lang/Iterable;)Ljava/util/List;
@@ -172,6 +174,7 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/base/Predicates$AndPredicate;
 
     invoke-static {p0}, Lcom/google/common/base/Predicates;->defensiveCopy([Ljava/lang/Object;)Ljava/util/List;
@@ -306,10 +309,12 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -325,6 +330,7 @@
 
     move-result-object v1
 
+    .line 4
     invoke-static {v1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -349,6 +355,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -524,6 +531,7 @@
         }
     .end annotation
 
+    .line 3
     new-instance v0, Lcom/google/common/base/Predicates$OrPredicate;
 
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -565,6 +573,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/base/Predicates$OrPredicate;
 
     invoke-static {p0}, Lcom/google/common/base/Predicates;->defensiveCopy(Ljava/lang/Iterable;)Ljava/util/List;
@@ -595,6 +604,7 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/base/Predicates$OrPredicate;
 
     invoke-static {p0}, Lcom/google/common/base/Predicates;->defensiveCopy([Ljava/lang/Object;)Ljava/util/List;

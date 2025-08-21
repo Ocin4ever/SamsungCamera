@@ -293,6 +293,7 @@
 .method public clone()Lcom/sec/android/app/camera/engine/TakePictureSequenceController$TakePictureSequence;
     .locals 1
 
+    .line 2
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -311,6 +312,7 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/sec/android/app/camera/engine/TakePictureSequenceController$TakePictureSequence;->clone()Lcom/sec/android/app/camera/engine/TakePictureSequenceController$TakePictureSequence;
 
     move-result-object p0

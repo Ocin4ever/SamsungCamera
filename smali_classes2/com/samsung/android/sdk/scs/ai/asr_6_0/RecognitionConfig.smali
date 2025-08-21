@@ -49,8 +49,10 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
@@ -59,6 +61,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     iput v0, p0, Lcom/samsung/android/sdk/scs/ai/asr_6_0/RecognitionConfig;->viewType:I
 
     return-void
@@ -67,6 +70,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/sdk/scs/ai/asr_6_0/n0;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/samsung/android/sdk/scs/ai/asr_6_0/RecognitionConfig;-><init>()V
 
     return-void

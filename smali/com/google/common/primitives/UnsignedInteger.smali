@@ -106,10 +106,12 @@
     :goto_0
     const-string v1, "value (%s) is outside the range for an unsigned integer value"
 
+    .line 1
     invoke-static {v0, v1, p0, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
 
     long-to-int p0, p0
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/primitives/UnsignedInteger;->fromIntBits(I)Lcom/google/common/primitives/UnsignedInteger;
 
     move-result-object p0
@@ -122,6 +124,7 @@
 
     const/16 v0, 0xa
 
+    .line 7
     invoke-static {p0, v0}, Lcom/google/common/primitives/UnsignedInteger;->valueOf(Ljava/lang/String;I)Lcom/google/common/primitives/UnsignedInteger;
 
     move-result-object p0
@@ -132,6 +135,7 @@
 .method public static valueOf(Ljava/lang/String;I)Lcom/google/common/primitives/UnsignedInteger;
     .locals 0
 
+    .line 8
     invoke-static {p0, p1}, Lcom/google/common/primitives/UnsignedInts;->parseUnsignedInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -146,8 +150,10 @@
 .method public static valueOf(Ljava/math/BigInteger;)Lcom/google/common/primitives/UnsignedInteger;
     .locals 2
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-virtual {p0}, Ljava/math/BigInteger;->signum()I
 
     move-result v0
@@ -172,8 +178,10 @@
     :goto_0
     const-string v1, "value (%s) is outside the range for an unsigned integer value"
 
+    .line 5
     invoke-static {v0, v1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 6
     invoke-virtual {p0}, Ljava/math/BigInteger;->intValue()I
 
     move-result p0
@@ -204,8 +212,10 @@
 .method public compareTo(Lcom/google/common/primitives/UnsignedInteger;)I
     .locals 0
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget p0, p0, Lcom/google/common/primitives/UnsignedInteger;->value:I
 
     iget p1, p1, Lcom/google/common/primitives/UnsignedInteger;->value:I
@@ -220,6 +230,7 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/primitives/UnsignedInteger;
 
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/UnsignedInteger;->compareTo(Lcom/google/common/primitives/UnsignedInteger;)I
@@ -423,6 +434,7 @@
 
     const/16 v0, 0xa
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/common/primitives/UnsignedInteger;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -433,6 +445,7 @@
 .method public toString(I)Ljava/lang/String;
     .locals 0
 
+    .line 2
     iget p0, p0, Lcom/google/common/primitives/UnsignedInteger;->value:I
 
     invoke-static {p0, p1}, Lcom/google/common/primitives/UnsignedInts;->toString(II)Ljava/lang/String;

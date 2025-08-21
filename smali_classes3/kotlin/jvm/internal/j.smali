@@ -190,6 +190,7 @@
 .method public bridge synthetic getReflected()Lu6/b;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lkotlin/jvm/internal/j;->getReflected()Lu6/e;
 
     move-result-object p0
@@ -200,6 +201,7 @@
 .method public getReflected()Lu6/e;
     .locals 0
 
+    .line 2
     invoke-super {p0}, Lkotlin/jvm/internal/c;->getReflected()Lu6/b;
 
     move-result-object p0

@@ -55,12 +55,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/cropper/view/CropImageView;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x2
 
     new-array v0, p1, [F
 
+    .line 2
     fill-array-data v0, :array_0
 
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -71,6 +73,7 @@
 
     new-array p1, p1, [F
 
+    .line 3
     fill-array-data p1, :array_1
 
     invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -81,8 +84,10 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
+    .line 4
     iput p1, p0, Lcom/sec/android/app/camera/cropper/view/DocumentScanImageView;->mScaleFactor:F
 
+    .line 5
     invoke-direct {p0}, Lcom/sec/android/app/camera/cropper/view/DocumentScanImageView;->initDocumentScanImageView()V
 
     return-void
@@ -103,12 +108,14 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 6
     invoke-direct {p0, p1, p2}, Lcom/sec/android/app/camera/cropper/view/CropImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x2
 
     new-array p2, p1, [F
 
+    .line 7
     fill-array-data p2, :array_0
 
     invoke-static {p2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -119,6 +126,7 @@
 
     new-array p1, p1, [F
 
+    .line 8
     fill-array-data p1, :array_1
 
     invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -129,8 +137,10 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
+    .line 9
     iput p1, p0, Lcom/sec/android/app/camera/cropper/view/DocumentScanImageView;->mScaleFactor:F
 
+    .line 10
     invoke-direct {p0}, Lcom/sec/android/app/camera/cropper/view/DocumentScanImageView;->initDocumentScanImageView()V
 
     return-void
@@ -151,12 +161,14 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 11
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/android/app/camera/cropper/view/CropImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x2
 
     new-array p2, p1, [F
 
+    .line 12
     fill-array-data p2, :array_0
 
     invoke-static {p2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -167,6 +179,7 @@
 
     new-array p1, p1, [F
 
+    .line 13
     fill-array-data p1, :array_1
 
     invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -177,8 +190,10 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
+    .line 14
     iput p1, p0, Lcom/sec/android/app/camera/cropper/view/DocumentScanImageView;->mScaleFactor:F
 
+    .line 15
     invoke-direct {p0}, Lcom/sec/android/app/camera/cropper/view/DocumentScanImageView;->initDocumentScanImageView()V
 
     return-void

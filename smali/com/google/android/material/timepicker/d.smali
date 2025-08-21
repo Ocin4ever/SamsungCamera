@@ -50,22 +50,29 @@
 .method public constructor <init>(IIII)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/material/timepicker/d;->d:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/material/timepicker/d;->e:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/material/timepicker/d;->f:I
 
+    .line 5
     iput p4, p0, Lcom/google/android/material/timepicker/d;->c:I
 
+    .line 6
     invoke-static {p1}, Lcom/google/android/material/timepicker/d;->d(I)I
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/timepicker/d;->g:I
 
+    .line 7
     new-instance p1, Lcom/google/android/material/timepicker/a;
 
     const/16 p2, 0x3b
@@ -74,6 +81,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/timepicker/d;->a:Lcom/google/android/material/timepicker/a;
 
+    .line 8
     new-instance p1, Lcom/google/android/material/timepicker/a;
 
     const/4 p2, 0x1
@@ -98,6 +106,7 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 3
 
+    .line 9
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0

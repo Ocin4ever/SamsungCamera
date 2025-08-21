@@ -66,20 +66,24 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ByteOrderedDataInputStream;->mInputStream:Ljava/io/InputStream;
 
+    .line 2
     sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     iput-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ByteOrderedDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
+    .line 3
     new-instance v0, Ljava/io/DataInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
     iput-object v0, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ByteOrderedDataInputStream;->mDataInputStream:Ljava/io/DataInputStream;
 
+    .line 4
     invoke-virtual {v0}, Ljava/io/InputStream;->available()I
 
     move-result p1
@@ -88,8 +92,10 @@
 
     const/4 v1, 0x0
 
+    .line 5
     iput v1, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ByteOrderedDataInputStream;->mPosition:I
 
+    .line 6
     invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
 
     return-void
@@ -98,6 +104,7 @@
 .method public constructor <init>([B)V
     .locals 1
 
+    .line 7
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
@@ -266,6 +273,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 6
     iget v0, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ByteOrderedDataInputStream;->mPosition:I
 
     array-length v1, p1
@@ -274,10 +282,12 @@
 
     iput v0, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ByteOrderedDataInputStream;->mPosition:I
 
+    .line 7
     iget v1, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ByteOrderedDataInputStream;->length:I
 
     if-gt v0, v1, :cond_1
 
+    .line 8
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ByteOrderedDataInputStream;->mDataInputStream:Ljava/io/DataInputStream;
 
     const/4 v0, 0x0
@@ -294,6 +304,7 @@
 
     return-void
 
+    .line 9
     :cond_0
     new-instance p0, Ljava/io/IOException;
 
@@ -303,6 +314,7 @@
 
     throw p0
 
+    .line 10
     :cond_1
     new-instance p0, Ljava/io/EOFException;
 
@@ -318,16 +330,19 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget v0, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ByteOrderedDataInputStream;->mPosition:I
 
     add-int/2addr v0, p3
 
     iput v0, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ByteOrderedDataInputStream;->mPosition:I
 
+    .line 2
     iget v1, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ByteOrderedDataInputStream;->length:I
 
     if-gt v0, v1, :cond_1
 
+    .line 3
     iget-object p0, p0, Lcom/samsung/android/apex/motionphoto/composer/utils/ByteOrderedDataInputStream;->mDataInputStream:Ljava/io/DataInputStream;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/io/DataInputStream;->read([BII)I
@@ -338,6 +353,7 @@
 
     return-void
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/io/IOException;
 
@@ -347,6 +363,7 @@
 
     throw p0
 
+    .line 5
     :cond_1
     new-instance p0, Ljava/io/EOFException;
 

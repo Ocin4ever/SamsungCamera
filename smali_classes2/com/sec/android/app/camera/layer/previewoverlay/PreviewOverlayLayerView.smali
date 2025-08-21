@@ -63,8 +63,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 2
     invoke-static {}, Lcom/sec/android/app/camera/util/factory/MatrixFactory;->create()Landroid/graphics/Matrix;
 
     move-result-object p1
@@ -73,10 +75,13 @@
 
     const/4 p1, 0x0
 
+    .line 3
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerView;->mIsInclinometerEnable:Z
 
+    .line 4
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerView;->mIsLevelMeterEnable:Z
 
+    .line 5
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -109,8 +114,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
+    .line 6
     invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 7
     invoke-static {}, Lcom/sec/android/app/camera/util/factory/MatrixFactory;->create()Landroid/graphics/Matrix;
 
     move-result-object p1
@@ -119,10 +126,13 @@
 
     const/4 p1, 0x0
 
+    .line 8
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerView;->mIsInclinometerEnable:Z
 
+    .line 9
     iput-boolean p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerView;->mIsLevelMeterEnable:Z
 
+    .line 10
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1831,6 +1841,7 @@
 .method public setBottomBackgroundPosition(II)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerView;->mViewBinding:Lp4/i1;
 
     iget-object p0, p0, Lp4/i1;->b:Lcom/sec/android/app/camera/layer/previewoverlay/BottomBackground;
@@ -1849,6 +1860,7 @@
 .method public setBottomBackgroundPosition(Lcom/sec/android/app/camera/interfaces/PreviewOverlayLayerManager$BottomBackgroundPosition;)V
     .locals 2
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1859,6 +1871,7 @@
 
     move-result v0
 
+    .line 3
     sget-object v1, Lcom/sec/android/app/camera/interfaces/PreviewOverlayLayerManager$BottomBackgroundPosition;->RECORDING:Lcom/sec/android/app/camera/interfaces/PreviewOverlayLayerManager$BottomBackgroundPosition;
 
     if-ne p1, v1, :cond_0
@@ -1886,6 +1899,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 4
     :goto_0
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerView;->mViewBinding:Lp4/i1;
 
@@ -2022,6 +2036,7 @@
 .method public bridge synthetic setPresenter(Lcom/sec/android/app/camera/interfaces/BaseContract$Presenter;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerContract$Presenter;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerView;->setPresenter(Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerContract$Presenter;)V
@@ -2032,6 +2047,7 @@
 .method public setPresenter(Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerContract$Presenter;)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerView;->mPresenter:Lcom/sec/android/app/camera/layer/previewoverlay/PreviewOverlayLayerContract$Presenter;
 
     return-void

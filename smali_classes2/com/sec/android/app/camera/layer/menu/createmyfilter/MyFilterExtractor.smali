@@ -826,8 +826,10 @@
 .method public varargs doInBackground([Ljava/lang/Void;)Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterSaveData;
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterExtractor;->cropImage()V
 
+    .line 3
     invoke-direct {p0}, Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterExtractor;->extractMyFilter()Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterSaveData;
 
     move-result-object p0
@@ -838,6 +840,7 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterExtractor;->doInBackground([Ljava/lang/Void;)Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterSaveData;
@@ -882,12 +885,14 @@
 
     if-nez p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterExtractor;->mMyFilterExtractorListener:Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterExtractor$MyFilterExtractorListener;
 
     invoke-interface {p0}, Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterExtractor$MyFilterExtractorListener;->onExtractError()V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterExtractor;->mMyFilterExtractorListener:Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterExtractor$MyFilterExtractorListener;
 
@@ -900,6 +905,7 @@
 .method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterSaveData;
 
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterExtractor;->onPostExecute(Lcom/sec/android/app/camera/layer/menu/createmyfilter/MyFilterSaveData;)V

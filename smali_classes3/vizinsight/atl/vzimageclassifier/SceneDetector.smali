@@ -60,24 +60,31 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->statusChangeListener:Lvizinsight/atl/vzimageclassifier/SceneDetector$StatusChangeListener;
 
     const-string v1, "/system/saiv/image_understanding/db/"
 
+    .line 3
     iput-object v1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->base_path:Ljava/lang/String;
 
+    .line 4
     iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mClassifier:Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;
 
     const/4 v0, 0x0
 
+    .line 5
     iput v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mode:I
 
+    .line 6
     iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mContext:Landroid/content/Context;
 
+    .line 7
     invoke-virtual {p0}, Lvizinsight/atl/vzimageclassifier/SceneDetector;->initilize()V
 
     return-void
@@ -86,22 +93,29 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 2
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 9
     iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->statusChangeListener:Lvizinsight/atl/vzimageclassifier/SceneDetector$StatusChangeListener;
 
     const-string v1, "/system/saiv/image_understanding/db/"
 
+    .line 10
     iput-object v1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->base_path:Ljava/lang/String;
 
+    .line 11
     iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mClassifier:Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;
 
+    .line 12
     iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mContext:Landroid/content/Context;
 
+    .line 13
     iput p2, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mode:I
 
+    .line 14
     invoke-virtual {p0}, Lvizinsight/atl/vzimageclassifier/SceneDetector;->initilize()V
 
     return-void
@@ -110,20 +124,27 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 1
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 16
     iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->statusChangeListener:Lvizinsight/atl/vzimageclassifier/SceneDetector$StatusChangeListener;
 
+    .line 17
     iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mClassifier:Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;
 
+    .line 18
     iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mContext:Landroid/content/Context;
 
+    .line 19
     iput-object p2, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->base_path:Ljava/lang/String;
 
+    .line 20
     iput p3, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mode:I
 
+    .line 21
     invoke-virtual {p0}, Lvizinsight/atl/vzimageclassifier/SceneDetector;->initilize()V
 
     return-void
@@ -307,11 +328,13 @@
 
     const/4 v1, 0x0
 
+    .line 29
     :try_start_0
     iget-object p0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mClassifier:Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;
 
     if-eqz p0, :cond_0
 
+    .line 30
     invoke-interface {p0, p1}, Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;->classify(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p0
@@ -321,6 +344,7 @@
     :cond_0
     const-string p0, "classify(): mClassifier = null"
 
+    .line 31
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -330,10 +354,12 @@
     :catch_0
     move-exception p0
 
+    .line 32
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     const-string p0, "failure of classify()"
 
+    .line 33
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -356,6 +382,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     :try_start_0
     iget-object v2, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mClassifier:Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;
 
@@ -371,6 +398,7 @@
 
     move v7, p5
 
+    .line 2
     invoke-interface/range {v2 .. v7}, Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;->classify(Ljava/nio/ByteBuffer;IIII)Ljava/util/List;
 
     move-result-object p0
@@ -380,6 +408,7 @@
     :cond_0
     const-string p0, "classify(): mClassifier = null"
 
+    .line 3
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -389,10 +418,12 @@
     :catch_0
     move-exception p0
 
+    .line 4
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     const-string p0, "failure of classify()"
 
+    .line 5
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -436,6 +467,7 @@
 
     move-object v6, p8
 
+    .line 12
     :try_start_0
     invoke-virtual/range {v0 .. v6}, Lvizinsight/atl/vzimageclassifier/SceneDetector;->classify(Ljava/nio/ByteBuffer;IIIILvizinsight/atl/vzimageclassifier/SceneDetectorParam;)Ljava/util/List;
 
@@ -443,6 +475,7 @@
 
     return-object p0
 
+    .line 13
     :cond_1
     :goto_0
     invoke-direct/range {p0 .. p5}, Lvizinsight/atl/vzimageclassifier/SceneDetector;->getByteBufferFromStrideBuffer(Ljava/nio/ByteBuffer;IIII)Ljava/nio/ByteBuffer;
@@ -463,10 +496,12 @@
 
     move-object v6, p8
 
+    .line 14
     invoke-virtual/range {v0 .. v6}, Lvizinsight/atl/vzimageclassifier/SceneDetector;->classify(Ljava/nio/ByteBuffer;IIIILvizinsight/atl/vzimageclassifier/SceneDetectorParam;)Ljava/util/List;
 
     move-result-object p0
 
+    .line 15
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -476,12 +511,14 @@
     :catch_0
     move-exception p0
 
+    .line 16
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     const-string p0, "SceneDetector"
 
     const-string p1, "failure of classify()"
 
+    .line 17
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -508,13 +545,16 @@
 
     const/4 v1, 0x0
 
+    .line 6
     :try_start_0
     iget-object v2, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mClassifier:Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;
 
     if-eqz v2, :cond_0
 
+    .line 7
     invoke-interface {v2, p6}, Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;->setSceneInfo(Lvizinsight/atl/vzimageclassifier/SceneDetectorParam;)V
 
+    .line 8
     invoke-virtual/range {p0 .. p5}, Lvizinsight/atl/vzimageclassifier/SceneDetector;->classify(Ljava/nio/ByteBuffer;IIII)Ljava/util/List;
 
     move-result-object p0
@@ -524,6 +564,7 @@
     :cond_0
     const-string p0, "classify(): mClassifier = null"
 
+    .line 9
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -533,10 +574,12 @@
     :catch_0
     move-exception p0
 
+    .line 10
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     const-string p0, "failure of classify()"
 
+    .line 11
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -557,6 +600,7 @@
 
     const/4 v1, 0x0
 
+    .line 18
     :try_start_0
     iget-object v2, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mClassifier:Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;
 
@@ -572,6 +616,7 @@
 
     move v7, p5
 
+    .line 19
     invoke-interface/range {v2 .. v7}, Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;->classify([BIIII)Ljava/util/List;
 
     move-result-object p0
@@ -581,6 +626,7 @@
     :cond_0
     const-string p0, "classify(): mClassifier = null"
 
+    .line 20
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -590,10 +636,12 @@
     :catch_0
     move-exception p0
 
+    .line 21
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     const-string p0, "failure of classify()"
 
+    .line 22
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -616,13 +664,16 @@
 
     const/4 v1, 0x0
 
+    .line 23
     :try_start_0
     iget-object v2, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mClassifier:Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;
 
     if-eqz v2, :cond_0
 
+    .line 24
     invoke-virtual {p0, p6}, Lvizinsight/atl/vzimageclassifier/SceneDetector;->setSceneInfo(Lvizinsight/atl/vzimageclassifier/SceneDetectorParam;)V
 
+    .line 25
     invoke-virtual/range {p0 .. p5}, Lvizinsight/atl/vzimageclassifier/SceneDetector;->classify([BIIII)Ljava/util/List;
 
     move-result-object p0
@@ -632,6 +683,7 @@
     :cond_0
     const-string p0, "classify(): mClassifier = null"
 
+    .line 26
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -641,10 +693,12 @@
     :catch_0
     move-exception p0
 
+    .line 27
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     const-string p0, "failure of classify()"
 
+    .line 28
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -1042,11 +1096,13 @@
 
     const-string v0, "SceneDetector"
 
+    .line 6
     :try_start_0
     iget-object p0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mClassifier:Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;
 
     if-eqz p0, :cond_0
 
+    .line 7
     invoke-interface {p0, p1}, Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;->setSceneInfo(Lvizinsight/atl/vzimageclassifier/SceneDetectorParam;)V
 
     goto :goto_0
@@ -1054,6 +1110,7 @@
     :cond_0
     const-string p0, "setSceneInfo(): mClassifier = null"
 
+    .line 8
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1063,10 +1120,12 @@
     :catch_0
     move-exception p0
 
+    .line 9
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     const-string p0, "failure of setSceneInfo()"
 
+    .line 10
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1078,11 +1137,13 @@
 
     const-string v0, "SceneDetector"
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetector;->mClassifier:Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p1, p2}, Lvizinsight/atl/vzimageclassifier/VZAbstractImageClassifier;->setSceneInfo(Lvizinsight/atl/vzimageclassifier/SceneDetectorParam;I)V
 
     goto :goto_0
@@ -1090,6 +1151,7 @@
     :cond_0
     const-string p0, "setSceneInfo(): mClassifier = null"
 
+    .line 3
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1099,10 +1161,12 @@
     :catch_0
     move-exception p0
 
+    .line 4
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     const-string p0, "failure of setSceneInfo()"
 
+    .line 5
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

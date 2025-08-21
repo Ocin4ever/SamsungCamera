@@ -31,38 +31,45 @@
 .method public constructor <init>(Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;)V
     .locals 1
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;->b(Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;)Lcom/samsung/android/camera/core2/util/SemImageFormat;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/PictureDataInfo;->a:Lcom/samsung/android/camera/core2/util/SemImageFormat;
 
+    .line 4
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;->f(Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;)Landroid/util/Size;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/PictureDataInfo;->b:Landroid/util/Size;
 
+    .line 5
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;->a(Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;)Landroid/hardware/camera2/CaptureResult;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/PictureDataInfo;->c:Landroid/hardware/camera2/CaptureResult;
 
+    .line 6
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;->c(Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;)Lcom/samsung/android/camera/core2/container/PictureDataInfo$PicType;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/camera/core2/container/PictureDataInfo;->d:Lcom/samsung/android/camera/core2/container/PictureDataInfo$PicType;
 
+    .line 7
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;->d(Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/camera/core2/container/PictureDataInfo;->e:I
 
+    .line 8
     invoke-static {p1}, Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;->e(Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;)I
 
     move-result p1
@@ -75,6 +82,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;Lcom/samsung/android/camera/core2/container/i2;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/container/PictureDataInfo;-><init>(Lcom/samsung/android/camera/core2/container/PictureDataInfo$Builder;)V
 
     return-void

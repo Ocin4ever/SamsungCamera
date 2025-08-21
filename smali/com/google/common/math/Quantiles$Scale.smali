@@ -22,6 +22,7 @@
 .method private constructor <init>(I)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-lez p1, :cond_0
@@ -36,8 +37,10 @@
     :goto_0
     const-string v1, "Quantile scale must be positive"
 
+    .line 3
     invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 4
     iput p1, p0, Lcom/google/common/math/Quantiles$Scale;->scale:I
 
     return-void
@@ -46,6 +49,7 @@
 .method public synthetic constructor <init>(ILcom/google/common/math/Quantiles$1;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/math/Quantiles$Scale;-><init>(I)V
 
     return-void
@@ -79,6 +83,7 @@
         }
     .end annotation
 
+    .line 2
     new-instance v0, Lcom/google/common/math/Quantiles$ScaleAndIndexes;
 
     iget p0, p0, Lcom/google/common/math/Quantiles$Scale;->scale:I
@@ -97,6 +102,7 @@
 .method public varargs indexes([I)Lcom/google/common/math/Quantiles$ScaleAndIndexes;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/math/Quantiles$ScaleAndIndexes;
 
     iget p0, p0, Lcom/google/common/math/Quantiles$Scale;->scale:I
