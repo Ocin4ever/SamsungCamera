@@ -36,6 +36,10 @@ Implementing custom icons for OneUI 7 is more complex than in previous versions.
 ### Bypass OneUI checks
 SamsungCamera checks the OneUI version at launch. For example, if you try to run the app on OneUI 7, it will fail to open. To resolve this, we replace the OneUI 6.1 hex values with the corresponding OneUI 7 hex values.
 
+### Disable MotionPhoto
+The implementation in OneUI 7 underwent a complete overhaul, making it impractical to fix. Instead, we can simply force the `isMotionPhotoAvailable` method to return 0x0.
+Credit: ([ExtremeXT](https://github.com/ExtremeXT))
+
 ---
 
 ## How to Build?
