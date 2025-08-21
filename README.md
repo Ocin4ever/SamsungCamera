@@ -40,6 +40,10 @@ SamsungCamera checks the OneUI version at launch. For example, if you try to run
 The implementation in OneUI 7 underwent a complete overhaul, making it impractical to fix. Instead, we can simply force the `isMotionPhotoAvailable` method to return 0x0.
 Credit: ([ExtremeXT](https://github.com/ExtremeXT))
 
+### Hardcode getInterfaceVersion()
+This method was deprecated in the OneUI 7 framework. Previously, it returned 0x4, so we will hardcode this value directly into the APK.
+Credit: ([ExtremeXT](https://github.com/ExtremeXT))
+
 ---
 
 ## How to Build?
