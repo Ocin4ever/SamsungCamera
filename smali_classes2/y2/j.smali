@@ -357,11 +357,11 @@
 
     const/16 v9, 0x11
 
-    const v10, 0x11170
+    const v10, 0xeac4
 
-    const v11, 0x27164
+    const v11, 0x24a54
 
-    const v12, 0x557f8
+    const v12, 0x53084
 
     move-object v7, v0
 
