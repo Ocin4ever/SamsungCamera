@@ -15,8 +15,8 @@ This repository aims to **open-source and document patches** for the SamsungCame
 
 This repository provides a **generic set of patches** for SamsungCamera across **OneUI 5, 6, and 7**. 
 
-### OneUI 7
-You are currently on the OneUI 7 branch. To target a different OneUI version, switch to the corresponding branch.
+### OneUI 6
+You are currently on the OneUI 6 branch. To target a different OneUI version, switch to the corresponding branch.
 
 ---
 
