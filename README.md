@@ -22,6 +22,17 @@ You are currently on the OneUI 7 branch. To target a different OneUI version, sw
 
 ## Patches Documentation
 
+### OneUI 7 Icon Patch
+Implementing custom icons for OneUI 7 is more complex than in previous versions. Here’s why:
+
+- **OneUI 6 and earlier** used a custom adaptive color implementation with:
+  - `.webp` images (`tw30_icon_camera.webp`, `qr_scanner.webp`) for classic icons.
+  - A monochrome vector (`sep_monochrome_icon.xml`) for theme compatibility.
+
+- **OneUI 7** aligns with **AOSP standards** ([Android’s Adaptive Icons](https://developer.android.com/training/backward-compatible-ui)).
+  - Icons are now split into **foreground** and **background** layers, stored in the `mipmap` folder.
+  - The `ic_launcher.xml` file manages the new `<adaptive-icon>` structure.
+
 ---
 
 ## How to Build?
