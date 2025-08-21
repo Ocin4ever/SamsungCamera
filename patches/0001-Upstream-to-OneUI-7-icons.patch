@@ -1,0 +1,1059 @@
+From b4d9775de69d7ced6623bfa9cc0d98da96debb8d Mon Sep 17 00:00:00 2001
+From: Ocin4ever <85343782+Ocin4ever@users.noreply.github.com>
+Date: Thu, 21 Aug 2025 12:02:55 +0200
+Subject: [PATCH] Upstream to OneUI 7 icons
+
+---
+ AndroidManifest.xml                              |  13 ++++++-------
+ res/drawable/$ic_camera_mono__0.xml              |   6 ++++++
+ res/drawable/ic_camera_mono.xml                  |   7 +++++++
+ res/drawable/ic_launcher.webp                    | Bin 3496 -> 0 bytes
+ res/drawable/ic_launcher.xml                     |   7 +++++++
+ res/drawable/qr_scanner.xml                      |   7 +++++++
+ res/drawable/qr_scanner_color_theme.xml          |   8 ++++++++
+ res/drawable/sep_monochrome_icon.xml             |   6 ------
+ res/mipmap-hdpi/qr_scanner.webp                  | Bin 1758 -> 0 bytes
+ res/mipmap-hdpi/tw30_icon_camera.webp            | Bin 2720 -> 0 bytes
+ res/mipmap-mdpi/ic_camera_bg.webp                | Bin 0 -> 134 bytes
+ res/mipmap-mdpi/ic_camera_fg.webp                | Bin 0 -> 1068 bytes
+ res/mipmap-mdpi/ic_qr_bg.webp                    | Bin 0 -> 148 bytes
+ res/mipmap-mdpi/ic_qr_fg.webp                    | Bin 0 -> 434 bytes
+ res/mipmap-mdpi/qr_scanner.webp                  | Bin 1074 -> 0 bytes
+ res/mipmap-mdpi/tw30_icon_camera.webp            | Bin 1488 -> 0 bytes
+ res/mipmap-xhdpi/ic_camera_bg.webp               | Bin 0 -> 248 bytes
+ res/mipmap-xhdpi/ic_camera_fg.webp               | Bin 0 -> 2306 bytes
+ res/mipmap-xhdpi/ic_qr_bg.webp                   | Bin 0 -> 294 bytes
+ res/mipmap-xhdpi/ic_qr_fg.webp                   | Bin 0 -> 600 bytes
+ res/mipmap-xxhdpi/ic_camera_bg.webp              | Bin 0 -> 602 bytes
+ res/mipmap-xxhdpi/ic_camera_fg.webp              | Bin 0 -> 3490 bytes
+ res/mipmap-xxhdpi/ic_qr_bg.webp                  | Bin 0 -> 610 bytes
+ res/mipmap-xxhdpi/ic_qr_fg.webp                  | Bin 0 -> 860 bytes
+ res/mipmap-xxhdpi/qr_scanner.webp                | Bin 3148 -> 0 bytes
+ res/mipmap-xxhdpi/tw30_icon_camera.webp          | Bin 4320 -> 0 bytes
+ res/values/public.xml                            |   9 +++++++--
+ res/xml/setting.xml                              |   2 +-
+ .../android/camera/core2/R$drawable.smali        |   4 +---
+ .../processor/PostProcessNotification.smali      |   2 +-
+ .../util/PostProcessorLoggingService.smali       |   2 +-
+ .../com/sec/android/app/camera/R$drawable.smali  |   6 ++++++
+ .../com/sec/android/app/camera/R$mipmap.smali    |   8 ++++++--
+ 33 files changed, 64 insertions(+), 23 deletions(-)
+ create mode 100644 res/drawable/$ic_camera_mono__0.xml
+ create mode 100644 res/drawable/ic_camera_mono.xml
+ delete mode 100644 res/drawable/ic_launcher.webp
+ create mode 100644 res/drawable/ic_launcher.xml
+ create mode 100644 res/drawable/qr_scanner.xml
+ create mode 100644 res/drawable/qr_scanner_color_theme.xml
+ delete mode 100644 res/drawable/sep_monochrome_icon.xml
+ delete mode 100644 res/mipmap-hdpi/qr_scanner.webp
+ delete mode 100644 res/mipmap-hdpi/tw30_icon_camera.webp
+ create mode 100644 res/mipmap-mdpi/ic_camera_bg.webp
+ create mode 100644 res/mipmap-mdpi/ic_camera_fg.webp
+ create mode 100644 res/mipmap-mdpi/ic_qr_bg.webp
+ create mode 100644 res/mipmap-mdpi/ic_qr_fg.webp
+ delete mode 100644 res/mipmap-mdpi/qr_scanner.webp
+ delete mode 100644 res/mipmap-mdpi/tw30_icon_camera.webp
+ create mode 100644 res/mipmap-xhdpi/ic_camera_bg.webp
+ create mode 100644 res/mipmap-xhdpi/ic_camera_fg.webp
+ create mode 100644 res/mipmap-xhdpi/ic_qr_bg.webp
+ create mode 100644 res/mipmap-xhdpi/ic_qr_fg.webp
+ create mode 100644 res/mipmap-xxhdpi/ic_camera_bg.webp
+ create mode 100644 res/mipmap-xxhdpi/ic_camera_fg.webp
+ create mode 100644 res/mipmap-xxhdpi/ic_qr_bg.webp
+ create mode 100644 res/mipmap-xxhdpi/ic_qr_fg.webp
+ delete mode 100644 res/mipmap-xxhdpi/qr_scanner.webp
+ delete mode 100644 res/mipmap-xxhdpi/tw30_icon_camera.webp
+
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index a72e037e..17127ced 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -158,17 +158,16 @@
+     <uses-permission android:name="com.samsung.android.app.deepsky.donation.provider.permission.DONATE_ACTION"/>
+     <uses-permission android:name="com.samsung.android.app.deepsky.permission.ACCESS_SERVICE"/>
+     <uses-permission android:name="com.samsung.android.app.deepsky.feedback.provider.permission.SUBMIT_FEEDBACK"/>
+-    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:icon="@mipmap/tw30_icon_camera" android:label="@string/app_name" android:largeHeap="true" android:name="com.sec.android.app.camera.CameraApplication" android:resizeableActivity="true" android:supportsRtl="true" android:usesCleartextTraffic="true">
++    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.sec.android.app.camera.CameraApplication" android:resizeableActivity="true" android:supportsRtl="true" android:usesCleartextTraffic="true">
+         <meta-data android:name="android.max_aspect" android:value="2.1"/>
+         <meta-data android:name="com.sec.android.sdk.cover.MODE" android:value="0"/>
+-        <meta-data android:name="com.samsung.android.icon_container.has_icon_container" android:value="true"/>
+         <meta-data android:name="com.samsung.android.bixby.pathRuleAppName" android:value="Camera"/>
+         <meta-data android:name="com.samsung.android.bixby.capsuleId" android:value="viv.cameraApp"/>
+         <meta-data android:name="com.samsung.android.sdk.bixby2.companionApp" android:value="true"/>
+         <meta-data android:name="SamsungBasicInteraction" android:value="SEP10"/>
+         <meta-data android:name="com.samsung.android.supports_pop_over" android:value="false"/>
++        <meta-data android:name="com.sec.android.app.launcher.icon_theme" android:value="themeColor"/>
+         <meta-data android:name="com.samsung.android.hasZippedOverlays" android:value="true"/>
+-        <meta-data android:name="com.samsung.android.icon_container.feature_appicon" android:value="COLOR_NO_ADAPTIVE"/>
+         <meta-data android:name="theming-meta" android:resource="@xml/metadata_colorpalette"/>
+         <receiver android:exported="true" android:name="com.sec.android.app.camera.receiver.LazyBootCompleteReceiver">
+             <intent-filter>
+@@ -210,7 +209,7 @@
+             </intent-filter>
+             <meta-data android:name="android.appwidget.provider" android:resource="@xml/camera_widget_info"/>
+         </receiver>
+-        <activity android:clearTaskOnLaunch="true" android:configChanges="mcc|mnc|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density" android:exported="true" android:icon="@mipmap/tw30_icon_camera" android:label="@string/camera_label" android:launchMode="standard" android:name="com.sec.android.app.camera.Camera" android:screenOrientation="sensor" android:showWhenLocked="true" android:taskAffinity="android.task.camera" android:theme="@style/AppCompat.ListTheme.FullScreen.Black" android:visibleToInstantApps="true" android:windowSoftInputMode="adjustNothing">
++        <activity android:clearTaskOnLaunch="true" android:configChanges="mcc|mnc|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density" android:exported="true" android:icon="@drawable/ic_launcher" android:label="@string/camera_label" android:launchMode="standard" android:name="com.sec.android.app.camera.Camera" android:screenOrientation="sensor" android:showWhenLocked="true" android:taskAffinity="android.task.camera" android:theme="@style/AppCompat.ListTheme.FullScreen.Black" android:visibleToInstantApps="true" android:windowSoftInputMode="adjustNothing">
+             <layout android:minHeight="@dimen/window_min_height" android:minWidth="@dimen/window_min_width"/>
+             <meta-data android:name="assistant" android:resource="@xml/assistant"/>
+             <meta-data android:name="com.samsung.android.rotation.animation.disable" android:value="true"/>
+@@ -241,7 +240,7 @@
+             <meta-data android:name="com.samsung.keyguard.SHOW_WHEN_LOCKED_SHORTCUT" android:value="true"/>
+             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
+         </activity>
+-        <activity-alias android:exported="false" android:icon="@mipmap/tw30_icon_camera" android:label="@string/widget_title" android:name="com.sec.android.app.camera.Widget" android:targetActivity="com.sec.android.app.camera.Camera">
++        <activity-alias android:exported="false" android:icon="@drawable/ic_launcher" android:label="@string/widget_title" android:name="com.sec.android.app.camera.Widget" android:targetActivity="com.sec.android.app.camera.Camera">
+             <intent-filter>
+                 <action android:name="com.sec.android.app.camera.action.WIDGET_MODE_CAMERA_LAUNCH"/>
+                 <category android:name="android.intent.category.DEFAULT"/>
+@@ -343,13 +342,13 @@
+                 <category android:name="android.intent.category.DEFAULT"/>
+             </intent-filter>
+         </activity>
+-        <activity android:configChanges="mcc|mnc|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density" android:exported="true" android:icon="@mipmap/tw30_icon_camera" android:label="@string/widget_title" android:launchMode="singleTop" android:lockTaskMode="never" android:name="com.sec.android.app.camera.WidgetActivity" android:resizeableActivity="false" android:screenOrientation="user" android:taskAffinity="android.task.camera_widget" android:theme="@style/AppCompat.ListTheme.FullScreen.Black">
++        <activity android:configChanges="mcc|mnc|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density" android:exported="true" android:icon="@drawable/ic_launcher" android:label="@string/widget_title" android:launchMode="singleTop" android:lockTaskMode="never" android:name="com.sec.android.app.camera.WidgetActivity" android:resizeableActivity="false" android:screenOrientation="user" android:taskAffinity="android.task.camera_widget" android:theme="@style/AppCompat.ListTheme.FullScreen.Black">
+             <intent-filter>
+                 <action android:name="com.sec.android.app.camera.action.WIDGET_MODE_CAMERA"/>
+                 <category android:name="android.intent.category.DEFAULT"/>
+             </intent-filter>
+         </activity>
+-        <activity android:configChanges="mcc|mnc|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density" android:exported="true" android:icon="@mipmap/qr_scanner" android:label="@string/qr_tile_label" android:launchMode="singleTop" android:lockTaskMode="never" android:name="com.sec.android.app.camera.QrScannerActivity" android:resizeableActivity="false" android:screenOrientation="user" android:taskAffinity="android.task.camera_qr_scanner" android:theme="@style/AppCompat.ListTheme.FullScreen.Black">
++        <activity android:configChanges="mcc|mnc|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density" android:exported="true" android:icon="@drawable/qr_scanner" android:label="@string/qr_tile_label" android:launchMode="singleTop" android:lockTaskMode="never" android:name="com.sec.android.app.camera.QrScannerActivity" android:resizeableActivity="false" android:screenOrientation="user" android:taskAffinity="android.task.camera_qr_scanner" android:theme="@style/AppCompat.ListTheme.FullScreen.Black">
+             <intent-filter>
+                 <action android:name="com.sec.android.app.camera.action.SCAN_QR_CODE"/>
+                 <category android:name="android.intent.category.DEFAULT"/>
+diff --git a/res/drawable/$ic_camera_mono__0.xml b/res/drawable/$ic_camera_mono__0.xml
+new file mode 100644
+index 00000000..6ba40de3
+--- /dev/null
++++ b/res/drawable/$ic_camera_mono__0.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<gradient android:type="linear" android:startX="54.0" android:startY="54.0" android:endX="54.0" android:endY="72.62"
++  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
++    <item android:color="#ff000000" android:offset="0.0" />
++    <item android:color="#ff000000" android:offset="1.0" />
++</gradient>
+diff --git a/res/drawable/ic_camera_mono.xml b/res/drawable/ic_camera_mono.xml
+new file mode 100644
+index 00000000..adc66db4
+--- /dev/null
++++ b/res/drawable/ic_camera_mono.xml
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<vector android:height="108.0dip" android:width="108.0dip" android:viewportWidth="108.0" android:viewportHeight="108.0"
++  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
++    <path android:fillColor="@drawable/$ic_camera_mono__0" android:pathData="M67.26,35.38C70.42,35.38 71.57,35.71 72.72,36.33C73.88,36.94 74.79,37.85 75.4,39.01C76.02,40.16 76.35,41.31 76.35,44.47L76.35,63.54C76.35,66.69 76.02,67.84 75.4,69C74.79,70.15 73.88,71.06 72.72,71.67C71.57,72.29 70.42,72.62 67.26,72.62L40.75,72.62C37.59,72.62 36.44,72.29 35.29,71.67C34.13,71.06 33.22,70.15 32.61,69C31.99,67.84 31.66,66.69 31.66,63.54L31.66,44.47C31.66,41.31 31.99,40.16 32.61,39.01C33.22,37.85 34.13,36.94 35.29,36.33C36.44,35.71 37.59,35.38 40.75,35.38L67.26,35.38ZM54,41.75C47.24,41.75 41.75,47.23 41.75,54C41.75,60.77 47.24,66.25 54,66.25C60.77,66.25 66.25,60.77 66.25,54C66.25,47.23 60.77,41.75 54,41.75ZM38.81,40.26C37.58,40.26 36.58,41.25 36.58,42.47C36.58,43.7 37.58,44.69 38.81,44.69C40.04,44.69 41.04,43.7 41.04,42.47C41.04,41.25 40.04,40.26 38.81,40.26Z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
++    <path android:fillColor="#ff000000" android:pathData="M67.26,35.38C70.42,35.38 71.57,35.71 72.72,36.33C73.88,36.94 74.79,37.85 75.4,39.01C76.02,40.16 76.35,41.31 76.35,44.47L76.35,63.54C76.35,66.69 76.02,67.84 75.4,69C74.79,70.15 73.88,71.06 72.72,71.67C71.57,72.29 70.42,72.62 67.26,72.62L40.75,72.62C37.59,72.62 36.44,72.29 35.29,71.67C34.13,71.06 33.22,70.15 32.61,69C31.99,67.84 31.66,66.69 31.66,63.54L31.66,44.47C31.66,41.31 31.99,40.16 32.61,39.01C33.22,37.85 34.13,36.94 35.29,36.33C36.44,35.71 37.59,35.38 40.75,35.38L67.26,35.38ZM54,41.75C47.24,41.75 41.75,47.23 41.75,54C41.75,60.77 47.24,66.25 54,66.25C60.77,66.25 66.25,60.77 66.25,54C66.25,47.23 60.77,41.75 54,41.75ZM38.81,40.26C37.58,40.26 36.58,41.25 36.58,42.47C36.58,43.7 37.58,44.69 38.81,44.69C40.04,44.69 41.04,43.7 41.04,42.47C41.04,41.25 40.04,40.26 38.81,40.26Z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
++    <path android:fillColor="#ff000000" android:pathData="M54,41.59C60.86,41.59 66.41,47.14 66.41,54C66.41,60.86 60.86,66.41 54,66.41C47.14,66.41 41.59,60.86 41.59,54C41.59,47.14 47.14,41.59 54,41.59ZM54,49.03C51.26,49.03 49.03,51.26 49.03,54C49.03,56.74 51.26,58.97 54,58.97C56.74,58.97 58.97,56.74 58.97,54C58.97,51.26 56.74,49.03 54,49.03Z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:strokeAlpha="0.5" android:fillAlpha="0.5" android:fillType="evenOdd" />
++</vector>
+diff --git a/res/drawable/ic_launcher.webp b/res/drawable/ic_launcher.webp
+deleted file mode 100644
+index ad49b39b2ae99bcbe617e836aedf3ba25df937c1..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 3496
+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
+W9>RSF+`Tsli=(vzOCTKq0002p>FtvM
+
+diff --git a/res/drawable/ic_launcher.xml b/res/drawable/ic_launcher.xml
+new file mode 100644
+index 00000000..45bdc996
+--- /dev/null
++++ b/res/drawable/ic_launcher.xml
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <background android:drawable="@mipmap/ic_camera_bg" />
++    <foreground android:drawable="@mipmap/ic_camera_fg" />
++    <monochrome android:drawable="@drawable/ic_camera_mono" />
++</adaptive-icon>
+diff --git a/res/drawable/qr_scanner.xml b/res/drawable/qr_scanner.xml
+new file mode 100644
+index 00000000..78315206
+--- /dev/null
++++ b/res/drawable/qr_scanner.xml
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <background android:drawable="@mipmap/ic_qr_bg" />
++    <foreground android:drawable="@mipmap/ic_qr_fg" />
++    <monochrome android:drawable="@drawable/qr_scanner_color_theme" />
++</adaptive-icon>
+diff --git a/res/drawable/qr_scanner_color_theme.xml b/res/drawable/qr_scanner_color_theme.xml
+new file mode 100644
+index 00000000..ff7ac902
+--- /dev/null
++++ b/res/drawable/qr_scanner_color_theme.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="utf-8"?>
++<vector android:height="108.0dip" android:width="108.0dip" android:viewportWidth="108.0" android:viewportHeight="108.0"
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="#ff000000" android:pathData="M39.65,69.31L45.52,69.31L45.52,63.35L39.65,63.35L39.65,69.31ZM45.42,59.66L39.75,59.66C37.68,59.66 36,61.36 36,63.46L36,69.2C36,71.3 37.68,73 39.75,73L45.42,73C47.49,73 49.17,71.3 49.17,69.2L49.17,63.46C49.17,61.36 47.49,59.66 45.42,59.66L45.42,59.66Z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
++    <path android:fillColor="#ff000000" android:pathData="M63.48,44.65L69.35,44.65L69.35,38.69L63.48,38.69L63.48,44.65ZM69.25,48.34C71.32,48.34 73,46.64 73,44.54L73,38.8C73,36.7 71.32,35 69.25,35L63.58,35C61.51,35 59.83,36.7 59.83,38.8L59.83,44.54C59.83,46.64 61.51,48.34 63.58,48.34L69.25,48.34Z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
++    <path android:fillColor="#ff000000" android:pathData="M39.65,44.65L45.52,44.65L45.52,38.69L39.65,38.69L39.65,44.65ZM36,38.8L36,44.54C36,46.64 37.68,48.34 39.75,48.34L45.42,48.34C47.49,48.34 49.17,46.64 49.17,44.54L49.17,38.8C49.17,36.7 47.49,35 45.42,35L39.75,35C37.68,35 36,36.7 36,38.8L36,38.8Z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
++    <path android:fillColor="#ff000000" android:pathData="M69.87,64.61L69.87,68.81L60.54,68.81L60.54,64.61L69.87,64.61ZM60.54,60.41L60.54,64.61L56.4,64.61L56.4,60.41L60.54,60.41ZM69.87,56.2L69.87,60.41L60.54,60.41L60.54,56.2L69.87,56.2ZM37.72,56.2L41.87,56.2L41.87,52L37.72,52L37.72,56.2ZM52.25,41.48L56.4,41.48L56.4,37.28L52.25,37.28L52.25,41.48ZM52.25,68.81L56.4,68.81L56.4,64.61L52.25,64.61L52.25,68.81ZM44.97,56.2L52.25,56.2L52.25,52L44.97,52L44.97,56.2ZM52.25,52L56.4,52L56.4,44.62L52.25,44.62L52.25,52ZM52.25,60.41L56.4,60.41L56.4,56.2L52.25,56.2L52.25,60.41ZM56.4,56.2L60.54,56.2L60.54,52L56.4,52L56.4,56.2Z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
++</vector>
+diff --git a/res/drawable/sep_monochrome_icon.xml b/res/drawable/sep_monochrome_icon.xml
+deleted file mode 100644
+index 95e3aacf..00000000
+--- a/res/drawable/sep_monochrome_icon.xml
++++ /dev/null
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<vector android:height="108.0dip" android:width="108.0dip" android:viewportWidth="108.0" android:viewportHeight="108.0"
+-  xmlns:android="http://schemas.android.com/apk/res/android">
+-    <path android:fillColor="#ff9d9cb2" android:pathData="M81.57,26C74.96,19.35 65.06,18 54,18C42.93,18 33.04,19.35 26.43,26C21.17,31.3 18,39.97 18,54C18,68.03 21.17,76.7 26.43,82C33.04,88.65 42.94,90 54,90C65.06,90 74.96,88.65 81.56,82C86.83,76.7 90,68.03 90,54C90,39.97 86.83,31.3 81.57,26Z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:strokeAlpha="0.0" android:fillAlpha="0.0" android:fillType="evenOdd" />
+-    <path android:fillColor="#ff000000" android:pathData="M69,37C72.87,37 76,40.13 76,44L76,64C76,67.87 72.87,71 69,71L39,71C35.13,71 32,67.87 32,64L32,44C32,40.13 35.13,37 39,37L69,37ZM54,45C49.03,45 45,49.03 45,54C45,58.97 49.03,63 54,63C58.97,63 63,58.97 63,54C63,49.03 58.97,45 54,45ZM68,41C65.79,41 64,42.79 64,45C64,47.21 65.79,49 68,49C70.21,49 72,47.21 72,45C72,42.79 70.21,41 68,41Z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
+-</vector>
+diff --git a/res/mipmap-hdpi/qr_scanner.webp b/res/mipmap-hdpi/qr_scanner.webp
+deleted file mode 100644
+index 6957e6e4ff8fcd9020199bcaaf370207ec67012a..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 1758
+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
+AW&i*H
+
+diff --git a/res/mipmap-hdpi/tw30_icon_camera.webp b/res/mipmap-hdpi/tw30_icon_camera.webp
+deleted file mode 100644
+index 89db413b7da1b157c4db8096db202239d8f4b4d8..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 2720
+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
+aB{vRGo__i$Y%y~i{o(y9RIy@(00006Lo0Ov
+
+diff --git a/res/mipmap-mdpi/ic_camera_bg.webp b/res/mipmap-mdpi/ic_camera_bg.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..9d62e97e288c6efc017d8861ef91caa6a85da0f8
+GIT binary patch
+literal 134
+zcmV;10D1pXNk&F~00012MM6+kP&goR0000`1^}G_Dr^9306tMDkw+t<p`jqC0B{Nk
+zX#fBO_qdB0cP#C5es5!aYQyoHx%jd5MIgDa`N^H`A>aW1_iLt4W%^xO#d&QZ9Y0#>
+o;0%e3)t1F|F8>=n;(Lq@4C48B&+{y#?C0z|X&_(<)ZhRB01S;eUH||9
+
+literal 0
+HcmV?d00001
+
+diff --git a/res/mipmap-mdpi/ic_camera_fg.webp b/res/mipmap-mdpi/ic_camera_fg.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..7855fb392a71b42b7570803cd7b43a4cbc3246b8
+GIT binary patch
+literal 1068
+zcmV+{1k?LcNk&E_1ONb6MM6+kP&iB&1ONapYrq;1H|46fZB<$OynD_Q90JgTwB#ay
+zeY$f`4L7lEyUITI{X_;2=)xl<67WDp8Qb{YJ+33kR+ZUfxMxHDRb=r3;Ljb7+engC
+zr$2u&#DV!LBUv(;eP#{-5C8%2O*h~R{D4Qg1E8F4z!vyR0{np`aIg6<raMS?knTG$
+z0RA=q(ZBryAgK8Vgz4_HVk$%u|EAGmMiOK|lnAG8H$tQmEr!w*XJI5sIjhN=v-J;<
+zd7n>7EUeTNze)nsQg&=aQPR!AnijURFhBytKn%pl_e78k5s;`P<i07<1;QbhF=7D_
+zWCSwOuOY?)0-`XKqHu{*NuI8)0i$b4M%3WxqPk-9{XZ?dVxNyrGsPxq@HA}=q;xG{
+zbS-%^QG=&z(zI`su2_m87`tKMm#42ks{fMq^Vj^eHs7v$-sf<#TD0cd^=Gr$k0MH_
+zAUFwOQWs|3%4Pp_?(d$npV4w`waU8p`RJzcqjV7i<rwNeTFj28>(1CK>)Vvd*#C9Z
+z9ln4}($o7S$z-*#Js#BaV81>wNV~R8ahmQDPjGja2<}8?Q>X4qU8oCnFHXH>Gt_bT
+zq3oM%m>E9vPDKA1xs9aA)yr@kdcu}X&!V78kuV5FsUZI|T9TWdX17_^8EH>T&n=;x
+zPZV`7&uU>7tDI96zFUTcX(ZQDNS=jpB;iM)<5t$J<5b~y%(oay-(xAW$|u~YZJCC$
+z&l4!i;<-j=W5EE**zBk)8JTS=FI4v!-c7FMEmX18>P?VVtT5-%DL0zK@McPWm_lH<
+z!)p>8Hs#Q`A$>MO`InEMWceEBqBn`4)2uP+Bm7tp)N2IWFK<#ov*Ido7G#n^Aq~qo
+zU;n>)8V<Gxym1*8P(=sS^7sDGla~=h?DEC^tU^3XUf|n}+xH$meqq3{-wU!N99JvQ
+ze0}idod=JeM_|FzR+nf-y}<7)*9LFh9eM^~mltGIG_%0>3l}e69sIXaS5@B)Dgexi
+zCI&1IoI8K%Pi@LtDnYdaG0_BpW2euY9av2PsW$|HplAZX(c>pho~nVWz{@~DOa~4h
+zIdrf(35{Z2?AgC>Z-0aM7ct;R|L$GeyDNo%Wfo}Kxno-dyX&jWel#y=8`2wrF>ONx
+zZ5w@I$h2(~waxd#GHdh2?aO>!5kxfW%S7&@1MR`ENgutD#vY3n@oa=KmCdY@Iz@rT
+ziVjPHFdGB&lxj&3R%82AeyEmZNf1_ZmMnf_d#V>&m`Cc|sBL5H=a`b;TudRI1*{cx
+z5`Obps{hPkD@W>-<3yckGeuU0Pvwk8c&<OFM2n6TXS*HiU&C>@vx`Tf8sWUKLiEmP
+m&-7Nr(7J+%(>>8no$rRIASG?O*2f@HZzEK}4YlUBSxgYJDG0y-
+
+literal 0
+HcmV?d00001
+
+diff --git a/res/mipmap-mdpi/ic_qr_bg.webp b/res/mipmap-mdpi/ic_qr_bg.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..b3016e4cab86c7e8e6fdea5b95bf4eeaed07aa85
+GIT binary patch
+literal 148
+zcmV;F0BiqJNk&GD00012MM6+kP&gof0002+1^}G_Dr^9306tMDkw+t<p`jqC0B{Nk
+zX>Q+x_Ye%3z5c)jXJRitR@OWeBfhMw&_pE470vuc+O4bsu@=w({`Y?0;LB}-DNUoY
+zVDV)&8Z!B@<klrrWNVr}qckoh-t@leGdS>VM`Xd|n2{0cO}#+!a`gSh88U$Y0001Y
+CM?aYW
+
+literal 0
+HcmV?d00001
+
+diff --git a/res/mipmap-mdpi/ic_qr_fg.webp b/res/mipmap-mdpi/ic_qr_fg.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..11dd63044784817cc3c0f21aedf5c603b80b19c1
+GIT binary patch
+literal 434
+zcmV;j0Zsl=Nk&Gh0RRA3MM6+kP&iDT0RR9mYrq;1HAqq<Ns^@a|EC3#$PGNZXHIPv
+z0fn};W7G3nNn_hH$wsxKt;9IZwryrB+qP}vI&vh*i6Zf^=7f7f{`5?^Szpk$zRior
+zxIxE&E7)?XjnWiy;3}2Z7<z?^Tn`x-`nyz?i$YOt5{3uEaG91FL__P|Ns_p0D`im_
+zLR;<$mN%$xCtLnnhcn28R^;{%1VO9t3MsUf_W$Mz>iZW!%Tim`A93m*i`cd<Y__d4
+zXr(O*9S2F+Eef^|s85?)exXigVCo+(V|(?nn1IW4ESizhOPUs4V&>zD2WmrLNV4H?
+z<KMP4tZQLn*z;-05Y0t%!X;{3yd*agOrot!?8bFJHDXFF>49Rm*f~$an^H?Wk{)Qy
+z9Nfc}jYUa}wKeqLf)&4((}4%SEujXIi09Wz&bfZzi}=7ftzR?m-1ySab3SzwZH047
+z#F;oJ<1qAEmZu*Zd5wNy<h{oWBk!rchL-gtf*B`5t)G)M)zdHf_d-Es5(WnrD$fZy
+cjC{s?aSJu`+4*rJ-wAx_U55mWMSqbN0KL)A00000
+
+literal 0
+HcmV?d00001
+
+diff --git a/res/mipmap-mdpi/qr_scanner.webp b/res/mipmap-mdpi/qr_scanner.webp
+deleted file mode 100644
+index 2cf1f6ae4c109cd751639d1be4f3d51e07c2aee9..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 1074
+zcmV-21kL+WNk&F01ONb6MM6+kP&iB-1ONapN5ByfPX#%WBt=p#{ton)lkYmy)nL#z
+zk|SSXa{LM2mq2JF$&r+!#qgFtM?V#ABS})EJdl|E_u_nc9W`c}h)4ig12t{_{c9Ht
+zq6U8Z!z^kB4GcrO23WxHPXVZD*Xe?fz9;~{{Rx1ysR`B$P?G{RKm=1m)({8?zyj)0
+z;J5;%27rJ#t~LP-i<y~00AWZQ7$6YG%qT$(oUR&Z!w?VzfG~>z0K^czkw$sO`9~3+
+z7hU5dbc!MzqSwVqq9j#>HRqop;yj|qrG9ZzI%amf>KGC_MUh{5ab{C<9cPIX;bc5X
+z*k5|$wyXYn?$7%(yq}lVi_b7fw6?vFq{`a1ZEI$YS?`W*du`*dv2A;9v!^RbrE&q^
+zAJKmZZX_v^9Lsoo-Sq@Vx4H4b-mcb$`r7LM<T9bUw!WdYt9NjG&N0}`P<P8e(he=%
+zLo-H9^)<TWI~RRZe$BSIWGJ_N){p59mkj21OzWEO`A>$!$h?-xW(uHYXc()ZK*E^P
+z=zj_*jH>Rfp}>Ot&iQ5vu;zK09tyM`+0X0$U}4&;g95I@`%CBs%|*C23Ot1WWpRV&
+zP60q4Sr8U9X?XKIVxb#}KNY^jUyoqs$hc2xO%5=lasB0T;b~)KNO>XfE+lu2@U$vJ
+zeRamc5GhqI6Owj>Y!SdM;_vH(q}5+Z)sTa3wL3!EYl(D7OH%4|(4uxqV97@Scp-pH
+zi6;Wc{Rp5~0QZ$zoVkB$Cqu$MfCK?#NIV8mO3eHUz&-VUueovd@7ovVU%v79fPdln
+zH!y6A;VuoQL-GLNrU0^ukMCxVC4MS^m^=Up0*F%UYSr*iNP91NNDic>skJs}c)LR8
+z5J~*rEVJRKT0<Ral(E)p|9cs(*y^>Zl+@~LNv9t<G0_0x%ZR1;PjPHC051GZ8fvS_
+zS5m&KuCm2{)=`iOR1kki4e!K0<_D=jk>9_?I`#_S0&}tmuZWq?3gDp6qdmwLT&3f{
+z65tYX%98Mk{xF|g0v!6|P46KlUnmjYQnX&E))uw(wy1B=^6c<-0N8P&(4dA^9Y=+?
+zB?-)2l*Jsmi}_5Jx6e9SyOdP_*jD`^W-~9;HLT%^z@nWCZ3Iwa%&`CeFUAav8}R5d
+z^WCe!ZT42FW8DA$UsF%}H|Mn2p~XSB9lEvFOXmd^UtH)2fPCT;dw^JC&fViJPs5Pb
+z`YlGtTKdD(!gR&~8kK%;letEQG-<AHKOI{cX3_enzsA<L`s?kV0Px%NdK>K&c<uJ=
+zN37W&*|T4>X8&l<e%6}(wJrO7jln@s^M_Gu<{_5MXL{ysnHSkHzrw8Vd0KyyYv7h9
+sOc|Q*b^4p{bq>uq2Ai80818CqsH?56BA2NOwRH`xUBd$tbB<;J05~NU9{>OV
+
+diff --git a/res/mipmap-mdpi/tw30_icon_camera.webp b/res/mipmap-mdpi/tw30_icon_camera.webp
+deleted file mode 100644
+index 4b437bfd618224c5c67b2ee810987fd4e9fc653d..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 1488
+zcmV;>1uyziNk&G<1pok7MM6+kP&il$0000G0000-002h-06|PpNT>k-00DrjZTtD=
+z3%A<XvgP`pK-Of^p3Yfw0=4ZE;A-2QY}>ZoU)=Whdk-KY*tl)vh^{VH8)o(i^w)$N
+zY#BA}gJTO@CwCtocPCp5V}tEA88$-%af}q-bjbdZ!=`wN&z-Uz#vwap(m%<Jy^LFW
+zjk15xjxw$p)&7+__k(fHN3Qx$f`*uY3<dpxW{nBSn&wxrM@&$TVt?U3&xB>(-?w@u
+zFm*n~F`=>g5PBunRj9W@COC!OYs#}|&*7d5nD7*MP@ai*rgXC~fLPq>5Y)M^?-AT9
+ziF6DiI-(Q|DMbAk`iU+uoKrXhNthmm-j2eagCeIAMMWoy&KVRlJ1BNeP#j;QxPC(M
+z^o8OJ#wX4N&MU_-Kf)RRIP(!_eZX0-aMn+p^&Dq^!P)QV9Ay8+sRwZC6P$VpseYq6
+z1hqKzEmplv1>)u7^dm6+5njJWR>A!vOg{_LU;DxI`!MGZFy|pC=QAqo^CBXWnfmzY
+zHOlCJk;=JLEIVZq@rV@Pbod{KP4N<OOoYLfS<^8zzPNpQ|M_`;y1h6))KQaZGepoI
+zLsn2YAo>FU0B{-rodGIH07w8nNgj(tBB7xgIfkex1cbE!Vu=91Zu~&*a^$_U@tg8H
+ztaFV#7nG;XZ`;2pKg|08bB2Fn{GH$d`ZxPy?;HLr`mb0A>j$dW_|IWaKo8mvNzd6Y
+zf^XW7`oHVFmcQ%gF@HVklgN~LG9_Su?>Y50&O_5b^u58qRe#y~#&r#ToR)#7y4AUK
+zlJ|@l2ZGj`6AtS+vn`=LE=HMCuC?XtaIP8Vtto^^%WsC+;#R=22<X_OT@&Uc87N}v
+z=r-%W4%sy#Z6=x~+7)1g@3hXU0092;t|@I}84$<rcaK*kc@il}?qdiq*Y}jT-mx>R
+zvgTqk0&)>X3F9Z35g4j`yfyX6v@mBQu>2VUiDD$f?KnQ1(1j*$Z&fqQ`QbDvWHCtN
+ziF+-?XM{)6^Q#hq1d*E)zv%<N|Mh+^L`^^Tz|^8*k)B^{q+n7QP;)f$pyhR%dDYL&
+zej}H=@=vQlbC!dkbFPPa3^yvFJx-vyUZ$VPqYM{vP3R%w%LP@q9RbE+S&|6fXVQbC
+zx$VCB9D5}aeBORIJo(A2!NGE*1Ca!IZtm4HzG^nge&?oG)!U~u@61pgGN6Sk{_ku&
+z<i#10*~Tm~zo3+mB9!U7c&md(`aky7oT!5t38!f2MIj5*VaVY-?LXd6h-A7}3;m#T
+zb>jc{lY^Y?A5J^$@n6Rx=xmgNg7fTf32HjO!TGVrG@s17R&0xO46SAkJZ?0h)ntJl
+zvrr{cI<V^@<~QRRPv4|7RfT{5MeYC6)?BtHaNch;yBFx?<q#SWwSNAbm?PU-kJg%{
+zzP-fM82K9Z?NdH&!A{j{&1$v}@szwiLMl9ZxRBKvJ_er_Ek3~d`gTfp7jb;>=c|vQ
+zj>~Hw-fP`#AIf%wGP9Qw(f0py!}Vj&blTnApcv6*IXpI_wqb#^`~zL(%KsZS7L)(B
+zsRg`cZit%_^Ia$}ljx53)1Nu0*W_4PHCsW{^Tj=J7qJ5`vtc?Oq%zcr9Ly$+6~jA@
+z0Rt@|UwO$6J=l!n35mClBLDpTAnnuGtxVX1nU>`W0{?S-09HBMwIAv+Pd|(Ql^ltr
+z2{A{YByIu$wGG7n`}Z@7=9dt*IxEu%IT{Gx7Lp9z1Ap*p;Toy8)Uar2R~xQvYyvB)
+z`Qgz`7*QGmlQgfvuTDiHFY~jHNBnt+N4Zw}2pBN`EvXrPoiYb-ltIsB(OGVZ>%8aj
+zytCeQuHo6Zbr?g$;!NN_2sXW1R~ZZdW=HJ#NsSVdkRM|F&DonZkDYc1##g&XE+Pt5
+qWy{=QqQ+tyn#_&OBE(pUQ_!3HkJJa3nfEH+{Ye`kYmVZj0002QKH_u$
+
+diff --git a/res/mipmap-xhdpi/ic_camera_bg.webp b/res/mipmap-xhdpi/ic_camera_bg.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..5bc516df6a09b077c67427e10f4b3cb127d19f9b
+GIT binary patch
+literal 248
+zcmV<U00;k4Nk&HS00012MM6+kP&gpu0000`5CEM4D%b$n06tMDl1C$=p`jos0B{Nk
+zX>Q?gNiFytpHbj|PhcMVWaK^e$;f-{mUr(xMNi&&cb%hcAEG+RwqzS7+W}Thvol#X
+z*b1_3nVQMAz*UoM$Tm&30<4>6X0mOt6=d5pHIr?Ct0vi*teb2FSvJe3woXIeY@CO_
+z**On=vT`2#RsaD0{vDdccIkJ>FdY<LDx%K!tc&+f3#SGDur4Tg;7>XoBa;Jg0I?<r
+y%)`sV>KJwzy^v_hGtMaWC)&ZIjsHX}01`Y_rdI}c4rFVPeZeCi-~Wri0002WdTj*&
+
+literal 0
+HcmV?d00001
+
+diff --git a/res/mipmap-xhdpi/ic_camera_fg.webp b/res/mipmap-xhdpi/ic_camera_fg.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..9f76107dabea8433a3e9d60c174a223cc35e2972
+GIT binary patch
+literal 2306
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/res/mipmap-xhdpi/ic_qr_bg.webp b/res/mipmap-xhdpi/ic_qr_bg.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..709f9a8e34aaf291e61882414bebfe7dc64beeaa
+GIT binary patch
+literal 294
+zcmV+>0ondiNk&E<0RRA3MM6+kP&gnG0RRB75&)e6D%b$n06tMDl1C$=p`jos0B{Nk
+zX>Q+qjnDp*F%gqF=YT6WYsJaPd+n2u_uD6{yz)PvTeiSeco1bjSVSo$oQhfaq?U3i
+zth+7z_}(^;(H&&lGdl!9$~5$pS%$$w(otp`b?`!xRJr;iteb2FG*mS7lv#$|d=QF%
+z*PMb%uFHQv3}$UA1(NM}xj7GgvT`2#WaK^R0092?e&6+JG>HHJZN!=x?I<B?fMizd
+zDEGUi`@7v*%gJ|63y%5Y1bJd$d#1R~+&}{Oh|#~MgvMwYB(Y5gDQ0fC{Y|F#yG2{H
+s<neh0>8V;72?C8liA!kHMM(jx^hC)dk`yRV3y_W!Bl4&T2mk;80DK99`2YX_
+
+literal 0
+HcmV?d00001
+
+diff --git a/res/mipmap-xhdpi/ic_qr_fg.webp b/res/mipmap-xhdpi/ic_qr_fg.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..151814830df39bf1c8d420626ba604dd92d688fa
+GIT binary patch
+literal 600
+zcmV-e0;l~_Nk&Fc0ssJ4MM6+kP&iCP0ssIn*T6LpwaAtv$&r-*|7w5fnyJ1qtJ61y
+z)*2cO5s(A`AehXyy=B`x)y=khgKgWLY}>YN+qT`fjpRtwUbrSRH#7TyzO*|1clz)2
+z-@`P>NU`F{|7Koo%Ar1uj(pqR)@B|pNg!ShP#Jz!CZ#Y_;MJ^5z8?b@^V74EnTMNz
+zWHo!KnrqqquXO4s=v?W<ma>Q6yv1OIKrMt5Fj;xNh!jG~nxJ~bJYI+BK--!~WFf51
+zc$4+b#|%@2@I3l$d^5Le>|+w<8o7S6nYWRPLadR=-b`)qB#C&Ss5i45?zndfP<a$$
+zeVN$nZk*R6cN#Wx79bAj>JRZ6JqaAY-OSU-RUvGyiM(|3c>v_cn#f!sWY5r)exKDl
+zLqZ{_&S09xVS-;WT}X=Z^mQ8Go4mhW2`DpJc2V;h%TbmQ@Gd17l{tF;^@PSWl%oi;
+ztBJl+*LysuW7IvR`-Mi2dt5%E)g|>9ZL?S1owO6|_N78}jpa>srwjs>5cY`dlbv{(
+z35kqXf?OpQD<o=UCq1snZ-uztH$qiOi1kR)$DKZL3<-``!ux9`j7#D9O~J~<@Ggf6
+z|KB@KiT}qQrPlw?NeB!H`4f8nKNF!rt>YbivCnTcj!zw<$nnHO6gmETh$6@9YxjEO
+zJ~_YQ2vyF9xu&76CM29yNP?P7<ZE@Y&u{mbz>*1}N7&CZL66E@Pj^67u75m2k?U2D
+mQ0DsL1FCX8_yNjXzklIdncrKuw7!pVX?6PV^xx^f2ZA(Jn=-oq
+
+literal 0
+HcmV?d00001
+
+diff --git a/res/mipmap-xxhdpi/ic_camera_bg.webp b/res/mipmap-xxhdpi/ic_camera_bg.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..9e779921a604a9dd73b57df897a7ed89e0b00b1b
+GIT binary patch
+literal 602
+zcmWIYbaM-0Vqge&bqWXzuuyOVvISHa<}zxzFuE|>1!_!kS6;Mmp@IfO0T*Xx-ow1}
+zP3M0z+5gvh|NjP${lEGD=D(}I)A;;P@6UG(>KpiLHx<eKPI+Sc?c|B-x05G)zpbwL
+zew&~3{hS%6f?j&%oS&>}wjy3Z;Io5?Z6%Xlb_kze$}-X3WYY>>MxBWc9c}S0rIT|T
+zR;%4+487_s&KbjRdzf?WgQA=L=Pg2yU-`Mi|NOmmm&4m5&2DgQ%H1Fu8+2(wq~7&z
+zpiMvOzMhsn`ElA$a}W<???*YsYrfl<*38afHJF|mpff%DD9}|0ZvJ`gY<0t|c6-Lv
+z(pi;La=d4SaI4<>ScKy6uN{jfEDO|~Xfj3e2^QbXY2SC#lJ^0_zrVNSH_Gmc{lrz{
+z&Y-04)$}y+($}I5FROM&l<bXJV->e9xM0uD_xqgIZ_O!@oU?C}`mRf7c4ef+ni%WN
+zlAP|#bNc$D26py9iMf+E-Y(Hf+Fx|XTFA_S;kQYXX-ThtzfVYp{j~dDU!9eHlxH-E
+zZlAJkD$Bh`r>Z{mZwceuR5Z7I=eFLsX<-*vUpjTmbS+ae`)0*|K}>su448FyY_njV
+z(_(bb)`NjTei=;j0ln=%bHA()G16}@>tKvtS<bUSQ_}C$qS|f0KYKLUul>1S?DyCG
+z=8x{zZGWLuq&)A7xajrWhaT<vUJ(->_ny1!_1%Ysv0J!XuFmki9Pmx<tGfNZBm?E!
+V@kf>gol#JmWB>Hxn_~<R005OqCQJYT
+
+literal 0
+HcmV?d00001
+
+diff --git a/res/mipmap-xxhdpi/ic_camera_fg.webp b/res/mipmap-xxhdpi/ic_camera_fg.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..0838a518d25b719c72570c320007651430d5c2b0
+GIT binary patch
+literal 3490
+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
+Q9;5RtY*+i-000000Psn*h5!Hn
+
+literal 0
+HcmV?d00001
+
+diff --git a/res/mipmap-xxhdpi/ic_qr_bg.webp b/res/mipmap-xxhdpi/ic_qr_bg.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..fd346ecca907aeb0a1217f93bad6d95880a5ab3c
+GIT binary patch
+literal 610
+zcmWIYbaRVhVqge&bqWXzuu$*=vOg#@%w^PaVRT`%3)Gn8uDodBLIn+m0xr(Xyobey
+z@4Xe8oiO$P|34ew|DU-2{~PxIfBgU2zpKB~`20`z%)boU=GjM2o~V91dBXSG>Wc5T
+z`8nUunbW@SrX_#vrXoZ46x)9v#Z7N-s><VEy^F2pnfKO5PoCI*J9(nN<znyI-(1?s
+z_uUrOKI>Qg{y!f?eO)02QSxI$^VQw5sl1-P(^cF&1rMA#{n264wt|T=XU-wpAon{3
+zY#a^;z@%%$@BiKVeU{C1FlF`u<T#+*!$6*nj*d1L7Z>L_E>22HN|J(tf_#O796-?&
+zps3{$7oecxL_tA;6ATRh{=K*Qe|5<v6$S=I;rl#=ixNZ~&KL_FDzlA3#)sQ1CM@{8
+z_1N53Z&X<Odv=81*A}R}6E)$;h1-Rj@7~DcTB2dj8YCj!w33VW;A9(Cp1(bloPIb&
+z_S}7+c1N~AIY-mV>ieX9ETtvqg}N`wKHJ-#$or$wG<Wr(^+&kQ-e7&ew`7utbgrby
+z-7lWE|JwMUKQ7#OKI6&#ewM#lJZFmXk2lp#WlOU(e|*s1tJzp)_QwbFmpabu^ZoH~
+z*8Q*R@9XNEvdt)3c<g0>(YKQA-rJp}VqSl-irpn~>3RIZOK&e6Tf#eQ`pUnmJGA;Y
+tYh{SFiroC+{ABePnM={<r)IpDpLDO&ee=>?Nb09s{pFjU*QUe(1^{AXFY^EZ
+
+literal 0
+HcmV?d00001
+
+diff --git a/res/mipmap-xxhdpi/ic_qr_fg.webp b/res/mipmap-xxhdpi/ic_qr_fg.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..b90cb679b4d4eba602fa54ea55395732cae2c234
+GIT binary patch
+literal 860
+zcmV-i1Ec&>Nk&Fg0{{S5MM6+kP&iCS0{{RoL%~oGmB^B9w{0Zvf753oMB;~>NOTUE
+z5CI1O0D{SEWV<fgwr!iAZCjUZ+qP}nwrc|F`2YC-`2YC-`2YC-`2YC-8zTr=>873f
+z@qgW)OAGR8LFU6Q(4al<J<y|djU14#41HTY(<N7sT)1@jpXpO7l2w7Z>)B>dXX59#
+zC%YlDCde%NpYIHN8bF0T-#5z@0W;hg?IXz|qBHs;wIC8Yr`9ACJEtoI%YngXk|v)5
+z$YPQfzZ^0;tDy*63t=T8x}DWKg2njfB8^|<0e&4e6?#q6%oc-S=VhJ2eI8|t!6cE0
+z1c*DY$;IFi(xv*knvmQCI6@Xx4|ExEycj}5?{ytGq$&Z?5YHN@H{#(pcL?zaGut)e
+ze_xDuNS@g1;zJ4o)Z~W+MR14oi5=)L;%qUPhh~co{OPc%2(r*@vx`9@5vK%zUh}A3
+z4AA#H7!s8FJRBCIl%z3N8Ca(AgJLysK4f8-0?d9EIklV$l9&WcQB0FOp<WMo>nYq|
+zt{f#l2cue0EY1>mA$<d60n?j7KrQLBnQ0Dj-2iC{RQ5C<ENf9Ac)OqSDiL8Ns-k6W
+zjwY<NuK(F<aXZM90dA=4@~i@;DbKOrF|U@z;JX1<7Xlr|>lmPG=(Nw@QDPj3sJ3E?
+z4f?xg)M<o~1xP#&7NjXG_c0E#a=!hCDF;mTV9^yO&~dm^E|1>A6at3s28)6W6Y~~F
+z4mlNKakBI4u&IiB?5WOA5g^cEyp92Ss~}{r#chxEXn-4<O#;r#eb4kE5#bI&ZKh{C
+z#C74BXqb`FIN8Uk_*Vvtv!3sTbnGGl|8cllba?BX(G8}}p`de`1l$@p{U&LKTSIAQ
+zHMcWBJ)~(28{?((a@rUy5{cdzyhHNDT^AoxurY*&aMX3+kg6ZlNC*!L6C8hkp2}-0
+z@awRtihJy-&X2vA8w|_5pzYsO^;=;-@(AfteO*mR?#5senk`~u5KP2+V*t5K^MHI~
+zl#DcnYG-2fnT7n;C<#fl*4_j&oWeem%~8lKCvc9vwkM3nX=YI006Ubvttl?Kg47;;
+mCM(^vQ$GXzxw0Ui7UT_Z{D1s^{D1s^{D1s^{D1ua?HT|c#heHL
+
+literal 0
+HcmV?d00001
+
+diff --git a/res/mipmap-xxhdpi/qr_scanner.webp b/res/mipmap-xxhdpi/qr_scanner.webp
+deleted file mode 100644
+index 94a720d0d676e6cd2fffdb65dbd1993ba43d9e1d..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 3148
+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
+
+diff --git a/res/mipmap-xxhdpi/tw30_icon_camera.webp b/res/mipmap-xxhdpi/tw30_icon_camera.webp
+deleted file mode 100644
+index 96579530b1ef79abac4d26db7e65d89f0b9ee04c..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 4320
+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
+O3Ut@1V5R^700021jYU5I
+
+diff --git a/res/values/public.xml b/res/values/public.xml
+index ed4b0374..6f72799f 100644
+--- a/res/values/public.xml
++++ b/res/values/public.xml
+@@ -6904,6 +6904,9 @@
+     <public type="drawable" name="zoom_rocker_slide_bt" id="0x7f080739" />
+     <public type="drawable" name="zoom_rocker_slider_minus" id="0x7f08073a" />
+     <public type="drawable" name="zoom_rocker_slider_plus" id="0x7f08073b" />
++    <public type="drawable" name="$ic_camera_mono__0" id="0x7f08073c" />
++    <public type="drawable" name="qr_scanner" id="0x7f08073d" />
++    <public type="drawable" name="qr_scanner_color_theme" id="0x7f08073e" />
+     <public type="fraction" name="about_page_margin" id="0x7f090000" />
+     <public type="fraction" name="shooting_mode_overlay_floating_shutter_button_default_percent_pos_delta_y" id="0x7f090001" />
+     <public type="fraction" name="shooting_mode_overlay_floating_shutter_button_default_percent_pos_x" id="0x7f090002" />
+@@ -9103,8 +9106,10 @@
+     <public type="layout" name="zoom_tick_slider" id="0x7f0d0151" />
+     <public type="menu" name="attach_button_menu" id="0x7f0f0000" />
+     <public type="menu" name="nv_dummy_overflow_menu_icon" id="0x7f0f0001" />
+-    <public type="mipmap" name="qr_scanner" id="0x7f100000" />
+-    <public type="mipmap" name="tw30_icon_camera" id="0x7f100001" />
++    <public type="mipmap" name="ic_camera_bg" id="0x7f100000" />
++    <public type="mipmap" name="ic_camera_fg" id="0x7f100001" />
++    <public type="mipmap" name="ic_qr_bg" id="0x7f100002" />
++    <public type="mipmap" name="ic_qr_fg" id="0x7f100003" />
+     <public type="plurals" name="face_detected" id="0x7f110000" />
+     <public type="plurals" name="more_than_limit" id="0x7f110001" />
+     <public type="plurals" name="mtrl_badge_content_description" id="0x7f110002" />
+diff --git a/res/xml/setting.xml b/res/xml/setting.xml
+index 70800869..0829e096 100644
+--- a/res/xml/setting.xml
++++ b/res/xml/setting.xml
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<PreferenceScreen android:icon="@mipmap/tw30_icon_camera" android:title="@string/settings" android:key="@string/top_level_key"
++<PreferenceScreen android:icon="@drawable/ic_launcher" android:title="@string/settings" android:key="@string/top_level_key"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <PreferenceCategory android:title="@string/Title_intelligence" android:key="@string/dep_intelligence">
+         <com.sec.android.app.camera.setting.SwitchListPreference android:persistent="false" android:title="@string/Title_document_scan" android:key="@string/key_additional_scene_document_scan" android:dependency="@string/dep_intelligence" />
+diff --git a/smali_classes2/com/samsung/android/camera/core2/R$drawable.smali b/smali_classes2/com/samsung/android/camera/core2/R$drawable.smali
+index 003757c7..03cc537a 100644
+--- a/smali_classes2/com/samsung/android/camera/core2/R$drawable.smali
++++ b/smali_classes2/com/samsung/android/camera/core2/R$drawable.smali
+@@ -15,6 +15,4 @@
+ 
+ 
+ # static fields
+-.field public static final a:I = 0x7f0804a9
+-
+-.field public static final b:I = 0x7f0806ec
++.field public static final a:I = 0x7f0806ec
+diff --git a/smali_classes2/com/samsung/android/camera/core2/processor/PostProcessNotification.smali b/smali_classes2/com/samsung/android/camera/core2/processor/PostProcessNotification.smali
+index 01823f18..7fb90182 100644
+--- a/smali_classes2/com/samsung/android/camera/core2/processor/PostProcessNotification.smali
++++ b/smali_classes2/com/samsung/android/camera/core2/processor/PostProcessNotification.smali
+@@ -89,7 +89,7 @@
+ 
+     invoke-virtual {v1, p0}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+ 
+-    sget p0, Lcom/samsung/android/camera/core2/R$drawable;->b:I
++    sget p0, Lcom/samsung/android/camera/core2/R$drawable;->a:I
+ 
+     invoke-virtual {v1, p0}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+ 
+diff --git a/smali_classes2/com/samsung/android/camera/core2/processor/util/PostProcessorLoggingService.smali b/smali_classes2/com/samsung/android/camera/core2/processor/util/PostProcessorLoggingService.smali
+index c0450b73..12f1679f 100644
+--- a/smali_classes2/com/samsung/android/camera/core2/processor/util/PostProcessorLoggingService.smali
++++ b/smali_classes2/com/samsung/android/camera/core2/processor/util/PostProcessorLoggingService.smali
+@@ -1380,7 +1380,7 @@
+ 
+     move-result-object v0
+ 
+-    sget v1, Lcom/samsung/android/camera/core2/R$drawable;->a:I
++    const v1, 0x7f0804a9
+ 
+     invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+ 
+diff --git a/smali_classes2/com/sec/android/app/camera/R$drawable.smali b/smali_classes2/com/sec/android/app/camera/R$drawable.smali
+index a212e836..41850c39 100644
+--- a/smali_classes2/com/sec/android/app/camera/R$drawable.smali
++++ b/smali_classes2/com/sec/android/app/camera/R$drawable.smali
+@@ -963,6 +963,8 @@
+ 
+ .field public static final hyperlapse:I = 0x7f0804a4
+ 
++.field public static final ic_launcher:I = 0x7f0804a9
++
+ .field public static final icon_arrow_button_dark:I = 0x7f0804b6
+ 
+ .field public static final indicator_item_background:I = 0x7f0804b7
+@@ -1583,6 +1585,10 @@
+ 
+ .field public static final zoom_rocker_slider_plus:I = 0x7f08073b
+ 
++.field public static final qr_scanner:I = 0x7f08073d
++
++.field public static final qr_scanner_color_theme:I = 0x7f08073e
++
+ 
+ # direct methods
+ .method private constructor <init>()V
+diff --git a/smali_classes2/com/sec/android/app/camera/R$mipmap.smali b/smali_classes2/com/sec/android/app/camera/R$mipmap.smali
+index 330db41a..724c6d68 100644
+--- a/smali_classes2/com/sec/android/app/camera/R$mipmap.smali
++++ b/smali_classes2/com/sec/android/app/camera/R$mipmap.smali
+@@ -15,9 +15,13 @@
+ 
+ 
+ # static fields
+-.field public static final qr_scanner:I = 0x7f100000
++.field public static final ic_camera_bg:I = 0x7f100000
+ 
+-.field public static final tw30_icon_camera:I = 0x7f100001
++.field public static final ic_camera_fg:I = 0x7f100001
++
++.field public static final ic_qr_bg:I = 0x7f100002
++
++.field public static final ic_qr_fg:I = 0x7f100003
+ 
+ 
+ # direct methods
+-- 
+2.39.5 (Apple Git-154)
+
