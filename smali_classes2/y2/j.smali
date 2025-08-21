@@ -630,24 +630,8 @@
 .method public r(Ly2/j;)Z
     .locals 0
 
-    invoke-virtual {p0}, Ly2/j;->o()I
-
-    move-result p0
-
-    invoke-virtual {p1}, Ly2/j;->o()I
-
-    move-result p1
-
-    if-lt p0, p1, :cond_0
-
     const/4 p0, 0x1
 
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
     return p0
 .end method
 
