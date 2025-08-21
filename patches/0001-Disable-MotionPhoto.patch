@@ -1,68 +1,20 @@
-From 6399fc566b25e4abe74ee156de33bfc23a266fbd Mon Sep 17 00:00:00 2001
+From c605f95d216f70bf3962480863aade382323687a Mon Sep 17 00:00:00 2001
 From: ExtremeXT <75576145+ExtremeXT@users.noreply.github.com>
-Date: Thu, 21 Aug 2025 14:01:57 +0200
+Date: Thu, 21 Aug 2025 20:40:18 +0200
 Subject: [PATCH] Disable MotionPhoto
 
 ---
- .../engine/MotionPhotoManagerImpl.smali       | 49 +------------------
- 1 file changed, 2 insertions(+), 47 deletions(-)
+ .../android/app/camera/shootingmode/feature/PhotoFeature.smali  | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/smali_classes2/com/sec/android/app/camera/engine/MotionPhotoManagerImpl.smali b/smali_classes2/com/sec/android/app/camera/engine/MotionPhotoManagerImpl.smali
-index 53e05859..e1a33983 100644
---- a/smali_classes2/com/sec/android/app/camera/engine/MotionPhotoManagerImpl.smali
-+++ b/smali_classes2/com/sec/android/app/camera/engine/MotionPhotoManagerImpl.smali
-@@ -762,54 +762,9 @@
- .end method
+diff --git a/smali_classes3/com/sec/android/app/camera/shootingmode/feature/PhotoFeature.smali b/smali_classes3/com/sec/android/app/camera/shootingmode/feature/PhotoFeature.smali
+index b65cc01f..9f3c88c6 100644
+--- a/smali_classes3/com/sec/android/app/camera/shootingmode/feature/PhotoFeature.smali
++++ b/smali_classes3/com/sec/android/app/camera/shootingmode/feature/PhotoFeature.smali
+@@ -175,7 +175,7 @@
+ .method public isMotionPhotoSupported()Z
+     .locals 0
  
- .method public isMotionPhotoAvailable()Z
--    .locals 3
--
--    iget-object v0, p0, Lcom/sec/android/app/camera/engine/MotionPhotoManagerImpl;->mEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
--
--    invoke-virtual {v0}, Lcom/sec/android/app/camera/engine/CommonEngine;->getCameraContext()Lcom/sec/android/app/camera/interfaces/CameraContext;
--
--    move-result-object v0
--
--    invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getShootingModeFeature()Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
--
--    move-result-object v0
--
--    invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;->isMotionPhotoSupported()Z
--
--    move-result v0
--
--    const/4 v1, 0x0
--
--    if-nez v0, :cond_0
--
--    return v1
--
--    :cond_0
--    iget-object v0, p0, Lcom/sec/android/app/camera/engine/MotionPhotoManagerImpl;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
--
--    sget-object v2, Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;->MOTION_PHOTO:Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;
--
--    invoke-interface {v0, v2}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->get(Lcom/sec/android/app/camera/interfaces/CameraSettings$Key;)I
--
--    move-result v0
--
--    if-nez v0, :cond_1
--
--    return v1
--
--    :cond_1
--    iget-object p0, p0, Lcom/sec/android/app/camera/engine/MotionPhotoManagerImpl;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
--
--    invoke-interface {p0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->isAttachMode()Z
--
--    move-result p0
--
--    if-eqz p0, :cond_2
--
--    return v1
-+    .locals 0
- 
--    :cond_2
 -    const/4 p0, 0x1
 +    const/4 p0, 0x0
  
