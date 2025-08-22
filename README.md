@@ -43,7 +43,7 @@ Implementing custom icons for OneUI 7 is more complex than in previous versions.
 Next you'll want to download the `*.patch` that you want to include and place them inside SamsungCamera folder that just got created.
 
 - Run `cd SamsungCamera`
-- For each .patch file, run `patch -p1 < 0001_*.patch`
+- For each .patch file, run `git apply --binary -p1 0001_*.patch`
 
 Once all of them are applied you can recompile your apk
 
