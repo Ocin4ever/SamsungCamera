@@ -42,7 +42,7 @@ Credit: ([ExtremeXT](https://github.com/ExtremeXT))
 
 ### Hardcode getInterfaceVersion()
 This method was deprecated in the OneUI 7 framework. Previously, it returned 0x4, so we will hardcode this value directly into the APK.
-Credit: ([ExtremeXT](https://github.com/ExtremeXT))
+Credits: ([ExtremeXT](https://github.com/ExtremeXT)) ([PeterKnecht93](https://github.com/PeterKnecht93))
 
 ---
 
