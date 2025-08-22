@@ -6514,7 +6514,6 @@
     <public type="drawable" name="sem_text_select_handle_top_right_material" id="0x7f0805b3" />
     <public type="drawable" name="sem_text_select_reverse_handle_left_material" id="0x7f0805b4" />
     <public type="drawable" name="sem_text_select_reverse_handle_right_material" id="0x7f0805b5" />
-    <public type="drawable" name="sep_monochrome_icon" id="0x7f0805b6" />
     <public type="drawable" name="sesl_action_bar_background_dark" id="0x7f0805b7" />
     <public type="drawable" name="sesl_action_bar_background_light" id="0x7f0805b8" />
     <public type="drawable" name="sesl_action_bar_background_stacked_dark" id="0x7f0805b9" />

@@ -1309,8 +1309,6 @@
 
 .field public static final seekbar_ripple:I = 0x7f0805ac
 
-.field public static final sep_monochrome_icon:I = 0x7f0805b6
-
 .field public static final setting_box:I = 0x7f0806ab
 
 .field public static final shadow:I = 0x7f0806ac
