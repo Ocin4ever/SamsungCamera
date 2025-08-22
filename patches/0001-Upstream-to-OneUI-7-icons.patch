@@ -3,66 +3,6 @@ From: Ocin4ever <85343782+Ocin4ever@users.noreply.github.com>
 Date: Thu, 21 Aug 2025 12:02:55 +0200
 Subject: [PATCH] Upstream to OneUI 7 icons
 
----
- AndroidManifest.xml                              |  13 ++++++-------
- res/drawable/$ic_camera_mono__0.xml              |   6 ++++++
- res/drawable/ic_camera_mono.xml                  |   7 +++++++
- res/drawable/ic_launcher.webp                    | Bin 3496 -> 0 bytes
- res/drawable/ic_launcher.xml                     |   7 +++++++
- res/drawable/qr_scanner.xml                      |   7 +++++++
- res/drawable/qr_scanner_color_theme.xml          |   8 ++++++++
- res/drawable/sep_monochrome_icon.xml             |   6 ------
- res/mipmap-hdpi/qr_scanner.webp                  | Bin 1758 -> 0 bytes
- res/mipmap-hdpi/tw30_icon_camera.webp            | Bin 2720 -> 0 bytes
- res/mipmap-mdpi/ic_camera_bg.webp                | Bin 0 -> 134 bytes
- res/mipmap-mdpi/ic_camera_fg.webp                | Bin 0 -> 1068 bytes
- res/mipmap-mdpi/ic_qr_bg.webp                    | Bin 0 -> 148 bytes
- res/mipmap-mdpi/ic_qr_fg.webp                    | Bin 0 -> 434 bytes
- res/mipmap-mdpi/qr_scanner.webp                  | Bin 1074 -> 0 bytes
- res/mipmap-mdpi/tw30_icon_camera.webp            | Bin 1488 -> 0 bytes
- res/mipmap-xhdpi/ic_camera_bg.webp               | Bin 0 -> 248 bytes
- res/mipmap-xhdpi/ic_camera_fg.webp               | Bin 0 -> 2306 bytes
- res/mipmap-xhdpi/ic_qr_bg.webp                   | Bin 0 -> 294 bytes
- res/mipmap-xhdpi/ic_qr_fg.webp                   | Bin 0 -> 600 bytes
- res/mipmap-xxhdpi/ic_camera_bg.webp              | Bin 0 -> 602 bytes
- res/mipmap-xxhdpi/ic_camera_fg.webp              | Bin 0 -> 3490 bytes
- res/mipmap-xxhdpi/ic_qr_bg.webp                  | Bin 0 -> 610 bytes
- res/mipmap-xxhdpi/ic_qr_fg.webp                  | Bin 0 -> 860 bytes
- res/mipmap-xxhdpi/qr_scanner.webp                | Bin 3148 -> 0 bytes
- res/mipmap-xxhdpi/tw30_icon_camera.webp          | Bin 4320 -> 0 bytes
- res/values/public.xml                            |   9 +++++++--
- res/xml/setting.xml                              |   2 +-
- .../android/camera/core2/R$drawable.smali        |   4 +---
- .../processor/PostProcessNotification.smali      |   2 +-
- .../util/PostProcessorLoggingService.smali       |   2 +-
- .../com/sec/android/app/camera/R$drawable.smali  |   6 ++++++
- .../com/sec/android/app/camera/R$mipmap.smali    |   8 ++++++--
- 33 files changed, 64 insertions(+), 23 deletions(-)
- create mode 100644 res/drawable/$ic_camera_mono__0.xml
- create mode 100644 res/drawable/ic_camera_mono.xml
- delete mode 100644 res/drawable/ic_launcher.webp
- create mode 100644 res/drawable/ic_launcher.xml
- create mode 100644 res/drawable/qr_scanner.xml
- create mode 100644 res/drawable/qr_scanner_color_theme.xml
- delete mode 100644 res/drawable/sep_monochrome_icon.xml
- delete mode 100644 res/mipmap-hdpi/qr_scanner.webp
- delete mode 100644 res/mipmap-hdpi/tw30_icon_camera.webp
- create mode 100644 res/mipmap-mdpi/ic_camera_bg.webp
- create mode 100644 res/mipmap-mdpi/ic_camera_fg.webp
- create mode 100644 res/mipmap-mdpi/ic_qr_bg.webp
- create mode 100644 res/mipmap-mdpi/ic_qr_fg.webp
- delete mode 100644 res/mipmap-mdpi/qr_scanner.webp
- delete mode 100644 res/mipmap-mdpi/tw30_icon_camera.webp
- create mode 100644 res/mipmap-xhdpi/ic_camera_bg.webp
- create mode 100644 res/mipmap-xhdpi/ic_camera_fg.webp
- create mode 100644 res/mipmap-xhdpi/ic_qr_bg.webp
- create mode 100644 res/mipmap-xhdpi/ic_qr_fg.webp
- create mode 100644 res/mipmap-xxhdpi/ic_camera_bg.webp
- create mode 100644 res/mipmap-xxhdpi/ic_camera_fg.webp
- create mode 100644 res/mipmap-xxhdpi/ic_qr_bg.webp
- create mode 100644 res/mipmap-xxhdpi/ic_qr_fg.webp
- delete mode 100644 res/mipmap-xxhdpi/qr_scanner.webp
- delete mode 100644 res/mipmap-xxhdpi/tw30_icon_camera.webp
 
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
 index a72e037e..17127ced 100644
